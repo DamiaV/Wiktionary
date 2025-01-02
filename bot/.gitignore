@@ -1,5 +1,5 @@
 pywikibot.lwp
 throttle.ctrl
 user-*.py
-apicache-py3/
 *output*.txt
+*cache*
