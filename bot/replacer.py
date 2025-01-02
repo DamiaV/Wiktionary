@@ -3,42 +3,50 @@ import re
 import pywikibot as pwb
 from pywikibot import config as pwb_config
 
+MODE_CAT = 'category_pages'
+MODE_EMBEDS = 'embeds'
+MODE_LINKS = 'links'
 
-def replacer(match: re.Match) -> str:
-    return match[0] \
-        .replace("'", 'ˈ') \
-        .replace('g', 'ɡ') \
-        .replace('ʤ', 'd͡ʒ') \
-        .replace('ʦ', 't͡s') \
-        .replace('ʧ', 't͡ʃ')
+# Arguments #
+PAGE_NAME = ''
+SUMMARY = ''
+LINK_MODE = MODE_CAT
+# language=pythonregexp
+NEEDLE = r''
+REPL = r''
+NAMESPACES = []
 
 
-pwb_config.put_throttle = 0
-is_category = True
-page_name = 'Modèle:trad--'
-summary = 'Remplacement du modèle trad-- par trad ' \
-          '(cf. [[Wiktionnaire:Gestion des modèles/2022#Suppression de Modèle:trad--]])'
+def main() -> None:
+    pwb_config.put_throttle = 0
 
-site = pwb.Site()
-if page_name.startswith('Catégorie:'):
-    iterator = pwb.Category(site, title=page_name).articles()
-else:
-    iterator = pwb.Page(site, title=page_name).embeddedin()
-
-for page in iterator:
-    print(f'Editing page "{page.title()}"…')
-
-    old_text = page.text
-    page.text = re.sub(r'{{trad--\|', '{{trad|', page.text)
-    # page.text = page.text.replace('.pron|', '.pron=')
-    # page.text = re.sub(r'\.pron=([^|{}]+)(?:\n|\||}})', replacer, page.text)
-    # page.text = re.sub(r'{{it-inv\|([^{}|]+?)(?:\|inv=.+?|\|mf=oui)?}}', replacer, page.text)
-    # page.text = re.sub(r'{{pron\|([^{}|]+?)\|it}}', replacer, page.text)
-    if old_text != page.text:
-        try:
-            page.save(summary=summary)
-            print('Done.')
-        except pwb.exceptions.PageSaveRelatedError as e:
-            print('Protected page, skipped:', e)
+    site = pwb.Site()
+    if LINK_MODE == MODE_CAT and PAGE_NAME.startswith('Catégorie:'):
+        iterator = pwb.Category(site, title=PAGE_NAME).articles()
+    elif LINK_MODE == MODE_EMBEDS:
+        iterator = pwb.Page(site, title=PAGE_NAME).embeddedin()
+    elif LINK_MODE == MODE_LINKS:
+        iterator = pwb.Page(site, title=PAGE_NAME).backlinks()
     else:
-        print('No changes, skipped.')
+        raise ValueError(f'Invalid link mode: {LINK_MODE}')
+
+    for page in iterator:
+        print(f'Handling page "{page.title()}"…')
+        if NAMESPACES and page.namespace() not in NAMESPACES:
+            print(f'Not in namespaces {NAMESPACES}, skipped.')
+            continue
+
+        old_text = page.text
+        page.text = re.sub(NEEDLE, REPL, page.text)
+        if old_text != page.text:
+            try:
+                page.save(summary=SUMMARY)
+                print('Done.')
+            except pwb.exceptions.PageSaveRelatedError as e:
+                print('Protected page, skipped:', e)
+        else:
+            print('No changes, skipped.')
+
+
+if __name__ == '__main__':
+    main()
