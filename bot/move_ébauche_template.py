@@ -8,7 +8,7 @@ from pywikibot import config as pwb_config
 
 
 def handle_page(page: pwb.Page) -> None:
-    print(f'Handling page "{page.title()}"…')
+    print(f'Handling page "{page.title()}"…', end=' ')
     if page.namespace() != 0:
         print(f'Not in main namespace, skipped.')
         return
@@ -52,7 +52,7 @@ def main() -> None:
     pwb_config.put_throttle = 0
 
     # Load cache of already treated pages
-    cache_file_path = pathlib.Path(__file__).parent / 'move_ébauche_template-cache.txt'
+    cache_file_path = pathlib.Path(__file__ + '.cache.txt')
     if cache_file_path.exists():
         with cache_file_path.open('r', encoding='utf-8') as file_in:
             treated_pages = file_in.read().splitlines()
