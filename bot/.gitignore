@@ -3,3 +3,4 @@ throttle.ctrl
 user-*.py
 *output*.txt
 *cache*
+!cache.py

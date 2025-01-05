@@ -1,8 +1,9 @@
-import pathlib
 import re
 
 import pywikibot as pwb
 from pywikibot import config as pwb_config
+
+from cache import iterate_cached
 
 ébauche_regex = re.compile(r'^{{ébauche\|([^|}]+)}}$', re.MULTILINE)
 
@@ -50,26 +51,7 @@ def handle_page(page: pwb.Page) -> None:
 
 def main() -> None:
     pwb_config.put_throttle = 0
-
-    # Load cache of already treated pages
-    cache_file_path = pathlib.Path(__file__ + '.cache.txt')
-    if cache_file_path.exists():
-        with cache_file_path.open('r', encoding='utf-8') as file_in:
-            treated_pages = file_in.read().splitlines()
-    else:
-        treated_pages = []
-
-    treated_pages_buffer = []
-    for page in pwb.Page(pwb.Site(), title='Modèle:ébauche').embeddedin():
-        if page.title() in treated_pages:
-            continue
-        handle_page(page)
-        treated_pages_buffer.append(page.title())
-        if len(treated_pages_buffer) == 10:  # Batch cache updates
-            with cache_file_path.open('a', encoding='utf-8') as file_out:
-                file_out.write('\n'.join(treated_pages_buffer) + '\n')
-            treated_pages += treated_pages_buffer
-            treated_pages_buffer.clear()
+    iterate_cached(pwb.Page(pwb.Site(), title='Modèle:ébauche').embeddedin(), handle_page)
 
 
 if __name__ == '__main__':
