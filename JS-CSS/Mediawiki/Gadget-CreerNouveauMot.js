@@ -41,6 +41,7 @@
  * v5.4.1 2022-11-28 Convert to ES6.
  * v5.4.2 2024-03-09 Add buttons to format text in some fields (bold and italic).
  * v5.4.3 2024-08-30 Add option to hide additional sections fields from a user’s [[Special:MyPage/common.js]].
+ * v5.4.4 2025-01-22 Add Breton language.
  * -----------------------------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|CreerNouveauMot.js]]
  * <nowiki>
@@ -518,7 +519,7 @@ $(function () {
      */
     class GadgetCreerNouveauMot {
       static NAME = "Créer nouveau mot";
-      static VERSION = "5.4.3";
+      static VERSION = "5.4.4";
 
       static #COOKIE_NAME = "cnm_last_lang";
       /** Cookie duration in days. */
@@ -2436,6 +2437,9 @@ $(function () {
       SINGULAR_ONLY: new GrammaticalNumber("singulier uniquement", "{{au singulier uniquement|{0}}}"),
       PLURAL_ONLY: new GrammaticalNumber("pluriel uniquement", "{{au pluriel uniquement|{0}}}"),
       INVARIABLE: new GrammaticalNumber("invariable", "{{invariable}}"),
+      COLLECTIVE_SINGULATIVE: new GrammaticalNumber("collectif et singulatif", "{{collectif}}"),
+      COLLECTIVE_SINGULATIVE_PLURAL: new GrammaticalNumber("collectif, singulatif, et pluriel du singulatif", "{{collectif}}"),
+      SINGULATIVE_DUAL_PLURAL: new GrammaticalNumber("singulier, duel, et pluriel"),
     };
     /**
      * Defines all available grammatical classes.
@@ -2753,6 +2757,82 @@ $(function () {
             .replace(/ŝ/g, "ʃ")
             .replace(/ŭ/g, "w")
     )); // eo
+
+    /*
+     * Breton language definition.
+     */
+
+    function getBretonModel(word, grammarClass, gender, number) {
+      if (number === NUMBERS.DIFF_SINGULAR_PLURAL.label)
+        return `{{br-nom|${word}}}`;
+      if (number === NUMBERS.COLLECTIVE_SINGULATIVE.label)
+        return `{{br-nom-cs|${word}}}`;
+      if (number === NUMBERS.COLLECTIVE_SINGULATIVE_PLURAL.label)
+        return `{{br-nom-csp|${word}}}`;
+      if (number === NUMBERS.SINGULATIVE_DUAL_PLURAL.label)
+        return `{{br-nom-duel|${word}|<!-- DUEL À COMPLÉTER -->}}`;
+      const grammarClass_ = grammarClass.toLowerCase();
+      if (grammarClass_ === GRAMMATICAL_CLASSES.PROPER_NOUN.label)
+        return `{{br-nom-pr}}`;
+      if (grammarClass_ === GRAMMATICAL_CLASSES.FIRST_NAME.label)
+        return `{{br-nom-pr|forme=Prénom}}`;
+      if (grammarClass_ === GRAMMATICAL_CLASSES.LAST_NAME.label)
+        return `{{br-nom-pr|forme=Nom de famille}}`;
+      if (grammarClass_ === GRAMMATICAL_CLASSES.ADJECTIVE.label)
+        return `{{br-adj-flex}}`;
+      if (grammarClass_ === GRAMMATICAL_CLASSES.VERB.label)
+        return `{{br-forme-mut|${word}}}`;
+      if (grammarClass_ === GRAMMATICAL_CLASSES.PREPOSITION.label)
+        return `{{br-prép|${word}|<!-- TYPE À COMPLÉTER -->}}`;
+      return "";
+    }
+
+    gadget.addLanguage(new Language(
+        "br",
+        "br",
+        "bre",
+        "breton",
+        [
+          ["a", "ɑ", "ɒ", "e", "ɛ", "i", "o", "ɔ", "y"],
+          ["ã", "ẽ", "ɛ̃", "ĩ", "õ", "ɔ̃", "ỹ"],
+          ["k", "ɡ", "t", "d", "d͡ʒ", "p", "b", "ʃ", "ʒ", "f", "v", "ʋ", "f̬", "v̝", "s", "z",
+            "\u03c7", "x", "ɣ", "h", "ɦ", "t͡ʃ", "c", "l", "r", "r̥", "ʁ", "ʀ", "ɾ", "m", "n"],
+          ["j", "ɥ", "w"],
+          [".", "ˈ", "ˑ", "ː"],
+        ],
+        [
+          new GrammaticalItem(GRAMMATICAL_CLASSES.ADJECTIVE, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.ADVERB, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.NOUN, [GENDERS.MASCULINE, GENDERS.FEMININE, GENDERS.FEMININE_MASCULINE], [NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.COLLECTIVE_SINGULATIVE, NUMBERS.COLLECTIVE_SINGULATIVE_PLURAL, NUMBERS.SINGULATIVE_DUAL_PLURAL], getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PROPER_NOUN, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.VERB, null, getBretonModel),
+
+          new GrammaticalItem(GRAMMATICAL_CLASSES.INTERROGATIVE_ADJECTIVE, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.NUMERAL_ADJECTIVE, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.POSSESSIVE_ADJECTIVE, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.INTERROGATIVE_ADVERB, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.DEFINITE_ARTICLE, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.INDEFINITE_ARTICLE, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PARTITIVE_ARTICLE, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.CONJUNCTION, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.COORDINATION_CONJUNCTION, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.INTERJECTION, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.LAST_NAME, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PARTICLE, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.POSTPOSITION, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PREFIX, null),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.FIRST_NAME, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PREPOSITION, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PRONOUN, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.DEMONSTRATIVE_PRONOUN, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.INDEFINITE_PRONOUN, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.INTERROGATIVE_PRONOUN, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PERSONAL_PRONOUN, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.POSSESSIVE_PRONOUN, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.RELATIVE_PRONOUN, null, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.SUFFIX, null),
+        ]
+    )); // br
 
     /*
      * International conventions "language" definition.
