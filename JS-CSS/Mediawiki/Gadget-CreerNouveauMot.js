@@ -42,6 +42,7 @@
  * v5.4.2 2024-03-09 Add buttons to format text in some fields (bold and italic).
  * v5.4.3 2024-08-30 Add option to hide additional sections fields from a user’s [[Special:MyPage/common.js]].
  * v5.4.4 2025-01-22 Add Breton language.
+ * v5.4.5 2025-02-06 Add “locution-phrase” word type
  * -----------------------------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|CreerNouveauMot.js]]
  * <nowiki>
@@ -519,7 +520,7 @@ $(function () {
      */
     class GadgetCreerNouveauMot {
       static NAME = "Créer nouveau mot";
-      static VERSION = "5.4.4";
+      static VERSION = "5.4.5";
 
       static #COOKIE_NAME = "cnm_last_lang";
       /** Cookie duration in days. */
@@ -2497,6 +2498,8 @@ $(function () {
       POSTPOSITION: new GrammaticalClass("postposition", "postposition"),
       PARTICLE: new GrammaticalClass("particule", "particule"),
       INTERJECTION: new GrammaticalClass("interjection", "interjection"),
+
+      PHRASE: new GrammaticalClass("locution/phrase", "locution-phrase"),
     };
 
     const gadget = new GadgetCreerNouveauMot();
@@ -2548,6 +2551,7 @@ $(function () {
           new GrammaticalItem(GRAMMATICAL_CLASSES.NOUN, [GENDERS.MASCULINE, GENDERS.FEMININE, GENDERS.FEMININE_MASCULINE], [NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.SINGULAR_ONLY, NUMBERS.PLURAL_ONLY, NUMBERS.INVARIABLE], (word, grammarClass, gender, number, pron) => getFrenchModel(word, grammarClass, gender, number, pron, true)),
           new GrammaticalItem(GRAMMATICAL_CLASSES.PROPER_NOUN, [GENDERS.NO_GENDER], [NUMBERS.INVARIABLE], getFrenchModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.VERB, [GENDERS.VERB_GROUP1, GENDERS.VERB_GROUP2, GENDERS.VERB_GROUP3]),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PHRASE),
 
           new GrammaticalItem(GRAMMATICAL_CLASSES.INTERROGATIVE_ADJECTIVE, [GENDERS.MASCULINE, GENDERS.FEMININE, GENDERS.FEMININE_MASCULINE], [NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.INVARIABLE], getFrenchModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.NUMERAL_ADJECTIVE, [GENDERS.MASCULINE, GENDERS.FEMININE, GENDERS.FEMININE_MASCULINE], [NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.INVARIABLE], getFrenchModel),
@@ -2611,6 +2615,7 @@ $(function () {
           new GrammaticalItem(GRAMMATICAL_CLASSES.NOUN, [GENDERS.NO_GENDER], [NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.SINGULAR_ONLY, NUMBERS.PLURAL_ONLY, NUMBERS.INVARIABLE], (word, grammarClass, gender, number, pron) => number !== NUMBERS.DIFF_SINGULAR_PLURAL.label ? getEnglishModel(grammarClass, number, pron) : `{{en-nom-rég|${pron}}}`),
           new GrammaticalItem(GRAMMATICAL_CLASSES.PROPER_NOUN, [GENDERS.NO_GENDER], [NUMBERS.INVARIABLE], (word, grammarClass, gender, number, pron) => getEnglishModel(grammarClass, number, pron)),
           new GrammaticalItem(GRAMMATICAL_CLASSES.VERB, [GENDERS.REGULAR_VERB, GENDERS.IRREGULAR_VERB], null, (word, grammarClass, gender, number, pron) => gender === GENDERS.REGULAR_VERB.label ? `{{en-conj-rég|inf.pron=${pron}}}` : `{{en-conj-irrég|inf=${word}|inf.pron=${pron}|<!-- Compléter -->}}`),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PHRASE),
 
           new GrammaticalItem(GRAMMATICAL_CLASSES.INTERROGATIVE_ADJECTIVE, [GENDERS.NO_GENDER], [NUMBERS.INVARIABLE], (word, grammarClass, gender, number, pron) => getEnglishModel(grammarClass, number, pron)),
           new GrammaticalItem(GRAMMATICAL_CLASSES.NUMERAL_ADJECTIVE, [GENDERS.NO_GENDER], [NUMBERS.INVARIABLE], (word, grammarClass, gender, number, pron) => getEnglishModel(grammarClass, number, pron)),
@@ -2681,6 +2686,7 @@ $(function () {
           new GrammaticalItem(GRAMMATICAL_CLASSES.NOUN, [GENDERS.MASCULINE, GENDERS.FEMININE, GENDERS.FEMININE_MASCULINE], [NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.SINGULAR_ONLY, NUMBERS.PLURAL_ONLY, NUMBERS.INVARIABLE], (word, grammarClass, gender, number, pron) => getItalianModel(word, grammarClass, gender, number, pron)),
           new GrammaticalItem(GRAMMATICAL_CLASSES.PROPER_NOUN, [GENDERS.NO_GENDER], [NUMBERS.INVARIABLE], getItalianModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.VERB, [GENDERS.VERB_GROUP1, GENDERS.VERB_GROUP2, GENDERS.VERB_GROUP3]),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PHRASE),
 
           new GrammaticalItem(GRAMMATICAL_CLASSES.INTERROGATIVE_ADJECTIVE, [GENDERS.MASCULINE, GENDERS.FEMININE, GENDERS.FEMININE_MASCULINE], [NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.INVARIABLE], getItalianModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.NUMERAL_ADJECTIVE, [GENDERS.MASCULINE, GENDERS.FEMININE, GENDERS.FEMININE_MASCULINE], [NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.INVARIABLE], getItalianModel),
@@ -2740,6 +2746,7 @@ $(function () {
           new GrammaticalItem(GRAMMATICAL_CLASSES.NOUN, [GENDERS.NO_GENDER], [NUMBERS.DIFF_SINGULAR_PLURAL], getEsperantoModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.PROPER_NOUN, [GENDERS.NO_GENDER], [NUMBERS.DIFF_SINGULAR_PLURAL], getEsperantoModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.VERB, [GENDERS.VERB_NO_TEMPLATE], null, getEsperantoModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PHRASE),
 
           new GrammaticalItem(GRAMMATICAL_CLASSES.CONJUNCTION, [GENDERS.NO_GENDER], [NUMBERS.DIFF_SINGULAR_PLURAL], getEsperantoModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.INTERJECTION, [GENDERS.NO_GENDER], [NUMBERS.INVARIABLE], getEsperantoModel),
@@ -2806,6 +2813,7 @@ $(function () {
           new GrammaticalItem(GRAMMATICAL_CLASSES.NOUN, [GENDERS.MASCULINE, GENDERS.FEMININE, GENDERS.FEMININE_MASCULINE], [NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.COLLECTIVE_SINGULATIVE, NUMBERS.COLLECTIVE_SINGULATIVE_PLURAL, NUMBERS.SINGULATIVE_DUAL_PLURAL], getBretonModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.PROPER_NOUN, null, null, getBretonModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.VERB, null, getBretonModel),
+          new GrammaticalItem(GRAMMATICAL_CLASSES.PHRASE),
 
           new GrammaticalItem(GRAMMATICAL_CLASSES.INTERROGATIVE_ADJECTIVE, null, null, getBretonModel),
           new GrammaticalItem(GRAMMATICAL_CLASSES.NUMERAL_ADJECTIVE, null, null, getBretonModel),
