@@ -2779,7 +2779,7 @@ $(function () {
       if (grammarClass_ === GRAMMATICAL_CLASSES.LAST_NAME.label)
         return `{{br-nom-pr|forme=Nom de famille}}`;
       if (grammarClass_ === GRAMMATICAL_CLASSES.ADJECTIVE.label)
-        return `{{br-adj-flex}}`;
+        return `{{br-flex-adj}}`;
       if (grammarClass_ === GRAMMATICAL_CLASSES.VERB.label)
         return `{{br-forme-mut|${word}}}`;
       if (grammarClass_ === GRAMMATICAL_CLASSES.PREPOSITION.label)
