@@ -237,7 +237,7 @@ $(function () {
     /**
      * @param label {string} Class’ label.
      * @param sectionCode {string} Class’ section code.
-     * (as defined in [[Wiktionnaire:Structure_des_pages#Résumé_des_sections]] 2,1 onwards).
+     * (as defined in [[Convention:Structure des pages#Résumé des sections]] 2,1 onwards).
      */
     constructor(label, sectionCode) {
       this.#label = label;
