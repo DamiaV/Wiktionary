@@ -10,16 +10,26 @@ MODE_EMBEDS = 'embeds'
 MODE_LINKS = 'links'
 
 # Arguments #
-PAGE_NAME = 'Catégorie:kotava'
-SUMMARY = 'Traitement de [[Wiktionnaire:Bots/Requêtes#Retours à la ligne inutiles au début d\'articles en Kotava / manquants ailleurs]] (2ème passage)'
-LINK_MODE = MODE_CAT
+PAGE_NAME = 'Modèle:R:avk-grammaire'
+SUMMARY = 'Traitement de [[Wiktionnaire:Bots/Requêtes#Mise à jour des numéros de pages]]'
+LINK_MODE = MODE_EMBEDS
 # language=pythonregexp
-NEEDLE = r'(?<![\n=])(\n(={2,6})[^=]+\2\n)'
-REPL = '\n\\1'
-NAMESPACES = [0]
+NEEDLE = r'\{\{R:avk-grammaire\|p=(\d+)}}'
+
+
+def _repl(match: re.Match[str]) -> str:
+    page_num = match[1]
+    new_num = page_num
+    if (nb := int(page_num)) in (10, 15, 24, 28, 52):
+        new_num = str(nb - 1)
+    return f'{{{{R:avk-grammaire|p={new_num}}}}}'
+
+
+REPL = _repl
 
 
 def handle_page(page: pwb.Page) -> None:
+    print(page.title())
     old_text = page.text
     page.text = re.sub(NEEDLE, REPL, old_text.strip())
     if old_text != page.text:
@@ -45,7 +55,7 @@ def main() -> None:
     else:
         raise ValueError(f'Invalid link mode: {LINK_MODE}')
 
-    iterate_cached(iterator, handle_page)
+    iterate_cached(iterator, handle_page, cache_file_name_prefix=__file__)
 
 
 if __name__ == '__main__':
