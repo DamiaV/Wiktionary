@@ -74,7 +74,8 @@ def handle_page(page: pwb.Page) -> None:
 
 def main() -> None:
     pwb_config.put_throttle = 0
-    iterate_cached(pwb.Category(pwb.Site(), title='Caractères').articles(), handle_page)
+    iterate_cached(pwb.Category(pwb.Site(), title='Caractères').articles(), handle_page,
+                   cache_file_name_prefix=__file__)
 
 
 if __name__ == '__main__':

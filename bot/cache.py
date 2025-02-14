@@ -8,7 +8,8 @@ import pywikibot as pwb
 def iterate_cached(
         pages: coll.Iterable[pwb.Page],
         page_callback: typing.Callable[[pwb.Page], None],
-        cache_batch_count: int = 10
+        cache_batch_count: int = 10,
+        cache_file_name_prefix: str = __file__,
 ) -> None:
     """Iterate over a collection of pages using a callback function.
     Pages that have already been iterated over are ignored.
@@ -18,9 +19,10 @@ def iterate_cached(
     :param pages: The pages to iterate over.
     :param page_callback: The callback function that will be called for each page.
     :param cache_batch_count: The number of pages to cache at a time.
+    :param cache_file_name_prefix: The prefix of the cache file’s name.
     """
     # Load cache of already treated pages
-    cache_file_path = pathlib.Path(__file__ + '.cache.txt')
+    cache_file_path = pathlib.Path(cache_file_name_prefix + '.cache.txt')
     if cache_file_path.exists():
         with cache_file_path.open('r', encoding='utf-8') as file_in:
             treated_pages = file_in.read().splitlines()
