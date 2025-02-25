@@ -17,37 +17,38 @@
  *                 the translation. Link instead of button to show the form.
  * v1.3 2024-03-04 Add buttons to format text (bold and italic).
  * v1.3.1 2024-05-18 Add counter to avoid adding "Add Example" button when there are too many examples.
+ * v1.3.2 2025-02-25 Fix "é" character causing crashes when present in section IDs.
+ * v1.3.3 2025-02-25 Rejected edits now show an error message.
  * ------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|add-examples.js]]
  * <nowiki>
  */
-$(function () {
+$(() => {
   "use strict";
 
-  if (!wikt.page.hasNamespaceIn(["", "Reconstruction"])) {
+  if (!wikt.page.hasNamespaceIn(["", "Reconstruction"]))
     return;
-  }
 
   console.log("Chargement de Gadget-wikt.add-examples.js…");
 
-  var NAME = "Ajouter des exemples";
-  var VERSION = "1.3";
+  const NAME = "Ajouter des exemples";
+  const VERSION = "1.3.3";
 
-  var COOKIE_KEY_TEXT = "add_examples_text";
-  var COOKIE_KEY_SOURCE = "add_examples_source";
-  var COOKIE_KEY_SOURCE_URL = "add_examples_source_url";
-  var COOKIE_KEY_TRANSLATION = "add_examples_translation";
-  var COOKIE_KEY_TRANSCRIPTION = "add_examples_transcription";
+  const COOKIE_KEY_TEXT = "add_examples_text";
+  const COOKIE_KEY_SOURCE = "add_examples_source";
+  const COOKIE_KEY_SOURCE_URL = "add_examples_source_url";
+  const COOKIE_KEY_TRANSLATION = "add_examples_translation";
+  const COOKIE_KEY_TRANSCRIPTION = "add_examples_transcription";
 
-  var MAX_NUMBER_OF_EXAMPLES = 5;
+  let MAX_NUMBER_OF_EXAMPLES = 5;
   if (typeof max_number_of_examples !== "undefined" && max_number_of_examples instanceof Number) {
     MAX_NUMBER_OF_EXAMPLES = max_number_of_examples;
     console.log("Using preferred maximum number of examples: " + MAX_NUMBER_OF_EXAMPLES);
   }
 
-  var api = new mw.Api();
-  var languages = {};
-  var sectionNames = {
+  const api = new mw.Api();
+  let languages = {};
+  const sectionNames = {
     "adj": ["adj", "adjectif", "adjectif qualificatif"],
     "adv": ["adv", "adverbe"],
     "adv-ind": ["adv-ind", "adverbe ind", "adverbe indéfini"],
@@ -124,8 +125,8 @@ $(function () {
     prop: "revisions",
     rvprop: "content",
     rvslots: "main",
-  }).then(function (data) {
-    for (var pageID in data.query.pages) {
+  }).then((data) => {
+    for (const pageID in data.query.pages) {
       if (data.query.pages.hasOwnProperty(pageID)) {
         // noinspection JSUnresolvedVariable
         languages = JSON.parse(data.query.pages[pageID].revisions[0].slots.main["*"]);
@@ -133,10 +134,10 @@ $(function () {
       }
     }
   });
-  var exampleCounter = 0;
+  let exampleCounter = 0;
   $("ul > li > .example").each(function () {
-    var $element = $(this);
-    var $item = $element.parent();
+    const $element = $(this);
+    const $item = $element.parent();
     exampleCounter++;
 
     if (!$item.next().length) {
@@ -145,34 +146,33 @@ $(function () {
         return;
       }
       // Get example’s language
-      var language = $item.find("bdi[lang]")[0].lang;
+      const language = $item.find("bdi[lang]")[0].lang;
 
       // Get section and indices of associated definition
-      var definitionLevel = [];
-      var $definitionItem = $item.parent().parent();
-      var $topItem;
+      const definitionLevel = [];
+      let $definitionItem = $item.parent().parent();
+      let $topItem;
       do {
         definitionLevel.splice(0, 0, $definitionItem.index());
         $topItem = $definitionItem;
         $definitionItem = $definitionItem.parent().parent();
       } while ($definitionItem.prop("tagName") === "LI");
       // Keep h3 for skins that do not yet use the new Mediawiki headings structure
-      var $section = $($topItem.parent().prevAll(".mw-heading3, h3").get(0)).find(".titredef");
+      const $section = $($topItem.parent().prevAll(".mw-heading3, h3").get(0)).find(".titredef");
       definitionLevel.splice(0, 0, $section.attr("id"));
 
       // Remove default edit link if present
-      var $defaultEditLink = $item.find("span.example > span.stubedit");
+      const $defaultEditLink = $item.find("span.example > span.stubedit");
       if ($defaultEditLink.length) {
         $defaultEditLink.remove();
       }
 
       // Add a nice button to open the form
-      var $formItem = $("<li>");
-      var $button = $("<a href='#'>Ajouter un exemple</a>");
-      $button.on("click", function () {
-        if (!$button.form) {
+      const $formItem = $("<li>");
+      const $button = $("<a href='#'>Ajouter un exemple</a>");
+      $button.on("click", () => {
+        if (!$button.form)
           $formItem.append(new Form($item, $button, language, definitionLevel).$element);
-        }
         $button.form.setVisible(true);
         return false;
       });
@@ -190,7 +190,7 @@ $(function () {
    * @constructor
    */
   function Form($lastExample, $button, language, definitionLevel) {
-    var self = this;
+    const self = this;
     this._language = language;
     this._definitionLevel = definitionLevel;
     this._$lastExample = $lastExample;
@@ -203,9 +203,9 @@ $(function () {
      * @return {OO.ui.Toolbar} A new toolbar.
      */
     function createToolbar($textInput) {
-      var toolFactory = new OO.ui.ToolFactory();
-      var toolGroupFactory = new OO.ui.ToolGroupFactory();
-      var toolbar = new OO.ui.Toolbar(toolFactory, toolGroupFactory, {actions: true});
+      const toolFactory = new OO.ui.ToolFactory();
+      const toolGroupFactory = new OO.ui.ToolGroupFactory();
+      const toolbar = new OO.ui.Toolbar(toolFactory, toolGroupFactory, {actions: true});
 
       /**
        * Adds a custom button to the tool factory.
@@ -233,17 +233,17 @@ $(function () {
         CustomTool.static.displayBothIconAndLabel = !!displayBothIconAndLabel;
         CustomTool.prototype.onSelect = onSelect;
         // noinspection JSUnusedGlobalSymbols
-        CustomTool.prototype.onUpdateState = onUpdateState || function () {
+        CustomTool.prototype.onUpdateState = onUpdateState || (() => {
           this.setActive(false);
-        };
+        });
 
         toolFactory.register(CustomTool);
       }
 
-      generateButton("bold", "bold", false, "Gras", function () {
+      generateButton("bold", "bold", false, "Gras", () => {
         self.formatText("bold", $textInput);
       });
-      generateButton("italic", "italic", false, "Italique", function () {
+      generateButton("italic", "italic", false, "Italique", () => {
         self.formatText("italic", $textInput);
       });
 
@@ -257,22 +257,22 @@ $(function () {
     }
 
     this._textInput = new OO.ui.MultilineTextInputWidget();
-    var textInputLayout = new OO.ui.FieldLayout(this._textInput, {
+    const textInputLayout = new OO.ui.FieldLayout(this._textInput, {
       label: "Texte de l’exemple",
       align: "top",
     });
-    this._textInput.on("change", function (value) {
+    this._textInput.on("change", (value) => {
       self._applyButton.setDisabled(!value);
     })
 
     this._sourceInput = new OO.ui.MultilineTextInputWidget();
-    var sourceInputLayout = new OO.ui.FieldLayout(this._sourceInput, {
+    const sourceInputLayout = new OO.ui.FieldLayout(this._sourceInput, {
       label: "Source de l’exemple",
       align: "top",
     });
 
     this._sourceURLInput = new OO.ui.TextInputWidget();
-    var sourceURLInputLayout = new OO.ui.FieldLayout(this._sourceURLInput, {
+    const sourceURLInputLayout = new OO.ui.FieldLayout(this._sourceURLInput, {
       label: "Adresse web de l’exemple",
       align: "top",
       help: "Ne renseigner que dans le cas où le lien n’est pas déjà présent dans la référence de la source.",
@@ -280,13 +280,13 @@ $(function () {
     });
 
     this._translationInput = new OO.ui.MultilineTextInputWidget();
-    var translationInputLayout = new OO.ui.FieldLayout(this._translationInput, {
+    const translationInputLayout = new OO.ui.FieldLayout(this._translationInput, {
       label: "Traduction en français de l’exemple",
       align: "top",
     });
 
     this._transcriptionInput = new OO.ui.MultilineTextInputWidget();
-    var transcriptionInputLayout = new OO.ui.FieldLayout(this._transcriptionInput, {
+    const transcriptionInputLayout = new OO.ui.FieldLayout(this._transcriptionInput, {
       label: "Transcription de l’exemple",
       align: "top",
       help: "Ne renseigner que dans le cas où le texte de l’exemple n’est pas écrit avec l’alphabet latin.",
@@ -294,13 +294,13 @@ $(function () {
     });
 
     this._disableTranslationChk = new OO.ui.CheckboxInputWidget();
-    var disableTranslationChkLayout = new OO.ui.FieldLayout(this._disableTranslationChk, {
+    const disableTranslationChkLayout = new OO.ui.FieldLayout(this._disableTranslationChk, {
       label: "Désactiver la traduction",
       align: "inline",
       help: "Permet d’indiquer que la traduction n’est pas nécessaire (ex\u00a0: moyen français).",
       helpInline: true,
     });
-    this._disableTranslationChk.on("change", function (selected) {
+    this._disableTranslationChk.on("change", (selected) => {
       self._translationInput.setDisabled(selected);
     });
 
@@ -316,7 +316,7 @@ $(function () {
       title: "Refermer le formulaire",
       flags: ["destructive"],
     });
-    this._cancelButton.on("click", function () {
+    this._cancelButton.on("click", () => {
       self.setVisible(false);
     });
 
@@ -325,22 +325,22 @@ $(function () {
     });
     this._loadingImage.toggle(false);
 
-    var textToolbar = createToolbar(this._textInput.$element.find("textarea"));
-    var sourceToolbar = createToolbar(this._sourceInput.$element.find("textarea"));
-    var translationToolbar = createToolbar(this._translationInput.$element.find("textarea"));
-    var transcriptionToolbar = createToolbar(this._transcriptionInput.$element.find("textarea"));
+    const textToolbar = createToolbar(this._textInput.$element.find("textarea"));
+    const sourceToolbar = createToolbar(this._sourceInput.$element.find("textarea"));
+    const translationToolbar = createToolbar(this._translationInput.$element.find("textarea"));
+    const transcriptionToolbar = createToolbar(this._transcriptionInput.$element.find("textarea"));
 
-    var content = [textToolbar, textInputLayout, sourceToolbar, sourceInputLayout, sourceURLInputLayout];
+    const content = [textToolbar, textInputLayout, sourceToolbar, sourceInputLayout, sourceURLInputLayout];
     if (language !== "fr") {
       content.push(translationToolbar, translationInputLayout, transcriptionToolbar, transcriptionInputLayout, disableTranslationChkLayout);
     }
-    var fieldsLayout = new OO.ui.FieldsetLayout({
+    const fieldsLayout = new OO.ui.FieldsetLayout({
       label: "Ajout d’un exemple en " + (languages[this._language] || "langue inconnue"),
       items: content,
       classes: ["add-example-fieldset"],
     });
 
-    var buttonsLayout = new OO.ui.HorizontalLayout({
+    const buttonsLayout = new OO.ui.HorizontalLayout({
       items: [
         this._applyButton,
         this._cancelButton,
@@ -349,7 +349,7 @@ $(function () {
     });
 
     this._frame = new OO.ui.PanelLayout({
-      id: "add-example-definition-{0}-form".format(this._definitionLevel.join("-")),
+      id: `add-example-definition-${this._definitionLevel.join("-")}-form`,
       classes: ["add-example-form"],
       expanded: false,
       content: [
@@ -405,8 +405,8 @@ $(function () {
      * @param $textInput {jQuery} The text input to format the text of.
      */
     formatText: function (effect, $textInput) {
-      var selectedText = wikt.edit.getSelectedText($textInput);
-      var replText;
+      const selectedText = wikt.edit.getSelectedText($textInput);
+      let replText;
       switch (effect) {
         case "bold":
           replText = "'''" + selectedText + "'''";
@@ -435,66 +435,56 @@ $(function () {
      * Generates and submits the wikicode then inserts the resulting HTML element if no errors occured.
      */
     submit: function () {
-      var self = this;
-
-      self._textInput.setDisabled(true);
-      self._sourceInput.setDisabled(true);
-      self._sourceURLInput.setDisabled(true);
-      self._translationInput.setDisabled(true);
-      self._transcriptionInput.setDisabled(true);
-      self._disableTranslationChk.setDisabled(true);
+      this._textInput.setDisabled(true);
+      this._sourceInput.setDisabled(true);
+      this._sourceURLInput.setDisabled(true);
+      this._translationInput.setDisabled(true);
+      this._transcriptionInput.setDisabled(true);
+      this._disableTranslationChk.setDisabled(true);
       this._applyButton.setDisabled(true);
       this._loadingImage.toggle(true);
 
       // noinspection JSUnresolvedFunction
-      var listMarker = "".padStart(this._definitionLevel.length - 1, "#") + "*";
+      const listMarker = "".padStart(this._definitionLevel.length - 1, "#") + "*";
 
-      var text = this._textInput.getValue().trim();
-      if (text.includes("=")) {
-        text = "1=" + text;
-      }
-      var code = listMarker + " {{exemple|" + text;
+      let text = this._textInput.getValue().trim();
+      if (text.includes("=")) text = "1=" + text;
+      let code = listMarker + " {{exemple|" + text;
 
       if (this._language !== "fr") {
-        var translation = this._translationInput.getValue().trim();
-        var transcription = this._transcriptionInput.getValue().trim();
+        let translation = this._translationInput.getValue().trim();
+        const transcription = this._transcriptionInput.getValue().trim();
         if (translation) {
-          if (translation.includes("=")) {
+          if (translation.includes("="))
             translation = "sens=" + translation;
-          }
           code += "\n|" + translation;
         }
-        if (transcription) {
+        if (transcription)
           code += "\n|tr=" + transcription;
-        }
       }
 
-      var source = this._sourceInput.getValue().trim();
-      if (source) {
+      const source = this._sourceInput.getValue().trim();
+      if (source)
         code += "\n|source=" + source;
-      }
 
-      var sourceURL = this._sourceURLInput.getValue().trim();
-      if (sourceURL) {
+      const sourceURL = this._sourceURLInput.getValue().trim();
+      if (sourceURL)
         code += "\n|lien=" + sourceURL;
-      }
 
-      if (this._definitionLevel.length > 2) {
+      if (this._definitionLevel.length > 2)
         code += "\n|tête=" + listMarker;
-      }
 
-      if (this._disableTranslationChk.isSelected()) {
+      if (this._disableTranslationChk.isSelected())
         code += "\n|pas-trad=1";
-      }
 
-      code += "\n|lang={0}}}".format(this._language);
+      code += `\n|lang=${this._language}}}`;
 
-      var escapedLangCode = this._language.replaceAll(" ", "_"); // Language codes may contain spaces
-      var sectionIDPattern = new RegExp("^" + escapedLangCode + "-(?:(flex)-)?([\\w-]+)-(\\d+)$");
-      var match = sectionIDPattern.exec(this._definitionLevel[0]);
-      var isInflection = match[1] === "flex";
-      var sectionType = match[2];
-      var sectionNum = parseInt(match[3]);
+      const escapedLangCode = this._language.replaceAll(" ", "_"); // Language codes may contain spaces
+      const sectionIDPattern = new RegExp(`^${escapedLangCode}-(?:(flex)-)?([\\wéè-]+)-(\\d+)$`);
+      const match = sectionIDPattern.exec(this._definitionLevel[0]);
+      const isInflection = match[1] === "flex";
+      const sectionType = match[2];
+      const sectionNum = parseInt(match[3]);
 
       // Insert new example into page’s code
       api.get({
@@ -503,9 +493,9 @@ $(function () {
         prop: "revisions",
         rvprop: "content",
         rvslots: "main",
-      }).then(function (data) {
-        var pageContent;
-        for (var pageID in data.query.pages) {
+      }).then((data) => {
+        let pageContent;
+        for (const pageID in data.query.pages) {
           if (data.query.pages.hasOwnProperty(pageID)) {
             // noinspection JSUnresolvedVariable
             pageContent = data.query.pages[pageID].revisions[0].slots.main["*"];
@@ -514,8 +504,8 @@ $(function () {
         }
 
         // Look for correct language section
-        var langSectionRegex = new RegExp("==\\s*{{langue\\|{0}}}\\s*==".format(self._language));
-        var langSectionIndex = pageContent.search(langSectionRegex);
+        const langSectionRegex = new RegExp(`==\\s*{{langue\\|${this._language}}}\\s*==`);
+        const langSectionIndex = pageContent.search(langSectionRegex);
 
         if (langSectionIndex === -1) {
           error();
@@ -523,20 +513,19 @@ $(function () {
         }
 
         // Look for correct word type section
-        var lines = pageContent.slice(langSectionIndex).split("\n");
-        var sectionRegex = /^===\s*{{S\|([\wéèà -]+)\|/;
+        const lines = pageContent.slice(langSectionIndex).split("\n");
+        const sectionRegex = /^===\s*{{S\|([\wéèà -]+)\|/;
 
-        var targetLineIndex;
+        let targetLineIndex;
         for (targetLineIndex = 0; targetLineIndex < lines.length; targetLineIndex++) {
-          var line = lines[targetLineIndex];
-          var match = sectionRegex.exec(line);
+          const line = lines[targetLineIndex];
+          const match = sectionRegex.exec(line);
           if (match && sectionNames[sectionType].includes(match[1])
               // Parameter "num" is absent if there is only one section for this type
               && (line.includes("|num=" + sectionNum) || sectionNum === 1)
               // Check whether the section is an inflection if required
-              && (isInflection === line.includes("|flexion"))) {
+              && (isInflection === line.includes("|flexion")))
             break;
-          }
         }
 
         if (targetLineIndex === lines.length) {
@@ -545,15 +534,15 @@ $(function () {
         }
 
         // Look for correct definition
-        var defIndex = -1;
-        var level = 1;
+        let defIndex = -1;
+        let level = 1;
         for (; targetLineIndex < lines.length; targetLineIndex++) {
-          var m = /^(#+)[^*#]/.exec(lines[targetLineIndex]);
+          const m = /^(#+)[^*#]/.exec(lines[targetLineIndex]);
           if (m) {
             if (level === m[1].length) {
               defIndex++;
-              if (self._definitionLevel[level] === defIndex) {
-                if (level === self._definitionLevel.length - 1) {
+              if (this._definitionLevel[level] === defIndex) {
+                if (level === this._definitionLevel.length - 1) {
                   break;
                 } else {
                   level++;
@@ -565,10 +554,10 @@ $(function () {
         }
 
         // Look for last example of current definition
-        var inExample = false;
-        var stack = 0;
+        let inExample = false;
+        let stack = 0;
         for (targetLineIndex += 1; targetLineIndex < lines.length; targetLineIndex++) {
-          var line_ = lines[targetLineIndex];
+          const line_ = lines[targetLineIndex];
           if (line_.startsWith(listMarker) && line_.includes("{{exemple")) {
             inExample = true;
             stack = 0;
@@ -576,8 +565,8 @@ $(function () {
           if (inExample) {
             // "exemple" template’s arguments may span several lines
             // use a stack to detect on which line the template ends
-            for (var ic = 0; ic < line_.length - 1; ic++) {
-              var c = line_.charAt(ic) + line_.charAt(ic + 1);
+            for (let ic = 0; ic < line_.length - 1; ic++) {
+              const c = line_.charAt(ic) + line_.charAt(ic + 1);
               if (c === "{{") {
                 stack++;
               } else if (c === "}}") {
@@ -596,7 +585,7 @@ $(function () {
         }
 
         // Insert new example into page content
-        var emptyTemplate = /#+\*\s*{{exemple\s*\|\s*\|?\s*lang\s*=[^|}]+}}/.test(lines[targetLineIndex - 1]);
+        const emptyTemplate = /#+\*\s*{{exemple\s*\|\s*\|?\s*lang\s*=[^|}]+}}/.test(lines[targetLineIndex - 1]);
         if (emptyTemplate) {
           // Replace empty template with new example
           lines.splice(targetLineIndex - 1, 1, code);
@@ -606,42 +595,51 @@ $(function () {
         }
 
         // Submit new page content
-        api.edit(mw.config.get("wgPageName"), function (_) {
+        api.edit(mw.config.get("wgPageName"), () => {
           return {
             text: pageContent.slice(0, langSectionIndex) + lines.join("\n"),
-            summary: "Ajout d’un exemple avec le gadget «\u00a0{0}\u00a0» (v{1}).".format(NAME, VERSION),
+            summary: `Ajout d’un exemple avec le gadget «\u00a0${NAME}\u00a0» (v${VERSION}).`,
           };
-        }).then(function () {
-          api.parse(code).done(function (data) {
-            var $renderedExample = $(data).find("ul > li").html();
-            var $item;
-            // Insert rendered example into page
-            if (emptyTemplate) {
-              self._$lastExample.html($renderedExample);
-              $item = self._$lastExample;
-            } else {
-              self._$lastExample.after($item = $("<li>").append($renderedExample));
-            }
-            $item.css("background-color", "lightgreen");
-            setTimeout(function () {
-              $item.css("background-color", "inherit");
-            }, 1000);
-            self._$lastExample = $item;
-          });
-          self.setVisible(false);
-          self.clear();
-          $.removeCookie(COOKIE_KEY_TEXT);
-          $.removeCookie(COOKIE_KEY_SOURCE);
-          $.removeCookie(COOKIE_KEY_SOURCE_URL);
-          $.removeCookie(COOKIE_KEY_TRANSLATION);
-          $.removeCookie(COOKIE_KEY_TRANSCRIPTION);
-          reenable();
-        });
+        }).then(() => {
+              api.parse(code).done((data) => {
+                const $renderedExample = $(data).find("ul > li").html();
+                let $item;
+                // Insert rendered example into page
+                if (emptyTemplate) {
+                  this._$lastExample.html($renderedExample);
+                  $item = this._$lastExample;
+                } else {
+                  this._$lastExample.after($item = $("<li>").append($renderedExample));
+                }
+                $item.css("background-color", "lightgreen");
+                setTimeout(() => {
+                  $item.css("background-color", "inherit");
+                }, 1000);
+                this._$lastExample = $item;
+              });
+              this.setVisible(false);
+              this.clear();
+              $.removeCookie(COOKIE_KEY_TEXT);
+              $.removeCookie(COOKIE_KEY_SOURCE);
+              $.removeCookie(COOKIE_KEY_SOURCE_URL);
+              $.removeCookie(COOKIE_KEY_TRANSLATION);
+              $.removeCookie(COOKIE_KEY_TRANSCRIPTION);
+              reenable();
+            },
+            // On fail
+            () => error("une erreur de réseau est survenue ou vous n’avez pas le droit de modifier la page.")
+        );
       });
 
-      function error() {
-        alert("L’exemple n’a pas pu être publié car la page a probablement été modifiée entre temps. " +
-            "Veuillez recharger la page et réessayer.");
+      const self = this;
+
+      /**
+       * Show an error message alert then reset the cookies and re-enable the form.
+       * @param reason {string?} A custom reason.
+       */
+      function error(reason) {
+        const msg = reason || "la page a probablement été modifiée entre temps. Veuillez recharger la page et réessayer."
+        alert(`L’exemple n’a pas pu être publié car ${msg}`);
         $.cookie(COOKIE_KEY_TEXT, self._textInput.getValue());
         $.cookie(COOKIE_KEY_SOURCE, self._sourceInput.getValue());
         $.cookie(COOKIE_KEY_SOURCE_URL, self._sourceURLInput.getValue());
