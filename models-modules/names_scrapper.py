@@ -4,7 +4,7 @@ import re
 import lupa
 import requests
 
-root_dir = 'données_Unicode/names'
+root_dir = 'données Unicode/names'
 for file in os.listdir(root_dir):
     with open(os.path.join(root_dir, file), mode='r+', encoding='UTF-8') as f:
         print(file)

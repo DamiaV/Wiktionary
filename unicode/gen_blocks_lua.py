@@ -1,7 +1,7 @@
 import datetime
 
 with open('blocks.csv', encoding='UTF-8') as f_in:
-    with open('../models-modules/données_Unicode/data/blocks.lua', mode='w', encoding='UTF-8') as f_out:
+    with open('../models-modules/données Unicode/data/blocks.lua', mode='w', encoding='UTF-8') as f_out:
         f_out.write(f"""-- This page lists all Unicode blocks.
 -- Do not edit this page manually as it is automatically generated.
 -- Last generation: {datetime.datetime.now()}

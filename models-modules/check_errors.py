@@ -3,7 +3,7 @@ import os
 import lupa
 
 file = '0E0'
-with open(os.path.join('données_Unicode/names', file + '.lua'), mode='r+', encoding='UTF-8') as f:
+with open(os.path.join('données Unicode/names', file + '.lua'), mode='r+', encoding='UTF-8') as f:
     code = ''.join(f.readlines())
     characters = lupa.LuaRuntime().execute(code)
     for codepoint in list(characters.keys()):

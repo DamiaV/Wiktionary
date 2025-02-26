@@ -1,6 +1,6 @@
 import lupa
 
-blocks = lupa.LuaRuntime().execute('\n'.join(open('../models-modules/données_Unicode/data/blocks.lua').readlines()))
+blocks = lupa.LuaRuntime().execute('\n'.join(open('../models-modules/données Unicode/data/blocks.lua').readlines()))
 
 with open('blocks.txt', encoding='UTF-8') as f:
     codes = []
