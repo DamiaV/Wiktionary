@@ -484,7 +484,7 @@ local t = {
   }
 }
 
--- Put alias redirection into t["alias"]
+-- Put alias redirections into t["alias"]
 t["alias"] = {}
 for code, data in pairs(t["texte"]) do
   if data["alias"] ~= nil then
