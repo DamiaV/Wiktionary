@@ -1,66 +1,68 @@
-local m_wordTypes = require("Module:types de mots")
-local m_langs = require("Module:langues")
+local m_typesDeMots = require("Module:types de mots")
+local m_langues = require("Module:langues")
 
 local p = {}
 
 -- Critères basés sur [[Wiktionnaire:Prise de décision/Catégories de lemmes]]
-
-local validLangs = {
-  'fr',
-  'de',
-  'en',
-  'eo',
-  'es',
-  'it',
-  'ru',
-  'bg',
-  'ga',
-  'gallo',
-  'se',
-  'la',
-  'sl',
-  'cs',
-  'sv',
-  'nl',
-  'pt',
-  'fi',
+local validLangCodes = {
+  ['fr'] = true,
+  ['de'] = true,
+  ['en'] = true,
+  ['eo'] = true,
+  ['es'] = true,
+  ['io'] = true,
+  ['it'] = true,
+  ['ru'] = true,
+  ['uk'] = true,
+  ['bg'] = true,
+  ['ga'] = true,
+  ['gallo'] = true,
+  ['se'] = true,
+  ['la'] = true,
+  ['sl'] = true,
+  ['cs'] = true,
+  ['sv'] = true,
+  ['nl'] = true,
+  ['pt'] = true,
+  ['fi'] = true,
 }
-local invalidSectionTypes = {
-  'faute d’orthographe',
-  'variante par contrainte typographique',
-  'nom propre',
-  'prénom',
-  'nom de famille',
-  'nom scientifique',
-  'infixe',
-  'interfixe',
-  'préfixe',
-  'suffixe',
-  'circonfixe',
-  'symbole',
+local invalidTypes = {
+  ['variante par contrainte typographique'] = true,
+  ['nom propre'] = true,
+  ['prénom'] = true,
+  ['nom de famille'] = true,
+  ['nom scientifique'] = true,
+  ['infixe'] = true,
+  ['interfixe'] = true,
+  ['préfixe'] = true,
+  ['suffixe'] = true,
+  ['circonfixe'] = true,
+  ['symbole'] = true,
 }
 
-function p.is_lemme(lang, type, isInflection, isLocution)
-  return not (not lang or not validLangs[lang] or isInflection or not type
-      or not m_wordTypes.is_type(type) or invalidSectionTypes[m_wordTypes.get_nom(type)]
-      or isLocution)
+function p.isLemma(langCode, type, flexion, locution)
+  return langCode
+      and validLangCodes[langCode]
+      and not flexion
+      and type
+      and m_typesDeMots.is_type(type)
+      and not invalidTypes[m_typesDeMots.get_nom(type)]
+      and not locution
 end
 
-function p.cat_lemme(lang, type, isInflection, isLocution)
-  if lang == nil or type == nil or isInflection == nil or isLocution == nil then
-    return ""
+function p.categorizeLemma(langCode, type, flexion, locution)
+  if langCode == nil or type == nil or flexion == nil or locution == nil then
+    return ''
   end
 
-  if p.is_lemme(lang, type, isInflection, isLocution) then
-    local langName = m_langs.get_nom(lang)
+  if p.isLemma(langCode, type, flexion, locution) then
+    local langName = m_langues.get_nom(langCode)
     if langName then
       return "Lemmes en " .. langName
     else
       return ""
     end
   end
-
-  return ""
 end
 
 return p
