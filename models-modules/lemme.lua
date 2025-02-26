@@ -64,7 +64,7 @@ end
 --- @return string|nil Nil if any argument is nil, the category name if the entry is a lemma, an empty string otherwise.
 function p.getLemmaCategoryName(langCode, wordType, flexion, locution)
   if langCode == nil or wordType == nil or flexion == nil or locution == nil then
-    return ""
+    return nil
   end
 
   if p.isLemma(langCode, wordType, flexion, locution) then
