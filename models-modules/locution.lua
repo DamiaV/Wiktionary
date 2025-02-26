@@ -106,7 +106,7 @@ end
 
 --- Check whether the given word is a locution.
 --- @param word string The word to check.
---- @param wordType string The word’s type, as defined in [[Module:types de mots]].
+--- @param wordType string The word’s type, as defined in [[Module:types de mots/data]].
 --- @param langCode string The language code.
 --- @return boolean True if the word is a French/Dutch pronominal verb and the number of spaces is > 1,
 ---                 a Dutch verb with a particle and the number of spaces is > 1,
@@ -149,7 +149,7 @@ end
 --- Check whether the word contained in the given title is a locution.
 --- Supports main and "Annexe" namespaces.
 --- @param pageTitle title The page title to extract the word from.
---- @param wordType string The word’s type, as defined in [[Module:types de mots]].
+--- @param wordType string The word’s type, as defined in [[Module:types de mots/data]].
 --- @param langCode string The language code.
 --- @return boolean True if the word is a French/Dutch pronominal verb and the number of spaces is > 1,
 ---                 a Dutch verb with a particle and the number of spaces is > 1,
