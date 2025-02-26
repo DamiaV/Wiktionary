@@ -118,7 +118,7 @@ local function isLocution(word, wordType, langCode)
 
   -- Language-specific cases
   if wordType and langCode then
-    local isVerb = m_typesDeMots.get_nom_singulier(wordType) == "verbe"
+    local isVerb = m_typesDeMots.getWordTypeNameSingular(wordType) == "verbe"
 
     if langCode == "fr" then
       -- Pronominal verb

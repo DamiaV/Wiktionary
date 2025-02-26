@@ -43,31 +43,31 @@ local invalidTypes = {
 --- Indicate whether the given grammatical information constitutes a lemma.
 --- @param langCode string The language code.
 --- @param wordType string The word type as defined in [[Module:types de mots]].
---- @param flexion boolean Whether the entry is a flexion.
---- @param locution boolean Whether the entry is a locution (contains multiple words).
+--- @param isFlexion boolean Whether the entry is a flexion.
+--- @param isLocution boolean Whether the entry is a locution (contains multiple words).
 --- @return boolean True if the language code and word type are valid, and flexion and locution are false.
-function p.isLemma(langCode, wordType, flexion, locution)
+function p.isLemma(langCode, wordType, isFlexion, isLocution)
   return langCode
       and validLangCodes[langCode]
-      and not flexion
+      and not isFlexion
       and wordType
-      and m_typesDeMots.is_type(wordType)
-      and not invalidTypes[m_typesDeMots.get_nom(wordType)]
-      and not locution
+      and m_typesDeMots.isValidWordType(wordType)
+      and not invalidTypes[m_typesDeMots.getWordTypeName(wordType)]
+      and not isLocution
 end
 
 --- Return the lemma category name for the given grammatical information.
 --- @param langCode string The language code.
 --- @param wordType string The word type as defined in [[Module:types de mots]].
---- @param flexion boolean Whether the entry is a flexion.
---- @param locution boolean Whether the entry is a locution (contains multiple words).
+--- @param isFlexion boolean Whether the entry is a flexion.
+--- @param isLocution boolean Whether the entry is a locution (contains multiple words).
 --- @return string|nil Nil if any argument is nil, the category name if the entry is a lemma, an empty string otherwise.
-function p.getLemmaCategoryName(langCode, wordType, flexion, locution)
-  if langCode == nil or wordType == nil or flexion == nil or locution == nil then
+function p.getLemmaCategoryName(langCode, wordType, isFlexion, isLocution)
+  if langCode == nil or wordType == nil or isFlexion == nil or isLocution == nil then
     return nil
   end
 
-  if p.isLemma(langCode, wordType, flexion, locution) then
+  if p.isLemma(langCode, wordType, isFlexion, isLocution) then
     local langName = m_langues.get_nom(langCode)
     if langName then
       return "Lemmes en " .. langName
