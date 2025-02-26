@@ -91,6 +91,7 @@ function p.showSectionTypes()
   return table.concat(result, "\n")
 end
 
+--- @return string
 function p.showPythonReplacements()
   local result = {}
 
@@ -101,7 +102,7 @@ function p.showPythonReplacements()
     local aliasesForCode = aliases and aliases[code] or {}
     if #aliasesForCode > 0 then
       local text = table.concat(aliasesForCode, "|")
-      local replacements = '(r"\\{\\{S\\|(' .. text .. ')\\}\\}", "{{S|' .. code .. '}}"),';
+      local replacements = '(r"\\{\\{S\\|(' .. text .. ')\\}\\}", "{{S|' .. code .. '}}"),'
       table.insert(result, replacements)
     end
   end

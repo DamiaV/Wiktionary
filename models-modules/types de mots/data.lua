@@ -1,3 +1,4 @@
+-- Check list at [[Discussion module:section article/analyse/test]]
 local t = {
   -- NOMS STANDARDISÉS DES TYPES DE MOT
   ["texte"] = {

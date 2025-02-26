@@ -1,4 +1,4 @@
--- Check list at [[Discussion module:section article/analyse]]
+-- Check list at [[Discussion module:section article/analyse/test]]
 local t = {
   -- NOMS STANDARDISÉS DES TITRES DE SECTION
   ["texte"] = {
