@@ -1,147 +1,169 @@
-local m_word_types = require('Module:types de mots')
-local locLangs = mw.loadData('Module:locution/data')
+local m_typesDeMots = require("Module:types de mots")
+
+local locutionData = mw.loadData("Module:locution/data")
 
 local p = {}
 
-function p.contient_espaces(word)
-  if word == nil then
-    return nil
+--- Count the number of space characters (U+0020) contained in the given string.
+--- @param s string The string to check.
+--- @return number The number of space characters.
+local function countSpaces(s)
+  local count = 0
+  for i = 1, mw.ustring.len(s) do
+    if mw.ustring.sub(s, i, i) == " " then
+      count = count + 1
+    end
   end
-  return mw.ustring.find(word, ". .") ~= nil
+  return count
 end
 
-function p.is_locution(args, article, lang)
-  if article == nil or article.text == nil or args == nil then
-    return false
-  end
-  local title = article.text
+local dutchVerbParticles = {
+  "aan",
+  "aaneen",
+  "achter",
+  "achterna",
+  "achterover",
+  "achteruit",
+  "achteruit",
+  "af",
+  "beet",
+  "bij",
+  "bijeen",
+  "binnen",
+  "bloot",
+  "boven",
+  "buiten",
+  "deel",
+  "dicht",
+  "dood",
+  "door",
+  "droog",
+  "fijn",
+  "gaar",
+  "gelijk",
+  "glad",
+  "goed",
+  "groot",
+  "hard",
+  "in",
+  "ineen",
+  "klein",
+  "kort",
+  "kwijt",
+  "lang",
+  "langs",
+  "leeg",
+  "los",
+  "mede",
+  "mee",
+  "mis",
+  "na",
+  "neer",
+  "om",
+  "omver",
+  "onder",
+  "op",
+  "open",
+  "opeen",
+  "over",
+  "raak",
+  "recht",
+  "rond",
+  "samen",
+  "scheef",
+  "schoon",
+  "stil",
+  "stuk",
+  "tegen",
+  "terecht",
+  "terug",
+  "toe",
+  "uit",
+  "vast",
+  "vlak",
+  "vol",
+  "voor",
+  "voort",
+  "voorbij",
+  "vooruit",
+  "vrij",
+  "weg",
+  "warm",
+  "zwart",
+}
 
-  -- Annexe ? Ne garde que la dernière sous-page
-  if article.namespace == 100 then
-    title = mw.ustring.gsub(title, ".+\/", "")
-  end
-
-  -- Forcé par un paramètre
-  if args['locution'] then
-    _addCategory('Wiktionnaire:Sections de type avec locution forcée')
-
-    if args['locution'] == 'oui' then
+--- Check whether the given dutch verb ends with a particle.
+--- @param word string The word to check.
+--- @return boolean True if the word ends with any particle from `dutchVerbParticles`, false otherwise.
+local function isDutchVerbWithParticle(word)
+  for _, particle in ipairs(dutchVerbParticles) do
+    if mw.ustring.find(word, " " .. particle .. "$") then
       return true
-    elseif args['locution'] == 'non' then
-      return false
-    else
-      _addCategory('Wiktionnaire:Sections avec paramètre locution invalide')
     end
   end
-
-  -- Liste blanche : on peut deviner automatiquement
-  if locLangs[lang] then
-    return p.devine_locution(args, article, lang)
-  else
-    return false
-  end
+  return false
 end
 
-function p.devine_locution(args, article, _)
-  if article == nil or article.text == nil or args == nil then
-    return false
-  end
-  local title = article.text
+--- Check whether the given word is a locution.
+--- @param word string The word to check.
+--- @param wordType string The word’s type, as defined in [[Module:types de mots]].
+--- @param langCode string The language code.
+--- @return boolean True if the word is a French/Dutch pronominal verb and the number of spaces is > 1,
+---                 a Dutch verb with a particle and the number of spaces is > 1,
+---                 a Breton pronominal verb and the number of spaces is > 2,
+---                 or it contains at least one space character (U+0020);
+---                 false otherwise.
+local function isLocution(word, wordType, langCode)
+  local spaceCount = countSpaces(word)
 
-  -- Cas spéciaux (par langue)
-  if args[1] ~= nil and args[2] ~= nil then
-    -- Verbes pronominaux français
-    if args[2] == 'fr' and m_word_types.get_nom_singulier(args[1]) == 'verbe' and mw.ustring.find(title, "^se ") then
-      return mw.ustring.find(title, "^se [^ ]+ ")
-      -- Verbes pronominaux bretons
-      -- https://fr.wiktionary.org/wiki/Wiktionnaire:Wikidémie/mars_2018#Verbes_pronominaux_en_breton
-    elseif args[2] == 'br' and m_word_types.get_nom_singulier(args[1]) == 'verbe' and mw.ustring.find(title, "^en em ") then
-      return mw.ustring.find(title, "^en em [^ ]+ ")
-      -- Verbes pronominaux néerlandais
-    elseif args[2] == 'nl' and m_word_types.get_nom_singulier(args[1]) == 'verbe' and mw.ustring.find(title, "^zich ") then
-      return mw.ustring.find(title, "^zich [^ ]+ ")
-      -- Verbes à particule néerlandais
-    elseif args[2] == 'nl' and m_word_types.get_nom_singulier(args[1]) == 'verbe'
-        -- est-ce que le verbe finit par " aan", " achter", " af", etc ?
-        and (mw.ustring.find(title, " aan$")
-        or mw.ustring.find(title, " aaneen$")
-        or mw.ustring.find(title, " achter")
-        or mw.ustring.find(title, " achterna$")
-        or mw.ustring.find(title, " achterover$")
-        or mw.ustring.find(title, " achteruit$")
-        or mw.ustring.find(title, " achteruit$")
-        or mw.ustring.find(title, " af$")
-        or mw.ustring.find(title, " beet$")
-        or mw.ustring.find(title, " bij$")
-        or mw.ustring.find(title, " bijeen$")
-        or mw.ustring.find(title, " binnen$")
-        or mw.ustring.find(title, " bloot$")
-        or mw.ustring.find(title, " boven$")
-        or mw.ustring.find(title, " buiten$")
-        or mw.ustring.find(title, " deel$")
-        or mw.ustring.find(title, " dicht$")
-        or mw.ustring.find(title, " dood$")
-        or mw.ustring.find(title, " door$")
-        or mw.ustring.find(title, " droog$")
-        or mw.ustring.find(title, " fijn$")
-        or mw.ustring.find(title, " gaar$")
-        or mw.ustring.find(title, " gelijk$")
-        or mw.ustring.find(title, " glad$")
-        or mw.ustring.find(title, " goed$")
-        or mw.ustring.find(title, " groot$")
-        or mw.ustring.find(title, " hard$")
-        or mw.ustring.find(title, " in$")
-        or mw.ustring.find(title, " ineen$")
-        or mw.ustring.find(title, " klein$")
-        or mw.ustring.find(title, " kort$")
-        or mw.ustring.find(title, " kwijt$")
-        or mw.ustring.find(title, " lang$")
-        or mw.ustring.find(title, " langs$")
-        or mw.ustring.find(title, " leeg$")
-        or mw.ustring.find(title, " los$")
-        or mw.ustring.find(title, " mede$")
-        or mw.ustring.find(title, " mee$")
-        or mw.ustring.find(title, " mis$")
-        or mw.ustring.find(title, " na$")
-        or mw.ustring.find(title, " neer$")
-        or mw.ustring.find(title, " om$")
-        or mw.ustring.find(title, " omver$")
-        or mw.ustring.find(title, " onder$")
-        or mw.ustring.find(title, " op$")
-        or mw.ustring.find(title, " open$")
-        or mw.ustring.find(title, " opeen$")
-        or mw.ustring.find(title, " over$")
-        or mw.ustring.find(title, " raak$")
-        or mw.ustring.find(title, " recht$")
-        or mw.ustring.find(title, " rond$")
-        or mw.ustring.find(title, " samen$")
-        or mw.ustring.find(title, " scheef$")
-        or mw.ustring.find(title, " schoon$")
-        or mw.ustring.find(title, " stil$")
-        or mw.ustring.find(title, " stuk$")
-        or mw.ustring.find(title, " tegen$")
-        or mw.ustring.find(title, " terecht$")
-        or mw.ustring.find(title, " terug$")
-        or mw.ustring.find(title, " toe$")
-        or mw.ustring.find(title, " uit$")
-        or mw.ustring.find(title, " vast$")
-        or mw.ustring.find(title, " vlak$")
-        or mw.ustring.find(title, " vol$")
-        or mw.ustring.find(title, " voor$")
-        or mw.ustring.find(title, " voort$")
-        or mw.ustring.find(title, " voorbij$")
-        or mw.ustring.find(title, " vooruit$")
-        or mw.ustring.find(title, " vrij$")
-        or mw.ustring.find(title, " weg$")
-        or mw.ustring.find(title, " warm$")
-        or mw.ustring.find(title, " zwart$")) then
-      -- On teste la présence d'une seule espace
-      return mw.ustring.find(title, "^[^ ]+ [^ ]+$")
+  -- Language-specific cases
+  if wordType and langCode then
+    local isVerb = m_typesDeMots.get_nom_singulier(wordType) == "verbe"
+
+    if langCode == "fr" then
+      -- Pronominal verb
+      if isVerb and mw.ustring.find(word, "^se ") then
+        return spaceCount > 1
+      end
+    elseif langCode == "br" then
+      -- Pronominal verb
+      -- [[Wiktionnaire:Wikidémie/mars 2018#Verbes pronominaux en breton]]
+      if isVerb and mw.ustring.find(word, "^en em ") then
+        return spaceCount > 2
+      end
+    elseif langCode == "nl" then
+      if isVerb
+          -- Pronominal verb
+          and (mw.ustring.find(word, "^zich ")
+          -- Verb with a particle
+          or isDutchVerbWithParticle(word)) then
+        return spaceCount > 1
+      end
     end
   end
 
-  -- Par défaut : espaces = locution
-  return p.contient_espaces(title)
+  -- Default: any space
+  return spaceCount ~= 0
+end
+
+--- Check whether the word contained in the given title is a locution.
+--- Supports main and "Annexe" namespaces.
+--- @param pageTitle title The page title to extract the word from.
+--- @param wordType string The word’s type, as defined in [[Module:types de mots]].
+--- @param langCode string The language code.
+--- @return boolean True if the word is a French/Dutch pronominal verb and the number of spaces is > 1,
+---                 a Dutch verb with a particle and the number of spaces is > 1,
+---                 a Breton pronominal verb and the number of spaces is > 2,
+---                 or it contains at least one space character (U+0020);
+---                 false otherwise.
+function p.isLocution(pageTitle, wordType, langCode)
+  local title = pageTitle.text
+  -- If page is in "Annexe" namespace, keep only the last part
+  if pageTitle.namespace == 100 then
+    title = mw.ustring.gsub(title, ".+/", "")
+  end
+  -- If lang is in whitelist, try to detect automatically
+  return locutionData[langCode] and isLocution(title, wordType, langCode)
 end
 
 return p
