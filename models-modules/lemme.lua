@@ -40,22 +40,34 @@ local invalidTypes = {
   ['symbole'] = true,
 }
 
-function p.isLemma(langCode, type, flexion, locution)
+--- Indicate whether the given grammatical information constitutes a lemma.
+--- @param langCode string The language code.
+--- @param wordType string The word type as defined in [[Module:types de mots]].
+--- @param flexion boolean Whether the entry is a flexion.
+--- @param locution boolean Whether the entry is a locution (contains multiple words).
+--- @return boolean True if the language code and word type are valid, and flexion and locution are false.
+function p.isLemma(langCode, wordType, flexion, locution)
   return langCode
       and validLangCodes[langCode]
       and not flexion
-      and type
-      and m_typesDeMots.is_type(type)
-      and not invalidTypes[m_typesDeMots.get_nom(type)]
+      and wordType
+      and m_typesDeMots.is_type(wordType)
+      and not invalidTypes[m_typesDeMots.get_nom(wordType)]
       and not locution
 end
 
-function p.categorizeLemma(langCode, type, flexion, locution)
-  if langCode == nil or type == nil or flexion == nil or locution == nil then
+--- Return the lemma category name for the given grammatical information.
+--- @param langCode string The language code.
+--- @param wordType string The word type as defined in [[Module:types de mots]].
+--- @param flexion boolean Whether the entry is a flexion.
+--- @param locution boolean Whether the entry is a locution (contains multiple words).
+--- @return string|nil Nil if any argument is nil, the category name if the entry is a lemma, an empty string otherwise.
+function p.categorizeLemma(langCode, wordType, flexion, locution)
+  if langCode == nil or wordType == nil or flexion == nil or locution == nil then
     return ''
   end
 
-  if p.isLemma(langCode, type, flexion, locution) then
+  if p.isLemma(langCode, wordType, flexion, locution) then
     local langName = m_langues.get_nom(langCode)
     if langName then
       return "Lemmes en " .. langName
