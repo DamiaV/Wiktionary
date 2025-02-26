@@ -305,16 +305,16 @@ function p.section_autre(frame)
   if authorized_category[titre] ~= nil then
     if argsnum[2] then
       local langue = lang.get_nom(argsnum[2])
-      _ajoute_categorie(sect.get_category(titre) .. ' en ' .. langue)
+      _ajoute_categorie(sect.getSectionTypeCategoryName(titre) .. ' en ' .. langue)
     else
-      _ajoute_categorie(sect.get_category(titre))
+      _ajoute_categorie(sect.getSectionTypeCategoryName(titre))
     end
   elseif argsnum[2] then
     _ajoute_categorie('Wiktionnaire:Sections avec paramètres superflus', titre)
   end
 
   -- S’il s’agit d’un alias, on crée une catégorie (pour remplacer les alias par le mot standard si on le veut)
-  if sect.is_alias(titre) then
+  if sect.isSectionTypeAlias(titre) then
     -- On ignore les alias de titre utilisés sans préférence
     local ignore_alias = { ['trad-trier'] = true, ['variantes orthographiques'] = true, ['voir'] = true }
     if ignore_alias[titre] == nil then
@@ -323,13 +323,13 @@ function p.section_autre(frame)
   end
 
   -- Récupération du texte associé à ce titre (créé dans le module dédié section_article)
-  local texte_titre = titre and b.ucfirst(sect.get_nom_section(titre)) or "Sans titre"
+  local texte_titre = titre and b.ucfirst(sect.getSectionTypeName(titre)) or "Sans titre"
 
   -- Récupère aussi la classe de la section (si elle existe) pour afficher une icône adaptée
-  local classe = sect.get_class(titre) or ""
+  local classe = sect.getSectionTypeClass(titre) or ""
 
   -- Récupère l'infobulle (si elle existe) expliquant le titre de section (hyponymes, etc.)
-  local infobulle = sect.get_infobulle(titre) or ""
+  local infobulle = sect.getSectionTypePopupText(titre) or ""
   if infobulle ~= "" then
     -- remplace {mot} par le titre de la page courante dans l'infobulle
     local article = mw.title.getCurrentTitle().fullText
@@ -364,7 +364,7 @@ function p.section(frame)
       texte_final = p.entree(frame)
 
       -- Sinon, est-ce une section autorisée ? (pas de fonction dédiée pour l’instant)
-    elseif sect.is_titre(titre) then
+    elseif sect.isValidSectionType(titre) then
       texte_final = p.section_autre(frame)
 
       -- Section non prise en charge : on affiche quand même la section, mais avec un lien vers l’aide (avec une *)
