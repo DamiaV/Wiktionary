@@ -53,6 +53,18 @@ $(function () {
   console.log("Chargement de Gadget-CreerNouveauMot.js…");
 
   /**
+   * Format a string by replacing placeholders (e.g., "{0}", "{1}") with provided values.
+   * @param str {string} The string containing placeholders.
+   * @param values {*} The list of values to insert into the string.
+   * @return {string} The formatted string.
+   */
+  function interpolateString(str, ...values) {
+    return str.replace(/{(\d+)}/g, function (match, number) {
+      return typeof values[number] !== "undefined" ? values[number] : match;
+    });
+  }
+
+  /**
    * Wrapper object for a single definition and its examples.
    */
   class Definition {
@@ -825,8 +837,10 @@ $(function () {
       if (isConv) {
         wikicode += "\n";
       } else {
+        const genderTemplate = interpolateString(gender.template, langCode);
+        const numberTemplate = interpolateString(number.template, langCode);
         // trim() to remove trailing space(s) if no gender or number template.
-        wikicode += " " + `{{pron|${pron}|${langCode}}} ${gender.template.format(langCode)} ${number.template.format(langCode)}`
+        wikicode += " " + `{{pron|${pron}|${langCode}}} ${genderTemplate} ${numberTemplate}`
             .replace(/\s+/g, " ").trim() + "\n";
       }
 
@@ -1005,11 +1019,11 @@ $(function () {
   }
 
   /**
-   * Format the selected text using the given effect.
+   * Applies the selected text formatting effect.
    * @param effect {string} The effect to apply (either "bold" or "italic").
    * @param $textInput {jQuery} The text input to format the text of.
    */
-  function formatText(effect, $textInput) {
+  function applyTextEffect(effect, $textInput) {
     const selectedText = wikt.edit.getSelectedText($textInput);
     let replText;
     switch (effect) {
@@ -1055,14 +1069,14 @@ $(function () {
       }
       const $bold = $('<a href="#" style="font-weight: bold">Gras</a>');
       $bold.on("click", () => {
-        formatText("bold", $textInput);
+        applyTextEffect("bold", $textInput);
         textField.focus();
         // Return false to disable default event from triggering.
         return false;
       });
       const $italic = $('<a href="#" style="font-style: italic">Italique</a>');
       $italic.on("click", () => {
-        formatText("italic", $textInput);
+        applyTextEffect("italic", $textInput);
         textField.focus();
         // Return false to disable default event from triggering.
         return false;
@@ -1288,7 +1302,7 @@ $(function () {
    * @param langCode The new language code.
    */
   ExampleForm.prototype.onLanguageUpdate = function (langCode) {
-    var isFrench = langCode === "fr";
+    const isFrench = langCode === "fr";
     this._translationFieldLayout.toggle(!isFrench);
     this._transcriptionFieldLayout.toggle(!isFrench);
     this._disableTranslationChk.setDisabled(isFrench);
@@ -2089,7 +2103,11 @@ $(function () {
      * @return {string} The search URL.
      */
     static #generateProjectLink(projectDomain, urlBase, langCode, word) {
-      return langCode ? `https://${projectDomain.format(langCode)}/${urlBase}${encodeURI(word)}` : "#";
+      if (!langCode) {
+        return "#";
+      }
+      const domain = interpolateString(projectDomain, langCode);
+      return `https://${domain}/${urlBase}${encodeURI(word)}`;
     }
 
     /**
