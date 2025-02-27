@@ -9,7 +9,7 @@
  * (fr)
  * Ce gadget ajoute la suggestion de valeurs pour certains modèles
  * lorsque l’utilisateur appuie sur Ctrl+Espace. Après avoir appuyé sur
- * ces touches, si le curseur est dans un modèle supporté, une liste de
+ * ces touches, si le curseur est dans un modèle pris en charge, une liste de
  * suggestions de valeurs apparait. Si du texte a déjà été entré, seules
  * les valeurs commençant par le texte en question seront suggérées. La
  * liste est mise à jour à chaque fois que l’utilisateur appuie sur une
@@ -194,7 +194,7 @@ $(function () {
 
         var prefix = v.substr(0, value.length);
         var rest = v.substr(value.length);
-        var $item = $('<li><span class="autocomplete-highlight">{0}</span>{1}</li>'.format(prefix, rest));
+        var $item = $(`<li><span class="autocomplete-highlight">${prefix}</span>${rest}</li>`);
 
         $item.click(() => {
           this.#selectSuggestion(i);
@@ -219,7 +219,7 @@ $(function () {
         const m = this.#suggestions.length;
         this.#suggestionIndex = ((i % m) + m) % m; // True modulo operation
         this.#$suggestionBox.find("ul li").removeClass("autocomplete-selected");
-        this.#$suggestionBox.find("ul li:nth-child({0})".format(this.#suggestionIndex + 1))
+        this.#$suggestionBox.find(`ul li:nth-child(${this.#suggestionIndex + 1})`)
             .addClass("autocomplete-selected");
       }
     }
@@ -277,12 +277,12 @@ $(function () {
    */
   function addTemplate(templateName, moduleName) {
     $.get(
-        "https://fr.wiktionary.org/wiki/Module:{0}/data?action=raw".format(encodeURIComponent(moduleName)),
+        `https://fr.wiktionary.org/wiki/Module:${encodeURIComponent(moduleName)}/data?action=raw`,
         data => {
           try {
             ac.addTemplateParameters(templateName, Object.keys(luaDataPageToJson(data)));
           } catch (e) {
-            console.log("An error occured while parsing LUA table for [[Module:{0}/data]] ([[Template:{1}]])".format(moduleName, templateName));
+            console.log(`An error occured while parsing LUA table for [[Module:${moduleName}/data]] ([[Template:${templateName}]])`);
           }
         }
     );
