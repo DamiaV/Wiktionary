@@ -29,7 +29,8 @@ $(() => {
         "href",
         `https://fr.wiktionary.org/w/index.php?go=Lire&search=${encodeURIComponent(selectedText)}&title=Spécial:Recherche`
     );
-    selectionRect = selection.getRangeAt(0).getBoundingClientRect();
+    if (selection.rangeCount)
+      selectionRect = selection.getRangeAt(0).getBoundingClientRect();
   });
 
   document.addEventListener("mouseup", () => {
