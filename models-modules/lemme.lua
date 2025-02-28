@@ -1,43 +1,43 @@
-local m_typesDeMots = require("Module:types de mots")
 local m_langues = require("Module:langues")
+local m_typesDeMots = require("Module:types de mots")
 
 local p = {}
 
 -- Critères basés sur [[Wiktionnaire:Prise de décision/Catégories de lemmes]]
 local validLangCodes = {
-  ['fr'] = true,
-  ['de'] = true,
-  ['en'] = true,
-  ['eo'] = true,
-  ['es'] = true,
-  ['io'] = true,
-  ['it'] = true,
-  ['ru'] = true,
-  ['uk'] = true,
-  ['bg'] = true,
-  ['ga'] = true,
-  ['gallo'] = true,
-  ['se'] = true,
-  ['la'] = true,
-  ['sl'] = true,
-  ['cs'] = true,
-  ['sv'] = true,
-  ['nl'] = true,
-  ['pt'] = true,
-  ['fi'] = true,
+  ["fr"] = true,
+  ["de"] = true,
+  ["en"] = true,
+  ["eo"] = true,
+  ["es"] = true,
+  ["io"] = true,
+  ["it"] = true,
+  ["ru"] = true,
+  ["uk"] = true,
+  ["bg"] = true,
+  ["ga"] = true,
+  ["gallo"] = true,
+  ["se"] = true,
+  ["la"] = true,
+  ["sl"] = true,
+  ["cs"] = true,
+  ["sv"] = true,
+  ["nl"] = true,
+  ["pt"] = true,
+  ["fi"] = true,
 }
 local invalidTypes = {
-  ['variante par contrainte typographique'] = true,
-  ['nom propre'] = true,
-  ['prénom'] = true,
-  ['nom de famille'] = true,
-  ['nom scientifique'] = true,
-  ['infixe'] = true,
-  ['interfixe'] = true,
-  ['préfixe'] = true,
-  ['suffixe'] = true,
-  ['circonfixe'] = true,
-  ['symbole'] = true,
+  ["variante par contrainte typographique"] = true,
+  ["nom propre"] = true,
+  ["prénom"] = true,
+  ["nom de famille"] = true,
+  ["nom scientifique"] = true,
+  ["infixe"] = true,
+  ["interfixe"] = true,
+  ["préfixe"] = true,
+  ["suffixe"] = true,
+  ["circonfixe"] = true,
+  ["symbole"] = true,
 }
 
 --- Indicate whether the given grammatical information constitutes a lemma.
@@ -63,7 +63,7 @@ end
 --- @param isLocution boolean Whether the entry is a locution (contains multiple words).
 --- @return string|nil Nil if any argument is nil, the category name if the entry is a lemma, an empty string otherwise.
 function p.getLemmaCategoryName(langCode, wordType, isFlexion, isLocution)
-  if langCode == nil or wordType == nil or isFlexion == nil or isLocution == nil then
+  if langCode == nil or wordType == nil then
     return nil
   end
 

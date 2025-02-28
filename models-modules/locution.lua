@@ -163,7 +163,7 @@ function p.isLocution(pageTitle, wordType, langCode)
     title = mw.ustring.gsub(title, ".+/", "")
   end
   -- If lang is in whitelist, try to detect automatically
-  return locutionData[langCode] and isLocution(title, wordType, langCode)
+  return locutionData[langCode] ~= nil and isLocution(title, wordType, langCode)
 end
 
 return p
