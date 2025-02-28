@@ -86,7 +86,7 @@ local function appendContentCategories(categories, langCode, wordType, isFlexion
   local pluralWordTypeName = m_typesDeMots.getWordTypeNamePlural(wordType, isLocution, isFlexion)
 
   if gender then
-    if pluralWordTypeName == "prénoms" then
+    if mw.ustring.find(pluralWordTypeName, "prénoms", 1, true) then
       if gender == "m" then
         pluralWordTypeName = pluralWordTypeName .. " masculins"
       elseif gender == "f" then
