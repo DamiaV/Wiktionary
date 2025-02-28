@@ -69,7 +69,6 @@ function p.getWordTypeName(code, isLocution, isFlexion, isPlural)
     end
 
     local name = p.types["texte"][code][key]
-    -- Flexion
     if isFlexion then
       name = getFlexionType(name, isPlural)
     end
