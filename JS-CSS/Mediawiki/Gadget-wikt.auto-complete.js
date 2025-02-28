@@ -244,30 +244,8 @@ $(function () {
     }
   }
 
-  const ac = new GadgetAutoComplete();
-  window.gadget_autoComplete = ac;
-
-  /**
-   * Converts the given string representing a LUA table to a JSON object.
-   * @param rawLua {string} The string containing the LUA table.
-   * @return {Object} The corresponding JSON object.
-   */
-  function luaDataPageToJson(rawLua) {
-    const startToken = "-- $Table start$\n";
-    const startIndex = rawLua.indexOf(startToken);
-    const endIndex = rawLua.indexOf("-- $Table end$");
-    const rawParams = rawLua.substring(startIndex === -1 ? 0 : startIndex + startToken.length, endIndex === -1 ? rawLua.length : endIndex)
-        .replaceAll(/--.+$/gm, "") // Remove comments
-        .replaceAll(/^local\s+.+?=\s*(?={)/gm, "") // Remove assignment
-        .replaceAll(/^(\s*)\[(['"])(.+?)\2]\s*=/gm, '$1"$3":') // Convert Lua keys syntax to JS
-        .replaceAll(/(')(.*?[^\\])\1/g, '"$2"') // Convert ' to "
-        .replaceAll(/\\'/g, "'") // Unescape single quotes
-        .replaceAll(/(\w+)\s*=/g, '"$1":') // Add quotes on unquoted keys
-        .replaceAll(/,(?=\s*})/gm, "") // Remove trailing commas
-        .replaceAll(/{([^:]*?)}/gm, "[$1]") // Convert Lua lists to JS
-        .replaceAll(/^\s*return.+$/gm, ""); // Remove "return" statement
-    return JSON.parse(rawParams);
-  }
+  const gadget = new GadgetAutoComplete();
+  window.gadget_autoComplete = gadget;
 
   /**
    * Utility function that adds support to the given template that uses a single data module.
@@ -277,10 +255,10 @@ $(function () {
    */
   function addTemplate(templateName, moduleName) {
     $.get(
-        `https://fr.wiktionary.org/wiki/Module:${encodeURIComponent(moduleName)}/data?action=raw`,
+        `https://fr.wiktionary.org/wiki/Module:${encodeURIComponent(moduleName)}/data/dump.json?action=raw`,
         data => {
           try {
-            ac.addTemplateParameters(templateName, Object.keys(luaDataPageToJson(data)));
+            gadget.addTemplateParameters(templateName, Object.keys(JSON.parse(data)));
           } catch (e) {
             console.log(`An error occured while parsing LUA table for [[Module:${moduleName}/data]] ([[Template:${templateName}]])`);
           }
@@ -288,40 +266,40 @@ $(function () {
     );
   }
 
-  // [[Modèle:langue]], [[Module:langues/data]]
+  // [[Modèle:langue]], [[MediaWiki:Gadget-translation_editor.js/langues.json]]
   $.get(
-      "https://fr.wiktionary.org/wiki/MediaWiki:Gadget-translation editor.js/langues.json?action=raw",
+      "https://fr.wiktionary.org/wiki/MediaWiki:Gadget-translation_editor.js/langues.json?action=raw",
       data => {
         try {
-          ac.addTemplateParameters("langue", Object.keys(JSON.parse(data)));
+          gadget.addTemplateParameters("langue", Object.keys(JSON.parse(data)));
         } catch (e) {
           console.log("An error occured while parsing JSON for [[MediaWiki:Gadget-translation editor.js/langues.json]] ([[Template:langue]]): " + e);
         }
       }
   );
-  // [[Modèle:lexique]], [[Module:lexique/data]]
+  // [[Modèle:lexique]], [[Module:lexique/data/dump.json]]
   addTemplate("lexique", "lexique");
-  // [[Modèle:info lex]], [[Module:lexique/data]]
+  // [[Modèle:info lex]], [[Module:lexique/data/dump.json]]
   addTemplate("info lex", "lexique");
-  // [[Modèle:S]], [[Module:section article/data]], [[Module:types de mots/data]]
+  // [[Modèle:S]], [[Module:section article/data/dump.json]], [[Module:types de mots/data/dump.json]]
   $.get(
-      "https://fr.wiktionary.org/wiki/Module:section_article/data?action=raw",
+      "https://fr.wiktionary.org/wiki/Module:section_article/data/dump.json?action=raw",
       data => {
         try {
-          const sectionIds = Object.keys(luaDataPageToJson(data)["texte"]);
+          const sectionIds = Object.keys(JSON.parse(data)["texte"]);
           $.get(
-              "https://fr.wiktionary.org/wiki/Module:types_de_mots/data?action=raw",
+              "https://fr.wiktionary.org/wiki/Module:types_de_mots/data/dump.json?action=raw",
               data => {
                 try {
-                  const wordTypes = Object.keys(luaDataPageToJson(data)["texte"]);
-                  ac.addTemplateParameters("S", sectionIds.concat(wordTypes));
+                  const wordTypes = Object.keys(JSON.parse(data)["texte"]);
+                  gadget.addTemplateParameters("S", sectionIds.concat(wordTypes));
                 } catch (e) {
-                  console.log("An error occured while parsing LUA table for [[Module:types de mots/data]] ([[Template:S]]): " + e);
+                  console.log("An error occured while parsing JSON for [[Module:types de mots/data/dump.json]] ([[Template:S]]): " + e);
                 }
               }
           );
         } catch (e) {
-          console.log("An error occured while parsing LUA table for [[Module:section article/data]] ([[Template:S]]): " + e);
+          console.log("An error occured while parsing JSON for [[Module:section article/data/dump.json]] ([[Template:S]]): " + e);
         }
       }
   );
