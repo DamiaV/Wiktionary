@@ -10,22 +10,12 @@ MODE_EMBEDS = 'embeds'
 MODE_LINKS = 'links'
 
 # Arguments #
-PAGE_NAME = 'Modèle:R:avk-grammaire'
-SUMMARY = 'Traitement de [[Wiktionnaire:Bots/Requêtes#Mise à jour des numéros de pages]]'
-LINK_MODE = MODE_EMBEDS
+PAGE_NAME = 'Catégorie:Appels de modèles incorrects:S'
+SUMMARY = 'Remplacement du paramètre id par num dans {{S}}'
+LINK_MODE = MODE_CAT
 # language=pythonregexp
-NEEDLE = r'\{\{R:avk-grammaire\|p=(\d+)}}'
-
-
-def _repl(match: re.Match[str]) -> str:
-    page_num = match[1]
-    new_num = page_num
-    if (nb := int(page_num)) in (10, 15, 24, 28, 52):
-        new_num = str(nb - 1)
-    return f'{{{{R:avk-grammaire|p={new_num}}}}}'
-
-
-REPL = _repl
+NEEDLE = r'\{\{S\|([^}]+?)\|(?:id|ID)=([^|}]+)(\|[^}]+)*}}'
+REPL = r'{{S|\1|num=\2\3}}'
 
 
 def handle_page(page: pwb.Page) -> None:
