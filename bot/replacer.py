@@ -1,3 +1,4 @@
+"""This parameterizable script performs string substitutions on selected pages."""
 import re
 
 import pywikibot as pwb
