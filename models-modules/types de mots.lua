@@ -10,21 +10,14 @@ p.types = mw.loadData("Module:types de mots/data")
 --- @param code string The string to check.
 --- @return boolean True if the argument is a valid word type code, false otherwise.
 function p.isValidWordType(code)
-  if code == nil then
-    return false
-  end
-  code = mw.ustring.lower(code)
-  return p.types["alias"][code] or p.types["texte"][code]
+  return code ~= nil and p.types["alias"][code] or p.types["texte"][code]
 end
 
 --- Check whether the given value is a valid word type code alias from [[Module:types de mots/data]].
 --- @param code string The string to check.
 --- @return boolean True if the argument is a valid word type code alias, false otherwise.
 function p.isWordTypeAlias(code)
-  if code == nil then
-    return false
-  end
-  return p.types["alias"][mw.ustring.lower(code)]
+  return code ~= nil and p.types["alias"][code]
 end
 
 --- Get the phrase for the flexion of the given word type.
@@ -50,8 +43,6 @@ function p.getWordTypeName(code, isLocution, isFlexion, isPlural)
   if code == nil then
     return nil
   end
-
-  code = mw.ustring.lower(code);
 
   if p.types["alias"][code] then
     code = p.types["alias"][code]
@@ -106,7 +97,6 @@ function p.getWordTypeAbbr(code, isFlexion)
   if code == nil then
     return nil
   end
-  code = mw.ustring.lower(code)
 
   if p.types["alias"][code] then
     code = p.types["alias"][code]

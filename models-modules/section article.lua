@@ -9,7 +9,6 @@ local function getSectionData(code)
   if code == nil then
     return nil
   end
-  code = mw.ustring.lower(code)
   if p.isSectionTypeAlias(code) then
     code = data["alias"][code]
   end
@@ -30,7 +29,7 @@ end
 --- @param code string The string to check.
 --- @return boolean True if the argument is a valid section type code alias, false otherwise.
 function p.isSectionTypeAlias(code)
-  return code and data["alias"][mw.ustring.lower(code)]
+  return code and data["alias"][code]
 end
 
 --- Return the value of the given property for a specific section type.
