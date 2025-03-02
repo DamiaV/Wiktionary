@@ -12,10 +12,12 @@ RENAME_TABLE = {
     'ID': 'num',
     'nim': 'num',
     'nom': 'num',
+    'nun': 'num',
+    'mum': 'num',
     'cél': 'clé',
     'cléé': 'clé',
 }
-INVALID_ARGS = ['loc', 'aspect', 'mf', ]
+INVALID_ARGS = ['loc', 'aspect', 'mf', 'sing', ]
 
 
 def handle_page(page: pwb.Page) -> None:
@@ -32,7 +34,7 @@ def handle_page(page: pwb.Page) -> None:
         return '{{S|' + match[1].lower()
 
     new_text = re.sub(
-        r'\{\{S\|([A-Z][\wé -]+)(?=[|}])',
+        r'\{\{S\|([\wéÉ -]+)(?=[|}])',
         repl,
         new_text
     )
