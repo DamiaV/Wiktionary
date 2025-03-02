@@ -25,6 +25,18 @@ def handle_page(page: pwb.Page) -> None:
 
     new_text = old_text.strip()
 
+    # Set all section names to lower case
+    def repl(match: re.Match[str]) -> str:
+        nonlocal any_change
+        any_change = True
+        return '{{S|' + match[1].lower()
+
+    new_text = re.sub(
+        r'\{\{S\|([A-Z][\wé -]+)(?=[|}])',
+        repl,
+        new_text
+    )
+
     # Rename arguments
     for old_name, new_name in RENAME_TABLE.items():
         if old_name + '=' in new_text:
@@ -103,6 +115,7 @@ def pages() -> typing.Iterator[pwb.Page]:
     site = pwb.Site()
     yield from pwb.Category(site, 'Catégorie:Appels de modèles incorrects:S').articles()
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections avec paramètres superflus').articles()
+    yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections avec titre inconnu').articles()
 
 
 def main() -> None:
