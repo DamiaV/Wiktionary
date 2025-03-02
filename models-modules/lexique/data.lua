@@ -88,6 +88,11 @@ local t = {
     ['determiner'] = 'de l’',
     ['super_categories'] = { 'biologie' }
   },
+  ['antifascisme'] = {
+    ['description'] = 'L’antifascisme est la lutte contre le fascisme',
+    ['determiner'] = 'de l’',
+    ['super_categories'] = { 'luttes sociales' }
+  },
   ['antiracisme'] = {
     ['description'] = 'L’antiracisme est la lutte contre le racisme',
     ['determiner'] = 'de l’',
@@ -429,7 +434,7 @@ local t = {
     ['super_categories'] = { 'sports de combat' }
   },
   ['brasserie'] = {
-    ['description'] = 'Le brasserie désigne l’ensemble des techniques d’élaboration de la bière.',
+    ['description'] = 'La brasserie désigne l’ensemble des techniques d’élaboration de la bière.',
     ['determiner'] = 'de la ',
     ['super_categories'] = { 'alimentaire', 'industrie' }
   },
@@ -712,6 +717,11 @@ local t = {
     ['description'] = 'La course à pied consiste à se mouvoir rapidement à pieds.',
     ['determiner'] = 'de la ',
     ['super_categories'] = { 'athlétisme' }
+  },
+  ['coutellerie'] = {
+    ['description'] = 'La coutellerie est l’art de la fabrication des couteaux et autres instruments à lames.',
+    ['determiner'] = 'de la ',
+    ['super_categories'] = { 'artisanat', 'industrie', 'métallurgie' }
   },
   ['couture'] = {
     ['description'] = 'La couture est la fabrication de pièces de tissus.',
@@ -1039,7 +1049,7 @@ local t = {
     ['super_categories'] = { 'sciences humaines et sociales' }
   },
   ['édition'] = {
-    ['description'] = 'L’édition regroupe la modification, la publication et la diffusion d’oeuvres.',
+    ['description'] = 'L’édition regroupe la modification, la publication et la diffusion d’œuvres.',
     ['determiner'] = 'de l’',
     ['super_categories'] = { 'médias' }
   },
@@ -1142,6 +1152,11 @@ local t = {
     ['description'] = 'L’estampe désigne l’impression d’images d’art par la gravure.',
     ['determiner'] = 'de l’',
     ['super_categories'] = { 'gravure' }
+  },
+  ['esthétique'] = {
+    ['description'] = 'L’esthétique se préoccupe du sentiment du beau.',
+    ['determiner'] = 'de l’',
+    ['super_categories'] = { 'art' }
   },
   ['éthique'] = {
     ['description'] = 'L‘éthique désigne l’ensemble des normes de la morale.',
@@ -1299,12 +1314,12 @@ local t = {
     ['super_categories'] = { 'mort' }
   },
   ['fusion nucléaire'] = {
-    ['description'] = 'Technique de production d’énergie nucléaire.',
+    ['description'] = 'La fusion nucléaire est une technique de production d’énergie nucléaire.',
     ['determiner'] = 'de la ',
     ['super_categories'] = { 'nucléaire' }
   },
   ['gastronomie'] = {
-    ['description'] = 'La gastronimie est l’art de la bonne cuisine.',
+    ['description'] = 'La gastronomie est l’art de la bonne cuisine.',
     ['determiner'] = 'de la ',
     ['super_categories'] = { 'cuisine' }
   },
@@ -1426,7 +1441,7 @@ local t = {
   ['handicap'] = {
     ['description'] = 'Le handicap est un désavantage physique ou mental subi.',
     ['determiner'] = 'du ',
-    ['super_categories'] = { 'médecine', 'société' }
+    ['super_categories'] = { 'médecine', 'société', 'luttes sociales' }
   },
   ['handisport'] = {
     ['description'] = 'Le handisport est le sport pratiqué par les handicapés physiques.',
@@ -1602,6 +1617,11 @@ local t = {
     ['description'] = 'L’informatique est la science des ordinateurs.',
     ['determiner'] = 'de l’',
     ['super_categories'] = { 'technique' }
+  },
+  ['ingénierie'] = {
+    ['description'] = 'L’ingénierie est l’art de l’étude et de la réalisation des projets.',
+    ['determiner'] = 'de l’',
+    ['super_categories'] = { 'organisation', 'travail', 'technique' }
   },
   ['intelligence artificielle'] = {
     ['description'] = 'L’intelligence artificielle désigne la simulation de l’intelligence humaine par la technologie.',
@@ -1889,9 +1909,9 @@ local t = {
     ['super_categories'] = { 'technique' }
   },
   ['maoïsme'] = {
-    ['description'] = 'Le maoïsme est une doctrine politique et sociale se basant sur les idées de {{W|Mao Zedong}}.',
+    ['description'] = 'Le maoïsme est une doctrine politique et sociale se basant sur les idées de [[w:Mao Zedong|Mao Zedong]].',
     ['determiner'] = 'du ',
-    ['super_categories'] = { 'socialisme' }
+    ['super_categories'] = { 'socialisme', 'communisme' }
   },
   ['marbrerie'] = {
     ['description'] = 'La marbrerie est la travail du marbre.',
@@ -1908,25 +1928,25 @@ local t = {
     ['determiner'] = 'de la ',
     ['super_categories'] = { 'société' }
   },
-  ['marionnette'] = {
-    ['description'] = 'La marionnette est la manipulation de figurines articulées.',
-    ['determiner'] = 'de la ',
+  ['marionnettes'] = {
+    ['description'] = 'Une marionnette est une figurine articulée.',
+    ['determiner'] = 'des ',
     ['super_categories'] = { 'arts de la scène' }
   },
   ['marketing'] = {
-    ['description'] = 'La marketing est la relation entreprises-clients.',
+    ['description'] = 'Le marketing (mercatique en français) est la relation entreprises-clients.',
     ['determiner'] = 'du ',
     ['super_categories'] = { 'économie' }
-  },
-  ['marxisme'] = {
-    ['description'] = 'La marxisme est un courant de pensée fondé sur les idées de {{W|Karl Marx}}.',
-    ['determiner'] = 'du ',
-    ['super_categories'] = { 'socialisme', 'économie' }
   },
   ['maroquinerie'] = {
     ['description'] = 'La maroquinerie est l’industrie et le commerce du maroquin.',
     ['determiner'] = 'de la ',
     ['super_categories'] = { 'industrie' }
+  },
+  ['marxisme'] = {
+    ['description'] = 'Le marxisme est un courant de pensée fondé sur les idées de [[w:Karl Marx|Karl Marx]].',
+    ['determiner'] = 'du ',
+    ['super_categories'] = { 'socialisme', 'économie' }
   },
   ['mathématiques'] = {
     ['description'] = 'Les mathématiques sont l’étude des nombres et figures géométriques.',
@@ -1981,6 +2001,11 @@ local t = {
     ['description'] = 'La météorologie est l’étude des phénomènes atmosphériques.',
     ['determiner'] = 'de la ',
     ['super_categories'] = { 'physique' }
+  },
+  ['métiers'] = {
+    ['description'] = 'Les métiers sont des attributions de rôle dans le domaine du travail.',
+    ['determiner'] = 'des ',
+    ['super_categories'] = { 'travail' }
   },
   ['métrologie'] = {
     ['description'] = 'La métrologie est la science des mesures.',
@@ -2182,6 +2207,11 @@ local t = {
     ['determiner'] = 'de la ',
     ['super_categories'] = { 'mythologie' }
   },
+  ['mythologie yoruba'] = {
+    ['description'] = 'La mythologie yoruba regroupe les différents mythes des peuples yorubas.',
+    ['determiner'] = 'de la ',
+    ['super_categories'] = { 'mythologie' }
+  },
   ['nanotechnologie'] = {
     ['description'] = 'La nanotechnologie est la manipulation de structures à l’échelle de l’atome.',
     ['determiner'] = 'de la ',
@@ -2307,6 +2337,11 @@ local t = {
     ['determiner'] = 'de l’',
     ['super_categories'] = { 'arts visuels', 'artisanat' }
   },
+  ['organisation'] = {
+    ['description'] = 'L’organisation est la façon d’agencer des tâches à accomplir.',
+    ['determiner'] = 'de l’',
+    ['super_categories'] = { 'musique' }
+  },
   ['orgues'] = {
     ['description'] = 'Les orgues sont un instrument de musique à vent, à clavier et à pédalier.',
     ['determiner'] = 'des ',
@@ -2400,7 +2435,7 @@ local t = {
   ['paysagisme'] = {
     ['description'] = 'Le paysagisme est une discipline de l’aménagement de l’environnement de jardins, de lieux urbains ou de régions.',
     ['determiner'] = 'du ',
-    ['super_categories'] = { 'environnement', 'urbanisme' }
+    ['super_categories'] = { 'urbanisme' }
   },
   ['pêche'] = {
     ['description'] = 'La pêche est la capture de poissons, crustacés, coquillages.',
@@ -2536,6 +2571,11 @@ local t = {
     ['description'] = 'La physique des réacteurs nucléaires est l’étude de la fission nucléaire.',
     ['determiner'] = 'de la ',
     ['super_categories'] = { 'nucléaire' }
+  },
+  ['physique quantique'] = {
+    ['description'] = 'La physique quantique est l’étude des phénomènes qui régissent les particules atomiques.',
+    ['determiner'] = 'de la ',
+    ['super_categories'] = { 'physique' }
   },
   ['phytologie'] = {
     ['description'] = 'La phytologie est la science du végétal.',
@@ -2731,6 +2771,11 @@ local t = {
     ['description'] = 'Les réseaux informatiques désignent des ensembles d’ordinateurs reliés entre eux.',
     ['determiner'] = 'des ',
     ['super_categories'] = { 'informatique', 'télécommunications' }
+  },
+  ['restauration'] = {
+    ['description'] = 'La restauration est l’ensemble des activités liées à l’alimentation d’une clientèle et aux services proposés dans des restaurants ou apparentés.',
+    ['determiner'] = 'de la ',
+    ['super_categories'] = { 'loisirs', 'travail' }
   },
   ['rhétorique'] = {
     ['description'] = 'La rhétorique est l’art de l’éloquence.',
