@@ -299,7 +299,7 @@ function p.section(frame)
         end
         appendCategory(categories, "Wiktionnaire:Sections avec titre inconnu")
         message = "Titre invalide"
-      elseif error == m_params.EMPTY_VALUE or error == m_params.MISSING_PARAM then
+      elseif error == m_params.MISSING_PARAM or error == m_params.EMPTY_PARAM then
         table.insert(errorLinks, SECTION_TYPE_ERROR_LINK)
         appendCategory(categories, "Wiktionnaire:Sections sans titre")
         message = "Section sans titre"
