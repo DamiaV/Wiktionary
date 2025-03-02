@@ -13,8 +13,9 @@ RENAME_TABLE = {
     'nim': 'num',
     'nom': 'num',
     'cél': 'clé',
+    'cléé': 'clé',
 }
-INVALID_ARGS = ['loc', 'aspect', ]
+INVALID_ARGS = ['loc', 'aspect', 'mf', ]
 
 
 def handle_page(page: pwb.Page) -> None:
@@ -98,18 +99,10 @@ def handle_page(page: pwb.Page) -> None:
         print('No changes, skipped.')
 
 
-def proper_nouns(site: pwb.Site) -> typing.Iterable[pwb.Page]:
-    root = pwb.Category(site, 'Catégorie:Noms propres')
-    yield from root.articles()
-    for cat in root.subcategories(recurse=True):
-        yield from cat.articles()
-
-
 def pages() -> typing.Iterator[pwb.Page]:
     site = pwb.Site()
     yield from pwb.Category(site, 'Catégorie:Appels de modèles incorrects:S').articles()
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections avec paramètres superflus').articles()
-    yield from proper_nouns(site)
 
 
 def main() -> None:
