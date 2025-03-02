@@ -1,19 +1,9 @@
-// RTRC
-mw.loader.load("//meta.wikimedia.org/wiki/User:Krinkle/RTRC.js?action=raw&ctype=text/javascript");
-// JWB
-mw.loader.load("//en.wikipedia.org/w/index.php?title=User:Joeytje50/JWB.js/load.js&action=raw&ctype=text/javascript");
-// Améliore la liste des pages liées.
-mw.loader.load("//fr.wiktionary.org/wiki/User:Sebleouf/linksheredeluxe.js?action=raw&ctype=text/javascript");
-// Ajoute des boutons à droite du titre de la page courante.
-mw.loader.load("//fr.wiktionary.org/wiki/User:Darmo117/Gadgets/AddTitleButtons.js?action=raw&ctype=text/javascript");
+// <nowiki>
+const createInflectionLangs = ["en", "eo"];
 
-var createInflectionLangs = ["en", "eo"];
-
-var bdl_buttons = [
+const bdl_buttons = [
   {
-    action: function (selectedText, language) {
-      return "[[" + selectedText + "#" + language + "|" + selectedText + "]]";
-    },
+    action: (selectedText, language) => `[[${selectedText}#${language}|${selectedText}]]`,
     promptText: "Langue",
     promptDefault: "fr",
     imageFileName: "0/0c/Button_Link_DifferentName.png",
@@ -23,9 +13,7 @@ var bdl_buttons = [
     group: "links",
   },
   {
-    action: function (selectedText, language) {
-      return "{{" + "lien|" + selectedText + "|" + language + "}}";
-    },
+    action: (selectedText, language) => `{{lien|${selectedText}|${language}}}`,
     promptText: "Langue",
     promptDefault: "fr",
     imageFileName: "0/0c/Button_Link_DifferentName.png",
@@ -35,9 +23,7 @@ var bdl_buttons = [
     group: "links",
   },
   {
-    action: function (selectedText, language) {
-      return "{{pron|" + selectedText + "|" + language + "}}";
-    },
+    action: (selectedText, language) => `{{pron|${selectedText}|${language}}}`,
     promptText: "Langue",
     promptDefault: "fr",
     imageFileName: "1/13/Button_API_ʃ.png",
@@ -47,15 +33,13 @@ var bdl_buttons = [
     group: "insert",
   },
   {
-    action: function (selectedText, delimiter) {
-      var start, end;
+    action: (selectedText, delimiter) => {
+      let start, end;
       if ("[]".includes(delimiter)) {
         start = "[";
-        end = "]"
-      } else {
-        start = end = delimiter;
-      }
-      return "{{pron-API|" + start + selectedText + end + "}}";
+        end = "]";
+      } else start = end = delimiter;
+      return `{{pron-API|${start}${selectedText}${end}}}`;
     },
     promptText: "Délimiteur",
     promptDefault: "\\",
@@ -75,9 +59,8 @@ var bdl_buttons = [
     group: "html_tags",
   },
   {
-    action: function (selectedText, language) {
-      return '<syntaxhighlight lang="' + language + '" inline>' + selectedText + '</syntaxhighlight>';
-    },
+    action: (selectedText, language) =>
+        `<syntaxhighlight lang="${language}" inline>${selectedText}</syntaxhighlight>`,
     promptText: "Langage",
     promptDefault: "lua",
     imageFileName: "d/d2/Button_source.png",
@@ -141,7 +124,7 @@ var bdl_buttons = [
     toolbarIgnore: true,
   },
   {
-    tagOpen: "<br/>",
+    tagOpen: "<br>",
     tagClose: "",
     imageFileName: "f/f2/Button-br.png",
     imageFileNameOOUI: "thumb/3/3c/OOjs_UI_icon_newline-ltr.svg/24px-OOjs_UI_icon_newline-ltr.svg.png",
@@ -149,4 +132,32 @@ var bdl_buttons = [
     buttonId: "br-tag",
     toolbarIgnore: true,
   },
+  {
+    action: (selectedText, langCode) => `#* {{exemple|lang=${langCode}}}`,
+    promptText: "Langue",
+    promptDefault: "",
+    imageFileName: "2/26/Button_latinas.png",
+    imageFileNameOOUI: "thumb/c/c0/OOjs_UI_icon_quotes-ltr.svg/24px-OOjs_UI_icon_quotes-ltr.svg.png",
+    tooltip: "Modèle exemple vide",
+    buttonId: "exemple-template",
+    group: "insert",
+  },
+  {
+    action: (selectedText, langCode) => {
+      const match = /^#+\*\s*''(.+)''\s*\{\{source\s*\|(.+)}}\s*$/gs.exec(selectedText);
+      if (!match) return selectedText;
+      return `#* {{exemple|lang=${langCode}
+ | ${match[1]}
+ | source=${match[2]}
+}}`;
+    },
+    promptText: "Langue",
+    promptDefault: "",
+    imageFileName: "2/26/Button_latinas.png",
+    imageFileNameOOUI: "thumb/1/1d/OOjs_UI_icon_quotes-rtl.svg/24px-OOjs_UI_icon_quotes-rtl.svg.png",
+    tooltip: "Vers modèle exemple",
+    buttonId: "to-exemple-template",
+    group: "insert",
+  },
 ];
+// </nowiki>
