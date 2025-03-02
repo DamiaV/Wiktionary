@@ -159,5 +159,14 @@ const bdl_buttons = [
     buttonId: "to-exemple-template",
     group: "insert",
   },
+  {
+    tagOpen: "{{graphie|",
+    tagClose: "}}",
+    imageFileName: "",
+    imageFileNameOOUI: "thumb/a/a5/OOjs_UI_icon_bold-g-invert.svg/24px-OOjs_UI_icon_bold-g-invert.svg.png",
+    tooltip: "Modèle {{graphie}}",
+    buttonId: "graphie-template",
+    group: "insert",
+  },
 ];
 // </nowiki>
