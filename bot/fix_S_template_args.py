@@ -122,7 +122,9 @@ def pages() -> typing.Iterator[pwb.Page]:
 
 def main() -> None:
     pwb_config.put_throttle = 0
-    iterate_cached(pages(), handle_page, cache_file_name_prefix=__file__)
+    treated_count = -1
+    while treated_count != 0:
+        _, treated_count = iterate_cached(pages(), handle_page, cache_file_name_prefix=__file__, cache_batch_count=2)
 
 
 if __name__ == '__main__':
