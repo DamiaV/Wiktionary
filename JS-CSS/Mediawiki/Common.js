@@ -3,11 +3,8 @@
  * à chaque chargement de page pour tous les utilisateurs.
  * Elle est donc à modifier avec précaution !
  * --
- * [[Catégorie:JavaScript du Wiktionnaire|Common.js]]
+ * [[Catégorie:JavaScript du Wiktionnaire]]
  */
-
-// Ajoute des liens vers les modules et URL dans les modules et scripts JavaScript.
-mw.loader.load("/wiki/Mediawiki:Common.js/OverhaulSources.js?action=raw&ctype=text/javascript");
 
 /*
  * Applique le style des pages de discussion à des pages qui n’en sont
@@ -132,7 +129,8 @@ $(function () {
  */
 $(function () {
   $(".show-illus-btn").each(function () {
-    var $div = $(this);
+    var $showBtn = $(this);
+    var $div = $showBtn.parent().parent();
     var $illusDiv = $div.next();
     // Hide button
     $illusDiv.find(".hide-illus-btn").on("click", function () {
@@ -140,12 +138,12 @@ $(function () {
       $illusDiv.hide();
     });
     // Show div
-    $div.on("click", function () {
+    $showBtn.on("click", function () {
       $illusDiv.show();
       $div.hide();
-    })
-  })
-})
+    });
+  });
+});
 
 /*
  * Cette fonction remplace le lien des modèles d’ébauche (.stubedit) par le lien
