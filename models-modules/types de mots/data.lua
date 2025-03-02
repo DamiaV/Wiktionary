@@ -1,4 +1,4 @@
--- Check list at [[Discussion module:section article/analyse/test]]
+-- Check list at [[Discussion module:types de mots/analyse/test]]
 local t = {
   -- NOMS STANDARDISÉS DES TYPES DE MOT
   ["texte"] = {
@@ -410,7 +410,7 @@ local t = {
       locution = "locution-phrase",
       locution_pl = "locutions-phrases",
       abrev = "phr",
-      alias = { "loc-phr", "locution-phrase", "locution phrase", "phrase" },
+      alias = { "loc-phr", "locution phrase", "phrase" },
     },
     ["proverbe"] = {
       mot = "proverbe",
