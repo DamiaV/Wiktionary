@@ -3,8 +3,7 @@ import json
 import pywikibot as pwb
 
 import bot.alphabets.models as models
-import numbers_ as nb
-import unicode.unicode_utils as uu
+from bot import unicode as uu, numbers_ as nb
 
 # nullable: languages.localized name, languages.value, languages.index, asomtavruli, nuskhuri, ISO 9984 trans
 # optional: languages.asomtavruli name, languages.nuskhuri name, languages.additional sections

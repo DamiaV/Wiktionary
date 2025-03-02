@@ -4,7 +4,7 @@ import pywikibot as pwb
 from pywikibot import config as pwb_config
 
 import bot.alphabets.models as models
-import unicode.unicode_utils as uu
+from bot import unicode as uu
 
 NAMES = {
     'ᜣ': 'ka',

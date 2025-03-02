@@ -1,5 +1,5 @@
 import bot.alphabets.models as models
-import unicode.unicode_utils as uu
+from bot import unicode as uu
 
 
 def get_page(alphabet_base_letter, base_letter, string, base_diacritic_names, maj, ligature, links, sorting_key):
@@ -12,7 +12,7 @@ def get_page(alphabet_base_letter, base_letter, string, base_diacritic_names, ma
     blocks_list = '\n'.join(models.get_models(string, as_list=True))
     if ligature and not links:
         definition = f'[[{ligature[0]}]]-[[{ligature[1]}]] ligaturée ' \
-            f'({ligature[1]} dans l’{ligature[0]})'
+                     f'({ligature[1]} dans l’{ligature[0]})'
     else:
         definition = f'[[{base_letter}]]' if not ligature else f'[[{string[0]}]]'
     case = f'{string.lower()}|{string.upper()}' if ligature or sorting_key else ''

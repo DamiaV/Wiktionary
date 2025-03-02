@@ -4,7 +4,7 @@ import dataclasses as dc
 import pathlib
 import typing as typ
 
-ROOT = pathlib.Path('.').absolute()
+ROOT = pathlib.Path('').absolute()
 
 _BLOCKS: typ.List[UnicodeBlock] = []
 

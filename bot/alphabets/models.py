@@ -1,6 +1,6 @@
 import typing as typ
 
-import unicode.unicode_utils as uu
+from bot import unicode as uu
 
 
 def get_models(letters: str, as_list: bool = False) -> typ.List[str]:

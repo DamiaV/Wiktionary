@@ -3,9 +3,7 @@ import itertools as it
 import pywikibot as pwb
 
 import bot.alphabets.models as models
-import csv
-import numbers_ as nb
-import unicode.unicode_utils as uu
+from bot import unicode as uu, numbers_ as nb, csv
 
 
 def get_page(letter, thaana_name, name, trans, prons, index, typ, note, supp, etym):

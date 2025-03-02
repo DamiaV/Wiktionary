@@ -1,5 +1,5 @@
 import bot.alphabets.models as models
-import unicode.unicode_utils as uu
+from bot import unicode as uu
 
 
 def get_page(letter, names, trans, prons, arabic):

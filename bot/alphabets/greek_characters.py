@@ -1,5 +1,5 @@
 import bot.alphabets.models as models
-import unicode.unicode_utils as uu
+from bot import unicode as uu
 
 
 def get_page(alphabet_base_letter, base_letter, string, french_letter_name, index, index2, vowel,
@@ -13,14 +13,14 @@ def get_page(alphabet_base_letter, base_letter, string, french_letter_name, inde
     blocks_list = '\n'.join(models.get_models(string, as_list=True))
     if ligature and not links:
         definition = f'[[{ligature[0]}]]-[[{ligature[1]}]] ligaturée ' \
-            f'({ligature[1]} dans l’{ligature[0]})'
+                     f'({ligature[1]} dans l’{ligature[0]})'
     elif ligature:
         definition = f'[[{string[0]}]]'
     elif links:
         definition = f'[[{base_letter}]]'
     else:
         definition = f'{{{{lien|{french_letter_name}|fr}}}}. {index.capitalize()} lettre et {index2} ' \
-            f'{"voyelle" if vowel else "consonne"} de l’{{{{lien|alphabet grec|fr}}}}'
+                     f'{"voyelle" if vowel else "consonne"} de l’{{{{lien|alphabet grec|fr}}}}'
     case = f'{string.lower()}|{string.title()}' if ligature or sorting_key else ''
     if len(links) != 0:
         definition += ' ' + links

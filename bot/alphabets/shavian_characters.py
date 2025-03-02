@@ -1,6 +1,6 @@
 import pywikibot as pwb
 
-import unicode.unicode_utils as uu
+from bot import unicode as uu
 
 
 def get_page(letter, name):

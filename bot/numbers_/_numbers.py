@@ -1,7 +1,7 @@
 try:
     from ._data import NUMBERS
 except ModuleNotFoundError:
-    from numbers_._data import NUMBERS
+    from bot.numbers_._data import NUMBERS
 
 
 def get_number_name(i: int, lang: str, ordinal: bool = False, case: int = 1) -> str:

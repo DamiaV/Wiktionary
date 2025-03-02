@@ -1,8 +1,7 @@
 import pywikibot as pwb
 
 import bot.alphabets.models as models
-import numbers_ as nb
-import unicode.unicode_utils as uu
+from bot import unicode as uu, numbers_ as nb
 
 
 def get_page(letter, maj, name, trans, french_name, cyr_equiv, lat_equiv, prons, index, index2, vowel, value):
