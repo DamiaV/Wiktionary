@@ -14,10 +14,12 @@ RENAME_TABLE = {
     'nom': 'num',
     'nun': 'num',
     'mum': 'num',
+    'nmm': 'num',
     'cél': 'clé',
     'cléé': 'clé',
 }
-INVALID_ARGS = ['loc', 'aspect', 'mf', 'sing', ]
+INVALID_ARGS = ['loc', 'aspect', 'mf', 'sing', 'sens', 'verbe', ]
+INVALID_VALUES = ['locution', ]
 
 
 def handle_page(page: pwb.Page) -> None:
@@ -49,11 +51,21 @@ def handle_page(page: pwb.Page) -> None:
             )
             any_change = True
 
-    # Rename invalid arguments
+    # Remove invalid named arguments
     for invalid_name in INVALID_ARGS:
         if invalid_name + '=' in new_text:
             new_text = re.sub(
                 r'\{\{S((?:\|[^|}]+)*)\|' + invalid_name + r'=[^|}]+((?:\|[^}]+)*)}}',
+                r'{{S\1\2}}',
+                new_text
+            )
+            any_change = True
+
+    # Remove invalid positional arguments
+    for invalid_value in INVALID_VALUES:
+        if invalid_value in new_text:
+            new_text = re.sub(
+                r'\{\{S((?:\|[^|}]+)*)\|' + invalid_value + r'((?:\|[^}]+)*)}}',
                 r'{{S\1\2}}',
                 new_text
             )
@@ -93,11 +105,11 @@ def handle_page(page: pwb.Page) -> None:
         )
         any_change = True
 
-    # Remove empty last arguments
-    if '|}}' in new_text:
+    # Remove empty arguments
+    if '||' in new_text:
         new_text = re.sub(
-            r'\{\{S((?:\|[^|}]+)*)\|+}}',
-            r'{{S\1}}',
+            r'\{\{S((?:\|[^|}]+)*)\|+((?:\|[^}]+)*)?}}',
+            r'{{S\1\2}}',
             new_text
         )
         any_change = True
