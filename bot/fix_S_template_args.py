@@ -1,4 +1,5 @@
 """This script applies some fixes to misused {{S}} templates."""
+import json
 import re
 import typing
 
@@ -34,7 +35,7 @@ def fix_homophones(new_text: str) -> str:
     return '\n'.join(lines)
 
 
-def handle_page(page: pwb.Page) -> None:
+def handle_page(aliases: dict[str, str], page: pwb.Page) -> None:
     print(page.title())
     old_text = page.text
     any_change = False
@@ -126,6 +127,16 @@ def handle_page(page: pwb.Page) -> None:
         )
         any_change = True
 
+    # Replace section name aliases
+    for alias, full_name in aliases.items():
+        if '{{S|' + alias in new_text:
+            new_text = re.sub(
+                r'\{\{S\|' + alias + r'(?=[}|])',
+                r'{{S|' + full_name,
+                new_text
+            )
+
+    # Add language code to homophones section
     if '{{S|homophones}}' in new_text:
         new_text = fix_homophones(new_text)
 
@@ -140,19 +151,25 @@ def handle_page(page: pwb.Page) -> None:
         print('No changes, skipped.')
 
 
-def pages() -> typing.Iterator[pwb.Page]:
-    site = pwb.Site()
+def pages(site) -> typing.Iterator[pwb.Page]:
     yield from pwb.Category(site, 'Catégorie:Appels de modèles incorrects:S').articles()
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections avec paramètres superflus').articles()
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections de titre sans langue précisée').articles()
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections avec titre inconnu').articles()
 
+    yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections utilisant un alias').articles()
+    yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections de type de mot utilisant un alias').articles()
+
 
 def main() -> None:
     pwb_config.put_throttle = 0
+    site = pwb.Site()
+    aliases: dict[str, str] = json.loads(pwb.Page(site, 'Module:types de mots/data/dump.json').text)['alias']
+    aliases.update(json.loads(pwb.Page(site, 'Module:section article/data/dump.json').text)['alias'])
     treated_count = -1
     while treated_count != 0:
-        _, treated_count = iterate_cached(pages(), handle_page, cache_file_name_prefix=__file__, cache_batch_count=2)
+        _, treated_count = iterate_cached(pages(site), lambda page: handle_page(aliases, page),
+                                          cache_file_name_prefix=__file__)
 
 
 if __name__ == '__main__':
