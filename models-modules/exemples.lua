@@ -59,7 +59,7 @@ local function _formatExample(text, transcription, meaning, source, link, headin
     elseif lang ~= "fr" then
       translation = "''La traduction en français de l’[[Aide:Exemples|exemple]] manque.'' "
       translation = translation .. mw.ustring.format("<span class=\"plainlinks stubedit\">([%s%s Ajouter])</span>", mw.site.server, mw.title.getCurrentTitle():localUrl("action=edit"))
-      translation = translation .. mw.ustring.format("[[Catégorie:Exemples en %s à traduire]]", m_langs.get_nom(lang))
+      translation = translation .. m_bases.fait_categorie_contenu(mw.ustring.format("Exemples en %s à traduire", m_langs.get_nom(lang)))
     end
     if translation then
       wikicode = wikicode .. mw.ustring.format("\n%s: ", heading) .. translation
