@@ -161,11 +161,15 @@ def pages(site: pwb.Site) -> typing.Iterator[pwb.Page]:
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections de type de mot utilisant un alias').articles()
 
 
+def load_aliases(site: pwb.Site, page_title: str) -> dict[str, str]:
+    return json.loads(pwb.Page(site, page_title).text)['alias']
+
+
 def main() -> None:
     pwb_config.put_throttle = 0
     site = pwb.Site()
-    aliases: dict[str, str] = json.loads(pwb.Page(site, 'Module:types de mots/data/dump.json').text)['alias']
-    aliases.update(json.loads(pwb.Page(site, 'Module:section article/data/dump.json').text)['alias'])
+    aliases = load_aliases(site, 'Module:types de mots/data/dump.json')
+    aliases.update(load_aliases(site, 'Module:section article/data/dump.json'))
     treated_count = -1
     while treated_count != 0:
         _, treated_count = iterate_cached(pages(site), lambda page: handle_page(aliases, page),
