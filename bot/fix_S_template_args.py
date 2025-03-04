@@ -1,6 +1,8 @@
 """This script applies some fixes to misused {{S}} templates."""
 import json
+import pathlib
 import re
+import time
 import typing
 
 import pywikibot as pwb
@@ -18,6 +20,7 @@ RENAME_TABLE = {
     'nmm': 'num',
     'cél': 'clé',
     'cléé': 'clé',
+    'clé de tri': 'clé',
     'flexionnum': 'flexion|num',
 }
 INVALID_ARGS = ['loc', 'aspect', 'mf', 'sing', 'sens', 'verbe', ]
@@ -119,9 +122,9 @@ def handle_page(aliases: dict[str, str], page: pwb.Page) -> None:
         any_change = True
 
     # Remove empty arguments
-    if '||' in new_text:
+    if '||' in new_text or '|}}' in new_text:
         new_text = re.sub(
-            r'\{\{S((?:\|[^|}]+)*)\|+((?:\|[^}]+)*)?}}',
+            r'\{\{S((?:\|[^}]+)*)\|+((?:\|[^}]+)*)?}}',
             r'{{S\1\2}}',
             new_text
         )
@@ -131,7 +134,7 @@ def handle_page(aliases: dict[str, str], page: pwb.Page) -> None:
     for alias, full_name in aliases.items():
         if '{{S|' + alias in new_text:
             new_text = re.sub(
-                r'\{\{S\|' + alias + r'(?=[}|])',
+                r'\{\{S\|\s*' + alias + r'\s*(?=[}|])',
                 r'{{S|' + full_name,
                 new_text
             )
@@ -170,10 +173,13 @@ def main() -> None:
     site = pwb.Site()
     aliases = load_aliases(site, 'Module:types de mots/data/dump.json')
     aliases.update(load_aliases(site, 'Module:section article/data/dump.json'))
-    treated_count = -1
-    while treated_count != 0:
-        _, treated_count = iterate_cached(pages(site), lambda page: handle_page(aliases, page),
-                                          cache_file_name_prefix=__file__, cache_batch_count=2)
+    while True:
+        print('> Started')
+        iterate_cached(pages(site), lambda page: handle_page(aliases, page),
+                       cache_file_name_prefix=__file__, cache_batch_count=10)
+        pathlib.Path(__file__ + '.cache.txt').unlink(missing_ok=True)
+        print('> Sleeping for 30s')
+        time.sleep(30)
 
 
 if __name__ == '__main__':
