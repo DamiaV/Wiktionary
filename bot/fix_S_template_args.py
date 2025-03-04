@@ -151,7 +151,7 @@ def handle_page(aliases: dict[str, str], page: pwb.Page) -> None:
         print('No changes, skipped.')
 
 
-def pages(site) -> typing.Iterator[pwb.Page]:
+def pages(site: pwb.Site) -> typing.Iterator[pwb.Page]:
     yield from pwb.Category(site, 'Catégorie:Appels de modèles incorrects:S').articles()
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections avec paramètres superflus').articles()
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections de titre sans langue précisée').articles()
@@ -169,7 +169,7 @@ def main() -> None:
     treated_count = -1
     while treated_count != 0:
         _, treated_count = iterate_cached(pages(site), lambda page: handle_page(aliases, page),
-                                          cache_file_name_prefix=__file__)
+                                          cache_file_name_prefix=__file__, cache_batch_count=2)
 
 
 if __name__ == '__main__':
