@@ -17,9 +17,21 @@ RENAME_TABLE = {
     'nmm': 'num',
     'cél': 'clé',
     'cléé': 'clé',
+    'flexionnum': 'flexion|num',
 }
 INVALID_ARGS = ['loc', 'aspect', 'mf', 'sing', 'sens', 'verbe', ]
 INVALID_VALUES = ['locution', ]
+
+
+def fix_homophones(new_text: str) -> str:
+    lines = new_text.splitlines()
+    lang_code = None
+    for i, line in enumerate(lines):
+        if m := re.search(r'\{\{langue\|([^}]+)}}', line):
+            lang_code = m[1]
+        elif '{{S|homophones}}' in line and lang_code:
+            lines[i] = line.replace('{{S|homophones}}', f'{{{{S|homophones|{lang_code}}}}}')
+    return '\n'.join(lines)
 
 
 def handle_page(page: pwb.Page) -> None:
@@ -114,6 +126,9 @@ def handle_page(page: pwb.Page) -> None:
         )
         any_change = True
 
+    if '{{S|homophones}}' in new_text:
+        new_text = fix_homophones(new_text)
+
     if old_text.strip() != new_text and any_change:
         page.text = new_text
         try:
@@ -129,6 +144,7 @@ def pages() -> typing.Iterator[pwb.Page]:
     site = pwb.Site()
     yield from pwb.Category(site, 'Catégorie:Appels de modèles incorrects:S').articles()
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections avec paramètres superflus').articles()
+    yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections de titre sans langue précisée').articles()
     yield from pwb.Category(site, 'Catégorie:Wiktionnaire:Sections avec titre inconnu').articles()
 
 
