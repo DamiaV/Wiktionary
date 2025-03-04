@@ -175,8 +175,7 @@ def main() -> None:
     aliases.update(load_aliases(site, 'Module:section article/data/dump.json'))
     while True:
         print('> Started')
-        iterate_cached(pages(site), lambda page: handle_page(aliases, page),
-                       cache_file_name_prefix=__file__, cache_batch_count=10)
+        iterate_cached(pages(site), lambda page: handle_page(aliases, page), cache_file_name_prefix=__file__)
         pathlib.Path(__file__ + '.cache.txt').unlink(missing_ok=True)
         print('> Sleeping for 30s')
         time.sleep(30)
