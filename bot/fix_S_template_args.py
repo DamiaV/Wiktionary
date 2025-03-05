@@ -81,7 +81,7 @@ def handle_page(aliases: dict[str, str], page: pwb.Page) -> None:
     for invalid_value in INVALID_VALUES:
         if invalid_value in new_text:
             new_text = re.sub(
-                r'\{\{S((?:\|[^|}]+)*)\|' + invalid_value + r'((?:\|[^}]+)*)}}',
+                r'\{\{S((?:\|[^|}]+)+)\|' + invalid_value + r'((?:\|[^}]+)*)}}',
                 r'{{S\1\2}}',
                 new_text
             )
