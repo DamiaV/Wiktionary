@@ -7,11 +7,12 @@ local function link(word)
   return m_bases.lien_modele(word, "ia")
 end
 
---- @param infinitive string
---- @param presentForm string
---- @param presentPluralForm string
---- @param pastForm string
---- @return string
+--- Generate the conjugation table for the given verb.
+--- @param infinitive string The infinitive form of the verb.
+--- @param presentForm string|nil The present form if it is different from the the default one.
+--- @param presentPluralForm string|nil The present plural form, if it exists.
+--- @param pastForm string|nil The alternative past form, if it exists.
+--- @return string The generate table.
 local function generateTable(infinitive, presentForm, presentPluralForm, pastForm)
   local root = mw.ustring.sub(infinitive, 1, -3)
   local root2 = mw.ustring.sub(infinitive, 1, -2)
