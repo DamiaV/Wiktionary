@@ -82,7 +82,7 @@ local function generateTable(infinitive, presentForm, presentPluralForm, pastFor
       link(pastParticiple),
       link(pastParticiple),
       link(pastParticiple)
-  ) .. m_bases.fait_categorie_contenu("Conjugaison en interlingua")
+  ) .. m_bases.fait_categorie_contenu("Conjugaison en interlingua", infinitive)
 end
 
 --- Generate the conjugation table for an Interlingua verb.
