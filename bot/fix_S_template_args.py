@@ -16,12 +16,14 @@ RENAME_TABLE = {
     'nim': 'num',
     'nom': 'num',
     'nun': 'num',
+    'nul': 'num',
     'mum': 'num',
     'nmm': 'num',
     'cél': 'clé',
     'cléé': 'clé',
     'clé de tri': 'clé',
     'flexionnum': 'flexion|num',
+    'genrre': 'genre',
 }
 INVALID_ARGS = ['loc', 'aspect', 'mf', 'sing', 'sens', 'verbe', ]
 INVALID_VALUES = ['locution', ]
@@ -177,8 +179,8 @@ def main() -> None:
         print('> Started')
         iterate_cached(pages(site), lambda page: handle_page(aliases, page), cache_file_name_prefix=__file__)
         pathlib.Path(__file__ + '.cache.txt').unlink(missing_ok=True)
-        print('> Sleeping for 30s')
-        time.sleep(30)
+        print('> Sleeping for 5 min')
+        time.sleep(300_000)
 
 
 if __name__ == '__main__':
