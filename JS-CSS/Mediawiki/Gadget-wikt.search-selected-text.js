@@ -23,6 +23,11 @@ $(() => {
 
   document.addEventListener("selectionchange", () => {
     $popup.hide();
+    // Disable popup if selected text is in a text input
+    if ($(":focus").is("input, textarea, .CodeMirror-code")) {
+      selectedText = null;
+      return;
+    }
     const selection = window.getSelection();
     selectedText = selection.toString();
     $link.attr(
