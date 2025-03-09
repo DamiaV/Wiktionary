@@ -81,13 +81,16 @@ $(() => {
       const naturalOrder = (a, b) => $(a).text().localeCompare($(b).text());
       const reverseOrder = (a, b) => naturalOrder(b, a)
 
-      if (!$ul.data("sorted")) {
-        $ul.children("li").sort(naturalOrder).appendTo($ul);
-        $ul.data("sorted", true);
-      } else {
-        $ul.children("li").sort(reverseOrder).appendTo($ul);
-        $ul.data("sorted", false);
-      }
+      $ul.each((_, list) => {
+        const $list = $(list);
+        if (!$list.data("sorted")) {
+          $list.children("li").sort(naturalOrder).appendTo($list);
+          $list.data("sorted", true);
+        } else {
+          $list.children("li").sort(reverseOrder).appendTo($list);
+          $list.data("sorted", false);
+        }
+      });
     }
   }
 
