@@ -70,7 +70,7 @@ with open('iso15924-utf8.txt', encoding='UTF-8') as f:
                 f_name = f_name[:f_name.index(' ')]
             iso_scripts[alias] = (iso_code, name, f_name)
 
-with open('../../models-modules/données Unicode/data/scripts.lua', mode='w', encoding='UTF-8') as f_out:
+with open('../../fr-wiktionary/models-modules/données Unicode/data/scripts.lua', mode='w', encoding='UTF-8') as f_out:
     f_out.write(f"""-- List of Unicode/ISO 15924 scripts.
 -- Do not edit this page manually as it is automatically generated.
 -- Last generation: {datetime.datetime.now()}
@@ -106,7 +106,8 @@ return {{""")
 }
 """)
 
-with open('../../models-modules/données Unicode/data/script_ranges.lua', mode='w', encoding='UTF-8') as f_out:
+with open('../../fr-wiktionary/models-modules/données Unicode/data/script_ranges.lua', mode='w',
+          encoding='UTF-8') as f_out:
     f_out.write(f"""-- This page defines the code point ranges of all writing systems.
 -- Do not edit this page manually as it is automatically generated.
 -- Last generation: {datetime.datetime.now()}
