@@ -11,13 +11,14 @@ end
 --- @param infinitive string The infinitive form of the verb.
 --- @param presentForm string|nil The present form if it is different from the the default one.
 --- @param presentPluralForm string|nil The present plural form, if it exists.
+--- @param presentParticiple string|nil The present participle if it is different from the the default one.
 --- @param pastForm string|nil The alternative past form, if it exists.
 --- @return string The generate table.
-local function generateTable(infinitive, presentForm, presentPluralForm, pastForm)
+local function generateTable(infinitive, presentForm, presentPluralForm, presentParticiple, pastForm)
   local root = mw.ustring.sub(infinitive, 1, -3)
   local root2 = mw.ustring.sub(infinitive, 1, -2)
   local vowel = mw.ustring.sub(infinitive, -2, -2)
-  local presentParticiple = root .. ({ a = "a", e = "e", i = "ie" })[vowel] .. "nte"
+  presentParticiple = presentParticiple or (root .. ({ a = "a", e = "e", i = "ie" })[vowel] .. "nte")
   local pastParticiple = root .. ({ a = "a", e = "i", i = "i" })[vowel] .. "te"
 
   return mw.ustring.format([=[
@@ -90,6 +91,7 @@ end
 ---  parent frame.args[1] (string, optional): Infinitive form, if empty the page’s title will be used.
 ---  parent frame.args["pr"] (string, optional): Present form, if different from default one.
 ---  parent frame.args["prp"] (string, optional): Present plural form, if it exists.
+---  parent frame.args["ppr"] (string, optional): Present participle, if different from default one.
 ---  parent frame.args["ps"] (string, optional): Alternative past tense form, if it exists.
 --- @return string The generated table.
 function p.conjugaison(frame)
@@ -97,6 +99,7 @@ function p.conjugaison(frame)
     [1] = {},
     ["pr"] = {},
     ["prp"] = {},
+    ["ppr"] = {},
     ["ps"] = {},
   })
   local title = mw.title.getCurrentTitle()
@@ -115,6 +118,7 @@ function p.conjugaison(frame)
       verb,
       args["pr"],
       args["prp"],
+      args["ppr"],
       args["ps"]
   )
 end
