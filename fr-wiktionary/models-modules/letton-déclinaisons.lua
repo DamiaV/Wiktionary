@@ -77,8 +77,9 @@ end
 --- @param modify boolean If true, the `modifierLetter` will replace the letter before the suffix, otherwise it will be inserted after it.
 --- @param palatal string|nil The palatal letter that will modify the one preceding the suffix. Leave `nil` to keep it.
 --- @param vocativeDropsEnding boolean Whether to drop the last letter of the vocative for the 1st, 5th, and 6th declensions.
+--- @param specifiedForms table A table specifying values to use for different cases instead of default ones.
 --- @return table A table containing all forms of the word.
-local function generateNounForms(word, declension, modify, palatal, vocativeDropsEnding)
+local function generateNounForms(word, declension, modify, palatal, vocativeDropsEnding, specifiedForms)
   local key = tostring(declension)
   if declension == 2 or declension == 3 then
     key = key .. "-" .. mw.ustring.sub(word, -2)
@@ -124,7 +125,7 @@ local function generateNounForms(word, declension, modify, palatal, vocativeDrop
       sing = "suņa"
     end
 
-    forms[case] = { sing, plur }
+    forms[case] = { specifiedForms[case .. "s"] or sing, specifiedForms[case .. "p"] or plur }
   end
 
   if palatal and not anyPalatal then
@@ -139,7 +140,7 @@ local function errorMessage(message)
 end
 
 function p.generateNounTable(frame)
-  local args, validArgs = m_params.process(frame:getParent().args, {
+  local spec = {
     [1] = {},
     ["décl"] = { required = true, type = m_params.INT, checker = function(decl)
       return decl >= 1 and decl <= 6
@@ -147,8 +148,13 @@ function p.generateNounTable(frame)
     ["vs-complet"] = { type = m_params.BOOLEAN, default = false },
     ["palatale"] = {},
     ["remplacer"] = { type = m_params.BOOLEAN, default = false },
-    ["mode"] = { enum = { "sing", "plur" }, default = nil }
-  }, true) -- Silent errors
+    ["mode"] = { enum = { "sing", "plur" }, default = nil },
+  }
+  for case, _ in pairs(CASE_NAMES) do
+    spec[case .. "s"] = {}
+    spec[case .. "p"] = {}
+  end
+  local args, validArgs = m_params.process(frame:getParent().args, spec, true) -- Silent errors
 
   if not validArgs then
     return errorMessage(mw.ustring.format(
@@ -171,10 +177,18 @@ function p.generateNounTable(frame)
   else
     numberMode = bit32.bor(SINGULAR, PLURAL)
   end
+  local specifiedForms = {}
+  for case, _ in pairs(CASE_NAMES) do
+    local keySing = case .. "s"
+    specifiedForms[keySing] = args[keySing]
+    local keyPlur = case .. "p"
+    specifiedForms[keyPlur] = args[keyPlur]
+  end
 
   local success, data = pcall(function()
-    local forms = generateNounForms(word, declension, modify, palatal, vocativeDropsEnding)
-    return generateNounTable(forms, declension, numberMode)
+    local forms = generateNounForms(word, declension, modify, palatal, vocativeDropsEnding, specifiedForms)
+    local catName = mw.ustring.format("Noms communs de la %s déclinaison en letton", mw.ustring.lower(DECl_TITLES[declension]))
+    return generateNounTable(forms, declension, numberMode) .. m_bases.fait_categorie_contenu(catName)
   end)
   if not success then
     if data.message == NO_DECL_ERROR then
