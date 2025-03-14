@@ -76,10 +76,10 @@ end
 --- @param declension number The declension number (1-6).
 --- @param modify boolean If true, the `modifierLetter` will replace the letter before the suffix, otherwise it will be inserted after it.
 --- @param palatal string|nil The palatal letter that will modify the one preceding the suffix. Leave `nil` to keep it.
---- @param vocativeDropsEnding boolean Whether to drop the last letter of the vocative for the 1st, 5th, and 6th declensions.
+--- @param vocativeKeepsEnding boolean Whether to keep the last letter of the vocative for the 1st, 5th, and 6th declensions.
 --- @param specifiedForms table A table specifying values to use for different cases instead of default ones.
 --- @return table A table containing all forms of the word.
-local function generateNounForms(word, declension, modify, palatal, vocativeDropsEnding, specifiedForms)
+local function generateNounForms(word, declension, modify, palatal, vocativeKeepsEnding, specifiedForms)
   local key = tostring(declension)
   if declension == 2 or declension == 3 then
     key = key .. "-" .. mw.ustring.sub(word, -2)
@@ -93,7 +93,7 @@ local function generateNounForms(word, declension, modify, palatal, vocativeDrop
   if modify and not palatal then
     error({ message = USELESS_PARAM_ERROR, param = "remplacer" })
   end
-  if vocativeDropsEnding and not decl.vsMayDropEnding then
+  if vocativeKeepsEnding and not decl.vsMayDropEnding then
     error({ message = USELESS_PARAM_ERROR, param = "vs-complet" })
   end
 
@@ -116,7 +116,7 @@ local function generateNounForms(word, declension, modify, palatal, vocativeDrop
       end
     end
 
-    if case == "v" and vocativeDropsEnding and decl.vsMayDropEnding then
+    if case == "v" and not vocativeKeepsEnding and decl.vsMayDropEnding then
       sing = root
     end
 
@@ -166,7 +166,7 @@ function p.generateNounTable(frame)
 
   local word = args[1] or mw.title.getCurrentTitle().text
   local declension = args["décl"]
-  local vocativeDropsEnding = not args["vs-complet"]
+  local vocativeKeepsEnding = args["vs-complet"]
   local palatal = args["palatale"]
   local modify = args["remplacer"]
   local numberMode
@@ -186,7 +186,7 @@ function p.generateNounTable(frame)
   end
 
   local success, data = pcall(function()
-    local forms = generateNounForms(word, declension, modify, palatal, vocativeDropsEnding, specifiedForms)
+    local forms = generateNounForms(word, declension, modify, palatal, vocativeKeepsEnding, specifiedForms)
     local catName = mw.ustring.format("Noms communs de la %s déclinaison en letton", mw.ustring.lower(DECl_TITLES[declension]))
     return generateNounTable(forms, declension, numberMode) .. m_bases.fait_categorie_contenu(catName)
   end)
