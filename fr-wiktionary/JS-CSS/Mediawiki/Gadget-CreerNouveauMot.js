@@ -1137,7 +1137,7 @@ $(function () {
   function DefinitionForm(definitionID, langCode) {
     this._langCode = langCode;
     this._definitionFld = new OO.ui.MultilineTextInputWidget({
-      rows: 1,
+      rows: 5,
     });
     this._examplesFlds = [];
     this._addExampleBtn = new OO.ui.ButtonWidget({
@@ -1242,16 +1242,16 @@ $(function () {
    */
   function ExampleForm(exampleID, langCode) {
     this._textFld = new OO.ui.MultilineTextInputWidget({
-      rows: 1,
+      rows: 3,
     });
     this._translationFld = new OO.ui.MultilineTextInputWidget({
-      rows: 1,
+      rows: 3,
     });
     this._transcriptionFld = new OO.ui.MultilineTextInputWidget({
-      rows: 1,
+      rows: 3,
     });
     this._sourceFld = new OO.ui.MultilineTextInputWidget({
-      rows: 1,
+      rows: 3,
     });
     this._linkFld = new OO.ui.TextInputWidget();
     this._disableTranslationChk = new OO.ui.CheckboxInputWidget();
