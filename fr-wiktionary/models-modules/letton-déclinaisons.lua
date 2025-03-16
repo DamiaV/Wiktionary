@@ -187,8 +187,13 @@ function p.generateNounTable(frame)
 
   local success, data = pcall(function()
     local forms = generateNounForms(word, declension, modify, palatal, vocativeKeepsEnding, specifiedForms)
-    local catName = mw.ustring.format("Noms communs de la %s déclinaison en letton", mw.ustring.lower(DECl_TITLES[declension]))
-    return generateNounTable(forms, declension, numberMode) .. m_bases.fait_categorie_contenu(catName)
+    local text = generateNounTable(forms, declension, numberMode)
+    -- If args[1] is specified, we are most likely on a flexion page, so no categorization
+    if not args[1] then
+      local catName = mw.ustring.format("Noms communs de la %s déclinaison en letton", mw.ustring.lower(DECl_TITLES[declension]))
+      text = text .. m_bases.fait_categorie_contenu(catName)
+    end
+    return text
   end)
   if not success then
     if data.message == NO_DECL_ERROR then
