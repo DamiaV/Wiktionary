@@ -140,7 +140,7 @@ function init(langNamesMapping) {
   const popup = document.createElement("div");
   const popupContent = document.createElement("div");
 
-  popupContainer.style = `display: none; position: absolute; filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.15)) drop-shadow(0px 0px 0.75px var(--wikt-palette-dullblue, #49555f)); z-index: 801`;
+  popupContainer.style = "display: none; position: absolute; filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.15)) drop-shadow(0px 0px 0.75px var(--wikt-palette-dullblue, #49555f)); z-index: 801";
   popupContainer.className = "page-preview";
   popup.style = "box-sizing: border-box; height: 100%; background: var(--wikt-palette-white, #ffffff)";
   popupContent.style = "display: flex; flex-direction: column; border-radius: 2px; box-sizing: border-box; color: var(--wikt-palette-black, #202122); overflow: auto; height: 100%; overflow-wrap: break-word; scrollbar-width: thin";
@@ -335,7 +335,7 @@ function init(langNamesMapping) {
           const responseDocument = new DOMParser().parseFromString(response, "text/html");
           // Convert to absolute URLs.
           responseDocument.querySelectorAll("a[href]").forEach(link => link.setAttribute("href", link.href));
-          let anchoredElement = responseDocument.getElementById(linkAnchor);
+          let anchoredElement = responseDocument.getElementById(linkAnchor.replace(/ /g, "_"));
           let language = LANGUAGES.get(linkAnchor);
 
           const popupHeader = document.createElement("div");
