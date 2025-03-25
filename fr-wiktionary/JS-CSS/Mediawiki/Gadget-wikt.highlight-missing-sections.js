@@ -121,9 +121,9 @@ if (mw.config.get("wgAction") === "view") {
      * @private
      */
     _highlightLink: function ($link, langCode, pageCode) {
-      if (!pageCode.includes("{{langue|{0}}}".format(langCode))) {
-        $link.addClass(["wikt-missing-entry", "wikt-missing-entry-{0}".format(langCode)]);
-        $link.attr("title", $link.attr("title") + " (section « {0} » manquante)".format(langCode));
+      if (!pageCode.includes(`{{langue|${langCode}}}`)) {
+        $link.addClass(["wikt-missing-entry", `wikt-missing-entry-${langCode}`]);
+        $link.attr("title", $link.attr("title") + ` (section « ${langCode} » manquante)`);
       }
     },
   };
