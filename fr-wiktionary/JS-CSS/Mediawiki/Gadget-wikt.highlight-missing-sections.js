@@ -26,7 +26,7 @@ if (mw.config.get("wgAction") === "view") {
     VERSION: "1.1",
 
     init: function () {
-      this.api = new mw.Api();
+      this.api = new mw.Api({userAgent: "Gadget-wikt.highlight-missing-sections/" + wikt.gadgets.highlightMissingSections.VERSION});
       $.get(
           "https://fr.wiktionary.org/wiki/MediaWiki:Gadget-translation_editor.js/langues.json?action=raw",
           (function (languages) {
