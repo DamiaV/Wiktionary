@@ -22,40 +22,58 @@ local function generateTable(infinitive, presentForm, presentPluralForm, present
   local pastParticiple = root .. ({ a = "a", e = "i", i = "i" })[vowel] .. "te"
 
   return mw.ustring.format([=[
-{| class="wikitable" style="width: 100%%"
-! Infinitif !! Participe présent !! Participe passé
-|-
-| %s || %s || %s
-|}
 {|class="wikitable" style="width: 100%%"
-|+ Actif
+|+ Voix active
+! Infinitif !! Participe présent !! Participe passé !! — !! —
+|-
+| %s || %s || %s || — || —
+|-
 ! colspan="5" | Temps simples
 |-
 ! Présent !! Passé !! Futur !! Conditionnel !! Impératif
 |-
-| %s || %s || %s<br><small>ou</small> va %s || %s<br><small>ou</small> velle %s || %s
+| %s
+| %s
+| %s<br><small>ou</small> va %s
+| %s<br><small>ou</small> velle %s
+| %s
 |-
 ! colspan="5" | Temps composés
 |-
-! Passé composé !! Plus que parfait !! Futur antérieur !! Conditionnel passé !! —
+! Passé composé !! Plus-que-parfait !! Futur antérieur !! Conditionnel passé !! —
 |-
-| ha %s || habeva %s || habera %s || haberea %s || —
+| ha %s
+| habeva %s
+| habera %s<br><small>ou</small> va haber %s
+| haberea %s<br><small>ou</small> velle haber %s
+| —
 |}
 {|class="wikitable" style="width: 100%%"
-|+ Passif
-! colspan="5" | Temps simples
+|+ Voix passive
+! Infinitif !! Participe présent !! Participe passé !! —
+|-
+| esser %s || essente %s || essite %s || —
+|-
+! colspan="4" | Temps simples
 |-
 ! Présent !! Passé !! Futur !! Conditionnel
 |-
-| es %s || esseva %s || essera %s || esserea %s
+| es %s
+| esseva %s
+| essera %s<br><small>ou</small> va esser %s
+| esserea %s<br><small>ou</small> velle esser %s
 |-
-! colspan="5" | Temps composés
+! colspan="4" | Temps composés
 |-
-! Passé composé !! Plus que parfait !! Futur antérieur !! Conditionnel passé
+! Passé composé !! Plus-que-parfait !! Futur antérieur !! Conditionnel passé
 |-
-| ha essite %s || habeva essite %s || habera essite %s || haberea essite %s
+| ha essite %s
+| habeva essite %s
+| habera essite %s<br><small>ou</small> va haber essite %s
+| haberea essite %s<br><small>ou</small> velle haber essite %s
 |}
 ]=],
+  -- Active base forms
       link(infinitive),
       link(presentParticiple),
       link(pastParticiple),
@@ -63,26 +81,28 @@ local function generateTable(infinitive, presentForm, presentPluralForm, present
       link(presentForm or root2)
           .. (presentPluralForm and ("<br>'''Note&nbsp;:''' Au pluriel, on peut employer " .. link(presentPluralForm)) or ""),
       link(root2 .. "va") .. (pastForm and ("<br><small>ou</small> " .. link(pastForm)) or ""),
-      link(root2 .. "ra"),
-      link(infinitive),
-      link(root2 .. "rea"),
-      link(infinitive),
+      link(root2 .. "ra"), link(infinitive),
+      link(root2 .. "rea"), link(infinitive),
       link(root2),
   -- Active compound tenses
       link(pastParticiple),
+      link(pastParticiple),
+      link(pastParticiple), link(pastParticiple),
+      link(pastParticiple), link(pastParticiple),
+  -- Passive base forms
       link(pastParticiple),
       link(pastParticiple),
       link(pastParticiple),
   -- Passive simple tenses
       link(pastParticiple),
       link(pastParticiple),
-      link(pastParticiple),
-      link(pastParticiple),
+      link(pastParticiple), link(pastParticiple),
+      link(pastParticiple), link(pastParticiple),
   -- Passive compound tenses
       link(pastParticiple),
       link(pastParticiple),
-      link(pastParticiple),
-      link(pastParticiple)
+      link(pastParticiple), link(pastParticiple),
+      link(pastParticiple), link(pastParticiple)
   ) .. m_bases.fait_categorie_contenu("Conjugaison en interlingua", infinitive)
 end
 
