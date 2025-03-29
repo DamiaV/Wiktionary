@@ -1,7 +1,7 @@
 import lupa
 
 blocks = lupa.LuaRuntime().execute('\n'.join(open(
-    '../../fr-wiktionary/models-modules/données Unicode/data/blocks.lua').readlines()))
+    '../../models-modules/données Unicode/data/blocks.lua').readlines()))
 
 with open('blocks.txt', encoding='UTF-8') as f:
     codes = []

@@ -1,5 +1,5 @@
-import re
 import json
+import re
 
 import pywikibot as pwb
 
@@ -7,7 +7,7 @@ site = pwb.Site()
 c = pwb.Category(site, title='Catégorie:Pages avec des erreurs de script')
 # pages = c.articles()
 
-with open('../test/téléchargement.json', encoding='UTF-8') as f:
+with open('../../test/téléchargement.json', encoding='UTF-8') as f:
     pages = (pwb.Page(site, title=p) for p in json.load(f)['*'][0]['a']['*'])
 
 h_regex = re.compile(r'{{h\|.*?}}', re.MULTILINE)

@@ -3,7 +3,7 @@ import re
 import lupa
 import pywikibot as pwb
 
-with open('../fr-wiktionary/models-modules/langues/data.lua', encoding='UTF-8') as f:
+with open('../models-modules/langues/data.lua', encoding='UTF-8') as f:
     languages = {k: dict(v) for k, v in lupa.LuaRuntime().execute(''.join(f.readlines())).items()}
 
 level_titles = {
