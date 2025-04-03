@@ -47,16 +47,18 @@ $(function () {
        * every red links in the infoboxes with the "translations" class.
        */
       init: function () {
-        var self = this;
+        const self = this;
 
         $(".translations .new").each(function () {
-          var $link = $(this);
-          var translation = new URL($link.prop("href")).searchParams.get("title")
-              .replaceAll("_", " ");
-          var translationText = $link.text();
+          const $link = $(this);
+          const url = new URL($link.prop("href"));
+          let title = url.searchParams.get("title"); // Old red link URL structure
+          if (!title) title = url.pathname.substring(6); // Strip /wiki/
+          const translation = title.replaceAll("_", " ");
+          const translationText = $link.text();
 
           if (translation) {
-            var langCode = $link.parent().attr("lang");
+            const langCode = $link.parent().attr("lang");
             $link.css("background-color", "#77b5fe");
             $link.attr("title", `Cliquez pour créer «\xA0${translation}\xA0» avec le gadget`);
             $link.click(function (event) {
