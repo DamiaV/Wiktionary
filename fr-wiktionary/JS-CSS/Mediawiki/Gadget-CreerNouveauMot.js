@@ -629,7 +629,7 @@ $(function () {
     /**
      * API hook.
      */
-    #api = new mw.Api();
+    #api = new mw.Api({userAgent: "Gadget-CreerNouveauMot/" + GadgetCreerNouveauMot.VERSION});
 
     constructor() {
       // Sorting languages: french first,
