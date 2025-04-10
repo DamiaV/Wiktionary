@@ -50,7 +50,7 @@ end
 --- @return string Either 'yes' if the argument is a valid IP address, or an empty string otherwise.
 function p.is_ip_address(frame)
   local args = m_params.process(frame.args, {
-    [1] = { require = true },
+    [1] = { required = true },
   })
   return p.get_ip_type(args[1]) ~= nil and 'yes' or ''
 end
