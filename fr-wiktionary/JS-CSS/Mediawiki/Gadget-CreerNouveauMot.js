@@ -123,7 +123,7 @@ $(() => {
      * Edit comment.
      */
     static #EDIT_COMMENT =
-        `Ajout d’un mot assisté par [[Aide:Gadget-CreerNouveauMot|${GadgetCreerNouveauMot.NAME}]] (v${GadgetCreerNouveauMot.VERSION})`;
+        `Ajout d’un mot en {lang} assisté par [[Aide:Gadget-CreerNouveauMot|${GadgetCreerNouveauMot.NAME}]] (v${GadgetCreerNouveauMot.VERSION})`;
 
     /**
      * Main word.
@@ -497,9 +497,8 @@ $(() => {
       const $summaryFld = wikt.edit.getEditSummaryField();
       const summary = $summaryFld.val();
       const comment = GadgetCreerNouveauMot.#EDIT_COMMENT;
-      if (!summary.includes(comment)) {
-        $summaryFld.val(comment + " " + summary);
-      }
+      if (!summary.includes(comment))
+        $summaryFld.val(comment.replace("{lang}", this.#selectedLanguage.name) + " " + summary);
 
       // Collapse gadget after inserting wikicode.
       // $(".oo-ui-tool-name-hide > a")[0].click(); // FIXME not triggered
