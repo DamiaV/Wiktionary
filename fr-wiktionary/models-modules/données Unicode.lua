@@ -468,7 +468,7 @@ end
 ---  frame.args[1] (string, only one character): The character.
 ---  frame.args[2] (boolean, default = false) : Indicates wether the returned codepoint
 ---   will be in hexadecimal.
---- @return string|number The character’s codepoint without the “0x” prefix if it is in hexadecimal.
+--- @return string|number The character’s codepoint, without the “0x” prefix if it is in hexadecimal.
 function p.codepoint(frame)
   local args = m_params.process(frame.args, {
     [1] = {
@@ -487,6 +487,22 @@ function p.codepoint(frame)
     return string.format("%04X", code)
   end
   return code
+end
+
+--- Returns the Unicode codepoints of the given characters.
+---  frame.args[1] (string): The characters.
+--- @return string The characters’ codepoints in the format "U+XXXX U+XXXX …".
+function p.codepoints(frame)
+  local args = m_params.process(frame.args, {
+    [1] = { required = true },
+  })
+  local chars = args[1]
+
+  local codepoints = {}
+  for codepoint in mw.ustring.gcodepoint(chars) do
+    table.insert(codepoints, "U+" .. string.format("%04X", codepoint))
+  end
+  return table.concat(codepoints, " ")
 end
 
 --- Returns the character with the given Unicode codepoint.
