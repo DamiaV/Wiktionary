@@ -306,7 +306,7 @@ $(function () {
             + "?title=" + encodeURIComponent(this._translation)
             + "&action=edit"
             + "&preload-edit-text=" + encodeURIComponent(newWikicode)
-            + "&preload-edit-summary=" + encodeURIComponent(`Création avec [[Aide:Gadget-CreerTrad|${this.NAME} v${this.VERSION}]].`);
+            + "&preload-edit-summary=" + encodeURIComponent(`Création d’une entrée en ${this._langCode} avec [[Aide:Gadget-CreerTrad|${this.NAME} v${this.VERSION}]].`);
       },
 
       /**
