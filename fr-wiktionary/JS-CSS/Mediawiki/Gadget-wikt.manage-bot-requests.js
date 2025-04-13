@@ -58,9 +58,15 @@ $(() => {
     api.edit(botRequestsPage, (revision) => {
       const requestIndex = $dialog.data("request-id");
       let requestI = -1;
+      let ignoreLine = false;
       const lines = revision.content.split("\n");
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
+        if (/<(nowiki|syntaxhighlight|pre|code)( [^>]*)?>/.test(line)) ignoreLine = true;
+        // No else-if as it may be on the same line as the opening tag
+        if (/<\/ *(nowiki|syntaxhighlight|pre|code)>/.test(line)) ignoreLine = false;
+        if (ignoreLine) continue;
+
         const match = /^==([^=].*?)==$/.exec(line);
         if (match) {
           requestI++;
@@ -73,7 +79,7 @@ $(() => {
       }
       return {
         text: lines.join("\n"),
-        summary: "Mise à jour du status avec Gadget-wikt.manage-bot-requests"
+        summary: "Mise à jour du status avec le gadget"
       };
     }).then(() => {
       window.location.reload();
