@@ -1,5 +1,6 @@
 /**
- * Ce gadget permet de gérer les requêtes aux bots sans avoir à modifier le code de la page à la main.
+ * Ce gadget permet de gérer les requêtes aux bots et la boite à idées
+ * sans avoir à modifier le code de la page à la main.
  * [[Catégorie:JavaScript du Wiktionnaire|manage-bot-requests]]
  */
 // <nowiki>
@@ -7,11 +8,20 @@
 $(() => {
   console.log("Chargement de Gadget-wikt.manage-bot-requests.js…");
 
-  const botRequestsPage = "Wiktionnaire:Bots/Requêtes";
-  if (mw.config.get("wgPageName") !== botRequestsPage) {
-    console.log(`Pas sur [[${botRequestsPage}]], désactivation du gadget.`);
+  /**
+   * @type {{[pageTitle: string]: number}}
+   */
+  const pages = {
+    "Wiktionnaire:Bots/Requêtes": 2,
+    "Wiktionnaire:Boîte à idées": 3,
+  }
+  const pageTitle = mw.config.get("wgPageName").replaceAll("_", " ");
+  if (!pages[pageTitle]) {
+    console.log(`Pas sur une page éligible, désactivation du gadget.`);
     return;
   }
+  const titleLevel = pages[pageTitle];
+  const titleEquals = "=".repeat(titleLevel);
 
   const api = new mw.Api({userAgent: "Gadget-wikt.manage-bot-requests"});
 
@@ -55,7 +65,7 @@ $(() => {
     const templateName = statuses[selection].templateName;
     const template = templateName ? `{{${templateName}}} ` : "";
 
-    api.edit(botRequestsPage, (revision) => {
+    api.edit(pageTitle, (revision) => {
       const requestIndex = $dialog.data("request-id");
       let requestI = -1;
       let ignoreLine = false;
@@ -67,13 +77,13 @@ $(() => {
         if (/<\/ *(nowiki|syntaxhighlight|pre|code)>/.test(line)) ignoreLine = false;
         if (ignoreLine) continue;
 
-        const match = /^==([^=].*?)==$/.exec(line);
+        const match = new RegExp(`^${titleEquals}([^=].*?)${titleEquals}$`).exec(line);
         if (match) {
           requestI++;
           if (requestI === requestIndex) {
-            const match2 = /^==\s*\{\{Requête [^}]+}}\s*(.*?)\s*==$/.exec(line);
+            const match2 = new RegExp(`^${titleEquals}\\s*{{Requête [^}]+}}\\s*(.*?)\\s*${titleEquals}$`).exec(line);
             const text = match2 ? match2[1].trim() : match[1].trim();
-            lines[i] = `== ${template}${text} ==`;
+            lines[i] = `${titleEquals} ${template}${text} ${titleEquals}`;
           }
         }
       }
@@ -89,7 +99,7 @@ $(() => {
   });
   document.body.append(dialog);
 
-  $(".mw-parser-output .mw-heading2 h2").each((index, element) => {
+  $(`.mw-parser-output .mw-heading${titleLevel} h${titleLevel}`).each((index, element) => {
     const $title = $(element);
     const $button = $(`
 <button data-index="${index}" title="Modifier le status" style="margin-right: 1em; padding: 0.5em">
