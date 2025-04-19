@@ -494,9 +494,9 @@ end
 --- @return string The characters’ codepoints in the format "U+XXXX U+XXXX …".
 function p.codepoints(frame)
   local args = m_params.process(frame.args, {
-    [1] = { required = true },
+    [1] = {},
   })
-  local chars = args[1]
+  local chars = args[1] or mw.title.getCurrentTitle().fullText
 
   local codepoints = {}
   for codepoint in mw.ustring.gcodepoint(chars) do
