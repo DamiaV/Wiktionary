@@ -66,6 +66,7 @@ $(() => {
       let ignoreLine = false;
       const lines = revision.content.split("\n");
       let targetPageTitle;
+
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         if (/<(nowiki|syntaxhighlight|pre|code)( [^>]*)?>/.test(line)) ignoreLine = true;
@@ -73,7 +74,6 @@ $(() => {
         if (/<\/ *(nowiki|syntaxhighlight|pre|code)>/.test(line)) ignoreLine = false;
         if (ignoreLine) continue;
 
-        if (line.startsWith("==")) console.log(line)
         const match = /^==\s*\[\[([^\[\]]+)(?:[#|][^\[\]]+)?]]\s*==$/.exec(line);
         if (match) targetPageTitle = match[1];
 
@@ -97,9 +97,12 @@ $(() => {
           }
         }
       }
+
+      const sectionTitle = $dialog.data("section-title");
+      const newStatus = statuses[selection].text;
       return {
         text: lines.join("\n"),
-        summary: "Mise à jour du status avec le gadget"
+        summary: `/* ${sectionTitle} */ ${newStatus} (mise à jour avec le gadget)`
       };
     }).then(() => {
       window.location.reload();
@@ -120,6 +123,9 @@ $(() => {
       const currentStatus = $banner.data("tag").substring(7);
       statuses[currentStatus].radio.checked = true;
       $dialog.data("request-id", index);
+      const sectionTitle = $banner.prev(".mw-heading.mw-heading2").find("h2")
+          .attr("id").replaceAll("_", " ");
+      $dialog.data("section-title", sectionTitle)
       dialog.showModal();
     });
     // language=css
