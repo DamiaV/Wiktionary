@@ -54,7 +54,7 @@ $(function () {
           const url = new URL($link.prop("href"));
           let title = url.searchParams.get("title"); // Old red link URL structure
           if (!title) title = url.pathname.substring(6); // Strip /wiki/
-          const translation = title.replaceAll("_", " ");
+          const translation = decodeURIComponent(title.replaceAll("_", " "));
           const translationText = $link.text();
 
           if (translation) {
