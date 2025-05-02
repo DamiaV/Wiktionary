@@ -157,12 +157,12 @@ class GrammaticalClass {
 
   /**
    * @param label {string} Class’ label.
-   * @param sectionCode {string} Class’ section code.
+   * @param sectionCode {string?} Class’ section code. If left empty, the label will be used.
    * (as defined in [[Convention:Structure des pages#Résumé des sections]] 2,1 onwards).
    */
   constructor(label, sectionCode) {
     this.#label = label;
-    this.#sectionCode = sectionCode;
+    this.#sectionCode = sectionCode || label;
   }
 
   /**

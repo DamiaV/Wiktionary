@@ -43,58 +43,58 @@ window.languages = {
    * @type {Record<string, GrammaticalClass>}
    */
   GRAMMATICAL_CLASSES: {
-    SYMBOL: new GrammaticalClass("symbole", "symbole"),
-    LETTER: new GrammaticalClass("lettre", "lettre"),
+    SYMBOL: new GrammaticalClass("symbole"),
+    LETTER: new GrammaticalClass("lettre"),
 
-    SCIENTIFIC_NAME: new GrammaticalClass("nom scientifique", "nom scientifique"),
+    SCIENTIFIC_NAME: new GrammaticalClass("nom scientifique"),
 
     // Nouns
     NOUN: new GrammaticalClass("nom commun", "nom"),
-    PROPER_NOUN: new GrammaticalClass("nom propre", "nom propre"),
-    FIRST_NAME: new GrammaticalClass("prénom", "prénom"),
-    LAST_NAME: new GrammaticalClass("nom de famille", "nom de famille"),
+    PROPER_NOUN: new GrammaticalClass("nom propre"),
+    FIRST_NAME: new GrammaticalClass("prénom"),
+    LAST_NAME: new GrammaticalClass("nom de famille"),
 
     // Adjectives
-    ADJECTIVE: new GrammaticalClass("adjectif", "adjectif"),
-    INTERROGATIVE_ADJECTIVE: new GrammaticalClass("adjectif interrogatif", "adjectif interrogatif"),
-    NUMERAL_ADJECTIVE: new GrammaticalClass("adjectif numéral", "adjectif numéral"),
-    POSSESSIVE_ADJECTIVE: new GrammaticalClass("adjectif possessif", "adjectif possessif"),
+    ADJECTIVE: new GrammaticalClass("adjectif"),
+    INTERROGATIVE_ADJECTIVE: new GrammaticalClass("adjectif interrogatif"),
+    NUMERAL_ADJECTIVE: new GrammaticalClass("adjectif numéral"),
+    POSSESSIVE_ADJECTIVE: new GrammaticalClass("adjectif possessif"),
 
     // Adverbs
-    ADVERB: new GrammaticalClass("adverbe", "adverbe"),
-    INTERROGATIVE_ADVERB: new GrammaticalClass("adverbe interrogatif", "adverbe interrogatif"),
+    ADVERB: new GrammaticalClass("adverbe"),
+    INTERROGATIVE_ADVERB: new GrammaticalClass("adverbe interrogatif"),
 
     // Pronouns
-    PRONOUN: new GrammaticalClass("pronom", "pronom"),
-    DEMONSTRATIVE_PRONOUN: new GrammaticalClass("pronom démonstratif", "pronom démonstratif"),
-    INDEFINITE_PRONOUN: new GrammaticalClass("pronom indéfini", "pronom indéfini"),
-    INTERROGATIVE_PRONOUN: new GrammaticalClass("pronom interrogatif", "pronom interrogatif"),
-    PERSONAL_PRONOUN: new GrammaticalClass("pronom personnel", "pronom personnel"),
-    POSSESSIVE_PRONOUN: new GrammaticalClass("pronom possessif", "pronom possessif"),
-    RELATIVE_PRONOUN: new GrammaticalClass("pronom relatif", "pronom relatif"),
+    PRONOUN: new GrammaticalClass("pronom"),
+    DEMONSTRATIVE_PRONOUN: new GrammaticalClass("pronom démonstratif"),
+    INDEFINITE_PRONOUN: new GrammaticalClass("pronom indéfini"),
+    INTERROGATIVE_PRONOUN: new GrammaticalClass("pronom interrogatif"),
+    PERSONAL_PRONOUN: new GrammaticalClass("pronom personnel"),
+    POSSESSIVE_PRONOUN: new GrammaticalClass("pronom possessif"),
+    RELATIVE_PRONOUN: new GrammaticalClass("pronom relatif"),
 
     // Conjunctions
-    CONJUNCTION: new GrammaticalClass("conjonction", "conjonction"),
-    COORDINATION_CONJUNCTION: new GrammaticalClass("conjonction de coordination", "conjonction de coordination"),
+    CONJUNCTION: new GrammaticalClass("conjonction"),
+    COORDINATION_CONJUNCTION: new GrammaticalClass("conjonction de coordination"),
 
     // Articles
-    ARTICLE: new GrammaticalClass("article", "article"),
-    INDEFINITE_ARTICLE: new GrammaticalClass("article indéfini", "article indéfini"),
-    DEFINITE_ARTICLE: new GrammaticalClass("article défini", "article défini"),
-    PARTITIVE_ARTICLE: new GrammaticalClass("article partitif", "article partitif"),
+    ARTICLE: new GrammaticalClass("article"),
+    INDEFINITE_ARTICLE: new GrammaticalClass("article indéfini"),
+    DEFINITE_ARTICLE: new GrammaticalClass("article défini"),
+    PARTITIVE_ARTICLE: new GrammaticalClass("article partitif"),
 
     // Affixes
-    PREFIX: new GrammaticalClass("préfixe", "préfixe"),
-    SUFFIX: new GrammaticalClass("suffixe", "suffixe"),
-    CIRCUMFIX: new GrammaticalClass("circonfixe", "circonfixe"),
-    INFIX: new GrammaticalClass("infixe", "infixe"),
+    PREFIX: new GrammaticalClass("préfixe"),
+    SUFFIX: new GrammaticalClass("suffixe"),
+    CIRCUMFIX: new GrammaticalClass("circonfixe"),
+    INFIX: new GrammaticalClass("infixe"),
 
-    VERB: new GrammaticalClass("verbe", "verbe"),
-    PREPOSITION: new GrammaticalClass("préposition", "préposition"),
-    POSTPOSITION: new GrammaticalClass("postposition", "postposition"),
-    PARTICLE: new GrammaticalClass("particule", "particule"),
-    INTERJECTION: new GrammaticalClass("interjection", "interjection"),
-    ONOMATOPOEIA: new GrammaticalClass("onomatopée", "onomatopée"),
+    VERB: new GrammaticalClass("verbe"),
+    PREPOSITION: new GrammaticalClass("préposition"),
+    POSTPOSITION: new GrammaticalClass("postposition"),
+    PARTICLE: new GrammaticalClass("particule"),
+    INTERJECTION: new GrammaticalClass("interjection"),
+    ONOMATOPOEIA: new GrammaticalClass("onomatopée"),
 
     PHRASE: new GrammaticalClass("locution/phrase", "locution-phrase"),
   },
