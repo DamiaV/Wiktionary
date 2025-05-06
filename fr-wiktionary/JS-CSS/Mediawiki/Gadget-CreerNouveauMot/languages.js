@@ -37,6 +37,7 @@ window.languages = {
     GROUP3: new GrammaticalProperty("3<sup>ème</sup> groupe", "{{type|{0}}} {{conjugaison|{0}|groupe=3}}"),
     REGULAR_VERB: new GrammaticalProperty("régulier", "{{type|{0}}}"),
     IRREGULAR_VERB: new GrammaticalProperty("irrégulier", "{{type|{0}}}"),
+    VERB: new GrammaticalProperty("verbe", "{{type|{0}}}"),
   },
   /**
    * All available grammatical classes.
@@ -377,7 +378,7 @@ window.languages = {
       if (properties[0] === this.NUMBERS.DIFF_SINGULAR_PLURAL.label)
         return `{{eo-flexions|${pron}}}`;
       if (grammarClass.toLowerCase() === this.GRAMMATICAL_CLASSES.VERB.label)
-        return "{{eo-verbe}} {{type|eo}}";
+        return "{{eo-verbe}}";
       return "";
     };
 
@@ -397,7 +398,7 @@ window.languages = {
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.ADVERB, [[this.NUMBERS.INVARIABLE]], getEsperantoModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.NOUN, [[this.NUMBERS.DIFF_SINGULAR_PLURAL]], getEsperantoModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PROPER_NOUN, [[this.NUMBERS.DIFF_SINGULAR_PLURAL]], getEsperantoModel),
-          new GrammaticalItem(this.GRAMMATICAL_CLASSES.VERB, [], getEsperantoModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.VERB, [[this.VERBS.VERB]], getEsperantoModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PHRASE),
 
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.CONJUNCTION, [[this.NUMBERS.DIFF_SINGULAR_PLURAL]], getEsperantoModel),
@@ -466,7 +467,7 @@ window.languages = {
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.ADVERB, [], getBretonModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.NOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.COLLECTIVE_SINGULATIVE, this.NUMBERS.COLLECTIVE_SINGULATIVE_PLURAL, this.NUMBERS.SINGULATIVE_DUAL_PLURAL]], getBretonModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PROPER_NOUN),
-          new GrammaticalItem(this.GRAMMATICAL_CLASSES.VERB, [], getBretonModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.VERB, [[this.VERBS.VERB]], getBretonModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PHRASE),
 
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.INTERROGATIVE_ADJECTIVE, [], getBretonModel),
