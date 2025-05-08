@@ -50,7 +50,7 @@ function p.languageName(frame)
   local args = m_params.process(frame:getParent().args, {
     [1] = { required = true },
   })
-  return p.get_nom(args[1]) or ""
+  return p.getName(args[1]) or ""
 end
 
 --- Return the sort key for the given language code. Available to templates.
@@ -82,7 +82,7 @@ function p.languageNameForList(frame)
         m_bases.fait_categorie_contenu("Wiktionnaire:Codes langue manquants")
   end
 
-  local languageName = p.get_nom(code)
+  local languageName = p.getName(code)
   if not languageName then
     return mw.ustring.format('<span style="color: red">Code de inconnu : %s*<span>', code) ..
         m_bases.fait_categorie_contenu("Wiktionnaire:Codes langue non définis")
