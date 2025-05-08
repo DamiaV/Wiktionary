@@ -194,16 +194,18 @@ end
 --- Function for templates {{étyl}} and {{étylp}}. If at least one of the two languages is unknown or missing,
 --- an error message is displayed in place of the text and the category
 --- [[Catégorie:Wiktionnaire:Modèle étyl sans langue précisée]] is inserted.
----  frame.args[1] (string) : Source language code.
----  frame.args[2] (string) : Target language code.
----  frame.args["mot", 3] (string, optional) : Source word.
----  frame.args["tr", R, 4] (string, optional) : Transcription of source word.
----  frame.args["sens", 5] (string, optional) : Meaning of source word.
----  frame.args["dif"] (string, optional) : Text to show instead of the source word.
----  frame.args["type"] (string, optional) : Section code in source word’s page.
----  frame.args["num"] (int, optional) : Section number in source word’s page.
----  frame.args["nocat"] (boolean, optional) : If true and no errors are found, no categories will be returned.
----  frame.args["lien"] (boolean, optinal) : If true, inserts a link to the source language.
+--- @param frame frame
+--- Parameters:
+---  frame.args[1] (string): Source language code.
+---  frame.args[2] (string): Target language code.
+---  frame.args["mot", 3] (string, optional): Source word.
+---  frame.args["tr", R, 4] (string, optional): Transcription of source word.
+---  frame.args["sens", 5] (string, optional): Meaning of source word.
+---  frame.args["dif"] (string, optional): Text to show instead of the source word.
+---  frame.args["type"] (string, optional): Section code in source word’s page.
+---  frame.args["num"] (int, optional): Section number in source word’s page.
+---  frame.args["nocat"] (boolean, optional): If true and no errors are found, no categories will be returned.
+---  frame.args["lien"] (boolean, optinal): If true, inserts a link to the source language.
 --- @return string Template’s text and relevant categories.
 function p.templateEtyl(frame)
   local args = m_params.process(frame:getParent().args, {
@@ -305,8 +307,82 @@ function p.templateEtyl(frame)
   return content .. categories
 end
 
+--- Function for template {{étylcat}}. If at least one of the two languages is unknown or missing,
+--- or the category’s name is not valid, an error message is displayed in place of the text and the category
+--- [[Catégorie:Appels de modèles incorrects:étylcat]] is inserted.
+--- @param frame frame
+--- Parameters:
+---  frame.args[1] (string): Current language code.
+---  frame.args[2] (string): Etymological language code.
+---  frame.args["clé1"] (string): The sort key for the category [[Catégorie:Mots issus d’<…>]].
+---  frame.args["clé2"] (string): The sort key for the category [[Catégorie:Origines étymologiques des mots en <…>]].
+---  frame.args["cat"] (string): The name of a template that shows an index. Defaults to CatégorieTDM.
+---                              Pass the value "-" to not show any template.
+---  frame.args["cat2"] (string): The name of a second template that shows a index.
+--- @return string Template’s text and relevant categories.
 function p.templateEtylcat(frame)
-  return ""
+  local args = m_params.process(frame:getParent().args, {
+    [1] = {},
+    [2] = {},
+    ["clé1"] = {},
+    ["clé2"] = {},
+    ["cat"] = {},
+    ["cat2"] = {},
+  })
+
+  local destLang = args[1]
+  local originLang = args[2]
+  local destLangName = getLanguageName(destLang)
+  local originLangName = getLanguageName(originLang)
+  local sortKey1 = args["clé1"] or destLangName
+  local sortKey2 = args["clé2"] or originLangName
+  local cat1 = args["cat"]
+  local cat2 = args["cat2"]
+
+  if not checkLangExtended(originLang) or not checkLangExtended(destLang) then
+    return '<span style="color:red">Erreur modèle étylcat&nbsp;: langue inconnue ou absente</span>' ..
+        m_bases.fait_categorie_contenu("Appels de modèles incorrects:étylcat")
+  end
+
+  local expectedPageTitle = mw.ustring.format(
+      "Catégorie:Mots en %s issus d’%s",
+      destLangName,
+      originLang == "onom" and "une onomatopée" or ("un mot en " .. originLangName),
+      originLangName
+  )
+  if mw.title.getCurrentTitle().fullText ~= expectedPageTitle then
+    return '<span style="color:red">Erreur modèle étylcat&nbsp;: pas dans une catégorie compatible</span>' ..
+        m_bases.fait_categorie_contenu("Appels de modèles incorrects:étylcat")
+  end
+
+  local tablesOfContent = {}
+
+  if cat1 ~= "-" then
+    table.insert(tablesOfContent, frame:expandTemplate { title = cat1 or "CatégorieTDM" })
+  end
+  if cat2 then
+    table.insert(tablesOfContent, frame:expandTemplate { title = cat2 })
+  end
+
+  local result = mw.ustring.format(
+      [=[
+Cette catégorie liste les termes en [[%s]] ayant pour origine étymologique %s.
+Lire aussi [[Aide:Étymologies]].
+
+%s
+[[Catégorie:Mots issus d’%s|%s]]
+[[Catégorie:Origines étymologiques des mots en %s|%s]]
+]=],
+      destLangName,
+      originLang == "onom" and "une onomatopée" or mw.ustring.format("un mot en [[%s]]", originLangName),
+      table.concat(tablesOfContent, "\n"),
+      originLang == "onom" and "une onomatopée" or ("un mot en " .. originLangName),
+      sortKey1,
+      destLangName,
+      sortKey2
+  )
+
+  return mw.text.trim(result)
 end
 
 --- Function for template {{lien-ancre-étym}}.
