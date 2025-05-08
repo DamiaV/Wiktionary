@@ -5516,7 +5516,7 @@ l['ump'] = { nom = 'umpila' }
 l['ums'] = { nom = 'pendau' }
 l['umu'] = { nom = 'munsee' }
 l['una'] = { nom = 'watut du Nord', tri = 'watut Nord' }
-l['und'] = { nom = 'langue indéterminée', tri = '*indéterminée', special = true }
+l['und'] = { nom = 'langue indéterminée', tri = '*indéterminée', isSpecial = true }
 l['une'] = { nom = 'uneme' }
 l['ung'] = { nom = 'ngarinyin' }
 l['unm'] = { nom = 'unami' }
