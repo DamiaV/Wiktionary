@@ -1,9 +1,9 @@
 -- <nowiki>
-local m_bases = require('Module:bases')
-local m_params = require('Module:paramètres')
-local m_langues = require('Module:langues')
-local m_table = require('Module:table')
-local m_Unicode_data = require('Module:données Unicode')
+local m_bases = require("Module:bases")
+local m_params = require("Module:paramètres")
+local m_langues = require("Module:langues")
+local m_table = require("Module:table")
+local m_Unicode_data = require("Module:données Unicode")
 
 local checkLang = function(langCode, allowSpecial)
   return m_langues.getName(langCode, allowSpecial) ~= nil
@@ -43,9 +43,9 @@ function p.templateEtymologyConstruction(frame)
     ["de"] = {},
     ["de2"] = {},
     ["tr"] = {},
-    ["R"] = { alias_of = 'tr' },
+    ["R"] = { alias_of = "tr" },
     ["tr2"] = {},
-    ["R2"] = { alias_of = 'tr2' },
+    ["R2"] = { alias_of = "tr2" },
     ["sens"] = {},
     ["sens2"] = {},
     ["code"] = {},
@@ -54,7 +54,7 @@ function p.templateEtymologyConstruction(frame)
     ["texte2"] = {},
     ["adjectif"] = {},
     ["lang"] = { checker = checkLang },
-    ["langue"] = { alias_of = 'lang' },
+    ["langue"] = { alias_of = "lang" },
     ["lang-lien"] = { checker = checkLang },
     ["m"] = { type = m_params.BOOLEAN, default = false },
     ["nolien"] = { type = m_params.BOOLEAN, default = false },
@@ -89,7 +89,7 @@ function p.templateEtymologyConstruction(frame)
   local res = mw.ustring.format("[[%s#fr|%s]]", term, caps and m_bases.ucfirst(term) or term)
 
   if code then
-    linkLang = linkLang .. '-' .. code
+    linkLang = linkLang .. "-" .. code
   end
 
   -- TODO call {{lien}} instead of reinventing it
@@ -106,7 +106,7 @@ function p.templateEtymologyConstruction(frame)
     end
 
     if transcription then
-      if baseString == '' then
+      if baseString == "" then
         baseString = mw.ustring.format("''%s''", transcription)
       else
         baseString = mw.ustring.format("%s, ''%s''", baseString, transcription)
@@ -114,10 +114,10 @@ function p.templateEtymologyConstruction(frame)
     end
 
     if meaning then
-      if baseString == '' then
-        baseString = mw.ustring.format('(«&nbsp;%s&nbsp;»)', meaning)
+      if baseString == "" then
+        baseString = mw.ustring.format("(«&nbsp;%s&nbsp;»)", meaning)
       else
-        baseString = mw.ustring.format('%s («&nbsp;%s&nbsp;»)', baseString, meaning)
+        baseString = mw.ustring.format("%s («&nbsp;%s&nbsp;»)", baseString, meaning)
       end
     end
 
@@ -160,23 +160,23 @@ end
 
 -- Various latin codes accepted by {{étyl}}.
 local LATIN_CODES = {
-  'bas latin',
-  'gallo-roman',
-  'latin archaïque',
-  'latin classique',
-  'latin contemporain',
-  'latin ecclésiastique',
-  'latin humaniste',
-  'latin impérial',
-  'latin médiéval',
-  'latin populaire',
-  'latin tardif',
-  'latin vulgaire',
-  'néolatin',
+  "bas latin",
+  "gallo-roman",
+  "latin archaïque",
+  "latin classique",
+  "latin contemporain",
+  "latin ecclésiastique",
+  "latin humaniste",
+  "latin impérial",
+  "latin médiéval",
+  "latin populaire",
+  "latin tardif",
+  "latin vulgaire",
+  "néolatin",
 }
 
 local function getLanguageCode(langCode)
-  return m_table.contains(LATIN_CODES, langCode) and 'la' or langCode
+  return m_table.contains(LATIN_CODES, langCode) and "la" or langCode
 end
 
 local function checkLangExtended(langCode)
@@ -209,92 +209,92 @@ function p.templateEtyl(frame)
   local args = m_params.process(frame:getParent().args, {
     [1] = {},
     [2] = {},
-    ['mot'] = {},
-    [3] = { alias_of = 'mot' },
-    ['tr'] = {},
-    ['R'] = { alias_of = 'tr' },
-    [4] = { alias_of = 'tr' },
-    ['sens'] = {},
-    [5] = { alias_of = 'sens' },
-    ['dif'] = {},
-    ['type'] = {},
-    ['num'] = { type = m_params.INT, checker = function(n)
+    ["mot"] = {},
+    [3] = { alias_of = "mot" },
+    ["tr"] = {},
+    ["R"] = { alias_of = "tr" },
+    [4] = { alias_of = "tr" },
+    ["sens"] = {},
+    [5] = { alias_of = "sens" },
+    ["dif"] = {},
+    ["type"] = {},
+    ["num"] = { type = m_params.INT, checker = function(n)
       return n > 0
     end },
-    ['nocat'] = { type = m_params.BOOLEAN, default = false },
-    ['lien'] = { type = m_params.BOOLEAN, default = false },
+    ["nocat"] = { type = m_params.BOOLEAN, default = false },
+    ["lien"] = { type = m_params.BOOLEAN, default = false },
   })
 
   local forProperNouns = frame.args["noms propres"] ~= nil
   local originLang = args[1]
   local destLang = args[2]
-  local word = args['mot']
-  local transcription = args['tr']
-  local meaning = args['sens']
-  local alternativeText = args['dif']
-  local anchorSection = args['type']
-  local anchorNum = args['num']
-  local noCat = args['nocat']
-  local linkToLang = args['lien']
+  local word = args["mot"]
+  local transcription = args["tr"]
+  local meaning = args["sens"]
+  local alternativeText = args["dif"]
+  local anchorSection = args["type"]
+  local anchorNum = args["num"]
+  local noCat = args["nocat"]
+  local linkToLang = args["lien"]
 
   if not checkLangExtended(originLang) or (not noCat and not checkLangExtended(destLang)) then
     return '<span style="color:red">Erreur modèle étyl&nbsp;: langue inconnue ou absente</span>' ..
-        m_bases.fait_categorie_contenu('Wiktionnaire:Modèle étyl sans langue précisée')
+        m_bases.fait_categorie_contenu("Wiktionnaire:Modèle étyl sans langue précisée")
   end
 
-  local categories = ''
-  local content = ''
-  local anchor = ''
+  local categories = ""
+  local content = ""
+  local anchor = ""
   local originLangName = getLanguageName(originLang)
   local destLangName = getLanguageName(destLang)
-  local displayedLang = linkToLang and m_bases.lien_modele(originLangName, 'fr') or originLangName
+  local displayedLang = linkToLang and m_bases.lien_modele(originLangName, "fr") or originLangName
 
-  content = ''
+  content = ""
   if word then
     if anchorSection then
       anchor = anchorSection
     end
     if anchorNum then
-      anchor = anchor .. '-' .. tostring(anchorNum)
+      anchor = anchor .. "-" .. tostring(anchorNum)
     end
 
     content = italicIfLatinScript(m_bases.lien_modele(word, getLanguageCode(originLang), anchor, alternativeText, true))
   end
 
   if transcription then
-    if content == '' then
+    if content == "" then
       content = mw.ustring.format("''%s''", transcription)
     else
       content = mw.ustring.format("%s, ''%s''", content, transcription)
     end
   end
   if meaning then
-    if content == '' then
-      content = mw.ustring.format('(«&nbsp;%s&nbsp;»)', meaning)
+    if content == "" then
+      content = mw.ustring.format("(«&nbsp;%s&nbsp;»)", meaning)
     else
-      content = mw.ustring.format('%s («&nbsp;%s&nbsp;»)', content, meaning)
+      content = mw.ustring.format("%s («&nbsp;%s&nbsp;»)", content, meaning)
     end
   end
 
-  if content == '' then
+  if content == "" then
     content = displayedLang
   else
-    content = mw.ustring.format('%s %s', displayedLang, content)
+    content = mw.ustring.format("%s %s", displayedLang, content)
   end
 
   if not noCat then
-    local catNamePrefix = forProperNouns and 'Noms propres' or 'Mots'
+    local catNamePrefix = forProperNouns and "Noms propres" or "Mots"
     if originLang == destLang then
-      categories = categories .. m_bases.fait_categorie_contenu('Appels de modèles incorrects:étyl')
-    elseif originLang == 'onom' then
+      categories = categories .. m_bases.fait_categorie_contenu("Appels de modèles incorrects:étyl")
+    elseif originLang == "onom" then
       categories = categories .. m_bases.fait_categorie_contenu(mw.ustring.format(
-          '%s en %s issus d’une onomatopée',
+          "%s en %s issus d’une onomatopée",
           catNamePrefix,
           destLangName
       ))
     else
       categories = categories .. m_bases.fait_categorie_contenu(mw.ustring.format(
-          '%s en %s issus d’un mot en %s',
+          "%s en %s issus d’un mot en %s",
           catNamePrefix,
           destLangName,
           originLangName
@@ -303,6 +303,10 @@ function p.templateEtyl(frame)
   end
 
   return content .. categories
+end
+
+function p.templateEtylcat(frame)
+  return ""
 end
 
 --- Function for template {{lien-ancre-étym}}.
