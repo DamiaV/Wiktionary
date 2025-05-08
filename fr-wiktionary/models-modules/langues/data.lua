@@ -4070,7 +4070,7 @@ l['oni'] = { name = 'onin' }
 l['onk'] = { name = 'one de Kabore', sortKey = 'one Kabore' }
 l['onn'] = { name = 'onobasulu' }
 l['ono'] = { name = 'onondaga' }
-l['onom'] = { name = 'onomatopée', sortKey = '*onomatopée' }
+l['onom'] = { name = 'onomatopée', sortKey = '*onomatopée', isSpecial = true }
 l['onp'] = { name = 'sartang' }
 l['ons'] = { name = 'ono' }
 l['ont'] = { name = 'ontena' }
