@@ -25,7 +25,7 @@ p.specialCodes = {
 --- @return string|nil The matching language name, nil otherwise.
 function p.get_nom(code, allowSpecial)
   -- TODO rename
-  if not code or not languagesData[code] or not allowSpecial and (languagesData[code].special or languagesData[code].groupe) then
+  if not code or not languagesData[code] or not allowSpecial and (languagesData[code].special or languagesData[code].isGroup) then
     return nil
   end
   return languagesData[code].nom
@@ -36,7 +36,7 @@ end
 --- @param allowSpecial boolean If true, codes marked as group or special will also be considered.
 --- @return string|nil The sort key for the language, nil if the code is invalid.
 function p.getSortKey(code, allowSpecial)
-  if not code or not languagesData[code] or not allowSpecial and (languagesData[code].special or languagesData[code].groupe) then
+  if not code or not languagesData[code] or not allowSpecial and (languagesData[code].special or languagesData[code].isGroup) then
     return nil
   end
   return languagesData[code]["tri"] or languagesData[code]["nom"]
@@ -146,7 +146,7 @@ function p.getLanguageCode(languageName, allowSpecial)
   local result
   for code, languageData in pairs(languagesData) do
     if languageName == languageData["nom"] and
-        (allowSpecial or not languageData.groupe and not languageData.special) then
+        (allowSpecial or not languageData.isGroup and not languageData.special) then
       local codeLength = mw.ustring.len(code)
       if result == nil or code == languageName or
           codeLength < mw.ustring.len(result) and (result ~= languageName or codeLength <= 3)

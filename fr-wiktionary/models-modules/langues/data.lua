@@ -24,7 +24,7 @@ l['aaq'] = { nom = 'abénaquis de l’Est', tri = 'abénaquis Est' }
 l['aas'] = { nom = 'aasá' }
 l['aat'] = { nom = 'albanais arvanite' }
 l['aau'] = { nom = 'abau' }
-l['aav'] = { nom = 'langues austro-asiatiques', tri = 'austro asiatiques langues', groupe = true }
+l['aav'] = { nom = 'langues austro-asiatiques', tri = 'austro asiatiques langues', isGroup = true }
 l['aaw'] = { nom = 'arawé' }
 l['aax'] = { nom = 'atas de Mandobo', tri = 'atas Mandobo' }
 l['aaz'] = { nom = 'amarasi' }
@@ -118,7 +118,7 @@ l['aew'] = { nom = 'ambakich' }
 l['aey'] = { nom = 'amélé' }
 l['aez'] = { nom = 'aeka' }
 l['af'] = { nom = 'afrikaans', wiktionnaire = true }
-l['afa'] = { nom = 'langues afro-asiatiques', tri = 'afro asiatiques langues', groupe = true }
+l['afa'] = { nom = 'langues afro-asiatiques', tri = 'afro asiatiques langues', isGroup = true }
 l['afb'] = { nom = 'arabe du Golfe', tri = 'arabe golfe' }
 l['afd'] = { nom = 'andai' }
 l['afe'] = { nom = 'putukwam' }
@@ -228,7 +228,7 @@ l['alc'] = { nom = 'kawésqar' }
 l['alchuka'] = { nom = 'alchuka' }
 l['ald'] = { nom = 'alladian' }
 l['ale'] = { nom = 'aléoute' }
-l['alg'] = { nom = 'langues algonquiennes', tri = 'algonquiennes langues', groupe = true }
+l['alg'] = { nom = 'langues algonquiennes', tri = 'algonquiennes langues', isGroup = true }
 l['alh'] = { nom = 'alawa' }
 l['ali'] = { nom = 'amaimon' }
 l['alk'] = { nom = 'alak' }
@@ -242,7 +242,7 @@ l['alr'] = { nom = 'alioutor' }
 l['als'] = { nom = 'albanais tosk' }
 l['alt'] = { nom = 'altaï du Sud', tri = 'altaï Sud' }
 l['alu'] = { nom = '’are’are', tri = 'are are' }
-l['alv'] = { nom = 'langues atlantico-congolaises', tri = 'atlantico congolaises langues', groupe = true }
+l['alv'] = { nom = 'langues atlantico-congolaises', tri = 'atlantico congolaises langues', isGroup = true }
 l['alx'] = { nom = 'amol' }
 l['aly'] = { nom = 'alyawarr' }
 l['am'] = { nom = 'amharique', wiktionnaire = true }
@@ -312,7 +312,7 @@ l['aos'] = { nom = 'taikat' }
 l['aot'] = { nom = 'a’tong' }
 l['aou'] = { nom = 'a’ou' }
 l['aoz'] = { nom = 'atoni' }
-l['apa'] = { nom = 'langues apaches', tri = 'apaches langues', groupe = true }
+l['apa'] = { nom = 'langues apaches', tri = 'apaches langues', isGroup = true }
 l['apb'] = { nom = 'sa’a' }
 l['apc'] = { nom = 'arabe levantin' }
 l['apd'] = { nom = 'arabe soudanais' }
@@ -337,10 +337,10 @@ l['apw'] = { nom = 'apache de l’Ouest', tri = 'apache Ouest' }
 l['apx'] = { nom = 'aputai' }
 l['apy'] = { nom = 'apalai' }
 l['apz'] = { nom = 'safeyoka' }
-l['aqa'] = { nom = 'langues alacalufanes', tri = 'alacalufanes langues', groupe = true }
+l['aqa'] = { nom = 'langues alacalufanes', tri = 'alacalufanes langues', isGroup = true }
 l['aqc'] = { nom = 'artchi' }
 l['aqd'] = { nom = 'ampari' }
-l['aql'] = { nom = 'langues algiques', tri = 'algiques langues', groupe = true }
+l['aql'] = { nom = 'langues algiques', tri = 'algiques langues', isGroup = true }
 l['aqn'] = { nom = 'alta du Nord', tri = 'alta Nord' }
 l['aqp'] = { nom = 'atakapa' }
 l['aqt'] = { nom = 'angaité' }
@@ -360,7 +360,7 @@ l['arp'] = { nom = 'arapaho' }
 l['arq'] = { nom = 'arabe algérien' }
 l['arr'] = { nom = 'karo (Brésil)', tri = 'karo Brésil' }
 l['ars'] = { nom = 'arabe najdi' }
-l['art'] = { nom = 'langues artificielles', tri = 'artificielles langues', groupe = true }
+l['art'] = { nom = 'langues artificielles', tri = 'artificielles langues', isGroup = true }
 l['aru'] = { nom = 'arawá' }
 l['arv'] = { nom = 'arbore' }
 l['arw'] = { nom = 'arawak' }
@@ -391,7 +391,7 @@ l['atb'] = { nom = 'zaiwa' }
 l['atc'] = { nom = 'atsahuaca' }
 l['atd'] = { nom = 'manobo d’Ata', tri = 'manobo Ata' }
 l['ate'] = { nom = 'atemble' }
-l['ath'] = { nom = 'langues athapascanes', tri = 'athapascanes langues', groupe = true }
+l['ath'] = { nom = 'langues athapascanes', tri = 'athapascanes langues', isGroup = true }
 l['ati'] = { nom = 'attié' }
 l['atj'] = { nom = 'atikamekw' }
 l['atl'] = { nom = 'agta du mont Iraya', tri = 'agta Iraya' }
@@ -412,7 +412,7 @@ l['aua'] = { nom = 'asumboa' }
 l['auc'] = { nom = 'huaorani' }
 l['aud'] = { nom = 'anuta' }
 l['aue'] = { nom = 'kung-gobabis' }
-l['auf'] = { nom = 'langues arauanes', tri = 'arauanes langues', groupe = true }
+l['auf'] = { nom = 'langues arauanes', tri = 'arauanes langues', isGroup = true }
 l['aug'] = { nom = 'agouna' }
 l['auh'] = { nom = 'aushi' }
 l['aui'] = { nom = 'anuki' }
@@ -422,7 +422,7 @@ l['aul'] = { nom = 'aulua' }
 l['aum'] = { nom = 'asu (Nigeria)', tri = 'asu Nigeria' }
 l['aun'] = { nom = 'one de Molmo', tri = 'one Molmo' }
 l['aur'] = { nom = 'aruek' }
-l['aus'] = { nom = 'langues australiennes', tri = 'australiennes langues', groupe = true }
+l['aus'] = { nom = 'langues australiennes', tri = 'australiennes langues', isGroup = true }
 l['aut'] = { nom = 'austral' }
 l['auu'] = { nom = 'auye' }
 l['auw'] = { nom = 'awyi' }
@@ -444,7 +444,7 @@ l['avv'] = { nom = 'avá-canoeiro' }
 l['awa'] = { nom = 'awadhi' }
 l['awb'] = { nom = 'awa (papou)', tri = 'awa papou' }
 l['awc'] = { nom = 'cicipu' }
-l['awd'] = { nom = 'langues arawakes', tri = 'arawakes langues', groupe = true }
+l['awd'] = { nom = 'langues arawakes', tri = 'arawakes langues', isGroup = true }
 l['awe'] = { nom = 'aweti' }
 l['awg'] = { nom = 'anguthimri' }
 l['awh'] = { nom = 'awbono' }
@@ -479,7 +479,7 @@ l['az'] = { nom = 'azéri', wiktionnaire = true }
 l['aza'] = { nom = 'azha' }
 l['azb'] = { nom = 'azéri du Sud', tri = 'azéri Sud' }
 l['azb-afs'] = { nom = 'afchar' }
-l['azc'] = { nom = 'langues uto-aztèques', tri = 'uto aztèques langues', groupe = true }
+l['azc'] = { nom = 'langues uto-aztèques', tri = 'uto aztèques langues', isGroup = true }
 l['azg'] = { nom = 'amuzgo de San Pedro Amuzgos', tri = 'amuzgo San Pedro Amuzgos' }
 l['azj'] = { nom = 'azéri du Nord', tri = 'azéri Nord' }
 l['azo'] = { nom = 'awing' }
@@ -487,12 +487,12 @@ l['azz'] = { nom = 'nahuatl du haut Puebla', tri = 'nahuatl Puebla haut' }
 l['ba'] = { nom = 'bachkir' }
 l['baa'] = { nom = 'babatana' }
 l['bac'] = { nom = 'baduy' }
-l['bad'] = { nom = 'langues bandas', tri = 'bandas langues', groupe = true }
+l['bad'] = { nom = 'langues bandas', tri = 'bandas langues', isGroup = true }
 l['bae'] = { nom = 'baré' }
 l['baf'] = { nom = 'nubaca' }
 l['bag'] = { nom = 'tuki' }
 l['bah'] = { nom = 'créole bahamien' }
-l['bai'] = { nom = 'langues bamilékées', tri = 'bamilekees langues', groupe = true }
+l['bai'] = { nom = 'langues bamilékées', tri = 'bamilekees langues', isGroup = true }
 l['baisha'] = { nom = 'baisha' }
 l['bal'] = { nom = 'baloutche' }
 l['bala (Chine)'] = { nom = 'bala (Chine)', tri = 'bala Chine' }
@@ -508,7 +508,7 @@ l['barranbinya'] = { nom = 'barranbinya' }
 l['bas'] = { nom = 'bassa (Cameroun)', tri = 'bassa Cameroun' }
 l['basco-algonquin'] = { nom = 'basco-algonquin' }
 l['basco-islandais'] = { nom = 'basco-islandais' }
-l['bat'] = { nom = 'langues baltes', tri = 'baltes langues', groupe = true }
+l['bat'] = { nom = 'langues baltes', tri = 'baltes langues', isGroup = true }
 l['bav'] = { nom = 'babungo' }
 l['baw'] = { nom = 'bambili-bambui' }
 l['bax'] = { nom = 'bamoun' }
@@ -592,7 +592,7 @@ l['bengni'] = { nom = 'bengni' }
 l['beo'] = { nom = 'beami' }
 l['bep'] = { nom = 'besoa' }
 l['beq'] = { nom = 'beembe' }
-l['ber'] = { nom = 'langues berbères', tri = 'berberes langues', groupe = true }
+l['ber'] = { nom = 'langues berbères', tri = 'berberes langues', isGroup = true }
 l['berrichon'] = { nom = 'berrichon' }
 l['bes'] = { nom = 'besme' }
 l['bet'] = { nom = 'bété de Guiberoua', tri = 'bété Guiberoua' }
@@ -632,7 +632,7 @@ l['bgu'] = { nom = 'mbongno' }
 l['bgv'] = { nom = 'warkay-bipim' }
 l['bgx'] = { nom = 'gagaouze balkanique' }
 l['bgz'] = { nom = 'banggai' }
-l['bh'] = { nom = 'langues biharies', tri = 'biharies langues', wiktionnaire = true, groupe = true }
+l['bh'] = { nom = 'langues biharies', tri = 'biharies langues', wiktionnaire = true, isGroup = true }
 l['bha'] = { nom = 'bharia' }
 l['bhb'] = { nom = 'bhili' }
 l['bhc'] = { nom = 'biga' }
@@ -748,7 +748,7 @@ l['bnn'] = { nom = 'bunun' }
 l['bnp'] = { nom = 'bola (Papouasie-Nouvelle-Guinée)', tri = 'bola Papouasie' }
 l['bnq'] = { nom = 'bantik' }
 l['bnr'] = { nom = 'butmas-tur' }
-l['bnt'] = { nom = 'langues bantoues', tri = 'bantoues langues', groupe = true }
+l['bnt'] = { nom = 'langues bantoues', tri = 'bantoues langues', isGroup = true }
 l['bnv'] = { nom = 'bonerif' }
 l['bny'] = { nom = 'bintulu' }
 l['bnz'] = { nom = 'beezen' }
@@ -844,7 +844,7 @@ l['btc'] = { nom = 'bati (Cameroun)', tri = 'bati Cameroun' }
 l['btd'] = { nom = 'dairi' }
 l['btf'] = { nom = 'birguit' }
 l['bth'] = { nom = 'biatah bidayuh' }
-l['btk'] = { nom = 'langues batakes', tri = 'batakes langues', groupe = true }
+l['btk'] = { nom = 'langues batakes', tri = 'batakes langues', isGroup = true }
 l['btm'] = { nom = 'mandailing', wiktionnaire = true }
 l['btp'] = { nom = 'budibud' }
 l['btr'] = { nom = 'baetora' }
@@ -974,7 +974,7 @@ l['cad'] = { nom = 'caddo' }
 l['cae'] = { nom = 'léhar' }
 l['caf'] = { nom = 'porteur du Sud', tri = 'porteur Sud' }
 l['cag'] = { nom = 'nivaklé' }
-l['cai'] = { nom = 'langues centre-amérindiennes', tri = 'centre amerindiennes langues', groupe = true }
+l['cai'] = { nom = 'langues centre-amérindiennes', tri = 'centre amerindiennes langues', isGroup = true }
 l['caj'] = { nom = 'chané' }
 l['cak'] = { nom = 'cakchiquel' }
 l['cal'] = { nom = 'carolinien' }
@@ -987,13 +987,13 @@ l['caq'] = { nom = 'car' }
 l['car'] = { nom = 'kali’na' }
 l['cas'] = { nom = 'tsimané' }
 l['catio ancien'] = { nom = 'catio ancien' }
-l['cau'] = { nom = 'langues caucasiennes', tri = 'caucasiennes langues', groupe = true }
+l['cau'] = { nom = 'langues caucasiennes', tri = 'caucasiennes langues', isGroup = true }
 l['cav'] = { nom = 'cavineña' }
 l['caw'] = { nom = 'kallawaya' }
 l['cax'] = { nom = 'chiquitano' }
 l['cay'] = { nom = 'cayuga' }
 l['caz'] = { nom = 'canichana' }
-l['cba'] = { nom = 'langues chibchas', tri = 'chibchas langues', groupe = true }
+l['cba'] = { nom = 'langues chibchas', tri = 'chibchas langues', isGroup = true }
 l['cbb'] = { nom = 'cabiyarí' }
 l['cbc'] = { nom = 'carapana' }
 l['cbd'] = { nom = 'carijona' }
@@ -1012,13 +1012,13 @@ l['cca'] = { nom = 'cauca' }
 l['ccc'] = { nom = 'chamicuro' }
 l['ccd'] = { nom = 'cafundó' }
 l['cch'] = { nom = 'atsam' }
-l['ccn'] = { nom = 'langues caucasiennes du Nord', tri = 'caucasiennes Nord langues', groupe = true }
+l['ccn'] = { nom = 'langues caucasiennes du Nord', tri = 'caucasiennes Nord langues', isGroup = true }
 l['cco'] = { nom = 'chinantèque de Comaltepec', tri = 'chinantèque Comaltepec' }
 l['ccp'] = { nom = 'changma kodha' }
 l['ccr'] = { nom = 'cacaopera' }
-l['ccs'] = { nom = 'langues caucasiennes du Sud', tri = 'caucasiennes Sud langues', groupe = true }
-l['cdc'] = { nom = 'langues tchadiques', tri = 'tchadiques langues', groupe = true }
-l['cdd'] = { nom = 'langues caddoanes', tri = 'caddoanes langues', groupe = true }
+l['ccs'] = { nom = 'langues caucasiennes du Sud', tri = 'caucasiennes Sud langues', isGroup = true }
+l['cdc'] = { nom = 'langues tchadiques', tri = 'tchadiques langues', isGroup = true }
+l['cdd'] = { nom = 'langues caddoanes', tri = 'caddoanes langues', isGroup = true }
 l['cde'] = { nom = 'chenchu' }
 l['cdf'] = { nom = 'chiru' }
 l['cdh'] = { nom = 'chambeali' }
@@ -1034,7 +1034,7 @@ l['ce'] = { nom = 'tchétchène' }
 l['cea'] = { nom = 'chehalis inférieur' }
 l['ceb'] = { nom = 'cebuano' }
 l['ceg'] = { nom = 'chamacoco' }
-l['cel'] = { nom = 'langues celtiques', tri = 'celtiques langues', groupe = true }
+l['cel'] = { nom = 'langues celtiques', tri = 'celtiques langues', isGroup = true }
 l['celtique asturien'] = { nom = 'celtique asturien' }
 l['cet'] = { nom = 'jalaa' }
 l['cfa'] = { nom = 'dijim-bwilim' }
@@ -1066,7 +1066,7 @@ l['cho'] = { nom = 'choctaw' }
 l['chp'] = { nom = 'chipewyan' }
 l['chq'] = { nom = 'chinantèque de Quiotepec', tri = 'chinantèque Quiotepec' }
 l['chr'] = { nom = 'cherokee', wiktionnaire = true }
-l['chs'] = { nom = 'langues chumash', tri = 'chumash langues', groupe = true }
+l['chs'] = { nom = 'langues chumash', tri = 'chumash langues', isGroup = true }
 l['cht'] = { nom = 'cholón' }
 l['chw'] = { nom = 'echuwabo' }
 l['chy'] = { nom = 'cheyenne' }
@@ -1112,7 +1112,7 @@ l['cls'] = { nom = 'sanskrit classique' }
 l['clu'] = { nom = 'caluyanun' }
 l['clw'] = { nom = 'tchoulyme' }
 l['cly'] = { nom = 'chatino de la Sierra orientale', tri = 'chatino sierra orientale' }
-l['cmc'] = { nom = 'langues chames', tri = 'chames langues', groupe = true }
+l['cmc'] = { nom = 'langues chames', tri = 'chames langues', isGroup = true }
 l['cme'] = { nom = 'cerma' }
 l['cmg'] = { nom = 'mongol classique' }
 l['cmi'] = { nom = 'emberá chamí' }
@@ -1209,7 +1209,7 @@ l['css-rum'] = { nom = 'rumsen' }
 l['cst'] = { nom = 'awaswas' }
 l['cst-cha'] = { nom = 'chalon' }
 l['cst-cho'] = { nom = 'chochenyo' }
-l['csu'] = { nom = 'langues soudaniques centrales', tri = 'soudaniques centrales langues', groupe = true }
+l['csu'] = { nom = 'langues soudaniques centrales', tri = 'soudaniques centrales langues', isGroup = true }
 l['csv'] = { nom = 'sumtu chin' }
 l['csw'] = { nom = 'cri des marais', tri = 'cri marais' }
 l['csz'] = { nom = 'hanis' }
@@ -1240,7 +1240,7 @@ l['cum'] = { nom = 'cumeral' }
 l['cuo'] = { nom = 'cumanagoto' }
 l['cup'] = { nom = 'cupeño' }
 l['cuq'] = { nom = 'cun' }
-l['cus'] = { nom = 'langues couchitiques', tri = 'couchitiques langues', groupe = true }
+l['cus'] = { nom = 'langues couchitiques', tri = 'couchitiques langues', isGroup = true }
 l['cut'] = { nom = 'cuicatèque de Teutila', tri = 'cuicatèque Teutila' }
 l['cuu'] = { nom = 'tay ya' }
 l['cuv'] = { nom = 'cuvok' }
@@ -1280,7 +1280,7 @@ l['das'] = { nom = 'daho-doo' }
 l['dau'] = { nom = 'dadjo du Dar Sila', tri = 'dadjo Dar Sila' }
 l['dav'] = { nom = 'taita' }
 l['daw'] = { nom = 'davawenyo' }
-l['day'] = { nom = 'langues dayakes', tri = 'dayakes langues', groupe = true }
+l['day'] = { nom = 'langues dayakes', tri = 'dayakes langues', isGroup = true }
 l['daz'] = { nom = 'moi-wadea' }
 l['dba'] = { nom = 'bangeri me' }
 l['dbf'] = { nom = 'edopi' }
@@ -1313,7 +1313,7 @@ l['def'] = { nom = 'defzuli' }
 l['deg'] = { nom = 'degema' }
 l['deh'] = { nom = 'dehwari' }
 l['dei'] = { nom = 'demisa' }
-l['del'] = { nom = 'langues delaware', tri = 'delaware langues', groupe = true }
+l['del'] = { nom = 'langues delaware', tri = 'delaware langues', isGroup = true }
 l['dem'] = { nom = 'dem' }
 l['den'] = { nom = 'esclave' }
 l['dep'] = { nom = 'pidgin du Delaware', tri = 'pidgin Delaware' }
@@ -1386,7 +1386,7 @@ l['dmd'] = { nom = 'madhi madhi' }
 l['dme'] = { nom = 'dugwor' }
 l['dmk'] = { nom = 'domaaki' }
 l['dml'] = { nom = 'dameli' }
-l['dmn'] = { nom = 'langues mandées', tri = 'mandées langues', groupe = true }
+l['dmn'] = { nom = 'langues mandées', tri = 'mandées langues', isGroup = true }
 l['dmo'] = { nom = 'kemedzung' }
 l['dmr'] = { nom = 'damar de l’Est', tri = 'damar Est' }
 l['dms'] = { nom = 'dampelas' }
@@ -1423,7 +1423,7 @@ l['dox'] = { nom = 'dobase' }
 l['doy'] = { nom = 'dompo' }
 l['doz'] = { nom = 'dorze' }
 l['dpp'] = { nom = 'papar' }
-l['dra'] = { nom = 'langues dravidiennes', tri = 'dravidiennes langues', groupe = true }
+l['dra'] = { nom = 'langues dravidiennes', tri = 'dravidiennes langues', isGroup = true }
 l['drc'] = { nom = 'minderico' }
 l['drd'] = { nom = 'darmiya' }
 l['dre'] = { nom = 'dolpo' }
@@ -1514,7 +1514,7 @@ l['efi'] = { nom = 'éfik', tri = 'efik' }
 l['ega'] = { nom = 'éga', tri = 'ega' }
 l['egl'] = { nom = 'émilien', wmlien = 'eml' }
 l['ego'] = { nom = 'eggon' }
-l['egx'] = { nom = 'langues égyptiennes', tri = 'égyptiennes langues', groupe = true }
+l['egx'] = { nom = 'langues égyptiennes', tri = 'égyptiennes langues', isGroup = true }
 l['egy'] = { nom = 'égyptien ancien' }
 l['eip'] = { nom = 'eipo' }
 l['eit'] = { nom = 'eitiep' }
@@ -1588,7 +1588,7 @@ l['eso'] = { nom = 'langue des signes estonienne', tri = 'signes estonienne' }
 l['esq'] = { nom = 'esselen' }
 l['ess'] = { nom = 'yupik sibérien central' }
 l['esu'] = { nom = 'yupik central' }
-l['esx'] = { nom = 'langues eskimo-aléoutes', tri = 'eskimo aléoutes langues', groupe = true }
+l['esx'] = { nom = 'langues eskimo-aléoutes', tri = 'eskimo aléoutes langues', isGroup = true }
 l['et'] = { nom = 'estonien', wiktionnaire = true }
 l['etb'] = { nom = 'etebi' }
 l['etc'] = { nom = 'etchemin' }
@@ -1602,7 +1602,7 @@ l['etx'] = { nom = 'eten' }
 l['etz'] = { nom = 'semimi' }
 l['eu'] = { nom = 'basque', wiktionnaire = true }
 l['eudeve'] = { nom = 'eudeve' }
-l['euq'] = { nom = 'langues basques', tri = 'basques langues', groupe = true }
+l['euq'] = { nom = 'langues basques', tri = 'basques langues', isGroup = true }
 l['eur'] = { nom = 'europanto' }
 l['eve'] = { nom = 'évène' }
 l['evn'] = { nom = 'evenki' }
@@ -1641,7 +1641,7 @@ l['fingalien'] = { nom = 'fingalien' }
 l['fip'] = { nom = 'fipa' }
 l['fir'] = { nom = 'firan' }
 l['fit'] = { nom = 'finnois tornédalien' }
-l['fiu'] = { nom = 'langues finno-ougriennes', tri = 'finno ougriennes langues', groupe = true }
+l['fiu'] = { nom = 'langues finno-ougriennes', tri = 'finno ougriennes langues', isGroup = true }
 l['fj'] = { nom = 'fidjien', wiktionnaire = true }
 l['fkk'] = { nom = 'kirya-konzel' }
 l['fkv'] = { nom = 'kvène' }
@@ -1657,7 +1657,7 @@ l['foi'] = { nom = 'foi' }
 l['fon'] = { nom = 'fon' }
 l['for'] = { nom = 'fore' }
 l['fos'] = { nom = 'siraya' }
-l['fox'] = { nom = 'langues formosanes', tri = 'formosanes langues', groupe = true }
+l['fox'] = { nom = 'langues formosanes', tri = 'formosanes langues', isGroup = true }
 l['fpe'] = { nom = 'pichi' }
 l['fqs'] = { nom = 'fas' }
 l['fr'] = { nom = 'français', portail = true, wiktionnaire = true }
@@ -1781,7 +1781,7 @@ l['gelao vert de Liangshui'] = { nom = 'gelao vert de Liangshui', tri = 'gelao v
 l['gelao vert de Qinglong'] = { nom = 'gelao vert de Qinglong', tri = 'gelao vert Qinglong' }
 l['gelao vert de Sanchong'] = { nom = 'gelao vert de Sanchong', tri = 'gelao vert Sanchong' }
 l['gelao vert de Zhenfeng'] = { nom = 'gelao vert de Zhenfeng', tri = 'gelao vert Zhenfeng' }
-l['gem'] = { nom = 'langues germaniques', tri = 'germaniques langues', groupe = true }
+l['gem'] = { nom = 'langues germaniques', tri = 'germaniques langues', isGroup = true }
 l['gépide'] = { nom = 'gépide' }
 l['ges'] = { nom = 'geser-gorom' }
 l['gète'] = { nom = 'gète' }
@@ -1837,15 +1837,15 @@ l['gll'] = { nom = 'garlali' }
 l['glo'] = { nom = 'galambu' }
 l['glu'] = { nom = 'gula (Tchad)', tri = 'gula Tchad' }
 l['glw'] = { nom = 'glavda' }
-l['gme'] = { nom = 'langues germaniques orientales', tri = 'germaniques orientales langues', groupe = true }
+l['gme'] = { nom = 'langues germaniques orientales', tri = 'germaniques orientales langues', isGroup = true }
 l['gmh'] = { nom = 'moyen haut-allemand', tri = 'allemand haut moyen' }
 l['gml'] = { nom = 'moyen bas allemand', tri = 'allemand bas moyen' }
 l['gmm'] = { nom = 'gbaya-mbodomo' }
 l['gmo'] = { nom = 'gamo-gofa-dawro' }
-l['gmq'] = { nom = 'langues germaniques septentrionales', tri = 'germaniques septentrionales langues', groupe = true }
+l['gmq'] = { nom = 'langues germaniques septentrionales', tri = 'germaniques septentrionales langues', isGroup = true }
 l['gmu'] = { nom = 'gumalu' }
 l['gmv'] = { nom = 'gamo' }
-l['gmw'] = { nom = 'langues germaniques occidentales', tri = 'germaniques occidentales langues', groupe = true }
+l['gmw'] = { nom = 'langues germaniques occidentales', tri = 'germaniques occidentales langues', isGroup = true }
 l['gmx'] = { nom = 'magoma' }
 l['gmy'] = { nom = 'mycénien' }
 l['gn'] = { nom = 'guarani', wiktionnaire = true }
@@ -1901,7 +1901,7 @@ l['grg'] = { nom = 'madi' }
 l['grh'] = { nom = 'gbiri-niragu' }
 l['gri'] = { nom = 'ghari' }
 l['griko'] = { nom = 'griko' }
-l['grk'] = { nom = 'langues grecques', tri = 'grecques langues', groupe = true }
+l['grk'] = { nom = 'langues grecques', tri = 'grecques langues', isGroup = true }
 l['gro'] = { nom = 'groma' }
 l['grr'] = { nom = 'taznatit' }
 l['grs'] = { nom = 'gresi' }
@@ -2055,7 +2055,7 @@ l['hmt'] = { nom = 'hamtai' }
 l['hmu'] = { nom = 'hamap' }
 l['hmv'] = { nom = 'hmong dô' }
 l['hmw'] = { nom = 'miao mashan de l’Ouest', tri = 'miao mashan Ouest' }
-l['hmx'] = { nom = 'langues hmong-mien', tri = 'hmong mien langues', groupe = true }
+l['hmx'] = { nom = 'langues hmong-mien', tri = 'hmong mien langues', isGroup = true }
 l['hmy'] = { nom = 'miao du Guiyang du Sud', tri = 'miao Guiyang Sud' }
 l['hna'] = { nom = 'mina' }
 l['hnd'] = { nom = 'hindko du Sud', tri = 'hindko Sud' }
@@ -2076,7 +2076,7 @@ l['hod'] = { nom = 'holma' }
 l['hoe'] = { nom = 'horom' }
 l['hoh'] = { nom = 'hobyot' }
 l['hoi'] = { nom = 'holikachuk' }
-l['hok'] = { nom = 'langues hokanes', tri = 'hokanes langues', groupe = true }
+l['hok'] = { nom = 'langues hokanes', tri = 'hokanes langues', isGroup = true }
 l['hol'] = { nom = 'holu' }
 l['hom'] = { nom = 'homa' }
 l['hoo'] = { nom = 'holoholo' }
@@ -2131,7 +2131,7 @@ l['hvk'] = { nom = 'haveke' }
 l['hvn'] = { nom = 'hawu' }
 l['hwc'] = { nom = 'créole hawaïen' }
 l['hy'] = { nom = 'arménien', wiktionnaire = true }
-l['hyx'] = { nom = 'langues arméniennes', tri = 'arméniennes langues', groupe = true }
+l['hyx'] = { nom = 'langues arméniennes', tri = 'arméniennes langues', isGroup = true }
 l['hz'] = { nom = 'héréro' }
 l['ia'] = { nom = 'interlingua', wiktionnaire = true }
 l['iai'] = { nom = 'iaai' }
@@ -2177,11 +2177,11 @@ l['ihb'] = { nom = 'pidgin iha' }
 l['ihp'] = { nom = 'iha' }
 l['ii'] = { nom = 'yi' }
 l['iii'] = { nom = 'yi nuosu' }
-l['iir'] = { nom = 'langues indo-iraniennes', tri = 'indo iraniennes langues', groupe = true }
+l['iir'] = { nom = 'langues indo-iraniennes', tri = 'indo iraniennes langues', isGroup = true }
 l['ijc'] = { nom = 'izon' }
 l['ije'] = { nom = 'biseni' }
 l['ijn'] = { nom = 'kalabari' }
-l['ijo'] = { nom = 'langues ijos', tri = 'ijos langues', groupe = true }
+l['ijo'] = { nom = 'langues ijos', tri = 'ijos langues', isGroup = true }
 l['ijs'] = { nom = 'ijo du Sud-Est', tri = 'ijo Sud Est' }
 l['ik'] = { nom = 'inupiaq', wiktionnaire = true }
 l['ike'] = { nom = 'inuttitut' }
@@ -2209,9 +2209,9 @@ l['imr'] = { nom = 'imroing' }
 l['ims'] = { nom = 'marse' }
 l['imy'] = { nom = 'milyen' }
 l['inb'] = { nom = 'inga' }
-l['inc'] = { nom = 'langues indo-aryennes', tri = 'indo aryennes langues', groupe = true }
+l['inc'] = { nom = 'langues indo-aryennes', tri = 'indo aryennes langues', isGroup = true }
 l['indanga'] = { nom = 'indanga' }
-l['ine'] = { nom = 'langues indo-européennes', tri = 'indo européennes langues', groupe = true }
+l['ine'] = { nom = 'langues indo-européennes', tri = 'indo européennes langues', isGroup = true }
 l['ing'] = { nom = 'deg hit’an' }
 l['inh'] = { nom = 'ingouche' }
 l['inj'] = { nom = 'inga de la jungle', tri = 'inga jungle' }
@@ -2227,13 +2227,13 @@ l['iow'] = { nom = 'iowa-oto' }
 l['ipi'] = { nom = 'ipili' }
 l['ipo'] = { nom = 'ipiko' }
 l['iqu'] = { nom = 'iquito' }
-l['ira'] = { nom = 'langues iraniennes', tri = 'iraniennes langues', groupe = true }
+l['ira'] = { nom = 'langues iraniennes', tri = 'iraniennes langues', isGroup = true }
 l['ire'] = { nom = 'iresim' }
 l['irh'] = { nom = 'irarutu' }
 l['iri'] = { nom = 'irigwe' }
 l['irk'] = { nom = 'iraqw' }
 l['irn'] = { nom = 'irántxe' }
-l['iro'] = { nom = 'langues iroquoiennes', tri = 'iroquoiennes langues', groupe = true }
+l['iro'] = { nom = 'langues iroquoiennes', tri = 'iroquoiennes langues', isGroup = true }
 l['irr'] = { nom = 'ir' }
 l['iru'] = { nom = 'irula' }
 l['irx'] = { nom = 'kamberau' }
@@ -2255,7 +2255,7 @@ l['isu'] = { nom = 'isu (Menchum)', tri = 'isu Menchum' }
 l['isv'] = { nom = 'interslave' }
 l['it'] = { nom = 'italien', portail = true, wiktionnaire = true }
 l['itb'] = { nom = 'itneg de Binongan', tri = 'itneg Binongan' }
-l['itc'] = { nom = 'langues italiques', tri = 'italiques langues', groupe = true }
+l['itc'] = { nom = 'langues italiques', tri = 'italiques langues', isGroup = true }
 l['ite'] = { nom = 'itenez' }
 l['itl'] = { nom = 'itelmène' }
 l['itm'] = { nom = 'itu mbon uzo' }
@@ -2350,7 +2350,7 @@ l['jor'] = { nom = 'jora' }
 l['jos'] = { nom = 'langue des signes jordanienne', tri = 'signes jordanienne' }
 l['jow'] = { nom = 'jowulu' }
 l['jpr'] = { nom = 'judéo-persan' }
-l['jpx'] = { nom = 'langues japoniques', tri = 'japoniques langues', groupe = true }
+l['jpx'] = { nom = 'langues japoniques', tri = 'japoniques langues', isGroup = true }
 l['jra'] = { nom = 'jaraï' }
 l['jrb'] = { nom = 'judéo-arabe' }
 l['jua'] = { nom = 'júma' }
@@ -2385,7 +2385,7 @@ l['kam'] = { nom = 'kamba' }
 l['kao'] = { nom = 'khassonké' }
 l['kap'] = { nom = 'bezhta' }
 l['kaq'] = { nom = 'capanahua' }
-l['kar'] = { nom = 'langues karènes', tri = 'karènes langues', groupe = true }
+l['kar'] = { nom = 'langues karènes', tri = 'karènes langues', isGroup = true }
 l['kassite'] = { nom = 'kassite' }
 l['kathlamet'] = { nom = 'kathlamet' }
 l['kaw'] = { nom = 'kawi' }
@@ -2430,7 +2430,7 @@ l['kdh'] = { nom = 'tem' }
 l['kdi'] = { nom = 'kumam' }
 l['kdj'] = { nom = 'karimojong' }
 l['kdm'] = { nom = 'kagoma' }
-l['kdo'] = { nom = 'langues kordofaniennes', tri = 'kordofaniennes langues', groupe = true }
+l['kdo'] = { nom = 'langues kordofaniennes', tri = 'kordofaniennes langues', isGroup = true }
 l['kdp'] = { nom = 'kaningdon-nindem' }
 l['kdq'] = { nom = 'koch' }
 l['kdr'] = { nom = 'karaïme' }
@@ -2500,7 +2500,7 @@ l['khe'] = { nom = 'korowai' }
 l['khf'] = { nom = 'khuen' }
 l['khg'] = { nom = 'kham' }
 l['khh'] = { nom = 'keuw' }
-l['khi'] = { nom = 'langues khoïsanes', tri = 'khoisanes langues', groupe = true }
+l['khi'] = { nom = 'langues khoïsanes', tri = 'khoisanes langues', isGroup = true }
 l['khiajari'] = { nom = 'khiajari' }
 l['khj'] = { nom = 'kuturmi' }
 l['kho'] = { nom = 'khotanais' }
@@ -2692,7 +2692,7 @@ l['kri'] = { nom = 'krio' }
 l['krj'] = { nom = 'kinaray-a' }
 l['krk'] = { nom = 'kerek' }
 l['krl'] = { nom = 'carélien' }
-l['kro'] = { nom = 'langues kroues', tri = 'kroues langues', groupe = true }
+l['kro'] = { nom = 'langues kroues', tri = 'kroues langues', isGroup = true }
 l['krp'] = { nom = 'korop' }
 l['krs'] = { nom = 'kresh' }
 l['krt'] = { nom = 'kanuri de Tumari', tri = 'kanuri Tumari' }
@@ -3104,7 +3104,7 @@ l['maj'] = { nom = 'mazatèque de Jalapa de Díaz', tri = 'mazatèque Jalapa de 
 l['mak'] = { nom = 'makassar' }
 l['mam'] = { nom = 'mam' }
 l['man'] = { nom = 'mandingue' }
-l['map'] = { nom = 'langues austronésiennes', tri = 'austronésiennes langues', groupe = true }
+l['map'] = { nom = 'langues austronésiennes', tri = 'austronésiennes langues', isGroup = true }
 l['map-bms'] = { nom = 'banyumasan' }
 l['maq'] = { nom = 'mazatèque de Chiquihuitlán', tri = 'mazatèque Chiquihuitlán' }
 l['mas'] = { nom = 'massaï' }
@@ -3307,7 +3307,7 @@ l['mk'] = { nom = 'macédonien', wiktionnaire = true }
 l['mkc'] = { nom = 'siliput' }
 l['mkf'] = { nom = 'miya' }
 l['mkg'] = { nom = 'mak (Chine)', tri = 'mak Chine' }
-l['mkh'] = { nom = 'langues môn-khmères', tri = 'môn khmères langues', groupe = true }
+l['mkh'] = { nom = 'langues môn-khmères', tri = 'môn khmères langues', isGroup = true }
 l['mkj'] = { nom = 'mokil' }
 l['mkm'] = { nom = 'moklen' }
 l['mkn'] = { nom = 'malais de Kupang', tri = 'malais Kupang' }
@@ -3369,7 +3369,7 @@ l['mni'] = { nom = 'manipourî', wiktionnaire = true }
 l['mnj'] = { nom = 'munji' }
 l['mnk'] = { nom = 'mandinka' }
 l['mnl'] = { nom = 'tiale' }
-l['mno'] = { nom = 'langues manobos', tri = 'manobos langues', groupe = true }
+l['mno'] = { nom = 'langues manobos', tri = 'manobos langues', isGroup = true }
 l['mnp'] = { nom = 'minbei' }
 l['mnr'] = { nom = 'mono (États-Unis d’Amérique)', tri = 'mono États Unis' }
 l['mns'] = { nom = 'mansi' }
@@ -3518,7 +3518,7 @@ l['muh'] = { nom = 'mündü' }
 l['mui'] = { nom = 'musi' }
 l['muj'] = { nom = 'mabire' }
 l['mum'] = { nom = 'maiwala' }
-l['mun'] = { nom = 'langues moundas', tri = 'moundas langues', groupe = true }
+l['mun'] = { nom = 'langues moundas', tri = 'moundas langues', isGroup = true }
 l['mup'] = { nom = 'malvi' }
 l['muq'] = { nom = 'miao du Xiangxi oriental', tri = 'miao Xiangxi oriental' }
 l['mur'] = { nom = 'murle' }
@@ -3579,7 +3579,7 @@ l['myh'] = { nom = 'makah' }
 l['myk'] = { nom = 'mamara' }
 l['myl'] = { nom = 'moma' }
 l['mym'] = { nom = 'me’en' }
-l['myn'] = { nom = 'langues mayas', tri = 'mayas langues', groupe = true }
+l['myn'] = { nom = 'langues mayas', tri = 'mayas langues', isGroup = true }
 l['myp'] = { nom = 'pirahã' }
 l['myq'] = { nom = 'maninka de forêt', tri = 'maninka forêt' }
 l['myr'] = { nom = 'muniche' }
@@ -3614,7 +3614,7 @@ l['nae'] = { nom = 'naka’ela' }
 l['naf'] = { nom = 'nabak' }
 l['nag'] = { nom = 'nagamais' }
 l['nah'] = { nom = 'nahuatl', wiktionnaire = true }
-l['nai'] = { nom = 'langues nord-amérindiennes', tri = 'nord amérindiennes langues', groupe = true }
+l['nai'] = { nom = 'langues nord-amérindiennes', tri = 'nord amérindiennes langues', isGroup = true }
 l['nak'] = { nom = 'nakanai' }
 l['nal'] = { nom = 'nalik' }
 l['nam'] = { nom = 'ngan’gityemerri' }
@@ -3714,7 +3714,7 @@ l['ngb'] = { nom = 'ngbandi du Nord', tri = 'ngbandi Nord' }
 l['ngc'] = { nom = 'ngombe (République démocratique du Congo)', tri = 'ngombe Congo démocratique' }
 l['ngd'] = { nom = 'ngando (République centrafricaine)', tri = 'ngando Centrafrique' }
 l['nge'] = { nom = 'mankon' }
-l['ngf'] = { nom = 'langues trans-néo-guinéennes', tri = 'guinéennes trans néo langues', groupe = true }
+l['ngf'] = { nom = 'langues trans-néo-guinéennes', tri = 'guinéennes trans néo langues', isGroup = true }
 l['ngg'] = { nom = 'ngbaka manza' }
 l['ngh'] = { nom = 'nǀu', tri = 'nu' }
 l['ngi'] = { nom = 'ngizim' }
@@ -3752,7 +3752,7 @@ l['nhy'] = { nom = 'nahuatl de l’Oaxaca du Nord', tri = 'nahuatl Oaxaca nord' 
 l['nhz'] = { nom = 'nahuatl de Santa María la Alta', tri = 'nahuatl Santa María la Alta' }
 l['nia'] = { nom = 'nias', wiktionnaire = true }
 l['nib'] = { nom = 'nakame' }
-l['nic'] = { nom = 'langues nigéro-kordofaniennes', tri = 'nigéro kordofaniennes langues', groupe = true }
+l['nic'] = { nom = 'langues nigéro-kordofaniennes', tri = 'nigéro kordofaniennes langues', isGroup = true }
 l['nid'] = { nom = 'ngandi' }
 l['nie'] = { nom = 'niellim' }
 l['nif'] = { nom = 'nek' }
@@ -3916,7 +3916,7 @@ l['ntu'] = { nom = 'natügu' }
 l['ntw'] = { nom = 'nottoway' }
 l['ntz'] = { nom = 'natanzi' }
 l['nua'] = { nom = 'yuanga-zuanga' }
-l['nub'] = { nom = 'langues nubiennes', tri = 'nubiennes langues', groupe = true }
+l['nub'] = { nom = 'langues nubiennes', tri = 'nubiennes langues', isGroup = true }
 l['nuc'] = { nom = 'nukuini' }
 l['nud'] = { nom = 'ngala' }
 l['nue'] = { nom = 'ngundu' }
@@ -4055,11 +4055,11 @@ l['oml'] = { nom = 'ombo' }
 l['omn'] = { nom = 'minoéen' }
 l['omo'] = { nom = 'utarmbung' }
 l['omp'] = { nom = 'ancien manipouri', tri = 'manipouri ancien' }
-l['omq'] = { nom = 'langues otomangues', tri = 'otomangues langues', groupe = true }
+l['omq'] = { nom = 'langues otomangues', tri = 'otomangues langues', isGroup = true }
 l['omr'] = { nom = 'vieux marathi', tri = 'marathi vieux' }
 l['omt'] = { nom = 'omotik' }
 l['omu'] = { nom = 'omurana' }
-l['omv'] = { nom = 'langues omotiques', tri = 'omotiques langues', groupe = true }
+l['omv'] = { nom = 'langues omotiques', tri = 'omotiques langues', isGroup = true }
 l['omx'] = { nom = 'vieux môn', tri = 'môn vieux' }
 l['omy'] = { nom = 'vieux malais', tri = 'malais vieux' }
 l['ona'] = { nom = 'selknam' }
@@ -4116,7 +4116,7 @@ l['otk'] = { nom = 'vieux turc', tri = 'turc vieux' }
 l['otl'] = { nom = 'otomi de Tilapa', tri = 'otomi Tilapa' }
 l['otm'] = { nom = 'otomi de la Sierra', tri = 'otomi Sierra' }
 l['otn'] = { nom = 'otomi de Tenango', tri = 'otomi Tenango' }
-l['oto'] = { nom = 'langues otomies', tri = 'otomies langues', groupe = true }
+l['oto'] = { nom = 'langues otomies', tri = 'otomies langues', isGroup = true }
 l['otq'] = { nom = 'otomi de Querétaro', tri = 'otomi Querétaro' }
 l['otr'] = { nom = 'otoro' }
 l['ots'] = { nom = 'otomi de l’état de Mexico', tri = 'otomi Mexico état' }
@@ -4137,7 +4137,7 @@ l['oyd'] = { nom = 'oyda' }
 l['oym'] = { nom = 'wayampi' }
 l['ozm'] = { nom = 'koonzime' }
 l['pa'] = { nom = 'pendjabi', wiktionnaire = true }
-l['paa'] = { nom = 'langues papoues', tri = 'papoues langues', groupe = true }
+l['paa'] = { nom = 'langues papoues', tri = 'papoues langues', isGroup = true }
 l['pab'] = { nom = 'parecís' }
 l['pac'] = { nom = 'pacoh' }
 l['pad'] = { nom = 'paumarí' }
@@ -4224,7 +4224,7 @@ l['pgn'] = { nom = 'pélignien' }
 l['pgs'] = { nom = 'pangseng' }
 l['pgu'] = { nom = 'pagu' }
 l['pha'] = { nom = 'baheng' }
-l['phi'] = { nom = 'langues philippines', tri = 'philippines langues', groupe = true }
+l['phi'] = { nom = 'langues philippines', tri = 'philippines langues', isGroup = true }
 l['phk'] = { nom = 'phake' }
 l['phl'] = { nom = 'phalura' }
 l['phn'] = { nom = 'phénicien' }
@@ -4268,7 +4268,7 @@ l['plb'] = { nom = 'polonombauk' }
 l['plc'] = { nom = 'palawano central' }
 l['pld'] = { nom = 'polari' }
 l['ple'] = { nom = 'palu’e' }
-l['plf'] = { nom = 'langues malayo-polynésiennes centrales', tri = 'malayo polynésiennes centrales langues', groupe = true }
+l['plf'] = { nom = 'langues malayo-polynésiennes centrales', tri = 'malayo polynésiennes centrales langues', isGroup = true }
 l['plg'] = { nom = 'pilagá' }
 l['plj'] = { nom = 'polci' }
 l['pll'] = { nom = 'palaung doré' }
@@ -4342,7 +4342,7 @@ l['pov'] = { nom = 'créole de Guinée-Bissau', tri = 'créole Guinée Bissau' }
 l['pow'] = { nom = 'popoloca otlaltepec de San Felipe', tri = 'popoloca otlaltepec San Felipe' }
 l['pox'] = { nom = 'polabe' }
 l['poy'] = { nom = 'pogoro' }
-l['poz'] = { nom = 'langues malayo-polynésiennes', tri = 'malayo polynésiennes langues', groupe = true }
+l['poz'] = { nom = 'langues malayo-polynésiennes', tri = 'malayo polynésiennes langues', isGroup = true }
 l['ppa'] = { nom = 'pao' }
 l['ppe'] = { nom = 'papi' }
 l['ppi'] = { nom = 'paipai' }
@@ -4355,10 +4355,10 @@ l['ppp'] = { nom = 'pelende' }
 l['ppt'] = { nom = 'pare' }
 l['ppu'] = { nom = 'papora' }
 l['pqa'] = { nom = 'pa’a' }
-l['pqe'] = { nom = 'langues malayo-polynésiennes orientales', tri = 'malayo polynésiennes orientales langues', groupe = true }
+l['pqe'] = { nom = 'langues malayo-polynésiennes orientales', tri = 'malayo polynésiennes orientales langues', isGroup = true }
 l['pqm'] = { nom = 'malécite-passamaquoddy' }
-l['pqw'] = { nom = 'langues malayo-polynésiennes occidentales', tri = 'malayo polynésiennes occidentales langues', groupe = true }
-l['pra'] = { nom = 'langues prâkrites', tri = 'prâkrites langues', groupe = true }
+l['pqw'] = { nom = 'langues malayo-polynésiennes occidentales', tri = 'malayo polynésiennes occidentales langues', isGroup = true }
+l['pra'] = { nom = 'langues prâkrites', tri = 'prâkrites langues', isGroup = true }
 l['prb'] = { nom = 'lua’' }
 l['prc'] = { nom = 'parachi' }
 l['prd'] = { nom = 'persan dari' }
@@ -4460,7 +4460,7 @@ l['qvw'] = { nom = 'quechua de Huaylla Wanca', tri = 'quechua Huaylla Wanca' }
 l['qvy'] = { nom = 'queyu' }
 l['qwa'] = { nom = 'quechua de Corongo Ancash', tri = 'quechua Corongo Ancash' }
 l['qwc'] = { nom = 'quechua classique' }
-l['qwe'] = { nom = 'langues quechuas', tri = 'quechuas langues', groupe = true }
+l['qwe'] = { nom = 'langues quechuas', tri = 'quechuas langues', isGroup = true }
 l['qwm'] = { nom = 'couman' }
 l['qwt'] = { nom = 'kwalhioqua-tlatskanai' }
 l['qxh'] = { nom = 'quechua de Panao Huánuco', tri = 'quechua Panao Huánuco' }
@@ -4553,7 +4553,7 @@ l['rnp'] = { nom = 'rongpo' }
 l['rnr'] = { nom = 'nari nari' }
 l['rnw'] = { nom = 'rungwa' }
 l['ro'] = { nom = 'roumain', wiktionnaire = true }
-l['roa'] = { nom = 'langues romanes', tri = 'romanes langues', groupe = true }
+l['roa'] = { nom = 'langues romanes', tri = 'romanes langues', isGroup = true }
 l['roa-leo'] = { nom = 'léonais' }
 l['roa-opt'] = { nom = 'galaïco-portugais', tri = 'galaïco portugais' }
 l['roa-tara'] = { nom = 'tarentin' }
@@ -4614,10 +4614,10 @@ l['sae'] = { nom = 'sabanê' }
 l['saf'] = { nom = 'safaliba' }
 l['sagz-âbâdi'] = { nom = 'sagz-âbâdi' }
 l['sah'] = { nom = 'iakoute' }
-l['sai'] = { nom = 'langues sud-amérindiennes', tri = 'sud amérindiennes langues', groupe = true }
+l['sai'] = { nom = 'langues sud-amérindiennes', tri = 'sud amérindiennes langues', isGroup = true }
 l['saj'] = { nom = 'sahu' }
 l['sak'] = { nom = 'sake' }
-l['sal'] = { nom = 'langues salish', tri = 'salish langues', groupe = true }
+l['sal'] = { nom = 'langues salish', tri = 'salish langues', isGroup = true }
 l['salentin'] = { nom = 'salentin' }
 l['sam'] = { nom = 'araméen samaritain' }
 l['samnite'] = { nom = 'samnite' }
@@ -4680,7 +4680,7 @@ l['sdn'] = { nom = 'gallurais' }
 l['sdo'] = { nom = 'bukar sadong bidayuh' }
 l['sdp'] = { nom = 'sherdukpen' }
 l['sds'] = { nom = 'sened' }
-l['sdv'] = { nom = 'langues soudaniques orientales', tri = 'soudaniques orientales langues', groupe = true }
+l['sdv'] = { nom = 'langues soudaniques orientales', tri = 'soudaniques orientales langues', isGroup = true }
 l['sdz'] = { nom = 'sallands' }
 l['se'] = { nom = 'same du Nord', tri = 'same Nord' }
 l['sea'] = { nom = 'semai' }
@@ -4693,7 +4693,7 @@ l['seh'] = { nom = 'cisena' }
 l['sei'] = { nom = 'seri' }
 l['sek'] = { nom = 'sekani' }
 l['sel'] = { nom = 'selkoupe' }
-l['sem'] = { nom = 'langues sémitiques', tri = 'sémitiques langues', groupe = true }
+l['sem'] = { nom = 'langues sémitiques', tri = 'sémitiques langues', isGroup = true }
 l['sen'] = { nom = 'nanerge' }
 l['seo'] = { nom = 'suarmin' }
 l['sep'] = { nom = 'sucite' }
@@ -4719,7 +4719,7 @@ l['sge'] = { nom = 'punan kelai' }
 l['sgh'] = { nom = 'shughni' }
 l['sgi'] = { nom = 'suga' }
 l['sgk'] = { nom = 'sangkong' }
-l['sgn'] = { nom = 'langues des signes', tri = 'signes langues', groupe = true }
+l['sgn'] = { nom = 'langues des signes', tri = 'signes langues', isGroup = true }
 l['sgp'] = { nom = 'singpho' }
 l['sys'] = { nom = 'sinyar' }
 l['sgr'] = { nom = 'sangesari' }
@@ -4763,12 +4763,12 @@ l['sij'] = { nom = 'numbami' }
 l['sik'] = { nom = 'sikiana' }
 l['sil'] = { nom = 'sisaala des Tumulung', tri = 'sisaala tumulung' }
 l['sim'] = { nom = 'mende (Papouasie-Nouvelle-Guinée)', tri = 'mende Papouasie' }
-l['sio'] = { nom = 'langues siouanes', tri = 'siouanes langues', groupe = true }
+l['sio'] = { nom = 'langues siouanes', tri = 'siouanes langues', isGroup = true }
 l['sip'] = { nom = 'sikkimais' }
 l['siq'] = { nom = 'sonia' }
 l['sir'] = { nom = 'siri' }
 l['sis'] = { nom = 'siuslaw' }
-l['sit'] = { nom = 'langues sino-tibétaines', tri = 'sino tibétaines langues', groupe = true }
+l['sit'] = { nom = 'langues sino-tibétaines', tri = 'sino tibétaines langues', isGroup = true }
 l['situ'] = { nom = 'situ' }
 l['siu'] = { nom = 'sinagen' }
 l['siw'] = { nom = 'siwai' }
@@ -4805,7 +4805,7 @@ l['skv'] = { nom = 'skou' }
 l['skx'] = { nom = 'seko padang' }
 l['sky'] = { nom = 'sikaiana' }
 l['sl'] = { nom = 'slovène', wiktionnaire = true }
-l['sla'] = { nom = 'langues slaves', tri = 'slaves langues', groupe = true }
+l['sla'] = { nom = 'langues slaves', tri = 'slaves langues', isGroup = true }
 l['slc'] = { nom = 'sáliva' }
 l['sld'] = { nom = 'sisaali' }
 l['sle'] = { nom = 'sholega' }
@@ -4827,7 +4827,7 @@ l['sma'] = { nom = 'same du Sud', tri = 'same Sud' }
 l['smb'] = { nom = 'simbari' }
 l['smc'] = { nom = 'som' }
 l['smh'] = { nom = 'samei' }
-l['smi'] = { nom = 'langues sames', tri = 'sames langues', groupe = true }
+l['smi'] = { nom = 'langues sames', tri = 'sames langues', isGroup = true }
 l['smj'] = { nom = 'same de Lule', tri = 'same Lule' }
 l['smk'] = { nom = 'bolinao' }
 l['smn'] = { nom = 'same d’Inari', tri = 'same Inari' }
@@ -4871,7 +4871,7 @@ l['sol'] = { nom = 'solos' }
 l['solon'] = { nom = 'solon' }
 l['solrésol'] = { nom = 'solrésol' }
 l['soltèque'] = { nom = 'soltèque' }
-l['son'] = { nom = 'langues songhaïes', tri = 'songhaïes langues', groupe = true }
+l['son'] = { nom = 'langues songhaïes', tri = 'songhaïes langues', isGroup = true }
 l['sonqor'] = { nom = 'sonqor' }
 l['soo'] = { nom = 'songo' }
 l['sor'] = { nom = 'somrai' }
@@ -4899,7 +4899,7 @@ l['spy'] = { nom = 'sabaot' }
 l['sq'] = { nom = 'albanais', wiktionnaire = true }
 l['sqa'] = { nom = 'shama' }
 l['sqh'] = { nom = 'shau' }
-l['sqj'] = { nom = 'langues albanaises', tri = 'albanaises langues', groupe = true }
+l['sqj'] = { nom = 'langues albanaises', tri = 'albanaises langues', isGroup = true }
 l['sqk'] = { nom = 'langue des signes albanaise', tri = 'signes albanaise' }
 l['sqm'] = { nom = 'suma' }
 l['sqn'] = { nom = 'susquehannock' }
@@ -4929,7 +4929,7 @@ l['sru'] = { nom = 'suruí' }
 l['srw'] = { nom = 'serua' }
 l['sry'] = { nom = 'sera' }
 l['ss'] = { nom = 'swazi', wiktionnaire = true }
-l['ssa'] = { nom = 'langues nilo-sahariennes', tri = 'nilo sahariennes langues', groupe = true }
+l['ssa'] = { nom = 'langues nilo-sahariennes', tri = 'nilo sahariennes langues', isGroup = true }
 l['ssb'] = { nom = 'sama méridional' }
 l['ssc'] = { nom = 'suba-simbiti' }
 l['ssd'] = { nom = 'siroi' }
@@ -5023,7 +5023,7 @@ l['sxu'] = { nom = 'haut-saxon', tri = 'saxon haut' }
 l['sya'] = { nom = 'siang' }
 l['syb'] = { nom = 'subanen central' }
 l['syc'] = { nom = 'syriaque classique' }
-l['syd'] = { nom = 'langues samoyèdes', tri = 'samoyèdes langues', groupe = true }
+l['syd'] = { nom = 'langues samoyèdes', tri = 'samoyèdes langues', isGroup = true }
 l['syi'] = { nom = 'seki' }
 l['syk'] = { nom = 'sukur' }
 l['syl'] = { nom = 'sylheti' }
@@ -5049,7 +5049,7 @@ l['tad'] = { nom = 'tause' }
 l['tae'] = { nom = 'tariana' }
 l['taf'] = { nom = 'tapirapé' }
 l['tag'] = { nom = 'tagoi' }
-l['tai'] = { nom = 'langues taïes', tri = 'taïes langues', groupe = true }
+l['tai'] = { nom = 'langues taïes', tri = 'taïes langues', isGroup = true }
 l['taitnapam'] = { nom = 'taitnapam' }
 l['taïfale'] = { nom = 'taïfale' }
 l['taj'] = { nom = 'tamang oriental' }
@@ -5079,7 +5079,7 @@ l['tbl'] = { nom = 'tboli' }
 l['tbm'] = { nom = 'tagbu' }
 l['tbo'] = { nom = 'tawala' }
 l['tbp'] = { nom = 'taworta' }
-l['tbq'] = { nom = 'langues tibéto-birmanes', tri = 'tibéto birmanes langues', groupe = true }
+l['tbq'] = { nom = 'langues tibéto-birmanes', tri = 'tibéto birmanes langues', isGroup = true }
 l['tbr'] = { nom = 'tumtum' }
 l['tbu'] = { nom = 'tubar' }
 l['tbv'] = { nom = 'tobo' }
@@ -5330,7 +5330,7 @@ l['trg'] = { nom = 'lishán didán' }
 l['trh'] = { nom = 'turaka' }
 l['tri'] = { nom = 'trio' }
 l['trj'] = { nom = 'toram' }
-l['trk'] = { nom = 'langues turques', tri = 'turques langues', groupe = true }
+l['trk'] = { nom = 'langues turques', tri = 'turques langues', isGroup = true }
 l['trl'] = { nom = 'cryptolecte écossais' }
 l['trm'] = { nom = 'tregami' }
 l['trn'] = { nom = 'trinitario' }
@@ -5402,14 +5402,14 @@ l['tul'] = { nom = 'tula' }
 l['tum'] = { nom = 'tumbuka' }
 l['tun'] = { nom = 'tunica' }
 l['tuo'] = { nom = 'tucano' }
-l['tup'] = { nom = 'langues tupies', tri = 'tupies langues', groupe = true }
+l['tup'] = { nom = 'langues tupies', tri = 'tupies langues', isGroup = true }
 l['tuq'] = { nom = 'tedaga' }
 l['tus'] = { nom = 'tuscarora' }
 l['tussentaal'] = { nom = 'tussentaal' }
-l['tut'] = { nom = 'langues altaïques', tri = 'altaïques langues', groupe = true }
+l['tut'] = { nom = 'langues altaïques', tri = 'altaïques langues', isGroup = true }
 l['tuu'] = { nom = 'tututni' }
 l['tuv'] = { nom = 'turkana' }
-l['tuw'] = { nom = 'langues toungouses', tri = 'toungouses langues', groupe = true }
+l['tuw'] = { nom = 'langues toungouses', tri = 'toungouses langues', isGroup = true }
 l['tux'] = { nom = 'tuxinawa' }
 l['tuy'] = { nom = 'tuken' }
 l['tuz'] = { nom = 'tchourama' }
@@ -5532,7 +5532,7 @@ l['urf'] = { nom = 'uradhi' }
 l['urg'] = { nom = 'urigina' }
 l['urh'] = { nom = 'urhobo' }
 l['uri'] = { nom = 'urim' }
-l['urj'] = { nom = 'langues ouraliennes', tri = 'ouraliennes langues', groupe = true }
+l['urj'] = { nom = 'langues ouraliennes', tri = 'ouraliennes langues', isGroup = true }
 l['urk'] = { nom = 'urak lawoi’' }
 l['url'] = { nom = 'urali' }
 l['urn'] = { nom = 'uruangnirin' }
@@ -5648,7 +5648,7 @@ l['wae'] = { nom = 'walser' }
 l['wah'] = { nom = 'watubela' }
 l['wai'] = { nom = 'wares' }
 l['waj'] = { nom = 'waffa' }
-l['wak'] = { nom = 'langues wakashennes', tri = 'wakashennes langues', groupe = true }
+l['wak'] = { nom = 'langues wakashennes', tri = 'wakashennes langues', isGroup = true }
 l['wal'] = { nom = 'wolaytta' }
 l['wam'] = { nom = 'massachusett' }
 l['wan'] = { nom = 'wan' }
@@ -5690,7 +5690,7 @@ l['weg'] = { nom = 'wergaia' }
 l['weh'] = { nom = 'weh' }
 l['wei'] = { nom = 'kiunum' }
 l['wem'] = { nom = 'gbe weme' }
-l['wen'] = { nom = 'langues sorabes', tri = 'sorabes langues', groupe = true }
+l['wen'] = { nom = 'langues sorabes', tri = 'sorabes langues', isGroup = true }
 l['weo'] = { nom = 'wemale' }
 l['wep'] = { nom = 'westphalien' }
 l['wer'] = { nom = 'weri' }
@@ -5859,7 +5859,7 @@ l['xfa'] = { nom = 'falisque' }
 l['xga'] = { nom = 'galate' }
 l['xgf'] = { nom = 'gabrielino-fernandeño' }
 l['xgm'] = { nom = 'dharumbal' }
-l['xgn'] = { nom = 'langues mongoles', tri = 'mongoles langues', groupe = true }
+l['xgn'] = { nom = 'langues mongoles', tri = 'mongoles langues', isGroup = true }
 l['xh'] = { nom = 'xhosa', wiktionnaire = true }
 l['xha'] = { nom = 'harami' }
 l['xhc'] = { nom = 'hunnique' }
@@ -5904,7 +5904,7 @@ l['xmt'] = { nom = 'matbat' }
 l['xmz'] = { nom = 'mori bawah' }
 l['xna'] = { nom = 'ancien arabe du Nord', tri = 'arabe Nord ancien' }
 l['xnb'] = { nom = 'kanakanabu' }
-l['xnd'] = { nom = 'langues na-dénées', tri = 'na dénées langues', groupe = true }
+l['xnd'] = { nom = 'langues na-dénées', tri = 'na dénées langues', isGroup = true }
 l['xng'] = { nom = 'moyen mongol', tri = 'mongol moyen' }
 l['xni'] = { nom = 'ngarigu' }
 l['xno'] = { nom = 'anglo-normand' }
@@ -6112,7 +6112,7 @@ l['yoy'] = { nom = 'yoy' }
 l['yox'] = { nom = 'yoron' }
 l['ypa'] = { nom = 'phala' }
 l['ypg'] = { nom = 'phola' }
-l['ypk'] = { nom = 'langues youpikes', tri = 'youpikes langues', groupe = true }
+l['ypk'] = { nom = 'langues youpikes', tri = 'youpikes langues', isGroup = true }
 l['ypz'] = { nom = 'phuza' }
 l['yrb'] = { nom = 'yareba' }
 l['yre'] = { nom = 'yaouré' }
@@ -6210,7 +6210,7 @@ l['zh'] = { nom = 'chinois', portail = true, wiktionnaire = true }
 l['zhb'] = { nom = 'zhaba' }
 l['zhd'] = { nom = 'dai zhuang' }
 l['zhn'] = { nom = 'nong zhuang' }
-l['zhx'] = { nom = 'langues chinoises', tri = 'chinoises langues', groupe = true }
+l['zhx'] = { nom = 'langues chinoises', tri = 'chinoises langues', isGroup = true }
 l['zia'] = { nom = 'zia' }
 l['zik'] = { nom = 'zimakani' }
 l['zil'] = { nom = 'zialo' }
@@ -6225,9 +6225,9 @@ l['zkt'] = { nom = 'khitan' }
 l['zku'] = { nom = 'kaurna' }
 l['zkv'] = { nom = 'krévinien' }
 l['zkz'] = { nom = 'khazar' }
-l['zle'] = { nom = 'langues slaves orientales', tri = 'slaves orientales langues', groupe = true }
-l['zls'] = { nom = 'langues slaves méridionales', tri = 'slaves méridionales langues', groupe = true }
-l['zlw'] = { nom = 'langues slaves occidentales', tri = 'slaves occidentales langues', groupe = true }
+l['zle'] = { nom = 'langues slaves orientales', tri = 'slaves orientales langues', isGroup = true }
+l['zls'] = { nom = 'langues slaves méridionales', tri = 'slaves méridionales langues', isGroup = true }
+l['zlw'] = { nom = 'langues slaves occidentales', tri = 'slaves occidentales langues', isGroup = true }
 l['zma'] = { nom = 'manda' }
 l['zmb'] = { nom = 'zimba' }
 l['zmc'] = { nom = 'margany' }
@@ -6254,7 +6254,7 @@ l['zmx'] = { nom = 'leke' }
 l['zmy'] = { nom = 'mariyedi' }
 l['zmz'] = { nom = 'mbandja' }
 l['zna'] = { nom = 'zan gula' }
-l['znd'] = { nom = 'langues zandées', tri = 'zandées langues', groupe = true }
+l['znd'] = { nom = 'langues zandées', tri = 'zandées langues', isGroup = true }
 l['zne'] = { nom = 'zandé' }
 l['zng'] = { nom = 'mang' }
 l['znk'] = { nom = 'manangkari' }
