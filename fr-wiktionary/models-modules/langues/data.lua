@@ -2,6471 +2,6471 @@
 local l = {}
 
 -- Langues
-l['a’ou de Bigong'] = { nom = 'a’ou de Bigong', tri = 'aou Bigong' }
-l['a’ou de Hongfeng'] = { nom = 'a’ou de Hongfeng', tri = 'aou Hongfeng' }
-l['aa'] = { nom = 'afar', wiktionnaire = true }
-l['aaa'] = { nom = 'ghotuo' }
-l['aab'] = { nom = 'alumu-tesu' }
-l['aac'] = { nom = 'ari' }
-l['aad'] = { nom = 'amal' }
-l['aae'] = { nom = 'arbërisht' }
-l['aaf'] = { nom = 'aranadan' }
-l['aag'] = { nom = 'ambrak' }
-l['aah'] = { nom = 'abu’' }
-l['aai'] = { nom = 'arifama-miniafia' }
-l['aak'] = { nom = 'ankave' }
-l['aal'] = { nom = 'afade' }
-l['aam'] = { nom = 'aramanik' }
-l['aan'] = { nom = 'anambé' }
-l['aao'] = { nom = 'arabe saharien' }
-l['aap'] = { nom = 'arara' }
-l['aaq'] = { nom = 'abénaquis de l’Est', tri = 'abénaquis Est' }
-l['aas'] = { nom = 'aasá' }
-l['aat'] = { nom = 'albanais arvanite' }
-l['aau'] = { nom = 'abau' }
-l['aav'] = { nom = 'langues austro-asiatiques', tri = 'austro asiatiques langues', isGroup = true }
-l['aaw'] = { nom = 'arawé' }
-l['aax'] = { nom = 'atas de Mandobo', tri = 'atas Mandobo' }
-l['aaz'] = { nom = 'amarasi' }
-l['ab'] = { nom = 'abkhaze', wiktionnaire = true }
-l['aba'] = { nom = 'abé' }
-l['abai sembuak'] = { nom = 'abai sembuak' }
-l['abai tubu'] = { nom = 'abai tubu' }
-l['abb'] = { nom = 'bankon' }
-l['abc'] = { nom = 'ambala' }
-l['abd'] = { nom = 'manide' }
-l['abe'] = { nom = 'abénaquis de l’Ouest', tri = 'abénaquis Ouest' }
-l['abf'] = { nom = 'abaï soungaï' }
-l['abg'] = { nom = 'abaga' }
-l['abh'] = { nom = 'arabe tadjik' }
-l['abi'] = { nom = 'abidji' }
-l['abj'] = { nom = 'aka-bea' }
-l['abl'] = { nom = 'abung' }
-l['abm'] = { nom = 'abanyom' }
-l['abn'] = { nom = 'abua' }
-l['abo'] = { nom = 'abon' }
-l['abp'] = { nom = 'abellen' }
-l['abq'] = { nom = 'abaza' }
-l['abr'] = { nom = 'abron' }
-l['abs'] = { nom = 'malais ambonais' }
-l['abt'] = { nom = 'ambulas' }
-l['abu'] = { nom = 'abouré' }
-l['abv'] = { nom = 'arabe baharna' }
-l['abw'] = { nom = 'pal' }
-l['abx'] = { nom = 'abaknon' }
-l['aby'] = { nom = 'aneme wake' }
-l['abz'] = { nom = 'abui' }
-l['aca'] = { nom = 'achagua' }
-l['acb'] = { nom = 'áncá' }
-l['acd'] = { nom = 'gichode' }
-l['ace'] = { nom = 'achinais' }
-l['acf'] = { nom = 'créole saint-lucien' }
-l['ach'] = { nom = 'acoli' }
-l['aci'] = { nom = 'aka-cari' }
-l['ack'] = { nom = 'aka-kora' }
-l['acl'] = { nom = 'akar-bale' }
-l['acm'] = { nom = 'arabe irakien' }
-l['acn'] = { nom = 'achang' }
-l['acp'] = { nom = 'acipa de l’Est', tri = 'acipa Est' }
-l['acq'] = { nom = 'arabe Ta’izzi-Adeni' }
-l['acr'] = { nom = 'achi' }
-l['acs'] = { nom = 'acroá' }
-l['act'] = { nom = 'achterhooks' }
-l['acu'] = { nom = 'achuar' }
-l['acv'] = { nom = 'achumawi' }
-l['acw'] = { nom = 'arabe hijazi' }
-l['acx'] = { nom = 'arabe omanais' }
-l['acy'] = { nom = 'arabe chypriote' }
-l['acz'] = { nom = 'acheron' }
-l['ada'] = { nom = 'adangmé' }
-l['adb'] = { nom = 'atauran' }
-l['add'] = { nom = 'dzodinka' }
-l['ade'] = { nom = 'adele' }
-l['adf'] = { nom = 'arabe dhofari' }
-l['adg'] = { nom = 'andegerebinha' }
-l['adh'] = { nom = 'adhola' }
-l['adi'] = { nom = 'adi' }
-l['adj'] = { nom = 'adioukrou' }
-l['adl'] = { nom = 'galo' }
-l['adn'] = { nom = 'adang' }
-l['ado'] = { nom = 'abu' }
-l['adp'] = { nom = 'adap' }
-l['adq'] = { nom = 'adangbé' }
-l['adr'] = { nom = 'adonara' }
-l['ads'] = { nom = 'langue des signes adamorobe', tri = 'signes adamorobe' }
-l['adt'] = { nom = 'adnyamathanha' }
-l['adu'] = { nom = 'aduge' }
-l['adw'] = { nom = 'amundava' }
-l['adx'] = { nom = 'amdo' }
-l['ady'] = { nom = 'adyghé' }
-l['adz'] = { nom = 'adzera' }
-l['ae'] = { nom = 'avestique' }
-l['aea'] = { nom = 'areba' }
-l['aeb'] = { nom = 'arabe tunisien' }
-l['aec'] = { nom = 'arabe saïdi' }
-l['aed'] = { nom = 'langue des signes argentine' }
-l['aee'] = { nom = 'pashayi du Nord-Est' }
-l['aek'] = { nom = 'haéké' }
-l['ael'] = { nom = 'ambele' }
-l['aem'] = { nom = 'arem' }
-l['aen'] = { nom = 'langue des signes arménienne' }
-l['aeq'] = { nom = 'aer' }
-l['aer'] = { nom = 'arrernte de l’Est', tri = 'arrernte Est' }
-l['aes'] = { nom = 'alsea' }
-l['aeu'] = { nom = 'akeu' }
-l['aew'] = { nom = 'ambakich' }
-l['aey'] = { nom = 'amélé' }
-l['aez'] = { nom = 'aeka' }
-l['af'] = { nom = 'afrikaans', wiktionnaire = true }
-l['afa'] = { nom = 'langues afro-asiatiques', tri = 'afro asiatiques langues', isGroup = true }
-l['afb'] = { nom = 'arabe du Golfe', tri = 'arabe golfe' }
-l['afd'] = { nom = 'andai' }
-l['afe'] = { nom = 'putukwam' }
-l['afg'] = { nom = 'langue des signes afghane' }
-l['afh'] = { nom = 'afrihili' }
-l['afi'] = { nom = 'akrukay' }
-l['afk'] = { nom = 'nanubae' }
-l['afn'] = { nom = 'défaka' }
-l['afo'] = { nom = 'éloyi', tri = 'eloyi' }
-l['afp'] = { nom = 'tapei' }
-l['afs'] = { nom = 'créole afro-séminole' }
-l['aft'] = { nom = 'afitti' }
-l['afu'] = { nom = 'efutu' }
-l['afz'] = { nom = 'obokuitai' }
-l['aga'] = { nom = 'aguano' }
-l['agb'] = { nom = 'legbo' }
-l['agc'] = { nom = 'agatu' }
-l['agd'] = { nom = 'agarabi' }
-l['age'] = { nom = 'angal' }
-l['agf'] = { nom = 'arguni' }
-l['agg'] = { nom = 'angor' }
-l['agh'] = { nom = 'angba' }
-l['agi'] = { nom = 'agariya' }
-l['agj'] = { nom = 'argobba' }
-l['agk'] = { nom = 'isarog agta' }
-l['agl'] = { nom = 'fembe' }
-l['agm'] = { nom = 'angaataha' }
-l['agn'] = { nom = 'agutaynen' }
-l['ago'] = { nom = 'tainae' }
-l['agq'] = { nom = 'aghem' }
-l['agr'] = { nom = 'aguaruna' }
-l['ags'] = { nom = 'ésimbi', tri = 'esimbi' }
-l['agt'] = { nom = 'agta du Cagayan central', tri = 'agta Cagayan central' }
-l['agta de Dinapigue'] = { nom = 'agta de Dinapigue', tri = 'agta Dinapigue' }
-l['agta de Nagtipunan'] = { nom = 'agta de Nagtipunan', tri = 'agta Nagtipunan' }
-l['agu'] = { nom = 'aguacatèque' }
-l['agv'] = { nom = 'remontado dumagat' }
-l['agw'] = { nom = 'kahua' }
-l['agx'] = { nom = 'aghoul' }
-l['agy'] = { nom = 'alta du Sud', tri = 'alta Sud' }
-l['agz'] = { nom = 'inagta rinconada' }
-l['aha'] = { nom = 'ahanta' }
-l['ahb'] = { nom = 'axamb' }
-l['ahg'] = { nom = 'qimant' }
-l['ahh'] = { nom = 'aghu' }
-l['ahi'] = { nom = 'aïzi de Tiagbamrin', tri = 'aïzi Tiagbamrin' }
-l['ahk'] = { nom = 'akha' }
-l['ahl'] = { nom = 'igo' }
-l['ahm'] = { nom = 'mobu' }
-l['ahn'] = { nom = 'àhàn', tri = 'ahan' }
-l['aho'] = { nom = 'ahom' }
-l['ahp'] = { nom = 'aïzi d’Aproumu', tri = 'aïzi Aproumu' }
-l['ahr'] = { nom = 'ahirani' }
-l['ahs'] = { nom = 'ashe' }
-l['aht'] = { nom = 'ahtna' }
-l['aia'] = { nom = 'arosi' }
-l['aib'] = { nom = 'aïnou (Chine)', tri = 'aïnou Chine' }
-l['aic'] = { nom = 'ainbai' }
-l['aid'] = { nom = 'alngith' }
-l['aie'] = { nom = 'amara' }
-l['aif'] = { nom = 'agi' }
-l['aig'] = { nom = 'créole anglais d’Antigua-et-Barbuda', tri = 'créole Antigua et Barbuda anglais' }
-l['aih'] = { nom = 'ai-cham' }
-l['aii'] = { nom = 'néo-araméen assyrien', tri = 'araméen néo assyrien' }
-l['aij'] = { nom = 'lishanid noshan' }
-l['aik'] = { nom = 'akyé' }
-l['ail'] = { nom = 'aimele' }
-l['aim'] = { nom = 'aimol' }
-l['ain'] = { nom = 'aïnou (Japon)', tri = 'aïnou Japon' }
-l['aio'] = { nom = 'tai aiton' }
-l['aip'] = { nom = 'burumakok' }
-l['aiq'] = { nom = 'aimaq' }
-l['air'] = { nom = 'airoran' }
-l['ais'] = { nom = 'nataoran' }
-l['ait'] = { nom = 'arikém' }
-l['aiw'] = { nom = 'aari' }
-l['aix'] = { nom = 'aighon' }
-l['aiy'] = { nom = 'ali' }
-l['aiz'] = { nom = 'aari-gayil' }
-l['aja'] = { nom = 'aja' }
-l['ajg'] = { nom = 'ajagbe' }
-l['aji'] = { nom = 'ajië' }
-l['ajn'] = { nom = 'andajin' }
-l['ajt'] = { nom = 'judéo-tunisien' }
-l['aju'] = { nom = 'judéo-marocain' }
-l['ajw'] = { nom = 'ajawa' }
-l['ak'] = { nom = 'akan', wiktionnaire = true }
-l['akc'] = { nom = 'mpur' }
-l['ake'] = { nom = 'akawaïo' }
-l['akf'] = { nom = 'akpa' }
-l['aki'] = { nom = 'aiome' }
-l['akj'] = { nom = 'aka-jeru' }
-l['akk'] = { nom = 'akkadien' }
-l['akl'] = { nom = 'aklanon' }
-l['akm'] = { nom = 'aka-bo' }
-l['ako'] = { nom = 'akurio' }
-l['akp'] = { nom = 'siwu' }
-l['akr'] = { nom = 'araki' }
-l['aks'] = { nom = 'akaselem' }
-l['aku'] = { nom = 'akum' }
-l['akv'] = { nom = 'akhvakh' }
-l['akx'] = { nom = 'aka-kede' }
-l['aky'] = { nom = 'aka-kol' }
-l['akz'] = { nom = 'alabama' }
-l['ala'] = { nom = 'alago' }
-l['alc'] = { nom = 'kawésqar' }
-l['alchuka'] = { nom = 'alchuka' }
-l['ald'] = { nom = 'alladian' }
-l['ale'] = { nom = 'aléoute' }
-l['alg'] = { nom = 'langues algonquiennes', tri = 'algonquiennes langues', isGroup = true }
-l['alh'] = { nom = 'alawa' }
-l['ali'] = { nom = 'amaimon' }
-l['alk'] = { nom = 'alak' }
-l['all'] = { nom = 'allar' }
-l['alm'] = { nom = 'amblong' }
-l['aln'] = { nom = 'guègue' }
-l['alo'] = { nom = 'larike-wakasihu' }
-l['alp'] = { nom = 'alune' }
-l['alq'] = { nom = 'algonquin' }
-l['alr'] = { nom = 'alioutor' }
-l['als'] = { nom = 'albanais tosk' }
-l['alt'] = { nom = 'altaï du Sud', tri = 'altaï Sud' }
-l['alu'] = { nom = '’are’are', tri = 'are are' }
-l['alv'] = { nom = 'langues atlantico-congolaises', tri = 'atlantico congolaises langues', isGroup = true }
-l['alx'] = { nom = 'amol' }
-l['aly'] = { nom = 'alyawarr' }
-l['am'] = { nom = 'amharique', wiktionnaire = true }
-l['ama'] = { nom = 'amanayé' }
-l['amb'] = { nom = 'ambo' }
-l['amc'] = { nom = 'amahuaca' }
-l['ame'] = { nom = 'yanesha' }
-l['amf'] = { nom = 'hamar' }
-l['amg'] = { nom = 'amurdak' }
-l['ami'] = { nom = 'amis' }
-l['amj'] = { nom = 'amdang' }
-l['amk'] = { nom = 'ambai' }
-l['aml'] = { nom = 'war-jaintia' }
-l['amm'] = { nom = 'ama (Papouasie-Nouvelle-Guinée)', tri = 'ama Papouasie' }
-l['ammonite'] = { nom = 'ammonite' }
-l['amn'] = { nom = 'amanab' }
-l['amo'] = { nom = 'amo' }
-l['amorrite'] = { nom = 'amorrite' }
-l['amp'] = { nom = 'alamblak' }
-l['amq'] = { nom = 'amahai' }
-l['amr'] = { nom = 'amarakaeri' }
-l['ams'] = { nom = 'amami du Sud', tri = 'amami Sud' }
-l['amt'] = { nom = 'amto' }
-l['amu'] = { nom = 'amuzgo du Guerrero', tri = 'amuzgo Guerrero' }
-l['amw'] = { nom = 'néo-araméen occidental', tri = 'araméen néo occidental' }
-l['amx'] = { nom = 'anmatyerre' }
-l['amy'] = { nom = 'ami' }
-l['an'] = { nom = 'aragonais', wiktionnaire = true }
-l['ana'] = { nom = 'andaquí' }
-l['anauyá'] = { nom = 'anauyá' }
-l['anb'] = { nom = 'andoa' }
-l['anc'] = { nom = 'angas' }
-l['ancien catalan'] = { nom = 'ancien catalan', tri = 'catalan ancien' }
-l['ancien normand'] = { nom = 'ancien normand', tri = 'normand ancien' }
-l['and'] = { nom = 'ansus' }
-l['ane'] = { nom = 'xârâcùù' }
-l['anf'] = { nom = 'animere' }
-l['ang'] = { nom = 'vieil anglais', tri = 'anglais vieil', wiktionnaire = true }
-l['angevin'] = { nom = 'angevin' }
-l['anggreso'] = { nom = 'anggreso' }
-l['anh'] = { nom = 'nend' }
-l['ani'] = { nom = 'andi' }
-l['ank'] = { nom = 'goemai' }
-l['anm'] = { nom = 'anal' }
-l['ann'] = { nom = 'obolo' }
-l['ano'] = { nom = 'andoque' }
-l['anp'] = { nom = 'angika' }
-l['anq'] = { nom = 'jarawa (îles Andaman)', tri = 'jarawa Andaman' }
-l['ans'] = { nom = 'anserma' }
-l['ant'] = { nom = 'antakarinya' }
-l['anu'] = { nom = 'anyua' }
-l['anv'] = { nom = 'denya' }
-l['anw'] = { nom = 'anang' }
-l['any'] = { nom = 'agni' }
-l['aoa'] = { nom = 'angolar' }
-l['aob'] = { nom = 'abom' }
-l['aoc'] = { nom = 'pemon' }
-l['aof'] = { nom = 'bragat' }
-l['aog'] = { nom = 'angoram' }
-l['aoh'] = { nom = 'arma' }
-l['aoi'] = { nom = 'anindilyakwa' }
-l['aoj'] = { nom = 'mufian' }
-l['aom'] = { nom = 'ömie' }
-l['aor'] = { nom = 'aore' }
-l['ao mongsen'] = { nom = 'ao mongsen' }
-l['aos'] = { nom = 'taikat' }
-l['aot'] = { nom = 'a’tong' }
-l['aou'] = { nom = 'a’ou' }
-l['aoz'] = { nom = 'atoni' }
-l['apa'] = { nom = 'langues apaches', tri = 'apaches langues', isGroup = true }
-l['apb'] = { nom = 'sa’a' }
-l['apc'] = { nom = 'arabe levantin' }
-l['apd'] = { nom = 'arabe soudanais' }
-l['ape'] = { nom = 'bukiyip' }
-l['apf'] = { nom = 'agta de Pahanan', tri = 'agta Pahanan' }
-l['aph'] = { nom = 'athpariya' }
-l['api'] = { nom = 'apiaká' }
-l['apj'] = { nom = 'jicarilla' }
-l['apk'] = { nom = 'apache des Plaines', tri = 'apache plaines' }
-l['apl'] = { nom = 'lipan' }
-l['apm'] = { nom = 'chiricahua' }
-l['apn'] = { nom = 'apinajé' }
-l['apo'] = { nom = 'apalik' }
-l['apolista'] = { nom = 'apolista' }
-l['app'] = { nom = 'apma' }
-l['apq'] = { nom = 'pucikwar' }
-l['apr'] = { nom = 'arop-lokep' }
-l['aps'] = { nom = 'arop-sissano' }
-l['apt'] = { nom = 'apatani' }
-l['apu'] = { nom = 'apurinã' }
-l['apw'] = { nom = 'apache de l’Ouest', tri = 'apache Ouest' }
-l['apx'] = { nom = 'aputai' }
-l['apy'] = { nom = 'apalai' }
-l['apz'] = { nom = 'safeyoka' }
-l['aqa'] = { nom = 'langues alacalufanes', tri = 'alacalufanes langues', isGroup = true }
-l['aqc'] = { nom = 'artchi' }
-l['aqd'] = { nom = 'ampari' }
-l['aql'] = { nom = 'langues algiques', tri = 'algiques langues', isGroup = true }
-l['aqn'] = { nom = 'alta du Nord', tri = 'alta Nord' }
-l['aqp'] = { nom = 'atakapa' }
-l['aqt'] = { nom = 'angaité' }
-l['aqz'] = { nom = 'akuntsu' }
-l['ar'] = { nom = 'arabe', portail = true, wiktionnaire = true }
-l['arb'] = { nom = 'arabe standard moderne' }
-l['arc'] = { nom = 'araméen' }
-l['ard'] = { nom = 'arabana' }
-l['are'] = { nom = 'arrernte de l’Ouest', tri = 'arrernte Ouest' }
-l['arh'] = { nom = 'arhuaco' }
-l['ari'] = { nom = 'arikara' }
-l['ark'] = { nom = 'arikapú' }
-l['arl'] = { nom = 'arabela' }
-l['arn'] = { nom = 'mapuche' }
-l['aro'] = { nom = 'araona' }
-l['arp'] = { nom = 'arapaho' }
-l['arq'] = { nom = 'arabe algérien' }
-l['arr'] = { nom = 'karo (Brésil)', tri = 'karo Brésil' }
-l['ars'] = { nom = 'arabe najdi' }
-l['art'] = { nom = 'langues artificielles', tri = 'artificielles langues', isGroup = true }
-l['aru'] = { nom = 'arawá' }
-l['arv'] = { nom = 'arbore' }
-l['arw'] = { nom = 'arawak' }
-l['arx'] = { nom = 'aruá' }
-l['ary'] = { nom = 'arabe marocain' }
-l['arz'] = { nom = 'arabe égyptien' }
-l['as'] = { nom = 'assamais', wiktionnaire = true }
-l['asa'] = { nom = 'asu (Tanzanie)', tri = 'asu Tanzanie' }
-l['asb'] = { nom = 'assiniboine' }
-l['asd'] = { nom = 'asas' }
-l['ase'] = { nom = 'langue des signes américaine', tri = 'signes américaine' }
-l['asf'] = { nom = 'langue des signes australienne', tri = 'signes australienne' }
-l['ash'] = { nom = 'abishira' }
-l['asi'] = { nom = 'buruwai' }
-l['asj'] = { nom = 'nsari' }
-l['ask'] = { nom = 'ashkun' }
-l['asl'] = { nom = 'asilulu' }
-l['asn'] = { nom = 'asuriní de Xingú', tri = 'asuriní Xingú' }
-l['aso'] = { nom = 'dano' }
-l['asp'] = { nom = 'langue des signes algérienne', tri = 'signes algérienne' }
-l['ass'] = { nom = 'ipulo' }
-l['ast'] = { nom = 'asturien', wiktionnaire = true }
-l['asu'] = { nom = 'asuriní du Tocantins', tri = 'asuriní Tocantins' }
-l['asv'] = { nom = 'asoa' }
-l['asx'] = { nom = 'muratayak' }
-l['ata'] = { nom = 'pele-ata' }
-l['atb'] = { nom = 'zaiwa' }
-l['atc'] = { nom = 'atsahuaca' }
-l['atd'] = { nom = 'manobo d’Ata', tri = 'manobo Ata' }
-l['ate'] = { nom = 'atemble' }
-l['ath'] = { nom = 'langues athapascanes', tri = 'athapascanes langues', isGroup = true }
-l['ati'] = { nom = 'attié' }
-l['atj'] = { nom = 'atikamekw' }
-l['atl'] = { nom = 'agta du mont Iraya', tri = 'agta Iraya' }
-l['atm'] = { nom = 'ata' }
-l['ato'] = { nom = 'atong' }
-l['atp'] = { nom = 'atta de Pudtol', tri = 'atta Pudtol' }
-l['atq'] = { nom = 'atohwaim' }
-l['atr'] = { nom = 'waimiri-atroari' }
-l['ats'] = { nom = 'atsina' }
-l['att'] = { nom = 'atta de Pamplona', tri = 'atta Pamplona' }
-l['atu'] = { nom = 'reel' }
-l['atv'] = { nom = 'altaï du Nord', tri = 'altaï Nord' }
-l['atw'] = { nom = 'atsugewi' }
-l['atx'] = { nom = 'arutani' }
-l['aty'] = { nom = 'anejom' }
-l['atz'] = { nom = 'arta' }
-l['aua'] = { nom = 'asumboa' }
-l['auc'] = { nom = 'huaorani' }
-l['aud'] = { nom = 'anuta' }
-l['aue'] = { nom = 'kung-gobabis' }
-l['auf'] = { nom = 'langues arauanes', tri = 'arauanes langues', isGroup = true }
-l['aug'] = { nom = 'agouna' }
-l['auh'] = { nom = 'aushi' }
-l['aui'] = { nom = 'anuki' }
-l['auj'] = { nom = 'awjilah' }
-l['auk'] = { nom = 'heyo' }
-l['aul'] = { nom = 'aulua' }
-l['aum'] = { nom = 'asu (Nigeria)', tri = 'asu Nigeria' }
-l['aun'] = { nom = 'one de Molmo', tri = 'one Molmo' }
-l['aur'] = { nom = 'aruek' }
-l['aus'] = { nom = 'langues australiennes', tri = 'australiennes langues', isGroup = true }
-l['aut'] = { nom = 'austral' }
-l['auu'] = { nom = 'auye' }
-l['auw'] = { nom = 'awyi' }
-l['aux'] = { nom = 'aurá' }
-l['auy'] = { nom = 'auyana' }
-l['av'] = { nom = 'avar', wiktionnaire = true }
-l['avb'] = { nom = 'avau' }
-l['avd'] = { nom = 'alviri-vidari' }
-l['avi'] = { nom = 'avikam' }
-l['avk'] = { nom = 'kotava' }
-l['avl'] = { nom = 'arabe bedawi' }
-l['avn'] = { nom = 'avatime' }
-l['avo'] = { nom = 'agavotaguerra' }
-l['avok'] = { nom = 'avok' }
-l['avs'] = { nom = 'aushiri' }
-l['avt'] = { nom = 'au' }
-l['avu'] = { nom = 'avokaya' }
-l['avv'] = { nom = 'avá-canoeiro' }
-l['awa'] = { nom = 'awadhi' }
-l['awb'] = { nom = 'awa (papou)', tri = 'awa papou' }
-l['awc'] = { nom = 'cicipu' }
-l['awd'] = { nom = 'langues arawakes', tri = 'arawakes langues', isGroup = true }
-l['awe'] = { nom = 'aweti' }
-l['awg'] = { nom = 'anguthimri' }
-l['awh'] = { nom = 'awbono' }
-l['awi'] = { nom = 'aekyom' }
-l['awk'] = { nom = 'awabakal' }
-l['awm'] = { nom = 'arawum' }
-l['awn'] = { nom = 'awngi' }
-l['awo'] = { nom = 'awak' }
-l['awr'] = { nom = 'awera' }
-l['aws'] = { nom = 'aghu du Sud', tri = 'aghu Sud' }
-l['awt'] = { nom = 'araweté' }
-l['awu'] = { nom = 'aghu central' }
-l['awv'] = { nom = 'aghu de Jair', tri = 'aghu Jair' }
-l['aww'] = { nom = 'awun' }
-l['awx'] = { nom = 'awara' }
-l['awy'] = { nom = 'aghu d’Edera', tri = 'aghu Edera' }
-l['axb'] = { nom = 'abipón' }
-l['axe'] = { nom = 'ayerrerenge' }
-l['axg'] = { nom = 'arara de Mato Grosso', tri = 'arara Mato Grosso' }
-l['axx'] = { nom = 'xârâgurè' }
-l['ay'] = { nom = 'aymara', wiktionnaire = true }
-l['aya'] = { nom = 'awar' }
-l['ayd'] = { nom = 'ayabadhu' }
-l['aye'] = { nom = 'ayere' }
-l['ayi'] = { nom = 'leyigha' }
-l['ayl'] = { nom = 'arabe libyen' }
-l['ayn'] = { nom = 'arabe sanaani' }
-l['ayo'] = { nom = 'ayoreo' }
-l['ayu'] = { nom = 'ayu' }
-l['ayz'] = { nom = 'mai brat' }
-l['az'] = { nom = 'azéri', wiktionnaire = true }
-l['aza'] = { nom = 'azha' }
-l['azb'] = { nom = 'azéri du Sud', tri = 'azéri Sud' }
-l['azb-afs'] = { nom = 'afchar' }
-l['azc'] = { nom = 'langues uto-aztèques', tri = 'uto aztèques langues', isGroup = true }
-l['azg'] = { nom = 'amuzgo de San Pedro Amuzgos', tri = 'amuzgo San Pedro Amuzgos' }
-l['azj'] = { nom = 'azéri du Nord', tri = 'azéri Nord' }
-l['azo'] = { nom = 'awing' }
-l['azz'] = { nom = 'nahuatl du haut Puebla', tri = 'nahuatl Puebla haut' }
-l['ba'] = { nom = 'bachkir' }
-l['baa'] = { nom = 'babatana' }
-l['bac'] = { nom = 'baduy' }
-l['bad'] = { nom = 'langues bandas', tri = 'bandas langues', isGroup = true }
-l['bae'] = { nom = 'baré' }
-l['baf'] = { nom = 'nubaca' }
-l['bag'] = { nom = 'tuki' }
-l['bah'] = { nom = 'créole bahamien' }
-l['bai'] = { nom = 'langues bamilékées', tri = 'bamilekees langues', isGroup = true }
-l['baisha'] = { nom = 'baisha' }
-l['bal'] = { nom = 'baloutche' }
-l['bala (Chine)'] = { nom = 'bala (Chine)', tri = 'bala Chine' }
-l['ban'] = { nom = 'balinais' }
-l['bana'] = { nom = 'bana (Chine)', tri = 'bana Chine' }
-l['bangru'] = { nom = 'bangru' }
-l['bao'] = { nom = 'bara' }
-l['baoting'] = { nom = 'baoting' }
-l['bap'] = { nom = 'bantawa' }
-l['bar'] = { nom = 'bavarois' }
-l['barngala'] = { nom = 'barngala' }
-l['barranbinya'] = { nom = 'barranbinya' }
-l['bas'] = { nom = 'bassa (Cameroun)', tri = 'bassa Cameroun' }
-l['basco-algonquin'] = { nom = 'basco-algonquin' }
-l['basco-islandais'] = { nom = 'basco-islandais' }
-l['bat'] = { nom = 'langues baltes', tri = 'baltes langues', isGroup = true }
-l['bav'] = { nom = 'babungo' }
-l['baw'] = { nom = 'bambili-bambui' }
-l['bax'] = { nom = 'bamoun' }
-l['bay'] = { nom = 'batuley' }
-l['bba'] = { nom = 'bariba' }
-l['bbb'] = { nom = 'barai' }
-l['bbc'] = { nom = 'batak toba' }
-l['bbd'] = { nom = 'bau' }
-l['bbf'] = { nom = 'baibai' }
-l['bbh'] = { nom = 'pakan' }
-l['bbi'] = { nom = 'barombi' }
-l['bbj'] = { nom = 'ghomala’' }
-l['bbl'] = { nom = 'bats' }
-l['bbo'] = { nom = 'konabéré' }
-l['bbp'] = { nom = 'banda central de l’Ouest', tri = 'banda central Ouest' }
-l['bbr'] = { nom = 'girawa' }
-l['bbu'] = { nom = 'kulung (Nigeria)', tri = 'kulung Nigeria' }
-l['bbv'] = { nom = 'karnai' }
-l['bbw'] = { nom = 'baba' }
-l['bca'] = { nom = 'bai central' }
-l['bcb'] = { nom = 'baïnouk-samik' }
-l['bcc'] = { nom = 'baloutchi du Sud', tri = 'baloutchi Sud' }
-l['bcd'] = { nom = 'babar du Nord', tri = 'babar Nord' }
-l['bce'] = { nom = 'mengambo' }
-l['bcf'] = { nom = 'bamu' }
-l['bcg'] = { nom = 'baga binari' }
-l['bch'] = { nom = 'bariai' }
-l['bci'] = { nom = 'baoulé' }
-l['bcj'] = { nom = 'bardi' }
-l['bck'] = { nom = 'bunuba' }
-l['bcl'] = { nom = 'bikol central', wiktionnaire = true }
-l['bcm'] = { nom = 'banoni' }
-l['bcn'] = { nom = 'bali' }
-l['bco'] = { nom = 'kaluli' }
-l['bcp'] = { nom = 'bali (République démocratique du Congo)', tri = 'bali Congo démocratique' }
-l['bcq'] = { nom = 'gimira' }
-l['bcr'] = { nom = 'babine-witsuwit’en' }
-l['bcs'] = { nom = 'kohumono' }
-l['bct'] = { nom = 'bendi' }
-l['bcu'] = { nom = 'awad bing' }
-l['bcv'] = { nom = 'shoo-minda-nye' }
-l['bcw'] = { nom = 'bana (Cameroun)', tri = 'bana Cameroun' }
-l['bcy'] = { nom = 'bacama' }
-l['bcz'] = { nom = 'baïnouk-gunyaamolo' }
-l['bda'] = { nom = 'bayot' }
-l['bdb'] = { nom = 'basap' }
-l['bdc'] = { nom = 'emberá-baudó' }
-l['bdd'] = { nom = 'bunama' }
-l['bde'] = { nom = 'bade' }
-l['bdf'] = { nom = 'biage' }
-l['bdg'] = { nom = 'bonggi' }
-l['bdh'] = { nom = 'baka (Soudan du Sud)', tri = 'baka Soudan Sud' }
-l['bdj'] = { nom = 'bai (Soudan du Sud)', tri = 'bai Soudan Sud' }
-l['bdk'] = { nom = 'boudoukh' }
-l['bdl'] = { nom = 'bajau indonésien' }
-l['bdm'] = { nom = 'boudouma' }
-l['bdn'] = { nom = 'baldamu' }
-l['bdo'] = { nom = 'morom' }
-l['bdp'] = { nom = 'bende' }
-l['bdq'] = { nom = 'bahnar' }
-l['bdr'] = { nom = 'bajau de la côte occidentale', tri = 'bajau côte occidentale' }
-l['bds'] = { nom = 'burunge' }
-l['bdt'] = { nom = 'gbaya bokoto' }
-l['bdu'] = { nom = 'oroko' }
-l['bdw'] = { nom = 'baham' }
-l['bdy'] = { nom = 'bandjalang' }
-l['be'] = { nom = 'biélorusse', wiktionnaire = true }
-l['be-tarask'] = { nom = 'biélorusse (tarashkevitsa)' }
-l['bea'] = { nom = 'dunneza' }
-l['bec'] = { nom = 'iceve-maci' }
-l['bed'] = { nom = 'bedoanas' }
-l['bee'] = { nom = 'byangsi' }
-l['bef'] = { nom = 'benabena' }
-l['beg'] = { nom = 'belait' }
-l['beh'] = { nom = 'biali' }
-l['bei'] = { nom = 'bekati’' }
-l['bej'] = { nom = 'bedja' }
-l['bek'] = { nom = 'bebeli' }
-l['bem'] = { nom = 'bemba' }
-l['bengni'] = { nom = 'bengni' }
-l['beo'] = { nom = 'beami' }
-l['bep'] = { nom = 'besoa' }
-l['beq'] = { nom = 'beembe' }
-l['ber'] = { nom = 'langues berbères', tri = 'berberes langues', isGroup = true }
-l['berrichon'] = { nom = 'berrichon' }
-l['bes'] = { nom = 'besme' }
-l['bet'] = { nom = 'bété de Guiberoua', tri = 'bété Guiberoua' }
-l['bété'] = { nom = 'bété (Côte d’Ivoire)', tri = 'bété Côte divoire' }
-l['betoi'] = { nom = 'betoi' }
-l['beu'] = { nom = 'blagar' }
-l['bew'] = { nom = 'betawi' }
-l['bey'] = { nom = 'beli (Papouasie-Nouvelle-Guinée)', tri = 'beli Paouasie' }
-l['bex'] = { nom = 'modo' }
-l['bez'] = { nom = 'bena' }
-l['bfa'] = { nom = 'bari (Soudan du Sud)', tri = 'bari Soudan Sud' }
-l['bfb'] = { nom = 'pauri bareli' }
-l['bfc'] = { nom = 'bai du Nord', tri = 'bai Nord' }
-l['bfd'] = { nom = 'bafut' }
-l['bff'] = { nom = 'bofi' }
-l['bfg'] = { nom = 'busang' }
-l['bfi'] = { nom = 'langue des signes britannique', tri = 'signes britannique' }
-l['bfj'] = { nom = 'bafanji' }
-l['bfm'] = { nom = 'mmem' }
-l['bfn'] = { nom = 'bunaq' }
-l['bfo'] = { nom = 'birifor malba' }
-l['bfq'] = { nom = 'bagada' }
-l['bfr'] = { nom = 'bazigar' }
-l['bfs'] = { nom = 'bai du Sud', tri = 'bai Sud' }
-l['bft'] = { nom = 'balti' }
-l['bfu'] = { nom = 'bunan' }
-l['bfw'] = { nom = 'remo' }
-l['bg'] = { nom = 'bulgare', wiktionnaire = true }
-l['bgb'] = { nom = 'bobongko' }
-l['bgf'] = { nom = 'bangando' }
-l['bgg'] = { nom = 'bugun' }
-l['bgj'] = { nom = 'bangolan' }
-l['bgk'] = { nom = 'khabit' }
-l['bgr'] = { nom = 'bawm' }
-l['bgt'] = { nom = 'bughotu' }
-l['bgu'] = { nom = 'mbongno' }
-l['bgv'] = { nom = 'warkay-bipim' }
-l['bgx'] = { nom = 'gagaouze balkanique' }
-l['bgz'] = { nom = 'banggai' }
-l['bh'] = { nom = 'langues biharies', tri = 'biharies langues', wiktionnaire = true, isGroup = true }
-l['bha'] = { nom = 'bharia' }
-l['bhb'] = { nom = 'bhili' }
-l['bhc'] = { nom = 'biga' }
-l['bhf'] = { nom = 'odiai' }
-l['bhg'] = { nom = 'binandere' }
-l['bhi'] = { nom = 'bhilali' }
-l['bhj'] = { nom = 'bahing' }
-l['bhl'] = { nom = 'bimin' }
-l['bhm'] = { nom = 'bathari' }
-l['bhn'] = { nom = 'néo-araméen de Bohtan', tri = 'araméen néo bohtan' }
-l['bho'] = { nom = 'bhojpouri' }
-l['bhq'] = { nom = 'tukang besi du Sud', tri = 'tukang besi Sud' }
-l['bhs'] = { nom = 'buwal' }
-l['bhv'] = { nom = 'bahau' }
-l['bhw'] = { nom = 'biak' }
-l['bhy'] = { nom = 'bhele' }
-l['bhz'] = { nom = 'bada (Indonésie)', tri = 'bada Indonésie' }
-l['bi'] = { nom = 'bichlamar', wiktionnaire = true }
-l['bia'] = { nom = 'badimaya' }
-l['bib'] = { nom = 'bissa' }
-l['bic'] = { nom = 'bikaru' }
-l['bid'] = { nom = 'bidiyo' }
-l['bie'] = { nom = 'bepour' }
-l['bif'] = { nom = 'biafada' }
-l['big'] = { nom = 'biangai' }
-l['bij'] = { nom = 'vaghat-ya-bijim-legeri' }
-l['bik'] = { nom = 'bikol' }
-l['bil'] = { nom = 'bile' }
-l['bim'] = { nom = 'bimoba' }
-l['bin'] = { nom = 'édo', tri = 'edo' }
-l['bio'] = { nom = 'nai' }
-l['bip'] = { nom = 'bila' }
-l['bir'] = { nom = 'bisorio' }
-l['bisaya de Limbang'] = { nom = 'bisaya de Limbang', tri = 'bisaya Limbang' }
-l['biv'] = { nom = 'birifor du Sud', tri = 'birifor Sud' }
-l['biz'] = { nom = 'baloi' }
-l['bja'] = { nom = 'ebudza' }
-l['bjb'] = { nom = 'banggarla' }
-l['bjc'] = { nom = 'bariji' }
-l['bje'] = { nom = 'biao-jiao mien' }
-l['bjg'] = { nom = 'bijogo' }
-l['bjh'] = { nom = 'bahinemo' }
-l['bji'] = { nom = 'burji' }
-l['bjj'] = { nom = 'kanauji' }
-l['bjm'] = { nom = 'bajelani' }
-l['bjn'] = { nom = 'banjar', wiktionnaire = true }
-l['bjp'] = { nom = 'fanamaket' }
-l['bjr'] = { nom = 'binumarien' }
-l['bjt'] = { nom = 'balante-ganja' }
-l['bjv'] = { nom = 'bedjond' }
-l['bjz'] = { nom = 'baruga' }
-l['bka'] = { nom = 'kyak' }
-l['bkc'] = { nom = 'baka (Cameroun-Gabon)', tri = 'baka Cameroun Gabon' }
-l['bkd'] = { nom = 'binukid' }
-l['bkh'] = { nom = 'bakoko' }
-l['bki'] = { nom = 'baki' }
-l['bkj'] = { nom = 'pande' }
-l['bkl'] = { nom = 'berik' }
-l['bkm'] = { nom = 'kom (Cameroun)', tri = 'kom Cameroun' }
-l['bkn'] = { nom = 'beketan' }
-l['bko'] = { nom = 'kwa’' }
-l['bkq'] = { nom = 'bakairí' }
-l['bkr'] = { nom = 'bakumpai' }
-l['bks'] = { nom = 'sorsoganon du Nord', tri = 'sorsoganon Nord' }
-l['bkt'] = { nom = 'boloki' }
-l['bku'] = { nom = 'bouhid' }
-l['bkx'] = { nom = 'baikeno' }
-l['bky'] = { nom = 'bokyi' }
-l['bkz'] = { nom = 'bungku' }
-l['bla'] = { nom = 'pied-noir' }
-l['blb'] = { nom = 'bilua' }
-l['blc'] = { nom = 'nuxalk' }
-l['bld'] = { nom = 'bolango' }
-l['ble'] = { nom = 'balante-kentohe' }
-l['blf'] = { nom = 'buol' }
-l['bli'] = { nom = 'bolia' }
-l['blj'] = { nom = 'bolongan' }
-l['blk'] = { nom = 'pa’o' }
-l['bll'] = { nom = 'biloxi' }
-l['blm'] = { nom = 'beli (Soudan du Sud)', tri = 'beli Soudan Sud' }
-l['bln'] = { nom = 'bikol du Sud de Catanduanes', tri = 'bikol Catanduanes Sud' }
-l['blo'] = { nom = 'anii' }
-l['blq'] = { nom = 'baluan-pam' }
-l['blr'] = { nom = 'blang' }
-l['bls'] = { nom = 'balaesang' }
-l['blt'] = { nom = 'tai dam' }
-l['blv'] = { nom = 'kibala' }
-l['blw'] = { nom = 'balangao' }
-l['bly'] = { nom = 'notre' }
-l['blz'] = { nom = 'balantak' }
-l['bm'] = { nom = 'bambara', wiktionnaire = true }
-l['bma'] = { nom = 'lame' }
-l['bmc'] = { nom = 'biem' }
-l['bmg'] = { nom = 'bamwe' }
-l['bmh'] = { nom = 'kein' }
-l['bmi'] = { nom = 'bagirmi' }
-l['bmj'] = { nom = 'bote-majhi' }
-l['bmk'] = { nom = 'ghayavi' }
-l['bmn'] = { nom = 'bina (Papouasie-Nouvelle-Guinée)', tri = 'bina Papouasie' }
-l['bmr'] = { nom = 'muinane' }
-l['bmt'] = { nom = 'biao mon' }
-l['bmu'] = { nom = 'burum-mindik' }
-l['bmx'] = { nom = 'baimak' }
-l['bn'] = { nom = 'bengali', wiktionnaire = true }
-l['bnb'] = { nom = 'murut bookan' }
-l['bnc'] = { nom = 'bontok' }
-l['bne'] = { nom = 'bintauna' }
-l['bng'] = { nom = 'benga' }
-l['bni'] = { nom = 'bobangi' }
-l['bnk'] = { nom = 'bierebo' }
-l['bnm'] = { nom = 'batanga' }
-l['bnn'] = { nom = 'bunun' }
-l['bnp'] = { nom = 'bola (Papouasie-Nouvelle-Guinée)', tri = 'bola Papouasie' }
-l['bnq'] = { nom = 'bantik' }
-l['bnr'] = { nom = 'butmas-tur' }
-l['bnt'] = { nom = 'langues bantoues', tri = 'bantoues langues', isGroup = true }
-l['bnv'] = { nom = 'bonerif' }
-l['bny'] = { nom = 'bintulu' }
-l['bnz'] = { nom = 'beezen' }
-l['bo'] = { nom = 'tibétain', wiktionnaire = true }
-l['boa'] = { nom = 'bora' }
-l['bob'] = { nom = 'aweer' }
-l['boe'] = { nom = 'mundabli' }
-l['bof'] = { nom = 'bolon' }
-l['bog'] = { nom = 'langue des signes malienne', tri = 'signes malienne' }
-l['boh'] = { nom = 'boma' }
-l['boi'] = { nom = 'barbareño' }
-l['boj'] = { nom = 'anjam' }
-l['bok'] = { nom = 'bonjo' }
-l['bokar'] = { nom = 'bokar' }
-l['bol'] = { nom = 'bole' }
-l['bolze'] = { nom = 'bolze' }
-l['bom'] = { nom = 'birom' }
-l['bon'] = { nom = 'bine' }
-l['boo'] = { nom = 'bozo de Tiemacèwè', tri = 'bozo Tiemacèwè' }
-l['boq'] = { nom = 'bogaya' }
-l['bor'] = { nom = 'bororo' }
-l['bot'] = { nom = 'bongo' }
-l['botnien'] = { nom = 'botnien' }
-l['bou'] = { nom = 'bondei' }
-l['bouhin'] = { nom = 'bouhin' }
-l['bourbonnais'] = { nom = 'bourbonnais' }
-l['bourguignon'] = { nom = 'bourguignon' }
-l['bov'] = { nom = 'tuwuli' }
-l['bow'] = { nom = 'rema' }
-l['box'] = { nom = 'buamu' }
-l['boy'] = { nom = 'bodo (République centrafricaine)', tri = 'bodo Centrafrique' }
-l['boz'] = { nom = 'bozo-tigemaxoo' }
-l['bpa'] = { nom = 'daakaka' }
-l['bpg'] = { nom = 'bonggo' }
-l['bph'] = { nom = 'botlikh' }
-l['bpi'] = { nom = 'bagupi' }
-l['bpj'] = { nom = 'binji' }
-l['bpm'] = { nom = 'biyom' }
-l['bpn'] = { nom = 'dzao min' }
-l['bpp'] = { nom = 'kaure' }
-l['bpr'] = { nom = 'blaan de Koronadal', tri = 'blaan Koronadal' }
-l['bps'] = { nom = 'blaan de Sarangani', tri = 'blaan Sarangani' }
-l['bpu'] = { nom = 'bongu' }
-l['bpv'] = { nom = 'marind bian' }
-l['bpy'] = { nom = 'manipourî de Bishnupriya', tri = 'manipourî Bishnupriya' }
-l['bqb'] = { nom = 'bagusa' }
-l['bqc'] = { nom = 'boko' }
-l['bqh'] = { nom = 'baima' }
-l['bqi'] = { nom = 'bakhtiari' }
-l['bqj'] = { nom = 'jóola banjal' }
-l['bql'] = { nom = 'bilakura' }
-l['bqo'] = { nom = 'balo' }
-l['bqp'] = { nom = 'busa' }
-l['bqq'] = { nom = 'biritai' }
-l['bqr'] = { nom = 'bulusu' }
-l['br'] = { nom = 'breton', wiktionnaire = true }
-l['bra'] = { nom = 'braj' }
-l['brabançon'] = { nom = 'brabançon' }
-l['brb'] = { nom = 'lave' }
-l['brc'] = { nom = 'créole hollandais de Berbice', tri = 'créole berbice hollandais' }
-l['brd'] = { nom = 'baraadu' }
-l['brg'] = { nom = 'baure' }
-l['brh'] = { nom = 'brahui' }
-l['bri'] = { nom = 'mokpwe' }
-l['brm'] = { nom = 'barambu' }
-l['brn'] = { nom = 'boruca' }
-l['bro'] = { nom = 'brokkat' }
-l['brp'] = { nom = 'barapasi' }
-l['brt'] = { nom = 'bitare' }
-l['bru'] = { nom = 'bru de l’Est', tri = 'bru Est' }
-l['brv'] = { nom = 'bru de l’Ouest', tri = 'bru Ouest' }
-l['brw'] = { nom = 'bellari' }
-l['brx'] = { nom = 'bodo' }
-l['bry'] = { nom = 'burui' }
-l['bs'] = { nom = 'bosniaque', wiktionnaire = true }
-l['bsc'] = { nom = 'bassari' }
-l['bse'] = { nom = 'wushi' }
-l['bsg'] = { nom = 'bashkardi' }
-l['bsh'] = { nom = 'kati' }
-l['bsk'] = { nom = 'bourouchaski' }
-l['bsl'] = { nom = 'basa-gumna' }
-l['bsm'] = { nom = 'busami' }
-l['bsn'] = { nom = 'barasana' }
-l['bsr'] = { nom = 'bassa-kontagora' }
-l['bst'] = { nom = 'basketto' }
-l['bsu'] = { nom = 'bahonsuai' }
-l['bsw'] = { nom = 'baiso' }
-l['bsx'] = { nom = 'yangkam' }
-l['bsy'] = { nom = 'bisaya de Sabah', tri = 'bisaya Sabah' }
-l['bsz'] = { nom = 'souletin' }
-l['bta'] = { nom = 'bata' }
-l['btc'] = { nom = 'bati (Cameroun)', tri = 'bati Cameroun' }
-l['btd'] = { nom = 'dairi' }
-l['btf'] = { nom = 'birguit' }
-l['bth'] = { nom = 'biatah bidayuh' }
-l['btk'] = { nom = 'langues batakes', tri = 'batakes langues', isGroup = true }
-l['btm'] = { nom = 'mandailing', wiktionnaire = true }
-l['btp'] = { nom = 'budibud' }
-l['btr'] = { nom = 'baetora' }
-l['btu'] = { nom = 'batu' }
-l['btw'] = { nom = 'butuanon' }
-l['btx'] = { nom = 'batak karo' }
-l['btz'] = { nom = 'alas-kluet' }
-l['bua'] = { nom = 'bouriate' }
-l['bub'] = { nom = 'bua' }
-l['buc'] = { nom = 'kibushi' }
-l['bud'] = { nom = 'ntcham' }
-l['bue'] = { nom = 'béothuk' }
-l['buf'] = { nom = 'bushoong' }
-l['bug'] = { nom = 'bugis' }
-l['buh'] = { nom = 'younuo' }
-l['bui'] = { nom = 'bongili' }
-l['buk'] = { nom = 'bukawa' }
-l['bularnu'] = { nom = 'bularnu' }
-l['bum'] = { nom = 'boulou' }
-l['bun'] = { nom = 'sherbro' }
-l['buq'] = { nom = 'barem' }
-l['burgonde'] = { nom = 'burgonde' }
-l['bus'] = { nom = 'bokobaru' }
-l['but'] = { nom = 'bungain' }
-l['buu'] = { nom = 'budu' }
-l['buw'] = { nom = 'bubi' }
-l['bux'] = { nom = 'boghom' }
-l['buy'] = { nom = 'bullom so' }
-l['buz'] = { nom = 'bukwen' }
-l['bva'] = { nom = 'baraïn' }
-l['bvb'] = { nom = 'bube' }
-l['bvj'] = { nom = 'ogoi' }
-l['bvk'] = { nom = 'bukat' }
-l['bvo'] = { nom = 'bolgo' }
-l['bvp'] = { nom = 'bumang' }
-l['bvq'] = { nom = 'birri' }
-l['bvt'] = { nom = 'bati (Indonésie)', tri = 'bati Indonésie' }
-l['bvu'] = { nom = 'bukit' }
-l['bvv'] = { nom = 'baniva' }
-l['bvw'] = { nom = 'boga' }
-l['bvx'] = { nom = 'dibole' }
-l['bvy'] = { nom = 'utudnon' }
-l['bvz'] = { nom = 'bauzi' }
-l['bwa'] = { nom = 'bwatoo' }
-l['bwb'] = { nom = 'namosi-naitasiri-serua' }
-l['bwc'] = { nom = 'bwile' }
-l['bwd'] = { nom = 'bwaidoka' }
-l['bwe'] = { nom = 'bwe' }
-l['bwf'] = { nom = 'boselewa' }
-l['bwg'] = { nom = 'barwe' }
-l['bwh'] = { nom = 'bishuo' }
-l['bwi'] = { nom = 'baniwa' }
-l['bwj'] = { nom = 'bwamu laa' }
-l['bwk'] = { nom = 'bauwaki' }
-l['bwl'] = { nom = 'ebwela' }
-l['bwm'] = { nom = 'biwat' }
-l['bwn'] = { nom = 'wunai bunu' }
-l['bwo'] = { nom = 'shinasha' }
-l['bwp'] = { nom = 'bawah de Mandobo', tri = 'bawah Mandobo' }
-l['bwq'] = { nom = 'bobo madaré du Sud', tri = 'bobo madaré Sud' }
-l['bwr'] = { nom = 'babur' }
-l['bws'] = { nom = 'bomboma' }
-l['bwt'] = { nom = 'bafaw-balong' }
-l['bwu'] = { nom = 'buli (Ghana)', tri = 'buli Ghana' }
-l['bww'] = { nom = 'bwa' }
-l['bwx'] = { nom = 'dongnu de Dahua', tri = 'dongnu Dahua' }
-l['bwx-bun'] = { nom = 'bunuo' }
-l['bwx-nao'] = { nom = 'naoklao' }
-l['bwx-num'] = { nom = 'numao' }
-l['bwx-nun'] = { nom = 'nunu de Lingyun', tri = 'nunu Lingyun' }
-l['bwy'] = { nom = 'bwamu cwi' }
-l['bwz'] = { nom = 'bwisi' }
-l['bxb'] = { nom = 'belanda boor' }
-l['bxd'] = { nom = 'bola (Chine)', tri = 'bola Chine' }
-l['bxe'] = { nom = 'ongota' }
-l['bxf'] = { nom = 'bilur' }
-l['bxg'] = { nom = 'bangala' }
-l['bxi'] = { nom = 'pirlatapa' }
-l['bxj'] = { nom = 'bayungu' }
-l['bxk'] = { nom = 'bukusu' }
-l['bxl'] = { nom = 'jalkunan' }
-l['bxn'] = { nom = 'burduna' }
-l['bxq'] = { nom = 'beele' }
-l['bqx'] = { nom = 'bele' }
-l['bxr'] = { nom = 'bouriate de Russie', tri = 'bouriate Russie' }
-l['bxs'] = { nom = 'busam' }
-l['bxu-bar'] = { nom = 'bargu' }
-l['bxw'] = { nom = 'bankagooma' }
-l['byd'] = { nom = 'benyadu’' }
-l['bye'] = { nom = 'pouye' }
-l['byf'] = { nom = 'bété (Nigeria)', tri = 'bété Nigeria' }
-l['byk'] = { nom = 'biao' }
-l['byn'] = { nom = 'bilen' }
-l['byo'] = { nom = 'biyo' }
-l['byq'] = { nom = 'basay' }
-l['byr'] = { nom = 'baruya' }
-l['byt'] = { nom = 'berti' }
-l['byv'] = { nom = 'medumba' }
-l['byz'] = { nom = 'banaro' }
-l['bza'] = { nom = 'bandi' }
-l['bzb'] = { nom = 'andio' }
-l['bzc'] = { nom = 'malgache betsimisaraka du Sud', tri = 'malgache betsimisaraka Sud' }
-l['bzd'] = { nom = 'bribri' }
-l['bze'] = { nom = 'bozo-djenama' }
-l['bzf'] = { nom = 'boikin' }
-l['bzg'] = { nom = 'babuza' }
-l['bzh'] = { nom = 'buang mapos' }
-l['bzi'] = { nom = 'bisu' }
-l['bzj'] = { nom = 'créole bélizien' }
-l['bzk'] = { nom = 'créole anglais nicaraguayen', tri = 'creole nicaraguayen anglais' }
-l['bzl'] = { nom = 'boano (Sulawesi)', tri = 'boano Sulawesi' }
-l['bzn'] = { nom = 'boano (Maluku)', tri = 'boano Maluku' }
-l['bzp'] = { nom = 'kemberano' }
-l['bzq'] = { nom = 'buli (Indonésie)', tri = 'buli Indonésie' }
-l['bzt'] = { nom = 'brithenig' }
-l['bzu'] = { nom = 'burmeso' }
-l['bzv'] = { nom = 'bebe' }
-l['bzw'] = { nom = 'basa' }
-l['bzx'] = { nom = 'bozo-kelengaxo' }
-l['bzz'] = { nom = 'evant' }
-l['ca'] = { nom = 'catalan', portail = true, wiktionnaire = true }
-l['ca-valencia'] = { nom = 'valencien' }
-l['caa'] = { nom = 'ch’orti’' }
-l['cab'] = { nom = 'garifuna' }
-l['cac'] = { nom = 'chuj' }
-l['cad'] = { nom = 'caddo' }
-l['cae'] = { nom = 'léhar' }
-l['caf'] = { nom = 'porteur du Sud', tri = 'porteur Sud' }
-l['cag'] = { nom = 'nivaklé' }
-l['cai'] = { nom = 'langues centre-amérindiennes', tri = 'centre amerindiennes langues', isGroup = true }
-l['caj'] = { nom = 'chané' }
-l['cak'] = { nom = 'cakchiquel' }
-l['cal'] = { nom = 'carolinien' }
-l['calabrais centro-méridional'] = { nom = 'calabrais centro-méridional' }
-l['cam'] = { nom = 'cèmuhî' }
-l['can'] = { nom = 'chambri' }
-l['cao'] = { nom = 'chácobo' }
-l['cap'] = { nom = 'chipaya' }
-l['caq'] = { nom = 'car' }
-l['car'] = { nom = 'kali’na' }
-l['cas'] = { nom = 'tsimané' }
-l['catio ancien'] = { nom = 'catio ancien' }
-l['cau'] = { nom = 'langues caucasiennes', tri = 'caucasiennes langues', isGroup = true }
-l['cav'] = { nom = 'cavineña' }
-l['caw'] = { nom = 'kallawaya' }
-l['cax'] = { nom = 'chiquitano' }
-l['cay'] = { nom = 'cayuga' }
-l['caz'] = { nom = 'canichana' }
-l['cba'] = { nom = 'langues chibchas', tri = 'chibchas langues', isGroup = true }
-l['cbb'] = { nom = 'cabiyarí' }
-l['cbc'] = { nom = 'carapana' }
-l['cbd'] = { nom = 'carijona' }
-l['cbg'] = { nom = 'chimila' }
-l['cbi'] = { nom = 'cayapa' }
-l['cbk'] = { nom = 'chavacano' }
-l['cbk-zam'] = { nom = 'chavacano de Zamboanga', tri = 'chavacano Zamboanga' }
-l['cbn'] = { nom = 'nyahkur' }
-l['cbo'] = { nom = 'izora' }
-l['cbr'] = { nom = 'cashibo' }
-l['cbs'] = { nom = 'cashinahua' }
-l['cbt'] = { nom = 'chayahuita' }
-l['cbu'] = { nom = 'candoshi' }
-l['cbv'] = { nom = 'kakua' }
-l['cca'] = { nom = 'cauca' }
-l['ccc'] = { nom = 'chamicuro' }
-l['ccd'] = { nom = 'cafundó' }
-l['cch'] = { nom = 'atsam' }
-l['ccn'] = { nom = 'langues caucasiennes du Nord', tri = 'caucasiennes Nord langues', isGroup = true }
-l['cco'] = { nom = 'chinantèque de Comaltepec', tri = 'chinantèque Comaltepec' }
-l['ccp'] = { nom = 'changma kodha' }
-l['ccr'] = { nom = 'cacaopera' }
-l['ccs'] = { nom = 'langues caucasiennes du Sud', tri = 'caucasiennes Sud langues', isGroup = true }
-l['cdc'] = { nom = 'langues tchadiques', tri = 'tchadiques langues', isGroup = true }
-l['cdd'] = { nom = 'langues caddoanes', tri = 'caddoanes langues', isGroup = true }
-l['cde'] = { nom = 'chenchu' }
-l['cdf'] = { nom = 'chiru' }
-l['cdh'] = { nom = 'chambeali' }
-l['cdi'] = { nom = 'chodri' }
-l['cdm'] = { nom = 'chepang' }
-l['cdn'] = { nom = 'chaudangsi' }
-l['cdo'] = { nom = 'mindong' }
-l['cdr'] = { nom = 'kamuku' }
-l['cds'] = { nom = 'langue des signes tchadienne', tri = 'signes tchadienne' }
-l['cdy'] = { nom = 'chadong' }
-l['cdz'] = { nom = 'koda' }
-l['ce'] = { nom = 'tchétchène' }
-l['cea'] = { nom = 'chehalis inférieur' }
-l['ceb'] = { nom = 'cebuano' }
-l['ceg'] = { nom = 'chamacoco' }
-l['cel'] = { nom = 'langues celtiques', tri = 'celtiques langues', isGroup = true }
-l['celtique asturien'] = { nom = 'celtique asturien' }
-l['cet'] = { nom = 'jalaa' }
-l['cfa'] = { nom = 'dijim-bwilim' }
-l['cfd'] = { nom = 'cara' }
-l['cfm'] = { nom = 'falam' }
-l['cgc'] = { nom = 'kagayanen' }
-l['cgk'] = { nom = 'chocangacakha' }
-l['cgg'] = { nom = 'kiga' }
-l['ch'] = { nom = 'chamorro', wiktionnaire = true }
-l['chali'] = { nom = 'chali' }
-l['champenois'] = { nom = 'champenois' }
-l['chaná'] = { nom = 'chaná' }
-l['changjiang'] = { nom = 'changjiang' }
-l['charrúa'] = { nom = 'charrúa' }
-l['chatino de Teojomulco'] = { nom = 'chatino de Teojomulco', tri = 'chatino Teojomulco' }
-l['chb'] = { nom = 'muisca' }
-l['chc'] = { nom = 'catawba' }
-l['chd'] = { nom = 'chontal des hautes terres', tri = 'chontal hautes terres' }
-l['chf'] = { nom = 'chontal du Tabasco', tri = 'chontal Tabasco' }
-l['chg'] = { nom = 'tchaghataï' }
-l['chh'] = { nom = 'chinook' }
-l['chirino'] = { nom = 'chirino' }
-l['chj'] = { nom = 'chinantèque d’Ojitlán', tri = 'chinantèque Ojitlán' }
-l['chk'] = { nom = 'chuuk' }
-l['chl'] = { nom = 'cahuilla' }
-l['chm'] = { nom = 'mari' }
-l['chn'] = { nom = 'jargon chinook' }
-l['cho'] = { nom = 'choctaw' }
-l['chp'] = { nom = 'chipewyan' }
-l['chq'] = { nom = 'chinantèque de Quiotepec', tri = 'chinantèque Quiotepec' }
-l['chr'] = { nom = 'cherokee', wiktionnaire = true }
-l['chs'] = { nom = 'langues chumash', tri = 'chumash langues', isGroup = true }
-l['cht'] = { nom = 'cholón' }
-l['chw'] = { nom = 'echuwabo' }
-l['chy'] = { nom = 'cheyenne' }
-l['chz'] = { nom = 'chinantèque d’Ozumacín', tri = 'chinantèque Ozumacín' }
-l['cia'] = { nom = 'cia-cia' }
-l['cic'] = { nom = 'chickasaw' }
-l['cid'] = { nom = 'chimariko' }
-l['cie'] = { nom = 'cineni' }
-l['cilentain méridional'] = { nom = 'cilentain méridional' }
-l['cim'] = { nom = 'cimbre' }
-l['cin'] = { nom = 'cinta-larga' }
-l['cip'] = { nom = 'chiapanèque' }
-l['cir'] = { nom = 'tîrî' }
-l['ciw'] = { nom = 'chippewa' }
-l['ciy'] = { nom = 'chaima' }
-l['cja'] = { nom = 'cham occidental' }
-l['cje'] = { nom = 'chru' }
-l['cjh'] = { nom = 'chehalis supérieur' }
-l['cji'] = { nom = 'chamalal' }
-l['cjm'] = { nom = 'cham oriental' }
-l['cjp'] = { nom = 'cabécar' }
-l['cjs'] = { nom = 'chor' }
-l['cjv'] = { nom = 'chuave' }
-l['cjy'] = { nom = 'jinyu' }
-l['ckb'] = { nom = 'soranî', wiktionnaire = true }
-l['ckl'] = { nom = 'cibak' }
-l['ckn'] = { nom = 'kaang' }
-l['ckq'] = { nom = 'kadjakse' }
-l['cks'] = { nom = 'tayo' }
-l['ckt'] = { nom = 'tchouktche' }
-l['cku'] = { nom = 'koasati' }
-l['ckv'] = { nom = 'kavalan' }
-l['cky'] = { nom = 'cakfem-mushere' }
-l['cla'] = { nom = 'ron' }
-l['clc'] = { nom = 'chilcotin' }
-l['cld'] = { nom = 'néo-araméen chaldéen', tri = 'araméen néo chaldéen' }
-l['cle'] = { nom = 'chinantèque de San Juan Lealao', tri = 'chinantèque San Juan Lealao' }
-l['cli'] = { nom = 'chakali' }
-l['clk'] = { nom = 'idou' }
-l['clm'] = { nom = 'klallam' }
-l['clo'] = { nom = 'chontal des basses terres', tri = 'chontal basses terres' }
-l['cls'] = { nom = 'sanskrit classique' }
-l['clu'] = { nom = 'caluyanun' }
-l['clw'] = { nom = 'tchoulyme' }
-l['cly'] = { nom = 'chatino de la Sierra orientale', tri = 'chatino sierra orientale' }
-l['cmc'] = { nom = 'langues chames', tri = 'chames langues', isGroup = true }
-l['cme'] = { nom = 'cerma' }
-l['cmg'] = { nom = 'mongol classique' }
-l['cmi'] = { nom = 'emberá chamí' }
-l['cmn'] = { nom = 'mandarin', wmlien = 'zh', wiktionnaire = true }
-l['cmr'] = { nom = 'mro' }
-l['cms'] = { nom = 'messapien' }
-l['cmt'] = { nom = 'camtho' }
-l['cnc'] = { nom = 'côông' }
-l['cng'] = { nom = 'qiang du Nord', tri = 'qiang Nord' }
-l['cnh'] = { nom = 'haka chin' }
-l['cni'] = { nom = 'asháninka' }
-l['cnk'] = { nom = 'khumi' }
-l['cnl'] = { nom = 'chinantèque de Lalana', tri = 'chinantèque Lalana' }
-l['cns'] = { nom = 'asmat central' }
-l['cnt'] = { nom = 'chinantèque de Tepetotutla', tri = 'chinantèque Tepetotutla' }
-l['cnx'] = { nom = 'moyen cornique', tri = 'cornique moyen' }
-l['co'] = { nom = 'corse', wiktionnaire = true }
-l['coa'] = { nom = 'malais des îles Cocos', tri = 'malais Cocos îles' }
-l['cob'] = { nom = 'chicomuceltec' }
-l['coc'] = { nom = 'cocopa' }
-l['cod'] = { nom = 'cocama-cocamilla' }
-l['coe'] = { nom = 'koreguaje' }
-l['cof'] = { nom = 'tsafiqui' }
-l['cog'] = { nom = 'chong' }
-l['coj'] = { nom = 'cochimi' }
-l['cok'] = { nom = 'cora de Santa Teresa', tri = 'cora Santa Teresa' }
-l['col'] = { nom = 'salish wenatchi-columbian' }
-l['colac'] = { nom = 'colac' }
-l['com'] = { nom = 'comanche' }
-l['con'] = { nom = 'cofan' }
-l['conv'] = { nom = 'conventions internationales', wmlien = 'wikispecies', tri = '*conventions' }
-l['coo'] = { nom = 'comox' }
-l['cop'] = { nom = 'copte' }
-l['copallén'] = { nom = 'copallén' }
-l['coq'] = { nom = 'coquille' }
-l['cot'] = { nom = 'caquinte' }
-l['cou'] = { nom = 'coniagui' }
-l['cow'] = { nom = 'cowlitz' }
-l['cox'] = { nom = 'nanti' }
-l['coz'] = { nom = 'chocho' }
-l['cpa'] = { nom = 'chinantèque de Palantla', tri = 'chinantèque Palantla' }
-l['cpc'] = { nom = 'ajyíninka apurucayali' }
-l['cpe'] = { nom = 'créoles et pidgins basés sur l’anglais', tri = 'créoles et pidgins anglais' }
-l['cpe-spp'] = { nom = 'pidgin des plantations samoanes', tri = 'pidgin Samoa plantations' }
-l['cpf'] = { nom = 'créoles et pidgins basés sur le français', tri = 'créoles et pidgins français' }
-l['cpg'] = { nom = 'cappadocien' }
-l['cpi'] = { nom = 'anglais pidgin chinois', tri = 'pidgin chinois anglais' }
-l['cpo'] = { nom = 'kpeego' }
-l['cpp'] = { nom = 'créoles et pidgins basés sur le portugais', tri = 'créoles et pidgins portugais' }
-l['cpu'] = { nom = 'ashéninka de Pichis', tri = 'ashéninka Pichis' }
-l['cpx'] = { nom = 'puxian' }
-l['cqd'] = { nom = 'miao chuanqiandian' }
-l['cr'] = { nom = 'cri', wiktionnaire = true }
-l['cra'] = { nom = 'chara' }
-l['crc'] = { nom = 'lonwolwol' }
-l['crd'] = { nom = 'cœur d’alène', tri = 'cœur dalène' }
-l['gcf'] = { nom = 'créole guadeloupéen' }
-l['créole dominiquais'] = { nom = 'créole dominiquais' }
-l['crf'] = { nom = 'caramanta' }
-l['crg'] = { nom = 'métchif' }
-l['crh'] = { nom = 'tatar de Crimée', tri = 'tatar Crimée' }
-l['cri'] = { nom = 'forro' }
-l['crj'] = { nom = 'cri de l’Est, dialecte du Sud', tri = 'cri Est dialecte Sud' }
-l['crk'] = { nom = 'cri des plaines', tri = 'cri plaines' }
-l['crl'] = { nom = 'cri de l’Est, dialecte du Nord', tri = 'cri Est dialecte Nord' }
-l['crm'] = { nom = 'cri de Moose', tri = 'cri Moose' }
-l['crn'] = { nom = 'cora d’El Nayar', tri = 'cora El Nayar' }
-l['cro'] = { nom = 'crow' }
-l['crp'] = { nom = 'créoles et pidgins' }
-l['crq'] = { nom = 'chorote iyo’wujwa' }
-l['crr'] = { nom = 'algonquien de Caroline' }
-l['crs'] = { nom = 'créole seychellois' }
-l['crt'] = { nom = 'chorote iyojwa’ja' }
-l['crv'] = { nom = 'chaura' }
-l['crw'] = { nom = 'chrau' }
-l['crx'] = { nom = 'porteur' }
-l['cry'] = { nom = 'chori' }
-l['crz'] = { nom = 'cruzeño' }
-l['cs'] = { nom = 'tchèque', wiktionnaire = true }
-l['csa'] = { nom = 'chinantèque de Chiltepec', tri = 'chinantèque Chiltepec' }
-l['csb'] = { nom = 'kachoube', wiktionnaire = true }
-l['csc'] = { nom = 'langue des signes catalane', tri = 'signes catalane' }
-l['cse'] = { nom = 'langue des signes tchèque', tri = 'signes tchèque' }
-l['csg'] = { nom = 'langue des signes chilienne', tri = 'signes chilienne' }
-l['csh'] = { nom = 'asho' }
-l['csi'] = { nom = 'miwok de la côte', tri = 'miwok côte' }
-l['csk'] = { nom = 'jola-kasa' }
-l['csm'] = { nom = 'miwok central de la Sierra', tri = 'miwok central Sierra' }
-l['csn'] = { nom = 'langue des signes colombienne', tri = 'signes colombienne' }
-l['cso'] = { nom = 'chinantèque de Sochiapam', tri = 'chinantèque Sochiapam' }
-l['css'] = { nom = 'ohlone du Sud', tri = 'ohlone Sud' }
-l['css-mut'] = { nom = 'mutsun' }
-l['css-rum'] = { nom = 'rumsen' }
-l['cst'] = { nom = 'awaswas' }
-l['cst-cha'] = { nom = 'chalon' }
-l['cst-cho'] = { nom = 'chochenyo' }
-l['csu'] = { nom = 'langues soudaniques centrales', tri = 'soudaniques centrales langues', isGroup = true }
-l['csv'] = { nom = 'sumtu chin' }
-l['csw'] = { nom = 'cri des marais', tri = 'cri marais' }
-l['csz'] = { nom = 'hanis' }
-l['cta'] = { nom = 'chatino de Tataltepec', tri = 'chatino Tataltepec' }
-l['ctc'] = { nom = 'chetco' }
-l['ctd'] = { nom = 'tedim' }
-l['cte'] = { nom = 'chinantèque de Tepinapa', tri = 'chinantèque Tepinapa' }
-l['ctl'] = { nom = 'chinantèque de Tlacoatzintepec', tri = 'chinantèque Tlacoatzintepec' }
-l['ctm'] = { nom = 'chitimacha' }
-l['ctn'] = { nom = 'chintang' }
-l['cto'] = { nom = 'emberá catío' }
-l['ctp'] = { nom = 'chatino de la Sierra occidentale', tri = 'chatino sierra occidentale' }
-l['cts'] = { nom = 'bikol du Nord de Catanduanes', tri = 'bikol Catanduanes Nord' }
-l['ctu'] = { nom = 'chol' }
-l['ctz'] = { nom = 'chatino de Zacatepec', tri = 'chatino Zacatepec' }
-l['cu'] = { nom = 'vieux slave', tri = 'slave vieux' }
-l['cua'] = { nom = 'cua' }
-l['cub'] = { nom = 'cubeo' }
-l['cuc'] = { nom = 'chinantèque d’Usila', tri = 'chinantèque Usila' }
-l['cug'] = { nom = 'cung' }
-l['cuh'] = { nom = 'chuka' }
-l['cui'] = { nom = 'cuiba' }
-l['cuj'] = { nom = 'mashco piro' } -- cujareño
-l['cuk'] = { nom = 'kuna de San Blas', tri = 'kuna San Blas' }
-l['cul'] = { nom = 'culina' }
-l['culle'] = { nom = 'culle' }
-l['cum'] = { nom = 'cumeral' }
-l['cuo'] = { nom = 'cumanagoto' }
-l['cup'] = { nom = 'cupeño' }
-l['cuq'] = { nom = 'cun' }
-l['cus'] = { nom = 'langues couchitiques', tri = 'couchitiques langues', isGroup = true }
-l['cut'] = { nom = 'cuicatèque de Teutila', tri = 'cuicatèque Teutila' }
-l['cuu'] = { nom = 'tay ya' }
-l['cuv'] = { nom = 'cuvok' }
-l['cux'] = { nom = 'cuicatèque de Tepeuxila', tri = 'cuicatèque Tepeuxila' }
-l['cv'] = { nom = 'tchouvache' }
-l['cvg'] = { nom = 'chug' }
-l['cvn'] = { nom = 'chinantèque de Valle Nacional', tri = 'chinantèque Valle Nacional' }
-l['cwa'] = { nom = 'kabwa' }
-l['cwd'] = { nom = 'cri des bois', tri = 'cri bois' }
-l['cwe'] = { nom = 'kwere' }
-l['cwt'] = { nom = 'kwatay' }
-l['cy'] = { nom = 'gallois', wiktionnaire = true }
-l['cya'] = { nom = 'chatino de Nopala', tri = 'chatino Nopala' }
-l['cyb'] = { nom = 'cayubaba' }
-l['czh'] = { nom = 'huizhou' }
-l['czk'] = { nom = 'knaanique' }
-l['czn'] = { nom = 'chatino de Zenzontepec', tri = 'chatino Zenzontepec' }
-l['czo'] = { nom = 'minzhong' }
-l['da'] = { nom = 'danois', wiktionnaire = true }
-l['daa'] = { nom = 'dangaléat' }
-l['dac'] = { nom = 'dambi' }
-l['dad'] = { nom = 'marik' }
-l['dag'] = { nom = 'dagbani' }
-l['dah'] = { nom = 'gwahatike' }
-l['dai'] = { nom = 'day' }
-l['daj'] = { nom = 'dar fur daju' }
-l['dak'] = { nom = 'dakota' }
-l['dal'] = { nom = 'dahalo' }
-l['dalécarlien'] = { nom = 'dalécarlien' }
-l['dam'] = { nom = 'damakawa' }
-l['damu'] = { nom = 'damu' }
-l['dao'] = { nom = 'daai chin' }
-l['daq'] = { nom = 'maria dandami' }
-l['dar'] = { nom = 'dargwa' }
-l['dardanien'] = { nom = 'dardanien' }
-l['das'] = { nom = 'daho-doo' }
-l['dau'] = { nom = 'dadjo du Dar Sila', tri = 'dadjo Dar Sila' }
-l['dav'] = { nom = 'taita' }
-l['daw'] = { nom = 'davawenyo' }
-l['day'] = { nom = 'langues dayakes', tri = 'dayakes langues', isGroup = true }
-l['daz'] = { nom = 'moi-wadea' }
-l['dba'] = { nom = 'bangeri me' }
-l['dbf'] = { nom = 'edopi' }
-l['dbg'] = { nom = 'dogul dom' }
-l['dbj'] = { nom = 'ida’an' }
-l['dbl'] = { nom = 'dyirbal' }
-l['dbm'] = { nom = 'duguri' }
-l['dbn'] = { nom = 'duriankere' }
-l['dbp'] = { nom = 'ɗuwai' }
-l['dbq'] = { nom = 'daba' }
-l['dbt'] = { nom = 'ben tey' }
-l['dbu'] = { nom = 'bondum dom' }
-l['dbw'] = { nom = 'bankan tey' }
-l['dby'] = { nom = 'dibiyaso' }
-l['dcr'] = { nom = 'negerhollands' }
-l['dda'] = { nom = 'dadi dadi' }
-l['ddd'] = { nom = 'dongotono' }
-l['dde'] = { nom = 'doondo' }
-l['ddg'] = { nom = 'fataluku' }
-l['ddi'] = { nom = 'goodenough de l’Ouest', tri = 'goodenough Ouest' }
-l['ddj'] = { nom = 'jaru' }
-l['ddo'] = { nom = 'tsez' }
-l['ddr'] = { nom = 'dhudhuroa' }
-l['ddw'] = { nom = 'dawera-daweloor' }
-l['de'] = { nom = 'allemand', portail = true, wiktionnaire = true }
-l['dec'] = { nom = 'dagik' }
-l['ded'] = { nom = 'dedua' }
-l['dee'] = { nom = 'dewoin' }
-l['def'] = { nom = 'defzuli' }
-l['deg'] = { nom = 'degema' }
-l['deh'] = { nom = 'dehwari' }
-l['dei'] = { nom = 'demisa' }
-l['del'] = { nom = 'langues delaware', tri = 'delaware langues', isGroup = true }
-l['dem'] = { nom = 'dem' }
-l['den'] = { nom = 'esclave' }
-l['dep'] = { nom = 'pidgin du Delaware', tri = 'pidgin Delaware' }
-l['der'] = { nom = 'deuri' }
-l['des'] = { nom = 'desano' }
-l['dev'] = { nom = 'domung' }
-l['dez'] = { nom = 'bondengese' }
-l['dga'] = { nom = 'dagaare du Sud', tri = 'dagaare Sud' }
-l['dgb'] = { nom = 'bunoge' }
-l['dgc'] = { nom = 'agta de Casiguran', tri = 'agta Casiguran' }
-l['dgd'] = { nom = 'dagari dioula' }
-l['dge'] = { nom = 'degenan' }
-l['dgh'] = { nom = 'dghwede' }
-l['dgl'] = { nom = 'dongolawi' }
-l['dgo'] = { nom = 'dogri' }
-l['dgr'] = { nom = 'flanc-de-chien' }
-l['dgz'] = { nom = 'daga' }
-l['dhg'] = { nom = 'dhangu-djangu' }
-l['dhi'] = { nom = 'dhimal' }
-l['dhl'] = { nom = 'dhalandji' }
-l['dhr'] = { nom = 'dhargari' }
-l['dhs'] = { nom = 'dhaiso' }
-l['dhu'] = { nom = 'dhurga' }
-l['dhv'] = { nom = 'drehu' }
-l['dia'] = { nom = 'dia' }
-l['dib'] = { nom = 'dinka du Sud-Central', tri = 'dinka Sud Central' }
-l['dic'] = { nom = 'dida de Lakota', tri = 'dida Lakota' }
-l['did'] = { nom = 'didinga' }
-l['dif'] = { nom = 'dieri' }
-l['dig'] = { nom = 'digo' }
-l['dih'] = { nom = 'kumiai' }
-l['dih-ipai'] = { nom = 'ipai' }
-l['dih-tipai'] = { nom = 'tipai' }
-l['dii'] = { nom = 'dimbong' }
-l['dij'] = { nom = 'dai' }
-l['dik'] = { nom = 'dinka du Sud-Ouest', tri = 'dinka Sud Ouest' }
-l['dil'] = { nom = 'dilling' }
-l['dim'] = { nom = 'dime' }
-l['din'] = { nom = 'dinka' }
-l['dio'] = { nom = 'dibo' }
-l['dip'] = { nom = 'dinka du Nord-Est', tri = 'dinka Nord Est' }
-l['diq'] = { nom = 'dimli (zazaki du Sud)', tri = 'dimli zazaki Sud', wiktionnaire = true }
-l['dir'] = { nom = 'dirim' }
-l['dis'] = { nom = 'dimasa' }
-l['dit'] = { nom = 'dirari' }
-l['diu'] = { nom = 'diriku' }
-l['diw'] = { nom = 'dinka du Nord-Ouest', tri = 'dinka Nord Ouest' }
-l['dix'] = { nom = 'dixon reef' }
-l['diy'] = { nom = 'diuwe' }
-l['diz'] = { nom = 'dzing' }
-l['dja'] = { nom = 'djadjawurrung' }
-l['djb'] = { nom = 'djinba' }
-l['djc'] = { nom = 'dadjo' }
-l['djd'] = { nom = 'djamindjung' }
-l['dje'] = { nom = 'zarma' }
-l['dji'] = { nom = 'djinang' }
-l['djk'] = { nom = 'ndjuka' }
-l['djm'] = { nom = 'jamsay' }
-l['djr'] = { nom = 'djambarrpuyngu' }
-l['dju'] = { nom = 'kapriman' }
-l['dka'] = { nom = 'dakpakha' }
-l['dks'] = { nom = 'dinka du Sud-Est', tri = 'dinka Sud Est' }
-l['dlg'] = { nom = 'dolgane' }
-l['dlk'] = { nom = 'dahalik' }
-l['dlm'] = { nom = 'dalmate' }
-l['dma'] = { nom = 'duma' }
-l['dmb'] = { nom = 'mombo' }
-l['dmc'] = { nom = 'gavak' }
-l['dmd'] = { nom = 'madhi madhi' }
-l['dme'] = { nom = 'dugwor' }
-l['dmk'] = { nom = 'domaaki' }
-l['dml'] = { nom = 'dameli' }
-l['dmn'] = { nom = 'langues mandées', tri = 'mandées langues', isGroup = true }
-l['dmo'] = { nom = 'kemedzung' }
-l['dmr'] = { nom = 'damar de l’Est', tri = 'damar Est' }
-l['dms'] = { nom = 'dampelas' }
-l['dmu'] = { nom = 'tebi' }
-l['dmv'] = { nom = 'dumpas' }
-l['dmy'] = { nom = 'demta' }
-l['dna'] = { nom = 'dani de Upper Grand Valley', tri = 'dani Upper Grand Valley' }
-l['dng'] = { nom = 'doungane' }
-l['dni'] = { nom = 'dani de Lower Grand Valley', tri = 'dani Lower Grand Valley' }
-l['dnj'] = { nom = 'dan' }
-l['dnk'] = { nom = 'dengka' }
-l['dnn'] = { nom = 'dzùùngoo' }
-l['dnr'] = { nom = 'danaru' }
-l['dnt'] = { nom = 'dani de Mid Grand Valley', tri = 'dani Mid Grand Valley' }
-l['dnu'] = { nom = 'danau' }
-l['dnw'] = { nom = 'dani de l’Ouest', tri = 'dani Ouest' }
-l['dny'] = { nom = 'dení' }
-l['doa'] = { nom = 'dom' }
-l['dob'] = { nom = 'dobu' }
-l['doc'] = { nom = 'kam du Nord', tri = 'kam Nord' }
-l['doe'] = { nom = 'doe' }
-l['dog'] = { nom = 'dogon' }
-l['doh'] = { nom = 'dong' }
-l['doi'] = { nom = 'dogri' }
-l['dok'] = { nom = 'dondo' }
-l['don'] = { nom = 'toura (austronésien)', tri = 'toura austronésien' }
-l['dongmeng'] = { nom = 'dongmeng' }
-l['dongnu de Du’an'] = { nom = 'dongnu de Du’an', tri = 'dongnu Duan' }
-l['doo'] = { nom = 'dongo' }
-l['dor'] = { nom = 'dori’o' }
-l['dos'] = { nom = 'dogosé' }
-l['dow'] = { nom = 'dowayo' }
-l['dox'] = { nom = 'dobase' }
-l['doy'] = { nom = 'dompo' }
-l['doz'] = { nom = 'dorze' }
-l['dpp'] = { nom = 'papar' }
-l['dra'] = { nom = 'langues dravidiennes', tri = 'dravidiennes langues', isGroup = true }
-l['drc'] = { nom = 'minderico' }
-l['drd'] = { nom = 'darmiya' }
-l['dre'] = { nom = 'dolpo' }
-l['drg'] = { nom = 'rungus' }
-l['dri'] = { nom = 'c’lela' }
-l['drl'] = { nom = 'darling' }
-l['drn'] = { nom = 'damar de l’Ouest', tri = 'damar Ouest' }
-l['dro'] = { nom = 'melanau daro-matu' }
-l['drq'] = { nom = 'dura' }
-l['drs'] = { nom = 'gedeo' }
-l['drt'] = { nom = 'drents' }
-l['dru'] = { nom = 'rukai' }
-l['dry'] = { nom = 'darai' }
-l['dsb'] = { nom = 'bas-sorabe', tri = 'sorabe bas' }
-l['dse'] = { nom = 'langue des signes néerlandaise', tri = 'signes néerlandaise' }
-l['dsh'] = { nom = 'daasanach' }
-l['dsi'] = { nom = 'disa' }
-l['dsl'] = { nom = 'langue des signes danoise', tri = 'signes danoise' }
-l['dsn'] = { nom = 'dusner' }
-l['dso'] = { nom = 'desiya' }
-l['dsq'] = { nom = 'tadaksahak' }
-l['dta'] = { nom = 'daur' }
-l['dtb'] = { nom = 'kadazan de Labuk-Kinabatangan', tri = 'kadazan Labuk Kinabatangan' }
-l['dtd'] = { nom = 'ditidaht' }
-l['dti'] = { nom = 'ana tinga' }
-l['dtk'] = { nom = 'tene kan' }
-l['dtm'] = { nom = 'tomo kan' }
-l['dtn'] = { nom = 'daatsʼíin' }
-l['dto'] = { nom = 'tommo so' }
-l['dtp'] = { nom = 'dusun central' }
-l['dtr'] = { nom = 'lotud' }
-l['dts'] = { nom = 'dogon toro so' }
-l['dtt'] = { nom = 'toro tegu' }
-l['dtu'] = { nom = 'tebul' }
-l['dty'] = { nom = 'doteli' }
-l['dua'] = { nom = 'douala' }
-l['dub'] = { nom = 'dubli' }
-l['duc'] = { nom = 'duna' }
-l['dud'] = { nom = 'hun-saare' }
-l['due'] = { nom = 'dumaget de l’Umiray', tri = 'dumaget Umiray' }
-l['duf'] = { nom = 'dumbéa' }
-l['dug'] = { nom = 'chiduruma' }
-l['dui'] = { nom = 'dumum' }
-l['duj'] = { nom = 'dhuwal' }
-l['duk'] = { nom = 'uyajitaya' }
-l['dum'] = { nom = 'moyen néerlandais', tri = 'néerlandais moyen' }
-l['dun'] = { nom = 'dusun deyah' }
-l['duo'] = { nom = 'agta de Dupaningan', tri = 'agta Dupaningan' }
-l['duoxu'] = { nom = 'duoxu' }
-l['duq'] = { nom = 'dusun malang' }
-l['dur'] = { nom = 'dii' }
-l['dus'] = { nom = 'dumi' }
-l['dusun du Brunéi'] = { nom = 'dusun du Brunéi', tri = 'dusun Brunéi' }
-l['dusun papar'] = { nom = 'dusun papar' }
-l['duu'] = { nom = 'drung' }
-l['duv'] = { nom = 'duvle' }
-l['duw'] = { nom = 'dusun witu' }
-l['dux'] = { nom = 'duungooma' }
-l['duy'] = { nom = 'agta de Dicamay', tri = 'agta Dicamay' }
-l['dv'] = { nom = 'divehi', wiktionnaire = true }
-l['dva'] = { nom = 'duau' }
-l['dwr'] = { nom = 'dawro' }
-l['dws'] = { nom = 'speedwords de Dutton', tri = 'speedwords Dutton' }
-l['dya'] = { nom = 'dyan' }
-l['dyd'] = { nom = 'dyugun' }
-l['dyi'] = { nom = 'djimini' }
-l['dym'] = { nom = 'yanda dom' }
-l['dyn'] = { nom = 'dyangadi' }
-l['dyo'] = { nom = 'jola-fonyi' }
-l['dyu'] = { nom = 'dioula' }
-l['dyy'] = { nom = 'tjapukai' }
-l['dz'] = { nom = 'dzongkha', wiktionnaire = true }
-l['dza'] = { nom = 'tunzu' }
-l['dze'] = { nom = 'djiwarli' }
-l['dzg'] = { nom = 'dazaga' }
-l['dzl'] = { nom = 'dzalakha' }
-l['ebg'] = { nom = 'ebughu' }
-l['ebk'] = { nom = 'bontok de l’Est', tri = 'bontok Est' }
-l['ebo'] = { nom = 'teke-ebo' }
-l['ebr'] = { nom = 'ébrié' }
-l['ebu'] = { nom = 'kiembu' }
-l['ecr'] = { nom = 'étéocrétois' }
-l['ee'] = { nom = 'éwé' }
-l['eee'] = { nom = 'e' }
-l['efa'] = { nom = 'efai' }
-l['efe'] = { nom = 'efe' }
-l['efi'] = { nom = 'éfik', tri = 'efik' }
-l['ega'] = { nom = 'éga', tri = 'ega' }
-l['egl'] = { nom = 'émilien', wmlien = 'eml' }
-l['ego'] = { nom = 'eggon' }
-l['egx'] = { nom = 'langues égyptiennes', tri = 'égyptiennes langues', isGroup = true }
-l['egy'] = { nom = 'égyptien ancien' }
-l['eip'] = { nom = 'eipo' }
-l['eit'] = { nom = 'eitiep' }
-l['eja'] = { nom = 'ejamat' }
-l['eka'] = { nom = 'ékadjouk' }
-l['eke'] = { nom = 'eket' }
-l['ekg'] = { nom = 'ekari' }
-l['eki'] = { nom = 'eki' }
-l['ekl'] = { nom = 'kol (Bangladesh)', tri = 'kol Bangladesh' }
-l['ekm'] = { nom = 'elip' }
-l['eko'] = { nom = 'ekoti' }
-l['ekp'] = { nom = 'ekpeye' }
-l['ekr'] = { nom = 'yace' }
-l['eky'] = { nom = 'kayah li de l’Est', tri = 'kayah li Est' }
-l['el'] = { nom = 'grec', wiktionnaire = true }
-l['ele'] = { nom = 'elepi' }
-l['eli'] = { nom = 'nding' }
-l['elk'] = { nom = 'elkei' }
-l['elm'] = { nom = 'eleme' }
-l['elo'] = { nom = 'elmolo' }
-l['elu'] = { nom = 'elu' }
-l['elx'] = { nom = 'élamite' }
-l['ema'] = { nom = 'emai-iuleha-ora' }
-l['emb'] = { nom = 'embaloh' }
-l['eme'] = { nom = 'émérillon' }
-l['emg'] = { nom = 'meohang de l’Est', tri = 'meohang Est' }
-l['emi'] = { nom = 'mussau' }
-l['emk'] = { nom = 'maninka oriental' }
-l['eml'] = { nom = 'émilien-romagnol', tri = 'émilien romagnol' }
-l['emo'] = { nom = 'emok' }
-l['emp'] = { nom = 'emberá darién' }
-l['ems'] = { nom = 'alutiiq' }
-l['emu'] = { nom = 'muria de l’Est', tri = 'muria Est' }
-l['emw'] = { nom = 'emplawas' }
-l['emx'] = { nom = 'erromintxela' }
-l['en'] = { nom = 'anglais', portail = true, wiktionnaire = true }
-l['ena'] = { nom = 'apali' }
-l['enb'] = { nom = 'markweta' }
-l['end'] = { nom = 'ende' }
-l['enf'] = { nom = 'énètse des forêts', tri = 'énètse forêts' }
-l['enh'] = { nom = 'énètse de la toundra', tri = 'énètse toundra' }
-l['enl'] = { nom = 'enlhet' }
-l['enm'] = { nom = 'moyen anglais', portail = true, tri = 'anglais moyen' }
-l['enn'] = { nom = 'engenni' }
-l['eno'] = { nom = 'enganno' }
-l['enq'] = { nom = 'enga' }
-l['enr'] = { nom = 'emumu' }
-l['enu'] = { nom = 'enu' }
-l['enw'] = { nom = 'enwan' }
-l['enx'] = { nom = 'enxet' }
-l['eo'] = { nom = 'espéranto', portail = true, wiktionnaire = true }
-l['eot'] = { nom = 'eotilé' }
-l['epi'] = { nom = 'epie' }
-l['èque'] = { nom = 'èque' }
-l['era'] = { nom = 'eravallan' }
-l['erg'] = { nom = 'sie' }
-l['eri'] = { nom = 'ogea' }
-l['erk'] = { nom = 'éfaté du Sud', tri = 'éfaté Sud' }
-l['ero'] = { nom = 'horpa' }
-l['ers'] = { nom = 'ersu' }
-l['ert'] = { nom = 'eritai' }
-l['es'] = { nom = 'espagnol', portail = true, wiktionnaire = true }
-l['ese'] = { nom = 'ese ejja' }
-l['esh'] = { nom = 'eshtehardi' }
-l['esi'] = { nom = 'inupiaq d’Alaska du Nord', tri = 'inupiaq Alaska Nord' }
-l['esk'] = { nom = 'inupiaq d’Alaska du Nord-Ouest', tri = 'inupiaq Alaska Nord Ouest' }
-l['esl'] = { nom = 'langue des signes égyptienne', tri = 'signes égyptienne' }
-l['esm'] = { nom = 'essouma' }
-l['esmeraldeño'] = { nom = 'esmeraldeño' }
-l['eso'] = { nom = 'langue des signes estonienne', tri = 'signes estonienne' }
-l['esq'] = { nom = 'esselen' }
-l['ess'] = { nom = 'yupik sibérien central' }
-l['esu'] = { nom = 'yupik central' }
-l['esx'] = { nom = 'langues eskimo-aléoutes', tri = 'eskimo aléoutes langues', isGroup = true }
-l['et'] = { nom = 'estonien', wiktionnaire = true }
-l['etb'] = { nom = 'etebi' }
-l['etc'] = { nom = 'etchemin' }
-l['etn'] = { nom = 'eton (Vanuatu)', tri = 'eton Vanuatu' }
-l['eto'] = { nom = 'eton (bantou)', tri = 'eton bantou' }
-l['etr'] = { nom = 'edolo' }
-l['ets'] = { nom = 'yekhee' }
-l['ett'] = { nom = 'étrusque' }
-l['etu'] = { nom = 'ejagham' }
-l['etx'] = { nom = 'eten' }
-l['etz'] = { nom = 'semimi' }
-l['eu'] = { nom = 'basque', wiktionnaire = true }
-l['eudeve'] = { nom = 'eudeve' }
-l['euq'] = { nom = 'langues basques', tri = 'basques langues', isGroup = true }
-l['eur'] = { nom = 'europanto' }
-l['eve'] = { nom = 'évène' }
-l['evn'] = { nom = 'evenki' }
-l['ewo'] = { nom = 'éwondo' }
-l['ext'] = { nom = 'estrémègne' }
-l['eya'] = { nom = 'eyak' }
-l['eyo'] = { nom = 'keyo' }
-l['fa'] = { nom = 'persan', wiktionnaire = true }
-l['fa-cls'] = { nom = 'persan classique' }
-l['faa'] = { nom = 'fasu' }
-l['fab'] = { nom = 'fá d’Ambô', tri = 'fá Ambô' }
-l['fad'] = { nom = 'wagi' }
-l['fag'] = { nom = 'finongan' }
-l['fai'] = { nom = 'faiwol' }
-l['faj'] = { nom = 'faita' }
-l['fak'] = { nom = 'fang (Cameroun)', tri = 'fang Cameroun' }
-l['fam'] = { nom = 'fam' }
-l['fan'] = { nom = 'fang' }
-l['fap'] = { nom = 'palor' }
-l['far'] = { nom = 'fataleka' }
-l['fat'] = { nom = 'fanti' }
-l['fau'] = { nom = 'fayu' }
-l['fax'] = { nom = 'valicien' }
-l['fc'] = { nom = 'franc-comtois' }
-l['fcs'] = { nom = 'langue des signes québécoise', tri = 'signes québécoise' }
-l['fer'] = { nom = 'feroge' }
-l['ff'] = { nom = 'peul' }
-l['ffg'] = { nom = 'bohurá' }
-l['ffi'] = { nom = 'foia foia' }
-l['ffm'] = { nom = 'peul du Maasina', tri = 'peul Maasina' }
-l['fi'] = { nom = 'finnois', wiktionnaire = true }
-l['fia'] = { nom = 'nubien' }
-l['fie'] = { nom = 'fyer' }
-l['fil'] = { nom = 'filipino' }
-l['fingalien'] = { nom = 'fingalien' }
-l['fip'] = { nom = 'fipa' }
-l['fir'] = { nom = 'firan' }
-l['fit'] = { nom = 'finnois tornédalien' }
-l['fiu'] = { nom = 'langues finno-ougriennes', tri = 'finno ougriennes langues', isGroup = true }
-l['fj'] = { nom = 'fidjien', wiktionnaire = true }
-l['fkk'] = { nom = 'kirya-konzel' }
-l['fkv'] = { nom = 'kvène' }
-l['fla'] = { nom = 'kalispel' }
-l['flh'] = { nom = 'foau' }
-l['fln'] = { nom = 'flinders island' }
-l['flr'] = { nom = 'fuliiru' }
-l['fly'] = { nom = 'tsotsitaal' }
-l['fmp'] = { nom = 'fe’fe’' }
-l['fmu'] = { nom = 'muria occidental lointain' }
-l['fo'] = { nom = 'féroïen', wiktionnaire = true }
-l['foi'] = { nom = 'foi' }
-l['fon'] = { nom = 'fon' }
-l['for'] = { nom = 'fore' }
-l['fos'] = { nom = 'siraya' }
-l['fox'] = { nom = 'langues formosanes', tri = 'formosanes langues', isGroup = true }
-l['fpe'] = { nom = 'pichi' }
-l['fqs'] = { nom = 'fas' }
-l['fr'] = { nom = 'français', portail = true, wiktionnaire = true }
-l['francilien'] = { nom = 'francilien' }
-l['francique central'] = { nom = 'francique central' }
-l['francique méridional'] = { nom = 'francique méridional' }
-l['francique mosellan'] = { nom = 'francique mosellan' }
-l['francique rhénan'] = { nom = 'francique rhénan' }
-l['frc'] = { nom = 'français cadien' }
-l['frd'] = { nom = 'fordata' }
-l['frk'] = { nom = 'vieux-francique', tri = 'francique vieux' }
-l['frm'] = { nom = 'moyen français', tri = 'français moyen' }
-l['fro'] = { nom = 'ancien français', tri = 'français ancien', portail = true }
-l['frp'] = { nom = 'francoprovençal' }
-l['frq'] = { nom = 'forak' }
-l['frr'] = { nom = 'frison septentrional' }
-l['frs'] = { nom = 'bas saxon de Frise orientale', tri = 'saxon bas frise orientale' }
-l['frt'] = { nom = 'fortsenal' }
-l['fry'] = { nom = 'frison occidental' }
-l['fse'] = { nom = 'langue des signes finnoise', tri = 'signes finnoise' }
-l['fsl'] = { nom = 'langue des signes française', tri = 'signes française' }
-l['fss'] = { nom = 'langue des signes finno-suédoise', tri = 'signes finno suédoise' }
-l['fub'] = { nom = 'peul de l’Adamaoua', tri = 'peul Adamaoua' }
-l['fuc'] = { nom = 'pulaar' }
-l['fud'] = { nom = 'futunien' }
-l['fue'] = { nom = 'peul du Borgu', tri = 'peul Borgu' }
-l['fuf'] = { nom = 'pular' }
-l['fuh'] = { nom = 'peul du Niger occidental', tri = 'peul Niger occidental' }
-l['fun'] = { nom = 'fulniô' }
-l['fur'] = { nom = 'frioulan' }
-l['fut'] = { nom = 'futuna-aniwa' }
-l['fuu'] = { nom = 'bagiro' }
-l['fuy'] = { nom = 'fuyug' }
-l['fvr'] = { nom = 'four' }
-l['fwa'] = { nom = 'fwâi' }
-l['fwe'] = { nom = 'fwe' }
-l['fy'] = { nom = 'frison', wiktionnaire = true }
-l['ga'] = { nom = 'gaélique irlandais', wiktionnaire = true }
-l['gaa'] = { nom = 'ga' }
-l['gab'] = { nom = 'gabri' }
-l['gac'] = { nom = 'grand andamanais' }
-l['gad'] = { nom = 'gaddang' }
-l['gae'] = { nom = 'guarequena' }
-l['gaf'] = { nom = 'gende' }
-l['gag'] = { nom = 'gagaouze' }
-l['gah'] = { nom = 'alekano' }
-l['gai'] = { nom = 'borei' }
-l['gaj'] = { nom = 'gadsup' }
-l['gak'] = { nom = 'gamkonora' }
-l['gal'] = { nom = 'galoli' }
-l['galaïco-portugais'] = { nom = 'galaïco-portugais', tri = 'galaïco portugais' }
-l['gallo'] = { nom = 'gallo' }
-l['gallo-italique de Basilicate'] = { nom = 'gallo-italique de Basilicate', tri = 'gallo italique Basilicate' }
-l['gallo-italique de Sicile'] = { nom = 'gallo-italique de Sicile', tri = 'gallo italique Sicile' }
-l['gan'] = { nom = 'gan' }
-l['gao'] = { nom = 'gants' }
-l['gao de Dongkou'] = { nom = 'gao de Dongkou', tri = 'gao Dongkou' }
-l['gap'] = { nom = 'gal' }
-l['gaq'] = { nom = 'gta’' }
-l['gar'] = { nom = 'galeya' }
-l['gas'] = { nom = 'garasia des Adiwasi', tri = 'garasia Adiwasi' }
-l['gat'] = { nom = 'kenati' }
-l['gau'] = { nom = 'gadaba mudhili' }
-l['gaulois'] = { nom = 'gaulois', portail = true }
-l['gaw'] = { nom = 'nobonob' }
-l['gax'] = { nom = 'borana' }
-l['gay'] = { nom = 'gayo' }
-l['gaz'] = { nom = 'oromo central de l’Ouest', tri = 'oromo central Ouest' }
-l['gba'] = { nom = 'gbaya' }
-l['gbb'] = { nom = 'kaytetye' }
-l['gbe'] = { nom = 'niksek' }
-l['gbf'] = { nom = 'gaikundi' }
-l['gbg'] = { nom = 'gbanziri' }
-l['gbi'] = { nom = 'galela' }
-l['gbj'] = { nom = 'gutob' }
-l['gbn'] = { nom = 'mo’da' }
-l['gbp'] = { nom = 'gbaya de Bossangoa', tri = 'gbaya Bossangoa' }
-l['gbq'] = { nom = 'gbaya bozom' }
-l['gbr'] = { nom = 'gbagyi' }
-l['gbu'] = { nom = 'gaagudju' }
-l['gbv'] = { nom = 'gbanu' }
-l['gby'] = { nom = 'gbari' }
-l['gbz'] = { nom = 'dari iranien' }
-l['gcc'] = { nom = 'mali' }
-l['gcd'] = { nom = 'ganggalida' }
-l['gce'] = { nom = 'galice' }
-l['gcf-mq'] = { nom = 'créole martiniquais' }
-l['gcl'] = { nom = 'créole grenadais' }
-l['gcr'] = { nom = 'créole guyanais' }
-l['gct'] = { nom = 'alemán coloniero' }
-l['gd'] = { nom = 'gaélique écossais', wiktionnaire = true }
-l['gdc'] = { nom = 'gugu badhun' }
-l['gdd'] = { nom = 'gedaged' }
-l['gde'] = { nom = 'gude' }
-l['gdf'] = { nom = 'guduf-gava' }
-l['gdg'] = { nom = 'ga’dang' }
-l['gdl'] = { nom = 'dirasha' }
-l['gdm'] = { nom = 'laal' }
-l['gdo'] = { nom = 'godoberi' }
-l['gdq'] = { nom = 'méhri' }
-l['gdr'] = { nom = 'wipi' }
-l['gds'] = { nom = 'langue des signes de Ghandruk', tri = 'signes Ghandruk' }
-l['gea'] = { nom = 'geruma' }
-l['geb'] = { nom = 'kire' }
-l['geg'] = { nom = 'gengle' }
-l['geh'] = { nom = 'allemand huttérite' }
-l['gej'] = { nom = 'gen' }
-l['gek'] = { nom = 'ywom' }
-l['gel'] = { nom = 'ut-ma’in' }
-l['gelao blanc de Diyingshao'] = { nom = 'gelao blanc de Diyingshao', tri = 'gelao blanc Diyingshao' }
-l['gelao blanc de Judu'] = { nom = 'gelao blanc de Judu', tri = 'gelao blanc Judu' }
-l['gelao blanc de Moji'] = { nom = 'gelao blanc de Moji', tri = 'gelao blanc Moji' }
-l['gelao blanc de Niupo'] = { nom = 'gelao blanc de Niupo', tri = 'gelao blanc Niupo' }
-l['gelao blanc de Pudi'] = { nom = 'gelao blanc de Pudi', tri = 'gelao blanc Pudi' }
-l['gelao blanc de Wantao'] = { nom = 'gelao blanc de Wantao', tri = 'gelao blanc Wantao' }
-l['gelao blanc de Yueliangwan'] = { nom = 'gelao blanc de Yueliangwan', tri = 'gelao blanc Yueliangwan' }
-l['gelao rouge de Fanpo'] = { nom = 'gelao rouge de Fanpo', tri = 'gelao rouge Fanpo' }
-l['gelao rouge de Longjia'] = { nom = 'gelao rouge de Longjia', tri = 'gelao rouge Longjia' }
-l['gelao rouge de Na Khê'] = { nom = 'gelao rouge de Na Khê', tri = 'gelao rouge Na Khê' }
-l['gelao vert de Liangshui'] = { nom = 'gelao vert de Liangshui', tri = 'gelao vert Liangshui' }
-l['gelao vert de Qinglong'] = { nom = 'gelao vert de Qinglong', tri = 'gelao vert Qinglong' }
-l['gelao vert de Sanchong'] = { nom = 'gelao vert de Sanchong', tri = 'gelao vert Sanchong' }
-l['gelao vert de Zhenfeng'] = { nom = 'gelao vert de Zhenfeng', tri = 'gelao vert Zhenfeng' }
-l['gem'] = { nom = 'langues germaniques', tri = 'germaniques langues', isGroup = true }
-l['gépide'] = { nom = 'gépide' }
-l['ges'] = { nom = 'geser-gorom' }
-l['gète'] = { nom = 'gète' }
-l['gev'] = { nom = 'geviya' }
-l['gew'] = { nom = 'gera' }
-l['gex'] = { nom = 'garre' }
-l['gey'] = { nom = 'enya' }
-l['gez'] = { nom = 'guèze' }
-l['gfk'] = { nom = 'patpatar' }
-l['gft'] = { nom = 'gafat' }
-l['gga'] = { nom = 'gao' }
-l['ggb'] = { nom = 'gbii' }
-l['ggd'] = { nom = 'gugadj' }
-l['gge'] = { nom = 'gurr-goni' }
-l['ggl'] = { nom = 'ganglau' }
-l['ggo'] = { nom = 'gondî du Sud', tri = 'gondî Sud' }
-l['ggt'] = { nom = 'gitua' }
-l['ggu'] = { nom = 'gagou' }
-l['gha'] = { nom = 'ghadamès' }
-l['ghl'] = { nom = 'ghulfan' }
-l['gho'] = { nom = 'ghomari' }
-l['ghs'] = { nom = 'guhu-samane' }
-l['ght'] = { nom = 'kuke' }
-l['gia'] = { nom = 'kija' }
-l['gid'] = { nom = 'gidar' }
-l['gie'] = { nom = 'gabogbo' }
-l['gih'] = { nom = 'githabul' }
-l['gil'] = { nom = 'gilbertin' }
-l['gim'] = { nom = 'gimi' }
-l['gin'] = { nom = 'hinukh' }
-l['gio'] = { nom = 'gelao' }
-l['gip'] = { nom = 'gimi (Nouvelle-Bretagne occidentale)', tri = 'gimi Nouvelle Bretagne' }
-l['giq'] = { nom = 'gelao vert' }
-l['gir'] = { nom = 'gelao rouge' }
-l['girirra'] = { nom = 'girirra' }
-l['git'] = { nom = 'gitxsan' }
-l['giu'] = { nom = 'mulao' }
-l['giw'] = { nom = 'gelao blanc' }
-l['gix'] = { nom = 'gilima' }
-l['giz'] = { nom = 'giziga du Sud', tri = 'giziga Sud' }
-l['gji'] = { nom = 'geji' }
-l['gjn'] = { nom = 'gonja' }
-l['gju'] = { nom = 'gujari' }
-l['gkm'] = { nom = 'grec byzantin' }
-l['gkn'] = { nom = 'gokana' }
-l['gkp'] = { nom = 'kpellé de Guinée', tri = 'kpellé Guinée' }
-l['gku'] = { nom = 'ǂungkue', tri = 'ungkue' }
-l['gl'] = { nom = 'galicien', wiktionnaire = true }
-l['glc'] = { nom = 'bon goula' }
-l['gld'] = { nom = 'nanaï' }
-l['glk'] = { nom = 'gilaki' }
-l['gll'] = { nom = 'garlali' }
-l['glo'] = { nom = 'galambu' }
-l['glu'] = { nom = 'gula (Tchad)', tri = 'gula Tchad' }
-l['glw'] = { nom = 'glavda' }
-l['gme'] = { nom = 'langues germaniques orientales', tri = 'germaniques orientales langues', isGroup = true }
-l['gmh'] = { nom = 'moyen haut-allemand', tri = 'allemand haut moyen' }
-l['gml'] = { nom = 'moyen bas allemand', tri = 'allemand bas moyen' }
-l['gmm'] = { nom = 'gbaya-mbodomo' }
-l['gmo'] = { nom = 'gamo-gofa-dawro' }
-l['gmq'] = { nom = 'langues germaniques septentrionales', tri = 'germaniques septentrionales langues', isGroup = true }
-l['gmu'] = { nom = 'gumalu' }
-l['gmv'] = { nom = 'gamo' }
-l['gmw'] = { nom = 'langues germaniques occidentales', tri = 'germaniques occidentales langues', isGroup = true }
-l['gmx'] = { nom = 'magoma' }
-l['gmy'] = { nom = 'mycénien' }
-l['gn'] = { nom = 'guarani', wiktionnaire = true }
-l['gna'] = { nom = 'kaansa' }
-l['gnb'] = { nom = 'gangte' }
-l['gnc'] = { nom = 'guanche' }
-l['gnd'] = { nom = 'zulgo-gemzek' }
-l['gne'] = { nom = 'ganang' }
-l['gng'] = { nom = 'ngangam' }
-l['gni'] = { nom = 'gooniyandi' }
-l['gnk'] = { nom = 'gǁana', tri = 'gana' }
-l['gnn'] = { nom = 'gumatj' }
-l['gno'] = { nom = 'gondî du Nord', tri = 'gondî Nord' }
-l['gnq'] = { nom = 'gana' }
-l['gnu'] = { nom = 'gnau' }
-l['gnw'] = { nom = 'guaraní de Bolivie occidentale', tri = 'guaraní Bolivie occidentale' }
-l['goa'] = { nom = 'gouro' }
-l['gob'] = { nom = 'playero' }
-l['god'] = { nom = 'godié' }
-l['goe'] = { nom = 'gongduk' }
-l['gof'] = { nom = 'gofa' }
-l['gog'] = { nom = 'gogo' }
-l['goh'] = { nom = 'vieux haut allemand', tri = 'allemand haut vieux' }
-l['goi'] = { nom = 'gobasi' }
-l['goj'] = { nom = 'gowlan' }
-l['gokhy'] = { nom = 'gokhy' }
-l['gol'] = { nom = 'gola' }
-l['gom'] = { nom = 'konkani de Goa', tri = 'konkani Goa', wiktionnaire = true }
-l['gon'] = { nom = 'gond' }
-l['goo'] = { nom = 'gone dau' }
-l['gop'] = { nom = 'yeretuar' }
-l['gor'] = { nom = 'gorontalo' }
-l['gos'] = { nom = 'groningois' }
-l['got'] = { nom = 'gotique' }
-l['gotique de Crimée'] = { nom = 'gotique de Crimée', tri = 'gotique Crimée' }
-l['gottscheerish'] = { nom = 'gottscheerish' }
-l['gou'] = { nom = 'gavar' }
-l['goy'] = { nom = 'goundo' }
-l['gpa'] = { nom = 'gupa-abawa' }
-l['gpe'] = { nom = 'pidgin anglais ghanéen' }
-l['gqa'] = { nom = 'ga’anda' }
-l['gqi'] = { nom = 'guiqiong' }
-l['gqn'] = { nom = 'kinikinao' }
-l['gqr'] = { nom = 'gor' }
-l['gqu'] = { nom = 'gao de Wanzi', tri = 'gao Wanzi' }
-l['gra'] = { nom = 'rajput garasia' }
-l['grb'] = { nom = 'grébo' }
-l['grc'] = { nom = 'grec ancien', portail = true }
-l['grd'] = { nom = 'guruntum' }
-l['grec cargésien'] = { nom = 'grec cargésien' }
-l['grec chypriote'] = { nom = 'grec chypriote' }
-l['grg'] = { nom = 'madi' }
-l['grh'] = { nom = 'gbiri-niragu' }
-l['gri'] = { nom = 'ghari' }
-l['griko'] = { nom = 'griko' }
-l['grk'] = { nom = 'langues grecques', tri = 'grecques langues', isGroup = true }
-l['gro'] = { nom = 'groma' }
-l['grr'] = { nom = 'taznatit' }
-l['grs'] = { nom = 'gresi' }
-l['grt'] = { nom = 'garo' }
-l['gru'] = { nom = 'kistane' }
-l['grz'] = { nom = 'guramalum' }
-l['gserpa'] = { nom = 'gserpa' }
-l['gsg'] = { nom = 'langue des signes allemande', tri = 'signes allemande' }
-l['gsl'] = { nom = 'gusilay' }
-l['gsm'] = { nom = 'langue des signes guatémaltèque', tri = 'signes guatemaltèque' }
-l['gso'] = { nom = 'gbaya du Sud-Ouest', tri = 'gbaya Sud Ouest' }
-l['gsw'] = { nom = 'alémanique', wmlien = 'als' }
-l['gsw-fr'] = { nom = 'alémanique alsacien' }
-l['gta'] = { nom = 'guató' }
-l['gti'] = { nom = 'gbati-ri' }
-l['gu'] = { nom = 'gujarati', wiktionnaire = true }
-l['gub'] = { nom = 'guajajára' }
-l['guc'] = { nom = 'guajiro' }
-l['gud'] = { nom = 'dida de Yocoboué', tri = 'dida Yocoboué' }
-l['gudjal'] = { nom = 'gudjal' }
-l['gue'] = { nom = 'gurinji' }
-l['güenoa'] = { nom = 'güenoa' }
-l['guf'] = { nom = 'gupapuyngu' }
-l['gug'] = { nom = 'guarani paraguayen' } -- aussi nhd
-l['guh'] = { nom = 'guahibo' }
-l['gui'] = { nom = 'chiriguano' }
-l['guk'] = { nom = 'gumuz' }
-l['gul'] = { nom = 'gullah' }
-l['gum'] = { nom = 'guambiano' }
-l['gumuz du Sud'] = { nom = 'gumuz du Sud', tri = 'gumuz Sud' }
-l['gun'] = { nom = 'mbyá' }
-l['guo'] = { nom = 'guayabero' }
-l['gup'] = { nom = 'gunwinggu' }
-l['guq'] = { nom = 'guayakí' }
-l['gur'] = { nom = 'gurenne' }
-l['gus'] = { nom = 'langue des signes guinéenne', tri = 'signes guinéenne' }
-l['gut'] = { nom = 'maleku' }
-l['gutnisk'] = { nom = 'gutnisk' }
-l['guu'] = { nom = 'yanomamö' }
-l['guw'] = { nom = 'gungbe', wiktionnaire = true }
-l['gux'] = { nom = 'gourmanchéma' }
-l['guz'] = { nom = 'gusii' }
-l['gv'] = { nom = 'mannois', wiktionnaire = true }
-l['gva'] = { nom = 'guaná' }
-l['gvc'] = { nom = 'wanano' }
-l['gve'] = { nom = 'duwet' }
-l['gvf'] = { nom = 'golin' }
-l['gvj'] = { nom = 'guaja' }
-l['gvl'] = { nom = 'gulay' }
-l['gvn'] = { nom = 'kuku-yalanji' }
-l['gvo'] = { nom = 'gavião do Jiparaná', tri = 'gavião Jiparaná' }
-l['gvp'] = { nom = 'parkatejê' }
-l['gvy'] = { nom = 'guyani' }
-l['gwara'] = { nom = 'gwara' }
-l['gwc'] = { nom = 'kohistani de Kalam', tri = 'kohistani Kalam' }
-l['gwd'] = { nom = 'gawwada' }
-l['gwe'] = { nom = 'gweno' }
-l['gwi'] = { nom = 'gwich’in' }
-l['gwj'] = { nom = 'gǀui', tri = 'gui' }
-l['gwn'] = { nom = 'gwandara' }
-l['gwr'] = { nom = 'gwere' }
-l['gwt'] = { nom = 'gawar-bati' }
-l['gwu'] = { nom = 'guwamu' }
-l['gwx'] = { nom = 'gua' }
-l['gya'] = { nom = 'gbaya du Nord-Ouest', tri = 'gbaya Nord Ouest' }
-l['gyb'] = { nom = 'garus' }
-l['gyd'] = { nom = 'kayardild' }
-l['gyg'] = { nom = 'gbayi' }
-l['gyl'] = { nom = 'gayil' }
-l['gym'] = { nom = 'guaymí' }
-l['gyo'] = { nom = 'gyalsumdo' }
-l['gyr'] = { nom = 'guarayo' }
-l['gyy'] = { nom = 'gunya' }
-l['gza'] = { nom = 'ganza' }
-l['gzi'] = { nom = 'gazi' }
-l['ha'] = { nom = 'haoussa', wiktionnaire = true }
-l['ha em'] = { nom = 'ha em' }
-l['haa'] = { nom = 'han' }
-l['hab'] = { nom = 'langue des signes de Hanoï', tri = 'signes Hanoï' }
-l['hac'] = { nom = 'gurani' }
-l['had'] = { nom = 'hatam' }
-l['hae'] = { nom = 'oromo de l’Est', tri = 'oromo Est' }
-l['hag'] = { nom = 'hanga' }
-l['hai'] = { nom = 'haïda' }
-l['hachijo'] = { nom = 'hachijō' }
-l['hak'] = { nom = 'hakka' }
-l['hal'] = { nom = 'halang' }
-l['ham'] = { nom = 'hewa' }
-l['han'] = { nom = 'hangaza' }
-l['haq'] = { nom = 'ha' }
-l['har'] = { nom = 'harari' }
-l['has'] = { nom = 'haisla' }
-l['hav'] = { nom = 'havu' }
-l['haw'] = { nom = 'hawaïen' }
-l['hax'] = { nom = 'haïda du Sud', tri = 'haïda Sud' }
-l['hay'] = { nom = 'haya' }
-l['hayato'] = { nom = 'hayato' }
-l['haz'] = { nom = 'hazara' }
-l['hbn'] = { nom = 'heiban' }
-l['hbo'] = { nom = 'hébreu ancien' }
-l['hch'] = { nom = 'huichol' }
-l['hdn'] = { nom = 'haïda du Nord', tri = 'haïda Nord' }
-l['hdy'] = { nom = 'hadiyya' }
-l['he'] = { nom = 'hébreu', wiktionnaire = true }
-l['hea'] = { nom = 'hmu du Nord', tri = 'hmu Nord' }
-l['hed'] = { nom = 'herdé' }
-l['heh'] = { nom = 'hehe' }
-l['hei'] = { nom = 'heiltsuk' }
-l['hem'] = { nom = 'hemba' }
-l['hgm'] = { nom = 'haiǁom', tri = 'haiom' }
-l['hhi'] = { nom = 'hoia hoia de Ukusi-Koparamio', tri = 'hoia hoia Ukusi-Koparamio' }
-l['hhr'] = { nom = 'keerak' }
-l['hhy'] = { nom = 'hoia hoia de Matakaia', tri = 'hoia hoia Matakaia' }
-l['hi'] = { nom = 'hindi', wiktionnaire = true }
-l['hia'] = { nom = 'lamang' }
-l['hib'] = { nom = 'hibito' }
-l['hid'] = { nom = 'hidatsa' }
-l['hif'] = { nom = 'hindi des Fidji', tri = 'hindi Fidji', wiktionnaire = true }
-l['hig'] = { nom = 'kamwe' }
-l['hik'] = { nom = 'seit-kaitetu' }
-l['hil'] = { nom = 'hiligaynon' }
-l['him'] = { nom = 'himachali' }
-l['hio'] = { nom = 'tsoa' }
-l['hit'] = { nom = 'hittite' }
-l['hiw'] = { nom = 'hiw' }
-l['hix'] = { nom = 'hixkaryana' }
-l['hka'] = { nom = 'kahé' }
-l['hke'] = { nom = 'hunde' }
-l['hkk'] = { nom = 'hunjara-kaina ke' }
-l['hla'] = { nom = 'halia' }
-l['hlb'] = { nom = 'halbi' }
-l['hlu'] = { nom = 'louvite hiéroglyphique' }
-l['hma'] = { nom = 'miao mashan du Sud', tri = 'miao mashan Sud' }
-l['hmb'] = { nom = 'songhaï humburi senni' }
-l['hmc'] = { nom = 'hmong de Huishui central', tri = 'hmong Huishui central' }
-l['hmd'] = { nom = 'miao de Diandongbei', tri = 'miao Diandongbei' }
-l['hme'] = { nom = 'hmong de Huishui de l’Est', tri = 'hmong Huishui Est' }
-l['hmf'] = { nom = 'hmong don' }
-l['hmg'] = { nom = 'miao du Guiyang du Sud-Ouest', tri = 'miao Guiyang Sud Ouest' }
-l['hmh'] = { nom = 'hmong de Huishui du Sud-Ouest', tri = 'hmong Huishui Sud Ouest' }
-l['hmi'] = { nom = 'hmong de Huishui du Nord', tri = 'hmong Huishi Nord' }
-l['hmj'] = { nom = 'gejia' }
-l['hml'] = { nom = 'miao de Luobohe', tri = 'miao Luobohe' }
-l['hmm'] = { nom = 'miao mashan central' }
-l['hmn'] = { nom = 'hmong' }
-l['hmp'] = { nom = 'miao mashan du Nord', tri = 'miao mashan Nord' }
-l['hmq'] = { nom = 'miao du Qiandong de l’Est', tri = 'miao Qiandong Est' }
-l['hmr'] = { nom = 'hmar' }
-l['hms'] = { nom = 'miao du Qiandong du Sud', tri = 'miao Qiandong Sud' }
-l['hmt'] = { nom = 'hamtai' }
-l['hmu'] = { nom = 'hamap' }
-l['hmv'] = { nom = 'hmong dô' }
-l['hmw'] = { nom = 'miao mashan de l’Ouest', tri = 'miao mashan Ouest' }
-l['hmx'] = { nom = 'langues hmong-mien', tri = 'hmong mien langues', isGroup = true }
-l['hmy'] = { nom = 'miao du Guiyang du Sud', tri = 'miao Guiyang Sud' }
-l['hna'] = { nom = 'mina' }
-l['hnd'] = { nom = 'hindko du Sud', tri = 'hindko Sud' }
-l['hnh'] = { nom = 'handa-khwe' }
-l['hni'] = { nom = 'hani' }
-l['hnj'] = { nom = 'hmong vert' }
-l['hnm'] = { nom = 'haïnanais' }
-l['hnn'] = { nom = 'hanunóo' }
-l['hno'] = { nom = 'hindko du Nord', tri = 'hindko Nord' }
-l['hns'] = { nom = 'hindoustani caribéen' }
-l['hnu'] = { nom = 'pong' }
-l['ho'] = { nom = 'hiri motou' }
-l['hoa'] = { nom = 'hoava' }
-l['hoanya'] = { nom = 'hoanya' }
-l['hob'] = { nom = 'mari (Madang)', tri = 'mari Madang' }
-l['hoc'] = { nom = 'ho' }
-l['hod'] = { nom = 'holma' }
-l['hoe'] = { nom = 'horom' }
-l['hoh'] = { nom = 'hobyot' }
-l['hoi'] = { nom = 'holikachuk' }
-l['hok'] = { nom = 'langues hokanes', tri = 'hokanes langues', isGroup = true }
-l['hol'] = { nom = 'holu' }
-l['hom'] = { nom = 'homa' }
-l['hoo'] = { nom = 'holoholo' }
-l['hop'] = { nom = 'hopi' }
-l['hor'] = { nom = 'horo' }
-l['hot'] = { nom = 'hote' }
-l['houma'] = { nom = 'houma' }
-l['hourrite'] = { nom = 'hourrite' }
-l['hov'] = { nom = 'hovongan' }
-l['how'] = { nom = 'honi' }
-l['hoy'] = { nom = 'holiya' }
-l['hoz'] = { nom = 'hozo' }
-l['hr'] = { nom = 'croate', wiktionnaire = true }
-l['hra'] = { nom = 'hrangkhol' }
-l['hre'] = { nom = 'hrê' }
-l['hrk'] = { nom = 'haruku' }
-l['hrm'] = { nom = 'a-hmo' }
-l['hro'] = { nom = 'haroi' }
-l['hrt'] = { nom = 'hertevin' }
-l['hru'] = { nom = 'hruso' }
-l['hrx'] = { nom = 'hunsrik' }
-l['hsb'] = { nom = 'haut-sorabe', tri = 'sorabe haut', wiktionnaire = true }
-l['hsn'] = { nom = 'xiang' }
-l['hss'] = { nom = 'harsusi' }
-l['ht'] = { nom = 'créole haïtien' }
-l['hto'] = { nom = 'witoto mɨnɨca' }
-l['hts'] = { nom = 'hadza' }
-l['htu'] = { nom = 'hitu' }
-l['hu'] = { nom = 'hongrois', wiktionnaire = true }
-l['hub'] = { nom = 'huambisa' }
-l['huc'] = { nom = 'ǂhoan', tri = 'hoan' }
-l['hue'] = { nom = 'huave de San Francisco del Mar', tri = 'huave San Fancisco del Mar' }
-l['hug'] = { nom = 'huachipaeri' }
-l['huh'] = { nom = 'huilliche' }
-l['hui'] = { nom = 'huli' }
-l['huj'] = { nom = 'miao du Guiyang du Nord', tri = 'miao Guiyang Nord' }
-l['hum'] = { nom = 'hungana' }
-l['huo'] = { nom = 'hu' }
-l['hup'] = { nom = 'hupa' }
-l['huq'] = { nom = 'tsat' }
-l['hur'] = { nom = 'halkomelem' }
-l['hus'] = { nom = 'huastèque' }
-l['hut'] = { nom = 'humla' }
-l['huu'] = { nom = 'witoto murui' }
-l['huv'] = { nom = 'huave de San Mateo del Mar', tri = 'huave San Mateo del Mar' }
-l['huw'] = { nom = 'hukumina' }
-l['hux'] = { nom = 'witoto nɨpode' }
-l['huy'] = { nom = 'hulaulá' }
-l['huz'] = { nom = 'hunzib' }
-l['hva'] = { nom = 'huastèque de San Luís Potosí', tri = 'huastèque San Luís Potosí' }
-l['hvk'] = { nom = 'haveke' }
-l['hvn'] = { nom = 'hawu' }
-l['hwc'] = { nom = 'créole hawaïen' }
-l['hy'] = { nom = 'arménien', wiktionnaire = true }
-l['hyx'] = { nom = 'langues arméniennes', tri = 'arméniennes langues', isGroup = true }
-l['hz'] = { nom = 'héréro' }
-l['ia'] = { nom = 'interlingua', wiktionnaire = true }
-l['iai'] = { nom = 'iaai' }
-l['ian'] = { nom = 'iatmul' }
-l['iar'] = { nom = 'purari' }
-l['iba'] = { nom = 'iban' }
-l['ibb'] = { nom = 'ibibio' }
-l['ibd'] = { nom = 'iwaidja' }
-l['ibe'] = { nom = 'akpès' }
-l['ibg'] = { nom = 'ibanag' }
-l['ibh'] = { nom = 'bih' }
-l['ibl'] = { nom = 'ibaloi' }
-l['ibm'] = { nom = 'agoi' }
-l['ibn'] = { nom = 'ibino' }
-l['ibr'] = { nom = 'ibuoro' }
-l['ibu'] = { nom = 'ibu' }
-l['iby'] = { nom = 'ibani' }
-l['ich'] = { nom = 'etkywan' }
-l['icl'] = { nom = 'langue des signes islandaise', tri = 'signes islandaise' }
-l['id'] = { nom = 'indonésien', portail = true, wiktionnaire = true }
-l['ida'] = { nom = 'luidakho-luisukha-lutirichi' }
-l['idb'] = { nom = 'créole indo-portugais' }
-l['ide'] = { nom = 'idere' }
-l['idi'] = { nom = 'idi' }
-l['idiom neutral'] = { nom = 'idiom neutral' }
-l['idt'] = { nom = 'idaté' }
-l['idu'] = { nom = 'idoma' }
-l['ie'] = { nom = 'interlingue', wiktionnaire = true }
-l['ifa'] = { nom = 'ifugao d’Amganad', tri = 'ifugao Amganad' }
-l['ife'] = { nom = 'ifè' }
-l['iff'] = { nom = 'ifo' }
-l['ifk'] = { nom = 'ifugao de Tuwali', tri = 'ifugao Tuwali' }
-l['ify'] = { nom = 'keley-i kallahan' }
-l['ig'] = { nom = 'igbo', wiktionnaire = true }
-l['igb'] = { nom = 'ébira', tri = 'ebira' }
-l['ige'] = { nom = 'igede' }
-l['igl'] = { nom = 'igala' }
-l['ign'] = { nom = 'ignaciano' }
-l['igo'] = { nom = 'isebe' }
-l['igs'] = { nom = 'interglossa' }
-l['igs-gls'] = { nom = 'glosa' }
-l['ihb'] = { nom = 'pidgin iha' }
-l['ihp'] = { nom = 'iha' }
-l['ii'] = { nom = 'yi' }
-l['iii'] = { nom = 'yi nuosu' }
-l['iir'] = { nom = 'langues indo-iraniennes', tri = 'indo iraniennes langues', isGroup = true }
-l['ijc'] = { nom = 'izon' }
-l['ije'] = { nom = 'biseni' }
-l['ijn'] = { nom = 'kalabari' }
-l['ijo'] = { nom = 'langues ijos', tri = 'ijos langues', isGroup = true }
-l['ijs'] = { nom = 'ijo du Sud-Est', tri = 'ijo Sud Est' }
-l['ik'] = { nom = 'inupiaq', wiktionnaire = true }
-l['ike'] = { nom = 'inuttitut' }
-l['iki'] = { nom = 'iko' }
-l['iko'] = { nom = 'olulumo-ikom' }
-l['ikt'] = { nom = 'inuinnaqtun' }
-l['ikw'] = { nom = 'ikwere' }
-l['ikx'] = { nom = 'ik' }
-l['ikz'] = { nom = 'ikizu' }
-l['ila'] = { nom = 'ile ape' }
-l['ilb'] = { nom = 'ila' }
-l['ili'] = { nom = 'ili turki' }
-l['ilk'] = { nom = 'ilongot' }
-l['ill'] = { nom = 'iranun' }
-l['ilo'] = { nom = 'ilocano' }
-l['ilu'] = { nom = 'ili’uun' }
-l['ilv'] = { nom = 'ilue' }
-l['ilw'] = { nom = 'talur' }
-l['ima'] = { nom = 'malasar de Mala', tri = 'malasar Mala' }
-l['ime'] = { nom = 'imeraguen' }
-l['iml'] = { nom = 'miluk' }
-l['imn'] = { nom = 'imonda' }
-l['imo'] = { nom = 'imbongu' }
-l['imr'] = { nom = 'imroing' }
-l['ims'] = { nom = 'marse' }
-l['imy'] = { nom = 'milyen' }
-l['inb'] = { nom = 'inga' }
-l['inc'] = { nom = 'langues indo-aryennes', tri = 'indo aryennes langues', isGroup = true }
-l['indanga'] = { nom = 'indanga' }
-l['ine'] = { nom = 'langues indo-européennes', tri = 'indo européennes langues', isGroup = true }
-l['ing'] = { nom = 'deg hit’an' }
-l['inh'] = { nom = 'ingouche' }
-l['inj'] = { nom = 'inga de la jungle', tri = 'inga jungle' }
-l['inn'] = { nom = 'isinai' }
-l['ino'] = { nom = 'inoke-yate' }
-l['inp'] = { nom = 'iñapari' }
-l['ins'] = { nom = 'langue des signes indienne', tri = 'signes indienne' }
-l['int'] = { nom = 'intha' }
-l['inz'] = { nom = 'ineseño' }
-l['io'] = { nom = 'ido', wiktionnaire = true }
-l['ior'] = { nom = 'inor' }
-l['iow'] = { nom = 'iowa-oto' }
-l['ipi'] = { nom = 'ipili' }
-l['ipo'] = { nom = 'ipiko' }
-l['iqu'] = { nom = 'iquito' }
-l['ira'] = { nom = 'langues iraniennes', tri = 'iraniennes langues', isGroup = true }
-l['ire'] = { nom = 'iresim' }
-l['irh'] = { nom = 'irarutu' }
-l['iri'] = { nom = 'irigwe' }
-l['irk'] = { nom = 'iraqw' }
-l['irn'] = { nom = 'irántxe' }
-l['iro'] = { nom = 'langues iroquoiennes', tri = 'iroquoiennes langues', isGroup = true }
-l['irr'] = { nom = 'ir' }
-l['iru'] = { nom = 'irula' }
-l['irx'] = { nom = 'kamberau' }
-l['is'] = { nom = 'islandais', portail = true, wiktionnaire = true }
-l['isa'] = { nom = 'isabi' }
-l['isc'] = { nom = 'isconahua' }
-l['isd'] = { nom = 'isnag' }
-l['ise'] = { nom = 'langue des signes italienne', tri = 'signes italienne' }
-l['isg'] = { nom = 'langue des signes irlandaise', tri = 'signes irlandaise' }
-l['ish'] = { nom = 'esan' }
-l['isi'] = { nom = 'nkem-nkum' }
-l['isk'] = { nom = 'ishkashimi' }
-l['ism'] = { nom = 'masimasi' }
-l['isn'] = { nom = 'isanzu' }
-l['iso'] = { nom = 'isoko' }
-l['isr'] = { nom = 'langue des signes israélienne', tri = 'signes israélienne' }
-l['ist'] = { nom = 'istriote' }
-l['isu'] = { nom = 'isu (Menchum)', tri = 'isu Menchum' }
-l['isv'] = { nom = 'interslave' }
-l['it'] = { nom = 'italien', portail = true, wiktionnaire = true }
-l['itb'] = { nom = 'itneg de Binongan', tri = 'itneg Binongan' }
-l['itc'] = { nom = 'langues italiques', tri = 'italiques langues', isGroup = true }
-l['ite'] = { nom = 'itenez' }
-l['itl'] = { nom = 'itelmène' }
-l['itm'] = { nom = 'itu mbon uzo' }
-l['ito'] = { nom = 'itonama' }
-l['its'] = { nom = 'isekiri' }
-l['itt'] = { nom = 'itneg des Maeng', tri = 'itneg Maeng' }
-l['itv'] = { nom = 'itawit' }
-l['itw'] = { nom = 'ito' }
-l['itx'] = { nom = 'itik' }
-l['ity'] = { nom = 'itneg du Moyadan', tri = 'itneg Moyadan' }
-l['itz'] = { nom = 'itzá' }
-l['iu'] = { nom = 'inuktitut', wiktionnaire = true }
-l['ium'] = { nom = 'iu mien' }
-l['ivb'] = { nom = 'ibatan' }
-l['ivv'] = { nom = 'ivatan' }
-l['iwm'] = { nom = 'iwam' }
-l['iwo'] = { nom = 'iwur' }
-l['iws'] = { nom = 'sepik iwam' }
-l['ixc'] = { nom = 'ixcatèque' }
-l['ixl'] = { nom = 'ixil' }
-l['iyo'] = { nom = 'mesaka' }
-l['izh'] = { nom = 'ingrien' }
-l['izr'] = { nom = 'izere' }
-l['ja'] = { nom = 'japonais', portail = true, wiktionnaire = true }
-l['ja-kun'] = { nom = 'kun’yomi' }
-l['ja-on'] = { nom = 'on’yomi' }
-l['japhug'] = { nom = 'japhug' }
-l['jaa'] = { nom = 'jamamadí' }
-l['jab'] = { nom = 'hyam' }
-l['jac'] = { nom = 'jacaltèque' }
-l['jae'] = { nom = 'yabem' }
-l['jah'] = { nom = 'jah hut' }
-l['jak'] = { nom = 'jakun' }
-l['jal'] = { nom = 'fatamanue' }
-l['jam'] = { nom = 'créole jamaïcain' }
-l['jan'] = { nom = 'jandai' }
-l['jao'] = { nom = 'yanyuwa' }
-l['jaq'] = { nom = 'yaqay' }
-l['jas'] = { nom = 'javanais de Nouvelle-Calédonie', tri = 'javanais Nouvelle Calédonie' }
-l['jau'] = { nom = 'yaur' }
-l['jaz'] = { nom = 'jawe' }
-l['jbk'] = { nom = 'barikewa' }
-l['jbn'] = { nom = 'nafusi' }
-l['jbo'] = { nom = 'lojban', wiktionnaire = true }
-l['jbt'] = { nom = 'djeoromitxi' }
-l['jbw'] = { nom = 'mouwase' }
-l['jct'] = { nom = 'krymchak' }
-l['jdt'] = { nom = 'juhuri' }
-l['jeb'] = { nom = 'jebero' }
-l['jedek'] = { nom = 'jedek' }
-l['jeg'] = { nom = 'jeng' }
-l['jeh'] = { nom = 'jeh' }
-l['jei'] = { nom = 'yei' }
-l['jek'] = { nom = 'jeri kuo' }
-l['jel'] = { nom = 'yelmek' }
-l['jen'] = { nom = 'dza' }
-l['jet'] = { nom = 'manem' }
-l['jeu'] = { nom = 'djongor de Bourmataguil', tri = 'djongor Bourmataguil' }
-l['jge'] = { nom = 'judéo-géorgien' }
-l['jgk'] = { nom = 'gwak' }
-l['jgo'] = { nom = 'ngomba' }
-l['jhi'] = { nom = 'jehai' }
-l['jia'] = { nom = 'jina' }
-l['jib'] = { nom = 'jibu' }
-l['jic'] = { nom = 'jicaque de la Flor', tri = 'jicaque Flor' }
-l['jicaque d’El Palmar'] = { nom = 'jicaque d’El Palmar', tri = 'jicaque El Palmar' }
-l['jid'] = { nom = 'bu' }
-l['jig'] = { nom = 'djingili' }
-l['jih'] = { nom = 'shangzhai' }
-l['jil'] = { nom = 'jilim' }
-l['jim'] = { nom = 'jimi (Cameroun)', tri = 'jimi Cameroun' }
-l['jio'] = { nom = 'jiamao' }
-l['jiq'] = { nom = 'lavrung' }
-l['jit'] = { nom = 'jita' }
-l['jiu'] = { nom = 'jinuo de Youle', tri = 'jinuo Youle' }
-l['jiv'] = { nom = 'shuar' }
-l['jiv-pal'] = { nom = 'palta' }
-l['jiy'] = { nom = 'jinuo de Buyuan', tri = 'jinuo Buyuan' }
-l['jizhao'] = { nom = 'jizhao' }
-l['jje'] = { nom = 'jeju' }
-l['jjr'] = { nom = 'bankal' }
-l['jka'] = { nom = 'kaera' }
-l['jko'] = { nom = 'kubo' }
-l['jkr'] = { nom = 'koro (Inde)', tri = 'koro Inde' }
-l['jku'] = { nom = 'labir' }
-l['jle'] = { nom = 'ngile' }
-l['jmc'] = { nom = 'machame' }
-l['jms'] = { nom = 'mashi (Nigeria)', tri = 'mashi Nigeria' }
-l['jnj'] = { nom = 'yemsa' }
-l['job'] = { nom = 'joba' }
-l['jor'] = { nom = 'jora' }
-l['jos'] = { nom = 'langue des signes jordanienne', tri = 'signes jordanienne' }
-l['jow'] = { nom = 'jowulu' }
-l['jpr'] = { nom = 'judéo-persan' }
-l['jpx'] = { nom = 'langues japoniques', tri = 'japoniques langues', isGroup = true }
-l['jra'] = { nom = 'jaraï' }
-l['jrb'] = { nom = 'judéo-arabe' }
-l['jua'] = { nom = 'júma' }
-l['juc'] = { nom = 'jurchen' }
-l['juh'] = { nom = 'hõne' }
-l['jui'] = { nom = 'ngadjuri' }
-l['jum'] = { nom = 'jumjum' }
-l['jun'] = { nom = 'juang' }
-l['jup'] = { nom = 'hupda' }
-l['jur'] = { nom = 'juruna' }
-l['jus'] = { nom = 'langue des signes de Jumla', tri = 'signes Jumla' }
-l['jut'] = { nom = 'jute' }
-l['juy'] = { nom = 'juray' }
-l['jv'] = { nom = 'javanais', wiktionnaire = true }
-l['jvn'] = { nom = 'javanais des Caraïbes', tri = 'javanais Caraïbes' }
-l['jya'] = { nom = 'rgyalrong' }
-l['ka'] = { nom = 'géorgien', wiktionnaire = true }
-l['kaa'] = { nom = 'karakalpak' }
-l['kab'] = { nom = 'kabyle' }
-l['kac'] = { nom = 'kachin' }
-l['kae'] = { nom = 'ketangalan' }
-l['kaera'] = { nom = 'kaera' }
-l['kaf'] = { nom = 'katso' }
-l['kah'] = { nom = 'fer' }
-l['kai'] = { nom = 'karekare' }
-l['kaj'] = { nom = 'jju' }
-l['kak'] = { nom = 'ahin-kayapa kalanguya' }
-l['kakán'] = { nom = 'kakán' }
-l['kalasmaïte'] = { nom = 'kalasmaïte' }
-l['kalis'] = { nom = 'kalis' }
-l['kam'] = { nom = 'kamba' }
-l['kao'] = { nom = 'khassonké' }
-l['kap'] = { nom = 'bezhta' }
-l['kaq'] = { nom = 'capanahua' }
-l['kar'] = { nom = 'langues karènes', tri = 'karènes langues', isGroup = true }
-l['kassite'] = { nom = 'kassite' }
-l['kathlamet'] = { nom = 'kathlamet' }
-l['kaw'] = { nom = 'kawi' }
-l['kax'] = { nom = 'kao' }
-l['kay'] = { nom = 'kamayura' }
-l['kbb'] = { nom = 'kashuyana' }
-l['kbc'] = { nom = 'kadiwéu' }
-l['kbd'] = { nom = 'kabarde', wiktionnaire = true }
-l['kbh'] = { nom = 'camsá' }
-l['kbj'] = { nom = 'kari' }
-l['kbk'] = { nom = 'koiari grass' }
-l['kbl'] = { nom = 'kanembou' }
-l['kbn'] = { nom = 'kare (République centrafricaine)', tri = 'kare Centrafrique' }
-l['kbo'] = { nom = 'keliko' }
-l['kbp'] = { nom = 'kabiyè' }
-l['kbq'] = { nom = 'kamano' }
-l['kbs'] = { nom = 'kande' }
-l['kbt'] = { nom = 'abadi' }
-l['kbv'] = { nom = 'dera' }
-l['kbw'] = { nom = 'kaiep' }
-l['kby'] = { nom = 'kanuri de Manga', tri = 'kanuri Manga' }
-l['kbz'] = { nom = 'duhwa' }
-l['kca'] = { nom = 'khanty' }
-l['kcb'] = { nom = 'kawacha' }
-l['kcg'] = { nom = 'tyap', wiktionnaire = true }
-l['kck'] = { nom = 'kalanga' }
-l['kcl'] = { nom = 'kala' }
-l['kcm'] = { nom = 'gula (République centrafricaine)', tri = 'gula Centrafrique' }
-l['kcn'] = { nom = 'nubi' }
-l['kco'] = { nom = 'kinalakna' }
-l['kcp'] = { nom = 'kanga' }
-l['kcs'] = { nom = 'koenoem' }
-l['kcu'] = { nom = 'kami (Tanzanie)', tri = 'kami Tanzanie' }
-l['kcv'] = { nom = 'kete' }
-l['kcx'] = { nom = 'kachama-ganjule' }
-l['kcy'] = { nom = 'korandjé' }
-l['kcz'] = { nom = 'konongo' }
-l['kda'] = { nom = 'gathang' }
-l['kdd'] = { nom = 'yankunytjatjara' }
-l['kde'] = { nom = 'makonde' }
-l['kdh'] = { nom = 'tem' }
-l['kdi'] = { nom = 'kumam' }
-l['kdj'] = { nom = 'karimojong' }
-l['kdm'] = { nom = 'kagoma' }
-l['kdo'] = { nom = 'langues kordofaniennes', tri = 'kordofaniennes langues', isGroup = true }
-l['kdp'] = { nom = 'kaningdon-nindem' }
-l['kdq'] = { nom = 'koch' }
-l['kdr'] = { nom = 'karaïme' }
-l['kdt'] = { nom = 'kuy' }
-l['kdu'] = { nom = 'kadaru' }
-l['kdw'] = { nom = 'koneraw' }
-l['kea'] = { nom = 'créole du Cap-Vert', tri = 'créole Cap Vert' }
-l['keb'] = { nom = 'kélé (Gabon)', tri = 'kélé Gabon' }
-l['kec'] = { nom = 'keiga' }
-l['ked'] = { nom = 'kerewe' }
-l['kee'] = { nom = 'keres de l’Est', tri = 'keres Est' }
-l['kef'] = { nom = 'kpési' }
-l['keg'] = { nom = 'tese' }
-l['kei'] = { nom = 'kei' }
-l['kek'] = { nom = 'q’eqchi’' }
-l['kel'] = { nom = 'kela (République démocratique du Congo)', tri = 'kela Congo démocratique' }
-l['kelabit long napir'] = { nom = 'kelabit long napir' }
-l['kem'] = { nom = 'kemak' }
-l['ken'] = { nom = 'kenyang' }
-l['kenyah long anap'] = { nom = 'kenyah long anap' }
-l['kenyah long dunin'] = { nom = 'kenyah long dunin' }
-l['kenyah long san'] = { nom = 'kenyah long san' }
-l['keo'] = { nom = 'kakwa' }
-l['ker'] = { nom = 'kera' }
-l['kes'] = { nom = 'kugbo' }
-l['ket'] = { nom = 'ket' }
-l['keu'] = { nom = 'akébou' }
-l['kew'] = { nom = 'kewa de l’Ouest', tri = 'kewa Ouest' }
-l['key'] = { nom = 'kupia' }
-l['kfa'] = { nom = 'kodagu' }
-l['kfb'] = { nom = 'kolami du Nord-Ouest', tri = 'kolami Nord Ouest' }
-l['kfc'] = { nom = 'konda-dora' }
-l['kfd'] = { nom = 'koraga korra' }
-l['kff'] = { nom = 'koya' }
-l['kfh'] = { nom = 'kurichiya' }
-l['kfj'] = { nom = 'kemie' }
-l['kfk'] = { nom = 'kinnauri' }
-l['kfl'] = { nom = 'kung' }
-l['kfm'] = { nom = 'khunsari' }
-l['kfo'] = { nom = 'koro (Côte d’Ivoire)', tri = 'koro Côte divoire' }
-l['kfq'] = { nom = 'korku' }
-l['kfr'] = { nom = 'kutchi' }
-l['kfy'] = { nom = 'kumaoni' }
-l['kfz'] = { nom = 'koromfé' }
-l['kg'] = { nom = 'kikongo' }
-l['kgb'] = { nom = 'kawe' }
-l['kgd'] = { nom = 'kataang' }
-l['kge'] = { nom = 'komering' }
-l['kgf'] = { nom = 'kube' }
-l['kgg'] = { nom = 'kusunda' }
-l['kgj'] = { nom = 'kham gamale' }
-l['kgk'] = { nom = 'kaiwa' }
-l['kgl'] = { nom = 'kunggari' }
-l['kgo'] = { nom = 'krongo' }
-l['kgp'] = { nom = 'kaingang' }
-l['kgq'] = { nom = 'kamoro' }
-l['kgr'] = { nom = 'abun' }
-l['kgs'] = { nom = 'kumbainggar' }
-l['kgt'] = { nom = 'somyev' }
-l['kgv'] = { nom = 'karas' }
-l['kgw'] = { nom = 'karon dori' }
-l['kgy'] = { nom = 'kyirong' }
-l['kha'] = { nom = 'khasi' }
-l['khb'] = { nom = 'tai lü' }
-l['khc'] = { nom = 'tukang besi du Nord', tri = 'tukang besi Nord' }
-l['khe'] = { nom = 'korowai' }
-l['khf'] = { nom = 'khuen' }
-l['khg'] = { nom = 'kham' }
-l['khh'] = { nom = 'keuw' }
-l['khi'] = { nom = 'langues khoïsanes', tri = 'khoisanes langues', isGroup = true }
-l['khiajari'] = { nom = 'khiajari' }
-l['khj'] = { nom = 'kuturmi' }
-l['kho'] = { nom = 'khotanais' }
-l['khoznini'] = { nom = 'khoznini' }
-l['khp'] = { nom = 'kapori' }
-l['khq'] = { nom = 'koyra chiini' }
-l['khr'] = { nom = 'kharia' }
-l['khs'] = { nom = 'kasua' }
-l['kht'] = { nom = 'khamti' }
-l['khv'] = { nom = 'khvarshi' }
-l['khw'] = { nom = 'khowar' }
-l['khy'] = { nom = 'kele (Congo)', tri = 'kele Congo' }
-l['khz'] = { nom = 'keapara' }
-l['ki'] = { nom = 'kikuyu' }
-l['kia'] = { nom = 'kim' }
-l['kib'] = { nom = 'koalib' }
-l['kic'] = { nom = 'kickapoo' }
-l['kid'] = { nom = 'koshin' }
-l['kie'] = { nom = 'kibet' }
-l['kif'] = { nom = 'kham parbate de l’Est', tri = 'kham parbate Est' }
-l['kig'] = { nom = 'kimaama' }
-l['kih'] = { nom = 'kilmeri' }
-l['kii'] = { nom = 'kitsai' }
-l['kij'] = { nom = 'kilivila' }
-l['kil'] = { nom = 'kariya' }
-l['kilen'] = { nom = 'kilen' }
-l['kim'] = { nom = 'tofalar' }
-l['kio'] = { nom = 'kiowa' }
-l['kip'] = { nom = 'kham sheshi' }
-l['kiptchak mamelouk'] = { nom = 'kiptchak mamelouk' }
-l['kis'] = { nom = 'kis' }
-l['kitanemuk'] = { nom = 'kitanemuk' }
-l['kittitas'] = { nom = 'kittitas' }
-l['kiu'] = { nom = 'kirmancki' }
-l['kiv'] = { nom = 'kimbu' }
-l['kiw'] = { nom = 'kiwai du Nord-Est', tri = 'kiwai Nord Est' }
-l['kiy'] = { nom = 'kirikiri' }
-l['kiz'] = { nom = 'kisi' }
-l['kj'] = { nom = 'kuanyama' }
-l['kja'] = { nom = 'mlap' }
-l['kjb'] = { nom = 'kanjobal' }
-l['kjc'] = { nom = 'konjo de la côte', tri = 'konjo côte' }
-l['kjd'] = { nom = 'kiwai du Sud', tri = 'kiwai Sud' }
-l['kje'] = { nom = 'kisar' }
-l['kjg'] = { nom = 'khmu' }
-l['kjh'] = { nom = 'khakasse' }
-l['kjh-fyk'] = { nom = 'kirghiz de Fu-Yu', tri = 'kirghiz Fu Yu' }
-l['kji'] = { nom = 'zabana' }
-l['kjj'] = { nom = 'khinalug' }
-l['kjl'] = { nom = 'kham parbate de l’Ouest', tri = 'kham parbate Ouest' }
-l['kjm'] = { nom = 'kháng' }
-l['kjn'] = { nom = 'kunjen' }
-l['kjp'] = { nom = 'pwo de l’Est', tri = 'pwo est' }
-l['kjq'] = { nom = 'keres de l’Ouest', tri = 'keres Ouest' }
-l['kjr'] = { nom = 'kurudu' }
-l['kjs'] = { nom = 'kewa de l’Est', tri = 'kewa Est' }
-l['kju'] = { nom = 'kashaya' }
-l['kjz'] = { nom = 'bumthangkha' }
-l['kk'] = { nom = 'kazakh', wiktionnaire = true }
-l['kka'] = { nom = 'kakanda' }
-l['kkb'] = { nom = 'kwerisa' }
-l['kkc'] = { nom = 'odoodee' }
-l['kkd'] = { nom = 'kinuku' }
-l['kke'] = { nom = 'kakabé' }
-l['kkf'] = { nom = 'monpa de Kalaktang', tri = 'monpa Kalaktang' }
-l['kki'] = { nom = 'kagulu' }
-l['kkk'] = { nom = 'kokota' }
-l['kkl'] = { nom = 'kosarek yale' }
-l['kko'] = { nom = 'karko' }
-l['kkr'] = { nom = 'kir-balar' }
-l['kks'] = { nom = 'giiwo' }
-l['kkt'] = { nom = 'koi' }
-l['kkw'] = { nom = 'kukuya' }
-l['kky'] = { nom = 'guugu yimidhirr' }
-l['kkz'] = { nom = 'kaska' }
-l['kl'] = { nom = 'kalaallisut', wiktionnaire = true }
-l['kla'] = { nom = 'klamath' }
-l['klb'] = { nom = 'kiliwa' }
-l['kld'] = { nom = 'kamilaroi' }
-l['kle'] = { nom = 'kulung (Népal)', tri = 'kulung Népal' }
-l['klg'] = { nom = 'kalagan de Tagakaulu', tri = 'kalagan Tagakaulu' }
-l['klikitat'] = { nom = 'klikitat' }
-l['klj'] = { nom = 'khalaj' }
-l['klk'] = { nom = 'kono (Nigeria)', tri = 'kono Nigeria' }
-l['klm'] = { nom = 'migum' }
-l['kln'] = { nom = 'kalenjin' }
-l['klp'] = { nom = 'kamasa' }
-l['klq'] = { nom = 'rumu' }
-l['klr'] = { nom = 'khaling' }
-l['kls'] = { nom = 'kalasha' }
-l['klt'] = { nom = 'nukna' }
-l['klv'] = { nom = 'maskelynes' }
-l['km'] = { nom = 'khmer', wiktionnaire = true }
-l['kma'] = { nom = 'konni' }
-l['kmb'] = { nom = 'kimbundu' }
-l['kmc'] = { nom = 'kam' }
-l['kmf'] = { nom = 'kare (Papouasie-Nouvelle-Guinée)', tri = 'kare Papouasie' }
-l['kmg'] = { nom = 'kâte' }
-l['kmh'] = { nom = 'kalam' }
-l['kmi'] = { nom = 'kami (Nigeria)', tri = 'kami Nigeria' }
-l['kmk'] = { nom = 'kalinga de Limos', tri = 'kalinga Limos' }
-l['kml'] = { nom = 'kalinga de Tanudan', tri = 'kalinga Tanudan' }
-l['kmm'] = { nom = 'kom (Inde)', tri = 'kom Inde' }
-l['kmn'] = { nom = 'awtuw' }
-l['kmo'] = { nom = 'kwoma' }
-l['kmq'] = { nom = 'gwama' }
-l['kmr'] = { nom = 'kurmandji' }
-l['kms'] = { nom = 'kamasau' }
-l['kmt'] = { nom = 'kemtuik' }
-l['kmv'] = { nom = 'karipúna' }
-l['kmw'] = { nom = 'komo (langue bantoue)', tri = 'komo bantou' }
-l['kmx'] = { nom = 'waboda' }
-l['kmz'] = { nom = 'turc du Khorassan', tri = 'turc Khorassan' }
-l['kn'] = { nom = 'kannara', wiktionnaire = true }
-l['kna'] = { nom = 'kanakuru' }
-l['knb'] = { nom = 'kalinga de Lubuagan', tri = 'kalinga Lubuagan' }
-l['knc'] = { nom = 'kanouri central' }
-l['knd'] = { nom = 'konda' }
-l['kne'] = { nom = 'kankanaey' }
-l['kni'] = { nom = 'kanufi' }
-l['knj'] = { nom = 'acatèque' }
-l['knk'] = { nom = 'kuranko' }
-l['kno'] = { nom = 'kono (Sierra Leone)', tri = 'kono Sierra Leone' }
-l['knp'] = { nom = 'kwanja' }
-l['kns'] = { nom = 'kensiw' }
-l['knt'] = { nom = 'katukina' }
-l['knu'] = { nom = 'kono (Guinée)', tri = 'kono Guinée' }
-l['knv'] = { nom = 'waia' }
-l['knw'] = { nom = 'kung-ekoka' }
-l['knx'] = { nom = 'kendayan' }
-l['kny'] = { nom = 'kanyok' }
-l['ko'] = { nom = 'coréen', portail = true, wiktionnaire = true }
-l['koa'] = { nom = 'konomala' }
-l['kod'] = { nom = 'kodi' }
-l['koe'] = { nom = 'kacipo-balesi' }
-l['kof'] = { nom = 'kubi' }
-l['kog'] = { nom = 'kogui' }
-l['koh'] = { nom = 'koyo' }
-l['koi'] = { nom = 'komi-permyak' }
-l['kok'] = { nom = 'konkânî' }
-l['kol'] = { nom = 'kol (Papouasie-Nouvelle-Guinée)', tri = 'kol Papouasie' }
-l['konomihu'] = { nom = 'konomihu' }
-l['koo'] = { nom = 'konjo' }
-l['kop'] = { nom = 'waube' }
-l['koq'] = { nom = 'kota (Gabon)', tri = 'kota Gabon' }
-l['kos'] = { nom = 'kosraéen' }
-l['kot'] = { nom = 'lagwan' }
-l['kotoxo'] = { nom = 'kotoxo' }
-l['kou'] = { nom = 'koke' }
-l['kow'] = { nom = 'kugama' }
-l['koy'] = { nom = 'koyukon' }
-l['koz'] = { nom = 'korak' }
-l['kpa'] = { nom = 'kupto' }
-l['kpc'] = { nom = 'curripaco' }
-l['kpe'] = { nom = 'kpellé' }
-l['kpf'] = { nom = 'komba' }
-l['kpg'] = { nom = 'kapingamarangi' }
-l['kpj'] = { nom = 'karajá' }
-l['kpk'] = { nom = 'kpan' }
-l['kpm'] = { nom = 'koho' }
-l['kpn'] = { nom = 'kepkiriwát' }
-l['kpo'] = { nom = 'ikposso' }
-l['kpq'] = { nom = 'korupun-sela' }
-l['kps'] = { nom = 'tehit' }
-l['kpt'] = { nom = 'karata' }
-l['kpw'] = { nom = 'kobon' }
-l['kpx'] = { nom = 'koiari des montagnes', tri = 'koiari montagnes' }
-l['kpy'] = { nom = 'koryak' }
-l['kpz'] = { nom = 'sapiny' }
-l['kqc'] = { nom = 'doromu-koki' }
-l['kqd'] = { nom = 'néo-araméen de Koy Sandjaq', tri = 'araméen néo koy sandjaq' }
-l['kqe'] = { nom = 'kalagan' }
-l['kql'] = { nom = 'kyenele' }
-l['kqp'] = { nom = 'kimré' }
-l['kqq'] = { nom = 'krenak' }
-l['kqr'] = { nom = 'kimaragang' }
-l['kqs'] = { nom = 'kisi septentrional' }
-l['kqt'] = { nom = 'kadazan klias' }
-l['kqu'] = { nom = 'seroa' }
-l['kqv'] = { nom = 'murut kolod' }
-l['kqx'] = { nom = 'mser' }
-l['kqy'] = { nom = 'koorete' }
-l['kr'] = { nom = 'kanouri' }
-l['krb'] = { nom = 'karkin' }
-l['krc'] = { nom = 'karatchaï-balkar' }
-l['kre'] = { nom = 'panará' }
-l['krf'] = { nom = 'koro (Vanuatu)', tri = 'koro Vanuatu' }
-l['kri'] = { nom = 'krio' }
-l['krj'] = { nom = 'kinaray-a' }
-l['krk'] = { nom = 'kerek' }
-l['krl'] = { nom = 'carélien' }
-l['kro'] = { nom = 'langues kroues', tri = 'kroues langues', isGroup = true }
-l['krp'] = { nom = 'korop' }
-l['krs'] = { nom = 'kresh' }
-l['krt'] = { nom = 'kanuri de Tumari', tri = 'kanuri Tumari' }
-l['kru'] = { nom = 'kurukh' }
-l['krx'] = { nom = 'karon' }
-l['kry'] = { nom = 'kryz' }
-l['ks'] = { nom = 'kashmiri', wiktionnaire = true }
-l['ksb'] = { nom = 'shambala' }
-l['ksd'] = { nom = 'kuanua' }
-l['kse'] = { nom = 'kuni' }
-l['ksf'] = { nom = 'bafia' }
-l['ksh'] = { nom = 'francique ripuaire' }
-l['ksi'] = { nom = 'i’saka' }
-l['ksk'] = { nom = 'kansa' }
-l['ksn'] = { nom = 'kasiguranin' }
-l['ksp'] = { nom = 'kabba' }
-l['ksq'] = { nom = 'kwaami' }
-l['ksr'] = { nom = 'borong' }
-l['kss'] = { nom = 'kisi méridional' }
-l['ksv'] = { nom = 'kusu' }
-l['ksw'] = { nom = 'sgaw' }
-l['ksx'] = { nom = 'kedang' }
-l['ktb'] = { nom = 'kambaata' }
-l['ktd'] = { nom = 'kokata' }
-l['kte'] = { nom = 'nubri' }
-l['ktg'] = { nom = 'kalkatungu' }
-l['kti'] = { nom = 'muyu du Nord', tri = 'muyu Nord' }
-l['ktl'] = { nom = 'koroshi' }
-l['ktn'] = { nom = 'karitiana' }
-l['kto'] = { nom = 'kuot' }
-l['ktp'] = { nom = 'kaduo' }
-l['kts'] = { nom = 'muyu du Sud', tri = 'muyu Sud' }
-l['ktt'] = { nom = 'ketum' }
-l['ktu'] = { nom = 'kituba' }
-l['ktw'] = { nom = 'kato' }
-l['ktx'] = { nom = 'kaxararí' }
-l['ktz'] = { nom = 'juǀ’hoan', tri = 'ju hoan' }
-l['ku'] = { nom = 'kurde', wiktionnaire = true }
-l['kub'] = { nom = 'kutep' }
-l['kuc'] = { nom = 'kwinsu' }
-l['kud'] = { nom = '’auhelawa', tri = 'auhelawa' }
-l['kue'] = { nom = 'kuman' }
-l['kuf'] = { nom = 'katu' }
-l['kug'] = { nom = 'kupa' }
-l['kuh'] = { nom = 'kushi' }
-l['kui'] = { nom = 'kuikuro' }
-l['kuj'] = { nom = 'kuria' }
-l['kuk'] = { nom = 'kepo’' }
-l['kul'] = { nom = 'kulere' }
-l['kum'] = { nom = 'koumyk' }
-l['kumaná'] = { nom = 'kumaná' }
-l['kun'] = { nom = 'kunama' }
-l['kuo'] = { nom = 'kumukio' }
-l['kus'] = { nom = 'kusaal' }
-l['kut'] = { nom = 'kutenai' }
-l['kuu'] = { nom = 'kolchan' }
-l['kuy'] = { nom = 'kuuku-ya’u' }
-l['kuz'] = { nom = 'kunza' }
-l['kv'] = { nom = 'komi' }
-l['kva'] = { nom = 'bagwalal' }
-l['kvc'] = { nom = 'kove' }
-l['kvd'] = { nom = 'kui (Indonésie)', tri = 'kui Indonésie' }
-l['kve'] = { nom = 'murut kalabakan' }
-l['kvf'] = { nom = 'kabalai' }
-l['kvg'] = { nom = 'kuni-boazi' }
-l['kvi'] = { nom = 'kwang' }
-l['kvm'] = { nom = 'kendem' }
-l['kvn'] = { nom = 'kuna' }
-l['kvo'] = { nom = 'dobel' }
-l['kvq'] = { nom = 'geba' }
-l['kvr'] = { nom = 'kerinci' }
-l['kvt'] = { nom = 'lahta' }
-l['kvw'] = { nom = 'wersing' }
-l['kvz'] = { nom = 'tsaukambo' }
-l['kw'] = { nom = 'cornique', wiktionnaire = true }
-l['kwa'] = { nom = 'dâw' }
-l['kwd'] = { nom = 'kwaio' }
-l['kwe'] = { nom = 'kwerba' }
-l['kwf'] = { nom = 'kwara’ae' }
-l['kwg'] = { nom = 'démé' }
-l['kwh'] = { nom = 'kowiai' }
-l['kwi'] = { nom = 'awa pit' }
-l['kwj'] = { nom = 'kwanga' }
-l['kwk'] = { nom = 'kwak’wala' }
-l['kwn'] = { nom = 'kwangali' }
-l['kwo'] = { nom = 'kwomtari' }
-l['kwp'] = { nom = 'kodia' }
-l['kwr'] = { nom = 'kwer' }
-l['kws'] = { nom = 'kwese' }
-l['kwt'] = { nom = 'kwesten' }
-l['kwu'] = { nom = 'kwakum' }
-l['kwv'] = { nom = 'sara kaba náà' }
-l['kxa'] = { nom = 'kairiru' }
-l['kxc'] = { nom = 'konso' }
-l['kxd'] = { nom = 'malais de Brunei', tri = 'malais Brunei' }
-l['kxh'] = { nom = 'karo (Éthiopie)', tri = 'karo Éthiopie' }
-l['kxj'] = { nom = 'koulfa' }
-l['kxm'] = { nom = 'khmer du Nord', tri = 'khmer Nord' }
-l['kxn'] = { nom = 'melanau kanowit' }
-l['kxo'] = { nom = 'kanoê' }
-l['kxs'] = { nom = 'kangjia' }
-l['kxt'] = { nom = 'koiwat' }
-l['kxu'] = { nom = 'kui (Inde)', tri = 'kui Inde' }
-l['kxv'] = { nom = 'kuvi' }
-l['kxw'] = { nom = 'konai' }
-l['kxz'] = { nom = 'kerewo' }
-l['ky'] = { nom = 'kirghiz', wiktionnaire = true }
-l['kya'] = { nom = 'kwaya' }
-l['kyakala'] = { nom = 'kyakala' }
-l['kyc'] = { nom = 'kyaka' }
-l['kyf'] = { nom = 'sokuya' }
-l['kyh'] = { nom = 'karuk' }
-l['kyi'] = { nom = 'kiput' }
-l['kyj'] = { nom = 'karao' }
-l['kyl'] = { nom = 'kalapuya central' }
-l['kyo'] = { nom = 'klon' }
-l['kyq'] = { nom = 'kenga' }
-l['kyr'] = { nom = 'kuruáya' }
-l['kys'] = { nom = 'baram kayan' }
-l['kyt'] = { nom = 'kayagar' }
-l['kyu'] = { nom = 'kayah li de l’Ouest', tri = 'kayah li Ouest' }
-l['kyx'] = { nom = 'rapoisi' }
-l['kyz'] = { nom = 'kayabi' }
-l['kzf'] = { nom = 'kaili de Da’a', tri = 'kaili daa' }
-l['kzg'] = { nom = 'kikaï' }
-l['kzh'] = { nom = 'dongolawi-kenzi' }
-l['kzi'] = { nom = 'kelabit bario' }
-l['kzj'] = { nom = 'kadazan penampang' }
-l['kzl'] = { nom = 'kayeli' }
-l['kzm'] = { nom = 'kais' }
-l['kzp'] = { nom = 'kaidipang' }
-l['kzr'] = { nom = 'karang' }
-l['kzt'] = { nom = 'dusun tambunan' }
-l['kzu'] = { nom = 'kayupulau' }
-l['kzv'] = { nom = 'komyandaret' }
-l['kzw'] = { nom = 'karirí-xocó' }
-l['kzz'] = { nom = 'kalabra' }
-l['la'] = { nom = 'latin', portail = true, wiktionnaire = true }
-l['laa'] = { nom = 'subanen du Sud', tri = 'subanen Sud' }
-l['lab'] = { nom = 'linéaire A' }
-l['lac'] = { nom = 'lacandon' }
-l['lad'] = { nom = 'judéo-espagnol' }
-l['lae'] = { nom = 'pattani' }
-l['laf'] = { nom = 'lafofa' }
-l['lag'] = { nom = 'langi' }
-l['lah'] = { nom = 'lahnda' }
-l['lai'] = { nom = 'lambya' }
-l['laj'] = { nom = 'lango' }
-l['lak'] = { nom = 'laka (Nigeria)', tri = 'laka Nigeria' }
-l['lala (Afrique du Sud)'] = { nom = 'lala (Afrique du Sud)', tri = 'lala Afrique Sud' }
-l['lam'] = { nom = 'lamba' }
-l['lan'] = { nom = 'laru' }
-l['lap'] = { nom = 'laka' }
-l['laq'] = { nom = 'qabiao' }
-l['lar'] = { nom = 'larteh' }
-l['las'] = { nom = 'lama (Togo)', tri = 'lama Togo' }
-l['lau'] = { nom = 'laba' }
-l['lauhut'] = { nom = 'lauhut' }
-l['law'] = { nom = 'lauje' }
-l['lawi'] = { nom = 'lawi' }
-l['lax'] = { nom = 'tiwa' }
-l['lay'] = { nom = 'lama (Birmanie)', tri = 'lama Birmanie' }
-l['laz'] = { nom = 'aribwatsa' }
-l['lazé'] = { nom = 'lazé' }
-l['lb'] = { nom = 'luxembourgeois', portail = true, wiktionnaire = true }
-l['lbc'] = { nom = 'lakkja' }
-l['lbe'] = { nom = 'lak' }
-l['lbj'] = { nom = 'ladakhi' }
-l['lbk'] = { nom = 'bontok central' }
-l['lbn'] = { nom = 'lamet' }
-l['lbo'] = { nom = 'laven' }
-l['lbq'] = { nom = 'wampar' }
-l['lbs'] = { nom = 'langue des signes libyennne', tri = 'signes libyenne' }
-l['lbt'] = { nom = 'lachi' }
-l['lbu'] = { nom = 'labu' }
-l['lbw'] = { nom = 'tolaki' }
-l['lbx'] = { nom = 'lawangan' }
-l['lby'] = { nom = 'lamu-lamu' }
-l['lbz'] = { nom = 'lardil' }
-l['lcc'] = { nom = 'legenyem' }
-l['lcd'] = { nom = 'lola' }
-l['lcl'] = { nom = 'lisela' }
-l['lcm'] = { nom = 'tungag' }
-l['lcp'] = { nom = 'lawa de l’Ouest', tri = 'lawa Ouest' }
-l['lcq'] = { nom = 'luhu' }
-l['lda'] = { nom = 'kla-dan' }
-l['ldb'] = { nom = 'dũya' }
-l['ldd'] = { nom = 'luri' }
-l['ldi'] = { nom = 'laari' }
-l['ldm'] = { nom = 'landuma' }
-l['ldn'] = { nom = 'láadan' }
-l['lea'] = { nom = 'lega de Shabunda', tri = 'lega Shabunda' }
-l['leb'] = { nom = 'lala-bisa' }
-l['lec'] = { nom = 'leko' }
-l['led'] = { nom = 'lendu' }
-l['lee'] = { nom = 'lyélé' }
-l['lef'] = { nom = 'lelemi' }
-l['leg'] = { nom = 'lengua' }
-l['leh'] = { nom = 'lenje' }
-l['lei'] = { nom = 'lemio' }
-l['lek'] = { nom = 'leipon' }
-l['lel'] = { nom = 'lele (République démocratique du Congo)', tri = 'lele Congo démocratique' }
-l['lem'] = { nom = 'nomaande' }
-l['len'] = { nom = 'lenca du Salvador', tri = 'lenca Salvador' }
-l['leo'] = { nom = 'leti (Cameroun)', tri = 'leti Cameroun' }
-l['lep'] = { nom = 'lepcha' }
-l['leq'] = { nom = 'lembena' }
-l['ler'] = { nom = 'lenkau' }
-l['les'] = { nom = 'lese' }
-l['let'] = { nom = 'amio-gelimi' }
-l['leu'] = { nom = 'kara (Papouasie-Nouvelle-Guinée)', tri = 'kara Papouasie' }
-l['lev'] = { nom = 'pantar de l’Ouest', tri = 'pantar Ouest' }
-l['lew'] = { nom = 'kaili de Ledo', tri = 'kaili Ledo' }
-l['lex'] = { nom = 'luang' }
-l['ley'] = { nom = 'lemolang' }
-l['lez'] = { nom = 'lezghien' }
-l['lfn'] = { nom = 'lingua franca nova' }
-l['lg'] = { nom = 'ganda' }
-l['lga'] = { nom = 'lungga' }
-l['lgb'] = { nom = 'laghu' }
-l['lgg'] = { nom = 'lougbara' }
-l['lgh'] = { nom = 'laghuu' }
-l['lgi'] = { nom = 'lengilu’' }
-l['lgk'] = { nom = 'neverver' }
-l['lgl'] = { nom = 'wala' }
-l['lgm'] = { nom = 'lega-mwenga' }
-l['lgn'] = { nom = 'opuuo' }
-l['lgq'] = { nom = 'logba' }
-l['lgr'] = { nom = 'lengo' }
-l['lgt'] = { nom = 'pahi' }
-l['lgu'] = { nom = 'longgu' }
-l['lgz'] = { nom = 'ligenza' }
-l['lha'] = { nom = 'laha (Vietnam)', tri = 'laha Vietnam' }
-l['lhh'] = { nom = 'laha (Indonésie)', tri = 'laha Indonésie' }
-l['lhi'] = { nom = 'lahu shi' }
-l['lhm'] = { nom = 'lhomi' }
-l['lhn'] = { nom = 'lahanan' }
-l['lhp'] = { nom = 'lhokpu' }
-l['lhs'] = { nom = 'mlahso' }
-l['lht'] = { nom = 'lo-toga' }
-l['lhu'] = { nom = 'lahu' }
-l['li'] = { nom = 'limbourgeois', wiktionnaire = true }
-l['lia'] = { nom = 'limba central et de l’Ouest', tri = 'limba central Ouest' }
-l['lib'] = { nom = 'likum' }
-l['liburnien'] = { nom = 'liburnien' }
-l['lic'] = { nom = 'hlaï' }
-l['lid'] = { nom = 'nyindrou' }
-l['lie'] = { nom = 'likila' }
-l['lif'] = { nom = 'limbou' }
-l['lig'] = { nom = 'ligbi' }
-l['light warlpiri'] = { nom = 'light warlpiri' }
-l['lih'] = { nom = 'lihir' }
-l['lii'] = { nom = 'limkhim' }
-l['lij-MC'] = { nom = 'monégasque' }
-l['lij-mc'] = { nom = 'monégasque' }
-l['lij'] = { nom = 'ligure' }
-l['lik'] = { nom = 'lika' }
-l['lil'] = { nom = 'lillooet' }
-l['lio'] = { nom = 'liki' }
-l['lip'] = { nom = 'sekpele' }
-l['liq'] = { nom = 'libido' }
-l['lir'] = { nom = 'anglais libérien' }
-l['lis'] = { nom = 'lisu' }
-l['lisum'] = { nom = 'lisum' }
-l['liu'] = { nom = 'logorik' }
-l['liv'] = { nom = 'livonien' }
-l['liw'] = { nom = 'col' }
-l['lix'] = { nom = 'liabuku' }
-l['liy'] = { nom = 'banda-bambari' }
-l['liz'] = { nom = 'libinza' }
-l['lizu'] = { nom = 'lizu' }
-l['lje'] = { nom = 'rampi' }
-l['lji'] = { nom = 'laiyolo' }
-l['ljl'] = { nom = 'li’o' }
-l['ljp'] = { nom = 'lampung' }
-l['lka'] = { nom = 'lakalei' }
-l['lkb'] = { nom = 'kabras' }
-l['lkc'] = { nom = 'kucong' }
-l['lkd'] = { nom = 'lakondê' }
-l['lke'] = { nom = 'kenyi' }
-l['lki'] = { nom = 'laki' }
-l['lkm'] = { nom = 'kalaamaya' }
-l['lkn'] = { nom = 'lakon' }
-l['lkt'] = { nom = 'lakota' }
-l['lku'] = { nom = 'kungkari' }
-l['lky'] = { nom = 'lokoya' }
-l['lla'] = { nom = 'lala-roba' }
-l['llb'] = { nom = 'lolo' }
-l['llc'] = { nom = 'lele (Guinée)', tri = 'lele Guinée' }
-l['lld'] = { nom = 'ladin' }
-l['lle'] = { nom = 'lele (Papouasie-Nouvelle-Guinée)', tri = 'lele Papouasie' }
-l['llj'] = { nom = 'ladji ladji' }
-l['llk'] = { nom = 'lelak' }
-l['lln'] = { nom = 'lele (Tchad)', tri = 'lele Tchad' }
-l['llp'] = { nom = 'éfaté du Nord', tri = 'éfaté Nord' }
-l['llq'] = { nom = 'lolak' }
-l['lls'] = { nom = 'langue des signes lituanienne', tri = 'signes lituanienne' }
-l['llu'] = { nom = 'lau' }
-l['lma'] = { nom = 'limba de l’Est', tri = 'limba Est' }
-l['lmb'] = { nom = 'merei' }
-l['lmc'] = { nom = 'limilngan' }
-l['lmd'] = { nom = 'lumun' }
-l['lme'] = { nom = 'lamé' }
-l['lmg'] = { nom = 'lamogai' }
-l['lmk'] = { nom = 'lamkang' }
-l['lml'] = { nom = 'raga' }
-l['lmn'] = { nom = 'lambadi' }
-l['lmo'] = { nom = 'lombard', wiktionnaire = true }
-l['lmp'] = { nom = 'limbum' }
-l['lmu'] = { nom = 'lamen' }
-l['lmw'] = { nom = 'miwok du lac', tri = 'miwok lac' }
-l['lmy'] = { nom = 'lamboya' }
-l['ln'] = { nom = 'lingala', wiktionnaire = true }
-l['lna'] = { nom = 'langbashe' }
-l['lnd'] = { nom = 'lundayeh' }
-l['lng'] = { nom = 'lombard (germanique)', tri = 'lombard germanique' }
-l['lnl'] = { nom = 'banda Sud central' }
-l['lnn'] = { nom = 'lorediakarkar' }
-l['lns'] = { nom = 'lamnso’' }
-l['lnu'] = { nom = 'longuda' }
-l['lo'] = { nom = 'laotien', wiktionnaire = true }
-l['loa'] = { nom = 'loloda' }
-l['loc'] = { nom = 'inonhan' }
-l['loe'] = { nom = 'saluan' }
-l['log'] = { nom = 'logo' }
-l['loh'] = { nom = 'narim' }
-l['loi'] = { nom = 'loma (Côte d’Ivoire)', tri = 'loma Côte divoire' }
-l['loj'] = { nom = 'lou' }
-l['lok'] = { nom = 'loko' }
-l['lol'] = { nom = 'lomongo' }
-l['lom'] = { nom = 'loma' }
-l['lon'] = { nom = 'lomwe du Malawi', tri = 'lonwe malawi' }
-l['lop'] = { nom = 'lopa' }
-l['lor'] = { nom = 'téén' }
-l['lorrain'] = { nom = 'lorrain' }
-l['los'] = { nom = 'loniu' }
-l['lot'] = { nom = 'otuho' }
-l['lou'] = { nom = 'créole louisianais' }
-l['low'] = { nom = 'tampias lobu' }
-l['loz'] = { nom = 'lozi' }
-l['lpa'] = { nom = 'lelepa' }
-l['lpe'] = { nom = 'lepki' }
-l['lpo'] = { nom = 'lipo' }
-l['lpx'] = { nom = 'lopit' }
-l['lra'] = { nom = 'rara bakati’' }
-l['lrc'] = { nom = 'lori du Nord', tri = 'lori Nord' }
-l['lre'] = { nom = 'laurentien' }
-l['lrl'] = { nom = 'larestani' }
-l['lro'] = { nom = 'laro' }
-l['lrr'] = { nom = 'yamphu du Sud', tri = 'yamphu Sud' }
-l['lrv'] = { nom = 'larevat' }
-l['lrz'] = { nom = 'lemerig' }
-l['lsa'] = { nom = 'lasguerdi' }
-l['lsd'] = { nom = 'lishana deni' }
-l['lse'] = { nom = 'lusengo' }
-l['lsh'] = { nom = 'lish' }
-l['lsi'] = { nom = 'lashi' }
-l['lsl'] = { nom = 'langue des signes lettonne', tri = 'signes lettonne' }
-l['lsm'] = { nom = 'saamia' }
-l['lsr'] = { nom = 'aruop' }
-l['lt'] = { nom = 'lituanien', wiktionnaire = true }
-l['ltc'] = { nom = 'chinois médiéval' }
-l['ltg'] = { nom = 'latgalien' }
-l['lti'] = { nom = 'leti (Indonésie)', tri = 'leti Indonésie' }
-l['ltn'] = { nom = 'latundê' }
-l['lts'] = { nom = 'lutachoni' }
-l['lu'] = { nom = 'kiluba' }
-l['lua'] = { nom = 'luba-lulua' }
-l['luc'] = { nom = 'aringa' }
-l['lucanien'] = { nom = 'lucanien' }
-l['lud'] = { nom = 'ludien' }
-l['lue'] = { nom = 'luvale' }
-l['luh'] = { nom = 'leizhounais' }
-l['lui'] = { nom = 'luiseño' }
-l['lui-jua'] = { nom = 'juaneño' }
-l['lul'] = { nom = 'olu’bo' }
-l['lun'] = { nom = 'lunda' }
-l['luo'] = { nom = 'luo (Kenya, Tanzanie)', tri = 'luo Kenya Tanzanie' }
-l['lup'] = { nom = 'lumbu' }
-l['lur'] = { nom = 'laura' }
-l['lus'] = { nom = 'mizo' }
-l['lut'] = { nom = 'lushootseed' }
-l['luu'] = { nom = 'lumba-yakkha' }
-l['luv'] = { nom = 'luwati' }
-l['luw'] = { nom = 'luo (Cameroun)', tri = 'luo Cameroun' }
-l['luy'] = { nom = 'luhya' }
-l['luz'] = { nom = 'lori du Sud', tri = 'lori Sud' }
-l['lv'] = { nom = 'letton', wiktionnaire = true }
-l['lva'] = { nom = 'makuva' }
-l['lvk'] = { nom = 'lavukaleve' }
-l['lwg'] = { nom = 'wanga' }
-l['lwl'] = { nom = 'lawa de l’Est', tri = 'lawa Est' }
-l['lwm'] = { nom = 'laomien' }
-l['lwo'] = { nom = 'luwo' }
-l['lww'] = { nom = 'lewo' }
-l['lyg'] = { nom = 'lyngngam' }
-l['lzh'] = { nom = 'chinois classique', wmlien = 'zh-classical' }
-l['lzl'] = { nom = 'litzlitz' }
-l['lzn'] = { nom = 'leinong' }
-l['lzz'] = { nom = 'laze' }
-l['ma pnaan'] = { nom = 'ma pnaan' }
-l['maa'] = { nom = 'mazatèque d’Eloxochitlán', tri = 'mazatèque eloxochitlán' }
-l['mad'] = { nom = 'madourais', wiktionnaire = true }
-l['mae'] = { nom = 'bo-rukul' }
-l['maf'] = { nom = 'mafa' }
-l['mag'] = { nom = 'magahi' }
-l['mai'] = { nom = 'maithili' }
-l['maj'] = { nom = 'mazatèque de Jalapa de Díaz', tri = 'mazatèque Jalapa de Díaz' }
-l['mak'] = { nom = 'makassar' }
-l['mam'] = { nom = 'mam' }
-l['man'] = { nom = 'mandingue' }
-l['map'] = { nom = 'langues austronésiennes', tri = 'austronésiennes langues', isGroup = true }
-l['map-bms'] = { nom = 'banyumasan' }
-l['maq'] = { nom = 'mazatèque de Chiquihuitlán', tri = 'mazatèque Chiquihuitlán' }
-l['mas'] = { nom = 'massaï' }
-l['mat'] = { nom = 'matlatzinca de San Francisco', tri = 'matlatzinca San Francisco' }
-l['mtm'] = { nom = 'mator' }
-l['mau'] = { nom = 'mazatèque de Huautla', tri = 'mazatèque Huautla' }
-l['mav'] = { nom = 'mawé-sateré' }
-l['maw'] = { nom = 'mampruli' }
-l['max'] = { nom = 'malais de Ternate', tri = 'malais Ternate' }
-l['may'] = { nom = 'may' }
-l['mayennais'] = { nom = 'mayennais' }
-l['maz'] = { nom = 'mazahua central' }
-l['mba'] = { nom = 'higaonon' }
-l['mbb'] = { nom = 'manobo de l’Ouest de Bukidnon', tri = 'manobo Bukidnon Ouest' }
-l['mbc'] = { nom = 'macushi' }
-l['mbd'] = { nom = 'manobo de Dibabawon', tri = 'manobo Dibabawon' }
-l['mbe'] = { nom = 'molala' }
-l['mbf'] = { nom = 'malais baba' }
-l['mbh'] = { nom = 'mangseng' }
-l['mbi'] = { nom = 'manobo d’Ilianen', tri = 'manobo Ilianen' }
-l['mbj'] = { nom = 'nadëb' }
-l['mbk'] = { nom = 'malol' }
-l['mbl'] = { nom = 'maxakalí' }
-l['mbn'] = { nom = 'macaguán' }
-l['mbo'] = { nom = 'mbo (Cameroun)', tri = 'mbo Cameroun' }
-l['mbp'] = { nom = 'damana' }
-l['mbq'] = { nom = 'maisin' }
-l['mbr'] = { nom = 'nukak' }
-l['mbs'] = { nom = 'manobo de Sarangani', tri = 'manobo Sarangani' }
-l['mbt'] = { nom = 'manobo de Matigsalug', tri = 'manobo Matigsalug' }
-l['mbu'] = { nom = 'mbula-bwazza' }
-l['mbw'] = { nom = 'maring' }
-l['mby'] = { nom = 'memoni' }
-l['mca'] = { nom = 'maká' }
-l['mcb'] = { nom = 'machiguenga' }
-l['mcd'] = { nom = 'marinahua' }
-l['mcf'] = { nom = 'matsés' }
-l['mcg'] = { nom = 'mapoyo' }
-l['mch'] = { nom = 'de’cuana' }
-l['mci'] = { nom = 'mesem' }
-l['mcj'] = { nom = 'mvanip' }
-l['mck'] = { nom = 'mbunda' }
-l['mcl'] = { nom = 'macaguaje' }
-l['mcm'] = { nom = 'kristang' }
-l['mcn'] = { nom = 'masa' }
-l['mco'] = { nom = 'mixe de Coatlán', tri = 'mixe Coatlán' }
-l['mcp'] = { nom = 'makaa' }
-l['mcr'] = { nom = 'menya' }
-l['mcs'] = { nom = 'mambai' }
-l['mct'] = { nom = 'manguissa' }
-l['mcu'] = { nom = 'ba mambila' }
-l['mcv'] = { nom = 'minanibai' }
-l['mcw'] = { nom = 'mawa' }
-l['mcx'] = { nom = 'mpiemo' }
-l['mcy'] = { nom = 'watut du Sud', tri = 'watut Sud' }
-l['mcz'] = { nom = 'mawan' }
-l['mda'] = { nom = 'mada (Nigeria)', tri = 'mada Nigeria' }
-l['mdb'] = { nom = 'morigi' }
-l['mdc'] = { nom = 'male' }
-l['mdd'] = { nom = 'mbum' }
-l['mde'] = { nom = 'maba (Tchad)', tri = 'maba Tchad' }
-l['mdf'] = { nom = 'mokcha' }
-l['mdg'] = { nom = 'massalat' }
-l['mdh'] = { nom = 'maguindanao' }
-l['mdi'] = { nom = 'mamvu' }
-l['mdk'] = { nom = 'mangbutu' }
-l['mdm'] = { nom = 'mayogo' }
-l['mdp'] = { nom = 'mbala' }
-l['mdr'] = { nom = 'mandar' }
-l['mds'] = { nom = 'maria (Papouasie-Nouvelle-Guinée)', tri = 'maria Papouasie' }
-l['mdw'] = { nom = 'mbochi' }
-l['mdx'] = { nom = 'dizi' }
-l['mdy'] = { nom = 'maale' }
-l['mea'] = { nom = 'menka' }
-l['meb'] = { nom = 'ikobi' }
-l['mec'] = { nom = 'mara' }
-l['med'] = { nom = 'melpa' }
-l['mee'] = { nom = 'mengen' }
-l['mef'] = { nom = 'megam' }
-l['meh'] = { nom = 'mixtèque de Tlaxiaco du Sud-Ouest', tri = 'mixtèque Tlaxiaco Sud Ouest' }
-l['mei'] = { nom = 'midob' }
-l['mej'] = { nom = 'meyah' }
-l['mek'] = { nom = 'mekeo' }
-l['mel'] = { nom = 'melanau central' }
-l['mem'] = { nom = 'mangala' }
-l['men'] = { nom = 'mendé' }
-l['menien'] = { nom = 'menien' }
-l['meo'] = { nom = 'malais kedah' }
-l['me’phaa de Huehuetepec'] = { nom = 'me’phaa de Huehuetepec', tri = 'mephaa Huehuetepec' }
-l['me’phaa de Huitzapula'] = { nom = 'me’phaa de Huitzapula', tri = 'mephaa Huitzapula' }
-l['me’phaa de Nanzintla'] = { nom = 'me’phaa de Nanzintla', tri = 'mephaa Nanzintla' }
-l['me’phaa de Teocuitlapa'] = { nom = 'me’phaa de Teocuitlapa', tri = 'mephaa Teocuitlapa' }
-l['me’phaa de Zapotitlan Tablas'] = { nom = 'me’phaa de Zapotitlan Tablas', tri = 'mephaa Zapotitlan Tablas' }
-l['meq'] = { nom = 'mere' }
-l['mer'] = { nom = 'meru' }
-l['mes'] = { nom = 'masmaje' }
-l['met'] = { nom = 'mato' }
-l['meu'] = { nom = 'motou' }
-l['mev'] = { nom = 'mano' }
-l['mew'] = { nom = 'maaka' }
-l['mey'] = { nom = 'hassanya' }
-l['mez'] = { nom = 'menominee' }
-l['mfa'] = { nom = 'malais de Pattani', tri = 'malais Pattani' }
-l['mfe'] = { nom = 'créole mauricien' }
-l['mff'] = { nom = 'naki' }
-l['mfg'] = { nom = 'mogofin' }
-l['mfh'] = { nom = 'matal' }
-l['mfi'] = { nom = 'wandala' }
-l['mfj'] = { nom = 'mefele' }
-l['mfn'] = { nom = 'mbembe Cross River' }
-l['mfp'] = { nom = 'malais de Makassar', tri = 'malais Makassar' }
-l['mfq'] = { nom = 'moba' }
-l['mfr'] = { nom = 'marithiel' }
-l['mfv'] = { nom = 'manjak', tri = 'manjaque' }
-l['mfx'] = { nom = 'melo' }
-l['mfy'] = { nom = 'mayo' }
-l['mfz'] = { nom = 'mabaan' }
-l['mg'] = { nom = 'malgache', wiktionnaire = true }
-l['mga'] = { nom = 'moyen irlandais', tri = 'irlandais moyen' }
-l['mgc'] = { nom = 'morokodo' }
-l['mgd'] = { nom = 'moru' }
-l['mgf'] = { nom = 'maklew' }
-l['mgh'] = { nom = 'makhuwa-meetto' }
-l['mgi'] = { nom = 'lijili' }
-l['mgj'] = { nom = 'abureni' }
-l['mgk'] = { nom = 'mawes' }
-l['mgm'] = { nom = 'mambae' }
-l['mgo'] = { nom = 'meta’' }
-l['mgp'] = { nom = 'magar oriental' }
-l['mgq'] = { nom = 'malila' }
-l['mgr'] = { nom = 'mambwe-lungu' }
-l['mgs'] = { nom = 'manda (Tanzanie)', tri = 'manda Tanzanie' }
-l['mgv'] = { nom = 'matengo' }
-l['mgw'] = { nom = 'matumbi' }
-l['mgz'] = { nom = 'mbugwe' }
-l['mh'] = { nom = 'marshallais', wiktionnaire = true }
-l['mha'] = { nom = 'manda (Inde)', tri = 'manda Inde' }
-l['mhb'] = { nom = 'mahongwe' }
-l['mhc'] = { nom = 'mocho' }
-l['mhe'] = { nom = 'mah meri' }
-l['mhi'] = { nom = 'ma’di' }
-l['mhj'] = { nom = 'moghol' }
-l['mhl'] = { nom = 'mauwake' }
-l['mhm'] = { nom = 'makhuwa-moniga' }
-l['mhn'] = { nom = 'mochène' }
-l['mho'] = { nom = 'mashi (Zambie)', tri = 'mashi Zambie' }
-l['mhp'] = { nom = 'malais balinais' }
-l['mhq'] = { nom = 'mandan' }
-l['mhr'] = { nom = 'mari de l’Est', tri = 'mari Est' }
-l['mhs'] = { nom = 'buru' }
-l['mht'] = { nom = 'mandahuaca' }
-l['mhu'] = { nom = 'digaro' }
-l['mhx'] = { nom = 'maru' }
-l['mhy'] = { nom = 'ma’anyan' }
-l['mhz'] = { nom = 'moor' }
-l['mi'] = { nom = 'maori', wiktionnaire = true }
-l['mia'] = { nom = 'miami' }
-l['miao de Xiaozhang'] = { nom = 'miao de Xiaozhang', tri = 'miao Xiaozhang' }
-l['mib'] = { nom = 'mixtèque d’Atatláhuca', tri = 'mixtèque Atatláhuca' }
-l['mic'] = { nom = 'micmac' }
-l['mid'] = { nom = 'néo-mandéen', tri = 'mandéen neo' }
-l['mie'] = { nom = 'mixtèque d’Ocotepec', tri = 'mixtèque ocotepec' }
-l['mif'] = { nom = 'mofu-gudur' }
-l['mig'] = { nom = 'mixtèque de San Miguel El Grande', tri = 'mixtèque San Miguel El Grande' }
-l['mih'] = { nom = 'mixtèque de Chayuco', tri = 'mixtèque Chayuco' }
-l['mii'] = { nom = 'mixtèque de Chigmecatitlán', tri = 'mixtèque Chigmecatitlán' }
-l['mij'] = { nom = 'abar' }
-l['mik'] = { nom = 'mikasuki' }
-l['mik-hit'] = { nom = 'hitchiti' }
-l['mil'] = { nom = 'mixtèque de Peñoles', tri = 'mixtèque Peñoles' }
-l['milang'] = { nom = 'milang' }
-l['mim'] = { nom = 'mixtèque d’Alacatlatzala', tri = 'mixtèque Alacatlatzala' }
-l['min'] = { nom = 'minangkabau', wiktionnaire = true }
-l['mio'] = { nom = 'mixtèque de Pinotepa Nacional', tri = 'mixtèque Pinotepa Nacional' }
-l['mip'] = { nom = 'mixtèque d’Apasco-Apoala', tri = 'mixtèque Apasco Apoala' }
-l['miq'] = { nom = 'miskito' }
-l['mir'] = { nom = 'mixe de l’Isthme', tri = 'mixe Isthme' }
-l['miri'] = { nom = 'miri' }
-l['mit'] = { nom = 'mixtèque du sud de Puebla', tri = 'mixtèque Puebla Sud' }
-l['mithaka'] = { nom = 'mithaka' }
-l['miw'] = { nom = 'akoye' }
-l['mix'] = { nom = 'mixtèque de Mixtepec', tri = 'mixtèque Mixtepec' }
-l['miy'] = { nom = 'mixtèque d’Ayutla', tri = 'mixtèque Ayutla' }
-l['miz'] = { nom = 'mixtèque de Coatzospan', tri = 'mixtèque Coatzospan' }
-l['mjc'] = { nom = 'mixtèque de San Juan Colorado', tri = 'mixtèque San Juan Colorado' }
-l['mjd'] = { nom = 'konkow' }
-l['mje'] = { nom = 'muskum' }
-l['mjg'] = { nom = 'monguor' }
-l['mjh'] = { nom = 'mwera (Nyasa)', tri = 'mwera Nyasa' }
-l['mji'] = { nom = 'kim mun' }
-l['mjj'] = { nom = 'mawak' }
-l['mjm'] = { nom = 'medebur' }
-l['mjr'] = { nom = 'malavedan' }
-l['mjt'] = { nom = 'sauria pahahria' }
-l['mjv'] = { nom = 'mannan' }
-l['mjw'] = { nom = 'karbi' }
-l['mjx'] = { nom = 'mahali' }
-l['mjy'] = { nom = 'mohican' }
-l['mk'] = { nom = 'macédonien', wiktionnaire = true }
-l['mkc'] = { nom = 'siliput' }
-l['mkf'] = { nom = 'miya' }
-l['mkg'] = { nom = 'mak (Chine)', tri = 'mak Chine' }
-l['mkh'] = { nom = 'langues môn-khmères', tri = 'môn khmères langues', isGroup = true }
-l['mkj'] = { nom = 'mokil' }
-l['mkm'] = { nom = 'moklen' }
-l['mkn'] = { nom = 'malais de Kupang', tri = 'malais Kupang' }
-l['mkp'] = { nom = 'moikodi' }
-l['mkq'] = { nom = 'miwok de la baie', tri = 'miwok baie' }
-l['mks'] = { nom = 'mixtèque de Silacayoapan', tri = 'mixtèque Silacayoapan' }
-l['mku'] = { nom = 'konyanka' }
-l['mkv'] = { nom = 'mavea' }
-l['mkw'] = { nom = 'munukutuba' }
-l['mkx'] = { nom = 'quinamiguin' }
-l['mky'] = { nom = 'makian de l’Est', tri = 'makian Est' }
-l['mkz'] = { nom = 'makasae' }
-l['ml'] = { nom = 'malayalam', wiktionnaire = true }
-l['mla'] = { nom = 'tamambo' }
-l['mlc'] = { nom = 'cao lan' }
-l['mle'] = { nom = 'manambu' }
-l['mlf'] = { nom = 'mal' }
-l['mlh'] = { nom = 'mape' }
-l['mlj'] = { nom = 'milju' }
-l['mlk'] = { nom = 'ilwana' }
-l['mll'] = { nom = 'malua bay' }
-l['mlm'] = { nom = 'mulam' }
-l['mlp'] = { nom = 'bargam' }
-l['mlq'] = { nom = 'malinké occidental' }
-l['mlr'] = { nom = 'vamé' }
-l['mls'] = { nom = 'masalit' }
-l['mlu'] = { nom = 'toqabaqita' }
-l['mlv'] = { nom = 'mwotlap' }
-l['mlw'] = { nom = 'moloko' }
-l['mlx'] = { nom = 'naha’ai' }
-l['mma'] = { nom = 'mama' }
-l['mmb'] = { nom = 'momina' }
-l['mmc'] = { nom = 'mazahua du Michoacán', tri = 'mazahua Michoacán' }
-l['mmd'] = { nom = 'maonan' }
-l['mme'] = { nom = 'mae' }
-l['mmf'] = { nom = 'mundat' }
-l['mmg'] = { nom = 'ambrym du Nord', tri = 'ambrym Nord' }
-l['mmh'] = { nom = 'mehináku' }
-l['mmi'] = { nom = 'musar' }
-l['mmm'] = { nom = 'maii' }
-l['mmn'] = { nom = 'mamanwa' }
-l['mmp'] = { nom = 'siawi' }
-l['mmr'] = { nom = 'miao du Xiangxi occidental', tri = 'miao Xiangxi occidental' }
-l['mmt'] = { nom = 'malalamai' }
-l['mmu'] = { nom = 'mmaala' }
-l['mmw'] = { nom = 'emae' }
-l['mmx'] = { nom = 'madak' }
-l['mmy'] = { nom = 'migaama' }
-l['mn'] = { nom = 'mongol', wiktionnaire = true }
-l['mna'] = { nom = 'mbula' }
-l['mnb'] = { nom = 'muna' }
-l['mnc'] = { nom = 'mandchou' }
-l['mnd'] = { nom = 'mondé' }
-l['mne'] = { nom = 'naba' }
-l['mnf'] = { nom = 'mundani' }
-l['mng'] = { nom = 'mnong de l’Est', tri = 'mnong Est' }
-l['mnh'] = { nom = 'mono (République démocratique du Congo)', tri = 'mono Congo démocratique' }
-l['mni'] = { nom = 'manipourî', wiktionnaire = true }
-l['mnj'] = { nom = 'munji' }
-l['mnk'] = { nom = 'mandinka' }
-l['mnl'] = { nom = 'tiale' }
-l['mno'] = { nom = 'langues manobos', tri = 'manobos langues', isGroup = true }
-l['mnp'] = { nom = 'minbei' }
-l['mnr'] = { nom = 'mono (États-Unis d’Amérique)', tri = 'mono États Unis' }
-l['mns'] = { nom = 'mansi' }
-l['mnu'] = { nom = 'mer' }
-l['mnv'] = { nom = 'rennellais' }
-l['mnw'] = { nom = 'môn', wiktionnaire = true }
-l['mnx'] = { nom = 'manikion' }
-l['mnz'] = { nom = 'moni' }
-l['mo'] = { nom = 'moldave' }
-l['moa'] = { nom = 'mwan' }
-l['moc'] = { nom = 'mocoví' }
-l['mod'] = { nom = 'mobilien' }
-l['moe'] = { nom = 'innu' }
-l['moésien'] = { nom = 'moésien' }
-l['mof'] = { nom = 'mohegan-montauk-narragansett' }
-l['mog'] = { nom = 'mongondow' }
-l['moh'] = { nom = 'mohawk' }
-l['moi'] = { nom = 'mboi' }
-l['mok'] = { nom = 'morori' }
-l['mom'] = { nom = 'mangue' }
-l['monégasque'] = { nom = 'monégasque' }
-l['moo'] = { nom = 'monom' }
-l['mop'] = { nom = 'mopan' }
-l['mor'] = { nom = 'moro' }
-l['mos'] = { nom = 'moré' }
-l['mot'] = { nom = 'barí' }
-l['mou'] = { nom = 'mogum' }
-l['mov'] = { nom = 'mohave' }
-l['mow'] = { nom = 'moï (Congo)', tri = 'moï Congo' }
-l['mox'] = { nom = 'molima' }
-l['moy'] = { nom = 'shakacho' }
-l['moyen danois'] = { nom = 'moyen danois', tri = 'danois moyen' }
-l['moyen écossais'] = { nom = 'moyen écossais', tri = 'écossais moyen' }
-l['moyen japonais'] = { nom = 'moyen japonais', tri = 'japonais moyen' }
-l['moyen khmer'] = { nom = 'moyen khmer', tri = 'khmer moyen' }
-l['moyen môn'] = { nom = 'moyen môn', tri = 'môn moyen' }
-l['moyen okinawaïen'] = { nom = 'moyen okinawaïen', tri = 'okinawaïen moyen' }
-l['moyen polonais'] = { nom = 'moyen polonais', tri = 'polonais moyen' }
-l['moyfaw'] = { nom = 'moyfaw' }
-l['moz'] = { nom = 'gergiko' }
-l['mpa'] = { nom = 'mpoto' }
-l['mpb'] = { nom = 'mullukmulluk' }
-l['mpc'] = { nom = 'mangarayi' }
-l['mpd'] = { nom = 'machineri' }
-l['mpe'] = { nom = 'majang' }
-l['mpg'] = { nom = 'marba' }
-l['mph'] = { nom = 'maung' }
-l['mpi'] = { nom = 'mpade' }
-l['mpj'] = { nom = 'martu wangka' }
-l['mpk'] = { nom = 'mbara (Tchad)', tri = 'mbara Tchad' }
-l['mpl'] = { nom = 'watut central' }
-l['mpm'] = { nom = 'mixtèque de Yosondúa', tri = 'mixtèque Yosondúa' }
-l['mpo'] = { nom = 'miu' }
-l['mpp'] = { nom = 'migabac' }
-l['mpq'] = { nom = 'matís' }
-l['mpr'] = { nom = 'vangunu' }
-l['mps'] = { nom = 'dadibi' }
-l['mpt'] = { nom = 'mian' }
-l['mpu'] = { nom = 'makuráp' }
-l['mpv'] = { nom = 'mungkip' }
-l['mpz'] = { nom = 'mpi' }
-l['mqb'] = { nom = 'mbuko' }
-l['mqe'] = { nom = 'matepi' }
-l['mqf'] = { nom = 'momuna' }
-l['mqj'] = { nom = 'mamasa' }
-l['mqm'] = { nom = 'marquisien du Sud', tri = 'marquisien Sud' }
-l['mqn'] = { nom = 'moronene' }
-l['mqo'] = { nom = 'modole' }
-l['mqp'] = { nom = 'manipa' }
-l['mqq'] = { nom = 'minokok' }
-l['mqr'] = { nom = 'mander' }
-l['mqs'] = { nom = 'makian de l’Ouest', tri = 'makian Ouest' }
-l['mqu'] = { nom = 'mandari' }
-l['mqv'] = { nom = 'mosimo' }
-l['mqw'] = { nom = 'murupi' }
-l['mqx'] = { nom = 'mamuju' }
-l['mqy'] = { nom = 'manggarai' }
-l['mqz'] = { nom = 'pano-malasanga' }
-l['mr'] = { nom = 'marathe', wiktionnaire = true }
-l['mra'] = { nom = 'mlabri' }
-l['mrb'] = { nom = 'sungwadia' }
-l['mrc'] = { nom = 'maricopa' }
-l['mrd'] = { nom = 'magar de l’Ouest', tri = 'magar Ouest' }
-l['mre'] = { nom = 'langue des signes de Martha’s Vineyard', tri = 'signes Marthas Vineyard' }
-l['mrf'] = { nom = 'elseng' }
-l['mrg'] = { nom = 'mising' }
-l['mrh'] = { nom = 'mara chin' }
-l['mrj'] = { nom = 'mari de l’Ouest', tri = 'mari Ouest' }
-l['mrk'] = { nom = 'hmwaveke' }
-l['mrl'] = { nom = 'mortlock' }
-l['mrm'] = { nom = 'mwerlap' }
-l['mrn'] = { nom = 'cheke holo' }
-l['mro'] = { nom = 'mru' }
-l['mrp'] = { nom = 'morouas' }
-l['mrq'] = { nom = 'marquisien du Nord', tri = 'marquisien Nord' }
-l['mrr'] = { nom = 'maria (Inde)', tri = 'maria Inde' }
-l['mrs'] = { nom = 'maragus' }
-l['mrt'] = { nom = 'margi' }
-l['mru'] = { nom = 'mono (Cameroun)', tri = 'mono Cameroun' }
-l['mrv'] = { nom = 'mangarévien' }
-l['mrw'] = { nom = 'maranao' }
-l['mrx'] = { nom = 'maremgi' }
-l['mry'] = { nom = 'mandaya' }
-l['mrz'] = { nom = 'marind' }
-l['ms'] = { nom = 'malais', wiktionnaire = true }
-l['msb'] = { nom = 'masbatenyo' }
-l['msc'] = { nom = 'sankaran' }
-l['msd'] = { nom = 'langue des signes maya de Yucatec', tri = 'signes maya Yucatec' }
-l['mse'] = { nom = 'moussey' }
-l['msf'] = { nom = 'mekwei' }
-l['msg'] = { nom = 'moraid' }
-l['msj'] = { nom = 'ma (Congo-Kinshasa)', tri = 'ma Congo démocratique' }
-l['msk'] = { nom = 'mansaka' }
-l['msl'] = { nom = 'molof' }
-l['msm'] = { nom = 'manobo agusan' }
-l['msn'] = { nom = 'vurës' }
-l['mso'] = { nom = 'mombum' }
-l['msq'] = { nom = 'caac' }
-l['msu'] = { nom = 'musom' }
-l['mt'] = { nom = 'maltais', wiktionnaire = true }
-l['mta'] = { nom = 'manobo de Cotabato', tri = 'manobo Cotabato' }
-l['mtb'] = { nom = 'agni morofoué' }
-l['mtc'] = { nom = 'munit' }
-l['mtd'] = { nom = 'mualang' }
-l['mte'] = { nom = 'mono (Salomon)', tri = 'mono Salomon' }
-l['mtf'] = { nom = 'murik (Papouasie-Nouvelle-Guinée)', tri = 'murik Papouasie' }
-l['mtg'] = { nom = 'una' }
-l['mth'] = { nom = 'munggui' }
-l['mti'] = { nom = 'maiwa (Papouasie-Nouvelle-Guinée)', tri = 'maiwa Papouasie' }
-l['mtj'] = { nom = 'moskona' }
-l['mtl'] = { nom = 'montol' }
-l['mtn'] = { nom = 'matagalpa' }
-l['mto'] = { nom = 'mixe de Totontepec', tri = 'mixe Totontepec' }
-l['mtp'] = { nom = 'wichi' }
-l['mtq'] = { nom = 'muong' }
-l['mtt'] = { nom = 'mota' }
-l['mtu'] = { nom = 'mixtèque de Tututepec', tri = 'mixtèque Tututepec' }
-l['mtv'] = { nom = 'asaro’o' }
-l['mty'] = { nom = 'nabi' }
-l['mua'] = { nom = 'moundang' }
-l['mub'] = { nom = 'moubi' }
-l['muc'] = { nom = 'mbu’' }
-l['mud'] = { nom = 'aléoute de Medny', tri = 'aléoute Medny' }
-l['mug'] = { nom = 'mousgoum' }
-l['muh'] = { nom = 'mündü' }
-l['mui'] = { nom = 'musi' }
-l['muj'] = { nom = 'mabire' }
-l['mum'] = { nom = 'maiwala' }
-l['mun'] = { nom = 'langues moundas', tri = 'moundas langues', isGroup = true }
-l['mup'] = { nom = 'malvi' }
-l['muq'] = { nom = 'miao du Xiangxi oriental', tri = 'miao Xiangxi oriental' }
-l['mur'] = { nom = 'murle' }
-l['murut nabaay'] = { nom = 'murut nabaay' }
-l['mus'] = { nom = 'creek' }
-l['mus-sem'] = { nom = 'séminole' }
-l['mut'] = { nom = 'muria occidental' }
-l['muu'] = { nom = 'yaaku' }
-l['muv'] = { nom = 'muduva' }
-l['mux'] = { nom = 'bo-ung' }
-l['muy'] = { nom = 'muyang' }
-l['muz'] = { nom = 'mursi' }
-l['mva'] = { nom = 'manam' }
-l['mvb'] = { nom = 'mattole' }
-l['mvf'] = { nom = 'mongol de Chine', tri = 'mongol Chine' }
-l['mvi'] = { nom = 'miyako' }
-l['mvm'] = { nom = 'muya' }
-l['mvo'] = { nom = 'marovo' }
-l['mvp'] = { nom = 'duri' }
-l['mvq'] = { nom = 'moere' }
-l['mvr'] = { nom = 'marau' }
-l['mvt'] = { nom = 'mpotovoro' }
-l['mvv'] = { nom = 'murut tagol' }
-l['mvz'] = { nom = 'mesqan' }
-l['mwd'] = { nom = 'mudbura' }
-l['mwe'] = { nom = 'mwera (Chimwera)', tri = 'mwera Chimwera' }
-l['mwf'] = { nom = 'murrinh-patha' }
-l['mwg'] = { nom = 'aiklep' }
-l['mwi'] = { nom = 'ninde' }
-l['mwk'] = { nom = 'maninka de Kita', tri = 'maninka Kita' }
-l['mwl'] = { nom = 'mirandais' }
-l['mwm'] = { nom = 'sar' }
-l['mwo'] = { nom = 'maewo central' }
-l['mwp'] = { nom = 'kala lagaw ya' }
-l['mwr'] = { nom = 'marvari' }
-l['mwt'] = { nom = 'moken' }
-l['mww'] = { nom = 'hmong blanc' }
-l['mxb'] = { nom = 'mixtèque de Tezoatlán', tri = 'mixtèque Tezoatlán' }
-l['mxd'] = { nom = 'modang' }
-l['mxe'] = { nom = 'ifira-mele' }
-l['mxh'] = { nom = 'mvuba' }
-l['mxi'] = { nom = 'mozarabe' }
-l['mxj'] = { nom = 'miju' }
-l['mxk'] = { nom = 'monumbo' }
-l['mxn'] = { nom = 'moï (Indonésie)', tri = 'moï Indonésie' }
-l['mxp'] = { nom = 'mixe de Tlahuitoltepec', tri = 'mixe Tlahuitoltepec' }
-l['mxr'] = { nom = 'murik' }
-l['mxt'] = { nom = 'mixtèque de Jamiltepec', tri = 'mixtèque Jamiltepec' }
-l['mxx'] = { nom = 'mahou' }
-l['mxy'] = { nom = 'mixtèque de Nochixtlán du Sud-Est', tri = 'mixtèque Nochixtlán Sud Est' }
-l['mxz'] = { nom = 'masela central' }
-l['my'] = { nom = 'birman', wiktionnaire = true }
-l['myb'] = { nom = 'mbay' }
-l['mye'] = { nom = 'myènè' }
-l['myf'] = { nom = 'mao du Nord', tri = 'mao Nord' }
-l['myg'] = { nom = 'manta' }
-l['myh'] = { nom = 'makah' }
-l['myk'] = { nom = 'mamara' }
-l['myl'] = { nom = 'moma' }
-l['mym'] = { nom = 'me’en' }
-l['myn'] = { nom = 'langues mayas', tri = 'mayas langues', isGroup = true }
-l['myp'] = { nom = 'pirahã' }
-l['myq'] = { nom = 'maninka de forêt', tri = 'maninka forêt' }
-l['myr'] = { nom = 'muniche' }
-l['mysien'] = { nom = 'mysien' }
-l['myu'] = { nom = 'mundurukú' }
-l['myv'] = { nom = 'erza' }
-l['myw'] = { nom = 'muyuw' }
-l['myx'] = { nom = 'masaba' }
-l['myy'] = { nom = 'macuna' }
-l['mza'] = { nom = 'mixtèque de Santa María Zacatepec', tri = 'mixtèque Santa María Zacatepec' }
-l['mzb'] = { nom = 'mozabite' }
-l['mzd'] = { nom = 'malimba' }
-l['mzh'] = { nom = 'wichí lhamtés güisnay' }
-l['mzi'] = { nom = 'mazatèque d’Ixcatlán', tri = 'mazatèque Ixcatlán' }
-l['mzj'] = { nom = 'manya' }
-l['mzk'] = { nom = 'mambila de l’Ouest', tri = 'mambila Ouest' }
-l['mzm'] = { nom = 'mumuye' }
-l['mzn'] = { nom = 'mazandarani' }
-l['mzp'] = { nom = 'movima' }
-l['mzq'] = { nom = 'mori atas' }
-l['mzr'] = { nom = 'marúbo' }
-l['mzs'] = { nom = 'créole de Macao', tri = 'créole Macao' }
-l['mzv'] = { nom = 'manza' }
-l['mzw'] = { nom = 'deg' }
-l['na'] = { nom = 'nauruan', wiktionnaire = true }
-l['naa'] = { nom = 'namla' }
-l['nab'] = { nom = 'nambikwara du Sud', tri = 'nambikwara Sud' }
-l['nac'] = { nom = 'narak' }
-l['nad'] = { nom = 'nijadali' }
-l['nadou'] = { nom = 'nadou' }
-l['nae'] = { nom = 'naka’ela' }
-l['naf'] = { nom = 'nabak' }
-l['nag'] = { nom = 'nagamais' }
-l['nah'] = { nom = 'nahuatl', wiktionnaire = true }
-l['nai'] = { nom = 'langues nord-amérindiennes', tri = 'nord amérindiennes langues', isGroup = true }
-l['nak'] = { nom = 'nakanai' }
-l['nal'] = { nom = 'nalik' }
-l['nam'] = { nom = 'ngan’gityemerri' }
-l['nan'] = { nom = 'minnan', wmlien = 'zh-min-nan', wiktionnaire = true }
-l['nanga ira’'] = { nom = 'nanga ira’' }
-l['nao'] = { nom = 'naaba' }
-l['nap'] = { nom = 'napolitain' }
-l['naq'] = { nom = 'nama (khoe)', tri = 'naam khoe' }
-l['nar'] = { nom = 'iguta' }
-l['nas'] = { nom = 'naasioi' }
-l['nat'] = { nom = 'hungworo' }
-l['navarro-aragonais'] = { nom = 'navarro-aragonais' }
-l['na’vi'] = { nom = 'na’vi' }
-l['naw'] = { nom = 'nawuri' }
-l['nay'] = { nom = 'ngarrindjeri' }
-l['naz'] = { nom = 'nahuatl du Coatepec', tri = 'nahuatl Coatepec' }
-l['nb'] = { nom = 'norvégien (bokmål)', tri = 'norvégien bokmål', wmlien = 'no', wiktionnaire = true }
-l['nba'] = { nom = 'ngangela' }
-l['nbb'] = { nom = 'ndoe' }
-l['nbc'] = { nom = 'chang naga' }
-l['nbe'] = { nom = 'konyak' }
-l['nbh'] = { nom = 'ngamo' }
-l['nbi'] = { nom = 'mao' }
-l['nbk'] = { nom = 'nake' }
-l['nbn'] = { nom = 'kuri' }
-l['nbp'] = { nom = 'nnam' }
-l['nbr'] = { nom = 'numana-nunku-gbantu-numbu' }
-l['nbt'] = { nom = 'nah' }
-l['nbu'] = { nom = 'rongmei' }
-l['nbv'] = { nom = 'ngamambo' }
-l['nbw'] = { nom = 'ngbandi du Sud', tri = 'ngbandi Sud' }
-l['nca'] = { nom = 'iyo' }
-l['ncb'] = { nom = 'nicobarais central' }
-l['ncd'] = { nom = 'nachering' }
-l['nce'] = { nom = 'yale' }
-l['ncg'] = { nom = 'nisga’a' }
-l['nch'] = { nom = 'nahuatl de la Huasteca central', tri = 'nahuatl Huasteca central' }
-l['nci'] = { nom = 'nahuatl classique' }
-l['ncj'] = { nom = 'nahuatl du Puebla du Nord', tri = 'nahuatl Puebla Nord' }
-l['nck'] = { nom = 'nakara' }
-l['ncl'] = { nom = 'nahuatl du Michoacán', tri = 'nahuatl Michoacán' }
-l['ncr'] = { nom = 'ncane' }
-l['nct'] = { nom = 'naga des Chothe', tri = 'naga Chothe' }
-l['ncx'] = { nom = 'nahuatl du Puebla central', tri = 'nahuatl Puebla central' }
-l['ncz'] = { nom = 'natchez' }
-l['nd'] = { nom = 'ndébélé du Nord', tri = 'ndébélé Nord' }
-l['nda'] = { nom = 'ndasa' }
-l['ndc'] = { nom = 'ndau' }
-l['ndd'] = { nom = 'nde-nsele-nta' }
-l['ndg'] = { nom = 'ndengereko' }
-l['ndh'] = { nom = 'ndali' }
-l['ndi'] = { nom = 'samba leko' }
-l['ndj'] = { nom = 'ndamba' }
-l['ndm'] = { nom = 'ndam' }
-l['ndp'] = { nom = 'ndo' }
-l['ndr'] = { nom = 'ndoola' }
-l['nds'] = { nom = 'bas allemand', tri = 'allemand bas', wiktionnaire = true }
-l['nds-nl'] = { nom = 'bas-saxon néerlandais', tri = 'saxon bas néerlandais' }
-l['ndt'] = { nom = 'ndunga' }
-l['ndu'] = { nom = 'dugun' }
-l['ndv'] = { nom = 'ndut' }
-l['ndy'] = { nom = 'luto' }
-l['ndz'] = { nom = 'ndogo' }
-l['ne'] = { nom = 'népalais', wiktionnaire = true }
-l['nea'] = { nom = 'ngadha de l’Est', tri = 'ngadha Est' }
-l['neb'] = { nom = 'toura (Côte d’Ivoire)', tri = 'toura Côte divoire' }
-l['nec'] = { nom = 'nedebang' }
-l['ned'] = { nom = 'nde-gbite' }
-l['nee'] = { nom = 'nêlêmwa-nixumwak' }
-l['nef'] = { nom = 'néfamais' }
-l['neg'] = { nom = 'neguidal' }
-l['neh'] = { nom = 'nyenkha' }
-l['nei'] = { nom = 'néo-hittite', tri = 'hittite néo' }
-l['nej'] = { nom = 'neko' }
-l['nek'] = { nom = 'neku' }
-l['nem'] = { nom = 'nemi' }
-l['nen'] = { nom = 'nengone' }
-l['neo'] = { nom = 'ná-meo' }
-l['ner'] = { nom = 'yahadian' }
-l['nes'] = { nom = 'kinnauri de Bhoti', tri = 'kinnauri Bhoti' }
-l['net'] = { nom = 'nete' }
-l['neu'] = { nom = 'neo' }
-l['nev'] = { nom = 'nyaheun' }
-l['new'] = { nom = 'newari' }
-l['newari du Dolakha'] = { nom = 'newari du Dolakha', tri = 'newari Dolakha' }
-l['nex'] = { nom = 'neme' }
-l['ney'] = { nom = 'néyo' }
-l['nez'] = { nom = 'nez-percé' }
-l['nfa'] = { nom = 'dhao' }
-l['nfd'] = { nom = 'ahwaï' }
-l['nfl'] = { nom = 'äiwoo' }
-l['nfr'] = { nom = 'nafaanra' }
-l['ng'] = { nom = 'ndonga' }
-l['nga'] = { nom = 'ngbaka minagende' }
-l['ngadjuri'] = { nom = 'ngadjuri' }
-l['ngb'] = { nom = 'ngbandi du Nord', tri = 'ngbandi Nord' }
-l['ngc'] = { nom = 'ngombe (République démocratique du Congo)', tri = 'ngombe Congo démocratique' }
-l['ngd'] = { nom = 'ngando (République centrafricaine)', tri = 'ngando Centrafrique' }
-l['nge'] = { nom = 'mankon' }
-l['ngf'] = { nom = 'langues trans-néo-guinéennes', tri = 'guinéennes trans néo langues', isGroup = true }
-l['ngg'] = { nom = 'ngbaka manza' }
-l['ngh'] = { nom = 'nǀu', tri = 'nu' }
-l['ngi'] = { nom = 'ngizim' }
-l['ngj'] = { nom = 'ngie' }
-l['ngk'] = { nom = 'dalabon' }
-l['ngl'] = { nom = 'elomwe' }
-l['ngn'] = { nom = 'ngwo' }
-l['ngo'] = { nom = 'ngoni' }
-l['ngp'] = { nom = 'nguu' }
-l['ngr'] = { nom = 'engdewu' }
-l['ngs'] = { nom = 'gvoko' }
-l['ngt'] = { nom = 'ngeq' }
-l['ngu'] = { nom = 'nahuatl de Guerrero', tri = 'nahuatl Guerrero' }
-l['ngv'] = { nom = 'nagumi' }
-l['nha'] = { nom = 'nhanda' }
-l['nhb'] = { nom = 'beng' }
-l['nhc'] = { nom = 'nahuatl du Tabasco', tri = 'nahuatl Tabasco' }
-l['nhd'] = { nom = 'guarani paraguayen' } -- aussi gug
-l['nhe'] = { nom = 'nahuatl de la Huasteca oriental', tri = 'nahuatl Huasteca oriental' }
-l['nhg'] = { nom = 'nahuatl de Tetelcingo', tri = 'nahuatl Tetelcingo' }
-l['nhi'] = { nom = 'nahuatl de Zacatlán', tri = 'nahuatl Zacatlán' }
-l['nhk'] = { nom = 'nahuatl de l’isthme de Cosoleacaque', tri = 'nahuatl Cosoleacaque isthme' }
-l['nhm'] = { nom = 'nahuatl du Morelos', tri = 'nahuatl Morelos' }
-l['nhn'] = { nom = 'nahuatl central' }
-l['nho'] = { nom = 'takuu' }
-l['nhp'] = { nom = 'nahuatl de l’isthme de Pajapan', tri = 'nahuatl Pajapan isthme' }
-l['nhq'] = { nom = 'nahuatl de Huaxcaleca', tri = 'nahuatl Huaxcaleca' }
-l['nhr'] = { nom = 'naro' }
-l['nht'] = { nom = 'nahuatl de l’Ometepec', tri = 'nahuatl Ometepec' }
-l['nhu'] = { nom = 'noone' }
-l['nhv'] = { nom = 'nahuatl du Temascaltepec', tri = 'nahuatl Temascaltepec' }
-l['nhw'] = { nom = 'nahuatl de la Huasteca occidental', tri = 'nahuatl Huasteca occidental' }
-l['nhx'] = { nom = 'nahuatl de l’isthme de Mecayapan', tri = 'nahuatl Mecayapan isthme' }
-l['nhy'] = { nom = 'nahuatl de l’Oaxaca du Nord', tri = 'nahuatl Oaxaca nord' }
-l['nhz'] = { nom = 'nahuatl de Santa María la Alta', tri = 'nahuatl Santa María la Alta' }
-l['nia'] = { nom = 'nias', wiktionnaire = true }
-l['nib'] = { nom = 'nakame' }
-l['nic'] = { nom = 'langues nigéro-kordofaniennes', tri = 'nigéro kordofaniennes langues', isGroup = true }
-l['nid'] = { nom = 'ngandi' }
-l['nie'] = { nom = 'niellim' }
-l['nif'] = { nom = 'nek' }
-l['nig'] = { nom = 'ngalakan' }
-l['nih'] = { nom = 'nyiha (Tanzanie)', tri = 'nyiha Tanzanie' }
-l['nii'] = { nom = 'nii' }
-l['nij'] = { nom = 'ngaju dayak' }
-l['nik'] = { nom = 'grand nicobar' }
-l['nil'] = { nom = 'nila' }
-l['nim'] = { nom = 'nilamba' }
-l['nin'] = { nom = 'ninzo' }
-l['nio'] = { nom = 'nganassan' }
-l['nipissing'] = { nom = 'nipissing' }
-l['niq'] = { nom = 'nandi' }
-l['nir'] = { nom = 'nimboran' }
-l['nis'] = { nom = 'nimi' }
-l['nit'] = { nom = 'kolami du Sud-Est', tri = 'kolami Sud Est' }
-l['niu'] = { nom = 'niuéen' }
-l['niv'] = { nom = 'nivkh' }
-l['niw'] = { nom = 'nimo' }
-l['niy'] = { nom = 'ngiti' }
-l['niz'] = { nom = 'ningil' }
-l['nja'] = { nom = 'nzanyi' }
-l['njh'] = { nom = 'lotha' }
-l['nji'] = { nom = 'gudanji' }
-l['njj'] = { nom = 'njen' }
-l['njl'] = { nom = 'njalgulgule' }
-l['njm'] = { nom = 'angami' }
-l['njn'] = { nom = 'liangmai' }
-l['njo'] = { nom = 'ao' }
-l['njr'] = { nom = 'njerep' }
-l['njs'] = { nom = 'nisa' }
-l['njt'] = { nom = 'pidgin ndyuka-trio' }
-l['nkd'] = { nom = 'koireng' }
-l['nkg'] = { nom = 'nekgini' }
-l['nkh'] = { nom = 'khezha' }
-l['nki'] = { nom = 'thangal' }
-l['nkj'] = { nom = 'nakai' }
-l['nkk'] = { nom = 'nokuku' }
-l['nkm'] = { nom = 'namat' }
-l['nko'] = { nom = 'nkonya' }
-l['nkp'] = { nom = 'niuatoputapu' }
-l['nkr'] = { nom = 'nukuoro' }
-l['nkx'] = { nom = 'nkoroo' }
-l['nkz'] = { nom = 'nkari' }
-l['nl'] = { nom = 'néerlandais', portail = true, wiktionnaire = true }
-l['nla'] = { nom = 'ngombale' }
-l['nlc'] = { nom = 'nalca' }
-l['nld'] = { nom = 'flamand oriental' }
-l['nle'] = { nom = 'nyala de l’Est', tri = 'nyala Est' }
-l['nlg'] = { nom = 'gela' }
-l['nll'] = { nom = 'nihali' }
-l['nln'] = { nom = 'nahuatl du Durango', tri = 'nahuatl Durango' }
-l['nlu'] = { nom = 'nchumbulu' }
-l['nlv'] = { nom = 'nahuatl de l’Orizaba', tri = 'nahuatl Orizaba' }
-l['nly'] = { nom = 'nyamal' }
-l['nlz'] = { nom = 'nalögo' }
-l['nma'] = { nom = 'maram naga' }
-l['nmb'] = { nom = 'big nambas' }
-l['nme'] = { nom = 'mzieme naga' }
-l['nmf'] = { nom = 'tangkhul naga' }
-l['nmh'] = { nom = 'monsang' }
-l['nmk'] = { nom = 'namakura' }
-l['nml'] = { nom = 'ndemli' }
-l['nmm'] = { nom = 'manangba' }
-l['nmn'] = { nom = 'taa' }
-l['nmq'] = { nom = 'nambya' }
-l['nms'] = { nom = 'letemboi' }
-l['nmu'] = { nom = 'maidu du Nord-Est', tri = 'maidu Nord Est' }
-l['nmv'] = { nom = 'ngamini' }
-l['nmx'] = { nom = 'nama (papou)', tri = 'nama papou' }
-l['nmy'] = { nom = 'namuyi' }
-l['nmz'] = { nom = 'nawdm' }
-l['nn'] = { nom = 'norvégien (nynorsk)', tri = 'norvégien nynorsk', wmlien = 'nn', wiktionnaire = true }
-l['nna'] = { nom = 'nyangumarta' }
-l['nnb'] = { nom = 'kinande' }
-l['nnc'] = { nom = 'nancere' }
-l['nnd'] = { nom = 'ambae de l’Ouest' }
-l['nne'] = { nom = 'ngandyera' }
-l['nnf'] = { nom = 'ngaing' }
-l['nng'] = { nom = 'maring naga' }
-l['nnh'] = { nom = 'ngiemboon' }
-l['nnj'] = { nom = 'nyangatom' }
-l['nnm'] = { nom = 'namia' }
-l['nnn'] = { nom = 'ngueté' }
-l['nnp'] = { nom = 'naga wancho' }
-l['nnq'] = { nom = 'ngindo' }
-l['nnr'] = { nom = 'narungga' }
-l['nns'] = { nom = 'ningye' }
-l['nnt'] = { nom = 'nanticoke' }
-l['nnv'] = { nom = 'nugunu (Australie)', tri = 'nugunu Australie' }
-l['nnw'] = { nom = 'nuni du Sud', tri = 'nuni Sud' }
-l['no'] = { nom = 'norvégien', wiktionnaire = true }
-l['noa'] = { nom = 'wounaan' }
-l['noc'] = { nom = 'nuk' }
-l['nod'] = { nom = 'thaï du Nord', tri = 'thaï Nord' }
-l['noe'] = { nom = 'nimadi' }
-l['nog'] = { nom = 'nogaï' }
-l['noi'] = { nom = 'noiri' }
-l['noj'] = { nom = 'nonuya' }
-l['nok'] = { nom = 'nooksack' }
-l['nol'] = { nom = 'nomlaki' }
-l['nom'] = { nom = 'nokamán' }
-l['non'] = { nom = 'vieux norrois', tri = 'norrois vieux' }
-l['noo'] = { nom = 'nootka' }
-l['nop'] = { nom = 'numanggang' }
-l['nordique commun'] = { nom = 'nordique commun' }
-l['normand'] = { nom = 'normand', wmlien = 'nrm' }
-l['nos'] = { nom = 'yi oriental' }
-l['not'] = { nom = 'nomatsiguenga' }
-l['nou'] = { nom = 'ewage-notu' }
-l['nov'] = { nom = 'novial' }
-l['now'] = { nom = 'nyambo' }
-l['noz'] = { nom = 'nayi' }
-l['npa'] = { nom = 'nar phu' }
-l['nph'] = { nom = 'phom' }
-l['npl'] = { nom = 'nahuatl du Puebla du Sud-Est', tri = 'nahuatl Puebla Sud Est' }
-l['npn'] = { nom = 'mondropolon' }
-l['npy'] = { nom = 'napu' }
-l['nqm'] = { nom = 'ndom' }
-l['nqo'] = { nom = 'n’ko' }
-l['nr'] = { nom = 'ndébélé du Sud', tri = 'ndébélé Sud' }
-l['nra'] = { nom = 'ngom' }
-l['nrb'] = { nom = 'nara' }
-l['nrc'] = { nom = 'norique' }
-l['nre'] = { nom = 'naga des Rengma du Sud', tri = 'naga Rengma Sud' }
-l['nrg'] = { nom = 'narango' }
-l['nri'] = { nom = 'chokri' }
-l['nrk'] = { nom = 'ngarla' }
-l['nrl'] = { nom = 'ngarluma' }
-l['nrm'] = { nom = 'narum' }
-l['nrn'] = { nom = 'norne' }
-l['nrp'] = { nom = 'picène du Nord', tri = 'picène Nord' }
-l['nrr'] = { nom = 'nora' }
-l['nrt'] = { nom = 'kalapuya du Nord', tri = 'kalapuya Nord' }
-l['nru'] = { nom = 'mosuo' }
-l['nrx'] = { nom = 'ngurmbur' }
-l['nrz'] = { nom = 'lala' }
-l['nsa'] = { nom = 'naga de Sangtam', tri = 'naga Sangtam' }
-l['nsc'] = { nom = 'nshi' }
-l['nsf'] = { nom = 'nisu du Nord-Ouest', tri = 'nisu Nord Ouest' }
-l['nsg'] = { nom = 'ongamo' }
-l['nsh'] = { nom = 'ngoshie' }
-l['nsk'] = { nom = 'naskapi' }
-l['nsm'] = { nom = 'sema' }
-l['nsn'] = { nom = 'nehan' }
-l['nso'] = { nom = 'sotho du Nord', tri = 'sotho Nord' }
-l['nsq'] = { nom = 'miwok de la Sierra du Nord', tri = 'miwok Sierra Nord' }
-l['nst'] = { nom = 'tangsa' }
-l['nsu'] = { nom = 'nahuatl de la Sierra Negra', tri = 'nahuatl Sierra Negra' }
-l['nsw'] = { nom = 'navut' }
-l['nsy'] = { nom = 'nasal' }
-l['nsz'] = { nom = 'nisenan' }
-l['nte'] = { nom = 'nathembo' }
-l['nti'] = { nom = 'natioro' }
-l['ntj'] = { nom = 'ngaanyatjarra' }
-l['ntk'] = { nom = 'ikoma-nata-isenye' }
-l['ntm'] = { nom = 'naténi' }
-l['ntp'] = { nom = 'tepehuan du Nord', tri = 'tepehuan Nord' }
-l['ntu'] = { nom = 'natügu' }
-l['ntw'] = { nom = 'nottoway' }
-l['ntz'] = { nom = 'natanzi' }
-l['nua'] = { nom = 'yuanga-zuanga' }
-l['nub'] = { nom = 'langues nubiennes', tri = 'nubiennes langues', isGroup = true }
-l['nuc'] = { nom = 'nukuini' }
-l['nud'] = { nom = 'ngala' }
-l['nue'] = { nom = 'ngundu' }
-l['nuf'] = { nom = 'nusu' }
-l['nug'] = { nom = 'nungali' }
-l['nuh'] = { nom = 'ndunda' }
-l['nui'] = { nom = 'ngumbi' }
-l['nuj'] = { nom = 'nyole' }
-l['nuk'] = { nom = 'nuuchahnulth' }
-l['nul'] = { nom = 'nusa laut' }
-l['num'] = { nom = 'niuafo’ou' }
-l['nun'] = { nom = 'anong' }
-l['nunu de Bama'] = { nom = 'nunu de Bama', tri = 'nunu Bama' }
-l['nuo'] = { nom = 'nguôn' }
-l['nup'] = { nom = 'nupe-nupe-tako' }
-l['nuq'] = { nom = 'nukumanu' }
-l['nur'] = { nom = 'nukuria' }
-l['nus'] = { nom = 'naath' }
-l['nut'] = { nom = 'nung (Viêt Nam)', tri = 'nung Vietnam' }
-l['nutabe'] = { nom = 'nutabe' }
-l['nuu'] = { nom = 'ngbundu' }
-l['nuv'] = { nom = 'nuni du Nord', tri = 'nuni Nord' }
-l['nuw'] = { nom = 'nguluwan' }
-l['nux'] = { nom = 'mehek' }
-l['nuy'] = { nom = 'nunggubuyu' }
-l['nuz'] = { nom = 'nahuatl de Tlamacazapa', tri = 'nahuatl Tlamacazapa' }
-l['nv'] = { nom = 'navajo' }
-l['nvh'] = { nom = 'nasarian' }
-l['nvo'] = { nom = 'nyokon' }
-l['nwa'] = { nom = 'nawathinehena' }
-l['nwc'] = { nom = 'newari classique' }
-l['nwg'] = { nom = 'ngayawang' }
-l['nwi'] = { nom = 'tanna du Sud-Ouest', tri = 'tanna Sud Ouest' }
-l['nwm'] = { nom = 'nyamusa-molo' }
-l['nwr'] = { nom = 'nawaru' }
-l['nwy'] = { nom = 'nottoway-meherrin' }
-l['nxa'] = { nom = 'naueti' }
-l['nxd'] = { nom = 'ngando (République démocratique du Congo)', tri = 'ngando Congo démocratique' }
-l['nxe'] = { nom = 'nage' }
-l['nxg'] = { nom = 'ngadha' }
-l['nxq'] = { nom = 'naxi' }
-l['nxr'] = { nom = 'ninggerum' }
-l['nxu'] = { nom = 'narau' }
-l['nxx'] = { nom = 'nafri' }
-l['ny'] = { nom = 'nyanja' }
-l['nya'] = { nom = 'chichewa' }
-l['nyb'] = { nom = 'nyangbo' }
-l['nye'] = { nom = 'nyengo' }
-l['nyh'] = { nom = 'nyigina' }
-l['nyi'] = { nom = 'ama (Soudan)', tri = 'ama Soudan' }
-l['nyk'] = { nom = 'nyaneka' }
-l['nyl'] = { nom = 'nyeu' }
-l['nym'] = { nom = 'nyamwezi' }
-l['nyn'] = { nom = 'nyankore' }
-l['nyo'] = { nom = 'nyoro' }
-l['nyp'] = { nom = 'nyangi' }
-l['nyr'] = { nom = 'nyiha (Malawi)', tri = 'nyiha Malawi' }
-l['nys'] = { nom = 'noongar' }
-l['nyt'] = { nom = 'nyawaygi' }
-l['nyu'] = { nom = 'nyungwe' }
-l['nyx'] = { nom = 'nganyaywana' }
-l['nyy'] = { nom = 'nyakyusa-ngonde' }
-l['nzb'] = { nom = 'nzèbi' }
-l['nzi'] = { nom = 'nzéma' }
-l['nzu'] = { nom = 'téké-nzikou' }
-l['nzz'] = { nom = 'nanga' }
-l['oaa'] = { nom = 'orok' }
-l['oac'] = { nom = 'orotch' }
-l['oar'] = { nom = 'araméen ancien' }
-l['oav'] = { nom = 'avar ancien' }
-l['obi'] = { nom = 'obispeño' }
-l['obk'] = { nom = 'bontok du Sud', tri = 'bontok Sud' }
-l['obl'] = { nom = 'oblo' }
-l['obm'] = { nom = 'moabite' }
-l['obo'] = { nom = 'obo' }
-l['obr'] = { nom = 'vieux birman', tri = 'birman vieux' }
-l['obt'] = { nom = 'vieux breton', tri = 'breton vieux' }
-l['obu'] = { nom = 'obulom' }
-l['oc'] = { nom = 'occitan', wiktionnaire = true }
-l['oca'] = { nom = 'ocaina' }
-l['och'] = { nom = 'chinois archaïque' }
-l['ocm'] = { nom = 'vieux cham', tri = 'cham vieux' }
-l['oco'] = { nom = 'vieux cornique', tri = 'cornique vieux' }
-l['ocu'] = { nom = 'matlatzinca d’Atzingo', tri = 'matlatzinca Atzingo' }
-l['oda'] = { nom = 'odut' }
-l['odt'] = { nom = 'vieux néerlandais', tri = 'néerlandais vieux' }
-l['odu'] = { nom = 'odual' }
-l['ofo'] = { nom = 'ofo' }
-l['ofs'] = { nom = 'vieux frison', tri = 'frison vieux' }
-l['ofu'] = { nom = 'efutop' }
-l['ogb'] = { nom = 'ogbia' }
-l['ogc'] = { nom = 'ogba' }
-l['oge'] = { nom = 'ancien géorgien', tri = 'géorgien ancien' }
-l['ogg'] = { nom = 'ogbogolo' }
-l['ogo'] = { nom = 'khana' }
-l['ogu'] = { nom = 'ogbronuagum' }
-l['ohu'] = { nom = 'ancien hongrois', tri = 'hongrois ancien' }
-l['oia'] = { nom = 'oirata' }
-l['oin'] = { nom = 'one d’Inebu', tri = 'one Inebu' }
-l['oj'] = { nom = 'ojibwa' }
-l['ojb'] = { nom = 'ojibwa du Nord-Ouest', tri = 'ojibwa Nord Ouest' }
-l['ojc'] = { nom = 'ojibwa central' }
-l['ojg'] = { nom = 'ojibwa de l’Est', tri = 'ojibwa Est' }
-l['ojp'] = { nom = 'ancien japonais', tri = 'japonais ancien' }
-l['ojs'] = { nom = 'oji-cri' }
-l['ojv'] = { nom = 'luangiua' }
-l['ojw'] = { nom = 'saulteaux' }
-l['oka'] = { nom = 'colville-okanagan' }
-l['okb'] = { nom = 'okobo' }
-l['okd'] = { nom = 'okodia' }
-l['oke'] = { nom = 'okpe (langue édoïde du Sud-Ouest)', tri = 'okpe édoïde Sud Ouest' }
-l['oki'] = { nom = 'okiek' }
-l['okm'] = { nom = 'moyen coréen', tri = 'coréen moyen' }
-l['okn'] = { nom = 'oki-no-erabu' }
-l['oko'] = { nom = 'ancien coréen', tri = 'coréen ancien' }
-l['okr'] = { nom = 'kirike' }
-l['oku'] = { nom = 'oku' }
-l['okx'] = { nom = 'okpe (langue édoïde du Nord-Ouest)', tri = 'okpe édoïde Nord Ouest' }
-l['ola'] = { nom = 'walungge' }
-l['old'] = { nom = 'mochi' }
-l['ole'] = { nom = 'olekha' }
-l['olk'] = { nom = 'olkol' }
-l['olm'] = { nom = 'oloma' }
-l['olo'] = { nom = 'olonetsien' }
-l['olr'] = { nom = 'olrat' }
-l['olt'] = { nom = 'vieux lituanien', tri = 'lituanien vieux' }
-l['olu'] = { nom = 'kuvale' }
-l['om'] = { nom = 'oromo', wiktionnaire = true }
-l['oma'] = { nom = 'omaha-ponca' }
-l['omb'] = { nom = 'ambae de l’Est', tri = 'ambae Est' }
-l['omc'] = { nom = 'mochica' }
-l['ome'] = { nom = 'omejes' }
-l['omg'] = { nom = 'omagua' }
-l['omi'] = { nom = 'omi' }
-l['oml'] = { nom = 'ombo' }
-l['omn'] = { nom = 'minoéen' }
-l['omo'] = { nom = 'utarmbung' }
-l['omp'] = { nom = 'ancien manipouri', tri = 'manipouri ancien' }
-l['omq'] = { nom = 'langues otomangues', tri = 'otomangues langues', isGroup = true }
-l['omr'] = { nom = 'vieux marathi', tri = 'marathi vieux' }
-l['omt'] = { nom = 'omotik' }
-l['omu'] = { nom = 'omurana' }
-l['omv'] = { nom = 'langues omotiques', tri = 'omotiques langues', isGroup = true }
-l['omx'] = { nom = 'vieux môn', tri = 'môn vieux' }
-l['omy'] = { nom = 'vieux malais', tri = 'malais vieux' }
-l['ona'] = { nom = 'selknam' }
-l['onb'] = { nom = 'lingao' }
-l['one'] = { nom = 'oneida' }
-l['ong'] = { nom = 'olo' }
-l['oni'] = { nom = 'onin' }
-l['onk'] = { nom = 'one de Kabore', tri = 'one Kabore' }
-l['onn'] = { nom = 'onobasulu' }
-l['ono'] = { nom = 'onondaga' }
-l['onom'] = { nom = 'onomatopée', tri = '*onomatopée' }
-l['onp'] = { nom = 'sartang' }
-l['ons'] = { nom = 'ono' }
-l['ont'] = { nom = 'ontena' }
-l['onu'] = { nom = 'unua' }
-l['onw'] = { nom = 'ancien nubien', tri = 'nubien ancien' }
-l['ood'] = { nom = 'tohono o’odham' }
-l['oog'] = { nom = 'ong' }
-l['oon'] = { nom = 'onge' }
-l['oos'] = { nom = 'ossète ancien' }
-l['opa'] = { nom = 'okpamheri' }
-l['opm'] = { nom = 'oksapmin' }
-l['opo'] = { nom = 'opao' }
-l['opt'] = { nom = 'opata' }
-l['opy'] = { nom = 'ofayé' }
-l['or'] = { nom = 'oriya', wiktionnaire = true }
-l['ora'] = { nom = 'oroha' }
-l['orc'] = { nom = 'orma' }
-l['ore'] = { nom = 'orejón' }
-l['org'] = { nom = 'oring' }
-l['orh'] = { nom = 'oroqen' }
-l['orléanais'] = { nom = 'orléanais' }
-l['oro'] = { nom = 'orokolo' }
-l['orr'] = { nom = 'oruma' }
-l['ors'] = { nom = 'orang seletar' }
-l['ort'] = { nom = 'oriya kotia' }
-l['oru'] = { nom = 'ormuri' }
-l['orv'] = { nom = 'vieux russe', tri = 'russe vieux' }
-l['orx'] = { nom = 'oro' }
-l['orz'] = { nom = 'ormu' }
-l['os'] = { nom = 'ossète' }
-l['osa'] = { nom = 'osage' }
-l['osc'] = { nom = 'osque' }
-l['osi'] = { nom = 'osing' }
-l['osn'] = { nom = 'vieux soundanais', tri = 'soundanais vieux' }
-l['osp'] = { nom = 'vieil espagnol', tri = 'espagnol vieil' }
-l['ost'] = { nom = 'osatu' }
-l['osx'] = { nom = 'vieux saxon', tri = 'saxon vieux' }
-l['ota'] = { nom = 'turc ottoman' }
-l['otb'] = { nom = 'tibétain ancien' }
-l['otd'] = { nom = 'dohoi' }
-l['ote'] = { nom = 'otomi de la vallée de Mezquital', tri = 'otomi Mezquital vallée' }
-l['otk'] = { nom = 'vieux turc', tri = 'turc vieux' }
-l['otl'] = { nom = 'otomi de Tilapa', tri = 'otomi Tilapa' }
-l['otm'] = { nom = 'otomi de la Sierra', tri = 'otomi Sierra' }
-l['otn'] = { nom = 'otomi de Tenango', tri = 'otomi Tenango' }
-l['oto'] = { nom = 'langues otomies', tri = 'otomies langues', isGroup = true }
-l['otq'] = { nom = 'otomi de Querétaro', tri = 'otomi Querétaro' }
-l['otr'] = { nom = 'otoro' }
-l['ots'] = { nom = 'otomi de l’état de Mexico', tri = 'otomi Mexico état' }
-l['ott'] = { nom = 'otomi de Temoaya', tri = 'otomi Temoaya' }
-l['otw'] = { nom = 'ottawa' } -- outaouais
-l['otx'] = { nom = 'otomi de Texcatepec', tri = 'otomi Texcatepec' }
-l['otz'] = { nom = 'otomi d’Ixtenco', tri = 'otomi Ixtenco' }
-l['oua'] = { nom = 'tagargrent' }
-l['oue'] = { nom = 'oune' }
-l['oui'] = { nom = 'vieil-ouïghour', tri = 'ouïghour vieil' }
-l['oum'] = { nom = 'ouma' }
-l['oun'] = { nom = '’o’ung', tri = 'o ung' }
-l['ovd'] = { nom = 'elfdalien' }
-l['owi'] = { nom = 'owiniga' }
-l['owl'] = { nom = 'vieux gallois', tri = 'gallois vieux' }
-l['oyb'] = { nom = 'oy' }
-l['oyd'] = { nom = 'oyda' }
-l['oym'] = { nom = 'wayampi' }
-l['ozm'] = { nom = 'koonzime' }
-l['pa'] = { nom = 'pendjabi', wiktionnaire = true }
-l['paa'] = { nom = 'langues papoues', tri = 'papoues langues', isGroup = true }
-l['pab'] = { nom = 'parecís' }
-l['pac'] = { nom = 'pacoh' }
-l['pad'] = { nom = 'paumarí' }
-l['pae'] = { nom = 'pagibete' }
-l['paf'] = { nom = 'paranawát' }
-l['pag'] = { nom = 'pangasinan' }
-l['pah'] = { nom = 'parintintin' }
-l['pai'] = { nom = 'pe' }
-l['paikoneka'] = { nom = 'paikoneka' }
-l['pak'] = { nom = 'parakanã' }
-l['pal'] = { nom = 'pehlevi' }
-l['palouse'] = { nom = 'palouse' }
-l['pam'] = { nom = 'kapampangan' }
-l['pandunia'] = { nom = 'pandunia' }
-l['pannonien'] = { nom = 'pannonien' }
-l['pao'] = { nom = 'paiute du Nord', tri = 'paiute Nord' }
-l['pap'] = { nom = 'papiamento' }
-l['par'] = { nom = 'timbisha' }
-l['pas'] = { nom = 'papasena' }
-l['pat'] = { nom = 'papitalai' }
-l['patagón de Bagua'] = { nom = 'patagón de Bagua', tri = 'patagón Bagua' }
-l['patagón de Perico'] = { nom = 'patagón de Perico', tri = 'patagón Perico' }
-l['patwin du Sud'] = { nom = 'patwin du Sud', tri = 'patwin Sud' }
-l['pau'] = { nom = 'palau' }
-l['pav'] = { nom = 'wari’' }
-l['paw'] = { nom = 'pawnee' }
-l['pax'] = { nom = 'pankararé' }
-l['pay'] = { nom = 'pech' }
-l['paz'] = { nom = 'pankararú' }
-l['pbb'] = { nom = 'paez' }
-l['pbf'] = { nom = 'popoloca de Coyotepec', tri = 'popoloca Coyotepec' }
-l['pbh'] = { nom = 'e’ñepa' }
-l['pbi'] = { nom = 'parkwa' }
-l['pbl'] = { nom = 'mak (Nigeria)', tri = 'mak Nigeria' }
-l['pbn'] = { nom = 'kpasam' }
-l['pbr'] = { nom = 'pangwa' }
-l['pbs'] = { nom = 'pame central' }
-l['pbt'] = { nom = 'pachto du Sud', tri = 'pachto Sud' }
-l['pbu'] = { nom = 'pachto du Nord', tri = 'pachto Nord' }
-l['pbv'] = { nom = 'pnar' }
-l['pby'] = { nom = 'pyu (Papouasie Nouvelle-Guinée)', tri = 'pyu Papouasie' }
-l['pca'] = { nom = 'popoloca de Santa Inés Ahuatempan', tri = 'popoloca Santa Inés Ahuatempan' }
-l['pcb'] = { nom = 'pear' }
-l['pcc'] = { nom = 'bouyei' }
-l['pcd'] = { nom = 'picard' }
-l['pce'] = { nom = 'palaung ruching' }
-l['pcf'] = { nom = 'paliyan' }
-l['pcg'] = { nom = 'paniya' }
-l['pch'] = { nom = 'pardhan' }
-l['pci'] = { nom = 'duruwa' }
-l['pcj'] = { nom = 'gorum' }
-l['pck'] = { nom = 'paite' }
-l['pcl'] = { nom = 'pardhi' }
-l['pcm'] = { nom = 'pidgin nigérian' }
-l['pcn'] = { nom = 'piti' }
-l['pcp'] = { nom = 'pacahuara' }
-l['pcw'] = { nom = 'pyapun' }
-l['pda'] = { nom = 'anam' }
-l['pdc'] = { nom = 'pennsilfaanisch' }
-l['pdn'] = { nom = 'fedan' }
-l['pdo'] = { nom = 'padoe' }
-l['pdt'] = { nom = 'plautdietsch' }
-l['pea'] = { nom = 'peranakan' }
-l['peb'] = { nom = 'pomo de l’Est', tri = 'pomo Est' }
-l['pef'] = { nom = 'pomo du Nord-Est', tri = 'pomo Nord Est' }
-l['peh'] = { nom = 'bonan' }
-l['pei'] = { nom = 'chichimeca-jonaz' }
-l['pej'] = { nom = 'pomo du Nord', tri = 'pomo Nord' }
-l['pel'] = { nom = 'pekal' }
-l['penan benalui'] = { nom = 'penan benalui' }
-l['penange'] = { nom = 'penange' }
-l['peo'] = { nom = 'vieux perse', tri = 'perse vieux' }
-l['pep'] = { nom = 'kunja' }
-l['peq'] = { nom = 'pomo du Sud', tri = 'pomo Sud' }
-l['percheron'] = { nom = 'percheron' }
-l['pes'] = { nom = 'persan iranien' }
-l['pez'] = { nom = 'penan de l’Est', tri = 'penan Est' }
-l['pfa'] = { nom = 'pááfang' }
-l['pfe'] = { nom = 'peere' }
-l['pfl'] = { nom = 'palatin' }
-l['pgk'] = { nom = 'rerep' }
-l['pgl'] = { nom = 'irlandais primitif' }
-l['pgn'] = { nom = 'pélignien' }
-l['pgs'] = { nom = 'pangseng' }
-l['pgu'] = { nom = 'pagu' }
-l['pha'] = { nom = 'baheng' }
-l['phi'] = { nom = 'langues philippines', tri = 'philippines langues', isGroup = true }
-l['phk'] = { nom = 'phake' }
-l['phl'] = { nom = 'phalura' }
-l['phn'] = { nom = 'phénicien' }
-l['pho'] = { nom = 'phunoi' }
-l['phr'] = { nom = 'potwari' }
-l['pi'] = { nom = 'pali', wiktionnaire = true }
-l['pia'] = { nom = 'pima bajo' }
-l['pib'] = { nom = 'yine' }
-l['pic'] = { nom = 'apindji' }
-l['picuris'] = { nom = 'picuris' }
-l['pid'] = { nom = 'piaroa' }
-l['pie'] = { nom = 'tompiro' }
-l['pif'] = { nom = 'pingelap' }
-l['pig'] = { nom = 'pisabo' }
-l['pih'] = { nom = 'pitcairnais' }
-l['pii'] = { nom = 'pini' }
-l['pij'] = { nom = 'pijao' }
-l['pil'] = { nom = 'yom' }
-l['pim'] = { nom = 'powhatan' }
-l['pin'] = { nom = 'piame' }
-l['pio'] = { nom = 'piapoco' }
-l['pip'] = { nom = 'pero' }
-l['pir'] = { nom = 'piratapuya' }
-l['pis'] = { nom = 'pidgin des îles Salomon', tri = 'pidgin Salomon' }
-l['pit'] = { nom = 'pitta-pitta' }
-l['piu'] = { nom = 'pintupi' }
-l['piv'] = { nom = 'vaeakau-taumako' }
-l['piw'] = { nom = 'pimbwe' }
-l['pix'] = { nom = 'piu' }
-l['piz'] = { nom = 'pije' }
-l['pjt'] = { nom = 'pitjantjatjara' }
-l['pkc'] = { nom = 'baekje' }
-l['pkn'] = { nom = 'pakanha' }
-l['pko'] = { nom = 'pökot' }
-l['pkp'] = { nom = 'pakupaku' }
-l['pkr'] = { nom = 'kurumba d’Attapady', tri = 'kurumba Attapady' }
-l['pkt'] = { nom = 'malieng' }
-l['pku'] = { nom = 'paku' }
-l['pl'] = { nom = 'polonais', wiktionnaire = true }
-l['plb'] = { nom = 'polonombauk' }
-l['plc'] = { nom = 'palawano central' }
-l['pld'] = { nom = 'polari' }
-l['ple'] = { nom = 'palu’e' }
-l['plf'] = { nom = 'langues malayo-polynésiennes centrales', tri = 'malayo polynésiennes centrales langues', isGroup = true }
-l['plg'] = { nom = 'pilagá' }
-l['plj'] = { nom = 'polci' }
-l['pll'] = { nom = 'palaung doré' }
-l['pln'] = { nom = 'palenquero' }
-l['plo'] = { nom = 'popoluca d’Oluta', tri = 'popoluca Oluta' }
-l['plodarisch'] = { nom = 'plodarisch' }
-l['plq'] = { nom = 'palaïte' }
-l['plr'] = { nom = 'palaka' }
-l['pls'] = { nom = 'popoloca de San Marcos Tlacoyalco', tri = 'popoloca San Marcos Tlacoyalco' }
-l['plt'] = { nom = 'malgache du plateau', tri = 'malgache plateau' }
-l['plu'] = { nom = 'palikur' }
-l['plw'] = { nom = 'palawano de Brooke’s Point', tri = 'palawano Brookes Point' }
-l['ply'] = { nom = 'palyu' }
-l['plz'] = { nom = 'murut paluan' }
-l['pma'] = { nom = 'paama' }
-l['pmb'] = { nom = 'pambia' }
-l['pmc'] = { nom = 'palumata' }
-l['pmd'] = { nom = 'pallanganmiddang' }
-l['pme'] = { nom = 'pwaamèi' }
-l['pmf'] = { nom = 'pomona' }
-l['pmh'] = { nom = 'prakrit maharashtri' }
-l['pmi'] = { nom = 'primi du Nord', tri = 'primi Nord' }
-l['pmj'] = { nom = 'primi du Sud', tri = 'primi Sud' }
-l['pmk'] = { nom = 'pamlico' }
-l['pml'] = { nom = 'lingua franca' }
-l['pmm'] = { nom = 'pomo' }
-l['pmn'] = { nom = 'pam' }
-l['pmo'] = { nom = 'pom' }
-l['pmq'] = { nom = 'pame du Nord', tri = 'pame Nord' }
-l['pmr'] = { nom = 'paynamar' }
-l['pms'] = { nom = 'piémontais' }
-l['pmt'] = { nom = 'paumotu' }
-l['pmu'] = { nom = 'panjabi de Mirpur', tri = 'panjabi Mirpur' }
-l['pmw'] = { nom = 'miwok des plaines', tri = 'miwok plaines' }
-l['pmx'] = { nom = 'naga poumei' }
-l['pmy'] = { nom = 'malais papou' }
-l['pmz'] = { nom = 'pame du Sud', tri = 'pame Sud' }
-l['pnb'] = { nom = 'pendjabi de l’Ouest', tri = 'pendjabi Ouest', wiktionnaire = true }
-l['png'] = { nom = 'pongu' }
-l['pnh'] = { nom = 'tongareva' }
-l['pni'] = { nom = 'aoheng' }
-l['pnk'] = { nom = 'paunaka' }
-l['pnn'] = { nom = 'pinai-hagahai' }
-l['pno'] = { nom = 'huariapano' }
-l['pnq'] = { nom = 'pana (Burkina Faso)', tri = 'pana Burkina' }
-l['pnr'] = { nom = 'panim' }
-l['pns'] = { nom = 'ponosakan' }
-l['pnt'] = { nom = 'pontique' }
-l['pnu'] = { nom = 'jiongnai' }
-l['pnv'] = { nom = 'pinigura' }
-l['pnw'] = { nom = 'panytyima' }
-l['pnx'] = { nom = 'phong-kniang' }
-l['pny'] = { nom = 'pinyin' }
-l['pnz'] = { nom = 'pana (République centrafricaine)', tri = 'pana Centrafrique' }
-l['poc'] = { nom = 'pokomam' }
-l['pod'] = { nom = 'ponares' }
-l['poe'] = { nom = 'popoloca de San Juan Atzingo', tri = 'popoloca San Juan Atzingo' }
-l['pof'] = { nom = 'poke' }
-l['pog'] = { nom = 'potiguára' }
-l['poh'] = { nom = 'poqomchi’' }
-l['poi'] = { nom = 'popoluca de la Sierra', tri = 'popoluca Sierra' }
-l['poitevin-saintongeais'] = { nom = 'poitevin-saintongeais' }
-l['pom'] = { nom = 'pomo du Sud-Est', tri = 'pomo Sud Est' }
-l['pon'] = { nom = 'pohnpei' }
-l['poo'] = { nom = 'pomo central' }
-l['pop'] = { nom = 'pwapwâ' }
-l['poq'] = { nom = 'popoluca de Texistepec', tri = 'popoluca Texistepec' }
-l['pos'] = { nom = 'popoluca de Sayula', tri = 'popoluca Sayula' }
-l['pot'] = { nom = 'potawatomi' }
-l['pov'] = { nom = 'créole de Guinée-Bissau', tri = 'créole Guinée Bissau' }
-l['pow'] = { nom = 'popoloca otlaltepec de San Felipe', tri = 'popoloca otlaltepec San Felipe' }
-l['pox'] = { nom = 'polabe' }
-l['poy'] = { nom = 'pogoro' }
-l['poz'] = { nom = 'langues malayo-polynésiennes', tri = 'malayo polynésiennes langues', isGroup = true }
-l['ppa'] = { nom = 'pao' }
-l['ppe'] = { nom = 'papi' }
-l['ppi'] = { nom = 'paipai' }
-l['ppk'] = { nom = 'uma' }
-l['ppl'] = { nom = 'pipil' }
-l['ppm'] = { nom = 'papuma' }
-l['ppn'] = { nom = 'papapana' }
-l['ppo'] = { nom = 'folopa' }
-l['ppp'] = { nom = 'pelende' }
-l['ppt'] = { nom = 'pare' }
-l['ppu'] = { nom = 'papora' }
-l['pqa'] = { nom = 'pa’a' }
-l['pqe'] = { nom = 'langues malayo-polynésiennes orientales', tri = 'malayo polynésiennes orientales langues', isGroup = true }
-l['pqm'] = { nom = 'malécite-passamaquoddy' }
-l['pqw'] = { nom = 'langues malayo-polynésiennes occidentales', tri = 'malayo polynésiennes occidentales langues', isGroup = true }
-l['pra'] = { nom = 'langues prâkrites', tri = 'prâkrites langues', isGroup = true }
-l['prb'] = { nom = 'lua’' }
-l['prc'] = { nom = 'parachi' }
-l['prd'] = { nom = 'persan dari' }
-l['pre'] = { nom = 'principense' }
-l['pré-ancien japonais'] = { nom = 'pré-ancien japonais', tri = 'japonais ancien pré' }
-l['prf'] = { nom = 'paranan' }
-l['prg'] = { nom = 'vieux prussien', tri = 'prussien vieux' }
-l['pri'] = { nom = 'paicî' }
-l['prk'] = { nom = 'parauk' }
-l['prm'] = { nom = 'porome' }
-l['pro'] = { nom = 'ancien occitan', tri = 'occitan ancien' }
-l['prq'] = { nom = 'perené' }
-l['prs'] = { nom = 'dari' }
-l['prt'] = { nom = 'phai' }
-l['pru'] = { nom = 'puragi' }
-l['prx'] = { nom = 'purki' }
-l['ps'] = { nom = 'pachto', wiktionnaire = true }
-l['psa'] = { nom = 'aghu d’Asue', tri = 'aghu Asue' }
-l['psd'] = { nom = 'langue des signes des Indiens des plaines', tri = 'signes indiens plaines' }
-l['pse'] = { nom = 'malais central' }
-l['psi'] = { nom = 'pashayi du Sud-Est', tri = 'pashayi Sud Est' }
-l['psl'] = { nom = 'langue des signes de Porto Rico', tri = 'signes Porto Rico' }
-l['pso'] = { nom = 'langue des signes polonaise', tri = 'signes polonaise' }
-l['psr'] = { nom = 'langue des signes portugaise', tri = 'signes portugaise' }
-l['pss'] = { nom = 'kaulong' }
-l['pst'] = { nom = 'pachto central' }
-l['psw'] = { nom = 'port Sandwich' }
-l['psy'] = { nom = 'piscataway' }
-l['pt'] = { nom = 'portugais', portail = true, wiktionnaire = true }
-l['pth'] = { nom = 'pataxó hã-ha-hãe' }
-l['pti'] = { nom = 'pintiini' }
-l['ptq'] = { nom = 'pattapu' }
-l['ptr'] = { nom = 'piamatsina' }
-l['ptt'] = { nom = 'enrekang' }
-l['ptv'] = { nom = 'port vato' }
-l['pua'] = { nom = 'purépecha des hauts-plateaux de l’Ouest', tri = 'purépecha Ouest hauts plateaux' }
-l['pub'] = { nom = 'purum' }
-l['puc'] = { nom = 'punan merap' }
-l['pud'] = { nom = 'punan aput' }
-l['pue'] = { nom = 'gününa yajich' }
-l['puf'] = { nom = 'punan merah' }
-l['pug'] = { nom = 'phuie' }
-l['pui'] = { nom = 'puinave' }
-l['puj'] = { nom = 'punan tubu’' }
-l['pum'] = { nom = 'puma' }
-l['puo'] = { nom = 'ksingmul' }
-l['pup'] = { nom = 'pulabu' }
-l['puq'] = { nom = 'puquina' }
-l['pur'] = { nom = 'puruborá' }
-l['put'] = { nom = 'putoh' }
-l['puu'] = { nom = 'pounou' }
-l['puw'] = { nom = 'puluwat' }
-l['puy'] = { nom = 'purisimeño' }
-l['pwb'] = { nom = 'panawa' }
-l['pwg'] = { nom = 'gapapaiwa' }
-l['pwi'] = { nom = 'patwin' }
-l['pwm'] = { nom = 'molbog' }
-l['pwn'] = { nom = 'paiwan' }
-l['pwo'] = { nom = 'pwo de l’Ouest', tri = 'pwo Ouest' }
-l['pxm'] = { nom = 'mixe de Quetzaltepec', tri = 'mixe Quetzaltepec' }
-l['pym'] = { nom = 'fyam' }
-l['pyn'] = { nom = 'poyanáwa' }
-l['pyu'] = { nom = 'puyuma' }
-l['pyx'] = { nom = 'pyu (Birmanie)', tri = 'pyu Birmanie' }
-l['pyy'] = { nom = 'pyen' }
-l['pzn'] = { nom = 'para naga' }
-l['qcx'] = { nom = 'mucuchí' }
-l['qdh'] = { nom = 'chapakura' }
-l['qij'] = { nom = 'maypure' }
-l['qlz'] = { nom = 'masacara' }
-l['qok'] = { nom = 'vieux khmer', tri = 'khmer vieux' }
-l['qpj'] = { nom = 'timote' }
-l['qpl'] = { nom = 'pamigua' }
-l['qu'] = { nom = 'quechua', wiktionnaire = true }
-l['qua'] = { nom = 'quapaw' }
-l['qub'] = { nom = 'quechua de Huallaga Huánuco', tri = 'quechua Huallaga Huánuco' }
-l['quc'] = { nom = 'quiché' }
-l['qud'] = { nom = 'quichua de Calderón', tri = 'quichua Calderón' }
-l['quf'] = { nom = 'quechua de Lambayeque', tri = 'quechua Lambayeque' }
-l['qug'] = { nom = 'quichua du Chimborazo', tri = 'quichua Chimborazo' }
-l['quh'] = { nom = 'quechua de la Bolivie du Sud', tri = 'quechua Bolivie Sud' }
-l['qui'] = { nom = 'quileute' }
-l['quk'] = { nom = 'quechua de Chachapoyas', tri = 'quechua Chachapoyas' }
-l['qum'] = { nom = 'sipakapense' }
-l['qun'] = { nom = 'quinault' }
-l['qur'] = { nom = 'quechua de Yanahuanca Pasco', tri = 'quechua Yanahuanca Pasco' }
-l['qus'] = { nom = 'quechua de Santiago del Estero', tri = 'quechua Santiago del Estero' }
-l['quv'] = { nom = 'sakapultèque' }
-l['quy'] = { nom = 'quechua d’Ayacucho', tri = 'quechua Ayacucho' }
-l['quz'] = { nom = 'quechua de Cuzco', tri = 'quechua Cuzco' }
-l['qva'] = { nom = 'quechua d’Ambo-Pasco', tri = 'quechua Ambo Pasco' }
-l['qvc'] = { nom = 'quechua de Cajamarca', tri = 'quechua Cajamarca' }
-l['qvi'] = { nom = 'quichua d’Imbabura', tri = 'quichua Imbabura' }
-l['qvn'] = { nom = 'quechua du Junín du Nord', tri = 'quechua Junín Nord' }
-l['qvo'] = { nom = 'quechua de Napo', tri = 'quechua Napo' }
-l['qvp'] = { nom = 'quechua de Pacaraos', tri = 'quechua Pacaraos' }
-l['qvs'] = { nom = 'quechua de San Martín', tri = 'quechua San Martín' }
-l['qvw'] = { nom = 'quechua de Huaylla Wanca', tri = 'quechua Huaylla Wanca' }
-l['qvy'] = { nom = 'queyu' }
-l['qwa'] = { nom = 'quechua de Corongo Ancash', tri = 'quechua Corongo Ancash' }
-l['qwc'] = { nom = 'quechua classique' }
-l['qwe'] = { nom = 'langues quechuas', tri = 'quechuas langues', isGroup = true }
-l['qwm'] = { nom = 'couman' }
-l['qwt'] = { nom = 'kwalhioqua-tlatskanai' }
-l['qxh'] = { nom = 'quechua de Panao Huánuco', tri = 'quechua Panao Huánuco' }
-l['qxl'] = { nom = 'quichua de Salasaca', tri = 'quichua Salasaca' }
-l['qxq'] = { nom = 'kachkaï' }
-l['qxs'] = { nom = 'qiang du Sud', tri = 'qiang Sud' }
-l['qxu'] = { nom = 'quechua d’Arequipa-La Unión', tri = 'quechua Arequipa la Unión' }
-l['qya'] = { nom = 'quenya' }
-l['qyp'] = { nom = 'quiripi' }
-l['rab'] = { nom = 'camling' }
-l['rac'] = { nom = 'rasawa' }
-l['rad'] = { nom = 'rhade' }
-l['rag'] = { nom = 'logoli' }
-l['rah'] = { nom = 'rabha' }
-l['raj'] = { nom = 'rajasthani' }
-l['rak'] = { nom = 'bohuai' }
-l['ral'] = { nom = 'ralte' }
-l['ram'] = { nom = 'canela' }
-l['ran'] = { nom = 'riantana' }
-l['rao'] = { nom = 'rao' }
-l['rap'] = { nom = 'rapanui' }
-l['rar'] = { nom = 'rarotongien' }
-l['ras'] = { nom = 'tegali' }
-l['rat'] = { nom = 'razajerdi' }
-l['rau'] = { nom = 'raute' }
-l['rav'] = { nom = 'sampang' }
-l['raw'] = { nom = 'rawang' }
-l['rax'] = { nom = 'rang' }
-l['ray'] = { nom = 'rapa' }
-l['raz'] = { nom = 'rahambuu' }
-l['rbb'] = { nom = 'rumai' }
-l['rcf'] = { nom = 'créole réunionnais' }
-l['rea'] = { nom = 'rerau' }
-l['reb'] = { nom = 'rembong' }
-l['ree'] = { nom = 'rejang kayan' }
-l['reg'] = { nom = 'kara (Tanzanie)', tri = 'kara Tanzanie' }
-l['rei'] = { nom = 'reli' }
-l['rej'] = { nom = 'rejang' }
-l['rel'] = { nom = 'rendille' }
-l['ren'] = { nom = 'rengao' }
-l['rer'] = { nom = 'rer bare' }
-l['res'] = { nom = 'reshe' }
-l['ret'] = { nom = 'retta' }
-l['rey'] = { nom = 'reyesano' }
-l['rga'] = { nom = 'roria' }
-l['rge'] = { nom = 'romano-grec' }
-l['rgn'] = { nom = 'romagnol' }
-l['rgr'] = { nom = 'resigaro' }
-l['rhg'] = { nom = 'rohingya' }
-l['rhp'] = { nom = 'yahang' }
-l['ria'] = { nom = 'riang (Inde)', tri = 'riang Inde' }
-l['rif'] = { nom = 'rifain' }
-l['ril'] = { nom = 'riang (Birmanie)', tri = 'riang Birmanie' }
-l['rim'] = { nom = 'nyaturu' }
-l['rin'] = { nom = 'nungu' }
-l['rir'] = { nom = 'ribun' }
-l['rit'] = { nom = 'ritarungo' }
-l['rji'] = { nom = 'raji' }
-l['rkb'] = { nom = 'rikbaktsa' }
-l['rki'] = { nom = 'arakanais' }
-l['rkm'] = { nom = 'marka' }
-l['rm'] = { nom = 'romanche', wiktionnaire = true }
-l['rma'] = { nom = 'rama' }
-l['rmb'] = { nom = 'rembarunga' }
-l['rmc'] = { nom = 'romani des Carpates', tri = 'romani Carpates' }
-l['rme'] = { nom = 'angloromani' }
-l['rmf'] = { nom = 'kalo finnois' }
-l['rmg'] = { nom = 'voyageur norvégien' }
-l['rmh'] = { nom = 'murkim' }
-l['rmi'] = { nom = 'lomavren' }
-l['rml'] = { nom = 'romani balte' }
-l['rmm'] = { nom = 'roma' }
-l['rmn'] = { nom = 'romani balkanique' }
-l['rmo'] = { nom = 'sinte' }
-l['rmp'] = { nom = 'rempi' }
-l['rmq'] = { nom = 'caló' }
-l['rms'] = { nom = 'langue des signes roumaine', tri = 'signes roumaine' }
-l['rmt'] = { nom = 'domari' }
-l['rmu'] = { nom = 'tavringer' }
-l['rmv'] = { nom = 'romanova' }
-l['rmw'] = { nom = 'romani gallois' }
-l['rmy'] = { nom = 'vlax' }
-l['rmz'] = { nom = 'marma' }
-l['rn'] = { nom = 'kirundi', wiktionnaire = true }
-l['rna'] = { nom = 'runa' }
-l['rnd'] = { nom = 'ruund' }
-l['rng'] = { nom = 'ronga' }
-l['rnn'] = { nom = 'roon' }
-l['rnp'] = { nom = 'rongpo' }
-l['rnr'] = { nom = 'nari nari' }
-l['rnw'] = { nom = 'rungwa' }
-l['ro'] = { nom = 'roumain', wiktionnaire = true }
-l['roa'] = { nom = 'langues romanes', tri = 'romanes langues', isGroup = true }
-l['roa-leo'] = { nom = 'léonais' }
-l['roa-opt'] = { nom = 'galaïco-portugais', tri = 'galaïco portugais' }
-l['roa-tara'] = { nom = 'tarentin' }
-l['rob'] = { nom = 'tae’' }
-l['roc'] = { nom = 'roglai de Cac Gia', tri = 'roglai Cac Gia' }
-l['rod'] = { nom = 'rogo' }
-l['roe'] = { nom = 'ronji' }
-l['rof'] = { nom = 'rombo' }
-l['rog'] = { nom = 'roglai du Nord', tri = 'roglai Nord' }
-l['rol'] = { nom = 'romblomanon' }
-l['rom'] = { nom = 'romani' }
-l['romanica'] = { nom = 'romanica' }
-l['roo'] = { nom = 'rotokas' }
-l['rop'] = { nom = 'kriol' }
-l['ror'] = { nom = 'rongga' }
-l['rou'] = { nom = 'rounga' }
-l['rouran'] = { nom = 'rouran' }
-l['row'] = { nom = 'dela-oenale' }
-l['rpn'] = { nom = 'repanbitip' }
-l['rpt'] = { nom = 'rapting' }
-l['rrm'] = { nom = 'moriori' }
-l['rro'] = { nom = 'roro' }
-l['rsi'] = { nom = 'langue des signes rennellaise', tri = 'signes rennellaise' }
-l['rsk'] = { nom = 'ruthène pannonien' }
-l['rsl'] = { nom = 'langue des signes russe', tri = 'signes russe' }
-l['rtc'] = { nom = 'rungtu chin' }
-l['rth'] = { nom = 'ratahan' }
-l['rtm'] = { nom = 'rotuman' }
-l['ru'] = { nom = 'russe', portail = true, wiktionnaire = true }
-l['rub'] = { nom = 'gungu' }
-l['rue'] = { nom = 'ruthène' }
-l['ruf'] = { nom = 'luguru' }
-l['rug'] = { nom = 'roviana' }
-l['ruh'] = { nom = 'ruga' }
-l['rui'] = { nom = 'rufiji' }
-l['ruk'] = { nom = 'rukuba' }
-l['ruo'] = { nom = 'istro-roumain' }
-l['rup'] = { nom = 'aroumain', wmlien = 'roa-rup', wiktionnaire = true }
-l['ruq'] = { nom = 'mégléno-roumain' }
-l['russenorsk'] = { nom = 'russenorsk' }
-l['ruthène ancien'] = { nom = 'ruthène ancien' }
-l['rut'] = { nom = 'rutul' }
-l['rw'] = { nom = 'kinyarwanda', wiktionnaire = true }
-l['rwa'] = { nom = 'rawo' }
-l['rwk'] = { nom = 'rwa' }
-l['rxd'] = { nom = 'ngardi' }
-l['rxw'] = { nom = 'karuwali' }
-l['ryn'] = { nom = 'amami du Nord', tri = 'amami Nord' }
-l['rys'] = { nom = 'yaeyama' }
-l['ryu'] = { nom = 'okinawaïen', portail = true }
-l['sa'] = { nom = 'sanskrit', wiktionnaire = true }
-l['saa'] = { nom = 'saba' }
-l['sab'] = { nom = 'buglere' }
-l['sac'] = { nom = 'mesquakie' }
-l['sacata'] = { nom = 'sacata' }
-l['sad'] = { nom = 'sandawe' }
-l['sae'] = { nom = 'sabanê' }
-l['saf'] = { nom = 'safaliba' }
-l['sagz-âbâdi'] = { nom = 'sagz-âbâdi' }
-l['sah'] = { nom = 'iakoute' }
-l['sai'] = { nom = 'langues sud-amérindiennes', tri = 'sud amérindiennes langues', isGroup = true }
-l['saj'] = { nom = 'sahu' }
-l['sak'] = { nom = 'sake' }
-l['sal'] = { nom = 'langues salish', tri = 'salish langues', isGroup = true }
-l['salentin'] = { nom = 'salentin' }
-l['sam'] = { nom = 'araméen samaritain' }
-l['samnite'] = { nom = 'samnite' }
-l['sao'] = { nom = 'sause' }
-l['sap'] = { nom = 'sanapaná' }
-l['saq'] = { nom = 'samburu' }
-l['sar'] = { nom = 'saraveca' }
-l['sarthois'] = { nom = 'sarthois' }
-l['sas'] = { nom = 'sassak' }
-l['sat'] = { nom = 'santal', wiktionnaire = true }
-l['sau'] = { nom = 'saleman' }
-l['saurano'] = { nom = 'saurano' }
-l['sav'] = { nom = 'saafi' }
-l['saw'] = { nom = 'sawi' }
-l['sax'] = { nom = 'sa' }
-l['say'] = { nom = 'saya' }
-l['saynawa'] = { nom = 'saynawa' }
-l['saz'] = { nom = 'saurachtra' }
-l['sba'] = { nom = 'ngambay' }
-l['sbc'] = { nom = 'kele (Papouasie-Nouvelle-Guinée)', tri = 'kele Papouasie' }
-l['sbd'] = { nom = 'san du Sud', tri = 'san Sud' }
-l['sbf'] = { nom = 'shabo' }
-l['sbg'] = { nom = 'seget' }
-l['sbh'] = { nom = 'sori-harengan' }
-l['sbi'] = { nom = 'seti' }
-l['sbk'] = { nom = 'safwa' }
-l['sbl'] = { nom = 'sambal de Botolan', tri = 'sambal Botolan' }
-l['sbn'] = { nom = 'sindhi bhil' }
-l['sbo'] = { nom = 'sabüm' }
-l['sbp'] = { nom = 'sangu' }
-l['sbq'] = { nom = 'sirva' }
-l['sbr'] = { nom = 'murut sembakung' }
-l['sbs'] = { nom = 'subiya' }
-l['sbt'] = { nom = 'kimki' }
-l['sbv'] = { nom = 'sabin' }
-l['sbw'] = { nom = 'himba' }
-l['sby'] = { nom = 'soli' }
-l['sc'] = { nom = 'sarde', wiktionnaire = true }
-l['scb'] = { nom = 'chut' }
-l['sce'] = { nom = 'dongxiang' }
-l['sch'] = { nom = 'sakachep' }
-l['sci'] = { nom = 'malais du Sri Lanka', tri = 'malais Sri Lanka' }
-l['scl'] = { nom = 'shina' }
-l['scn'] = { nom = 'sicilien', wiktionnaire = true }
-l['sco'] = { nom = 'scots' }
-l['scp'] = { nom = 'yolmo' }
-l['scq'] = { nom = 'saoch' }
-l['scs'] = { nom = 'esclave du Nord', tri = 'esclave Nord' }
-l['scw'] = { nom = 'sha' }
-l['scx'] = { nom = 'sicule' }
-l['sd'] = { nom = 'sindhi', wiktionnaire = true }
-l['sdc'] = { nom = 'sassarais' }
-l['sde'] = { nom = 'surubu' }
-l['sdf'] = { nom = 'sarli' }
-l['sdg'] = { nom = 'savi' }
-l['sdh'] = { nom = 'kurde du Sud', tri = 'kurde Sud' }
-l['sdk'] = { nom = 'sos kundi' }
-l['sdm'] = { nom = 'semandang' }
-l['sdn'] = { nom = 'gallurais' }
-l['sdo'] = { nom = 'bukar sadong bidayuh' }
-l['sdp'] = { nom = 'sherdukpen' }
-l['sds'] = { nom = 'sened' }
-l['sdv'] = { nom = 'langues soudaniques orientales', tri = 'soudaniques orientales langues', isGroup = true }
-l['sdz'] = { nom = 'sallands' }
-l['se'] = { nom = 'same du Nord', tri = 'same Nord' }
-l['sea'] = { nom = 'semai' }
-l['seb'] = { nom = 'shempire' }
-l['sec'] = { nom = 'sechelt' }
-l['sed'] = { nom = 'sedang' }
-l['see'] = { nom = 'seneca' }
-l['sef'] = { nom = 'tyébara' }
-l['seh'] = { nom = 'cisena' }
-l['sei'] = { nom = 'seri' }
-l['sek'] = { nom = 'sekani' }
-l['sel'] = { nom = 'selkoupe' }
-l['sem'] = { nom = 'langues sémitiques', tri = 'sémitiques langues', isGroup = true }
-l['sen'] = { nom = 'nanerge' }
-l['seo'] = { nom = 'suarmin' }
-l['sep'] = { nom = 'sucite' }
-l['seputan'] = { nom = 'seputan' }
-l['seq'] = { nom = 'senara' }
-l['ser'] = { nom = 'serrano' }
-l['ses'] = { nom = 'songhaï koyraboro senni' }
-l['set'] = { nom = 'sentani' }
-l['seto'] = { nom = 'seto' }
-l['seu'] = { nom = 'serui-laut' }
-l['sev'] = { nom = 'sénoufo nyarafolo', tri = 'sénoufo nyarafolo' }
-l['sew'] = { nom = 'sewa bay' }
-l['sey'] = { nom = 'secoya' }
-l['sez'] = { nom = 'senthang chin' }
-l['sfb'] = { nom = 'langue des signes de Belgique francophone', tri = 'signes Belgique francophone' }
-l['sfe'] = { nom = 'subanen de l’Est', tri = 'subanen Est' }
-l['sfw'] = { nom = 'sehwi' }
-l['sg'] = { nom = 'sango', wiktionnaire = true }
-l['sga'] = { nom = 'vieil irlandais', tri = 'irlandais vieil' }
-l['sgb'] = { nom = 'ayta mag-antsi' }
-l['sgc'] = { nom = 'kipsigis' }
-l['sge'] = { nom = 'punan kelai' }
-l['sgh'] = { nom = 'shughni' }
-l['sgi'] = { nom = 'suga' }
-l['sgk'] = { nom = 'sangkong' }
-l['sgn'] = { nom = 'langues des signes', tri = 'signes langues', isGroup = true }
-l['sgp'] = { nom = 'singpho' }
-l['sys'] = { nom = 'sinyar' }
-l['sgr'] = { nom = 'sangesari' }
-l['sgs'] = { nom = 'samogitien', wmlien = 'bat-smg' }
-l['sgt'] = { nom = 'brokpake' }
-l['sgw'] = { nom = 'sebat bet gurage' }
-l['sgy'] = { nom = 'sangletchi' }
-l['sgz'] = { nom = 'sursurunga' }
-l['sh'] = { nom = 'serbo-croate', wiktionnaire = true }
-l['sha'] = { nom = 'shall-zwall' }
-l['shang'] = { nom = 'shang' }
-l['shb'] = { nom = 'ninam' }
-l['she'] = { nom = 'sheko' }
-l['shg'] = { nom = 'shua' }
-l['shh'] = { nom = 'shoshone' }
-l['shi'] = { nom = 'chleuh' }
-l['shj'] = { nom = 'caning' }
-l['shinman'] = { nom = 'shinman' }
-l['shk'] = { nom = 'shilluk' }
-l['shn'] = { nom = 'shan', wiktionnaire = true }
-l['sho'] = { nom = 'shanga' }
-l['shp'] = { nom = 'shipibo-conibo' }
-l['shr'] = { nom = 'mashi (République démocratique du Congo)', tri = 'mashi Congo démocratique' }
-l['shs'] = { nom = 'shuswap' }
-l['sht'] = { nom = 'shasta' }
-l['shu'] = { nom = 'arabe tchadien' }
-l['shv'] = { nom = 'shehri' }
-l['shw'] = { nom = 'shwai' }
-l['shx'] = { nom = 'ho-nte' }
-l['shy'] = { nom = 'chaoui', wiktionnaire = true }
-l['shz'] = { nom = 'syenara' }
-l['si'] = { nom = 'cingalais', wiktionnaire = true }
-l['sia'] = { nom = 'same d’Akkala', tri = 'same Akkala' }
-l['sib'] = { nom = 'sebop' }
-l['sic'] = { nom = 'malinguat' }
-l['sid'] = { nom = 'sidamo' }
-l['sie'] = { nom = 'simaa' }
-l['sif'] = { nom = 'sèmè' }
-l['sii'] = { nom = 'shompen' }
-l['sij'] = { nom = 'numbami' }
-l['sik'] = { nom = 'sikiana' }
-l['sil'] = { nom = 'sisaala des Tumulung', tri = 'sisaala tumulung' }
-l['sim'] = { nom = 'mende (Papouasie-Nouvelle-Guinée)', tri = 'mende Papouasie' }
-l['sio'] = { nom = 'langues siouanes', tri = 'siouanes langues', isGroup = true }
-l['sip'] = { nom = 'sikkimais' }
-l['siq'] = { nom = 'sonia' }
-l['sir'] = { nom = 'siri' }
-l['sis'] = { nom = 'siuslaw' }
-l['sit'] = { nom = 'langues sino-tibétaines', tri = 'sino tibétaines langues', isGroup = true }
-l['situ'] = { nom = 'situ' }
-l['siu'] = { nom = 'sinagen' }
-l['siw'] = { nom = 'siwai' }
-l['six'] = { nom = 'sumau' }
-l['siy'] = { nom = 'sivandi' }
-l['siz'] = { nom = 'siwi' }
-l['sja'] = { nom = 'epena saija' }
-l['sjc'] = { nom = 'shaojiang' }
-l['sjd'] = { nom = 'same de Kildin', tri = 'same Kildin' }
-l['sje'] = { nom = 'same de Pite', tri = 'same Pite' }
-l['sjk'] = { nom = 'same de Kemi', tri = 'same Kemi' }
-l['sjl'] = { nom = 'miji' }
-l['sjm'] = { nom = 'mapun' }
-l['sjn'] = { nom = 'sindarin' }
-l['sjo'] = { nom = 'xibe' }
-l['sjr'] = { nom = 'siar' }
-l['sjt'] = { nom = 'same de Ter', tri = 'same Ter' }
-l['sju'] = { nom = 'same d’Ume', tri = 'same Ume' }
-l['sjw'] = { nom = 'shawnee' }
-l['sk'] = { nom = 'slovaque', wiktionnaire = true }
-l['ska'] = { nom = 'skagit' }
-l['skb'] = { nom = 'saek' }
-l['skc'] = { nom = 'ma manda' }
-l['skd'] = { nom = 'miwok méridional de la Sierra', tri = 'miwok méridional Sierra' }
-l['ske'] = { nom = 'seke (Vanuatu)', tri = 'seke Vanuatu' }
-l['skf'] = { nom = 'mekens' }
-l['skg'] = { nom = 'sakalava' }
-l['ski'] = { nom = 'sika' }
-l['skj'] = { nom = 'seke (Népal)', tri = 'seke Népal' }
-l['skr'] = { nom = 'saraiki', wiktionnaire = true }
-l['sks'] = { nom = 'maia' }
-l['sku'] = { nom = 'sakao' }
-l['skv'] = { nom = 'skou' }
-l['skx'] = { nom = 'seko padang' }
-l['sky'] = { nom = 'sikaiana' }
-l['sl'] = { nom = 'slovène', wiktionnaire = true }
-l['sla'] = { nom = 'langues slaves', tri = 'slaves langues', isGroup = true }
-l['slc'] = { nom = 'sáliva' }
-l['sld'] = { nom = 'sisaali' }
-l['sle'] = { nom = 'sholega' }
-l['slg'] = { nom = 'murut selungai' }
-l['slh'] = { nom = 'lushootseed du Sud', tri = 'lushootseed Sud' }
-l['sli'] = { nom = 'bas-silésien', tri = 'silésien bas' }
-l['slm'] = { nom = 'sama pangutaran' }
-l['sln'] = { nom = 'antoniaño' }
-l['slovince'] = { nom = 'slovince' }
-l['slovio'] = { nom = 'slovio' }
-l['slp'] = { nom = 'lamaholot' }
-l['slr'] = { nom = 'salar' }
-l['slt'] = { nom = 'sila' }
-l['slu'] = { nom = 'selaru' }
-l['sly'] = { nom = 'selayar' }
-l['slz'] = { nom = 'ma’ya' }
-l['sm'] = { nom = 'samoan', wiktionnaire = true }
-l['sma'] = { nom = 'same du Sud', tri = 'same Sud' }
-l['smb'] = { nom = 'simbari' }
-l['smc'] = { nom = 'som' }
-l['smh'] = { nom = 'samei' }
-l['smi'] = { nom = 'langues sames', tri = 'sames langues', isGroup = true }
-l['smj'] = { nom = 'same de Lule', tri = 'same Lule' }
-l['smk'] = { nom = 'bolinao' }
-l['smn'] = { nom = 'same d’Inari', tri = 'same Inari' }
-l['smp'] = { nom = 'samaritain' }
-l['smq'] = { nom = 'samo (Papouasie-Nouvelle-Guinée)', tri = 'samo Papouasie' }
-l['smr'] = { nom = 'simeulue' }
-l['sms'] = { nom = 'same skolt' }
-l['smt'] = { nom = 'simte' }
-l['smu'] = { nom = 'somray' }
-l['smw'] = { nom = 'sumbawa' }
-l['smy'] = { nom = 'semnani' }
-l['sn'] = { nom = 'shona', wiktionnaire = true }
-l['snc'] = { nom = 'sinaugoro' }
-l['sne'] = { nom = 'bau bidayuh' }
-l['snf'] = { nom = 'noon' }
-l['snj'] = { nom = 'sango riverain' }
-l['snk'] = { nom = 'soninké' }
-l['snl'] = { nom = 'sangil' }
-l['snm'] = { nom = 'ma’di du Sud', tri = 'madi Sud' }
-l['snn'] = { nom = 'siona' }
-l['sno'] = { nom = 'snohomish' }
-l['snp'] = { nom = 'siane' }
-l['snq'] = { nom = 'massango' }
-l['snr'] = { nom = 'sihan' }
-l['sns'] = { nom = 'nahavaq' }
-l['snu'] = { nom = 'senggi' }
-l['snv'] = { nom = 'sa’ban' }
-l['snw'] = { nom = 'selee' }
-l['snx'] = { nom = 'sam' }
-l['sny'] = { nom = 'saniyo-hiyewe' }
-l['snz'] = { nom = 'sinsauru' }
-l['so'] = { nom = 'somali', wiktionnaire = true }
-l['sob'] = { nom = 'sobei' }
-l['soc'] = { nom = 'so (République démocratique du Congo)', tri = 'so Congo démocratique' }
-l['sod'] = { nom = 'songoora' }
-l['sog'] = { nom = 'sogdien' }
-l['soi'] = { nom = 'sonha' }
-l['soj'] = { nom = 'soi' }
-l['sok'] = { nom = 'sokoro' }
-l['sol'] = { nom = 'solos' }
-l['solon'] = { nom = 'solon' }
-l['solrésol'] = { nom = 'solrésol' }
-l['soltèque'] = { nom = 'soltèque' }
-l['son'] = { nom = 'langues songhaïes', tri = 'songhaïes langues', isGroup = true }
-l['sonqor'] = { nom = 'sonqor' }
-l['soo'] = { nom = 'songo' }
-l['sor'] = { nom = 'somrai' }
-l['sorbung'] = { nom = 'sorbung' }
-l['sos'] = { nom = 'sembla' }
-l['sou'] = { nom = 'thaï du Sud', tri = 'thaï Sud' }
-l['sov'] = { nom = 'sonsorolais' }
-l['sow'] = { nom = 'sowanda' }
-l['sox'] = { nom = 'swo' }
-l['soy'] = { nom = 'miyobe' }
-l['soz'] = { nom = 'temi' }
-l['spb'] = { nom = 'sepa (Indonésie)', tri = 'sepa Indonésie' }
-l['spd'] = { nom = 'saep' }
-l['spe'] = { nom = 'sepa (Papouasie-Nouvelle-Guinée)', tri = 'sepa Papouasie' }
-l['spi'] = { nom = 'saponi' }
-l['spk'] = { nom = 'sengo' }
-l['spl'] = { nom = 'selepet' }
-l['spn'] = { nom = 'sanapaná' }
-l['spo'] = { nom = 'spokane' }
-l['spp'] = { nom = 'supyiré' }
-l['spr'] = { nom = 'saparua' }
-l['spu'] = { nom = 'sapuan' }
-l['spx'] = { nom = 'picène du Sud', tri = 'picène Sud' }
-l['spy'] = { nom = 'sabaot' }
-l['sq'] = { nom = 'albanais', wiktionnaire = true }
-l['sqa'] = { nom = 'shama' }
-l['sqh'] = { nom = 'shau' }
-l['sqj'] = { nom = 'langues albanaises', tri = 'albanaises langues', isGroup = true }
-l['sqk'] = { nom = 'langue des signes albanaise', tri = 'signes albanaise' }
-l['sqm'] = { nom = 'suma' }
-l['sqn'] = { nom = 'susquehannock' }
-l['sqo'] = { nom = 'sourkhei' }
-l['sqq'] = { nom = 'sou' }
-l['sqr'] = { nom = 'arabe sicilien' }
-l['sqs'] = { nom = 'langue des signes sri-lankaise', tri = 'signes sri lankaise' }
-l['sqt'] = { nom = 'soqotri' }
-l['squ'] = { nom = 'squamish' }
-l['sr'] = { nom = 'serbe', wiktionnaire = true }
-l['sra'] = { nom = 'saruga' }
-l['srb'] = { nom = 'sora' }
-l['src'] = { nom = 'logudorais' }
-l['sre'] = { nom = 'sara' }
-l['srf'] = { nom = 'nafi' }
-l['srh'] = { nom = 'sariqoli' }
-l['sri'] = { nom = 'siriano' }
-l['srk'] = { nom = 'murut serudung' }
-l['srl'] = { nom = 'isirawa' }
-l['srm'] = { nom = 'saramaccan' }
-l['srn'] = { nom = 'sranan' }
-l['sro'] = { nom = 'campidanais' }
-l['srq'] = { nom = 'siriono' }
-l['srr'] = { nom = 'sérère' }
-l['srs'] = { nom = 'sarsi' }
-l['sru'] = { nom = 'suruí' }
-l['srw'] = { nom = 'serua' }
-l['sry'] = { nom = 'sera' }
-l['ss'] = { nom = 'swazi', wiktionnaire = true }
-l['ssa'] = { nom = 'langues nilo-sahariennes', tri = 'nilo sahariennes langues', isGroup = true }
-l['ssb'] = { nom = 'sama méridional' }
-l['ssc'] = { nom = 'suba-simbiti' }
-l['ssd'] = { nom = 'siroi' }
-l['sse'] = { nom = 'sama balangingi' }
-l['ssf'] = { nom = 'thao' }
-l['ssg'] = { nom = 'seimat' }
-l['ssh'] = { nom = 'arabe shihhi' }
-l['ssj'] = { nom = 'sausi' }
-l['ssl'] = { nom = 'sisaala de l’Ouest', tri = 'sisaala Ouest' }
-l['ssm'] = { nom = 'semnam' }
-l['ssn'] = { nom = 'waata' }
-l['sso'] = { nom = 'sissano' }
-l['ssp'] = { nom = 'langue des signes espagnole', tri = 'signes espagnole' }
-l['ssr'] = { nom = 'langue des signes suisse romande', tri = 'signes suisse romande' }
-l['sss'] = { nom = 'sô' }
-l['sst'] = { nom = 'sinasina' }
-l['ssu'] = { nom = 'susuami' }
-l['ssv'] = { nom = 'shark bay' }
-l['ssx'] = { nom = 'samberigi' }
-l['ssy'] = { nom = 'saho' }
-l['st'] = { nom = 'sotho du Sud', tri = 'sotho Sud', wiktionnaire = true }
-l['sta'] = { nom = 'settla' }
-l['stb'] = { nom = 'subanen du Nord', tri = 'subanen Nord' }
-l['ste'] = { nom = 'liana-seti' }
-l['stf'] = { nom = 'seta' }
-l['stg'] = { nom = 'trieng' }
-l['sth'] = { nom = 'shelta' }
-l['sti'] = { nom = 'stieng' }
-l['stj'] = { nom = 'san matya' }
-l['stl'] = { nom = 'stellingwarfs' }
-l['stm'] = { nom = 'setaman' }
-l['stn'] = { nom = 'owa' }
-l['sto'] = { nom = 'stoney' }
-l['stp'] = { nom = 'tepehuan du Sud-Est', tri = 'tepehuan Sud Est' }
-l['stq'] = { nom = 'frison saterlandais' }
-l['str'] = { nom = 'salish des détroits', tri = 'salish détroits' }
-l['sts'] = { nom = 'shumashti' }
-l['stu'] = { nom = 'samtao' }
-l['stv'] = { nom = 'silt’e' }
-l['stw'] = { nom = 'satawalais' }
-l['sty'] = { nom = 'tatar de Sibérie', tri = 'tatar Sibérie' }
-l['su'] = { nom = 'soundanais', wiktionnaire = true }
-l['sua'] = { nom = 'sulka' }
-l['sub'] = { nom = 'suku' }
-l['suc'] = { nom = 'subanen de l’Ouest', tri = 'subanen Ouest' }
-l['sue'] = { nom = 'suena' }
-l['sui'] = { nom = 'suki' }
-l['suj'] = { nom = 'shubi' }
-l['suk'] = { nom = 'soukouma' }
-l['sul'] = { nom = 'surigaonon' }
-l['suq'] = { nom = 'suri' }
-l['sur'] = { nom = 'mwaghavul' }
-l['sus'] = { nom = 'soussou' }
-l['sut'] = { nom = 'subtiaba' }
-l['suv'] = { nom = 'sulung' }
-l['suw'] = { nom = 'sumbwa' }
-l['sux'] = { nom = 'sumérien' }
-l['suy'] = { nom = 'suyá' }
-l['suz'] = { nom = 'sunwar' }
-l['sv'] = { nom = 'suédois', wiktionnaire = true }
-l['sva'] = { nom = 'svane' }
-l['svb'] = { nom = 'ulau-suain' }
-l['sve'] = { nom = 'serili' }
-l['svm'] = { nom = 'slave molisan' }
-l['svs'] = { nom = 'savosavo' }
-l['sw'] = { nom = 'swahili', wiktionnaire = true }
-l['swb'] = { nom = 'shimaoré', tri = 'shimaore' }
-l['swc'] = { nom = 'swahili du Congo', tri = 'swahili Congo' }
-l['swg'] = { nom = 'souabe' }
-l['swi'] = { nom = 'sui' }
-l['swj'] = { nom = 'shira' }
-l['swl'] = { nom = 'langue des signes suédoise', tri = 'signes suédoise' }
-l['swm'] = { nom = 'samosa' }
-l['swn'] = { nom = 'sawknah' }
-l['swo'] = { nom = 'shanenawa' }
-l['swq'] = { nom = 'sharwa' }
-l['swr'] = { nom = 'saweru' }
-l['swt'] = { nom = 'sawila' }
-l['swu'] = { nom = 'suwawa' }
-l['sww'] = { nom = 'sowa' }
-l['swx'] = { nom = 'suruwahá' }
-l['swy'] = { nom = 'sarua' }
-l['sxb'] = { nom = 'suba' }
-l['sxc'] = { nom = 'sicanien' }
-l['sxg'] = { nom = 'shixing' }
-l['sxk'] = { nom = 'kalapuya du Sud', tri = 'kalapuya Sud' }
-l['sxm'] = { nom = 'samre' }
-l['sxn'] = { nom = 'sangir' }
-l['sxr'] = { nom = 'saaroa' }
-l['sxu'] = { nom = 'haut-saxon', tri = 'saxon haut' }
-l['sya'] = { nom = 'siang' }
-l['syb'] = { nom = 'subanen central' }
-l['syc'] = { nom = 'syriaque classique' }
-l['syd'] = { nom = 'langues samoyèdes', tri = 'samoyèdes langues', isGroup = true }
-l['syi'] = { nom = 'seki' }
-l['syk'] = { nom = 'sukur' }
-l['syl'] = { nom = 'sylheti' }
-l['sym'] = { nom = 'san maya' }
-l['syn'] = { nom = 'senaya' }
-l['syr'] = { nom = 'syriaque' }
-l['syw'] = { nom = 'syuba' }
-l['sza'] = { nom = 'semelai' }
-l['szb'] = { nom = 'ngalum' }
-l['szc'] = { nom = 'semaq beri' }
-l['sze'] = { nom = 'seze' }
-l['szg'] = { nom = 'sengele' }
-l['szl'] = { nom = 'silésien' }
-l['szp'] = { nom = 'inanwatan' }
-l['szw'] = { nom = 'sawai' }
-l['szy'] = { nom = 'sakizaya' }
-l['ta'] = { nom = 'tamoul', wiktionnaire = true }
-l['taa'] = { nom = 'bas tanana', tri = 'tanana bas' }
-l['tab'] = { nom = 'tabassaran' }
-l['tabancale'] = { nom = 'tabancale' }
-l['tac'] = { nom = 'tarahumara occidental' }
-l['tad'] = { nom = 'tause' }
-l['tae'] = { nom = 'tariana' }
-l['taf'] = { nom = 'tapirapé' }
-l['tag'] = { nom = 'tagoi' }
-l['tai'] = { nom = 'langues taïes', tri = 'taïes langues', isGroup = true }
-l['taitnapam'] = { nom = 'taitnapam' }
-l['taïfale'] = { nom = 'taïfale' }
-l['taj'] = { nom = 'tamang oriental' }
-l['tak'] = { nom = 'tala' }
-l['tal'] = { nom = 'tal' }
-l['tan'] = { nom = 'tangale' }
-l['tangam'] = { nom = 'tangam' }
-l['tao'] = { nom = 'yami' }
-l['taokas'] = { nom = 'taokas' }
-l['tap'] = { nom = 'taabwa' }
-l['taq'] = { nom = 'tamasheq' }
-l['tar'] = { nom = 'tarahumara central' }
-l['tas'] = { nom = 'tây bồi' }
-l['tau'] = { nom = 'haut tanana', tri = 'tanana haut' }
-l['tav'] = { nom = 'tatuyo' }
-l['tax'] = { nom = 'tamki' }
-l['tay'] = { nom = 'atayal' }
-l['taz'] = { nom = 'tocho' }
-l['tba'] = { nom = 'aikanã' }
-l['tbc'] = { nom = 'takia' }
-l['tbd'] = { nom = 'kaki ae' }
-l['tbf'] = { nom = 'mandara' }
-l['tbi'] = { nom = 'gaahmg' }
-l['tbj'] = { nom = 'tiang' }
-l['tbk'] = { nom = 'tagbanwa de Calamian', tri = 'tagbanwa Calamian' }
-l['tbl'] = { nom = 'tboli' }
-l['tbm'] = { nom = 'tagbu' }
-l['tbo'] = { nom = 'tawala' }
-l['tbp'] = { nom = 'taworta' }
-l['tbq'] = { nom = 'langues tibéto-birmanes', tri = 'tibéto birmanes langues', isGroup = true }
-l['tbr'] = { nom = 'tumtum' }
-l['tbu'] = { nom = 'tubar' }
-l['tbv'] = { nom = 'tobo' }
-l['tby'] = { nom = 'tabaru' }
-l['tca'] = { nom = 'ticuna' }
-l['tcb'] = { nom = 'tanacross' }
-l['tcc'] = { nom = 'datooga' }
-l['tcd'] = { nom = 'tafi' }
-l['tce'] = { nom = 'tutchone du Sud', tri = 'tutchone Sud' }
-l['tcf'] = { nom = 'me’phaa de Malinaltepec', tri = 'mephaa Malinaltepec' }
-l['tcg'] = { nom = 'tamagario' }
-l['tch'] = { nom = 'créole anglais des îles Turques-et-Caïques', tri = 'créole turques et caïques anglais' }
-l['tcl'] = { nom = 'taman' }
-l['tco'] = { nom = 'taungyo' }
-l['tcp'] = { nom = 'tawr' }
-l['tcq'] = { nom = 'kaiy' }
-l['tcs'] = { nom = 'créole du détroit de Torrès', tri = 'créole Torrès détroit' }
-l['tct'] = { nom = 'then' }
-l['tcx'] = { nom = 'toda' }
-l['tcy'] = { nom = 'toulou' }
-l['tda'] = { nom = 'tagdal' }
-l['tdc'] = { nom = 'emberá tadó' }
-l['tdd'] = { nom = 'tai nua' }
-l['tde'] = { nom = 'tiranige diga' }
-l['tdf'] = { nom = 'talieng' }
-l['tdh'] = { nom = 'thulung' }
-l['tdi'] = { nom = 'tomadino' }
-l['tdj'] = { nom = 'tajio' }
-l['tdk'] = { nom = 'tambas' }
-l['tdl'] = { nom = 'sur' }
-l['tdm'] = { nom = 'taruma' }
-l['tdn'] = { nom = 'tondano' }
-l['tds'] = { nom = 'doutai' }
-l['tdt'] = { nom = 'tetun dili' }
-l['tdu'] = { nom = 'tindal dusun' }
-l['tdv'] = { nom = 'toro' }
-l['te'] = { nom = 'télougou', wiktionnaire = true }
-l['tea'] = { nom = 'temiar' }
-l['tec'] = { nom = 'terik' }
-l['ted'] = { nom = 'kroumen tépo' }
-l['tee'] = { nom = 'tepehua de Huehuetla', tri = 'tepehua Huehuetla' }
-l['tef'] = { nom = 'teressa' }
-l['teg'] = { nom = 'latege' }
-l['teh'] = { nom = 'tehuelche' }
-l['tei'] = { nom = 'torricelli' }
-l['tek'] = { nom = 'téké-ibali' }
-l['tem'] = { nom = 'temné' }
-l['ten'] = { nom = 'tama (Colombie)', tri = 'tama Colombie' }
-l['teo'] = { nom = 'teso' }
-l['tep'] = { nom = 'tepecano' }
-l['tep (Nigeria)'] = { nom = 'tep (Nigeria)', tri = 'tep Nigeria' }
-l['teq'] = { nom = 'temein' }
-l['ter'] = { nom = 'téréno' }
-l['tes'] = { nom = 'tengger' }
-l['tet'] = { nom = 'tétoum' }
-l['teu'] = { nom = 'soo' }
-l['tev'] = { nom = 'teor' }
-l['tew'] = { nom = 'tewa' }
-l['tex'] = { nom = 'tennet' }
-l['tey'] = { nom = 'tulishi' }
-l['tez'] = { nom = 'tetserret' }
-l['tfn'] = { nom = 'dena’ina' }
-l['tfr'] = { nom = 'teribe' }
-l['tft'] = { nom = 'ternate' }
-l['tg'] = { nom = 'tadjik', wiktionnaire = true }
-l['tgb'] = { nom = 'tobilung' }
-l['tgc'] = { nom = 'tigak' }
-l['tgf'] = { nom = 'chalikha' }
-l['tgo'] = { nom = 'sudest' }
-l['tgp'] = { nom = 'tangoa' }
-l['tgq'] = { nom = 'tring' }
-l['tgs'] = { nom = 'nume' }
-l['tgt'] = { nom = 'tagbanwa central' }
-l['tgv'] = { nom = 'tingui-boto' }
-l['tgw'] = { nom = 'tagbana' }
-l['tgx'] = { nom = 'tagish' }
-l['th'] = { nom = 'thaï', wiktionnaire = true }
-l['thd'] = { nom = 'thayore' }
-l['the'] = { nom = 'chitwania' }
-l['thf'] = { nom = 'thangmi' }
-l['thh'] = { nom = 'tarahumara du Nord', tri = 'tarahumara Nord' }
-l['thi'] = { nom = 'tai long' }
-l['thk'] = { nom = 'tharaka' }
-l['thm'] = { nom = 'thavung' }
-l['thp'] = { nom = 'thompson' }
-l['thr'] = { nom = 'rana tharu' }
-l['ths'] = { nom = 'thakali' }
-l['tht'] = { nom = 'tahltan' }
-l['thu'] = { nom = 'thuri' }
-l['thv'] = { nom = 'tamahaq' }
-l['thx'] = { nom = 'thaé' }
-l['thy'] = { nom = 'tha' }
-l['thz'] = { nom = 'tayart tamajeq' }
-l['ti'] = { nom = 'tigrigna', wiktionnaire = true }
-l['tia'] = { nom = 'tamazight de Tidikelt', tri = 'tamazight Tidikelt' }
-l['tic'] = { nom = 'tira' }
-l['tid'] = { nom = 'tidong' }
-l['tiefo de Nyafogo'] = { nom = 'tiefo de Nyafogo', tri = 'tiefo Nyafogo' }
-l['tif'] = { nom = 'tifal' }
-l['tig'] = { nom = 'tigré' }
-l['tih'] = { nom = 'murut timugon' }
-l['tii'] = { nom = 'tiene' }
-l['tij'] = { nom = 'tilung' }
-l['tik'] = { nom = 'tikar' }
-l['til'] = { nom = 'tillamook' }
-l['tim'] = { nom = 'timbe' }
-l['tin'] = { nom = 'tindi' }
-l['tingalan'] = { nom = 'tingalan' }
-l['tio'] = { nom = 'teop' }
-l['tip'] = { nom = 'trimuris' }
-l['tiq'] = { nom = 'tiefo de Daramandugu', tri = 'tiefo Daramandugu' }
-l['tis'] = { nom = 'itneg des Masadiit', tri = 'itneg Masadiit' }
-l['tischlbongarisch'] = { nom = 'tischlbongarisch' }
-l['tit'] = { nom = 'tinigua' }
-l['tiv'] = { nom = 'tiv' }
-l['tiw'] = { nom = 'tiwi' }
-l['tix'] = { nom = 'tiwa du Sud', tri = 'tiwa Sud' }
-l['tiy'] = { nom = 'tiruray' }
-l['tiz'] = { nom = 'tai hongjin' }
-l['tjg'] = { nom = 'tunjung' }
-l['tji'] = { nom = 'tujia du Nord', tri = 'tujia Nord' }
-l['tjm'] = { nom = 'timucua' }
-l['tjs'] = { nom = 'tujia du Sud', tri = 'tujia Sud' }
-l['tju'] = { nom = 'tjurruru' }
-l['tjw'] = { nom = 'djabwurrung' }
-l['tk'] = { nom = 'turkmène', wiktionnaire = true }
-l['tkd'] = { nom = 'tukudede' }
-l['tke'] = { nom = 'takwane' }
-l['tkl'] = { nom = 'tokelauien' }
-l['tkn'] = { nom = 'toku-no-shima' }
-l['tkp'] = { nom = 'tikopia' }
-l['tkq'] = { nom = 'tèè' }
-l['tkr'] = { nom = 'tsakhur' }
-l['tks'] = { nom = 'takestani' }
-l['tkt'] = { nom = 'tharu de Kathoriya', tri = 'tharu Kathoriya' }
-l['tku'] = { nom = 'totonaque du haut Necaxa', tri = 'totonaque Necaxa haut' }
-l['tkw'] = { nom = 'teanu' }
-l['tkx'] = { nom = 'tangko' }
-l['tl'] = { nom = 'tagalog', wiktionnaire = true }
-l['tla'] = { nom = 'tepehuan du Sud-Ouest', tri = 'tepehuan Sud Ouest' }
-l['tlb'] = { nom = 'tobelo' }
-l['tlc'] = { nom = 'totonaque de Misantla', tri = 'totonaque Misantla' }
-l['tld'] = { nom = 'talaud' }
-l['tlf'] = { nom = 'telefol' }
-l['tlg'] = { nom = 'tofanma' }
-l['tlh'] = { nom = 'klingon' }
-l['tli'] = { nom = 'tlingit' }
-l['tlj'] = { nom = 'kitalinga' }
-l['tlk'] = { nom = 'taloki' }
-l['tll'] = { nom = 'tetela' }
-l['tlm'] = { nom = 'tolomako' }
-l['tlo'] = { nom = 'talodi' }
-l['tlq'] = { nom = 'tai loi' }
-l['tls'] = { nom = 'tambotalo' }
-l['tlt'] = { nom = 'teluti' }
-l['tlu'] = { nom = 'tulehu' }
-l['tlv'] = { nom = 'taliabu' }
-l['tlx'] = { nom = 'khehek' }
-l['tly'] = { nom = 'talysh' }
-l['tma'] = { nom = 'tama (Tchad)', tri = 'tama Tchad' }
-l['tmb'] = { nom = 'avava' }
-l['tmc'] = { nom = 'tumak' }
-l['tmd'] = { nom = 'haruai' }
-l['tmf'] = { nom = 'toba mascoy' }
-l['tmh'] = { nom = 'tamasheq (macrolangue)' }
-l['tmi'] = { nom = 'tutuba' }
-l['tmj'] = { nom = 'samarokena' }
-l['tmn'] = { nom = 'taman' }
-l['tmo'] = { nom = 'temoq' }
-l['tmp'] = { nom = 'tai mène' }
-l['tmq'] = { nom = 'tumleo' }
-l['tmr'] = { nom = 'judéo-araméen babylonien' }
-l['tms'] = { nom = 'tima' }
-l['tmt'] = { nom = 'tasmate' }
-l['tmu'] = { nom = 'iau' }
-l['tmw'] = { nom = 'temuan' }
-l['tmz'] = { nom = 'tamanaku' }
-l['tn'] = { nom = 'tswana', wiktionnaire = true }
-l['tna'] = { nom = 'tacana' }
-l['tnc'] = { nom = 'tanimuca' }
-l['tni'] = { nom = 'tandia' }
-l['tnk'] = { nom = 'kwamera' }
-l['tnl'] = { nom = 'lenakel' }
-l['tnm'] = { nom = 'tabla' }
-l['tnn'] = { nom = 'tanna du Nord', tri = 'tanna Nord' }
-l['tnp'] = { nom = 'whitesands' }
-l['tnq'] = { nom = 'taïno' }
-l['tnr'] = { nom = 'bédik' }
-l['tnt'] = { nom = 'tontemboan' }
-l['tnw'] = { nom = 'tonsawang' }
-l['tnx'] = { nom = 'tanema' }
-l['tnz'] = { nom = 'maniq' }
-l['to'] = { nom = 'tongien', wiktionnaire = true }
-l['tob'] = { nom = 'toba' }
-l['toc'] = { nom = 'totonaque de Coyutla', tri = 'totonaque Coyutla' }
-l['toe'] = { nom = 'tomedes' }
-l['tog'] = { nom = 'tonga (Malawi)', tri = 'tonga Malawi' }
-l['toi'] = { nom = 'tonga (Zambie)', tri = 'tonga Zambie' }
-l['toj'] = { nom = 'tojolabal' }
-l['tok'] = { nom = 'toki pona' }
-l['tol'] = { nom = 'tolowa' }
-l['tom'] = { nom = 'tombulu' }
-l['tongzha'] = { nom = 'tongzha' }
-l['too'] = { nom = 'totonaque de Xicotepec de Juárez', tri = 'totonaque Xicotepec Juárez' }
-l['top'] = { nom = 'totonaque de Papantla', tri = 'totonaque Papantla' }
-l['tor'] = { nom = 'banda togbo-vara' }
-l['tos'] = { nom = 'totonaque de la sierra', tri = 'totonaque Sierra' }
-l['tou'] = { nom = 'tho' }
-l['tourangeau'] = { nom = 'tourangeau' }
-l['tow'] = { nom = 'jemez' }
-l['tox'] = { nom = 'tobi' }
-l['toy'] = { nom = 'topoiyo' }
-l['toz'] = { nom = 'to' }
-l['tpa'] = { nom = 'taupota' }
-l['tpc'] = { nom = 'me’phaa d’Azoyu', tri = 'mephaa Azoyu' }
-l['tpe'] = { nom = 'tippera' }
-l['tpf'] = { nom = 'tarpia' }
-l['tpg'] = { nom = 'kula' }
-l['tpi'] = { nom = 'tok pisin', wiktionnaire = true }
-l['tpj'] = { nom = 'tapieté' }
-l['tpl'] = { nom = 'me’phaa de Tlacoapa', tri = 'mephaa Tlacoapa' }
-l['tpm'] = { nom = 'tampulma' }
-l['tpn'] = { nom = 'tupinambá' }
-l['tpp'] = { nom = 'tepehua de Pisaflores', tri = 'tepehua Pisaflores' }
-l['tpr'] = { nom = 'tupari' }
-l['tpt'] = { nom = 'tepehua de Tlachichilco', tri = 'tepehua Tlachichilco' }
-l['tpu'] = { nom = 'tampuan' }
-l['tpv'] = { nom = 'tanapag' }
-l['tpw'] = { nom = 'tupi' }
-l['tpx'] = { nom = 'me’phaa d’Acatepec', tri = 'mephaa Acatepec' }
-l['tpy'] = { nom = 'trumai' }
-l['tqb'] = { nom = 'tembé' }
-l['tql'] = { nom = 'lehali' }
-l['tqn'] = { nom = 'tenino' }
-l['tqo'] = { nom = 'toaripi' }
-l['tqr'] = { nom = 'torona' }
-l['tqt'] = { nom = 'totonaque de l’Ouest', tri = 'totonaque Ouest' }
-l['tqu'] = { nom = 'touo' }
-l['tqw'] = { nom = 'tonkawa' }
-l['tr'] = { nom = 'turc', wiktionnaire = true }
-l['tra'] = { nom = 'tirahi' }
-l['trb'] = { nom = 'terebu' }
-l['trc'] = { nom = 'trique de Copala', tri = 'trique Copala' }
-l['trd'] = { nom = 'turi' }
-l['tre'] = { nom = 'tarangan oriental' }
-l['trf'] = { nom = 'créole trinidadien' }
-l['trg'] = { nom = 'lishán didán' }
-l['trh'] = { nom = 'turaka' }
-l['tri'] = { nom = 'trio' }
-l['trj'] = { nom = 'toram' }
-l['trk'] = { nom = 'langues turques', tri = 'turques langues', isGroup = true }
-l['trl'] = { nom = 'cryptolecte écossais' }
-l['trm'] = { nom = 'tregami' }
-l['trn'] = { nom = 'trinitario' }
-l['tro'] = { nom = 'tarao' }
-l['trp'] = { nom = 'kokborok' }
-l['trq'] = { nom = 'trique de San Martín Itunyoso', tri = 'trique San Martín Itunyoso' }
-l['trr'] = { nom = 'taushiro' }
-l['trs'] = { nom = 'trique de Chicahuaxtla', tri = 'trique Chicahuaxtla' }
-l['trt'] = { nom = 'tunggare' }
-l['tru'] = { nom = 'turoyo' }
-l['trv'] = { nom = 'seediq' }
-l['trw'] = { nom = 'torwali' }
-l['trx'] = { nom = 'tringgus-sembaan bidayuh' }
-l['try'] = { nom = 'turung' }
-l['trz'] = { nom = 'torá' }
-l['ts'] = { nom = 'tsonga', wiktionnaire = true }
-l['tsa'] = { nom = 'tsaangi' }
-l['tsb'] = { nom = 'tsamai' }
-l['tsc'] = { nom = 'tswa' }
-l['tsd'] = { nom = 'tsakonien' }
-l['tse'] = { nom = 'langue des signes tunisienne', tri = 'signes tunisienne' }
-l['tsg'] = { nom = 'tausug' }
-l['tsh'] = { nom = 'tsuvan' }
-l['tshobdun'] = { nom = 'tshobdun' }
-l['tsi'] = { nom = 'tsimshian' }
-l['tsj'] = { nom = 'tshangla' }
-l['tsk'] = { nom = 'tseku' }
-l['tsm'] = { nom = 'langue des signes turque', tri = 'signes turque' }
-l['tsolyáni'] = { nom = 'tsolyáni' }
-l['tsr'] = { nom = 'akei' }
-l['tss'] = { nom = 'langue des signes taïwanaise', tri = 'signes taïwanaise' }
-l['tst'] = { nom = 'tondi songway kiini' }
-l['tsu'] = { nom = 'tsou' }
-l['tsv'] = { nom = 'tsogo' }
-l['tsx'] = { nom = 'mubami' }
-l['tsz'] = { nom = 'purépecha' }
-l['tt'] = { nom = 'tatare', wiktionnaire = true }
-l['tta'] = { nom = 'tutelo' }
-l['ttb'] = { nom = 'gaa' }
-l['ttc'] = { nom = 'tectitèque' }
-l['ttd'] = { nom = 'tauade' }
-l['tte'] = { nom = 'bwanabwana' }
-l['ttf'] = { nom = 'tuotomb' }
-l['tth'] = { nom = 'haut ta’oih' }
-l['tti'] = { nom = 'tobati' }
-l['ttj'] = { nom = 'tooro' }
-l['ttk'] = { nom = 'totoró' }
-l['ttl'] = { nom = 'totela' }
-l['ttm'] = { nom = 'tutchone du Nord', tri = 'tutchone Nord' }
-l['ttn'] = { nom = 'towei' }
-l['ttq'] = { nom = 'tamajaq' }
-l['ttr'] = { nom = 'tera' }
-l['tts'] = { nom = 'isan' }
-l['ttt'] = { nom = 'tat' }
-l['ttu'] = { nom = 'torau' }
-l['ttw'] = { nom = 'long wat' }
-l['tty'] = { nom = 'sikaritai' }
-l['ttz'] = { nom = 'tsum' }
-l['tub'] = { nom = 'tubatulabal' }
-l['tuc'] = { nom = 'mutu' }
-l['tud'] = { nom = 'tuxá' }
-l['tue'] = { nom = 'tuyuca' }
-l['tuf'] = { nom = 'tunebo' }
-l['tug'] = { nom = 'tunia' }
-l['tuh'] = { nom = 'taulil' }
-l['tui'] = { nom = 'toupouri' }
-l['tuj'] = { nom = 'tugutil' }
-l['tul'] = { nom = 'tula' }
-l['tum'] = { nom = 'tumbuka' }
-l['tun'] = { nom = 'tunica' }
-l['tuo'] = { nom = 'tucano' }
-l['tup'] = { nom = 'langues tupies', tri = 'tupies langues', isGroup = true }
-l['tuq'] = { nom = 'tedaga' }
-l['tus'] = { nom = 'tuscarora' }
-l['tussentaal'] = { nom = 'tussentaal' }
-l['tut'] = { nom = 'langues altaïques', tri = 'altaïques langues', isGroup = true }
-l['tuu'] = { nom = 'tututni' }
-l['tuv'] = { nom = 'turkana' }
-l['tuw'] = { nom = 'langues toungouses', tri = 'toungouses langues', isGroup = true }
-l['tux'] = { nom = 'tuxinawa' }
-l['tuy'] = { nom = 'tuken' }
-l['tuz'] = { nom = 'tchourama' }
-l['tva'] = { nom = 'vaghua' }
-l['tvd'] = { nom = 'tsuvadi' }
-l['tve'] = { nom = 'te’un' }
-l['tvk'] = { nom = 'ambrym du Sud-Est', tri = 'ambrym Sud est' }
-l['tvl'] = { nom = 'tuvalu' }
-l['tvm'] = { nom = 'tela-masbuar' }
-l['tvn'] = { nom = 'tavoyan' }
-l['tvo'] = { nom = 'tidore' }
-l['tvu'] = { nom = 'tunen' }
-l['tvw'] = { nom = 'sedoa' }
-l['tw'] = { nom = 'twi', wiktionnaire = true }
-l['twa'] = { nom = 'twana' }
-l['twd'] = { nom = 'tweants' }
-l['twe'] = { nom = 'teiwa' }
-l['twf'] = { nom = 'tiwa du Nord', tri = 'tiwa Nord' }
-l['twh'] = { nom = 'tai don' }
-l['twm'] = { nom = 'monba' }
-l['two'] = { nom = 'tswapong' }
-l['twq'] = { nom = 'tasawaq' }
-l['twt'] = { nom = 'turiwara' }
-l['twu'] = { nom = 'termanu' }
-l['twy'] = { nom = 'taboyan' }
-l['txa'] = { nom = 'tombonuwo' }
-l['txb'] = { nom = 'tokharien B' }
-l['txc'] = { nom = 'tsetsaut' }
-l['txe'] = { nom = 'totoli' }
-l['txg'] = { nom = 'tangoute' }
-l['txh'] = { nom = 'thrace' }
-l['txj'] = { nom = 'vieux kanembou', tri = 'kanembou vieux' }
-l['txi'] = { nom = 'ikpeng' }
-l['txm'] = { nom = 'tomini' }
-l['txn'] = { nom = 'tarangan de l’Ouest', tri = 'tarangan Ouest' }
-l['txo'] = { nom = 'toto' }
-l['txq'] = { nom = 'tii' }
-l['txr'] = { nom = 'tartessien' }
-l['txs'] = { nom = 'tonsea' }
-l['txt'] = { nom = 'citak' }
-l['txu'] = { nom = 'kayapó' }
-l['txx'] = { nom = 'tatana' }
-l['txy'] = { nom = 'antanosy' }
-l['ty'] = { nom = 'tahitien' }
-l['tya'] = { nom = 'tauya' }
-l['tye'] = { nom = 'kyanga' }
-l['tyi'] = { nom = 'téké-tsaayi' }
-l['typ'] = { nom = 'thaypan' }
-l['tyt'] = { nom = 'tày tac' }
-l['tyv'] = { nom = 'touvain' }
-l['tyz'] = { nom = 'tày' }
-l['tza'] = { nom = 'langue des signes tanzanienne', tri = 'signes tanzanienne' }
-l['tzh'] = { nom = 'tzeltal' }
-l['tzj'] = { nom = 'tz’utujil' }
-l['tzl'] = { nom = 'talossien' }
-l['tzm'] = { nom = 'tamazight du Maroc central', tri = 'tamazight Maroc central' }
-l['tzn'] = { nom = 'tugun' }
-l['tzo'] = { nom = 'tzotzil' }
-l['uam'] = { nom = 'uamué' }
-l['uar'] = { nom = 'tairuma' }
-l['ubi'] = { nom = 'ubi' }
-l['ubl'] = { nom = 'buhi’non' }
-l['ubr'] = { nom = 'ubir' }
-l['ubu'] = { nom = 'umbu-ungu' }
-l['uby'] = { nom = 'oubykh' }
-l['uda'] = { nom = 'uda' }
-l['ude'] = { nom = 'oudégué' }
-l['udg'] = { nom = 'muduga' }
-l['udi'] = { nom = 'oudi' }
-l['udj'] = { nom = 'ujir' }
-l['udl'] = { nom = 'wuzlam' }
-l['udm'] = { nom = 'oudmourte' }
-l['udu'] = { nom = 'uduk' }
-l['ug'] = { nom = 'ouïghour', wiktionnaire = true }
-l['uga'] = { nom = 'ougaritique' }
-l['uge'] = { nom = 'ughele' }
-l['ugo'] = { nom = 'ugong' }
-l['uhn'] = { nom = 'damal' }
-l['uis'] = { nom = 'uisai' }
-l['uiv'] = { nom = 'iyive' }
-l['uji'] = { nom = 'tanjijili' }
-l['uk'] = { nom = 'ukrainien', wiktionnaire = true }
-l['ukk'] = { nom = 'muak sa-aak' }
-l['ukq'] = { nom = 'ukwa' }
-l['ula'] = { nom = 'fungwa' }
-l['ulc'] = { nom = 'oultch' }
-l['ule'] = { nom = 'lule' }
-l['ulf'] = { nom = 'usku' }
-l['uli'] = { nom = 'ulithi' }
-l['ulk'] = { nom = 'meriam' }
-l['ull'] = { nom = 'ullatan' }
-l['ulm'] = { nom = 'ulumanda’' }
-l['uln'] = { nom = 'unserdeutsch' }
-l['ulu'] = { nom = 'oma longh' }
-l['ulw'] = { nom = 'ulwa' }
-l['uma'] = { nom = 'umatilla' }
-l['umb'] = { nom = 'oumboundou' }
-l['umc'] = { nom = 'marrucinien' }
-l['umd'] = { nom = 'umbindhamu' }
-l['umg'] = { nom = 'umbuygamu' }
-l['umi'] = { nom = 'ukit' }
-l['umo'] = { nom = 'umotina' }
-l['ump'] = { nom = 'umpila' }
-l['ums'] = { nom = 'pendau' }
-l['umu'] = { nom = 'munsee' }
-l['una'] = { nom = 'watut du Nord', tri = 'watut Nord' }
-l['und'] = { nom = 'langue indéterminée', tri = '*indéterminée', isSpecial = true }
-l['une'] = { nom = 'uneme' }
-l['ung'] = { nom = 'ngarinyin' }
-l['unm'] = { nom = 'unami' }
-l['unn'] = { nom = 'kurnai' }
-l['unr'] = { nom = 'mundari' }
-l['unz'] = { nom = 'kaili d’Unde', tri = 'kaili Unde' }
-l['upv'] = { nom = 'uripiv-wala-rano-atchin' }
-l['ur'] = { nom = 'ourdou', wiktionnaire = true }
-l['ura'] = { nom = 'urarina' }
-l['urb'] = { nom = 'kaapor' }
-l['ure'] = { nom = 'uru' }
-l['urf'] = { nom = 'uradhi' }
-l['urg'] = { nom = 'urigina' }
-l['urh'] = { nom = 'urhobo' }
-l['uri'] = { nom = 'urim' }
-l['urj'] = { nom = 'langues ouraliennes', tri = 'ouraliennes langues', isGroup = true }
-l['urk'] = { nom = 'urak lawoi’' }
-l['url'] = { nom = 'urali' }
-l['urn'] = { nom = 'uruangnirin' }
-l['uro'] = { nom = 'ura (Papouasie-Nouvelle-Guinée)', tri = 'ura Papouasie' }
-l['urp'] = { nom = 'uru-pa-in' }
-l['urr'] = { nom = 'löyöp' }
-l['urt'] = { nom = 'urat' }
-l['uru'] = { nom = 'urumi' }
-l['urv'] = { nom = 'uruava' }
-l['urw'] = { nom = 'sop' }
-l['ury'] = { nom = 'orya' }
-l['usi'] = { nom = 'usui' }
-l['usk'] = { nom = 'usakade' }
-l['usp'] = { nom = 'uspantèque' }
-l['uss'] = { nom = 'us-saare' }
-l['usu'] = { nom = 'uya' }
-l['ute'] = { nom = 'ute' }
-l['ute-che'] = { nom = 'chemehuevi' }
-l['ute-sou'] = { nom = 'paiute du Sud', tri = 'paiute Sud' }
-l['uth'] = { nom = 'ut-hun' }
-l['utr'] = { nom = 'etulo' }
-l['utu'] = { nom = 'utu' }
-l['uum'] = { nom = 'urum' }
-l['uun'] = { nom = 'pazeh' }
-l['uur'] = { nom = 'ura (Vanuatu)', tri = 'ura Vanuatu' }
-l['uuu'] = { nom = 'u' }
-l['uve'] = { nom = 'fagauvea' }
-l['uvh'] = { nom = 'uri' }
-l['uwa'] = { nom = 'kuku-uwanh' }
-l['uz'] = { nom = 'ouzbek', wiktionnaire = true }
-l['vaa'] = { nom = 'vaagri booli' }
-l['vae'] = { nom = 'vale' }
-l['vaf'] = { nom = 'vafsi' }
-l['vag'] = { nom = 'vagla' }
-l['vai'] = { nom = 'vaï' }
-l['vaj'] = { nom = 'vasekele' }
-l['vam'] = { nom = 'vanimo' }
-l['van'] = { nom = 'valman' }
-l['vao'] = { nom = 'vao' }
-l['vap'] = { nom = 'vaiphei' }
-l['var'] = { nom = 'guarijio' }
-l['vas'] = { nom = 'vasavi' }
-l['vay'] = { nom = 'wayu' }
-l['vbb'] = { nom = 'babar du Sud-Est', tri = 'babar Sud Est' }
-l['ve'] = { nom = 'venda' }
-l['vec'] = { nom = 'vénitien', wiktionnaire = true }
-l['ved'] = { nom = 'veddah' }
-l['vel'] = { nom = 'veluws' }
-l['vem'] = { nom = 'vemgo-mabas' }
-l['veo'] = { nom = 'ventureño' }
-l['vep'] = { nom = 'vepse' }
-l['ver'] = { nom = 'mom jango' }
-l['vi'] = { nom = 'vietnamien', wiktionnaire = true }
-l['vic'] = { nom = 'créole des Îles Vierges', tri = 'créole Vierges' }
-l['vid'] = { nom = 'vidunda' }
-l['vieil écossais'] = { nom = 'vieil écossais', tri = 'écossais vieil' }
-l['vieil okinawaïen'] = { nom = 'vieil okinawaïen', tri = 'okinawaïen vieux' }
-l['vieux balinais'] = { nom = 'vieux balinais', tri = 'balinais vieux' }
-l['vieux brittonique'] = { nom = 'vieux brittonique', tri = 'brittonique vieux' }
-l['vieux danois'] = { nom = 'vieux danois', tri = 'danois vieux' }
-l['vieux khmer pré-angkorien'] = { nom = 'vieux khmer pré-angkorien', tri = 'khmer vieux pré angkorien' }
-l['vieux mandarin'] = { nom = 'vieux mandarin', tri = 'mandarin vieux' }
-l['vieux norvégien'] = { nom = 'vieux norvégien', tri = 'norvégien vieux' }
-l['vieux novgorodien'] = { nom = 'vieux novgorodien', tri = 'novgorodien vieux' }
-l['vieux polonais'] = { nom = 'vieux polonais', tri = 'polonais vieux' }
-l['vieux suédois'] = { nom = 'vieux suédois', tri = 'suédois vieux' }
-l['vif'] = { nom = 'vili' }
-l['vig'] = { nom = 'viemo' }
-l['vil'] = { nom = 'vilela' }
-l['vin'] = { nom = 'vinza' }
-l['vis'] = { nom = 'vishavan' }
-l['vit'] = { nom = 'viti' }
-l['viv'] = { nom = 'iduna' }
-l['vka'] = { nom = 'kariyarra' }
-l['vkl'] = { nom = 'kulisusu' }
-l['vkm'] = { nom = 'kamakan' }
-l['vko'] = { nom = 'kodeoha' }
-l['vkp'] = { nom = 'korlai' }
-l['vlp'] = { nom = 'valpei' }
-l['vls'] = { nom = 'flamand occidental' }
-l['vma'] = { nom = 'martuthunira' }
-l['vmb'] = { nom = 'mbabaram' }
-l['vme'] = { nom = 'masela de l’Est', tri = 'masela Est' }
-l['vmf'] = { nom = 'francique oriental' }
-l['vmj'] = { nom = 'mixtèque d’Ixtayutla', tri = 'mixtèque Ixtayutla' }
-l['vml'] = { nom = 'malgana' }
-l['vmp'] = { nom = 'mazatèque de Soyaltepec', tri = 'mazatèque Soyaltepec' }
-l['vmw'] = { nom = 'makhuwa' }
-l['vmy'] = { nom = 'mazatèque de San Bartolomé Ayautla', tri = 'mazatèque San Bartolome Ayautla' }
-l['vmz'] = { nom = 'mazatèque de Mazatlán', tri = 'mazatèque Mazatlán' }
-l['vnk'] = { nom = 'lovono' }
-l['vnm'] = { nom = 'neve’ei' }
-l['vnp'] = { nom = 'vunapu' }
-l['vo'] = { nom = 'volapük réformé', wiktionnaire = true }
-l['volapük classique'] = { nom = 'volapük classique' }
-l['volow'] = { nom = 'volow' }
-l['volsque'] = { nom = 'volsque' }
-l['vor'] = { nom = 'voro' }
-l['vot'] = { nom = 'vote' }
-l['vra'] = { nom = 'vera’a' }
-l['vro'] = { nom = 'võro', wmlien = 'fiu-vro' }
-l['vrt'] = { nom = 'banam bay' }
-l['vsn'] = { nom = 'sanskrit védique' }
-l['vun'] = { nom = 'wunjo' }
-l['vut'] = { nom = 'vute' }
-l['vwa'] = { nom = 'awa (môn-khmer)', tri = 'awa môn khmer' }
-l['wa'] = { nom = 'wallon', wiktionnaire = true }
-l['waa'] = { nom = 'walla walla' }
-l['wab'] = { nom = 'wab' }
-l['wac'] = { nom = 'wasco-wishram' }
-l['wad'] = { nom = 'wandamen' }
-l['wae'] = { nom = 'walser' }
-l['wah'] = { nom = 'watubela' }
-l['wai'] = { nom = 'wares' }
-l['waj'] = { nom = 'waffa' }
-l['wak'] = { nom = 'langues wakashennes', tri = 'wakashennes langues', isGroup = true }
-l['wal'] = { nom = 'wolaytta' }
-l['wam'] = { nom = 'massachusett' }
-l['wan'] = { nom = 'wan' }
-l['wañám'] = { nom = 'wañám' }
-l['wao'] = { nom = 'wappo' }
-l['wap'] = { nom = 'wapishana' }
-l['waq'] = { nom = 'wageman' }
-l['war'] = { nom = 'waray (Philippines)', tri = 'waray Philippines' }
-l['was'] = { nom = 'washo' }
-l['wat'] = { nom = 'kaninuwa' }
-l['wau'] = { nom = 'waurá' }
-l['wauyukma'] = { nom = 'wauyukma' }
-l['wav'] = { nom = 'waka' }
-l['waw'] = { nom = 'waiwai' }
-l['wax'] = { nom = 'marangis' }
-l['way'] = { nom = 'wayana' }
-l['waz'] = { nom = 'wampur' }
-l['wba'] = { nom = 'warao' }
-l['wbb'] = { nom = 'wabo' }
-l['wbe'] = { nom = 'waritai' }
-l['wbf'] = { nom = 'wara' }
-l['wbh'] = { nom = 'wanda' }
-l['wbi'] = { nom = 'wanji' }
-l['wbj'] = { nom = 'alagwa' }
-l['wbk'] = { nom = 'waigali' }
-l['wbl'] = { nom = 'wakhi' }
-l['wbm'] = { nom = 'vo' }
-l['wbp'] = { nom = 'warlpiri' }
-l['wbt'] = { nom = 'warnman' }
-l['wbv'] = { nom = 'wajarri' }
-l['wbw'] = { nom = 'woi' }
-l['wca'] = { nom = 'yanomámi' }
-l['wdj'] = { nom = 'wadjiginy' }
-l['wdk'] = { nom = 'wadikali' }
-l['wea'] = { nom = 'wewaw' }
-l['wec'] = { nom = 'wé occidental' }
-l['wed'] = { nom = 'wedau' }
-l['weg'] = { nom = 'wergaia' }
-l['weh'] = { nom = 'weh' }
-l['wei'] = { nom = 'kiunum' }
-l['wem'] = { nom = 'gbe weme' }
-l['wen'] = { nom = 'langues sorabes', tri = 'sorabes langues', isGroup = true }
-l['weo'] = { nom = 'wemale' }
-l['wep'] = { nom = 'westphalien' }
-l['wer'] = { nom = 'weri' }
-l['wes'] = { nom = 'pidgin camerounais' }
-l['wet'] = { nom = 'perai' }
-l['weu'] = { nom = 'rawngtu' }
-l['wew'] = { nom = 'wejewa' }
-l['wfg'] = { nom = 'zorop' }
-l['wga'] = { nom = 'wagaya' }
-l['wgg'] = { nom = 'wangganguru' }
-l['wgi'] = { nom = 'wahgi' }
-l['wgo'] = { nom = 'waigeo' }
-l['wgu'] = { nom = 'wirangu' }
-l['wgy'] = { nom = 'warrgamay' }
-l['whg'] = { nom = 'wahgi du Nord', tri = 'wahgi Nord' }
-l['whk'] = { nom = 'lebu’ kulit' }
-l['wic'] = { nom = 'wichita' }
-l['wie'] = { nom = 'wik-epa' }
-l['wif'] = { nom = 'wik-keyangan' }
-l['wig'] = { nom = 'wik-ngathan' }
-l['wih'] = { nom = 'wik-me’anha' }
-l['wii'] = { nom = 'minidien' }
-l['wij'] = { nom = 'wik-iiyanh' }
-l['wim'] = { nom = 'wik-mungkan' }
-l['win'] = { nom = 'winnebago' }
-l['wir'] = { nom = 'wiraféd' }
-l['wiu'] = { nom = 'wiru' }
-l['wiv'] = { nom = 'vitu' }
-l['wiy'] = { nom = 'wiyot' }
-l['wja'] = { nom = 'waja' }
-l['wji'] = { nom = 'warji' }
-l['wku'] = { nom = 'kunduvadi' }
-l['wkw'] = { nom = 'wakawaka' }
-l['wlc'] = { nom = 'shimwali' }
-l['wle'] = { nom = 'wolane' }
-l['wli'] = { nom = 'waioli' }
-l['wlk'] = { nom = 'wailaki' }
-l['wll'] = { nom = 'wali (Soudan)', tri = 'wali Soudan' }
-l['wlm'] = { nom = 'moyen gallois', tri = 'gallois moyen' }
-l['wlo'] = { nom = 'wolio' }
-l['wlr'] = { nom = 'wailapa' }
-l['wls'] = { nom = 'wallisien' }
-l['wlv'] = { nom = 'wichí lhamtés vejoz' }
-l['wmb'] = { nom = 'wambaya' }
-l['wmc'] = { nom = 'wamas' }
-l['wmd'] = { nom = 'mamaindé' }
-l['wme'] = { nom = 'wambule' }
-l['wmg'] = { nom = 'muya de l’Ouest', tri = 'muya Ouest' }
-l['wmh'] = { nom = 'waimaha' }
-l['wms'] = { nom = 'wambon' }
-l['wmt'] = { nom = 'walmajarri' }
-l['wmw'] = { nom = 'mwani' }
-l['wnc'] = { nom = 'wantoat' }
-l['wnd'] = { nom = 'wandarang' }
-l['wne'] = { nom = 'waneci' }
-l['wng'] = { nom = 'wanggom' }
-l['wni'] = { nom = 'shindzuani' }
-l['wnk'] = { nom = 'wanokaka' }
-l['wno'] = { nom = 'wano' }
-l['wnp'] = { nom = 'wanap' }
-l['wnu'] = { nom = 'usan' }
-l['wnw'] = { nom = 'wintu' }
-l['wny'] = { nom = 'wanyi' }
-l['wo'] = { nom = 'wolof', wiktionnaire = true }
-l['woc'] = { nom = 'wogeo' }
-l['wod'] = { nom = 'wolani' }
-l['woe'] = { nom = 'woléaïen' }
-l['wog'] = { nom = 'wogamusin' }
-l['woi'] = { nom = 'kamang' }
-l['wok'] = { nom = 'longto' }
-l['wom'] = { nom = 'wom (Nigeria)', tri = 'wom Nigeria' }
-l['won'] = { nom = 'wongo' }
-l['wor'] = { nom = 'woria' }
-l['wos'] = { nom = 'hanga hundi' }
-l['wow'] = { nom = 'wawonii' }
-l['wpc'] = { nom = 'maco' }
-l['wra'] = { nom = 'warapu' }
-l['wrb'] = { nom = 'warluwara' }
-l['wrg'] = { nom = 'warungu' }
-l['wrh'] = { nom = 'wiradjuri' }
-l['wrk'] = { nom = 'garrwa' }
-l['wrm'] = { nom = 'warumungu' }
-l['wro'] = { nom = 'worrorra' }
-l['wrp'] = { nom = 'waropen' }
-l['wrr'] = { nom = 'wardaman' }
-l['wrs'] = { nom = 'waris' }
-l['wru'] = { nom = 'waru' }
-l['wrw'] = { nom = 'gugu warra' }
-l['wrx'] = { nom = 'wae rana' }
-l['wry'] = { nom = 'merwari' }
-l['wrz'] = { nom = 'waray (Australie)', tri = 'waray Australie' }
-l['wsa'] = { nom = 'warembori' }
-l['wsi'] = { nom = 'wusi' }
-l['wsk'] = { nom = 'waskia' }
-l['wss'] = { nom = 'wasa' }
-l['wsv'] = { nom = 'wotapuri-katarqala' }
-l['wtf'] = { nom = 'watiwa' }
-l['wth'] = { nom = 'wathawurrung' }
-l['wti'] = { nom = 'berta' }
-l['wtw'] = { nom = 'wotu' }
-l['wuh'] = { nom = 'wutunhua' }
-l['wul'] = { nom = 'silimo' }
-l['wulguru'] = { nom = 'wulguru' }
-l['wun'] = { nom = 'bungu' }
-l['wut'] = { nom = 'wutung' }
-l['wuu'] = { nom = 'wu' }
-l['wuy'] = { nom = 'wauyai' }
-l['wwo'] = { nom = 'dorig' }
-l['wwr'] = { nom = 'warrwa' }
-l['www'] = { nom = 'wawa' }
-l['wxa'] = { nom = 'waxiang' }
-l['wya'] = { nom = 'wyandot' }
-l['wya-hur'] = { nom = 'huron' }
-l['wyb'] = { nom = 'wangaaybuwan-ngiyambaa' }
-l['wyi'] = { nom = 'woiwurrung' }
-l['wym'] = { nom = 'wilamowicien' }
-l['wyr'] = { nom = 'ayuru' }
-l['wyy'] = { nom = 'fidjien de l’Ouest', tri = 'fidjien Ouest' }
-l['xaa'] = { nom = 'arabe andalou' }
-l['xab'] = { nom = 'sambe' }
-l['xad'] = { nom = 'adai' }
-l['xag'] = { nom = 'albanien' }
-l['xal'] = { nom = 'kalmouk' }
-l['xam'] = { nom = 'ǀxam', tri = 'xam' }
-l['xan'] = { nom = 'xamtanga' }
-l['xap'] = { nom = 'apalachee' }
-l['xaq'] = { nom = 'aquitain' }
-l['xas'] = { nom = 'kamasse' }
-l['xat'] = { nom = 'katawixi' }
-l['xau'] = { nom = 'kauwera' }
-l['xav'] = { nom = 'xavante' }
-l['xaw'] = { nom = 'kawaiisu' }
-l['xay'] = { nom = 'kayan de Mahakam', tri = 'kayan Mahakam' }
-l['xbc'] = { nom = 'bactrien' }
-l['xbg'] = { nom = 'bunganditj' }
-l['xbi'] = { nom = 'kombio' }
-l['xbm'] = { nom = 'moyen breton', tri = 'breton moyen' }
-l['xbn'] = { nom = 'kenaboi' }
-l['xbr'] = { nom = 'kambera' }
-l['xcb'] = { nom = 'cambrien' }
-l['xce'] = { nom = 'celtibère' }
-l['xch'] = { nom = 'chimakum' }
-l['xcl'] = { nom = 'arménien ancien' }
-l['xco'] = { nom = 'chorasmien' }
-l['xcm'] = { nom = 'comecrudo' }
-l['xcn'] = { nom = 'cotoname' }
-l['xcr'] = { nom = 'carien' }
-l['xct'] = { nom = 'tibétain classique' }
-l['xcu'] = { nom = 'couronien' }
-l['xcw'] = { nom = 'coahuilteco' }
-l['xdc'] = { nom = 'dace' }
-l['xdk'] = { nom = 'dharug' }
-l['xdm'] = { nom = 'édomite' }
-l['xdo'] = { nom = 'kwandu' }
-l['xdq'] = { nom = 'kaïtag' }
-l['xdy'] = { nom = 'malais dayak' }
-l['xeb'] = { nom = 'éblaïte' }
-l['xed'] = { nom = 'hdi' }
-l['xeg'] = { nom = 'ǁxegwi', tri = 'xegwi' }
-l['xem'] = { nom = 'kembayan' }
-l['xer'] = { nom = 'xerénte' }
-l['xes'] = { nom = 'kesawai' }
-l['xet'] = { nom = 'xéta' }
-l['xeu'] = { nom = 'keoru-ahia' }
-l['xfa'] = { nom = 'falisque' }
-l['xga'] = { nom = 'galate' }
-l['xgf'] = { nom = 'gabrielino-fernandeño' }
-l['xgm'] = { nom = 'dharumbal' }
-l['xgn'] = { nom = 'langues mongoles', tri = 'mongoles langues', isGroup = true }
-l['xh'] = { nom = 'xhosa', wiktionnaire = true }
-l['xha'] = { nom = 'harami' }
-l['xhc'] = { nom = 'hunnique' }
-l['xht'] = { nom = 'hatti' }
-l['xia'] = { nom = 'xiandao' }
-l['xib'] = { nom = 'ibère' }
-l['xii'] = { nom = 'xiri' }
-l['xil'] = { nom = 'illyrien' }
-l['xin'] = { nom = 'xinca' }
-l['xiong-nu'] = { nom = 'xiong-nu' }
-l['xiy'] = { nom = 'xipaya' }
-l['xkc'] = { nom = 'kho’ini' }
-l['xke'] = { nom = 'kereho' }
-l['xkf'] = { nom = 'khengkha' }
-l['xkg'] = { nom = 'kagoro' }
-l['xkj'] = { nom = 'kajali' }
-l['xkq'] = { nom = 'koroni' }
-l['xkr'] = { nom = 'xakriabá' }
-l['xku'] = { nom = 'kaamba' }
-l['xkw'] = { nom = 'kembra' }
-l['xky'] = { nom = 'uma’ lasan' }
-l['xkz'] = { nom = 'kurtokha' }
-l['xla'] = { nom = 'kamula' }
-l['xlc'] = { nom = 'lycien' }
-l['xld'] = { nom = 'lydien' }
-l['xlg'] = { nom = 'ligure ancien' }
-l['xln'] = { nom = 'alain' }
-l['xlo'] = { nom = 'loup A' }
-l['xlp'] = { nom = 'lépontique' }
-l['xls'] = { nom = 'lusitain' }
-l['xlu'] = { nom = 'louvite' }
-l['xma'] = { nom = 'mushungulu' }
-l['xmb'] = { nom = 'mboa' }
-l['xmc'] = { nom = 'emakhuwa emarevoni' }
-l['xmd'] = { nom = 'mbudum' }
-l['xme'] = { nom = 'mède' }
-l['xmf'] = { nom = 'mingrélien' }
-l['xmk'] = { nom = 'ancien macédonien', tri = 'macédonien ancien' }
-l['xmm'] = { nom = 'malais de Manado', tri = 'malais Manado' }
-l['xmr'] = { nom = 'méroïtique' }
-l['xmt'] = { nom = 'matbat' }
-l['xmz'] = { nom = 'mori bawah' }
-l['xna'] = { nom = 'ancien arabe du Nord', tri = 'arabe Nord ancien' }
-l['xnb'] = { nom = 'kanakanabu' }
-l['xnd'] = { nom = 'langues na-dénées', tri = 'na dénées langues', isGroup = true }
-l['xng'] = { nom = 'moyen mongol', tri = 'mongol moyen' }
-l['xni'] = { nom = 'ngarigu' }
-l['xno'] = { nom = 'anglo-normand' }
-l['xnr'] = { nom = 'kangri' }
-l['xns'] = { nom = 'kanashi' }
-l['xnt'] = { nom = 'narragansett' }
-l['xny'] = { nom = 'nyiyaparli' }
-l['xnz'] = { nom = 'kenzi' }
-l['xoc'] = { nom = 'o’chi’chi’' }
-l['xod'] = { nom = 'kokoda' }
-l['xom'] = { nom = 'komo' }
-l['xon'] = { nom = 'konkomba' }
-l['xoo'] = { nom = 'xukuru' }
-l['xop'] = { nom = 'kopar' }
-l['xpe'] = { nom = 'kpellé du Liberia', tri = 'kpellé Liberia' }
-l['xpi'] = { nom = 'picte' }
-l['xpg'] = { nom = 'phrygien' }
-l['xpm'] = { nom = 'pumpokol' }
-l['xpo'] = { nom = 'pochutèque' }
-l['xpq'] = { nom = 'mohegan' }
-l['xpr'] = { nom = 'parthe' }
-l['xps'] = { nom = 'pisidien' }
-l['xpu'] = { nom = 'punique' }
-l['xpy'] = { nom = 'puyo' }
-l['xra'] = { nom = 'krahô' }
-l['xrb'] = { nom = 'karaboro de l’Est', tri = 'karaboro Est' }
-l['xre'] = { nom = 'kreye' }
-l['xrn'] = { nom = 'arin' }
-l['xrr'] = { nom = 'rhétique' }
-l['xrt'] = { nom = 'aranama' }
-l['xrw'] = { nom = 'karawa' }
-l['xsa'] = { nom = 'sabéen' }
-l['xsb'] = { nom = 'sambal' }
-l['xsc'] = { nom = 'scythe' }
-l['xsd'] = { nom = 'sidétique' }
-l['xse'] = { nom = 'sempan' }
-l['xsi'] = { nom = 'sio' }
-l['xsl'] = { nom = 'esclave du Sud', tri = 'esclave Sud' }
-l['xsm'] = { nom = 'kassem' }
-l['xso'] = { nom = 'solano' }
-l['xsp'] = { nom = 'silopi' }
-l['xsq'] = { nom = 'makhuwa-saka' }
-l['xsr'] = { nom = 'sherpa' }
-l['xss'] = { nom = 'assane' }
-l['xsu'] = { nom = 'sanumá' }
-l['xsv'] = { nom = 'sudovien' }
-l['xsy'] = { nom = 'saisiyat' }
-l['xta'] = { nom = 'mixtèque de Xochapa', tri = 'mixtèque Xochapa' }
-l['xtc'] = { nom = 'katcha-kadugli-miri' }
-l['xtd'] = { nom = 'mixtèque de Diuxi-Tilantongo', tri = 'mixtèque Diuxi Tilantongo' }
-l['xtm'] = { nom = 'mixtèque de Magdalena Peñasco', tri = 'mixtèque Magdalena Peñasco' }
-l['xto'] = { nom = 'tokharien A' }
-l['xtw'] = { nom = 'tawandê' }
-l['xty'] = { nom = 'mixtèque de Yoloxochitl', tri = 'mixtèque Yoloxochitl' }
-l['xtz'] = { nom = 'tasmanien' }
-l['xua'] = { nom = 'alu kurumba' }
-l['xub'] = { nom = 'bettu kurumba' }
-l['xud'] = { nom = 'umiida' }
-l['xug'] = { nom = 'kunigami' }
-l['xuj'] = { nom = 'jennu kurumba' }
-l['xul'] = { nom = 'ngunawal' }
-l['xum'] = { nom = 'ombrien' }
-l['xun'] = { nom = 'unggarranggu' }
-l['xup'] = { nom = 'haut umpqua', tri = 'umpqua haut' }
-l['xur'] = { nom = 'urartéen' }
-l['xuu'] = { nom = 'kxoe' }
-l['xve'] = { nom = 'vénète' }
-l['xvi'] = { nom = 'kamviri' }
-l['xvn'] = { nom = 'vandale' }
-l['xvs'] = { nom = 'vestinien' }
-l['xwa'] = { nom = 'kwaza' }
-l['xwc'] = { nom = 'woccon' }
-l['xwd'] = { nom = 'wadi wadi' }
-l['xwg'] = { nom = 'kwegu' }
-l['xwk'] = { nom = 'wangkumara' }
-l['xwo'] = { nom = 'oïrate' }
-l['xww'] = { nom = 'wemba wemba' }
-l['xxb'] = { nom = 'boro' }
-l['xxk'] = { nom = 'keo' }
-l['xxt'] = { nom = 'tambora' }
-l['xyy'] = { nom = 'yorta yorta' }
-l['xzh'] = { nom = 'zhang-zhung' }
-l['yaa'] = { nom = 'yaminahua' }
-l['yab'] = { nom = 'yuhup' }
-l['yac'] = { nom = 'yali de Pass Valley', tri = 'yali Pass valley' }
-l['yad'] = { nom = 'yagua' }
-l['yae'] = { nom = 'pumé' }
-l['yaf'] = { nom = 'kiyaka' }
-l['yag'] = { nom = 'yagan' }
-l['yah'] = { nom = 'yazgulami' }
-l['yai'] = { nom = 'yaghnobi' }
-l['yaj'] = { nom = 'banda-yangere' }
-l['yak'] = { nom = 'yakama' }
-l['yal'] = { nom = 'dialonké' }
-l['yam'] = { nom = 'yamba' }
-l['yan'] = { nom = 'mayangna' }
-l['yao'] = { nom = 'yao' }
-l['yap'] = { nom = 'yapois' }
-l['yar'] = { nom = 'yabarana' }
-l['yaq'] = { nom = 'yaqui' }
-l['yas'] = { nom = 'nugunu (Cameroun)', tri = 'nugunu Cameroun' }
-l['yat'] = { nom = 'yambeta' }
-l['yau'] = { nom = 'yuwana' }
-l['yav'] = { nom = 'yangben' }
-l['yaw'] = { nom = 'yawalapití' }
-l['yax'] = { nom = 'yauma' }
-l['yay'] = { nom = 'agwagwune' }
-l['yba'] = { nom = 'yala' }
-l['ybb'] = { nom = 'yemba' }
-l['ybe'] = { nom = 'yugur occidental' }
-l['ybh'] = { nom = 'yakha' }
-l['ybj'] = { nom = 'hasha' }
-l['ybo'] = { nom = 'yabong' }
-l['yby'] = { nom = 'yaweyuha' }
-l['ycn'] = { nom = 'yucuna' }
-l['ycr'] = { nom = 'créole de Yilan', tri = 'créole Yilan' }
-l['ydd'] = { nom = 'yiddish de l’Est', tri = 'yiddish Est' }
-l['ydg'] = { nom = 'yidgha' }
-l['ydk'] = { nom = 'yoidik' }
-l['yea'] = { nom = 'ravula' }
-l['yec'] = { nom = 'yéniche' }
-l['yee'] = { nom = 'yimas' }
-l['yei'] = { nom = 'yeni' }
-l['yej'] = { nom = 'yévanique' }
-l['yel'] = { nom = 'yela' }
-l['yer'] = { nom = 'tarok' }
-l['yes'] = { nom = 'nyankpa' }
-l['yet'] = { nom = 'yetfa' }
-l['yeu'] = { nom = 'yerukala' }
-l['yev'] = { nom = 'yapunda' }
-l['yey'] = { nom = 'yeyi' }
-l['yga'] = { nom = 'malyangapa' }
-l['ygp'] = { nom = 'gepo' }
-l['ygr'] = { nom = 'yagaria' }
-l['ygw'] = { nom = 'yagwoia' }
-l['yha'] = { nom = 'buyang baha' }
-l['yhl'] = { nom = 'hlepho' }
-l['yi'] = { nom = 'yiddish', wiktionnaire = true }
-l['yia'] = { nom = 'yinggarda' }
-l['yif'] = { nom = 'ache' }
-l['yig'] = { nom = 'nasu wusa' }
-l['yih'] = { nom = 'yiddish de l’Ouest', tri = 'yiddish Ouest' }
-l['yii'] = { nom = 'yidiny' }
-l['yij'] = { nom = 'yindjibarndi' }
-l['yik'] = { nom = 'lalo de l’Est', tri = 'lalo Est' }
-l['yil'] = { nom = 'yindjilandji' }
-l['yim'] = { nom = 'yimchungru' }
-l['yiq'] = { nom = 'miqie' }
-l['yis'] = { nom = 'yis' }
-l['yir'] = { nom = 'aghu du Nord', tri = 'aghu Nord' }
-l['yiu'] = { nom = 'awu' }
-l['yix'] = { nom = 'ahi' }
-l['yiy'] = { nom = 'yir yoront' }
-l['yiz'] = { nom = 'azhe' }
-l['yka'] = { nom = 'yakan' }
-l['ykg'] = { nom = 'youkaguir de la toundra', tri = 'youkaguir toundra' }
-l['ykh'] = { nom = 'khamnigan' }
-l['yki'] = { nom = 'yoke' }
-l['ykm'] = { nom = 'yakamul' }
-l['yko'] = { nom = 'yasa' }
-l['yky'] = { nom = 'yakoma' }
-l['yla'] = { nom = 'ulwa (Papouasie-Nouvelle-Guinée)', tri = 'ulwa Papouasie' }
-l['yle'] = { nom = 'yele' }
-l['ylg'] = { nom = 'yelogu' }
-l['yli'] = { nom = 'yali d’Angguruk', tri = 'yali Angguruk' }
-l['yll'] = { nom = 'yil' }
-l['yln'] = { nom = 'buyang langjia' }
-l['ylo'] = { nom = 'naluo yi' }
-l['ylr'] = { nom = 'yalarnnga' }
-l['ylu'] = { nom = 'aribwaung' }
-l['yly'] = { nom = 'nyelâyu' }
-l['ymc'] = { nom = 'muji du Sud', tri = 'muji Sud' }
-l['yme'] = { nom = 'yameo' }
-l['ymg'] = { nom = 'yamongeri' }
-l['yml'] = { nom = 'iamalele' }
-l['ymo'] = { nom = 'yangum mon' }
-l['ymt'] = { nom = 'karagasse' }
-l['ynd'] = { nom = 'yandruwandha' }
-l['ynk'] = { nom = 'naukan' }
-l['ynl'] = { nom = 'yangulam' }
-l['ynn'] = { nom = 'yana' }
-l['ynq'] = { nom = 'yendang' }
-l['yns'] = { nom = 'yansi' }
-l['yo'] = { nom = 'yoruba', wiktionnaire = true }
-l['yob'] = { nom = 'yoba' }
-l['yoi'] = { nom = 'yonaguni' }
-l['yok-chk'] = { nom = 'chukchansi' }
-l['yok-chw'] = { nom = 'chawchila' }
-l['yok-chy'] = { nom = 'choynimni' }
-l['yok-dum'] = { nom = 'dumna' }
-l['yok-gas'] = { nom = 'gashowu' }
-l['yok-hom'] = { nom = 'hometwoli' }
-l['yok-lsj'] = { nom = 'san joaquin inférieur' }
-l['yok-nut'] = { nom = 'tachi' }
-l['yok-pos'] = { nom = 'palewyami' }
-l['yok-tul'] = { nom = 'tulamni' }
-l['yok-wik'] = { nom = 'wikchamni' }
-l['yok-yaw'] = { nom = 'yawelmani' }
-l['yok-ywd'] = { nom = 'yawdanchi' }
-l['yol'] = { nom = 'yola' }
-l['yom'] = { nom = 'yombe' }
-l['yon'] = { nom = 'yongkom' }
-l['yot'] = { nom = 'yotti' }
-l['yoy'] = { nom = 'yoy' }
-l['yox'] = { nom = 'yoron' }
-l['ypa'] = { nom = 'phala' }
-l['ypg'] = { nom = 'phola' }
-l['ypk'] = { nom = 'langues youpikes', tri = 'youpikes langues', isGroup = true }
-l['ypz'] = { nom = 'phuza' }
-l['yrb'] = { nom = 'yareba' }
-l['yre'] = { nom = 'yaouré' }
-l['yrk'] = { nom = 'nénètse' }
-l['yrl'] = { nom = 'nheengatu' }
-l['yrn'] = { nom = 'yerong' }
-l['yro'] = { nom = 'yaroamë' }
-l['yrs'] = { nom = 'yarsun' }
-l['yry'] = { nom = 'yarluyandi' }
-l['ysd'] = { nom = 'samu' }
-l['ysl'] = { nom = 'langue des signes yougoslave', tri = 'signes yougoslave' }
-l['ysn'] = { nom = 'sani' }
-l['ysr'] = { nom = 'sirenik' }
-l['yss'] = { nom = 'yessan-mayo' }
-l['ysy'] = { nom = 'sanie' }
-l['yta'] = { nom = 'talu' }
-l['ytl'] = { nom = 'tanglang' }
-l['yua'] = { nom = 'maya yucatèque' }
-l['yuanmen'] = { nom = 'yuanmen' }
-l['yuc'] = { nom = 'yuchi' }
-l['yud'] = { nom = 'arabe judéo-tripolitain' }
-l['yue'] = { nom = 'cantonais', wmlien = 'zh-yue', portail = true, wiktionnaire = true }
-l['yuf-hav'] = { nom = 'havasupai' }
-l['yuf-wal'] = { nom = 'hualapai' }
-l['yuf-yav'] = { nom = 'yavapai' }
-l['yug'] = { nom = 'yug' }
-l['yui'] = { nom = 'yuriti' }
-l['yuj'] = { nom = 'karkar-yuri' }
-l['yuk'] = { nom = 'yuki' }
-l['yul'] = { nom = 'yulu' }
-l['yulparija'] = { nom = 'yulparija' }
-l['yum'] = { nom = 'quechan' }
-l['yun'] = { nom = 'bena (Nigeria)', tri = 'bena Nigeria' }
-l['yup'] = { nom = 'yukpa' }
-l['yuq'] = { nom = 'yuqui' }
-l['yur'] = { nom = 'yurok' }
-l['yurumanguí'] = { nom = 'yurumanguí' }
-l['yut'] = { nom = 'yopno' }
-l['yux'] = { nom = 'youkaguir de la Kolyma', tri = 'youkaguir Kolyma' }
-l['yuy'] = { nom = 'yugur oriental' }
-l['yuz'] = { nom = 'yuracaré' }
-l['yva'] = { nom = 'yawa' }
-l['yvt'] = { nom = 'yavitero' }
-l['ywl'] = { nom = 'lalo de l’Ouest', tri = 'lalo Ouest' }
-l['ywq'] = { nom = 'yi de Wuding-Luquan', tri = 'yi Wuding Luquan' }
-l['ywr'] = { nom = 'yawuru' }
-l['ywt'] = { nom = 'lalo central' }
-l['ywu'] = { nom = 'nasu de Wumeng', tri = 'nasu Wumeng' }
-l['yww'] = { nom = 'yawarawarga' }
-l['yxg'] = { nom = 'yagara' }
-l['yxl'] = { nom = 'yardliyawarra' }
-l['yxu'] = { nom = 'yuyu' }
-l['yyu'] = { nom = 'yau (province de Sandaun)', tri = 'yau Sandaun province' }
-l['yzg'] = { nom = 'buyang ecun' }
-l['za'] = { nom = 'zhuang', wiktionnaire = true }
-l['zaa'] = { nom = 'zapotèque de la Sierra de Juárez', tri = 'zapotèque Juárez Sierra' }
-l['zab'] = { nom = 'zapotèque de San Juan Guelavía', tri = 'zapotèque San Juan Guelavía' }
-l['zac'] = { nom = 'zapotèque d’Ocotlán', tri = 'zapotèque Ocotlán' }
-l['zad'] = { nom = 'zapotèque de Cajonos', tri = 'zapotèque Cajonos' }
-l['zae'] = { nom = 'zapotèque de Yareni', tri = 'zapotèque Yareni' }
-l['zaf'] = { nom = 'zapotèque d’Ayoquesco', tri = 'zapotèque Ayoquesco' }
-l['zag'] = { nom = 'zaghawa' }
-l['zai'] = { nom = 'zapotèque de l’Isthme', tri = 'zapotèque Isthme' }
-l['zaj'] = { nom = 'zaramo' }
-l['zak'] = { nom = 'zanaki' }
-l['zal'] = { nom = 'zauzou' }
-l['zam'] = { nom = 'zapotèque de Miahuatlán', tri = 'zapotèque Miahuatlán' }
-l['zandui'] = { nom = 'zandui' }
-l['zao'] = { nom = 'zapotèque d’Ozolotepec', tri = 'zapotèque Ozolotepec' }
-l['zap'] = { nom = 'zapotèque' }
-l['zaq'] = { nom = 'zapotèque d’Aloápam', tri = 'zapotèque Aloápam' }
-l['zar'] = { nom = 'zapotèque de Rincón', tri = 'zapotèque Rincón' }
-l['zas'] = { nom = 'zapotèque de Santo Domingo Albarradas', tri = 'zapotèque Santo Domingo Albarradas' }
-l['zat'] = { nom = 'zapotèque de Tabaa', tri = 'zapotèque Tabaa' }
-l['zav'] = { nom = 'zapotèque de Yatzachi', tri = 'zapotèque Yatzachi' }
-l['zaw'] = { nom = 'zapotèque de Mitla', tri = 'zapotèque Mitla' }
-l['zax'] = { nom = 'zapotèque de Xadani', tri = 'zapotèque Xadani' }
-l['zay'] = { nom = 'zayse-zergulla' }
-l['zbc'] = { nom = 'batu belah' }
-l['zbe'] = { nom = 'berawan long jegan' }
-l['zbl'] = { nom = 'bliss' }
-l['zbt'] = { nom = 'batui' }
-l['zbu'] = { nom = 'zbu' }
-l['zbw'] = { nom = 'berawan long terawan' }
-l['zca'] = { nom = 'zapotèque de Coatecas Altas', tri = 'zapotèque Coatecas Altas' }
-l['zdj'] = { nom = 'shingazidja' }
-l['zea'] = { nom = 'zélandais' }
-l['zeg'] = { nom = 'zenag' }
-l['zen'] = { nom = 'zénaga' }
-l['zga'] = { nom = 'kinga' }
-l['zgb'] = { nom = 'zhuang de Guibei', tri = 'zhuang Guibei' }
-l['zgh'] = { nom = 'amazighe standard marocain' }
-l['zgr'] = { nom = 'magori' }
-l['zh'] = { nom = 'chinois', portail = true, wiktionnaire = true }
-l['zhb'] = { nom = 'zhaba' }
-l['zhd'] = { nom = 'dai zhuang' }
-l['zhn'] = { nom = 'nong zhuang' }
-l['zhx'] = { nom = 'langues chinoises', tri = 'chinoises langues', isGroup = true }
-l['zia'] = { nom = 'zia' }
-l['zik'] = { nom = 'zimakani' }
-l['zil'] = { nom = 'zialo' }
-l['zin'] = { nom = 'zinza' }
-l['ziw'] = { nom = 'zigua' }
-l['zkb'] = { nom = 'koibale' }
-l['zkg'] = { nom = 'koguryo' }
-l['zkk'] = { nom = 'karankawa' }
-l['zko'] = { nom = 'kott' }
-l['zkr'] = { nom = 'zakhring' }
-l['zkt'] = { nom = 'khitan' }
-l['zku'] = { nom = 'kaurna' }
-l['zkv'] = { nom = 'krévinien' }
-l['zkz'] = { nom = 'khazar' }
-l['zle'] = { nom = 'langues slaves orientales', tri = 'slaves orientales langues', isGroup = true }
-l['zls'] = { nom = 'langues slaves méridionales', tri = 'slaves méridionales langues', isGroup = true }
-l['zlw'] = { nom = 'langues slaves occidentales', tri = 'slaves occidentales langues', isGroup = true }
-l['zma'] = { nom = 'manda' }
-l['zmb'] = { nom = 'zimba' }
-l['zmc'] = { nom = 'margany' }
-l['zme'] = { nom = 'mangerr' }
-l['zmf'] = { nom = 'mfinu' }
-l['zmg'] = { nom = 'magati ke' }
-l['zmh'] = { nom = 'makolkol' }
-l['zmi'] = { nom = 'malais de Negeri Sembilan', tri = 'malais Negeri Sembilan' }
-l['zmj'] = { nom = 'maridjabin' }
-l['zmk'] = { nom = 'mandandanyi' }
-l['zml'] = { nom = 'madngele' }
-l['zmm'] = { nom = 'marimanindji' }
-l['zmn'] = { nom = 'mbangwe' }
-l['zmo'] = { nom = 'molo' }
-l['zmp'] = { nom = 'mpuono' }
-l['zmq'] = { nom = 'mituku' }
-l['zmr'] = { nom = 'maranunggu' }
-l['zms'] = { nom = 'mbesa' }
-l['zmt'] = { nom = 'marringarr' }
-l['zmu'] = { nom = 'muruwari' }
-l['zmv'] = { nom = 'mbariman-gudhinma' }
-l['zmw'] = { nom = 'mbo (République démocratique du Congo)', tri = 'mbo Congo démocratique' }
-l['zmx'] = { nom = 'leke' }
-l['zmy'] = { nom = 'mariyedi' }
-l['zmz'] = { nom = 'mbandja' }
-l['zna'] = { nom = 'zan gula' }
-l['znd'] = { nom = 'langues zandées', tri = 'zandées langues', isGroup = true }
-l['zne'] = { nom = 'zandé' }
-l['zng'] = { nom = 'mang' }
-l['znk'] = { nom = 'manangkari' }
-l['zns'] = { nom = 'mangas' }
-l['zoc'] = { nom = 'zoque de Copainalá', tri = 'zoque Copainalá' }
-l['zoh'] = { nom = 'zoque de Chimalapa', tri = 'zoque Chimalapa' }
-l['zom'] = { nom = 'zou' }
-l['zoo'] = { nom = 'zapotèque d’Asunción Mixtepec', tri = 'zapotèque Asunción Mixtepec' }
-l['zoq'] = { nom = 'ayapaneco' }
-l['zor'] = { nom = 'zoque de Rayón', tri = 'zoque Rayón' }
-l['zos'] = { nom = 'zoque de Francisco León', tri = 'zoque Francisco León' }
-l['zpa'] = { nom = 'zapotèque de Lachiguiri', tri = 'zapotèque Lachiguiri' }
-l['zpb'] = { nom = 'zapotèque de Yautepec', tri = 'zapotèque Yautepec' }
-l['zpc'] = { nom = 'zapotèque de Choapan', tri = 'zapotèque Choapan' }
-l['zpd'] = { nom = 'zapotèque de l’Ixtlán du Sud-Est', tri = 'zapotèque Ixtlán Sud Est' }
-l['zpe'] = { nom = 'zapotèque de Petapa', tri = 'zapotèque Petapa' }
-l['zpf'] = { nom = 'zapotèque de San Pedro Quiatoni', tri = 'zapotèque San Pedro Quiatoni' }
-l['zpg'] = { nom = 'zapotèque de Guevea De Humboldt', tri = 'zapotèque Guevea de Humboldt' }
-l['zph'] = { nom = 'zapotèque de Totomachapan', tri = 'zapotèque Totomachapan' }
-l['zpi'] = { nom = 'zapotèque de Santa María Quiegolani', tri = 'zapotèque Santa María Quiegolani' }
-l['zpj'] = { nom = 'zapotèque de Quiavicuzas', tri = 'zapotèque Quiavicuzas' }
-l['zpk'] = { nom = 'zapotèque de Tlacolulita', tri = 'zapotèque Tlacolulita' }
-l['zpl'] = { nom = 'zapotèque de Lachixío', tri = 'zapotèque Lachixío' }
-l['zpm'] = { nom = 'zapotèque de Mixtepec', tri = 'zapotèque Mixtepec' }
-l['zpn'] = { nom = 'zapotèque de Santa Inés Yatzechi', tri = 'zapotèque Santa Inés Yatzechi' }
-l['zpo'] = { nom = 'zapotèque d’Amatlán', tri = 'zapotèque Amatlán' }
-l['zpp'] = { nom = 'zapotèque d’El Alto', tri = 'zapotèque El Alto' }
-l['zpq'] = { nom = 'zapotèque de San Bartolomé Zoogocho', tri = 'zapotèque San Bartolomé Zoogocho' }
-l['zpr'] = { nom = 'zapotèque de Xanica', tri = 'zapotèque Xanica' }
-l['zps'] = { nom = 'zapotèque de Coatlán', tri = 'zapotèque Coatlán' }
-l['zpt'] = { nom = 'zapotèque de San Vicente Coatlán', tri = 'zapotèque San Vicente Coatlán' }
-l['zpu'] = { nom = 'zapotèque de Yalálag', tri = 'zapotèque Yalálag' }
-l['zpv'] = { nom = 'zapotèque de San Baltazar Chichicápam', tri = 'zapotèque San Baltazar Chichicápam' }
-l['zpw'] = { nom = 'zapotèque de Zaniza', tri = 'zapotèque Zaniza' }
-l['zpx'] = { nom = 'zapotèque de San Baltazar Loxicha', tri = 'zapotèque San Baltazar Loxicha' }
-l['zpy'] = { nom = 'zapotèque de Mazaltepec', tri = 'zapotèque Mazaltepec' }
-l['zpz'] = { nom = 'zapotèque de Texmelucan', tri = 'zapotèque Texmelucan' }
-l['zqe'] = { nom = 'qiubei zhuang' }
-l['zra'] = { nom = 'gaya' }
-l['zrn'] = { nom = 'zirenkel' }
-l['zro'] = { nom = 'záparo' }
-l['zrp'] = { nom = 'sarphatique' }
-l['zrs'] = { nom = 'mairasi' }
-l['zsa'] = { nom = 'sarasira' }
-l['zsk'] = { nom = 'casquéen' }
-l['zsl'] = { nom = 'langue des signes zambienne', tri = 'signes zambienne' }
-l['zsr'] = { nom = 'zapotèque de Rincón du Sud', tri = 'zapotèque Rincón Sud' }
-l['zsu'] = { nom = 'sukurum' }
-l['zte'] = { nom = 'zapotèque d’Elotepec', tri = 'zapotèque Elotepec' }
-l['ztg'] = { nom = 'zapotèque de San Francisco Ozolotepec', tri = 'zapotèque San Francisco Ozolotepec' }
-l['ztl'] = { nom = 'zapotèque de Lapaguía-Guivini', tri = 'zapotèque Lapaguía Guivini' }
-l['ztm'] = { nom = 'zapotèque de San Agustín Mixtepec', tri = 'zapotèque San Agustín Mixtepec' }
-l['ztn'] = { nom = 'zapotèque de Santa Catarina Albarradas', tri = 'zapotèque Santa Catarina Albarradas' }
-l['ztp'] = { nom = 'zapotèque de Loxicha', tri = 'zapotèque Loxicha' }
-l['ztq'] = { nom = 'zapotèque de Quioquitani-Quierí', tri = 'zapotèque Quioquitani Quierí' }
-l['zts'] = { nom = 'zapotèque de Tilquiapan', tri = 'zapotèque Tilquiapan' }
-l['ztt'] = { nom = 'zapotèque de Tejalapan', tri = 'zapotèque Tejalapan' }
-l['ztu'] = { nom = 'zapotèque de Güilá', tri = 'zapotèque Güilá' }
-l['ztx'] = { nom = 'zapotèque de Zaachila', tri = 'zapotèque Zaachila' }
-l['zty'] = { nom = 'zapotèque de Yateé', tri = 'zapotèque Yateé' }
-l['zu'] = { nom = 'zoulou', wiktionnaire = true }
-l['zuh'] = { nom = 'tokano' }
-l['zum'] = { nom = 'kumzari' }
-l['zun'] = { nom = 'zuni' }
-l['zuy'] = { nom = 'zumaya' }
-l['zwa'] = { nom = 'zay' }
-l['zyb'] = { nom = 'zhuang de Yongbei', tri = 'zhuang Yongbei' }
-l['zyg'] = { nom = 'zhuang de Deqing', tri = 'zhuang Deqing' }
-l['zyj'] = { nom = 'zhuang de Youjiang', tri = 'zhuang Youjiang' }
-l['zyn'] = { nom = 'zhuang de Yongnan', tri = 'zhuang Yongnan' }
-l['zyp'] = { nom = 'zyphe' }
-l['zza'] = { nom = 'zazaki' }
-l['zzj'] = { nom = 'zhuang de Zuojiang', tri = 'zhuang Zuojiang' }
+l['a’ou de Bigong'] = { name = 'a’ou de Bigong', sortKey = 'aou Bigong' }
+l['a’ou de Hongfeng'] = { name = 'a’ou de Hongfeng', sortKey = 'aou Hongfeng' }
+l['aa'] = { name = 'afar', wiktionaryExists = true }
+l['aaa'] = { name = 'ghotuo' }
+l['aab'] = { name = 'alumu-tesu' }
+l['aac'] = { name = 'ari' }
+l['aad'] = { name = 'amal' }
+l['aae'] = { name = 'arbërisht' }
+l['aaf'] = { name = 'aranadan' }
+l['aag'] = { name = 'ambrak' }
+l['aah'] = { name = 'abu’' }
+l['aai'] = { name = 'arifama-miniafia' }
+l['aak'] = { name = 'ankave' }
+l['aal'] = { name = 'afade' }
+l['aam'] = { name = 'aramanik' }
+l['aan'] = { name = 'anambé' }
+l['aao'] = { name = 'arabe saharien' }
+l['aap'] = { name = 'arara' }
+l['aaq'] = { name = 'abénaquis de l’Est', sortKey = 'abénaquis Est' }
+l['aas'] = { name = 'aasá' }
+l['aat'] = { name = 'albanais arvanite' }
+l['aau'] = { name = 'abau' }
+l['aav'] = { name = 'langues austro-asiatiques', sortKey = 'austro asiatiques langues', isGroup = true }
+l['aaw'] = { name = 'arawé' }
+l['aax'] = { name = 'atas de Mandobo', sortKey = 'atas Mandobo' }
+l['aaz'] = { name = 'amarasi' }
+l['ab'] = { name = 'abkhaze', wiktionaryExists = true }
+l['aba'] = { name = 'abé' }
+l['abai sembuak'] = { name = 'abai sembuak' }
+l['abai tubu'] = { name = 'abai tubu' }
+l['abb'] = { name = 'bankon' }
+l['abc'] = { name = 'ambala' }
+l['abd'] = { name = 'manide' }
+l['abe'] = { name = 'abénaquis de l’Ouest', sortKey = 'abénaquis Ouest' }
+l['abf'] = { name = 'abaï soungaï' }
+l['abg'] = { name = 'abaga' }
+l['abh'] = { name = 'arabe tadjik' }
+l['abi'] = { name = 'abidji' }
+l['abj'] = { name = 'aka-bea' }
+l['abl'] = { name = 'abung' }
+l['abm'] = { name = 'abanyom' }
+l['abn'] = { name = 'abua' }
+l['abo'] = { name = 'abon' }
+l['abp'] = { name = 'abellen' }
+l['abq'] = { name = 'abaza' }
+l['abr'] = { name = 'abron' }
+l['abs'] = { name = 'malais ambonais' }
+l['abt'] = { name = 'ambulas' }
+l['abu'] = { name = 'abouré' }
+l['abv'] = { name = 'arabe baharna' }
+l['abw'] = { name = 'pal' }
+l['abx'] = { name = 'abaknon' }
+l['aby'] = { name = 'aneme wake' }
+l['abz'] = { name = 'abui' }
+l['aca'] = { name = 'achagua' }
+l['acb'] = { name = 'áncá' }
+l['acd'] = { name = 'gichode' }
+l['ace'] = { name = 'achinais' }
+l['acf'] = { name = 'créole saint-lucien' }
+l['ach'] = { name = 'acoli' }
+l['aci'] = { name = 'aka-cari' }
+l['ack'] = { name = 'aka-kora' }
+l['acl'] = { name = 'akar-bale' }
+l['acm'] = { name = 'arabe irakien' }
+l['acn'] = { name = 'achang' }
+l['acp'] = { name = 'acipa de l’Est', sortKey = 'acipa Est' }
+l['acq'] = { name = 'arabe Ta’izzi-Adeni' }
+l['acr'] = { name = 'achi' }
+l['acs'] = { name = 'acroá' }
+l['act'] = { name = 'achterhooks' }
+l['acu'] = { name = 'achuar' }
+l['acv'] = { name = 'achumawi' }
+l['acw'] = { name = 'arabe hijazi' }
+l['acx'] = { name = 'arabe omanais' }
+l['acy'] = { name = 'arabe chypriote' }
+l['acz'] = { name = 'acheron' }
+l['ada'] = { name = 'adangmé' }
+l['adb'] = { name = 'atauran' }
+l['add'] = { name = 'dzodinka' }
+l['ade'] = { name = 'adele' }
+l['adf'] = { name = 'arabe dhofari' }
+l['adg'] = { name = 'andegerebinha' }
+l['adh'] = { name = 'adhola' }
+l['adi'] = { name = 'adi' }
+l['adj'] = { name = 'adioukrou' }
+l['adl'] = { name = 'galo' }
+l['adn'] = { name = 'adang' }
+l['ado'] = { name = 'abu' }
+l['adp'] = { name = 'adap' }
+l['adq'] = { name = 'adangbé' }
+l['adr'] = { name = 'adonara' }
+l['ads'] = { name = 'langue des signes adamorobe', sortKey = 'signes adamorobe' }
+l['adt'] = { name = 'adnyamathanha' }
+l['adu'] = { name = 'aduge' }
+l['adw'] = { name = 'amundava' }
+l['adx'] = { name = 'amdo' }
+l['ady'] = { name = 'adyghé' }
+l['adz'] = { name = 'adzera' }
+l['ae'] = { name = 'avestique' }
+l['aea'] = { name = 'areba' }
+l['aeb'] = { name = 'arabe tunisien' }
+l['aec'] = { name = 'arabe saïdi' }
+l['aed'] = { name = 'langue des signes argentine' }
+l['aee'] = { name = 'pashayi du Nord-Est' }
+l['aek'] = { name = 'haéké' }
+l['ael'] = { name = 'ambele' }
+l['aem'] = { name = 'arem' }
+l['aen'] = { name = 'langue des signes arménienne' }
+l['aeq'] = { name = 'aer' }
+l['aer'] = { name = 'arrernte de l’Est', sortKey = 'arrernte Est' }
+l['aes'] = { name = 'alsea' }
+l['aeu'] = { name = 'akeu' }
+l['aew'] = { name = 'ambakich' }
+l['aey'] = { name = 'amélé' }
+l['aez'] = { name = 'aeka' }
+l['af'] = { name = 'afrikaans', wiktionaryExists = true }
+l['afa'] = { name = 'langues afro-asiatiques', sortKey = 'afro asiatiques langues', isGroup = true }
+l['afb'] = { name = 'arabe du Golfe', sortKey = 'arabe golfe' }
+l['afd'] = { name = 'andai' }
+l['afe'] = { name = 'putukwam' }
+l['afg'] = { name = 'langue des signes afghane' }
+l['afh'] = { name = 'afrihili' }
+l['afi'] = { name = 'akrukay' }
+l['afk'] = { name = 'nanubae' }
+l['afn'] = { name = 'défaka' }
+l['afo'] = { name = 'éloyi', sortKey = 'eloyi' }
+l['afp'] = { name = 'tapei' }
+l['afs'] = { name = 'créole afro-séminole' }
+l['aft'] = { name = 'afitti' }
+l['afu'] = { name = 'efutu' }
+l['afz'] = { name = 'obokuitai' }
+l['aga'] = { name = 'aguano' }
+l['agb'] = { name = 'legbo' }
+l['agc'] = { name = 'agatu' }
+l['agd'] = { name = 'agarabi' }
+l['age'] = { name = 'angal' }
+l['agf'] = { name = 'arguni' }
+l['agg'] = { name = 'angor' }
+l['agh'] = { name = 'angba' }
+l['agi'] = { name = 'agariya' }
+l['agj'] = { name = 'argobba' }
+l['agk'] = { name = 'isarog agta' }
+l['agl'] = { name = 'fembe' }
+l['agm'] = { name = 'angaataha' }
+l['agn'] = { name = 'agutaynen' }
+l['ago'] = { name = 'tainae' }
+l['agq'] = { name = 'aghem' }
+l['agr'] = { name = 'aguaruna' }
+l['ags'] = { name = 'ésimbi', sortKey = 'esimbi' }
+l['agt'] = { name = 'agta du Cagayan central', sortKey = 'agta Cagayan central' }
+l['agta de Dinapigue'] = { name = 'agta de Dinapigue', sortKey = 'agta Dinapigue' }
+l['agta de Nagtipunan'] = { name = 'agta de Nagtipunan', sortKey = 'agta Nagtipunan' }
+l['agu'] = { name = 'aguacatèque' }
+l['agv'] = { name = 'remontado dumagat' }
+l['agw'] = { name = 'kahua' }
+l['agx'] = { name = 'aghoul' }
+l['agy'] = { name = 'alta du Sud', sortKey = 'alta Sud' }
+l['agz'] = { name = 'inagta rinconada' }
+l['aha'] = { name = 'ahanta' }
+l['ahb'] = { name = 'axamb' }
+l['ahg'] = { name = 'qimant' }
+l['ahh'] = { name = 'aghu' }
+l['ahi'] = { name = 'aïzi de Tiagbamrin', sortKey = 'aïzi Tiagbamrin' }
+l['ahk'] = { name = 'akha' }
+l['ahl'] = { name = 'igo' }
+l['ahm'] = { name = 'mobu' }
+l['ahn'] = { name = 'àhàn', sortKey = 'ahan' }
+l['aho'] = { name = 'ahom' }
+l['ahp'] = { name = 'aïzi d’Aproumu', sortKey = 'aïzi Aproumu' }
+l['ahr'] = { name = 'ahirani' }
+l['ahs'] = { name = 'ashe' }
+l['aht'] = { name = 'ahtna' }
+l['aia'] = { name = 'arosi' }
+l['aib'] = { name = 'aïnou (Chine)', sortKey = 'aïnou Chine' }
+l['aic'] = { name = 'ainbai' }
+l['aid'] = { name = 'alngith' }
+l['aie'] = { name = 'amara' }
+l['aif'] = { name = 'agi' }
+l['aig'] = { name = 'créole anglais d’Antigua-et-Barbuda', sortKey = 'créole Antigua et Barbuda anglais' }
+l['aih'] = { name = 'ai-cham' }
+l['aii'] = { name = 'néo-araméen assyrien', sortKey = 'araméen néo assyrien' }
+l['aij'] = { name = 'lishanid noshan' }
+l['aik'] = { name = 'akyé' }
+l['ail'] = { name = 'aimele' }
+l['aim'] = { name = 'aimol' }
+l['ain'] = { name = 'aïnou (Japon)', sortKey = 'aïnou Japon' }
+l['aio'] = { name = 'tai aiton' }
+l['aip'] = { name = 'burumakok' }
+l['aiq'] = { name = 'aimaq' }
+l['air'] = { name = 'airoran' }
+l['ais'] = { name = 'nataoran' }
+l['ait'] = { name = 'arikém' }
+l['aiw'] = { name = 'aari' }
+l['aix'] = { name = 'aighon' }
+l['aiy'] = { name = 'ali' }
+l['aiz'] = { name = 'aari-gayil' }
+l['aja'] = { name = 'aja' }
+l['ajg'] = { name = 'ajagbe' }
+l['aji'] = { name = 'ajië' }
+l['ajn'] = { name = 'andajin' }
+l['ajt'] = { name = 'judéo-tunisien' }
+l['aju'] = { name = 'judéo-marocain' }
+l['ajw'] = { name = 'ajawa' }
+l['ak'] = { name = 'akan', wiktionaryExists = true }
+l['akc'] = { name = 'mpur' }
+l['ake'] = { name = 'akawaïo' }
+l['akf'] = { name = 'akpa' }
+l['aki'] = { name = 'aiome' }
+l['akj'] = { name = 'aka-jeru' }
+l['akk'] = { name = 'akkadien' }
+l['akl'] = { name = 'aklanon' }
+l['akm'] = { name = 'aka-bo' }
+l['ako'] = { name = 'akurio' }
+l['akp'] = { name = 'siwu' }
+l['akr'] = { name = 'araki' }
+l['aks'] = { name = 'akaselem' }
+l['aku'] = { name = 'akum' }
+l['akv'] = { name = 'akhvakh' }
+l['akx'] = { name = 'aka-kede' }
+l['aky'] = { name = 'aka-kol' }
+l['akz'] = { name = 'alabama' }
+l['ala'] = { name = 'alago' }
+l['alc'] = { name = 'kawésqar' }
+l['alchuka'] = { name = 'alchuka' }
+l['ald'] = { name = 'alladian' }
+l['ale'] = { name = 'aléoute' }
+l['alg'] = { name = 'langues algonquiennes', sortKey = 'algonquiennes langues', isGroup = true }
+l['alh'] = { name = 'alawa' }
+l['ali'] = { name = 'amaimon' }
+l['alk'] = { name = 'alak' }
+l['all'] = { name = 'allar' }
+l['alm'] = { name = 'amblong' }
+l['aln'] = { name = 'guègue' }
+l['alo'] = { name = 'larike-wakasihu' }
+l['alp'] = { name = 'alune' }
+l['alq'] = { name = 'algonquin' }
+l['alr'] = { name = 'alioutor' }
+l['als'] = { name = 'albanais tosk' }
+l['alt'] = { name = 'altaï du Sud', sortKey = 'altaï Sud' }
+l['alu'] = { name = '’are’are', sortKey = 'are are' }
+l['alv'] = { name = 'langues atlantico-congolaises', sortKey = 'atlantico congolaises langues', isGroup = true }
+l['alx'] = { name = 'amol' }
+l['aly'] = { name = 'alyawarr' }
+l['am'] = { name = 'amharique', wiktionaryExists = true }
+l['ama'] = { name = 'amanayé' }
+l['amb'] = { name = 'ambo' }
+l['amc'] = { name = 'amahuaca' }
+l['ame'] = { name = 'yanesha' }
+l['amf'] = { name = 'hamar' }
+l['amg'] = { name = 'amurdak' }
+l['ami'] = { name = 'amis' }
+l['amj'] = { name = 'amdang' }
+l['amk'] = { name = 'ambai' }
+l['aml'] = { name = 'war-jaintia' }
+l['amm'] = { name = 'ama (Papouasie-Nouvelle-Guinée)', sortKey = 'ama Papouasie' }
+l['ammonite'] = { name = 'ammonite' }
+l['amn'] = { name = 'amanab' }
+l['amo'] = { name = 'amo' }
+l['amorrite'] = { name = 'amorrite' }
+l['amp'] = { name = 'alamblak' }
+l['amq'] = { name = 'amahai' }
+l['amr'] = { name = 'amarakaeri' }
+l['ams'] = { name = 'amami du Sud', sortKey = 'amami Sud' }
+l['amt'] = { name = 'amto' }
+l['amu'] = { name = 'amuzgo du Guerrero', sortKey = 'amuzgo Guerrero' }
+l['amw'] = { name = 'néo-araméen occidental', sortKey = 'araméen néo occidental' }
+l['amx'] = { name = 'anmatyerre' }
+l['amy'] = { name = 'ami' }
+l['an'] = { name = 'aragonais', wiktionaryExists = true }
+l['ana'] = { name = 'andaquí' }
+l['anauyá'] = { name = 'anauyá' }
+l['anb'] = { name = 'andoa' }
+l['anc'] = { name = 'angas' }
+l['ancien catalan'] = { name = 'ancien catalan', sortKey = 'catalan ancien' }
+l['ancien normand'] = { name = 'ancien normand', sortKey = 'normand ancien' }
+l['and'] = { name = 'ansus' }
+l['ane'] = { name = 'xârâcùù' }
+l['anf'] = { name = 'animere' }
+l['ang'] = { name = 'vieil anglais', sortKey = 'anglais vieil', wiktionaryExists = true }
+l['angevin'] = { name = 'angevin' }
+l['anggreso'] = { name = 'anggreso' }
+l['anh'] = { name = 'nend' }
+l['ani'] = { name = 'andi' }
+l['ank'] = { name = 'goemai' }
+l['anm'] = { name = 'anal' }
+l['ann'] = { name = 'obolo' }
+l['ano'] = { name = 'andoque' }
+l['anp'] = { name = 'angika' }
+l['anq'] = { name = 'jarawa (îles Andaman)', sortKey = 'jarawa Andaman' }
+l['ans'] = { name = 'anserma' }
+l['ant'] = { name = 'antakarinya' }
+l['anu'] = { name = 'anyua' }
+l['anv'] = { name = 'denya' }
+l['anw'] = { name = 'anang' }
+l['any'] = { name = 'agni' }
+l['aoa'] = { name = 'angolar' }
+l['aob'] = { name = 'abom' }
+l['aoc'] = { name = 'pemon' }
+l['aof'] = { name = 'bragat' }
+l['aog'] = { name = 'angoram' }
+l['aoh'] = { name = 'arma' }
+l['aoi'] = { name = 'anindilyakwa' }
+l['aoj'] = { name = 'mufian' }
+l['aom'] = { name = 'ömie' }
+l['aor'] = { name = 'aore' }
+l['ao mongsen'] = { name = 'ao mongsen' }
+l['aos'] = { name = 'taikat' }
+l['aot'] = { name = 'a’tong' }
+l['aou'] = { name = 'a’ou' }
+l['aoz'] = { name = 'atoni' }
+l['apa'] = { name = 'langues apaches', sortKey = 'apaches langues', isGroup = true }
+l['apb'] = { name = 'sa’a' }
+l['apc'] = { name = 'arabe levantin' }
+l['apd'] = { name = 'arabe soudanais' }
+l['ape'] = { name = 'bukiyip' }
+l['apf'] = { name = 'agta de Pahanan', sortKey = 'agta Pahanan' }
+l['aph'] = { name = 'athpariya' }
+l['api'] = { name = 'apiaká' }
+l['apj'] = { name = 'jicarilla' }
+l['apk'] = { name = 'apache des Plaines', sortKey = 'apache plaines' }
+l['apl'] = { name = 'lipan' }
+l['apm'] = { name = 'chiricahua' }
+l['apn'] = { name = 'apinajé' }
+l['apo'] = { name = 'apalik' }
+l['apolista'] = { name = 'apolista' }
+l['app'] = { name = 'apma' }
+l['apq'] = { name = 'pucikwar' }
+l['apr'] = { name = 'arop-lokep' }
+l['aps'] = { name = 'arop-sissano' }
+l['apt'] = { name = 'apatani' }
+l['apu'] = { name = 'apurinã' }
+l['apw'] = { name = 'apache de l’Ouest', sortKey = 'apache Ouest' }
+l['apx'] = { name = 'aputai' }
+l['apy'] = { name = 'apalai' }
+l['apz'] = { name = 'safeyoka' }
+l['aqa'] = { name = 'langues alacalufanes', sortKey = 'alacalufanes langues', isGroup = true }
+l['aqc'] = { name = 'artchi' }
+l['aqd'] = { name = 'ampari' }
+l['aql'] = { name = 'langues algiques', sortKey = 'algiques langues', isGroup = true }
+l['aqn'] = { name = 'alta du Nord', sortKey = 'alta Nord' }
+l['aqp'] = { name = 'atakapa' }
+l['aqt'] = { name = 'angaité' }
+l['aqz'] = { name = 'akuntsu' }
+l['ar'] = { name = 'arabe', hasPortal = true, wiktionaryExists = true }
+l['arb'] = { name = 'arabe standard moderne' }
+l['arc'] = { name = 'araméen' }
+l['ard'] = { name = 'arabana' }
+l['are'] = { name = 'arrernte de l’Ouest', sortKey = 'arrernte Ouest' }
+l['arh'] = { name = 'arhuaco' }
+l['ari'] = { name = 'arikara' }
+l['ark'] = { name = 'arikapú' }
+l['arl'] = { name = 'arabela' }
+l['arn'] = { name = 'mapuche' }
+l['aro'] = { name = 'araona' }
+l['arp'] = { name = 'arapaho' }
+l['arq'] = { name = 'arabe algérien' }
+l['arr'] = { name = 'karo (Brésil)', sortKey = 'karo Brésil' }
+l['ars'] = { name = 'arabe najdi' }
+l['art'] = { name = 'langues artificielles', sortKey = 'artificielles langues', isGroup = true }
+l['aru'] = { name = 'arawá' }
+l['arv'] = { name = 'arbore' }
+l['arw'] = { name = 'arawak' }
+l['arx'] = { name = 'aruá' }
+l['ary'] = { name = 'arabe marocain' }
+l['arz'] = { name = 'arabe égyptien' }
+l['as'] = { name = 'assamais', wiktionaryExists = true }
+l['asa'] = { name = 'asu (Tanzanie)', sortKey = 'asu Tanzanie' }
+l['asb'] = { name = 'assiniboine' }
+l['asd'] = { name = 'asas' }
+l['ase'] = { name = 'langue des signes américaine', sortKey = 'signes américaine' }
+l['asf'] = { name = 'langue des signes australienne', sortKey = 'signes australienne' }
+l['ash'] = { name = 'abishira' }
+l['asi'] = { name = 'buruwai' }
+l['asj'] = { name = 'nsari' }
+l['ask'] = { name = 'ashkun' }
+l['asl'] = { name = 'asilulu' }
+l['asn'] = { name = 'asuriní de Xingú', sortKey = 'asuriní Xingú' }
+l['aso'] = { name = 'dano' }
+l['asp'] = { name = 'langue des signes algérienne', sortKey = 'signes algérienne' }
+l['ass'] = { name = 'ipulo' }
+l['ast'] = { name = 'asturien', wiktionaryExists = true }
+l['asu'] = { name = 'asuriní du Tocantins', sortKey = 'asuriní Tocantins' }
+l['asv'] = { name = 'asoa' }
+l['asx'] = { name = 'muratayak' }
+l['ata'] = { name = 'pele-ata' }
+l['atb'] = { name = 'zaiwa' }
+l['atc'] = { name = 'atsahuaca' }
+l['atd'] = { name = 'manobo d’Ata', sortKey = 'manobo Ata' }
+l['ate'] = { name = 'atemble' }
+l['ath'] = { name = 'langues athapascanes', sortKey = 'athapascanes langues', isGroup = true }
+l['ati'] = { name = 'attié' }
+l['atj'] = { name = 'atikamekw' }
+l['atl'] = { name = 'agta du mont Iraya', sortKey = 'agta Iraya' }
+l['atm'] = { name = 'ata' }
+l['ato'] = { name = 'atong' }
+l['atp'] = { name = 'atta de Pudtol', sortKey = 'atta Pudtol' }
+l['atq'] = { name = 'atohwaim' }
+l['atr'] = { name = 'waimiri-atroari' }
+l['ats'] = { name = 'atsina' }
+l['att'] = { name = 'atta de Pamplona', sortKey = 'atta Pamplona' }
+l['atu'] = { name = 'reel' }
+l['atv'] = { name = 'altaï du Nord', sortKey = 'altaï Nord' }
+l['atw'] = { name = 'atsugewi' }
+l['atx'] = { name = 'arutani' }
+l['aty'] = { name = 'anejom' }
+l['atz'] = { name = 'arta' }
+l['aua'] = { name = 'asumboa' }
+l['auc'] = { name = 'huaorani' }
+l['aud'] = { name = 'anuta' }
+l['aue'] = { name = 'kung-gobabis' }
+l['auf'] = { name = 'langues arauanes', sortKey = 'arauanes langues', isGroup = true }
+l['aug'] = { name = 'agouna' }
+l['auh'] = { name = 'aushi' }
+l['aui'] = { name = 'anuki' }
+l['auj'] = { name = 'awjilah' }
+l['auk'] = { name = 'heyo' }
+l['aul'] = { name = 'aulua' }
+l['aum'] = { name = 'asu (Nigeria)', sortKey = 'asu Nigeria' }
+l['aun'] = { name = 'one de Molmo', sortKey = 'one Molmo' }
+l['aur'] = { name = 'aruek' }
+l['aus'] = { name = 'langues australiennes', sortKey = 'australiennes langues', isGroup = true }
+l['aut'] = { name = 'austral' }
+l['auu'] = { name = 'auye' }
+l['auw'] = { name = 'awyi' }
+l['aux'] = { name = 'aurá' }
+l['auy'] = { name = 'auyana' }
+l['av'] = { name = 'avar', wiktionaryExists = true }
+l['avb'] = { name = 'avau' }
+l['avd'] = { name = 'alviri-vidari' }
+l['avi'] = { name = 'avikam' }
+l['avk'] = { name = 'kotava' }
+l['avl'] = { name = 'arabe bedawi' }
+l['avn'] = { name = 'avatime' }
+l['avo'] = { name = 'agavotaguerra' }
+l['avok'] = { name = 'avok' }
+l['avs'] = { name = 'aushiri' }
+l['avt'] = { name = 'au' }
+l['avu'] = { name = 'avokaya' }
+l['avv'] = { name = 'avá-canoeiro' }
+l['awa'] = { name = 'awadhi' }
+l['awb'] = { name = 'awa (papou)', sortKey = 'awa papou' }
+l['awc'] = { name = 'cicipu' }
+l['awd'] = { name = 'langues arawakes', sortKey = 'arawakes langues', isGroup = true }
+l['awe'] = { name = 'aweti' }
+l['awg'] = { name = 'anguthimri' }
+l['awh'] = { name = 'awbono' }
+l['awi'] = { name = 'aekyom' }
+l['awk'] = { name = 'awabakal' }
+l['awm'] = { name = 'arawum' }
+l['awn'] = { name = 'awngi' }
+l['awo'] = { name = 'awak' }
+l['awr'] = { name = 'awera' }
+l['aws'] = { name = 'aghu du Sud', sortKey = 'aghu Sud' }
+l['awt'] = { name = 'araweté' }
+l['awu'] = { name = 'aghu central' }
+l['awv'] = { name = 'aghu de Jair', sortKey = 'aghu Jair' }
+l['aww'] = { name = 'awun' }
+l['awx'] = { name = 'awara' }
+l['awy'] = { name = 'aghu d’Edera', sortKey = 'aghu Edera' }
+l['axb'] = { name = 'abipón' }
+l['axe'] = { name = 'ayerrerenge' }
+l['axg'] = { name = 'arara de Mato Grosso', sortKey = 'arara Mato Grosso' }
+l['axx'] = { name = 'xârâgurè' }
+l['ay'] = { name = 'aymara', wiktionaryExists = true }
+l['aya'] = { name = 'awar' }
+l['ayd'] = { name = 'ayabadhu' }
+l['aye'] = { name = 'ayere' }
+l['ayi'] = { name = 'leyigha' }
+l['ayl'] = { name = 'arabe libyen' }
+l['ayn'] = { name = 'arabe sanaani' }
+l['ayo'] = { name = 'ayoreo' }
+l['ayu'] = { name = 'ayu' }
+l['ayz'] = { name = 'mai brat' }
+l['az'] = { name = 'azéri', wiktionaryExists = true }
+l['aza'] = { name = 'azha' }
+l['azb'] = { name = 'azéri du Sud', sortKey = 'azéri Sud' }
+l['azb-afs'] = { name = 'afchar' }
+l['azc'] = { name = 'langues uto-aztèques', sortKey = 'uto aztèques langues', isGroup = true }
+l['azg'] = { name = 'amuzgo de San Pedro Amuzgos', sortKey = 'amuzgo San Pedro Amuzgos' }
+l['azj'] = { name = 'azéri du Nord', sortKey = 'azéri Nord' }
+l['azo'] = { name = 'awing' }
+l['azz'] = { name = 'nahuatl du haut Puebla', sortKey = 'nahuatl Puebla haut' }
+l['ba'] = { name = 'bachkir' }
+l['baa'] = { name = 'babatana' }
+l['bac'] = { name = 'baduy' }
+l['bad'] = { name = 'langues bandas', sortKey = 'bandas langues', isGroup = true }
+l['bae'] = { name = 'baré' }
+l['baf'] = { name = 'nubaca' }
+l['bag'] = { name = 'tuki' }
+l['bah'] = { name = 'créole bahamien' }
+l['bai'] = { name = 'langues bamilékées', sortKey = 'bamilekees langues', isGroup = true }
+l['baisha'] = { name = 'baisha' }
+l['bal'] = { name = 'baloutche' }
+l['bala (Chine)'] = { name = 'bala (Chine)', sortKey = 'bala Chine' }
+l['ban'] = { name = 'balinais' }
+l['bana'] = { name = 'bana (Chine)', sortKey = 'bana Chine' }
+l['bangru'] = { name = 'bangru' }
+l['bao'] = { name = 'bara' }
+l['baoting'] = { name = 'baoting' }
+l['bap'] = { name = 'bantawa' }
+l['bar'] = { name = 'bavarois' }
+l['barngala'] = { name = 'barngala' }
+l['barranbinya'] = { name = 'barranbinya' }
+l['bas'] = { name = 'bassa (Cameroun)', sortKey = 'bassa Cameroun' }
+l['basco-algonquin'] = { name = 'basco-algonquin' }
+l['basco-islandais'] = { name = 'basco-islandais' }
+l['bat'] = { name = 'langues baltes', sortKey = 'baltes langues', isGroup = true }
+l['bav'] = { name = 'babungo' }
+l['baw'] = { name = 'bambili-bambui' }
+l['bax'] = { name = 'bamoun' }
+l['bay'] = { name = 'batuley' }
+l['bba'] = { name = 'bariba' }
+l['bbb'] = { name = 'barai' }
+l['bbc'] = { name = 'batak toba' }
+l['bbd'] = { name = 'bau' }
+l['bbf'] = { name = 'baibai' }
+l['bbh'] = { name = 'pakan' }
+l['bbi'] = { name = 'barombi' }
+l['bbj'] = { name = 'ghomala’' }
+l['bbl'] = { name = 'bats' }
+l['bbo'] = { name = 'konabéré' }
+l['bbp'] = { name = 'banda central de l’Ouest', sortKey = 'banda central Ouest' }
+l['bbr'] = { name = 'girawa' }
+l['bbu'] = { name = 'kulung (Nigeria)', sortKey = 'kulung Nigeria' }
+l['bbv'] = { name = 'karnai' }
+l['bbw'] = { name = 'baba' }
+l['bca'] = { name = 'bai central' }
+l['bcb'] = { name = 'baïnouk-samik' }
+l['bcc'] = { name = 'baloutchi du Sud', sortKey = 'baloutchi Sud' }
+l['bcd'] = { name = 'babar du Nord', sortKey = 'babar Nord' }
+l['bce'] = { name = 'mengambo' }
+l['bcf'] = { name = 'bamu' }
+l['bcg'] = { name = 'baga binari' }
+l['bch'] = { name = 'bariai' }
+l['bci'] = { name = 'baoulé' }
+l['bcj'] = { name = 'bardi' }
+l['bck'] = { name = 'bunuba' }
+l['bcl'] = { name = 'bikol central', wiktionaryExists = true }
+l['bcm'] = { name = 'banoni' }
+l['bcn'] = { name = 'bali' }
+l['bco'] = { name = 'kaluli' }
+l['bcp'] = { name = 'bali (République démocratique du Congo)', sortKey = 'bali Congo démocratique' }
+l['bcq'] = { name = 'gimira' }
+l['bcr'] = { name = 'babine-witsuwit’en' }
+l['bcs'] = { name = 'kohumono' }
+l['bct'] = { name = 'bendi' }
+l['bcu'] = { name = 'awad bing' }
+l['bcv'] = { name = 'shoo-minda-nye' }
+l['bcw'] = { name = 'bana (Cameroun)', sortKey = 'bana Cameroun' }
+l['bcy'] = { name = 'bacama' }
+l['bcz'] = { name = 'baïnouk-gunyaamolo' }
+l['bda'] = { name = 'bayot' }
+l['bdb'] = { name = 'basap' }
+l['bdc'] = { name = 'emberá-baudó' }
+l['bdd'] = { name = 'bunama' }
+l['bde'] = { name = 'bade' }
+l['bdf'] = { name = 'biage' }
+l['bdg'] = { name = 'bonggi' }
+l['bdh'] = { name = 'baka (Soudan du Sud)', sortKey = 'baka Soudan Sud' }
+l['bdj'] = { name = 'bai (Soudan du Sud)', sortKey = 'bai Soudan Sud' }
+l['bdk'] = { name = 'boudoukh' }
+l['bdl'] = { name = 'bajau indonésien' }
+l['bdm'] = { name = 'boudouma' }
+l['bdn'] = { name = 'baldamu' }
+l['bdo'] = { name = 'morom' }
+l['bdp'] = { name = 'bende' }
+l['bdq'] = { name = 'bahnar' }
+l['bdr'] = { name = 'bajau de la côte occidentale', sortKey = 'bajau côte occidentale' }
+l['bds'] = { name = 'burunge' }
+l['bdt'] = { name = 'gbaya bokoto' }
+l['bdu'] = { name = 'oroko' }
+l['bdw'] = { name = 'baham' }
+l['bdy'] = { name = 'bandjalang' }
+l['be'] = { name = 'biélorusse', wiktionaryExists = true }
+l['be-tarask'] = { name = 'biélorusse (tarashkevitsa)' }
+l['bea'] = { name = 'dunneza' }
+l['bec'] = { name = 'iceve-maci' }
+l['bed'] = { name = 'bedoanas' }
+l['bee'] = { name = 'byangsi' }
+l['bef'] = { name = 'benabena' }
+l['beg'] = { name = 'belait' }
+l['beh'] = { name = 'biali' }
+l['bei'] = { name = 'bekati’' }
+l['bej'] = { name = 'bedja' }
+l['bek'] = { name = 'bebeli' }
+l['bem'] = { name = 'bemba' }
+l['bengni'] = { name = 'bengni' }
+l['beo'] = { name = 'beami' }
+l['bep'] = { name = 'besoa' }
+l['beq'] = { name = 'beembe' }
+l['ber'] = { name = 'langues berbères', sortKey = 'berberes langues', isGroup = true }
+l['berrichon'] = { name = 'berrichon' }
+l['bes'] = { name = 'besme' }
+l['bet'] = { name = 'bété de Guiberoua', sortKey = 'bété Guiberoua' }
+l['bété'] = { name = 'bété (Côte d’Ivoire)', sortKey = 'bété Côte divoire' }
+l['betoi'] = { name = 'betoi' }
+l['beu'] = { name = 'blagar' }
+l['bew'] = { name = 'betawi' }
+l['bey'] = { name = 'beli (Papouasie-Nouvelle-Guinée)', sortKey = 'beli Paouasie' }
+l['bex'] = { name = 'modo' }
+l['bez'] = { name = 'bena' }
+l['bfa'] = { name = 'bari (Soudan du Sud)', sortKey = 'bari Soudan Sud' }
+l['bfb'] = { name = 'pauri bareli' }
+l['bfc'] = { name = 'bai du Nord', sortKey = 'bai Nord' }
+l['bfd'] = { name = 'bafut' }
+l['bff'] = { name = 'bofi' }
+l['bfg'] = { name = 'busang' }
+l['bfi'] = { name = 'langue des signes britannique', sortKey = 'signes britannique' }
+l['bfj'] = { name = 'bafanji' }
+l['bfm'] = { name = 'mmem' }
+l['bfn'] = { name = 'bunaq' }
+l['bfo'] = { name = 'birifor malba' }
+l['bfq'] = { name = 'bagada' }
+l['bfr'] = { name = 'bazigar' }
+l['bfs'] = { name = 'bai du Sud', sortKey = 'bai Sud' }
+l['bft'] = { name = 'balti' }
+l['bfu'] = { name = 'bunan' }
+l['bfw'] = { name = 'remo' }
+l['bg'] = { name = 'bulgare', wiktionaryExists = true }
+l['bgb'] = { name = 'bobongko' }
+l['bgf'] = { name = 'bangando' }
+l['bgg'] = { name = 'bugun' }
+l['bgj'] = { name = 'bangolan' }
+l['bgk'] = { name = 'khabit' }
+l['bgr'] = { name = 'bawm' }
+l['bgt'] = { name = 'bughotu' }
+l['bgu'] = { name = 'mbongno' }
+l['bgv'] = { name = 'warkay-bipim' }
+l['bgx'] = { name = 'gagaouze balkanique' }
+l['bgz'] = { name = 'banggai' }
+l['bh'] = { name = 'langues biharies', sortKey = 'biharies langues', wiktionaryExists = true, isGroup = true }
+l['bha'] = { name = 'bharia' }
+l['bhb'] = { name = 'bhili' }
+l['bhc'] = { name = 'biga' }
+l['bhf'] = { name = 'odiai' }
+l['bhg'] = { name = 'binandere' }
+l['bhi'] = { name = 'bhilali' }
+l['bhj'] = { name = 'bahing' }
+l['bhl'] = { name = 'bimin' }
+l['bhm'] = { name = 'bathari' }
+l['bhn'] = { name = 'néo-araméen de Bohtan', sortKey = 'araméen néo bohtan' }
+l['bho'] = { name = 'bhojpouri' }
+l['bhq'] = { name = 'tukang besi du Sud', sortKey = 'tukang besi Sud' }
+l['bhs'] = { name = 'buwal' }
+l['bhv'] = { name = 'bahau' }
+l['bhw'] = { name = 'biak' }
+l['bhy'] = { name = 'bhele' }
+l['bhz'] = { name = 'bada (Indonésie)', sortKey = 'bada Indonésie' }
+l['bi'] = { name = 'bichlamar', wiktionaryExists = true }
+l['bia'] = { name = 'badimaya' }
+l['bib'] = { name = 'bissa' }
+l['bic'] = { name = 'bikaru' }
+l['bid'] = { name = 'bidiyo' }
+l['bie'] = { name = 'bepour' }
+l['bif'] = { name = 'biafada' }
+l['big'] = { name = 'biangai' }
+l['bij'] = { name = 'vaghat-ya-bijim-legeri' }
+l['bik'] = { name = 'bikol' }
+l['bil'] = { name = 'bile' }
+l['bim'] = { name = 'bimoba' }
+l['bin'] = { name = 'édo', sortKey = 'edo' }
+l['bio'] = { name = 'nai' }
+l['bip'] = { name = 'bila' }
+l['bir'] = { name = 'bisorio' }
+l['bisaya de Limbang'] = { name = 'bisaya de Limbang', sortKey = 'bisaya Limbang' }
+l['biv'] = { name = 'birifor du Sud', sortKey = 'birifor Sud' }
+l['biz'] = { name = 'baloi' }
+l['bja'] = { name = 'ebudza' }
+l['bjb'] = { name = 'banggarla' }
+l['bjc'] = { name = 'bariji' }
+l['bje'] = { name = 'biao-jiao mien' }
+l['bjg'] = { name = 'bijogo' }
+l['bjh'] = { name = 'bahinemo' }
+l['bji'] = { name = 'burji' }
+l['bjj'] = { name = 'kanauji' }
+l['bjm'] = { name = 'bajelani' }
+l['bjn'] = { name = 'banjar', wiktionaryExists = true }
+l['bjp'] = { name = 'fanamaket' }
+l['bjr'] = { name = 'binumarien' }
+l['bjt'] = { name = 'balante-ganja' }
+l['bjv'] = { name = 'bedjond' }
+l['bjz'] = { name = 'baruga' }
+l['bka'] = { name = 'kyak' }
+l['bkc'] = { name = 'baka (Cameroun-Gabon)', sortKey = 'baka Cameroun Gabon' }
+l['bkd'] = { name = 'binukid' }
+l['bkh'] = { name = 'bakoko' }
+l['bki'] = { name = 'baki' }
+l['bkj'] = { name = 'pande' }
+l['bkl'] = { name = 'berik' }
+l['bkm'] = { name = 'kom (Cameroun)', sortKey = 'kom Cameroun' }
+l['bkn'] = { name = 'beketan' }
+l['bko'] = { name = 'kwa’' }
+l['bkq'] = { name = 'bakairí' }
+l['bkr'] = { name = 'bakumpai' }
+l['bks'] = { name = 'sorsoganon du Nord', sortKey = 'sorsoganon Nord' }
+l['bkt'] = { name = 'boloki' }
+l['bku'] = { name = 'bouhid' }
+l['bkx'] = { name = 'baikeno' }
+l['bky'] = { name = 'bokyi' }
+l['bkz'] = { name = 'bungku' }
+l['bla'] = { name = 'pied-noir' }
+l['blb'] = { name = 'bilua' }
+l['blc'] = { name = 'nuxalk' }
+l['bld'] = { name = 'bolango' }
+l['ble'] = { name = 'balante-kentohe' }
+l['blf'] = { name = 'buol' }
+l['bli'] = { name = 'bolia' }
+l['blj'] = { name = 'bolongan' }
+l['blk'] = { name = 'pa’o' }
+l['bll'] = { name = 'biloxi' }
+l['blm'] = { name = 'beli (Soudan du Sud)', sortKey = 'beli Soudan Sud' }
+l['bln'] = { name = 'bikol du Sud de Catanduanes', sortKey = 'bikol Catanduanes Sud' }
+l['blo'] = { name = 'anii' }
+l['blq'] = { name = 'baluan-pam' }
+l['blr'] = { name = 'blang' }
+l['bls'] = { name = 'balaesang' }
+l['blt'] = { name = 'tai dam' }
+l['blv'] = { name = 'kibala' }
+l['blw'] = { name = 'balangao' }
+l['bly'] = { name = 'notre' }
+l['blz'] = { name = 'balantak' }
+l['bm'] = { name = 'bambara', wiktionaryExists = true }
+l['bma'] = { name = 'lame' }
+l['bmc'] = { name = 'biem' }
+l['bmg'] = { name = 'bamwe' }
+l['bmh'] = { name = 'kein' }
+l['bmi'] = { name = 'bagirmi' }
+l['bmj'] = { name = 'bote-majhi' }
+l['bmk'] = { name = 'ghayavi' }
+l['bmn'] = { name = 'bina (Papouasie-Nouvelle-Guinée)', sortKey = 'bina Papouasie' }
+l['bmr'] = { name = 'muinane' }
+l['bmt'] = { name = 'biao mon' }
+l['bmu'] = { name = 'burum-mindik' }
+l['bmx'] = { name = 'baimak' }
+l['bn'] = { name = 'bengali', wiktionaryExists = true }
+l['bnb'] = { name = 'murut bookan' }
+l['bnc'] = { name = 'bontok' }
+l['bne'] = { name = 'bintauna' }
+l['bng'] = { name = 'benga' }
+l['bni'] = { name = 'bobangi' }
+l['bnk'] = { name = 'bierebo' }
+l['bnm'] = { name = 'batanga' }
+l['bnn'] = { name = 'bunun' }
+l['bnp'] = { name = 'bola (Papouasie-Nouvelle-Guinée)', sortKey = 'bola Papouasie' }
+l['bnq'] = { name = 'bantik' }
+l['bnr'] = { name = 'butmas-tur' }
+l['bnt'] = { name = 'langues bantoues', sortKey = 'bantoues langues', isGroup = true }
+l['bnv'] = { name = 'bonerif' }
+l['bny'] = { name = 'bintulu' }
+l['bnz'] = { name = 'beezen' }
+l['bo'] = { name = 'tibétain', wiktionaryExists = true }
+l['boa'] = { name = 'bora' }
+l['bob'] = { name = 'aweer' }
+l['boe'] = { name = 'mundabli' }
+l['bof'] = { name = 'bolon' }
+l['bog'] = { name = 'langue des signes malienne', sortKey = 'signes malienne' }
+l['boh'] = { name = 'boma' }
+l['boi'] = { name = 'barbareño' }
+l['boj'] = { name = 'anjam' }
+l['bok'] = { name = 'bonjo' }
+l['bokar'] = { name = 'bokar' }
+l['bol'] = { name = 'bole' }
+l['bolze'] = { name = 'bolze' }
+l['bom'] = { name = 'birom' }
+l['bon'] = { name = 'bine' }
+l['boo'] = { name = 'bozo de Tiemacèwè', sortKey = 'bozo Tiemacèwè' }
+l['boq'] = { name = 'bogaya' }
+l['bor'] = { name = 'bororo' }
+l['bot'] = { name = 'bongo' }
+l['botnien'] = { name = 'botnien' }
+l['bou'] = { name = 'bondei' }
+l['bouhin'] = { name = 'bouhin' }
+l['bourbonnais'] = { name = 'bourbonnais' }
+l['bourguignon'] = { name = 'bourguignon' }
+l['bov'] = { name = 'tuwuli' }
+l['bow'] = { name = 'rema' }
+l['box'] = { name = 'buamu' }
+l['boy'] = { name = 'bodo (République centrafricaine)', sortKey = 'bodo Centrafrique' }
+l['boz'] = { name = 'bozo-tigemaxoo' }
+l['bpa'] = { name = 'daakaka' }
+l['bpg'] = { name = 'bonggo' }
+l['bph'] = { name = 'botlikh' }
+l['bpi'] = { name = 'bagupi' }
+l['bpj'] = { name = 'binji' }
+l['bpm'] = { name = 'biyom' }
+l['bpn'] = { name = 'dzao min' }
+l['bpp'] = { name = 'kaure' }
+l['bpr'] = { name = 'blaan de Koronadal', sortKey = 'blaan Koronadal' }
+l['bps'] = { name = 'blaan de Sarangani', sortKey = 'blaan Sarangani' }
+l['bpu'] = { name = 'bongu' }
+l['bpv'] = { name = 'marind bian' }
+l['bpy'] = { name = 'manipourî de Bishnupriya', sortKey = 'manipourî Bishnupriya' }
+l['bqb'] = { name = 'bagusa' }
+l['bqc'] = { name = 'boko' }
+l['bqh'] = { name = 'baima' }
+l['bqi'] = { name = 'bakhtiari' }
+l['bqj'] = { name = 'jóola banjal' }
+l['bql'] = { name = 'bilakura' }
+l['bqo'] = { name = 'balo' }
+l['bqp'] = { name = 'busa' }
+l['bqq'] = { name = 'biritai' }
+l['bqr'] = { name = 'bulusu' }
+l['br'] = { name = 'breton', wiktionaryExists = true }
+l['bra'] = { name = 'braj' }
+l['brabançon'] = { name = 'brabançon' }
+l['brb'] = { name = 'lave' }
+l['brc'] = { name = 'créole hollandais de Berbice', sortKey = 'créole berbice hollandais' }
+l['brd'] = { name = 'baraadu' }
+l['brg'] = { name = 'baure' }
+l['brh'] = { name = 'brahui' }
+l['bri'] = { name = 'mokpwe' }
+l['brm'] = { name = 'barambu' }
+l['brn'] = { name = 'boruca' }
+l['bro'] = { name = 'brokkat' }
+l['brp'] = { name = 'barapasi' }
+l['brt'] = { name = 'bitare' }
+l['bru'] = { name = 'bru de l’Est', sortKey = 'bru Est' }
+l['brv'] = { name = 'bru de l’Ouest', sortKey = 'bru Ouest' }
+l['brw'] = { name = 'bellari' }
+l['brx'] = { name = 'bodo' }
+l['bry'] = { name = 'burui' }
+l['bs'] = { name = 'bosniaque', wiktionaryExists = true }
+l['bsc'] = { name = 'bassari' }
+l['bse'] = { name = 'wushi' }
+l['bsg'] = { name = 'bashkardi' }
+l['bsh'] = { name = 'kati' }
+l['bsk'] = { name = 'bourouchaski' }
+l['bsl'] = { name = 'basa-gumna' }
+l['bsm'] = { name = 'busami' }
+l['bsn'] = { name = 'barasana' }
+l['bsr'] = { name = 'bassa-kontagora' }
+l['bst'] = { name = 'basketto' }
+l['bsu'] = { name = 'bahonsuai' }
+l['bsw'] = { name = 'baiso' }
+l['bsx'] = { name = 'yangkam' }
+l['bsy'] = { name = 'bisaya de Sabah', sortKey = 'bisaya Sabah' }
+l['bsz'] = { name = 'souletin' }
+l['bta'] = { name = 'bata' }
+l['btc'] = { name = 'bati (Cameroun)', sortKey = 'bati Cameroun' }
+l['btd'] = { name = 'dairi' }
+l['btf'] = { name = 'birguit' }
+l['bth'] = { name = 'biatah bidayuh' }
+l['btk'] = { name = 'langues batakes', sortKey = 'batakes langues', isGroup = true }
+l['btm'] = { name = 'mandailing', wiktionaryExists = true }
+l['btp'] = { name = 'budibud' }
+l['btr'] = { name = 'baetora' }
+l['btu'] = { name = 'batu' }
+l['btw'] = { name = 'butuanon' }
+l['btx'] = { name = 'batak karo' }
+l['btz'] = { name = 'alas-kluet' }
+l['bua'] = { name = 'bouriate' }
+l['bub'] = { name = 'bua' }
+l['buc'] = { name = 'kibushi' }
+l['bud'] = { name = 'ntcham' }
+l['bue'] = { name = 'béothuk' }
+l['buf'] = { name = 'bushoong' }
+l['bug'] = { name = 'bugis' }
+l['buh'] = { name = 'younuo' }
+l['bui'] = { name = 'bongili' }
+l['buk'] = { name = 'bukawa' }
+l['bularnu'] = { name = 'bularnu' }
+l['bum'] = { name = 'boulou' }
+l['bun'] = { name = 'sherbro' }
+l['buq'] = { name = 'barem' }
+l['burgonde'] = { name = 'burgonde' }
+l['bus'] = { name = 'bokobaru' }
+l['but'] = { name = 'bungain' }
+l['buu'] = { name = 'budu' }
+l['buw'] = { name = 'bubi' }
+l['bux'] = { name = 'boghom' }
+l['buy'] = { name = 'bullom so' }
+l['buz'] = { name = 'bukwen' }
+l['bva'] = { name = 'baraïn' }
+l['bvb'] = { name = 'bube' }
+l['bvj'] = { name = 'ogoi' }
+l['bvk'] = { name = 'bukat' }
+l['bvo'] = { name = 'bolgo' }
+l['bvp'] = { name = 'bumang' }
+l['bvq'] = { name = 'birri' }
+l['bvt'] = { name = 'bati (Indonésie)', sortKey = 'bati Indonésie' }
+l['bvu'] = { name = 'bukit' }
+l['bvv'] = { name = 'baniva' }
+l['bvw'] = { name = 'boga' }
+l['bvx'] = { name = 'dibole' }
+l['bvy'] = { name = 'utudnon' }
+l['bvz'] = { name = 'bauzi' }
+l['bwa'] = { name = 'bwatoo' }
+l['bwb'] = { name = 'namosi-naitasiri-serua' }
+l['bwc'] = { name = 'bwile' }
+l['bwd'] = { name = 'bwaidoka' }
+l['bwe'] = { name = 'bwe' }
+l['bwf'] = { name = 'boselewa' }
+l['bwg'] = { name = 'barwe' }
+l['bwh'] = { name = 'bishuo' }
+l['bwi'] = { name = 'baniwa' }
+l['bwj'] = { name = 'bwamu laa' }
+l['bwk'] = { name = 'bauwaki' }
+l['bwl'] = { name = 'ebwela' }
+l['bwm'] = { name = 'biwat' }
+l['bwn'] = { name = 'wunai bunu' }
+l['bwo'] = { name = 'shinasha' }
+l['bwp'] = { name = 'bawah de Mandobo', sortKey = 'bawah Mandobo' }
+l['bwq'] = { name = 'bobo madaré du Sud', sortKey = 'bobo madaré Sud' }
+l['bwr'] = { name = 'babur' }
+l['bws'] = { name = 'bomboma' }
+l['bwt'] = { name = 'bafaw-balong' }
+l['bwu'] = { name = 'buli (Ghana)', sortKey = 'buli Ghana' }
+l['bww'] = { name = 'bwa' }
+l['bwx'] = { name = 'dongnu de Dahua', sortKey = 'dongnu Dahua' }
+l['bwx-bun'] = { name = 'bunuo' }
+l['bwx-nao'] = { name = 'naoklao' }
+l['bwx-num'] = { name = 'numao' }
+l['bwx-nun'] = { name = 'nunu de Lingyun', sortKey = 'nunu Lingyun' }
+l['bwy'] = { name = 'bwamu cwi' }
+l['bwz'] = { name = 'bwisi' }
+l['bxb'] = { name = 'belanda boor' }
+l['bxd'] = { name = 'bola (Chine)', sortKey = 'bola Chine' }
+l['bxe'] = { name = 'ongota' }
+l['bxf'] = { name = 'bilur' }
+l['bxg'] = { name = 'bangala' }
+l['bxi'] = { name = 'pirlatapa' }
+l['bxj'] = { name = 'bayungu' }
+l['bxk'] = { name = 'bukusu' }
+l['bxl'] = { name = 'jalkunan' }
+l['bxn'] = { name = 'burduna' }
+l['bxq'] = { name = 'beele' }
+l['bqx'] = { name = 'bele' }
+l['bxr'] = { name = 'bouriate de Russie', sortKey = 'bouriate Russie' }
+l['bxs'] = { name = 'busam' }
+l['bxu-bar'] = { name = 'bargu' }
+l['bxw'] = { name = 'bankagooma' }
+l['byd'] = { name = 'benyadu’' }
+l['bye'] = { name = 'pouye' }
+l['byf'] = { name = 'bété (Nigeria)', sortKey = 'bété Nigeria' }
+l['byk'] = { name = 'biao' }
+l['byn'] = { name = 'bilen' }
+l['byo'] = { name = 'biyo' }
+l['byq'] = { name = 'basay' }
+l['byr'] = { name = 'baruya' }
+l['byt'] = { name = 'berti' }
+l['byv'] = { name = 'medumba' }
+l['byz'] = { name = 'banaro' }
+l['bza'] = { name = 'bandi' }
+l['bzb'] = { name = 'andio' }
+l['bzc'] = { name = 'malgache betsimisaraka du Sud', sortKey = 'malgache betsimisaraka Sud' }
+l['bzd'] = { name = 'bribri' }
+l['bze'] = { name = 'bozo-djenama' }
+l['bzf'] = { name = 'boikin' }
+l['bzg'] = { name = 'babuza' }
+l['bzh'] = { name = 'buang mapos' }
+l['bzi'] = { name = 'bisu' }
+l['bzj'] = { name = 'créole bélizien' }
+l['bzk'] = { name = 'créole anglais nicaraguayen', sortKey = 'creole nicaraguayen anglais' }
+l['bzl'] = { name = 'boano (Sulawesi)', sortKey = 'boano Sulawesi' }
+l['bzn'] = { name = 'boano (Maluku)', sortKey = 'boano Maluku' }
+l['bzp'] = { name = 'kemberano' }
+l['bzq'] = { name = 'buli (Indonésie)', sortKey = 'buli Indonésie' }
+l['bzt'] = { name = 'brithenig' }
+l['bzu'] = { name = 'burmeso' }
+l['bzv'] = { name = 'bebe' }
+l['bzw'] = { name = 'basa' }
+l['bzx'] = { name = 'bozo-kelengaxo' }
+l['bzz'] = { name = 'evant' }
+l['ca'] = { name = 'catalan', hasPortal = true, wiktionaryExists = true }
+l['ca-valencia'] = { name = 'valencien' }
+l['caa'] = { name = 'ch’orti’' }
+l['cab'] = { name = 'garifuna' }
+l['cac'] = { name = 'chuj' }
+l['cad'] = { name = 'caddo' }
+l['cae'] = { name = 'léhar' }
+l['caf'] = { name = 'porteur du Sud', sortKey = 'porteur Sud' }
+l['cag'] = { name = 'nivaklé' }
+l['cai'] = { name = 'langues centre-amérindiennes', sortKey = 'centre amerindiennes langues', isGroup = true }
+l['caj'] = { name = 'chané' }
+l['cak'] = { name = 'cakchiquel' }
+l['cal'] = { name = 'carolinien' }
+l['calabrais centro-méridional'] = { name = 'calabrais centro-méridional' }
+l['cam'] = { name = 'cèmuhî' }
+l['can'] = { name = 'chambri' }
+l['cao'] = { name = 'chácobo' }
+l['cap'] = { name = 'chipaya' }
+l['caq'] = { name = 'car' }
+l['car'] = { name = 'kali’na' }
+l['cas'] = { name = 'tsimané' }
+l['catio ancien'] = { name = 'catio ancien' }
+l['cau'] = { name = 'langues caucasiennes', sortKey = 'caucasiennes langues', isGroup = true }
+l['cav'] = { name = 'cavineña' }
+l['caw'] = { name = 'kallawaya' }
+l['cax'] = { name = 'chiquitano' }
+l['cay'] = { name = 'cayuga' }
+l['caz'] = { name = 'canichana' }
+l['cba'] = { name = 'langues chibchas', sortKey = 'chibchas langues', isGroup = true }
+l['cbb'] = { name = 'cabiyarí' }
+l['cbc'] = { name = 'carapana' }
+l['cbd'] = { name = 'carijona' }
+l['cbg'] = { name = 'chimila' }
+l['cbi'] = { name = 'cayapa' }
+l['cbk'] = { name = 'chavacano' }
+l['cbk-zam'] = { name = 'chavacano de Zamboanga', sortKey = 'chavacano Zamboanga' }
+l['cbn'] = { name = 'nyahkur' }
+l['cbo'] = { name = 'izora' }
+l['cbr'] = { name = 'cashibo' }
+l['cbs'] = { name = 'cashinahua' }
+l['cbt'] = { name = 'chayahuita' }
+l['cbu'] = { name = 'candoshi' }
+l['cbv'] = { name = 'kakua' }
+l['cca'] = { name = 'cauca' }
+l['ccc'] = { name = 'chamicuro' }
+l['ccd'] = { name = 'cafundó' }
+l['cch'] = { name = 'atsam' }
+l['ccn'] = { name = 'langues caucasiennes du Nord', sortKey = 'caucasiennes Nord langues', isGroup = true }
+l['cco'] = { name = 'chinantèque de Comaltepec', sortKey = 'chinantèque Comaltepec' }
+l['ccp'] = { name = 'changma kodha' }
+l['ccr'] = { name = 'cacaopera' }
+l['ccs'] = { name = 'langues caucasiennes du Sud', sortKey = 'caucasiennes Sud langues', isGroup = true }
+l['cdc'] = { name = 'langues tchadiques', sortKey = 'tchadiques langues', isGroup = true }
+l['cdd'] = { name = 'langues caddoanes', sortKey = 'caddoanes langues', isGroup = true }
+l['cde'] = { name = 'chenchu' }
+l['cdf'] = { name = 'chiru' }
+l['cdh'] = { name = 'chambeali' }
+l['cdi'] = { name = 'chodri' }
+l['cdm'] = { name = 'chepang' }
+l['cdn'] = { name = 'chaudangsi' }
+l['cdo'] = { name = 'mindong' }
+l['cdr'] = { name = 'kamuku' }
+l['cds'] = { name = 'langue des signes tchadienne', sortKey = 'signes tchadienne' }
+l['cdy'] = { name = 'chadong' }
+l['cdz'] = { name = 'koda' }
+l['ce'] = { name = 'tchétchène' }
+l['cea'] = { name = 'chehalis inférieur' }
+l['ceb'] = { name = 'cebuano' }
+l['ceg'] = { name = 'chamacoco' }
+l['cel'] = { name = 'langues celtiques', sortKey = 'celtiques langues', isGroup = true }
+l['celtique asturien'] = { name = 'celtique asturien' }
+l['cet'] = { name = 'jalaa' }
+l['cfa'] = { name = 'dijim-bwilim' }
+l['cfd'] = { name = 'cara' }
+l['cfm'] = { name = 'falam' }
+l['cgc'] = { name = 'kagayanen' }
+l['cgk'] = { name = 'chocangacakha' }
+l['cgg'] = { name = 'kiga' }
+l['ch'] = { name = 'chamorro', wiktionaryExists = true }
+l['chali'] = { name = 'chali' }
+l['champenois'] = { name = 'champenois' }
+l['chaná'] = { name = 'chaná' }
+l['changjiang'] = { name = 'changjiang' }
+l['charrúa'] = { name = 'charrúa' }
+l['chatino de Teojomulco'] = { name = 'chatino de Teojomulco', sortKey = 'chatino Teojomulco' }
+l['chb'] = { name = 'muisca' }
+l['chc'] = { name = 'catawba' }
+l['chd'] = { name = 'chontal des hautes terres', sortKey = 'chontal hautes terres' }
+l['chf'] = { name = 'chontal du Tabasco', sortKey = 'chontal Tabasco' }
+l['chg'] = { name = 'tchaghataï' }
+l['chh'] = { name = 'chinook' }
+l['chirino'] = { name = 'chirino' }
+l['chj'] = { name = 'chinantèque d’Ojitlán', sortKey = 'chinantèque Ojitlán' }
+l['chk'] = { name = 'chuuk' }
+l['chl'] = { name = 'cahuilla' }
+l['chm'] = { name = 'mari' }
+l['chn'] = { name = 'jargon chinook' }
+l['cho'] = { name = 'choctaw' }
+l['chp'] = { name = 'chipewyan' }
+l['chq'] = { name = 'chinantèque de Quiotepec', sortKey = 'chinantèque Quiotepec' }
+l['chr'] = { name = 'cherokee', wiktionaryExists = true }
+l['chs'] = { name = 'langues chumash', sortKey = 'chumash langues', isGroup = true }
+l['cht'] = { name = 'cholón' }
+l['chw'] = { name = 'echuwabo' }
+l['chy'] = { name = 'cheyenne' }
+l['chz'] = { name = 'chinantèque d’Ozumacín', sortKey = 'chinantèque Ozumacín' }
+l['cia'] = { name = 'cia-cia' }
+l['cic'] = { name = 'chickasaw' }
+l['cid'] = { name = 'chimariko' }
+l['cie'] = { name = 'cineni' }
+l['cilentain méridional'] = { name = 'cilentain méridional' }
+l['cim'] = { name = 'cimbre' }
+l['cin'] = { name = 'cinta-larga' }
+l['cip'] = { name = 'chiapanèque' }
+l['cir'] = { name = 'tîrî' }
+l['ciw'] = { name = 'chippewa' }
+l['ciy'] = { name = 'chaima' }
+l['cja'] = { name = 'cham occidental' }
+l['cje'] = { name = 'chru' }
+l['cjh'] = { name = 'chehalis supérieur' }
+l['cji'] = { name = 'chamalal' }
+l['cjm'] = { name = 'cham oriental' }
+l['cjp'] = { name = 'cabécar' }
+l['cjs'] = { name = 'chor' }
+l['cjv'] = { name = 'chuave' }
+l['cjy'] = { name = 'jinyu' }
+l['ckb'] = { name = 'soranî', wiktionaryExists = true }
+l['ckl'] = { name = 'cibak' }
+l['ckn'] = { name = 'kaang' }
+l['ckq'] = { name = 'kadjakse' }
+l['cks'] = { name = 'tayo' }
+l['ckt'] = { name = 'tchouktche' }
+l['cku'] = { name = 'koasati' }
+l['ckv'] = { name = 'kavalan' }
+l['cky'] = { name = 'cakfem-mushere' }
+l['cla'] = { name = 'ron' }
+l['clc'] = { name = 'chilcotin' }
+l['cld'] = { name = 'néo-araméen chaldéen', sortKey = 'araméen néo chaldéen' }
+l['cle'] = { name = 'chinantèque de San Juan Lealao', sortKey = 'chinantèque San Juan Lealao' }
+l['cli'] = { name = 'chakali' }
+l['clk'] = { name = 'idou' }
+l['clm'] = { name = 'klallam' }
+l['clo'] = { name = 'chontal des basses terres', sortKey = 'chontal basses terres' }
+l['cls'] = { name = 'sanskrit classique' }
+l['clu'] = { name = 'caluyanun' }
+l['clw'] = { name = 'tchoulyme' }
+l['cly'] = { name = 'chatino de la Sierra orientale', sortKey = 'chatino sierra orientale' }
+l['cmc'] = { name = 'langues chames', sortKey = 'chames langues', isGroup = true }
+l['cme'] = { name = 'cerma' }
+l['cmg'] = { name = 'mongol classique' }
+l['cmi'] = { name = 'emberá chamí' }
+l['cmn'] = { name = 'mandarin', wikimediaCode = 'zh', wiktionaryExists = true }
+l['cmr'] = { name = 'mro' }
+l['cms'] = { name = 'messapien' }
+l['cmt'] = { name = 'camtho' }
+l['cnc'] = { name = 'côông' }
+l['cng'] = { name = 'qiang du Nord', sortKey = 'qiang Nord' }
+l['cnh'] = { name = 'haka chin' }
+l['cni'] = { name = 'asháninka' }
+l['cnk'] = { name = 'khumi' }
+l['cnl'] = { name = 'chinantèque de Lalana', sortKey = 'chinantèque Lalana' }
+l['cns'] = { name = 'asmat central' }
+l['cnt'] = { name = 'chinantèque de Tepetotutla', sortKey = 'chinantèque Tepetotutla' }
+l['cnx'] = { name = 'moyen cornique', sortKey = 'cornique moyen' }
+l['co'] = { name = 'corse', wiktionaryExists = true }
+l['coa'] = { name = 'malais des îles Cocos', sortKey = 'malais Cocos îles' }
+l['cob'] = { name = 'chicomuceltec' }
+l['coc'] = { name = 'cocopa' }
+l['cod'] = { name = 'cocama-cocamilla' }
+l['coe'] = { name = 'koreguaje' }
+l['cof'] = { name = 'tsafiqui' }
+l['cog'] = { name = 'chong' }
+l['coj'] = { name = 'cochimi' }
+l['cok'] = { name = 'cora de Santa Teresa', sortKey = 'cora Santa Teresa' }
+l['col'] = { name = 'salish wenatchi-columbian' }
+l['colac'] = { name = 'colac' }
+l['com'] = { name = 'comanche' }
+l['con'] = { name = 'cofan' }
+l['conv'] = { name = 'conventions internationales', wikimediaCode = 'wikispecies', sortKey = '*conventions' }
+l['coo'] = { name = 'comox' }
+l['cop'] = { name = 'copte' }
+l['copallén'] = { name = 'copallén' }
+l['coq'] = { name = 'coquille' }
+l['cot'] = { name = 'caquinte' }
+l['cou'] = { name = 'coniagui' }
+l['cow'] = { name = 'cowlitz' }
+l['cox'] = { name = 'nanti' }
+l['coz'] = { name = 'chocho' }
+l['cpa'] = { name = 'chinantèque de Palantla', sortKey = 'chinantèque Palantla' }
+l['cpc'] = { name = 'ajyíninka apurucayali' }
+l['cpe'] = { name = 'créoles et pidgins basés sur l’anglais', sortKey = 'créoles et pidgins anglais' }
+l['cpe-spp'] = { name = 'pidgin des plantations samoanes', sortKey = 'pidgin Samoa plantations' }
+l['cpf'] = { name = 'créoles et pidgins basés sur le français', sortKey = 'créoles et pidgins français' }
+l['cpg'] = { name = 'cappadocien' }
+l['cpi'] = { name = 'anglais pidgin chinois', sortKey = 'pidgin chinois anglais' }
+l['cpo'] = { name = 'kpeego' }
+l['cpp'] = { name = 'créoles et pidgins basés sur le portugais', sortKey = 'créoles et pidgins portugais' }
+l['cpu'] = { name = 'ashéninka de Pichis', sortKey = 'ashéninka Pichis' }
+l['cpx'] = { name = 'puxian' }
+l['cqd'] = { name = 'miao chuanqiandian' }
+l['cr'] = { name = 'cri', wiktionaryExists = true }
+l['cra'] = { name = 'chara' }
+l['crc'] = { name = 'lonwolwol' }
+l['crd'] = { name = 'cœur d’alène', sortKey = 'cœur dalène' }
+l['gcf'] = { name = 'créole guadeloupéen' }
+l['créole dominiquais'] = { name = 'créole dominiquais' }
+l['crf'] = { name = 'caramanta' }
+l['crg'] = { name = 'métchif' }
+l['crh'] = { name = 'tatar de Crimée', sortKey = 'tatar Crimée' }
+l['cri'] = { name = 'forro' }
+l['crj'] = { name = 'cri de l’Est, dialecte du Sud', sortKey = 'cri Est dialecte Sud' }
+l['crk'] = { name = 'cri des plaines', sortKey = 'cri plaines' }
+l['crl'] = { name = 'cri de l’Est, dialecte du Nord', sortKey = 'cri Est dialecte Nord' }
+l['crm'] = { name = 'cri de Moose', sortKey = 'cri Moose' }
+l['crn'] = { name = 'cora d’El Nayar', sortKey = 'cora El Nayar' }
+l['cro'] = { name = 'crow' }
+l['crp'] = { name = 'créoles et pidgins' }
+l['crq'] = { name = 'chorote iyo’wujwa' }
+l['crr'] = { name = 'algonquien de Caroline' }
+l['crs'] = { name = 'créole seychellois' }
+l['crt'] = { name = 'chorote iyojwa’ja' }
+l['crv'] = { name = 'chaura' }
+l['crw'] = { name = 'chrau' }
+l['crx'] = { name = 'porteur' }
+l['cry'] = { name = 'chori' }
+l['crz'] = { name = 'cruzeño' }
+l['cs'] = { name = 'tchèque', wiktionaryExists = true }
+l['csa'] = { name = 'chinantèque de Chiltepec', sortKey = 'chinantèque Chiltepec' }
+l['csb'] = { name = 'kachoube', wiktionaryExists = true }
+l['csc'] = { name = 'langue des signes catalane', sortKey = 'signes catalane' }
+l['cse'] = { name = 'langue des signes tchèque', sortKey = 'signes tchèque' }
+l['csg'] = { name = 'langue des signes chilienne', sortKey = 'signes chilienne' }
+l['csh'] = { name = 'asho' }
+l['csi'] = { name = 'miwok de la côte', sortKey = 'miwok côte' }
+l['csk'] = { name = 'jola-kasa' }
+l['csm'] = { name = 'miwok central de la Sierra', sortKey = 'miwok central Sierra' }
+l['csn'] = { name = 'langue des signes colombienne', sortKey = 'signes colombienne' }
+l['cso'] = { name = 'chinantèque de Sochiapam', sortKey = 'chinantèque Sochiapam' }
+l['css'] = { name = 'ohlone du Sud', sortKey = 'ohlone Sud' }
+l['css-mut'] = { name = 'mutsun' }
+l['css-rum'] = { name = 'rumsen' }
+l['cst'] = { name = 'awaswas' }
+l['cst-cha'] = { name = 'chalon' }
+l['cst-cho'] = { name = 'chochenyo' }
+l['csu'] = { name = 'langues soudaniques centrales', sortKey = 'soudaniques centrales langues', isGroup = true }
+l['csv'] = { name = 'sumtu chin' }
+l['csw'] = { name = 'cri des marais', sortKey = 'cri marais' }
+l['csz'] = { name = 'hanis' }
+l['cta'] = { name = 'chatino de Tataltepec', sortKey = 'chatino Tataltepec' }
+l['ctc'] = { name = 'chetco' }
+l['ctd'] = { name = 'tedim' }
+l['cte'] = { name = 'chinantèque de Tepinapa', sortKey = 'chinantèque Tepinapa' }
+l['ctl'] = { name = 'chinantèque de Tlacoatzintepec', sortKey = 'chinantèque Tlacoatzintepec' }
+l['ctm'] = { name = 'chitimacha' }
+l['ctn'] = { name = 'chintang' }
+l['cto'] = { name = 'emberá catío' }
+l['ctp'] = { name = 'chatino de la Sierra occidentale', sortKey = 'chatino sierra occidentale' }
+l['cts'] = { name = 'bikol du Nord de Catanduanes', sortKey = 'bikol Catanduanes Nord' }
+l['ctu'] = { name = 'chol' }
+l['ctz'] = { name = 'chatino de Zacatepec', sortKey = 'chatino Zacatepec' }
+l['cu'] = { name = 'vieux slave', sortKey = 'slave vieux' }
+l['cua'] = { name = 'cua' }
+l['cub'] = { name = 'cubeo' }
+l['cuc'] = { name = 'chinantèque d’Usila', sortKey = 'chinantèque Usila' }
+l['cug'] = { name = 'cung' }
+l['cuh'] = { name = 'chuka' }
+l['cui'] = { name = 'cuiba' }
+l['cuj'] = { name = 'mashco piro' } -- cujareño
+l['cuk'] = { name = 'kuna de San Blas', sortKey = 'kuna San Blas' }
+l['cul'] = { name = 'culina' }
+l['culle'] = { name = 'culle' }
+l['cum'] = { name = 'cumeral' }
+l['cuo'] = { name = 'cumanagoto' }
+l['cup'] = { name = 'cupeño' }
+l['cuq'] = { name = 'cun' }
+l['cus'] = { name = 'langues couchitiques', sortKey = 'couchitiques langues', isGroup = true }
+l['cut'] = { name = 'cuicatèque de Teutila', sortKey = 'cuicatèque Teutila' }
+l['cuu'] = { name = 'tay ya' }
+l['cuv'] = { name = 'cuvok' }
+l['cux'] = { name = 'cuicatèque de Tepeuxila', sortKey = 'cuicatèque Tepeuxila' }
+l['cv'] = { name = 'tchouvache' }
+l['cvg'] = { name = 'chug' }
+l['cvn'] = { name = 'chinantèque de Valle Nacional', sortKey = 'chinantèque Valle Nacional' }
+l['cwa'] = { name = 'kabwa' }
+l['cwd'] = { name = 'cri des bois', sortKey = 'cri bois' }
+l['cwe'] = { name = 'kwere' }
+l['cwt'] = { name = 'kwatay' }
+l['cy'] = { name = 'gallois', wiktionaryExists = true }
+l['cya'] = { name = 'chatino de Nopala', sortKey = 'chatino Nopala' }
+l['cyb'] = { name = 'cayubaba' }
+l['czh'] = { name = 'huizhou' }
+l['czk'] = { name = 'knaanique' }
+l['czn'] = { name = 'chatino de Zenzontepec', sortKey = 'chatino Zenzontepec' }
+l['czo'] = { name = 'minzhong' }
+l['da'] = { name = 'danois', wiktionaryExists = true }
+l['daa'] = { name = 'dangaléat' }
+l['dac'] = { name = 'dambi' }
+l['dad'] = { name = 'marik' }
+l['dag'] = { name = 'dagbani' }
+l['dah'] = { name = 'gwahatike' }
+l['dai'] = { name = 'day' }
+l['daj'] = { name = 'dar fur daju' }
+l['dak'] = { name = 'dakota' }
+l['dal'] = { name = 'dahalo' }
+l['dalécarlien'] = { name = 'dalécarlien' }
+l['dam'] = { name = 'damakawa' }
+l['damu'] = { name = 'damu' }
+l['dao'] = { name = 'daai chin' }
+l['daq'] = { name = 'maria dandami' }
+l['dar'] = { name = 'dargwa' }
+l['dardanien'] = { name = 'dardanien' }
+l['das'] = { name = 'daho-doo' }
+l['dau'] = { name = 'dadjo du Dar Sila', sortKey = 'dadjo Dar Sila' }
+l['dav'] = { name = 'taita' }
+l['daw'] = { name = 'davawenyo' }
+l['day'] = { name = 'langues dayakes', sortKey = 'dayakes langues', isGroup = true }
+l['daz'] = { name = 'moi-wadea' }
+l['dba'] = { name = 'bangeri me' }
+l['dbf'] = { name = 'edopi' }
+l['dbg'] = { name = 'dogul dom' }
+l['dbj'] = { name = 'ida’an' }
+l['dbl'] = { name = 'dyirbal' }
+l['dbm'] = { name = 'duguri' }
+l['dbn'] = { name = 'duriankere' }
+l['dbp'] = { name = 'ɗuwai' }
+l['dbq'] = { name = 'daba' }
+l['dbt'] = { name = 'ben tey' }
+l['dbu'] = { name = 'bondum dom' }
+l['dbw'] = { name = 'bankan tey' }
+l['dby'] = { name = 'dibiyaso' }
+l['dcr'] = { name = 'negerhollands' }
+l['dda'] = { name = 'dadi dadi' }
+l['ddd'] = { name = 'dongotono' }
+l['dde'] = { name = 'doondo' }
+l['ddg'] = { name = 'fataluku' }
+l['ddi'] = { name = 'goodenough de l’Ouest', sortKey = 'goodenough Ouest' }
+l['ddj'] = { name = 'jaru' }
+l['ddo'] = { name = 'tsez' }
+l['ddr'] = { name = 'dhudhuroa' }
+l['ddw'] = { name = 'dawera-daweloor' }
+l['de'] = { name = 'allemand', hasPortal = true, wiktionaryExists = true }
+l['dec'] = { name = 'dagik' }
+l['ded'] = { name = 'dedua' }
+l['dee'] = { name = 'dewoin' }
+l['def'] = { name = 'defzuli' }
+l['deg'] = { name = 'degema' }
+l['deh'] = { name = 'dehwari' }
+l['dei'] = { name = 'demisa' }
+l['del'] = { name = 'langues delaware', sortKey = 'delaware langues', isGroup = true }
+l['dem'] = { name = 'dem' }
+l['den'] = { name = 'esclave' }
+l['dep'] = { name = 'pidgin du Delaware', sortKey = 'pidgin Delaware' }
+l['der'] = { name = 'deuri' }
+l['des'] = { name = 'desano' }
+l['dev'] = { name = 'domung' }
+l['dez'] = { name = 'bondengese' }
+l['dga'] = { name = 'dagaare du Sud', sortKey = 'dagaare Sud' }
+l['dgb'] = { name = 'bunoge' }
+l['dgc'] = { name = 'agta de Casiguran', sortKey = 'agta Casiguran' }
+l['dgd'] = { name = 'dagari dioula' }
+l['dge'] = { name = 'degenan' }
+l['dgh'] = { name = 'dghwede' }
+l['dgl'] = { name = 'dongolawi' }
+l['dgo'] = { name = 'dogri' }
+l['dgr'] = { name = 'flanc-de-chien' }
+l['dgz'] = { name = 'daga' }
+l['dhg'] = { name = 'dhangu-djangu' }
+l['dhi'] = { name = 'dhimal' }
+l['dhl'] = { name = 'dhalandji' }
+l['dhr'] = { name = 'dhargari' }
+l['dhs'] = { name = 'dhaiso' }
+l['dhu'] = { name = 'dhurga' }
+l['dhv'] = { name = 'drehu' }
+l['dia'] = { name = 'dia' }
+l['dib'] = { name = 'dinka du Sud-Central', sortKey = 'dinka Sud Central' }
+l['dic'] = { name = 'dida de Lakota', sortKey = 'dida Lakota' }
+l['did'] = { name = 'didinga' }
+l['dif'] = { name = 'dieri' }
+l['dig'] = { name = 'digo' }
+l['dih'] = { name = 'kumiai' }
+l['dih-ipai'] = { name = 'ipai' }
+l['dih-tipai'] = { name = 'tipai' }
+l['dii'] = { name = 'dimbong' }
+l['dij'] = { name = 'dai' }
+l['dik'] = { name = 'dinka du Sud-Ouest', sortKey = 'dinka Sud Ouest' }
+l['dil'] = { name = 'dilling' }
+l['dim'] = { name = 'dime' }
+l['din'] = { name = 'dinka' }
+l['dio'] = { name = 'dibo' }
+l['dip'] = { name = 'dinka du Nord-Est', sortKey = 'dinka Nord Est' }
+l['diq'] = { name = 'dimli (zazaki du Sud)', sortKey = 'dimli zazaki Sud', wiktionaryExists = true }
+l['dir'] = { name = 'dirim' }
+l['dis'] = { name = 'dimasa' }
+l['dit'] = { name = 'dirari' }
+l['diu'] = { name = 'diriku' }
+l['diw'] = { name = 'dinka du Nord-Ouest', sortKey = 'dinka Nord Ouest' }
+l['dix'] = { name = 'dixon reef' }
+l['diy'] = { name = 'diuwe' }
+l['diz'] = { name = 'dzing' }
+l['dja'] = { name = 'djadjawurrung' }
+l['djb'] = { name = 'djinba' }
+l['djc'] = { name = 'dadjo' }
+l['djd'] = { name = 'djamindjung' }
+l['dje'] = { name = 'zarma' }
+l['dji'] = { name = 'djinang' }
+l['djk'] = { name = 'ndjuka' }
+l['djm'] = { name = 'jamsay' }
+l['djr'] = { name = 'djambarrpuyngu' }
+l['dju'] = { name = 'kapriman' }
+l['dka'] = { name = 'dakpakha' }
+l['dks'] = { name = 'dinka du Sud-Est', sortKey = 'dinka Sud Est' }
+l['dlg'] = { name = 'dolgane' }
+l['dlk'] = { name = 'dahalik' }
+l['dlm'] = { name = 'dalmate' }
+l['dma'] = { name = 'duma' }
+l['dmb'] = { name = 'mombo' }
+l['dmc'] = { name = 'gavak' }
+l['dmd'] = { name = 'madhi madhi' }
+l['dme'] = { name = 'dugwor' }
+l['dmk'] = { name = 'domaaki' }
+l['dml'] = { name = 'dameli' }
+l['dmn'] = { name = 'langues mandées', sortKey = 'mandées langues', isGroup = true }
+l['dmo'] = { name = 'kemedzung' }
+l['dmr'] = { name = 'damar de l’Est', sortKey = 'damar Est' }
+l['dms'] = { name = 'dampelas' }
+l['dmu'] = { name = 'tebi' }
+l['dmv'] = { name = 'dumpas' }
+l['dmy'] = { name = 'demta' }
+l['dna'] = { name = 'dani de Upper Grand Valley', sortKey = 'dani Upper Grand Valley' }
+l['dng'] = { name = 'doungane' }
+l['dni'] = { name = 'dani de Lower Grand Valley', sortKey = 'dani Lower Grand Valley' }
+l['dnj'] = { name = 'dan' }
+l['dnk'] = { name = 'dengka' }
+l['dnn'] = { name = 'dzùùngoo' }
+l['dnr'] = { name = 'danaru' }
+l['dnt'] = { name = 'dani de Mid Grand Valley', sortKey = 'dani Mid Grand Valley' }
+l['dnu'] = { name = 'danau' }
+l['dnw'] = { name = 'dani de l’Ouest', sortKey = 'dani Ouest' }
+l['dny'] = { name = 'dení' }
+l['doa'] = { name = 'dom' }
+l['dob'] = { name = 'dobu' }
+l['doc'] = { name = 'kam du Nord', sortKey = 'kam Nord' }
+l['doe'] = { name = 'doe' }
+l['dog'] = { name = 'dogon' }
+l['doh'] = { name = 'dong' }
+l['doi'] = { name = 'dogri' }
+l['dok'] = { name = 'dondo' }
+l['don'] = { name = 'toura (austronésien)', sortKey = 'toura austronésien' }
+l['dongmeng'] = { name = 'dongmeng' }
+l['dongnu de Du’an'] = { name = 'dongnu de Du’an', sortKey = 'dongnu Duan' }
+l['doo'] = { name = 'dongo' }
+l['dor'] = { name = 'dori’o' }
+l['dos'] = { name = 'dogosé' }
+l['dow'] = { name = 'dowayo' }
+l['dox'] = { name = 'dobase' }
+l['doy'] = { name = 'dompo' }
+l['doz'] = { name = 'dorze' }
+l['dpp'] = { name = 'papar' }
+l['dra'] = { name = 'langues dravidiennes', sortKey = 'dravidiennes langues', isGroup = true }
+l['drc'] = { name = 'minderico' }
+l['drd'] = { name = 'darmiya' }
+l['dre'] = { name = 'dolpo' }
+l['drg'] = { name = 'rungus' }
+l['dri'] = { name = 'c’lela' }
+l['drl'] = { name = 'darling' }
+l['drn'] = { name = 'damar de l’Ouest', sortKey = 'damar Ouest' }
+l['dro'] = { name = 'melanau daro-matu' }
+l['drq'] = { name = 'dura' }
+l['drs'] = { name = 'gedeo' }
+l['drt'] = { name = 'drents' }
+l['dru'] = { name = 'rukai' }
+l['dry'] = { name = 'darai' }
+l['dsb'] = { name = 'bas-sorabe', sortKey = 'sorabe bas' }
+l['dse'] = { name = 'langue des signes néerlandaise', sortKey = 'signes néerlandaise' }
+l['dsh'] = { name = 'daasanach' }
+l['dsi'] = { name = 'disa' }
+l['dsl'] = { name = 'langue des signes danoise', sortKey = 'signes danoise' }
+l['dsn'] = { name = 'dusner' }
+l['dso'] = { name = 'desiya' }
+l['dsq'] = { name = 'tadaksahak' }
+l['dta'] = { name = 'daur' }
+l['dtb'] = { name = 'kadazan de Labuk-Kinabatangan', sortKey = 'kadazan Labuk Kinabatangan' }
+l['dtd'] = { name = 'ditidaht' }
+l['dti'] = { name = 'ana tinga' }
+l['dtk'] = { name = 'tene kan' }
+l['dtm'] = { name = 'tomo kan' }
+l['dtn'] = { name = 'daatsʼíin' }
+l['dto'] = { name = 'tommo so' }
+l['dtp'] = { name = 'dusun central' }
+l['dtr'] = { name = 'lotud' }
+l['dts'] = { name = 'dogon toro so' }
+l['dtt'] = { name = 'toro tegu' }
+l['dtu'] = { name = 'tebul' }
+l['dty'] = { name = 'doteli' }
+l['dua'] = { name = 'douala' }
+l['dub'] = { name = 'dubli' }
+l['duc'] = { name = 'duna' }
+l['dud'] = { name = 'hun-saare' }
+l['due'] = { name = 'dumaget de l’Umiray', sortKey = 'dumaget Umiray' }
+l['duf'] = { name = 'dumbéa' }
+l['dug'] = { name = 'chiduruma' }
+l['dui'] = { name = 'dumum' }
+l['duj'] = { name = 'dhuwal' }
+l['duk'] = { name = 'uyajitaya' }
+l['dum'] = { name = 'moyen néerlandais', sortKey = 'néerlandais moyen' }
+l['dun'] = { name = 'dusun deyah' }
+l['duo'] = { name = 'agta de Dupaningan', sortKey = 'agta Dupaningan' }
+l['duoxu'] = { name = 'duoxu' }
+l['duq'] = { name = 'dusun malang' }
+l['dur'] = { name = 'dii' }
+l['dus'] = { name = 'dumi' }
+l['dusun du Brunéi'] = { name = 'dusun du Brunéi', sortKey = 'dusun Brunéi' }
+l['dusun papar'] = { name = 'dusun papar' }
+l['duu'] = { name = 'drung' }
+l['duv'] = { name = 'duvle' }
+l['duw'] = { name = 'dusun witu' }
+l['dux'] = { name = 'duungooma' }
+l['duy'] = { name = 'agta de Dicamay', sortKey = 'agta Dicamay' }
+l['dv'] = { name = 'divehi', wiktionaryExists = true }
+l['dva'] = { name = 'duau' }
+l['dwr'] = { name = 'dawro' }
+l['dws'] = { name = 'speedwords de Dutton', sortKey = 'speedwords Dutton' }
+l['dya'] = { name = 'dyan' }
+l['dyd'] = { name = 'dyugun' }
+l['dyi'] = { name = 'djimini' }
+l['dym'] = { name = 'yanda dom' }
+l['dyn'] = { name = 'dyangadi' }
+l['dyo'] = { name = 'jola-fonyi' }
+l['dyu'] = { name = 'dioula' }
+l['dyy'] = { name = 'tjapukai' }
+l['dz'] = { name = 'dzongkha', wiktionaryExists = true }
+l['dza'] = { name = 'tunzu' }
+l['dze'] = { name = 'djiwarli' }
+l['dzg'] = { name = 'dazaga' }
+l['dzl'] = { name = 'dzalakha' }
+l['ebg'] = { name = 'ebughu' }
+l['ebk'] = { name = 'bontok de l’Est', sortKey = 'bontok Est' }
+l['ebo'] = { name = 'teke-ebo' }
+l['ebr'] = { name = 'ébrié' }
+l['ebu'] = { name = 'kiembu' }
+l['ecr'] = { name = 'étéocrétois' }
+l['ee'] = { name = 'éwé' }
+l['eee'] = { name = 'e' }
+l['efa'] = { name = 'efai' }
+l['efe'] = { name = 'efe' }
+l['efi'] = { name = 'éfik', sortKey = 'efik' }
+l['ega'] = { name = 'éga', sortKey = 'ega' }
+l['egl'] = { name = 'émilien', wikimediaCode = 'eml' }
+l['ego'] = { name = 'eggon' }
+l['egx'] = { name = 'langues égyptiennes', sortKey = 'égyptiennes langues', isGroup = true }
+l['egy'] = { name = 'égyptien ancien' }
+l['eip'] = { name = 'eipo' }
+l['eit'] = { name = 'eitiep' }
+l['eja'] = { name = 'ejamat' }
+l['eka'] = { name = 'ékadjouk' }
+l['eke'] = { name = 'eket' }
+l['ekg'] = { name = 'ekari' }
+l['eki'] = { name = 'eki' }
+l['ekl'] = { name = 'kol (Bangladesh)', sortKey = 'kol Bangladesh' }
+l['ekm'] = { name = 'elip' }
+l['eko'] = { name = 'ekoti' }
+l['ekp'] = { name = 'ekpeye' }
+l['ekr'] = { name = 'yace' }
+l['eky'] = { name = 'kayah li de l’Est', sortKey = 'kayah li Est' }
+l['el'] = { name = 'grec', wiktionaryExists = true }
+l['ele'] = { name = 'elepi' }
+l['eli'] = { name = 'nding' }
+l['elk'] = { name = 'elkei' }
+l['elm'] = { name = 'eleme' }
+l['elo'] = { name = 'elmolo' }
+l['elu'] = { name = 'elu' }
+l['elx'] = { name = 'élamite' }
+l['ema'] = { name = 'emai-iuleha-ora' }
+l['emb'] = { name = 'embaloh' }
+l['eme'] = { name = 'émérillon' }
+l['emg'] = { name = 'meohang de l’Est', sortKey = 'meohang Est' }
+l['emi'] = { name = 'mussau' }
+l['emk'] = { name = 'maninka oriental' }
+l['eml'] = { name = 'émilien-romagnol', sortKey = 'émilien romagnol' }
+l['emo'] = { name = 'emok' }
+l['emp'] = { name = 'emberá darién' }
+l['ems'] = { name = 'alutiiq' }
+l['emu'] = { name = 'muria de l’Est', sortKey = 'muria Est' }
+l['emw'] = { name = 'emplawas' }
+l['emx'] = { name = 'erromintxela' }
+l['en'] = { name = 'anglais', hasPortal = true, wiktionaryExists = true }
+l['ena'] = { name = 'apali' }
+l['enb'] = { name = 'markweta' }
+l['end'] = { name = 'ende' }
+l['enf'] = { name = 'énètse des forêts', sortKey = 'énètse forêts' }
+l['enh'] = { name = 'énètse de la toundra', sortKey = 'énètse toundra' }
+l['enl'] = { name = 'enlhet' }
+l['enm'] = { name = 'moyen anglais', hasPortal = true, sortKey = 'anglais moyen' }
+l['enn'] = { name = 'engenni' }
+l['eno'] = { name = 'enganno' }
+l['enq'] = { name = 'enga' }
+l['enr'] = { name = 'emumu' }
+l['enu'] = { name = 'enu' }
+l['enw'] = { name = 'enwan' }
+l['enx'] = { name = 'enxet' }
+l['eo'] = { name = 'espéranto', hasPortal = true, wiktionaryExists = true }
+l['eot'] = { name = 'eotilé' }
+l['epi'] = { name = 'epie' }
+l['èque'] = { name = 'èque' }
+l['era'] = { name = 'eravallan' }
+l['erg'] = { name = 'sie' }
+l['eri'] = { name = 'ogea' }
+l['erk'] = { name = 'éfaté du Sud', sortKey = 'éfaté Sud' }
+l['ero'] = { name = 'horpa' }
+l['ers'] = { name = 'ersu' }
+l['ert'] = { name = 'eritai' }
+l['es'] = { name = 'espagnol', hasPortal = true, wiktionaryExists = true }
+l['ese'] = { name = 'ese ejja' }
+l['esh'] = { name = 'eshtehardi' }
+l['esi'] = { name = 'inupiaq d’Alaska du Nord', sortKey = 'inupiaq Alaska Nord' }
+l['esk'] = { name = 'inupiaq d’Alaska du Nord-Ouest', sortKey = 'inupiaq Alaska Nord Ouest' }
+l['esl'] = { name = 'langue des signes égyptienne', sortKey = 'signes égyptienne' }
+l['esm'] = { name = 'essouma' }
+l['esmeraldeño'] = { name = 'esmeraldeño' }
+l['eso'] = { name = 'langue des signes estonienne', sortKey = 'signes estonienne' }
+l['esq'] = { name = 'esselen' }
+l['ess'] = { name = 'yupik sibérien central' }
+l['esu'] = { name = 'yupik central' }
+l['esx'] = { name = 'langues eskimo-aléoutes', sortKey = 'eskimo aléoutes langues', isGroup = true }
+l['et'] = { name = 'estonien', wiktionaryExists = true }
+l['etb'] = { name = 'etebi' }
+l['etc'] = { name = 'etchemin' }
+l['etn'] = { name = 'eton (Vanuatu)', sortKey = 'eton Vanuatu' }
+l['eto'] = { name = 'eton (bantou)', sortKey = 'eton bantou' }
+l['etr'] = { name = 'edolo' }
+l['ets'] = { name = 'yekhee' }
+l['ett'] = { name = 'étrusque' }
+l['etu'] = { name = 'ejagham' }
+l['etx'] = { name = 'eten' }
+l['etz'] = { name = 'semimi' }
+l['eu'] = { name = 'basque', wiktionaryExists = true }
+l['eudeve'] = { name = 'eudeve' }
+l['euq'] = { name = 'langues basques', sortKey = 'basques langues', isGroup = true }
+l['eur'] = { name = 'europanto' }
+l['eve'] = { name = 'évène' }
+l['evn'] = { name = 'evenki' }
+l['ewo'] = { name = 'éwondo' }
+l['ext'] = { name = 'estrémègne' }
+l['eya'] = { name = 'eyak' }
+l['eyo'] = { name = 'keyo' }
+l['fa'] = { name = 'persan', wiktionaryExists = true }
+l['fa-cls'] = { name = 'persan classique' }
+l['faa'] = { name = 'fasu' }
+l['fab'] = { name = 'fá d’Ambô', sortKey = 'fá Ambô' }
+l['fad'] = { name = 'wagi' }
+l['fag'] = { name = 'finongan' }
+l['fai'] = { name = 'faiwol' }
+l['faj'] = { name = 'faita' }
+l['fak'] = { name = 'fang (Cameroun)', sortKey = 'fang Cameroun' }
+l['fam'] = { name = 'fam' }
+l['fan'] = { name = 'fang' }
+l['fap'] = { name = 'palor' }
+l['far'] = { name = 'fataleka' }
+l['fat'] = { name = 'fanti' }
+l['fau'] = { name = 'fayu' }
+l['fax'] = { name = 'valicien' }
+l['fc'] = { name = 'franc-comtois' }
+l['fcs'] = { name = 'langue des signes québécoise', sortKey = 'signes québécoise' }
+l['fer'] = { name = 'feroge' }
+l['ff'] = { name = 'peul' }
+l['ffg'] = { name = 'bohurá' }
+l['ffi'] = { name = 'foia foia' }
+l['ffm'] = { name = 'peul du Maasina', sortKey = 'peul Maasina' }
+l['fi'] = { name = 'finnois', wiktionaryExists = true }
+l['fia'] = { name = 'nubien' }
+l['fie'] = { name = 'fyer' }
+l['fil'] = { name = 'filipino' }
+l['fingalien'] = { name = 'fingalien' }
+l['fip'] = { name = 'fipa' }
+l['fir'] = { name = 'firan' }
+l['fit'] = { name = 'finnois tornédalien' }
+l['fiu'] = { name = 'langues finno-ougriennes', sortKey = 'finno ougriennes langues', isGroup = true }
+l['fj'] = { name = 'fidjien', wiktionaryExists = true }
+l['fkk'] = { name = 'kirya-konzel' }
+l['fkv'] = { name = 'kvène' }
+l['fla'] = { name = 'kalispel' }
+l['flh'] = { name = 'foau' }
+l['fln'] = { name = 'flinders island' }
+l['flr'] = { name = 'fuliiru' }
+l['fly'] = { name = 'tsotsitaal' }
+l['fmp'] = { name = 'fe’fe’' }
+l['fmu'] = { name = 'muria occidental lointain' }
+l['fo'] = { name = 'féroïen', wiktionaryExists = true }
+l['foi'] = { name = 'foi' }
+l['fon'] = { name = 'fon' }
+l['for'] = { name = 'fore' }
+l['fos'] = { name = 'siraya' }
+l['fox'] = { name = 'langues formosanes', sortKey = 'formosanes langues', isGroup = true }
+l['fpe'] = { name = 'pichi' }
+l['fqs'] = { name = 'fas' }
+l['fr'] = { name = 'français', hasPortal = true, wiktionaryExists = true }
+l['francilien'] = { name = 'francilien' }
+l['francique central'] = { name = 'francique central' }
+l['francique méridional'] = { name = 'francique méridional' }
+l['francique mosellan'] = { name = 'francique mosellan' }
+l['francique rhénan'] = { name = 'francique rhénan' }
+l['frc'] = { name = 'français cadien' }
+l['frd'] = { name = 'fordata' }
+l['frk'] = { name = 'vieux-francique', sortKey = 'francique vieux' }
+l['frm'] = { name = 'moyen français', sortKey = 'français moyen' }
+l['fro'] = { name = 'ancien français', sortKey = 'français ancien', hasPortal = true }
+l['frp'] = { name = 'francoprovençal' }
+l['frq'] = { name = 'forak' }
+l['frr'] = { name = 'frison septentrional' }
+l['frs'] = { name = 'bas saxon de Frise orientale', sortKey = 'saxon bas frise orientale' }
+l['frt'] = { name = 'fortsenal' }
+l['fry'] = { name = 'frison occidental' }
+l['fse'] = { name = 'langue des signes finnoise', sortKey = 'signes finnoise' }
+l['fsl'] = { name = 'langue des signes française', sortKey = 'signes française' }
+l['fss'] = { name = 'langue des signes finno-suédoise', sortKey = 'signes finno suédoise' }
+l['fub'] = { name = 'peul de l’Adamaoua', sortKey = 'peul Adamaoua' }
+l['fuc'] = { name = 'pulaar' }
+l['fud'] = { name = 'futunien' }
+l['fue'] = { name = 'peul du Borgu', sortKey = 'peul Borgu' }
+l['fuf'] = { name = 'pular' }
+l['fuh'] = { name = 'peul du Niger occidental', sortKey = 'peul Niger occidental' }
+l['fun'] = { name = 'fulniô' }
+l['fur'] = { name = 'frioulan' }
+l['fut'] = { name = 'futuna-aniwa' }
+l['fuu'] = { name = 'bagiro' }
+l['fuy'] = { name = 'fuyug' }
+l['fvr'] = { name = 'four' }
+l['fwa'] = { name = 'fwâi' }
+l['fwe'] = { name = 'fwe' }
+l['fy'] = { name = 'frison', wiktionaryExists = true }
+l['ga'] = { name = 'gaélique irlandais', wiktionaryExists = true }
+l['gaa'] = { name = 'ga' }
+l['gab'] = { name = 'gabri' }
+l['gac'] = { name = 'grand andamanais' }
+l['gad'] = { name = 'gaddang' }
+l['gae'] = { name = 'guarequena' }
+l['gaf'] = { name = 'gende' }
+l['gag'] = { name = 'gagaouze' }
+l['gah'] = { name = 'alekano' }
+l['gai'] = { name = 'borei' }
+l['gaj'] = { name = 'gadsup' }
+l['gak'] = { name = 'gamkonora' }
+l['gal'] = { name = 'galoli' }
+l['galaïco-portugais'] = { name = 'galaïco-portugais', sortKey = 'galaïco portugais' }
+l['gallo'] = { name = 'gallo' }
+l['gallo-italique de Basilicate'] = { name = 'gallo-italique de Basilicate', sortKey = 'gallo italique Basilicate' }
+l['gallo-italique de Sicile'] = { name = 'gallo-italique de Sicile', sortKey = 'gallo italique Sicile' }
+l['gan'] = { name = 'gan' }
+l['gao'] = { name = 'gants' }
+l['gao de Dongkou'] = { name = 'gao de Dongkou', sortKey = 'gao Dongkou' }
+l['gap'] = { name = 'gal' }
+l['gaq'] = { name = 'gta’' }
+l['gar'] = { name = 'galeya' }
+l['gas'] = { name = 'garasia des Adiwasi', sortKey = 'garasia Adiwasi' }
+l['gat'] = { name = 'kenati' }
+l['gau'] = { name = 'gadaba mudhili' }
+l['gaulois'] = { name = 'gaulois', hasPortal = true }
+l['gaw'] = { name = 'nobonob' }
+l['gax'] = { name = 'borana' }
+l['gay'] = { name = 'gayo' }
+l['gaz'] = { name = 'oromo central de l’Ouest', sortKey = 'oromo central Ouest' }
+l['gba'] = { name = 'gbaya' }
+l['gbb'] = { name = 'kaytetye' }
+l['gbe'] = { name = 'niksek' }
+l['gbf'] = { name = 'gaikundi' }
+l['gbg'] = { name = 'gbanziri' }
+l['gbi'] = { name = 'galela' }
+l['gbj'] = { name = 'gutob' }
+l['gbn'] = { name = 'mo’da' }
+l['gbp'] = { name = 'gbaya de Bossangoa', sortKey = 'gbaya Bossangoa' }
+l['gbq'] = { name = 'gbaya bozom' }
+l['gbr'] = { name = 'gbagyi' }
+l['gbu'] = { name = 'gaagudju' }
+l['gbv'] = { name = 'gbanu' }
+l['gby'] = { name = 'gbari' }
+l['gbz'] = { name = 'dari iranien' }
+l['gcc'] = { name = 'mali' }
+l['gcd'] = { name = 'ganggalida' }
+l['gce'] = { name = 'galice' }
+l['gcf-mq'] = { name = 'créole martiniquais' }
+l['gcl'] = { name = 'créole grenadais' }
+l['gcr'] = { name = 'créole guyanais' }
+l['gct'] = { name = 'alemán coloniero' }
+l['gd'] = { name = 'gaélique écossais', wiktionaryExists = true }
+l['gdc'] = { name = 'gugu badhun' }
+l['gdd'] = { name = 'gedaged' }
+l['gde'] = { name = 'gude' }
+l['gdf'] = { name = 'guduf-gava' }
+l['gdg'] = { name = 'ga’dang' }
+l['gdl'] = { name = 'dirasha' }
+l['gdm'] = { name = 'laal' }
+l['gdo'] = { name = 'godoberi' }
+l['gdq'] = { name = 'méhri' }
+l['gdr'] = { name = 'wipi' }
+l['gds'] = { name = 'langue des signes de Ghandruk', sortKey = 'signes Ghandruk' }
+l['gea'] = { name = 'geruma' }
+l['geb'] = { name = 'kire' }
+l['geg'] = { name = 'gengle' }
+l['geh'] = { name = 'allemand huttérite' }
+l['gej'] = { name = 'gen' }
+l['gek'] = { name = 'ywom' }
+l['gel'] = { name = 'ut-ma’in' }
+l['gelao blanc de Diyingshao'] = { name = 'gelao blanc de Diyingshao', sortKey = 'gelao blanc Diyingshao' }
+l['gelao blanc de Judu'] = { name = 'gelao blanc de Judu', sortKey = 'gelao blanc Judu' }
+l['gelao blanc de Moji'] = { name = 'gelao blanc de Moji', sortKey = 'gelao blanc Moji' }
+l['gelao blanc de Niupo'] = { name = 'gelao blanc de Niupo', sortKey = 'gelao blanc Niupo' }
+l['gelao blanc de Pudi'] = { name = 'gelao blanc de Pudi', sortKey = 'gelao blanc Pudi' }
+l['gelao blanc de Wantao'] = { name = 'gelao blanc de Wantao', sortKey = 'gelao blanc Wantao' }
+l['gelao blanc de Yueliangwan'] = { name = 'gelao blanc de Yueliangwan', sortKey = 'gelao blanc Yueliangwan' }
+l['gelao rouge de Fanpo'] = { name = 'gelao rouge de Fanpo', sortKey = 'gelao rouge Fanpo' }
+l['gelao rouge de Longjia'] = { name = 'gelao rouge de Longjia', sortKey = 'gelao rouge Longjia' }
+l['gelao rouge de Na Khê'] = { name = 'gelao rouge de Na Khê', sortKey = 'gelao rouge Na Khê' }
+l['gelao vert de Liangshui'] = { name = 'gelao vert de Liangshui', sortKey = 'gelao vert Liangshui' }
+l['gelao vert de Qinglong'] = { name = 'gelao vert de Qinglong', sortKey = 'gelao vert Qinglong' }
+l['gelao vert de Sanchong'] = { name = 'gelao vert de Sanchong', sortKey = 'gelao vert Sanchong' }
+l['gelao vert de Zhenfeng'] = { name = 'gelao vert de Zhenfeng', sortKey = 'gelao vert Zhenfeng' }
+l['gem'] = { name = 'langues germaniques', sortKey = 'germaniques langues', isGroup = true }
+l['gépide'] = { name = 'gépide' }
+l['ges'] = { name = 'geser-gorom' }
+l['gète'] = { name = 'gète' }
+l['gev'] = { name = 'geviya' }
+l['gew'] = { name = 'gera' }
+l['gex'] = { name = 'garre' }
+l['gey'] = { name = 'enya' }
+l['gez'] = { name = 'guèze' }
+l['gfk'] = { name = 'patpatar' }
+l['gft'] = { name = 'gafat' }
+l['gga'] = { name = 'gao' }
+l['ggb'] = { name = 'gbii' }
+l['ggd'] = { name = 'gugadj' }
+l['gge'] = { name = 'gurr-goni' }
+l['ggl'] = { name = 'ganglau' }
+l['ggo'] = { name = 'gondî du Sud', sortKey = 'gondî Sud' }
+l['ggt'] = { name = 'gitua' }
+l['ggu'] = { name = 'gagou' }
+l['gha'] = { name = 'ghadamès' }
+l['ghl'] = { name = 'ghulfan' }
+l['gho'] = { name = 'ghomari' }
+l['ghs'] = { name = 'guhu-samane' }
+l['ght'] = { name = 'kuke' }
+l['gia'] = { name = 'kija' }
+l['gid'] = { name = 'gidar' }
+l['gie'] = { name = 'gabogbo' }
+l['gih'] = { name = 'githabul' }
+l['gil'] = { name = 'gilbertin' }
+l['gim'] = { name = 'gimi' }
+l['gin'] = { name = 'hinukh' }
+l['gio'] = { name = 'gelao' }
+l['gip'] = { name = 'gimi (Nouvelle-Bretagne occidentale)', sortKey = 'gimi Nouvelle Bretagne' }
+l['giq'] = { name = 'gelao vert' }
+l['gir'] = { name = 'gelao rouge' }
+l['girirra'] = { name = 'girirra' }
+l['git'] = { name = 'gitxsan' }
+l['giu'] = { name = 'mulao' }
+l['giw'] = { name = 'gelao blanc' }
+l['gix'] = { name = 'gilima' }
+l['giz'] = { name = 'giziga du Sud', sortKey = 'giziga Sud' }
+l['gji'] = { name = 'geji' }
+l['gjn'] = { name = 'gonja' }
+l['gju'] = { name = 'gujari' }
+l['gkm'] = { name = 'grec byzantin' }
+l['gkn'] = { name = 'gokana' }
+l['gkp'] = { name = 'kpellé de Guinée', sortKey = 'kpellé Guinée' }
+l['gku'] = { name = 'ǂungkue', sortKey = 'ungkue' }
+l['gl'] = { name = 'galicien', wiktionaryExists = true }
+l['glc'] = { name = 'bon goula' }
+l['gld'] = { name = 'nanaï' }
+l['glk'] = { name = 'gilaki' }
+l['gll'] = { name = 'garlali' }
+l['glo'] = { name = 'galambu' }
+l['glu'] = { name = 'gula (Tchad)', sortKey = 'gula Tchad' }
+l['glw'] = { name = 'glavda' }
+l['gme'] = { name = 'langues germaniques orientales', sortKey = 'germaniques orientales langues', isGroup = true }
+l['gmh'] = { name = 'moyen haut-allemand', sortKey = 'allemand haut moyen' }
+l['gml'] = { name = 'moyen bas allemand', sortKey = 'allemand bas moyen' }
+l['gmm'] = { name = 'gbaya-mbodomo' }
+l['gmo'] = { name = 'gamo-gofa-dawro' }
+l['gmq'] = { name = 'langues germaniques septentrionales', sortKey = 'germaniques septentrionales langues', isGroup = true }
+l['gmu'] = { name = 'gumalu' }
+l['gmv'] = { name = 'gamo' }
+l['gmw'] = { name = 'langues germaniques occidentales', sortKey = 'germaniques occidentales langues', isGroup = true }
+l['gmx'] = { name = 'magoma' }
+l['gmy'] = { name = 'mycénien' }
+l['gn'] = { name = 'guarani', wiktionaryExists = true }
+l['gna'] = { name = 'kaansa' }
+l['gnb'] = { name = 'gangte' }
+l['gnc'] = { name = 'guanche' }
+l['gnd'] = { name = 'zulgo-gemzek' }
+l['gne'] = { name = 'ganang' }
+l['gng'] = { name = 'ngangam' }
+l['gni'] = { name = 'gooniyandi' }
+l['gnk'] = { name = 'gǁana', sortKey = 'gana' }
+l['gnn'] = { name = 'gumatj' }
+l['gno'] = { name = 'gondî du Nord', sortKey = 'gondî Nord' }
+l['gnq'] = { name = 'gana' }
+l['gnu'] = { name = 'gnau' }
+l['gnw'] = { name = 'guaraní de Bolivie occidentale', sortKey = 'guaraní Bolivie occidentale' }
+l['goa'] = { name = 'gouro' }
+l['gob'] = { name = 'playero' }
+l['god'] = { name = 'godié' }
+l['goe'] = { name = 'gongduk' }
+l['gof'] = { name = 'gofa' }
+l['gog'] = { name = 'gogo' }
+l['goh'] = { name = 'vieux haut allemand', sortKey = 'allemand haut vieux' }
+l['goi'] = { name = 'gobasi' }
+l['goj'] = { name = 'gowlan' }
+l['gokhy'] = { name = 'gokhy' }
+l['gol'] = { name = 'gola' }
+l['gom'] = { name = 'konkani de Goa', sortKey = 'konkani Goa', wiktionaryExists = true }
+l['gon'] = { name = 'gond' }
+l['goo'] = { name = 'gone dau' }
+l['gop'] = { name = 'yeretuar' }
+l['gor'] = { name = 'gorontalo' }
+l['gos'] = { name = 'groningois' }
+l['got'] = { name = 'gotique' }
+l['gotique de Crimée'] = { name = 'gotique de Crimée', sortKey = 'gotique Crimée' }
+l['gottscheerish'] = { name = 'gottscheerish' }
+l['gou'] = { name = 'gavar' }
+l['goy'] = { name = 'goundo' }
+l['gpa'] = { name = 'gupa-abawa' }
+l['gpe'] = { name = 'pidgin anglais ghanéen' }
+l['gqa'] = { name = 'ga’anda' }
+l['gqi'] = { name = 'guiqiong' }
+l['gqn'] = { name = 'kinikinao' }
+l['gqr'] = { name = 'gor' }
+l['gqu'] = { name = 'gao de Wanzi', sortKey = 'gao Wanzi' }
+l['gra'] = { name = 'rajput garasia' }
+l['grb'] = { name = 'grébo' }
+l['grc'] = { name = 'grec ancien', hasPortal = true }
+l['grd'] = { name = 'guruntum' }
+l['grec cargésien'] = { name = 'grec cargésien' }
+l['grec chypriote'] = { name = 'grec chypriote' }
+l['grg'] = { name = 'madi' }
+l['grh'] = { name = 'gbiri-niragu' }
+l['gri'] = { name = 'ghari' }
+l['griko'] = { name = 'griko' }
+l['grk'] = { name = 'langues grecques', sortKey = 'grecques langues', isGroup = true }
+l['gro'] = { name = 'groma' }
+l['grr'] = { name = 'taznatit' }
+l['grs'] = { name = 'gresi' }
+l['grt'] = { name = 'garo' }
+l['gru'] = { name = 'kistane' }
+l['grz'] = { name = 'guramalum' }
+l['gserpa'] = { name = 'gserpa' }
+l['gsg'] = { name = 'langue des signes allemande', sortKey = 'signes allemande' }
+l['gsl'] = { name = 'gusilay' }
+l['gsm'] = { name = 'langue des signes guatémaltèque', sortKey = 'signes guatemaltèque' }
+l['gso'] = { name = 'gbaya du Sud-Ouest', sortKey = 'gbaya Sud Ouest' }
+l['gsw'] = { name = 'alémanique', wikimediaCode = 'als' }
+l['gsw-fr'] = { name = 'alémanique alsacien' }
+l['gta'] = { name = 'guató' }
+l['gti'] = { name = 'gbati-ri' }
+l['gu'] = { name = 'gujarati', wiktionaryExists = true }
+l['gub'] = { name = 'guajajára' }
+l['guc'] = { name = 'guajiro' }
+l['gud'] = { name = 'dida de Yocoboué', sortKey = 'dida Yocoboué' }
+l['gudjal'] = { name = 'gudjal' }
+l['gue'] = { name = 'gurinji' }
+l['güenoa'] = { name = 'güenoa' }
+l['guf'] = { name = 'gupapuyngu' }
+l['gug'] = { name = 'guarani paraguayen' } -- aussi nhd
+l['guh'] = { name = 'guahibo' }
+l['gui'] = { name = 'chiriguano' }
+l['guk'] = { name = 'gumuz' }
+l['gul'] = { name = 'gullah' }
+l['gum'] = { name = 'guambiano' }
+l['gumuz du Sud'] = { name = 'gumuz du Sud', sortKey = 'gumuz Sud' }
+l['gun'] = { name = 'mbyá' }
+l['guo'] = { name = 'guayabero' }
+l['gup'] = { name = 'gunwinggu' }
+l['guq'] = { name = 'guayakí' }
+l['gur'] = { name = 'gurenne' }
+l['gus'] = { name = 'langue des signes guinéenne', sortKey = 'signes guinéenne' }
+l['gut'] = { name = 'maleku' }
+l['gutnisk'] = { name = 'gutnisk' }
+l['guu'] = { name = 'yanomamö' }
+l['guw'] = { name = 'gungbe', wiktionaryExists = true }
+l['gux'] = { name = 'gourmanchéma' }
+l['guz'] = { name = 'gusii' }
+l['gv'] = { name = 'mannois', wiktionaryExists = true }
+l['gva'] = { name = 'guaná' }
+l['gvc'] = { name = 'wanano' }
+l['gve'] = { name = 'duwet' }
+l['gvf'] = { name = 'golin' }
+l['gvj'] = { name = 'guaja' }
+l['gvl'] = { name = 'gulay' }
+l['gvn'] = { name = 'kuku-yalanji' }
+l['gvo'] = { name = 'gavião do Jiparaná', sortKey = 'gavião Jiparaná' }
+l['gvp'] = { name = 'parkatejê' }
+l['gvy'] = { name = 'guyani' }
+l['gwara'] = { name = 'gwara' }
+l['gwc'] = { name = 'kohistani de Kalam', sortKey = 'kohistani Kalam' }
+l['gwd'] = { name = 'gawwada' }
+l['gwe'] = { name = 'gweno' }
+l['gwi'] = { name = 'gwich’in' }
+l['gwj'] = { name = 'gǀui', sortKey = 'gui' }
+l['gwn'] = { name = 'gwandara' }
+l['gwr'] = { name = 'gwere' }
+l['gwt'] = { name = 'gawar-bati' }
+l['gwu'] = { name = 'guwamu' }
+l['gwx'] = { name = 'gua' }
+l['gya'] = { name = 'gbaya du Nord-Ouest', sortKey = 'gbaya Nord Ouest' }
+l['gyb'] = { name = 'garus' }
+l['gyd'] = { name = 'kayardild' }
+l['gyg'] = { name = 'gbayi' }
+l['gyl'] = { name = 'gayil' }
+l['gym'] = { name = 'guaymí' }
+l['gyo'] = { name = 'gyalsumdo' }
+l['gyr'] = { name = 'guarayo' }
+l['gyy'] = { name = 'gunya' }
+l['gza'] = { name = 'ganza' }
+l['gzi'] = { name = 'gazi' }
+l['ha'] = { name = 'haoussa', wiktionaryExists = true }
+l['ha em'] = { name = 'ha em' }
+l['haa'] = { name = 'han' }
+l['hab'] = { name = 'langue des signes de Hanoï', sortKey = 'signes Hanoï' }
+l['hac'] = { name = 'gurani' }
+l['had'] = { name = 'hatam' }
+l['hae'] = { name = 'oromo de l’Est', sortKey = 'oromo Est' }
+l['hag'] = { name = 'hanga' }
+l['hai'] = { name = 'haïda' }
+l['hachijo'] = { name = 'hachijō' }
+l['hak'] = { name = 'hakka' }
+l['hal'] = { name = 'halang' }
+l['ham'] = { name = 'hewa' }
+l['han'] = { name = 'hangaza' }
+l['haq'] = { name = 'ha' }
+l['har'] = { name = 'harari' }
+l['has'] = { name = 'haisla' }
+l['hav'] = { name = 'havu' }
+l['haw'] = { name = 'hawaïen' }
+l['hax'] = { name = 'haïda du Sud', sortKey = 'haïda Sud' }
+l['hay'] = { name = 'haya' }
+l['hayato'] = { name = 'hayato' }
+l['haz'] = { name = 'hazara' }
+l['hbn'] = { name = 'heiban' }
+l['hbo'] = { name = 'hébreu ancien' }
+l['hch'] = { name = 'huichol' }
+l['hdn'] = { name = 'haïda du Nord', sortKey = 'haïda Nord' }
+l['hdy'] = { name = 'hadiyya' }
+l['he'] = { name = 'hébreu', wiktionaryExists = true }
+l['hea'] = { name = 'hmu du Nord', sortKey = 'hmu Nord' }
+l['hed'] = { name = 'herdé' }
+l['heh'] = { name = 'hehe' }
+l['hei'] = { name = 'heiltsuk' }
+l['hem'] = { name = 'hemba' }
+l['hgm'] = { name = 'haiǁom', sortKey = 'haiom' }
+l['hhi'] = { name = 'hoia hoia de Ukusi-Koparamio', sortKey = 'hoia hoia Ukusi-Koparamio' }
+l['hhr'] = { name = 'keerak' }
+l['hhy'] = { name = 'hoia hoia de Matakaia', sortKey = 'hoia hoia Matakaia' }
+l['hi'] = { name = 'hindi', wiktionaryExists = true }
+l['hia'] = { name = 'lamang' }
+l['hib'] = { name = 'hibito' }
+l['hid'] = { name = 'hidatsa' }
+l['hif'] = { name = 'hindi des Fidji', sortKey = 'hindi Fidji', wiktionaryExists = true }
+l['hig'] = { name = 'kamwe' }
+l['hik'] = { name = 'seit-kaitetu' }
+l['hil'] = { name = 'hiligaynon' }
+l['him'] = { name = 'himachali' }
+l['hio'] = { name = 'tsoa' }
+l['hit'] = { name = 'hittite' }
+l['hiw'] = { name = 'hiw' }
+l['hix'] = { name = 'hixkaryana' }
+l['hka'] = { name = 'kahé' }
+l['hke'] = { name = 'hunde' }
+l['hkk'] = { name = 'hunjara-kaina ke' }
+l['hla'] = { name = 'halia' }
+l['hlb'] = { name = 'halbi' }
+l['hlu'] = { name = 'louvite hiéroglyphique' }
+l['hma'] = { name = 'miao mashan du Sud', sortKey = 'miao mashan Sud' }
+l['hmb'] = { name = 'songhaï humburi senni' }
+l['hmc'] = { name = 'hmong de Huishui central', sortKey = 'hmong Huishui central' }
+l['hmd'] = { name = 'miao de Diandongbei', sortKey = 'miao Diandongbei' }
+l['hme'] = { name = 'hmong de Huishui de l’Est', sortKey = 'hmong Huishui Est' }
+l['hmf'] = { name = 'hmong don' }
+l['hmg'] = { name = 'miao du Guiyang du Sud-Ouest', sortKey = 'miao Guiyang Sud Ouest' }
+l['hmh'] = { name = 'hmong de Huishui du Sud-Ouest', sortKey = 'hmong Huishui Sud Ouest' }
+l['hmi'] = { name = 'hmong de Huishui du Nord', sortKey = 'hmong Huishi Nord' }
+l['hmj'] = { name = 'gejia' }
+l['hml'] = { name = 'miao de Luobohe', sortKey = 'miao Luobohe' }
+l['hmm'] = { name = 'miao mashan central' }
+l['hmn'] = { name = 'hmong' }
+l['hmp'] = { name = 'miao mashan du Nord', sortKey = 'miao mashan Nord' }
+l['hmq'] = { name = 'miao du Qiandong de l’Est', sortKey = 'miao Qiandong Est' }
+l['hmr'] = { name = 'hmar' }
+l['hms'] = { name = 'miao du Qiandong du Sud', sortKey = 'miao Qiandong Sud' }
+l['hmt'] = { name = 'hamtai' }
+l['hmu'] = { name = 'hamap' }
+l['hmv'] = { name = 'hmong dô' }
+l['hmw'] = { name = 'miao mashan de l’Ouest', sortKey = 'miao mashan Ouest' }
+l['hmx'] = { name = 'langues hmong-mien', sortKey = 'hmong mien langues', isGroup = true }
+l['hmy'] = { name = 'miao du Guiyang du Sud', sortKey = 'miao Guiyang Sud' }
+l['hna'] = { name = 'mina' }
+l['hnd'] = { name = 'hindko du Sud', sortKey = 'hindko Sud' }
+l['hnh'] = { name = 'handa-khwe' }
+l['hni'] = { name = 'hani' }
+l['hnj'] = { name = 'hmong vert' }
+l['hnm'] = { name = 'haïnanais' }
+l['hnn'] = { name = 'hanunóo' }
+l['hno'] = { name = 'hindko du Nord', sortKey = 'hindko Nord' }
+l['hns'] = { name = 'hindoustani caribéen' }
+l['hnu'] = { name = 'pong' }
+l['ho'] = { name = 'hiri motou' }
+l['hoa'] = { name = 'hoava' }
+l['hoanya'] = { name = 'hoanya' }
+l['hob'] = { name = 'mari (Madang)', sortKey = 'mari Madang' }
+l['hoc'] = { name = 'ho' }
+l['hod'] = { name = 'holma' }
+l['hoe'] = { name = 'horom' }
+l['hoh'] = { name = 'hobyot' }
+l['hoi'] = { name = 'holikachuk' }
+l['hok'] = { name = 'langues hokanes', sortKey = 'hokanes langues', isGroup = true }
+l['hol'] = { name = 'holu' }
+l['hom'] = { name = 'homa' }
+l['hoo'] = { name = 'holoholo' }
+l['hop'] = { name = 'hopi' }
+l['hor'] = { name = 'horo' }
+l['hot'] = { name = 'hote' }
+l['houma'] = { name = 'houma' }
+l['hourrite'] = { name = 'hourrite' }
+l['hov'] = { name = 'hovongan' }
+l['how'] = { name = 'honi' }
+l['hoy'] = { name = 'holiya' }
+l['hoz'] = { name = 'hozo' }
+l['hr'] = { name = 'croate', wiktionaryExists = true }
+l['hra'] = { name = 'hrangkhol' }
+l['hre'] = { name = 'hrê' }
+l['hrk'] = { name = 'haruku' }
+l['hrm'] = { name = 'a-hmo' }
+l['hro'] = { name = 'haroi' }
+l['hrt'] = { name = 'hertevin' }
+l['hru'] = { name = 'hruso' }
+l['hrx'] = { name = 'hunsrik' }
+l['hsb'] = { name = 'haut-sorabe', sortKey = 'sorabe haut', wiktionaryExists = true }
+l['hsn'] = { name = 'xiang' }
+l['hss'] = { name = 'harsusi' }
+l['ht'] = { name = 'créole haïtien' }
+l['hto'] = { name = 'witoto mɨnɨca' }
+l['hts'] = { name = 'hadza' }
+l['htu'] = { name = 'hitu' }
+l['hu'] = { name = 'hongrois', wiktionaryExists = true }
+l['hub'] = { name = 'huambisa' }
+l['huc'] = { name = 'ǂhoan', sortKey = 'hoan' }
+l['hue'] = { name = 'huave de San Francisco del Mar', sortKey = 'huave San Fancisco del Mar' }
+l['hug'] = { name = 'huachipaeri' }
+l['huh'] = { name = 'huilliche' }
+l['hui'] = { name = 'huli' }
+l['huj'] = { name = 'miao du Guiyang du Nord', sortKey = 'miao Guiyang Nord' }
+l['hum'] = { name = 'hungana' }
+l['huo'] = { name = 'hu' }
+l['hup'] = { name = 'hupa' }
+l['huq'] = { name = 'tsat' }
+l['hur'] = { name = 'halkomelem' }
+l['hus'] = { name = 'huastèque' }
+l['hut'] = { name = 'humla' }
+l['huu'] = { name = 'witoto murui' }
+l['huv'] = { name = 'huave de San Mateo del Mar', sortKey = 'huave San Mateo del Mar' }
+l['huw'] = { name = 'hukumina' }
+l['hux'] = { name = 'witoto nɨpode' }
+l['huy'] = { name = 'hulaulá' }
+l['huz'] = { name = 'hunzib' }
+l['hva'] = { name = 'huastèque de San Luís Potosí', sortKey = 'huastèque San Luís Potosí' }
+l['hvk'] = { name = 'haveke' }
+l['hvn'] = { name = 'hawu' }
+l['hwc'] = { name = 'créole hawaïen' }
+l['hy'] = { name = 'arménien', wiktionaryExists = true }
+l['hyx'] = { name = 'langues arméniennes', sortKey = 'arméniennes langues', isGroup = true }
+l['hz'] = { name = 'héréro' }
+l['ia'] = { name = 'interlingua', wiktionaryExists = true }
+l['iai'] = { name = 'iaai' }
+l['ian'] = { name = 'iatmul' }
+l['iar'] = { name = 'purari' }
+l['iba'] = { name = 'iban' }
+l['ibb'] = { name = 'ibibio' }
+l['ibd'] = { name = 'iwaidja' }
+l['ibe'] = { name = 'akpès' }
+l['ibg'] = { name = 'ibanag' }
+l['ibh'] = { name = 'bih' }
+l['ibl'] = { name = 'ibaloi' }
+l['ibm'] = { name = 'agoi' }
+l['ibn'] = { name = 'ibino' }
+l['ibr'] = { name = 'ibuoro' }
+l['ibu'] = { name = 'ibu' }
+l['iby'] = { name = 'ibani' }
+l['ich'] = { name = 'etkywan' }
+l['icl'] = { name = 'langue des signes islandaise', sortKey = 'signes islandaise' }
+l['id'] = { name = 'indonésien', hasPortal = true, wiktionaryExists = true }
+l['ida'] = { name = 'luidakho-luisukha-lutirichi' }
+l['idb'] = { name = 'créole indo-portugais' }
+l['ide'] = { name = 'idere' }
+l['idi'] = { name = 'idi' }
+l['idiom neutral'] = { name = 'idiom neutral' }
+l['idt'] = { name = 'idaté' }
+l['idu'] = { name = 'idoma' }
+l['ie'] = { name = 'interlingue', wiktionaryExists = true }
+l['ifa'] = { name = 'ifugao d’Amganad', sortKey = 'ifugao Amganad' }
+l['ife'] = { name = 'ifè' }
+l['iff'] = { name = 'ifo' }
+l['ifk'] = { name = 'ifugao de Tuwali', sortKey = 'ifugao Tuwali' }
+l['ify'] = { name = 'keley-i kallahan' }
+l['ig'] = { name = 'igbo', wiktionaryExists = true }
+l['igb'] = { name = 'ébira', sortKey = 'ebira' }
+l['ige'] = { name = 'igede' }
+l['igl'] = { name = 'igala' }
+l['ign'] = { name = 'ignaciano' }
+l['igo'] = { name = 'isebe' }
+l['igs'] = { name = 'interglossa' }
+l['igs-gls'] = { name = 'glosa' }
+l['ihb'] = { name = 'pidgin iha' }
+l['ihp'] = { name = 'iha' }
+l['ii'] = { name = 'yi' }
+l['iii'] = { name = 'yi nuosu' }
+l['iir'] = { name = 'langues indo-iraniennes', sortKey = 'indo iraniennes langues', isGroup = true }
+l['ijc'] = { name = 'izon' }
+l['ije'] = { name = 'biseni' }
+l['ijn'] = { name = 'kalabari' }
+l['ijo'] = { name = 'langues ijos', sortKey = 'ijos langues', isGroup = true }
+l['ijs'] = { name = 'ijo du Sud-Est', sortKey = 'ijo Sud Est' }
+l['ik'] = { name = 'inupiaq', wiktionaryExists = true }
+l['ike'] = { name = 'inuttitut' }
+l['iki'] = { name = 'iko' }
+l['iko'] = { name = 'olulumo-ikom' }
+l['ikt'] = { name = 'inuinnaqtun' }
+l['ikw'] = { name = 'ikwere' }
+l['ikx'] = { name = 'ik' }
+l['ikz'] = { name = 'ikizu' }
+l['ila'] = { name = 'ile ape' }
+l['ilb'] = { name = 'ila' }
+l['ili'] = { name = 'ili turki' }
+l['ilk'] = { name = 'ilongot' }
+l['ill'] = { name = 'iranun' }
+l['ilo'] = { name = 'ilocano' }
+l['ilu'] = { name = 'ili’uun' }
+l['ilv'] = { name = 'ilue' }
+l['ilw'] = { name = 'talur' }
+l['ima'] = { name = 'malasar de Mala', sortKey = 'malasar Mala' }
+l['ime'] = { name = 'imeraguen' }
+l['iml'] = { name = 'miluk' }
+l['imn'] = { name = 'imonda' }
+l['imo'] = { name = 'imbongu' }
+l['imr'] = { name = 'imroing' }
+l['ims'] = { name = 'marse' }
+l['imy'] = { name = 'milyen' }
+l['inb'] = { name = 'inga' }
+l['inc'] = { name = 'langues indo-aryennes', sortKey = 'indo aryennes langues', isGroup = true }
+l['indanga'] = { name = 'indanga' }
+l['ine'] = { name = 'langues indo-européennes', sortKey = 'indo européennes langues', isGroup = true }
+l['ing'] = { name = 'deg hit’an' }
+l['inh'] = { name = 'ingouche' }
+l['inj'] = { name = 'inga de la jungle', sortKey = 'inga jungle' }
+l['inn'] = { name = 'isinai' }
+l['ino'] = { name = 'inoke-yate' }
+l['inp'] = { name = 'iñapari' }
+l['ins'] = { name = 'langue des signes indienne', sortKey = 'signes indienne' }
+l['int'] = { name = 'intha' }
+l['inz'] = { name = 'ineseño' }
+l['io'] = { name = 'ido', wiktionaryExists = true }
+l['ior'] = { name = 'inor' }
+l['iow'] = { name = 'iowa-oto' }
+l['ipi'] = { name = 'ipili' }
+l['ipo'] = { name = 'ipiko' }
+l['iqu'] = { name = 'iquito' }
+l['ira'] = { name = 'langues iraniennes', sortKey = 'iraniennes langues', isGroup = true }
+l['ire'] = { name = 'iresim' }
+l['irh'] = { name = 'irarutu' }
+l['iri'] = { name = 'irigwe' }
+l['irk'] = { name = 'iraqw' }
+l['irn'] = { name = 'irántxe' }
+l['iro'] = { name = 'langues iroquoiennes', sortKey = 'iroquoiennes langues', isGroup = true }
+l['irr'] = { name = 'ir' }
+l['iru'] = { name = 'irula' }
+l['irx'] = { name = 'kamberau' }
+l['is'] = { name = 'islandais', hasPortal = true, wiktionaryExists = true }
+l['isa'] = { name = 'isabi' }
+l['isc'] = { name = 'isconahua' }
+l['isd'] = { name = 'isnag' }
+l['ise'] = { name = 'langue des signes italienne', sortKey = 'signes italienne' }
+l['isg'] = { name = 'langue des signes irlandaise', sortKey = 'signes irlandaise' }
+l['ish'] = { name = 'esan' }
+l['isi'] = { name = 'nkem-nkum' }
+l['isk'] = { name = 'ishkashimi' }
+l['ism'] = { name = 'masimasi' }
+l['isn'] = { name = 'isanzu' }
+l['iso'] = { name = 'isoko' }
+l['isr'] = { name = 'langue des signes israélienne', sortKey = 'signes israélienne' }
+l['ist'] = { name = 'istriote' }
+l['isu'] = { name = 'isu (Menchum)', sortKey = 'isu Menchum' }
+l['isv'] = { name = 'interslave' }
+l['it'] = { name = 'italien', hasPortal = true, wiktionaryExists = true }
+l['itb'] = { name = 'itneg de Binongan', sortKey = 'itneg Binongan' }
+l['itc'] = { name = 'langues italiques', sortKey = 'italiques langues', isGroup = true }
+l['ite'] = { name = 'itenez' }
+l['itl'] = { name = 'itelmène' }
+l['itm'] = { name = 'itu mbon uzo' }
+l['ito'] = { name = 'itonama' }
+l['its'] = { name = 'isekiri' }
+l['itt'] = { name = 'itneg des Maeng', sortKey = 'itneg Maeng' }
+l['itv'] = { name = 'itawit' }
+l['itw'] = { name = 'ito' }
+l['itx'] = { name = 'itik' }
+l['ity'] = { name = 'itneg du Moyadan', sortKey = 'itneg Moyadan' }
+l['itz'] = { name = 'itzá' }
+l['iu'] = { name = 'inuktitut', wiktionaryExists = true }
+l['ium'] = { name = 'iu mien' }
+l['ivb'] = { name = 'ibatan' }
+l['ivv'] = { name = 'ivatan' }
+l['iwm'] = { name = 'iwam' }
+l['iwo'] = { name = 'iwur' }
+l['iws'] = { name = 'sepik iwam' }
+l['ixc'] = { name = 'ixcatèque' }
+l['ixl'] = { name = 'ixil' }
+l['iyo'] = { name = 'mesaka' }
+l['izh'] = { name = 'ingrien' }
+l['izr'] = { name = 'izere' }
+l['ja'] = { name = 'japonais', hasPortal = true, wiktionaryExists = true }
+l['ja-kun'] = { name = 'kun’yomi' }
+l['ja-on'] = { name = 'on’yomi' }
+l['japhug'] = { name = 'japhug' }
+l['jaa'] = { name = 'jamamadí' }
+l['jab'] = { name = 'hyam' }
+l['jac'] = { name = 'jacaltèque' }
+l['jae'] = { name = 'yabem' }
+l['jah'] = { name = 'jah hut' }
+l['jak'] = { name = 'jakun' }
+l['jal'] = { name = 'fatamanue' }
+l['jam'] = { name = 'créole jamaïcain' }
+l['jan'] = { name = 'jandai' }
+l['jao'] = { name = 'yanyuwa' }
+l['jaq'] = { name = 'yaqay' }
+l['jas'] = { name = 'javanais de Nouvelle-Calédonie', sortKey = 'javanais Nouvelle Calédonie' }
+l['jau'] = { name = 'yaur' }
+l['jaz'] = { name = 'jawe' }
+l['jbk'] = { name = 'barikewa' }
+l['jbn'] = { name = 'nafusi' }
+l['jbo'] = { name = 'lojban', wiktionaryExists = true }
+l['jbt'] = { name = 'djeoromitxi' }
+l['jbw'] = { name = 'mouwase' }
+l['jct'] = { name = 'krymchak' }
+l['jdt'] = { name = 'juhuri' }
+l['jeb'] = { name = 'jebero' }
+l['jedek'] = { name = 'jedek' }
+l['jeg'] = { name = 'jeng' }
+l['jeh'] = { name = 'jeh' }
+l['jei'] = { name = 'yei' }
+l['jek'] = { name = 'jeri kuo' }
+l['jel'] = { name = 'yelmek' }
+l['jen'] = { name = 'dza' }
+l['jet'] = { name = 'manem' }
+l['jeu'] = { name = 'djongor de Bourmataguil', sortKey = 'djongor Bourmataguil' }
+l['jge'] = { name = 'judéo-géorgien' }
+l['jgk'] = { name = 'gwak' }
+l['jgo'] = { name = 'ngomba' }
+l['jhi'] = { name = 'jehai' }
+l['jia'] = { name = 'jina' }
+l['jib'] = { name = 'jibu' }
+l['jic'] = { name = 'jicaque de la Flor', sortKey = 'jicaque Flor' }
+l['jicaque d’El Palmar'] = { name = 'jicaque d’El Palmar', sortKey = 'jicaque El Palmar' }
+l['jid'] = { name = 'bu' }
+l['jig'] = { name = 'djingili' }
+l['jih'] = { name = 'shangzhai' }
+l['jil'] = { name = 'jilim' }
+l['jim'] = { name = 'jimi (Cameroun)', sortKey = 'jimi Cameroun' }
+l['jio'] = { name = 'jiamao' }
+l['jiq'] = { name = 'lavrung' }
+l['jit'] = { name = 'jita' }
+l['jiu'] = { name = 'jinuo de Youle', sortKey = 'jinuo Youle' }
+l['jiv'] = { name = 'shuar' }
+l['jiv-pal'] = { name = 'palta' }
+l['jiy'] = { name = 'jinuo de Buyuan', sortKey = 'jinuo Buyuan' }
+l['jizhao'] = { name = 'jizhao' }
+l['jje'] = { name = 'jeju' }
+l['jjr'] = { name = 'bankal' }
+l['jka'] = { name = 'kaera' }
+l['jko'] = { name = 'kubo' }
+l['jkr'] = { name = 'koro (Inde)', sortKey = 'koro Inde' }
+l['jku'] = { name = 'labir' }
+l['jle'] = { name = 'ngile' }
+l['jmc'] = { name = 'machame' }
+l['jms'] = { name = 'mashi (Nigeria)', sortKey = 'mashi Nigeria' }
+l['jnj'] = { name = 'yemsa' }
+l['job'] = { name = 'joba' }
+l['jor'] = { name = 'jora' }
+l['jos'] = { name = 'langue des signes jordanienne', sortKey = 'signes jordanienne' }
+l['jow'] = { name = 'jowulu' }
+l['jpr'] = { name = 'judéo-persan' }
+l['jpx'] = { name = 'langues japoniques', sortKey = 'japoniques langues', isGroup = true }
+l['jra'] = { name = 'jaraï' }
+l['jrb'] = { name = 'judéo-arabe' }
+l['jua'] = { name = 'júma' }
+l['juc'] = { name = 'jurchen' }
+l['juh'] = { name = 'hõne' }
+l['jui'] = { name = 'ngadjuri' }
+l['jum'] = { name = 'jumjum' }
+l['jun'] = { name = 'juang' }
+l['jup'] = { name = 'hupda' }
+l['jur'] = { name = 'juruna' }
+l['jus'] = { name = 'langue des signes de Jumla', sortKey = 'signes Jumla' }
+l['jut'] = { name = 'jute' }
+l['juy'] = { name = 'juray' }
+l['jv'] = { name = 'javanais', wiktionaryExists = true }
+l['jvn'] = { name = 'javanais des Caraïbes', sortKey = 'javanais Caraïbes' }
+l['jya'] = { name = 'rgyalrong' }
+l['ka'] = { name = 'géorgien', wiktionaryExists = true }
+l['kaa'] = { name = 'karakalpak' }
+l['kab'] = { name = 'kabyle' }
+l['kac'] = { name = 'kachin' }
+l['kae'] = { name = 'ketangalan' }
+l['kaera'] = { name = 'kaera' }
+l['kaf'] = { name = 'katso' }
+l['kah'] = { name = 'fer' }
+l['kai'] = { name = 'karekare' }
+l['kaj'] = { name = 'jju' }
+l['kak'] = { name = 'ahin-kayapa kalanguya' }
+l['kakán'] = { name = 'kakán' }
+l['kalasmaïte'] = { name = 'kalasmaïte' }
+l['kalis'] = { name = 'kalis' }
+l['kam'] = { name = 'kamba' }
+l['kao'] = { name = 'khassonké' }
+l['kap'] = { name = 'bezhta' }
+l['kaq'] = { name = 'capanahua' }
+l['kar'] = { name = 'langues karènes', sortKey = 'karènes langues', isGroup = true }
+l['kassite'] = { name = 'kassite' }
+l['kathlamet'] = { name = 'kathlamet' }
+l['kaw'] = { name = 'kawi' }
+l['kax'] = { name = 'kao' }
+l['kay'] = { name = 'kamayura' }
+l['kbb'] = { name = 'kashuyana' }
+l['kbc'] = { name = 'kadiwéu' }
+l['kbd'] = { name = 'kabarde', wiktionaryExists = true }
+l['kbh'] = { name = 'camsá' }
+l['kbj'] = { name = 'kari' }
+l['kbk'] = { name = 'koiari grass' }
+l['kbl'] = { name = 'kanembou' }
+l['kbn'] = { name = 'kare (République centrafricaine)', sortKey = 'kare Centrafrique' }
+l['kbo'] = { name = 'keliko' }
+l['kbp'] = { name = 'kabiyè' }
+l['kbq'] = { name = 'kamano' }
+l['kbs'] = { name = 'kande' }
+l['kbt'] = { name = 'abadi' }
+l['kbv'] = { name = 'dera' }
+l['kbw'] = { name = 'kaiep' }
+l['kby'] = { name = 'kanuri de Manga', sortKey = 'kanuri Manga' }
+l['kbz'] = { name = 'duhwa' }
+l['kca'] = { name = 'khanty' }
+l['kcb'] = { name = 'kawacha' }
+l['kcg'] = { name = 'tyap', wiktionaryExists = true }
+l['kck'] = { name = 'kalanga' }
+l['kcl'] = { name = 'kala' }
+l['kcm'] = { name = 'gula (République centrafricaine)', sortKey = 'gula Centrafrique' }
+l['kcn'] = { name = 'nubi' }
+l['kco'] = { name = 'kinalakna' }
+l['kcp'] = { name = 'kanga' }
+l['kcs'] = { name = 'koenoem' }
+l['kcu'] = { name = 'kami (Tanzanie)', sortKey = 'kami Tanzanie' }
+l['kcv'] = { name = 'kete' }
+l['kcx'] = { name = 'kachama-ganjule' }
+l['kcy'] = { name = 'korandjé' }
+l['kcz'] = { name = 'konongo' }
+l['kda'] = { name = 'gathang' }
+l['kdd'] = { name = 'yankunytjatjara' }
+l['kde'] = { name = 'makonde' }
+l['kdh'] = { name = 'tem' }
+l['kdi'] = { name = 'kumam' }
+l['kdj'] = { name = 'karimojong' }
+l['kdm'] = { name = 'kagoma' }
+l['kdo'] = { name = 'langues kordofaniennes', sortKey = 'kordofaniennes langues', isGroup = true }
+l['kdp'] = { name = 'kaningdon-nindem' }
+l['kdq'] = { name = 'koch' }
+l['kdr'] = { name = 'karaïme' }
+l['kdt'] = { name = 'kuy' }
+l['kdu'] = { name = 'kadaru' }
+l['kdw'] = { name = 'koneraw' }
+l['kea'] = { name = 'créole du Cap-Vert', sortKey = 'créole Cap Vert' }
+l['keb'] = { name = 'kélé (Gabon)', sortKey = 'kélé Gabon' }
+l['kec'] = { name = 'keiga' }
+l['ked'] = { name = 'kerewe' }
+l['kee'] = { name = 'keres de l’Est', sortKey = 'keres Est' }
+l['kef'] = { name = 'kpési' }
+l['keg'] = { name = 'tese' }
+l['kei'] = { name = 'kei' }
+l['kek'] = { name = 'q’eqchi’' }
+l['kel'] = { name = 'kela (République démocratique du Congo)', sortKey = 'kela Congo démocratique' }
+l['kelabit long napir'] = { name = 'kelabit long napir' }
+l['kem'] = { name = 'kemak' }
+l['ken'] = { name = 'kenyang' }
+l['kenyah long anap'] = { name = 'kenyah long anap' }
+l['kenyah long dunin'] = { name = 'kenyah long dunin' }
+l['kenyah long san'] = { name = 'kenyah long san' }
+l['keo'] = { name = 'kakwa' }
+l['ker'] = { name = 'kera' }
+l['kes'] = { name = 'kugbo' }
+l['ket'] = { name = 'ket' }
+l['keu'] = { name = 'akébou' }
+l['kew'] = { name = 'kewa de l’Ouest', sortKey = 'kewa Ouest' }
+l['key'] = { name = 'kupia' }
+l['kfa'] = { name = 'kodagu' }
+l['kfb'] = { name = 'kolami du Nord-Ouest', sortKey = 'kolami Nord Ouest' }
+l['kfc'] = { name = 'konda-dora' }
+l['kfd'] = { name = 'koraga korra' }
+l['kff'] = { name = 'koya' }
+l['kfh'] = { name = 'kurichiya' }
+l['kfj'] = { name = 'kemie' }
+l['kfk'] = { name = 'kinnauri' }
+l['kfl'] = { name = 'kung' }
+l['kfm'] = { name = 'khunsari' }
+l['kfo'] = { name = 'koro (Côte d’Ivoire)', sortKey = 'koro Côte divoire' }
+l['kfq'] = { name = 'korku' }
+l['kfr'] = { name = 'kutchi' }
+l['kfy'] = { name = 'kumaoni' }
+l['kfz'] = { name = 'koromfé' }
+l['kg'] = { name = 'kikongo' }
+l['kgb'] = { name = 'kawe' }
+l['kgd'] = { name = 'kataang' }
+l['kge'] = { name = 'komering' }
+l['kgf'] = { name = 'kube' }
+l['kgg'] = { name = 'kusunda' }
+l['kgj'] = { name = 'kham gamale' }
+l['kgk'] = { name = 'kaiwa' }
+l['kgl'] = { name = 'kunggari' }
+l['kgo'] = { name = 'krongo' }
+l['kgp'] = { name = 'kaingang' }
+l['kgq'] = { name = 'kamoro' }
+l['kgr'] = { name = 'abun' }
+l['kgs'] = { name = 'kumbainggar' }
+l['kgt'] = { name = 'somyev' }
+l['kgv'] = { name = 'karas' }
+l['kgw'] = { name = 'karon dori' }
+l['kgy'] = { name = 'kyirong' }
+l['kha'] = { name = 'khasi' }
+l['khb'] = { name = 'tai lü' }
+l['khc'] = { name = 'tukang besi du Nord', sortKey = 'tukang besi Nord' }
+l['khe'] = { name = 'korowai' }
+l['khf'] = { name = 'khuen' }
+l['khg'] = { name = 'kham' }
+l['khh'] = { name = 'keuw' }
+l['khi'] = { name = 'langues khoïsanes', sortKey = 'khoisanes langues', isGroup = true }
+l['khiajari'] = { name = 'khiajari' }
+l['khj'] = { name = 'kuturmi' }
+l['kho'] = { name = 'khotanais' }
+l['khoznini'] = { name = 'khoznini' }
+l['khp'] = { name = 'kapori' }
+l['khq'] = { name = 'koyra chiini' }
+l['khr'] = { name = 'kharia' }
+l['khs'] = { name = 'kasua' }
+l['kht'] = { name = 'khamti' }
+l['khv'] = { name = 'khvarshi' }
+l['khw'] = { name = 'khowar' }
+l['khy'] = { name = 'kele (Congo)', sortKey = 'kele Congo' }
+l['khz'] = { name = 'keapara' }
+l['ki'] = { name = 'kikuyu' }
+l['kia'] = { name = 'kim' }
+l['kib'] = { name = 'koalib' }
+l['kic'] = { name = 'kickapoo' }
+l['kid'] = { name = 'koshin' }
+l['kie'] = { name = 'kibet' }
+l['kif'] = { name = 'kham parbate de l’Est', sortKey = 'kham parbate Est' }
+l['kig'] = { name = 'kimaama' }
+l['kih'] = { name = 'kilmeri' }
+l['kii'] = { name = 'kitsai' }
+l['kij'] = { name = 'kilivila' }
+l['kil'] = { name = 'kariya' }
+l['kilen'] = { name = 'kilen' }
+l['kim'] = { name = 'tofalar' }
+l['kio'] = { name = 'kiowa' }
+l['kip'] = { name = 'kham sheshi' }
+l['kiptchak mamelouk'] = { name = 'kiptchak mamelouk' }
+l['kis'] = { name = 'kis' }
+l['kitanemuk'] = { name = 'kitanemuk' }
+l['kittitas'] = { name = 'kittitas' }
+l['kiu'] = { name = 'kirmancki' }
+l['kiv'] = { name = 'kimbu' }
+l['kiw'] = { name = 'kiwai du Nord-Est', sortKey = 'kiwai Nord Est' }
+l['kiy'] = { name = 'kirikiri' }
+l['kiz'] = { name = 'kisi' }
+l['kj'] = { name = 'kuanyama' }
+l['kja'] = { name = 'mlap' }
+l['kjb'] = { name = 'kanjobal' }
+l['kjc'] = { name = 'konjo de la côte', sortKey = 'konjo côte' }
+l['kjd'] = { name = 'kiwai du Sud', sortKey = 'kiwai Sud' }
+l['kje'] = { name = 'kisar' }
+l['kjg'] = { name = 'khmu' }
+l['kjh'] = { name = 'khakasse' }
+l['kjh-fyk'] = { name = 'kirghiz de Fu-Yu', sortKey = 'kirghiz Fu Yu' }
+l['kji'] = { name = 'zabana' }
+l['kjj'] = { name = 'khinalug' }
+l['kjl'] = { name = 'kham parbate de l’Ouest', sortKey = 'kham parbate Ouest' }
+l['kjm'] = { name = 'kháng' }
+l['kjn'] = { name = 'kunjen' }
+l['kjp'] = { name = 'pwo de l’Est', sortKey = 'pwo est' }
+l['kjq'] = { name = 'keres de l’Ouest', sortKey = 'keres Ouest' }
+l['kjr'] = { name = 'kurudu' }
+l['kjs'] = { name = 'kewa de l’Est', sortKey = 'kewa Est' }
+l['kju'] = { name = 'kashaya' }
+l['kjz'] = { name = 'bumthangkha' }
+l['kk'] = { name = 'kazakh', wiktionaryExists = true }
+l['kka'] = { name = 'kakanda' }
+l['kkb'] = { name = 'kwerisa' }
+l['kkc'] = { name = 'odoodee' }
+l['kkd'] = { name = 'kinuku' }
+l['kke'] = { name = 'kakabé' }
+l['kkf'] = { name = 'monpa de Kalaktang', sortKey = 'monpa Kalaktang' }
+l['kki'] = { name = 'kagulu' }
+l['kkk'] = { name = 'kokota' }
+l['kkl'] = { name = 'kosarek yale' }
+l['kko'] = { name = 'karko' }
+l['kkr'] = { name = 'kir-balar' }
+l['kks'] = { name = 'giiwo' }
+l['kkt'] = { name = 'koi' }
+l['kkw'] = { name = 'kukuya' }
+l['kky'] = { name = 'guugu yimidhirr' }
+l['kkz'] = { name = 'kaska' }
+l['kl'] = { name = 'kalaallisut', wiktionaryExists = true }
+l['kla'] = { name = 'klamath' }
+l['klb'] = { name = 'kiliwa' }
+l['kld'] = { name = 'kamilaroi' }
+l['kle'] = { name = 'kulung (Népal)', sortKey = 'kulung Népal' }
+l['klg'] = { name = 'kalagan de Tagakaulu', sortKey = 'kalagan Tagakaulu' }
+l['klikitat'] = { name = 'klikitat' }
+l['klj'] = { name = 'khalaj' }
+l['klk'] = { name = 'kono (Nigeria)', sortKey = 'kono Nigeria' }
+l['klm'] = { name = 'migum' }
+l['kln'] = { name = 'kalenjin' }
+l['klp'] = { name = 'kamasa' }
+l['klq'] = { name = 'rumu' }
+l['klr'] = { name = 'khaling' }
+l['kls'] = { name = 'kalasha' }
+l['klt'] = { name = 'nukna' }
+l['klv'] = { name = 'maskelynes' }
+l['km'] = { name = 'khmer', wiktionaryExists = true }
+l['kma'] = { name = 'konni' }
+l['kmb'] = { name = 'kimbundu' }
+l['kmc'] = { name = 'kam' }
+l['kmf'] = { name = 'kare (Papouasie-Nouvelle-Guinée)', sortKey = 'kare Papouasie' }
+l['kmg'] = { name = 'kâte' }
+l['kmh'] = { name = 'kalam' }
+l['kmi'] = { name = 'kami (Nigeria)', sortKey = 'kami Nigeria' }
+l['kmk'] = { name = 'kalinga de Limos', sortKey = 'kalinga Limos' }
+l['kml'] = { name = 'kalinga de Tanudan', sortKey = 'kalinga Tanudan' }
+l['kmm'] = { name = 'kom (Inde)', sortKey = 'kom Inde' }
+l['kmn'] = { name = 'awtuw' }
+l['kmo'] = { name = 'kwoma' }
+l['kmq'] = { name = 'gwama' }
+l['kmr'] = { name = 'kurmandji' }
+l['kms'] = { name = 'kamasau' }
+l['kmt'] = { name = 'kemtuik' }
+l['kmv'] = { name = 'karipúna' }
+l['kmw'] = { name = 'komo (langue bantoue)', sortKey = 'komo bantou' }
+l['kmx'] = { name = 'waboda' }
+l['kmz'] = { name = 'turc du Khorassan', sortKey = 'turc Khorassan' }
+l['kn'] = { name = 'kannara', wiktionaryExists = true }
+l['kna'] = { name = 'kanakuru' }
+l['knb'] = { name = 'kalinga de Lubuagan', sortKey = 'kalinga Lubuagan' }
+l['knc'] = { name = 'kanouri central' }
+l['knd'] = { name = 'konda' }
+l['kne'] = { name = 'kankanaey' }
+l['kni'] = { name = 'kanufi' }
+l['knj'] = { name = 'acatèque' }
+l['knk'] = { name = 'kuranko' }
+l['kno'] = { name = 'kono (Sierra Leone)', sortKey = 'kono Sierra Leone' }
+l['knp'] = { name = 'kwanja' }
+l['kns'] = { name = 'kensiw' }
+l['knt'] = { name = 'katukina' }
+l['knu'] = { name = 'kono (Guinée)', sortKey = 'kono Guinée' }
+l['knv'] = { name = 'waia' }
+l['knw'] = { name = 'kung-ekoka' }
+l['knx'] = { name = 'kendayan' }
+l['kny'] = { name = 'kanyok' }
+l['ko'] = { name = 'coréen', hasPortal = true, wiktionaryExists = true }
+l['koa'] = { name = 'konomala' }
+l['kod'] = { name = 'kodi' }
+l['koe'] = { name = 'kacipo-balesi' }
+l['kof'] = { name = 'kubi' }
+l['kog'] = { name = 'kogui' }
+l['koh'] = { name = 'koyo' }
+l['koi'] = { name = 'komi-permyak' }
+l['kok'] = { name = 'konkânî' }
+l['kol'] = { name = 'kol (Papouasie-Nouvelle-Guinée)', sortKey = 'kol Papouasie' }
+l['konomihu'] = { name = 'konomihu' }
+l['koo'] = { name = 'konjo' }
+l['kop'] = { name = 'waube' }
+l['koq'] = { name = 'kota (Gabon)', sortKey = 'kota Gabon' }
+l['kos'] = { name = 'kosraéen' }
+l['kot'] = { name = 'lagwan' }
+l['kotoxo'] = { name = 'kotoxo' }
+l['kou'] = { name = 'koke' }
+l['kow'] = { name = 'kugama' }
+l['koy'] = { name = 'koyukon' }
+l['koz'] = { name = 'korak' }
+l['kpa'] = { name = 'kupto' }
+l['kpc'] = { name = 'curripaco' }
+l['kpe'] = { name = 'kpellé' }
+l['kpf'] = { name = 'komba' }
+l['kpg'] = { name = 'kapingamarangi' }
+l['kpj'] = { name = 'karajá' }
+l['kpk'] = { name = 'kpan' }
+l['kpm'] = { name = 'koho' }
+l['kpn'] = { name = 'kepkiriwát' }
+l['kpo'] = { name = 'ikposso' }
+l['kpq'] = { name = 'korupun-sela' }
+l['kps'] = { name = 'tehit' }
+l['kpt'] = { name = 'karata' }
+l['kpw'] = { name = 'kobon' }
+l['kpx'] = { name = 'koiari des montagnes', sortKey = 'koiari montagnes' }
+l['kpy'] = { name = 'koryak' }
+l['kpz'] = { name = 'sapiny' }
+l['kqc'] = { name = 'doromu-koki' }
+l['kqd'] = { name = 'néo-araméen de Koy Sandjaq', sortKey = 'araméen néo koy sandjaq' }
+l['kqe'] = { name = 'kalagan' }
+l['kql'] = { name = 'kyenele' }
+l['kqp'] = { name = 'kimré' }
+l['kqq'] = { name = 'krenak' }
+l['kqr'] = { name = 'kimaragang' }
+l['kqs'] = { name = 'kisi septentrional' }
+l['kqt'] = { name = 'kadazan klias' }
+l['kqu'] = { name = 'seroa' }
+l['kqv'] = { name = 'murut kolod' }
+l['kqx'] = { name = 'mser' }
+l['kqy'] = { name = 'koorete' }
+l['kr'] = { name = 'kanouri' }
+l['krb'] = { name = 'karkin' }
+l['krc'] = { name = 'karatchaï-balkar' }
+l['kre'] = { name = 'panará' }
+l['krf'] = { name = 'koro (Vanuatu)', sortKey = 'koro Vanuatu' }
+l['kri'] = { name = 'krio' }
+l['krj'] = { name = 'kinaray-a' }
+l['krk'] = { name = 'kerek' }
+l['krl'] = { name = 'carélien' }
+l['kro'] = { name = 'langues kroues', sortKey = 'kroues langues', isGroup = true }
+l['krp'] = { name = 'korop' }
+l['krs'] = { name = 'kresh' }
+l['krt'] = { name = 'kanuri de Tumari', sortKey = 'kanuri Tumari' }
+l['kru'] = { name = 'kurukh' }
+l['krx'] = { name = 'karon' }
+l['kry'] = { name = 'kryz' }
+l['ks'] = { name = 'kashmiri', wiktionaryExists = true }
+l['ksb'] = { name = 'shambala' }
+l['ksd'] = { name = 'kuanua' }
+l['kse'] = { name = 'kuni' }
+l['ksf'] = { name = 'bafia' }
+l['ksh'] = { name = 'francique ripuaire' }
+l['ksi'] = { name = 'i’saka' }
+l['ksk'] = { name = 'kansa' }
+l['ksn'] = { name = 'kasiguranin' }
+l['ksp'] = { name = 'kabba' }
+l['ksq'] = { name = 'kwaami' }
+l['ksr'] = { name = 'borong' }
+l['kss'] = { name = 'kisi méridional' }
+l['ksv'] = { name = 'kusu' }
+l['ksw'] = { name = 'sgaw' }
+l['ksx'] = { name = 'kedang' }
+l['ktb'] = { name = 'kambaata' }
+l['ktd'] = { name = 'kokata' }
+l['kte'] = { name = 'nubri' }
+l['ktg'] = { name = 'kalkatungu' }
+l['kti'] = { name = 'muyu du Nord', sortKey = 'muyu Nord' }
+l['ktl'] = { name = 'koroshi' }
+l['ktn'] = { name = 'karitiana' }
+l['kto'] = { name = 'kuot' }
+l['ktp'] = { name = 'kaduo' }
+l['kts'] = { name = 'muyu du Sud', sortKey = 'muyu Sud' }
+l['ktt'] = { name = 'ketum' }
+l['ktu'] = { name = 'kituba' }
+l['ktw'] = { name = 'kato' }
+l['ktx'] = { name = 'kaxararí' }
+l['ktz'] = { name = 'juǀ’hoan', sortKey = 'ju hoan' }
+l['ku'] = { name = 'kurde', wiktionaryExists = true }
+l['kub'] = { name = 'kutep' }
+l['kuc'] = { name = 'kwinsu' }
+l['kud'] = { name = '’auhelawa', sortKey = 'auhelawa' }
+l['kue'] = { name = 'kuman' }
+l['kuf'] = { name = 'katu' }
+l['kug'] = { name = 'kupa' }
+l['kuh'] = { name = 'kushi' }
+l['kui'] = { name = 'kuikuro' }
+l['kuj'] = { name = 'kuria' }
+l['kuk'] = { name = 'kepo’' }
+l['kul'] = { name = 'kulere' }
+l['kum'] = { name = 'koumyk' }
+l['kumaná'] = { name = 'kumaná' }
+l['kun'] = { name = 'kunama' }
+l['kuo'] = { name = 'kumukio' }
+l['kus'] = { name = 'kusaal' }
+l['kut'] = { name = 'kutenai' }
+l['kuu'] = { name = 'kolchan' }
+l['kuy'] = { name = 'kuuku-ya’u' }
+l['kuz'] = { name = 'kunza' }
+l['kv'] = { name = 'komi' }
+l['kva'] = { name = 'bagwalal' }
+l['kvc'] = { name = 'kove' }
+l['kvd'] = { name = 'kui (Indonésie)', sortKey = 'kui Indonésie' }
+l['kve'] = { name = 'murut kalabakan' }
+l['kvf'] = { name = 'kabalai' }
+l['kvg'] = { name = 'kuni-boazi' }
+l['kvi'] = { name = 'kwang' }
+l['kvm'] = { name = 'kendem' }
+l['kvn'] = { name = 'kuna' }
+l['kvo'] = { name = 'dobel' }
+l['kvq'] = { name = 'geba' }
+l['kvr'] = { name = 'kerinci' }
+l['kvt'] = { name = 'lahta' }
+l['kvw'] = { name = 'wersing' }
+l['kvz'] = { name = 'tsaukambo' }
+l['kw'] = { name = 'cornique', wiktionaryExists = true }
+l['kwa'] = { name = 'dâw' }
+l['kwd'] = { name = 'kwaio' }
+l['kwe'] = { name = 'kwerba' }
+l['kwf'] = { name = 'kwara’ae' }
+l['kwg'] = { name = 'démé' }
+l['kwh'] = { name = 'kowiai' }
+l['kwi'] = { name = 'awa pit' }
+l['kwj'] = { name = 'kwanga' }
+l['kwk'] = { name = 'kwak’wala' }
+l['kwn'] = { name = 'kwangali' }
+l['kwo'] = { name = 'kwomtari' }
+l['kwp'] = { name = 'kodia' }
+l['kwr'] = { name = 'kwer' }
+l['kws'] = { name = 'kwese' }
+l['kwt'] = { name = 'kwesten' }
+l['kwu'] = { name = 'kwakum' }
+l['kwv'] = { name = 'sara kaba náà' }
+l['kxa'] = { name = 'kairiru' }
+l['kxc'] = { name = 'konso' }
+l['kxd'] = { name = 'malais de Brunei', sortKey = 'malais Brunei' }
+l['kxh'] = { name = 'karo (Éthiopie)', sortKey = 'karo Éthiopie' }
+l['kxj'] = { name = 'koulfa' }
+l['kxm'] = { name = 'khmer du Nord', sortKey = 'khmer Nord' }
+l['kxn'] = { name = 'melanau kanowit' }
+l['kxo'] = { name = 'kanoê' }
+l['kxs'] = { name = 'kangjia' }
+l['kxt'] = { name = 'koiwat' }
+l['kxu'] = { name = 'kui (Inde)', sortKey = 'kui Inde' }
+l['kxv'] = { name = 'kuvi' }
+l['kxw'] = { name = 'konai' }
+l['kxz'] = { name = 'kerewo' }
+l['ky'] = { name = 'kirghiz', wiktionaryExists = true }
+l['kya'] = { name = 'kwaya' }
+l['kyakala'] = { name = 'kyakala' }
+l['kyc'] = { name = 'kyaka' }
+l['kyf'] = { name = 'sokuya' }
+l['kyh'] = { name = 'karuk' }
+l['kyi'] = { name = 'kiput' }
+l['kyj'] = { name = 'karao' }
+l['kyl'] = { name = 'kalapuya central' }
+l['kyo'] = { name = 'klon' }
+l['kyq'] = { name = 'kenga' }
+l['kyr'] = { name = 'kuruáya' }
+l['kys'] = { name = 'baram kayan' }
+l['kyt'] = { name = 'kayagar' }
+l['kyu'] = { name = 'kayah li de l’Ouest', sortKey = 'kayah li Ouest' }
+l['kyx'] = { name = 'rapoisi' }
+l['kyz'] = { name = 'kayabi' }
+l['kzf'] = { name = 'kaili de Da’a', sortKey = 'kaili daa' }
+l['kzg'] = { name = 'kikaï' }
+l['kzh'] = { name = 'dongolawi-kenzi' }
+l['kzi'] = { name = 'kelabit bario' }
+l['kzj'] = { name = 'kadazan penampang' }
+l['kzl'] = { name = 'kayeli' }
+l['kzm'] = { name = 'kais' }
+l['kzp'] = { name = 'kaidipang' }
+l['kzr'] = { name = 'karang' }
+l['kzt'] = { name = 'dusun tambunan' }
+l['kzu'] = { name = 'kayupulau' }
+l['kzv'] = { name = 'komyandaret' }
+l['kzw'] = { name = 'karirí-xocó' }
+l['kzz'] = { name = 'kalabra' }
+l['la'] = { name = 'latin', hasPortal = true, wiktionaryExists = true }
+l['laa'] = { name = 'subanen du Sud', sortKey = 'subanen Sud' }
+l['lab'] = { name = 'linéaire A' }
+l['lac'] = { name = 'lacandon' }
+l['lad'] = { name = 'judéo-espagnol' }
+l['lae'] = { name = 'pattani' }
+l['laf'] = { name = 'lafofa' }
+l['lag'] = { name = 'langi' }
+l['lah'] = { name = 'lahnda' }
+l['lai'] = { name = 'lambya' }
+l['laj'] = { name = 'lango' }
+l['lak'] = { name = 'laka (Nigeria)', sortKey = 'laka Nigeria' }
+l['lala (Afrique du Sud)'] = { name = 'lala (Afrique du Sud)', sortKey = 'lala Afrique Sud' }
+l['lam'] = { name = 'lamba' }
+l['lan'] = { name = 'laru' }
+l['lap'] = { name = 'laka' }
+l['laq'] = { name = 'qabiao' }
+l['lar'] = { name = 'larteh' }
+l['las'] = { name = 'lama (Togo)', sortKey = 'lama Togo' }
+l['lau'] = { name = 'laba' }
+l['lauhut'] = { name = 'lauhut' }
+l['law'] = { name = 'lauje' }
+l['lawi'] = { name = 'lawi' }
+l['lax'] = { name = 'tiwa' }
+l['lay'] = { name = 'lama (Birmanie)', sortKey = 'lama Birmanie' }
+l['laz'] = { name = 'aribwatsa' }
+l['lazé'] = { name = 'lazé' }
+l['lb'] = { name = 'luxembourgeois', hasPortal = true, wiktionaryExists = true }
+l['lbc'] = { name = 'lakkja' }
+l['lbe'] = { name = 'lak' }
+l['lbj'] = { name = 'ladakhi' }
+l['lbk'] = { name = 'bontok central' }
+l['lbn'] = { name = 'lamet' }
+l['lbo'] = { name = 'laven' }
+l['lbq'] = { name = 'wampar' }
+l['lbs'] = { name = 'langue des signes libyennne', sortKey = 'signes libyenne' }
+l['lbt'] = { name = 'lachi' }
+l['lbu'] = { name = 'labu' }
+l['lbw'] = { name = 'tolaki' }
+l['lbx'] = { name = 'lawangan' }
+l['lby'] = { name = 'lamu-lamu' }
+l['lbz'] = { name = 'lardil' }
+l['lcc'] = { name = 'legenyem' }
+l['lcd'] = { name = 'lola' }
+l['lcl'] = { name = 'lisela' }
+l['lcm'] = { name = 'tungag' }
+l['lcp'] = { name = 'lawa de l’Ouest', sortKey = 'lawa Ouest' }
+l['lcq'] = { name = 'luhu' }
+l['lda'] = { name = 'kla-dan' }
+l['ldb'] = { name = 'dũya' }
+l['ldd'] = { name = 'luri' }
+l['ldi'] = { name = 'laari' }
+l['ldm'] = { name = 'landuma' }
+l['ldn'] = { name = 'láadan' }
+l['lea'] = { name = 'lega de Shabunda', sortKey = 'lega Shabunda' }
+l['leb'] = { name = 'lala-bisa' }
+l['lec'] = { name = 'leko' }
+l['led'] = { name = 'lendu' }
+l['lee'] = { name = 'lyélé' }
+l['lef'] = { name = 'lelemi' }
+l['leg'] = { name = 'lengua' }
+l['leh'] = { name = 'lenje' }
+l['lei'] = { name = 'lemio' }
+l['lek'] = { name = 'leipon' }
+l['lel'] = { name = 'lele (République démocratique du Congo)', sortKey = 'lele Congo démocratique' }
+l['lem'] = { name = 'nomaande' }
+l['len'] = { name = 'lenca du Salvador', sortKey = 'lenca Salvador' }
+l['leo'] = { name = 'leti (Cameroun)', sortKey = 'leti Cameroun' }
+l['lep'] = { name = 'lepcha' }
+l['leq'] = { name = 'lembena' }
+l['ler'] = { name = 'lenkau' }
+l['les'] = { name = 'lese' }
+l['let'] = { name = 'amio-gelimi' }
+l['leu'] = { name = 'kara (Papouasie-Nouvelle-Guinée)', sortKey = 'kara Papouasie' }
+l['lev'] = { name = 'pantar de l’Ouest', sortKey = 'pantar Ouest' }
+l['lew'] = { name = 'kaili de Ledo', sortKey = 'kaili Ledo' }
+l['lex'] = { name = 'luang' }
+l['ley'] = { name = 'lemolang' }
+l['lez'] = { name = 'lezghien' }
+l['lfn'] = { name = 'lingua franca nova' }
+l['lg'] = { name = 'ganda' }
+l['lga'] = { name = 'lungga' }
+l['lgb'] = { name = 'laghu' }
+l['lgg'] = { name = 'lougbara' }
+l['lgh'] = { name = 'laghuu' }
+l['lgi'] = { name = 'lengilu’' }
+l['lgk'] = { name = 'neverver' }
+l['lgl'] = { name = 'wala' }
+l['lgm'] = { name = 'lega-mwenga' }
+l['lgn'] = { name = 'opuuo' }
+l['lgq'] = { name = 'logba' }
+l['lgr'] = { name = 'lengo' }
+l['lgt'] = { name = 'pahi' }
+l['lgu'] = { name = 'longgu' }
+l['lgz'] = { name = 'ligenza' }
+l['lha'] = { name = 'laha (Vietnam)', sortKey = 'laha Vietnam' }
+l['lhh'] = { name = 'laha (Indonésie)', sortKey = 'laha Indonésie' }
+l['lhi'] = { name = 'lahu shi' }
+l['lhm'] = { name = 'lhomi' }
+l['lhn'] = { name = 'lahanan' }
+l['lhp'] = { name = 'lhokpu' }
+l['lhs'] = { name = 'mlahso' }
+l['lht'] = { name = 'lo-toga' }
+l['lhu'] = { name = 'lahu' }
+l['li'] = { name = 'limbourgeois', wiktionaryExists = true }
+l['lia'] = { name = 'limba central et de l’Ouest', sortKey = 'limba central Ouest' }
+l['lib'] = { name = 'likum' }
+l['liburnien'] = { name = 'liburnien' }
+l['lic'] = { name = 'hlaï' }
+l['lid'] = { name = 'nyindrou' }
+l['lie'] = { name = 'likila' }
+l['lif'] = { name = 'limbou' }
+l['lig'] = { name = 'ligbi' }
+l['light warlpiri'] = { name = 'light warlpiri' }
+l['lih'] = { name = 'lihir' }
+l['lii'] = { name = 'limkhim' }
+l['lij-MC'] = { name = 'monégasque' }
+l['lij-mc'] = { name = 'monégasque' }
+l['lij'] = { name = 'ligure' }
+l['lik'] = { name = 'lika' }
+l['lil'] = { name = 'lillooet' }
+l['lio'] = { name = 'liki' }
+l['lip'] = { name = 'sekpele' }
+l['liq'] = { name = 'libido' }
+l['lir'] = { name = 'anglais libérien' }
+l['lis'] = { name = 'lisu' }
+l['lisum'] = { name = 'lisum' }
+l['liu'] = { name = 'logorik' }
+l['liv'] = { name = 'livonien' }
+l['liw'] = { name = 'col' }
+l['lix'] = { name = 'liabuku' }
+l['liy'] = { name = 'banda-bambari' }
+l['liz'] = { name = 'libinza' }
+l['lizu'] = { name = 'lizu' }
+l['lje'] = { name = 'rampi' }
+l['lji'] = { name = 'laiyolo' }
+l['ljl'] = { name = 'li’o' }
+l['ljp'] = { name = 'lampung' }
+l['lka'] = { name = 'lakalei' }
+l['lkb'] = { name = 'kabras' }
+l['lkc'] = { name = 'kucong' }
+l['lkd'] = { name = 'lakondê' }
+l['lke'] = { name = 'kenyi' }
+l['lki'] = { name = 'laki' }
+l['lkm'] = { name = 'kalaamaya' }
+l['lkn'] = { name = 'lakon' }
+l['lkt'] = { name = 'lakota' }
+l['lku'] = { name = 'kungkari' }
+l['lky'] = { name = 'lokoya' }
+l['lla'] = { name = 'lala-roba' }
+l['llb'] = { name = 'lolo' }
+l['llc'] = { name = 'lele (Guinée)', sortKey = 'lele Guinée' }
+l['lld'] = { name = 'ladin' }
+l['lle'] = { name = 'lele (Papouasie-Nouvelle-Guinée)', sortKey = 'lele Papouasie' }
+l['llj'] = { name = 'ladji ladji' }
+l['llk'] = { name = 'lelak' }
+l['lln'] = { name = 'lele (Tchad)', sortKey = 'lele Tchad' }
+l['llp'] = { name = 'éfaté du Nord', sortKey = 'éfaté Nord' }
+l['llq'] = { name = 'lolak' }
+l['lls'] = { name = 'langue des signes lituanienne', sortKey = 'signes lituanienne' }
+l['llu'] = { name = 'lau' }
+l['lma'] = { name = 'limba de l’Est', sortKey = 'limba Est' }
+l['lmb'] = { name = 'merei' }
+l['lmc'] = { name = 'limilngan' }
+l['lmd'] = { name = 'lumun' }
+l['lme'] = { name = 'lamé' }
+l['lmg'] = { name = 'lamogai' }
+l['lmk'] = { name = 'lamkang' }
+l['lml'] = { name = 'raga' }
+l['lmn'] = { name = 'lambadi' }
+l['lmo'] = { name = 'lombard', wiktionaryExists = true }
+l['lmp'] = { name = 'limbum' }
+l['lmu'] = { name = 'lamen' }
+l['lmw'] = { name = 'miwok du lac', sortKey = 'miwok lac' }
+l['lmy'] = { name = 'lamboya' }
+l['ln'] = { name = 'lingala', wiktionaryExists = true }
+l['lna'] = { name = 'langbashe' }
+l['lnd'] = { name = 'lundayeh' }
+l['lng'] = { name = 'lombard (germanique)', sortKey = 'lombard germanique' }
+l['lnl'] = { name = 'banda Sud central' }
+l['lnn'] = { name = 'lorediakarkar' }
+l['lns'] = { name = 'lamnso’' }
+l['lnu'] = { name = 'longuda' }
+l['lo'] = { name = 'laotien', wiktionaryExists = true }
+l['loa'] = { name = 'loloda' }
+l['loc'] = { name = 'inonhan' }
+l['loe'] = { name = 'saluan' }
+l['log'] = { name = 'logo' }
+l['loh'] = { name = 'narim' }
+l['loi'] = { name = 'loma (Côte d’Ivoire)', sortKey = 'loma Côte divoire' }
+l['loj'] = { name = 'lou' }
+l['lok'] = { name = 'loko' }
+l['lol'] = { name = 'lomongo' }
+l['lom'] = { name = 'loma' }
+l['lon'] = { name = 'lomwe du Malawi', sortKey = 'lonwe malawi' }
+l['lop'] = { name = 'lopa' }
+l['lor'] = { name = 'téén' }
+l['lorrain'] = { name = 'lorrain' }
+l['los'] = { name = 'loniu' }
+l['lot'] = { name = 'otuho' }
+l['lou'] = { name = 'créole louisianais' }
+l['low'] = { name = 'tampias lobu' }
+l['loz'] = { name = 'lozi' }
+l['lpa'] = { name = 'lelepa' }
+l['lpe'] = { name = 'lepki' }
+l['lpo'] = { name = 'lipo' }
+l['lpx'] = { name = 'lopit' }
+l['lra'] = { name = 'rara bakati’' }
+l['lrc'] = { name = 'lori du Nord', sortKey = 'lori Nord' }
+l['lre'] = { name = 'laurentien' }
+l['lrl'] = { name = 'larestani' }
+l['lro'] = { name = 'laro' }
+l['lrr'] = { name = 'yamphu du Sud', sortKey = 'yamphu Sud' }
+l['lrv'] = { name = 'larevat' }
+l['lrz'] = { name = 'lemerig' }
+l['lsa'] = { name = 'lasguerdi' }
+l['lsd'] = { name = 'lishana deni' }
+l['lse'] = { name = 'lusengo' }
+l['lsh'] = { name = 'lish' }
+l['lsi'] = { name = 'lashi' }
+l['lsl'] = { name = 'langue des signes lettonne', sortKey = 'signes lettonne' }
+l['lsm'] = { name = 'saamia' }
+l['lsr'] = { name = 'aruop' }
+l['lt'] = { name = 'lituanien', wiktionaryExists = true }
+l['ltc'] = { name = 'chinois médiéval' }
+l['ltg'] = { name = 'latgalien' }
+l['lti'] = { name = 'leti (Indonésie)', sortKey = 'leti Indonésie' }
+l['ltn'] = { name = 'latundê' }
+l['lts'] = { name = 'lutachoni' }
+l['lu'] = { name = 'kiluba' }
+l['lua'] = { name = 'luba-lulua' }
+l['luc'] = { name = 'aringa' }
+l['lucanien'] = { name = 'lucanien' }
+l['lud'] = { name = 'ludien' }
+l['lue'] = { name = 'luvale' }
+l['luh'] = { name = 'leizhounais' }
+l['lui'] = { name = 'luiseño' }
+l['lui-jua'] = { name = 'juaneño' }
+l['lul'] = { name = 'olu’bo' }
+l['lun'] = { name = 'lunda' }
+l['luo'] = { name = 'luo (Kenya, Tanzanie)', sortKey = 'luo Kenya Tanzanie' }
+l['lup'] = { name = 'lumbu' }
+l['lur'] = { name = 'laura' }
+l['lus'] = { name = 'mizo' }
+l['lut'] = { name = 'lushootseed' }
+l['luu'] = { name = 'lumba-yakkha' }
+l['luv'] = { name = 'luwati' }
+l['luw'] = { name = 'luo (Cameroun)', sortKey = 'luo Cameroun' }
+l['luy'] = { name = 'luhya' }
+l['luz'] = { name = 'lori du Sud', sortKey = 'lori Sud' }
+l['lv'] = { name = 'letton', wiktionaryExists = true }
+l['lva'] = { name = 'makuva' }
+l['lvk'] = { name = 'lavukaleve' }
+l['lwg'] = { name = 'wanga' }
+l['lwl'] = { name = 'lawa de l’Est', sortKey = 'lawa Est' }
+l['lwm'] = { name = 'laomien' }
+l['lwo'] = { name = 'luwo' }
+l['lww'] = { name = 'lewo' }
+l['lyg'] = { name = 'lyngngam' }
+l['lzh'] = { name = 'chinois classique', wikimediaCode = 'zh-classical' }
+l['lzl'] = { name = 'litzlitz' }
+l['lzn'] = { name = 'leinong' }
+l['lzz'] = { name = 'laze' }
+l['ma pnaan'] = { name = 'ma pnaan' }
+l['maa'] = { name = 'mazatèque d’Eloxochitlán', sortKey = 'mazatèque eloxochitlán' }
+l['mad'] = { name = 'madourais', wiktionaryExists = true }
+l['mae'] = { name = 'bo-rukul' }
+l['maf'] = { name = 'mafa' }
+l['mag'] = { name = 'magahi' }
+l['mai'] = { name = 'maithili' }
+l['maj'] = { name = 'mazatèque de Jalapa de Díaz', sortKey = 'mazatèque Jalapa de Díaz' }
+l['mak'] = { name = 'makassar' }
+l['mam'] = { name = 'mam' }
+l['man'] = { name = 'mandingue' }
+l['map'] = { name = 'langues austronésiennes', sortKey = 'austronésiennes langues', isGroup = true }
+l['map-bms'] = { name = 'banyumasan' }
+l['maq'] = { name = 'mazatèque de Chiquihuitlán', sortKey = 'mazatèque Chiquihuitlán' }
+l['mas'] = { name = 'massaï' }
+l['mat'] = { name = 'matlatzinca de San Francisco', sortKey = 'matlatzinca San Francisco' }
+l['mtm'] = { name = 'mator' }
+l['mau'] = { name = 'mazatèque de Huautla', sortKey = 'mazatèque Huautla' }
+l['mav'] = { name = 'mawé-sateré' }
+l['maw'] = { name = 'mampruli' }
+l['max'] = { name = 'malais de Ternate', sortKey = 'malais Ternate' }
+l['may'] = { name = 'may' }
+l['mayennais'] = { name = 'mayennais' }
+l['maz'] = { name = 'mazahua central' }
+l['mba'] = { name = 'higaonon' }
+l['mbb'] = { name = 'manobo de l’Ouest de Bukidnon', sortKey = 'manobo Bukidnon Ouest' }
+l['mbc'] = { name = 'macushi' }
+l['mbd'] = { name = 'manobo de Dibabawon', sortKey = 'manobo Dibabawon' }
+l['mbe'] = { name = 'molala' }
+l['mbf'] = { name = 'malais baba' }
+l['mbh'] = { name = 'mangseng' }
+l['mbi'] = { name = 'manobo d’Ilianen', sortKey = 'manobo Ilianen' }
+l['mbj'] = { name = 'nadëb' }
+l['mbk'] = { name = 'malol' }
+l['mbl'] = { name = 'maxakalí' }
+l['mbn'] = { name = 'macaguán' }
+l['mbo'] = { name = 'mbo (Cameroun)', sortKey = 'mbo Cameroun' }
+l['mbp'] = { name = 'damana' }
+l['mbq'] = { name = 'maisin' }
+l['mbr'] = { name = 'nukak' }
+l['mbs'] = { name = 'manobo de Sarangani', sortKey = 'manobo Sarangani' }
+l['mbt'] = { name = 'manobo de Matigsalug', sortKey = 'manobo Matigsalug' }
+l['mbu'] = { name = 'mbula-bwazza' }
+l['mbw'] = { name = 'maring' }
+l['mby'] = { name = 'memoni' }
+l['mca'] = { name = 'maká' }
+l['mcb'] = { name = 'machiguenga' }
+l['mcd'] = { name = 'marinahua' }
+l['mcf'] = { name = 'matsés' }
+l['mcg'] = { name = 'mapoyo' }
+l['mch'] = { name = 'de’cuana' }
+l['mci'] = { name = 'mesem' }
+l['mcj'] = { name = 'mvanip' }
+l['mck'] = { name = 'mbunda' }
+l['mcl'] = { name = 'macaguaje' }
+l['mcm'] = { name = 'kristang' }
+l['mcn'] = { name = 'masa' }
+l['mco'] = { name = 'mixe de Coatlán', sortKey = 'mixe Coatlán' }
+l['mcp'] = { name = 'makaa' }
+l['mcr'] = { name = 'menya' }
+l['mcs'] = { name = 'mambai' }
+l['mct'] = { name = 'manguissa' }
+l['mcu'] = { name = 'ba mambila' }
+l['mcv'] = { name = 'minanibai' }
+l['mcw'] = { name = 'mawa' }
+l['mcx'] = { name = 'mpiemo' }
+l['mcy'] = { name = 'watut du Sud', sortKey = 'watut Sud' }
+l['mcz'] = { name = 'mawan' }
+l['mda'] = { name = 'mada (Nigeria)', sortKey = 'mada Nigeria' }
+l['mdb'] = { name = 'morigi' }
+l['mdc'] = { name = 'male' }
+l['mdd'] = { name = 'mbum' }
+l['mde'] = { name = 'maba (Tchad)', sortKey = 'maba Tchad' }
+l['mdf'] = { name = 'mokcha' }
+l['mdg'] = { name = 'massalat' }
+l['mdh'] = { name = 'maguindanao' }
+l['mdi'] = { name = 'mamvu' }
+l['mdk'] = { name = 'mangbutu' }
+l['mdm'] = { name = 'mayogo' }
+l['mdp'] = { name = 'mbala' }
+l['mdr'] = { name = 'mandar' }
+l['mds'] = { name = 'maria (Papouasie-Nouvelle-Guinée)', sortKey = 'maria Papouasie' }
+l['mdw'] = { name = 'mbochi' }
+l['mdx'] = { name = 'dizi' }
+l['mdy'] = { name = 'maale' }
+l['mea'] = { name = 'menka' }
+l['meb'] = { name = 'ikobi' }
+l['mec'] = { name = 'mara' }
+l['med'] = { name = 'melpa' }
+l['mee'] = { name = 'mengen' }
+l['mef'] = { name = 'megam' }
+l['meh'] = { name = 'mixtèque de Tlaxiaco du Sud-Ouest', sortKey = 'mixtèque Tlaxiaco Sud Ouest' }
+l['mei'] = { name = 'midob' }
+l['mej'] = { name = 'meyah' }
+l['mek'] = { name = 'mekeo' }
+l['mel'] = { name = 'melanau central' }
+l['mem'] = { name = 'mangala' }
+l['men'] = { name = 'mendé' }
+l['menien'] = { name = 'menien' }
+l['meo'] = { name = 'malais kedah' }
+l['me’phaa de Huehuetepec'] = { name = 'me’phaa de Huehuetepec', sortKey = 'mephaa Huehuetepec' }
+l['me’phaa de Huitzapula'] = { name = 'me’phaa de Huitzapula', sortKey = 'mephaa Huitzapula' }
+l['me’phaa de Nanzintla'] = { name = 'me’phaa de Nanzintla', sortKey = 'mephaa Nanzintla' }
+l['me’phaa de Teocuitlapa'] = { name = 'me’phaa de Teocuitlapa', sortKey = 'mephaa Teocuitlapa' }
+l['me’phaa de Zapotitlan Tablas'] = { name = 'me’phaa de Zapotitlan Tablas', sortKey = 'mephaa Zapotitlan Tablas' }
+l['meq'] = { name = 'mere' }
+l['mer'] = { name = 'meru' }
+l['mes'] = { name = 'masmaje' }
+l['met'] = { name = 'mato' }
+l['meu'] = { name = 'motou' }
+l['mev'] = { name = 'mano' }
+l['mew'] = { name = 'maaka' }
+l['mey'] = { name = 'hassanya' }
+l['mez'] = { name = 'menominee' }
+l['mfa'] = { name = 'malais de Pattani', sortKey = 'malais Pattani' }
+l['mfe'] = { name = 'créole mauricien' }
+l['mff'] = { name = 'naki' }
+l['mfg'] = { name = 'mogofin' }
+l['mfh'] = { name = 'matal' }
+l['mfi'] = { name = 'wandala' }
+l['mfj'] = { name = 'mefele' }
+l['mfn'] = { name = 'mbembe Cross River' }
+l['mfp'] = { name = 'malais de Makassar', sortKey = 'malais Makassar' }
+l['mfq'] = { name = 'moba' }
+l['mfr'] = { name = 'marithiel' }
+l['mfv'] = { name = 'manjak', sortKey = 'manjaque' }
+l['mfx'] = { name = 'melo' }
+l['mfy'] = { name = 'mayo' }
+l['mfz'] = { name = 'mabaan' }
+l['mg'] = { name = 'malgache', wiktionaryExists = true }
+l['mga'] = { name = 'moyen irlandais', sortKey = 'irlandais moyen' }
+l['mgc'] = { name = 'morokodo' }
+l['mgd'] = { name = 'moru' }
+l['mgf'] = { name = 'maklew' }
+l['mgh'] = { name = 'makhuwa-meetto' }
+l['mgi'] = { name = 'lijili' }
+l['mgj'] = { name = 'abureni' }
+l['mgk'] = { name = 'mawes' }
+l['mgm'] = { name = 'mambae' }
+l['mgo'] = { name = 'meta’' }
+l['mgp'] = { name = 'magar oriental' }
+l['mgq'] = { name = 'malila' }
+l['mgr'] = { name = 'mambwe-lungu' }
+l['mgs'] = { name = 'manda (Tanzanie)', sortKey = 'manda Tanzanie' }
+l['mgv'] = { name = 'matengo' }
+l['mgw'] = { name = 'matumbi' }
+l['mgz'] = { name = 'mbugwe' }
+l['mh'] = { name = 'marshallais', wiktionaryExists = true }
+l['mha'] = { name = 'manda (Inde)', sortKey = 'manda Inde' }
+l['mhb'] = { name = 'mahongwe' }
+l['mhc'] = { name = 'mocho' }
+l['mhe'] = { name = 'mah meri' }
+l['mhi'] = { name = 'ma’di' }
+l['mhj'] = { name = 'moghol' }
+l['mhl'] = { name = 'mauwake' }
+l['mhm'] = { name = 'makhuwa-moniga' }
+l['mhn'] = { name = 'mochène' }
+l['mho'] = { name = 'mashi (Zambie)', sortKey = 'mashi Zambie' }
+l['mhp'] = { name = 'malais balinais' }
+l['mhq'] = { name = 'mandan' }
+l['mhr'] = { name = 'mari de l’Est', sortKey = 'mari Est' }
+l['mhs'] = { name = 'buru' }
+l['mht'] = { name = 'mandahuaca' }
+l['mhu'] = { name = 'digaro' }
+l['mhx'] = { name = 'maru' }
+l['mhy'] = { name = 'ma’anyan' }
+l['mhz'] = { name = 'moor' }
+l['mi'] = { name = 'maori', wiktionaryExists = true }
+l['mia'] = { name = 'miami' }
+l['miao de Xiaozhang'] = { name = 'miao de Xiaozhang', sortKey = 'miao Xiaozhang' }
+l['mib'] = { name = 'mixtèque d’Atatláhuca', sortKey = 'mixtèque Atatláhuca' }
+l['mic'] = { name = 'micmac' }
+l['mid'] = { name = 'néo-mandéen', sortKey = 'mandéen neo' }
+l['mie'] = { name = 'mixtèque d’Ocotepec', sortKey = 'mixtèque ocotepec' }
+l['mif'] = { name = 'mofu-gudur' }
+l['mig'] = { name = 'mixtèque de San Miguel El Grande', sortKey = 'mixtèque San Miguel El Grande' }
+l['mih'] = { name = 'mixtèque de Chayuco', sortKey = 'mixtèque Chayuco' }
+l['mii'] = { name = 'mixtèque de Chigmecatitlán', sortKey = 'mixtèque Chigmecatitlán' }
+l['mij'] = { name = 'abar' }
+l['mik'] = { name = 'mikasuki' }
+l['mik-hit'] = { name = 'hitchiti' }
+l['mil'] = { name = 'mixtèque de Peñoles', sortKey = 'mixtèque Peñoles' }
+l['milang'] = { name = 'milang' }
+l['mim'] = { name = 'mixtèque d’Alacatlatzala', sortKey = 'mixtèque Alacatlatzala' }
+l['min'] = { name = 'minangkabau', wiktionaryExists = true }
+l['mio'] = { name = 'mixtèque de Pinotepa Nacional', sortKey = 'mixtèque Pinotepa Nacional' }
+l['mip'] = { name = 'mixtèque d’Apasco-Apoala', sortKey = 'mixtèque Apasco Apoala' }
+l['miq'] = { name = 'miskito' }
+l['mir'] = { name = 'mixe de l’Isthme', sortKey = 'mixe Isthme' }
+l['miri'] = { name = 'miri' }
+l['mit'] = { name = 'mixtèque du sud de Puebla', sortKey = 'mixtèque Puebla Sud' }
+l['mithaka'] = { name = 'mithaka' }
+l['miw'] = { name = 'akoye' }
+l['mix'] = { name = 'mixtèque de Mixtepec', sortKey = 'mixtèque Mixtepec' }
+l['miy'] = { name = 'mixtèque d’Ayutla', sortKey = 'mixtèque Ayutla' }
+l['miz'] = { name = 'mixtèque de Coatzospan', sortKey = 'mixtèque Coatzospan' }
+l['mjc'] = { name = 'mixtèque de San Juan Colorado', sortKey = 'mixtèque San Juan Colorado' }
+l['mjd'] = { name = 'konkow' }
+l['mje'] = { name = 'muskum' }
+l['mjg'] = { name = 'monguor' }
+l['mjh'] = { name = 'mwera (Nyasa)', sortKey = 'mwera Nyasa' }
+l['mji'] = { name = 'kim mun' }
+l['mjj'] = { name = 'mawak' }
+l['mjm'] = { name = 'medebur' }
+l['mjr'] = { name = 'malavedan' }
+l['mjt'] = { name = 'sauria pahahria' }
+l['mjv'] = { name = 'mannan' }
+l['mjw'] = { name = 'karbi' }
+l['mjx'] = { name = 'mahali' }
+l['mjy'] = { name = 'mohican' }
+l['mk'] = { name = 'macédonien', wiktionaryExists = true }
+l['mkc'] = { name = 'siliput' }
+l['mkf'] = { name = 'miya' }
+l['mkg'] = { name = 'mak (Chine)', sortKey = 'mak Chine' }
+l['mkh'] = { name = 'langues môn-khmères', sortKey = 'môn khmères langues', isGroup = true }
+l['mkj'] = { name = 'mokil' }
+l['mkm'] = { name = 'moklen' }
+l['mkn'] = { name = 'malais de Kupang', sortKey = 'malais Kupang' }
+l['mkp'] = { name = 'moikodi' }
+l['mkq'] = { name = 'miwok de la baie', sortKey = 'miwok baie' }
+l['mks'] = { name = 'mixtèque de Silacayoapan', sortKey = 'mixtèque Silacayoapan' }
+l['mku'] = { name = 'konyanka' }
+l['mkv'] = { name = 'mavea' }
+l['mkw'] = { name = 'munukutuba' }
+l['mkx'] = { name = 'quinamiguin' }
+l['mky'] = { name = 'makian de l’Est', sortKey = 'makian Est' }
+l['mkz'] = { name = 'makasae' }
+l['ml'] = { name = 'malayalam', wiktionaryExists = true }
+l['mla'] = { name = 'tamambo' }
+l['mlc'] = { name = 'cao lan' }
+l['mle'] = { name = 'manambu' }
+l['mlf'] = { name = 'mal' }
+l['mlh'] = { name = 'mape' }
+l['mlj'] = { name = 'milju' }
+l['mlk'] = { name = 'ilwana' }
+l['mll'] = { name = 'malua bay' }
+l['mlm'] = { name = 'mulam' }
+l['mlp'] = { name = 'bargam' }
+l['mlq'] = { name = 'malinké occidental' }
+l['mlr'] = { name = 'vamé' }
+l['mls'] = { name = 'masalit' }
+l['mlu'] = { name = 'toqabaqita' }
+l['mlv'] = { name = 'mwotlap' }
+l['mlw'] = { name = 'moloko' }
+l['mlx'] = { name = 'naha’ai' }
+l['mma'] = { name = 'mama' }
+l['mmb'] = { name = 'momina' }
+l['mmc'] = { name = 'mazahua du Michoacán', sortKey = 'mazahua Michoacán' }
+l['mmd'] = { name = 'maonan' }
+l['mme'] = { name = 'mae' }
+l['mmf'] = { name = 'mundat' }
+l['mmg'] = { name = 'ambrym du Nord', sortKey = 'ambrym Nord' }
+l['mmh'] = { name = 'mehináku' }
+l['mmi'] = { name = 'musar' }
+l['mmm'] = { name = 'maii' }
+l['mmn'] = { name = 'mamanwa' }
+l['mmp'] = { name = 'siawi' }
+l['mmr'] = { name = 'miao du Xiangxi occidental', sortKey = 'miao Xiangxi occidental' }
+l['mmt'] = { name = 'malalamai' }
+l['mmu'] = { name = 'mmaala' }
+l['mmw'] = { name = 'emae' }
+l['mmx'] = { name = 'madak' }
+l['mmy'] = { name = 'migaama' }
+l['mn'] = { name = 'mongol', wiktionaryExists = true }
+l['mna'] = { name = 'mbula' }
+l['mnb'] = { name = 'muna' }
+l['mnc'] = { name = 'mandchou' }
+l['mnd'] = { name = 'mondé' }
+l['mne'] = { name = 'naba' }
+l['mnf'] = { name = 'mundani' }
+l['mng'] = { name = 'mnong de l’Est', sortKey = 'mnong Est' }
+l['mnh'] = { name = 'mono (République démocratique du Congo)', sortKey = 'mono Congo démocratique' }
+l['mni'] = { name = 'manipourî', wiktionaryExists = true }
+l['mnj'] = { name = 'munji' }
+l['mnk'] = { name = 'mandinka' }
+l['mnl'] = { name = 'tiale' }
+l['mno'] = { name = 'langues manobos', sortKey = 'manobos langues', isGroup = true }
+l['mnp'] = { name = 'minbei' }
+l['mnr'] = { name = 'mono (États-Unis d’Amérique)', sortKey = 'mono États Unis' }
+l['mns'] = { name = 'mansi' }
+l['mnu'] = { name = 'mer' }
+l['mnv'] = { name = 'rennellais' }
+l['mnw'] = { name = 'môn', wiktionaryExists = true }
+l['mnx'] = { name = 'manikion' }
+l['mnz'] = { name = 'moni' }
+l['mo'] = { name = 'moldave' }
+l['moa'] = { name = 'mwan' }
+l['moc'] = { name = 'mocoví' }
+l['mod'] = { name = 'mobilien' }
+l['moe'] = { name = 'innu' }
+l['moésien'] = { name = 'moésien' }
+l['mof'] = { name = 'mohegan-montauk-narragansett' }
+l['mog'] = { name = 'mongondow' }
+l['moh'] = { name = 'mohawk' }
+l['moi'] = { name = 'mboi' }
+l['mok'] = { name = 'morori' }
+l['mom'] = { name = 'mangue' }
+l['monégasque'] = { name = 'monégasque' }
+l['moo'] = { name = 'monom' }
+l['mop'] = { name = 'mopan' }
+l['mor'] = { name = 'moro' }
+l['mos'] = { name = 'moré' }
+l['mot'] = { name = 'barí' }
+l['mou'] = { name = 'mogum' }
+l['mov'] = { name = 'mohave' }
+l['mow'] = { name = 'moï (Congo)', sortKey = 'moï Congo' }
+l['mox'] = { name = 'molima' }
+l['moy'] = { name = 'shakacho' }
+l['moyen danois'] = { name = 'moyen danois', sortKey = 'danois moyen' }
+l['moyen écossais'] = { name = 'moyen écossais', sortKey = 'écossais moyen' }
+l['moyen japonais'] = { name = 'moyen japonais', sortKey = 'japonais moyen' }
+l['moyen khmer'] = { name = 'moyen khmer', sortKey = 'khmer moyen' }
+l['moyen môn'] = { name = 'moyen môn', sortKey = 'môn moyen' }
+l['moyen okinawaïen'] = { name = 'moyen okinawaïen', sortKey = 'okinawaïen moyen' }
+l['moyen polonais'] = { name = 'moyen polonais', sortKey = 'polonais moyen' }
+l['moyfaw'] = { name = 'moyfaw' }
+l['moz'] = { name = 'gergiko' }
+l['mpa'] = { name = 'mpoto' }
+l['mpb'] = { name = 'mullukmulluk' }
+l['mpc'] = { name = 'mangarayi' }
+l['mpd'] = { name = 'machineri' }
+l['mpe'] = { name = 'majang' }
+l['mpg'] = { name = 'marba' }
+l['mph'] = { name = 'maung' }
+l['mpi'] = { name = 'mpade' }
+l['mpj'] = { name = 'martu wangka' }
+l['mpk'] = { name = 'mbara (Tchad)', sortKey = 'mbara Tchad' }
+l['mpl'] = { name = 'watut central' }
+l['mpm'] = { name = 'mixtèque de Yosondúa', sortKey = 'mixtèque Yosondúa' }
+l['mpo'] = { name = 'miu' }
+l['mpp'] = { name = 'migabac' }
+l['mpq'] = { name = 'matís' }
+l['mpr'] = { name = 'vangunu' }
+l['mps'] = { name = 'dadibi' }
+l['mpt'] = { name = 'mian' }
+l['mpu'] = { name = 'makuráp' }
+l['mpv'] = { name = 'mungkip' }
+l['mpz'] = { name = 'mpi' }
+l['mqb'] = { name = 'mbuko' }
+l['mqe'] = { name = 'matepi' }
+l['mqf'] = { name = 'momuna' }
+l['mqj'] = { name = 'mamasa' }
+l['mqm'] = { name = 'marquisien du Sud', sortKey = 'marquisien Sud' }
+l['mqn'] = { name = 'moronene' }
+l['mqo'] = { name = 'modole' }
+l['mqp'] = { name = 'manipa' }
+l['mqq'] = { name = 'minokok' }
+l['mqr'] = { name = 'mander' }
+l['mqs'] = { name = 'makian de l’Ouest', sortKey = 'makian Ouest' }
+l['mqu'] = { name = 'mandari' }
+l['mqv'] = { name = 'mosimo' }
+l['mqw'] = { name = 'murupi' }
+l['mqx'] = { name = 'mamuju' }
+l['mqy'] = { name = 'manggarai' }
+l['mqz'] = { name = 'pano-malasanga' }
+l['mr'] = { name = 'marathe', wiktionaryExists = true }
+l['mra'] = { name = 'mlabri' }
+l['mrb'] = { name = 'sungwadia' }
+l['mrc'] = { name = 'maricopa' }
+l['mrd'] = { name = 'magar de l’Ouest', sortKey = 'magar Ouest' }
+l['mre'] = { name = 'langue des signes de Martha’s Vineyard', sortKey = 'signes Marthas Vineyard' }
+l['mrf'] = { name = 'elseng' }
+l['mrg'] = { name = 'mising' }
+l['mrh'] = { name = 'mara chin' }
+l['mrj'] = { name = 'mari de l’Ouest', sortKey = 'mari Ouest' }
+l['mrk'] = { name = 'hmwaveke' }
+l['mrl'] = { name = 'mortlock' }
+l['mrm'] = { name = 'mwerlap' }
+l['mrn'] = { name = 'cheke holo' }
+l['mro'] = { name = 'mru' }
+l['mrp'] = { name = 'morouas' }
+l['mrq'] = { name = 'marquisien du Nord', sortKey = 'marquisien Nord' }
+l['mrr'] = { name = 'maria (Inde)', sortKey = 'maria Inde' }
+l['mrs'] = { name = 'maragus' }
+l['mrt'] = { name = 'margi' }
+l['mru'] = { name = 'mono (Cameroun)', sortKey = 'mono Cameroun' }
+l['mrv'] = { name = 'mangarévien' }
+l['mrw'] = { name = 'maranao' }
+l['mrx'] = { name = 'maremgi' }
+l['mry'] = { name = 'mandaya' }
+l['mrz'] = { name = 'marind' }
+l['ms'] = { name = 'malais', wiktionaryExists = true }
+l['msb'] = { name = 'masbatenyo' }
+l['msc'] = { name = 'sankaran' }
+l['msd'] = { name = 'langue des signes maya de Yucatec', sortKey = 'signes maya Yucatec' }
+l['mse'] = { name = 'moussey' }
+l['msf'] = { name = 'mekwei' }
+l['msg'] = { name = 'moraid' }
+l['msj'] = { name = 'ma (Congo-Kinshasa)', sortKey = 'ma Congo démocratique' }
+l['msk'] = { name = 'mansaka' }
+l['msl'] = { name = 'molof' }
+l['msm'] = { name = 'manobo agusan' }
+l['msn'] = { name = 'vurës' }
+l['mso'] = { name = 'mombum' }
+l['msq'] = { name = 'caac' }
+l['msu'] = { name = 'musom' }
+l['mt'] = { name = 'maltais', wiktionaryExists = true }
+l['mta'] = { name = 'manobo de Cotabato', sortKey = 'manobo Cotabato' }
+l['mtb'] = { name = 'agni morofoué' }
+l['mtc'] = { name = 'munit' }
+l['mtd'] = { name = 'mualang' }
+l['mte'] = { name = 'mono (Salomon)', sortKey = 'mono Salomon' }
+l['mtf'] = { name = 'murik (Papouasie-Nouvelle-Guinée)', sortKey = 'murik Papouasie' }
+l['mtg'] = { name = 'una' }
+l['mth'] = { name = 'munggui' }
+l['mti'] = { name = 'maiwa (Papouasie-Nouvelle-Guinée)', sortKey = 'maiwa Papouasie' }
+l['mtj'] = { name = 'moskona' }
+l['mtl'] = { name = 'montol' }
+l['mtn'] = { name = 'matagalpa' }
+l['mto'] = { name = 'mixe de Totontepec', sortKey = 'mixe Totontepec' }
+l['mtp'] = { name = 'wichi' }
+l['mtq'] = { name = 'muong' }
+l['mtt'] = { name = 'mota' }
+l['mtu'] = { name = 'mixtèque de Tututepec', sortKey = 'mixtèque Tututepec' }
+l['mtv'] = { name = 'asaro’o' }
+l['mty'] = { name = 'nabi' }
+l['mua'] = { name = 'moundang' }
+l['mub'] = { name = 'moubi' }
+l['muc'] = { name = 'mbu’' }
+l['mud'] = { name = 'aléoute de Medny', sortKey = 'aléoute Medny' }
+l['mug'] = { name = 'mousgoum' }
+l['muh'] = { name = 'mündü' }
+l['mui'] = { name = 'musi' }
+l['muj'] = { name = 'mabire' }
+l['mum'] = { name = 'maiwala' }
+l['mun'] = { name = 'langues moundas', sortKey = 'moundas langues', isGroup = true }
+l['mup'] = { name = 'malvi' }
+l['muq'] = { name = 'miao du Xiangxi oriental', sortKey = 'miao Xiangxi oriental' }
+l['mur'] = { name = 'murle' }
+l['murut nabaay'] = { name = 'murut nabaay' }
+l['mus'] = { name = 'creek' }
+l['mus-sem'] = { name = 'séminole' }
+l['mut'] = { name = 'muria occidental' }
+l['muu'] = { name = 'yaaku' }
+l['muv'] = { name = 'muduva' }
+l['mux'] = { name = 'bo-ung' }
+l['muy'] = { name = 'muyang' }
+l['muz'] = { name = 'mursi' }
+l['mva'] = { name = 'manam' }
+l['mvb'] = { name = 'mattole' }
+l['mvf'] = { name = 'mongol de Chine', sortKey = 'mongol Chine' }
+l['mvi'] = { name = 'miyako' }
+l['mvm'] = { name = 'muya' }
+l['mvo'] = { name = 'marovo' }
+l['mvp'] = { name = 'duri' }
+l['mvq'] = { name = 'moere' }
+l['mvr'] = { name = 'marau' }
+l['mvt'] = { name = 'mpotovoro' }
+l['mvv'] = { name = 'murut tagol' }
+l['mvz'] = { name = 'mesqan' }
+l['mwd'] = { name = 'mudbura' }
+l['mwe'] = { name = 'mwera (Chimwera)', sortKey = 'mwera Chimwera' }
+l['mwf'] = { name = 'murrinh-patha' }
+l['mwg'] = { name = 'aiklep' }
+l['mwi'] = { name = 'ninde' }
+l['mwk'] = { name = 'maninka de Kita', sortKey = 'maninka Kita' }
+l['mwl'] = { name = 'mirandais' }
+l['mwm'] = { name = 'sar' }
+l['mwo'] = { name = 'maewo central' }
+l['mwp'] = { name = 'kala lagaw ya' }
+l['mwr'] = { name = 'marvari' }
+l['mwt'] = { name = 'moken' }
+l['mww'] = { name = 'hmong blanc' }
+l['mxb'] = { name = 'mixtèque de Tezoatlán', sortKey = 'mixtèque Tezoatlán' }
+l['mxd'] = { name = 'modang' }
+l['mxe'] = { name = 'ifira-mele' }
+l['mxh'] = { name = 'mvuba' }
+l['mxi'] = { name = 'mozarabe' }
+l['mxj'] = { name = 'miju' }
+l['mxk'] = { name = 'monumbo' }
+l['mxn'] = { name = 'moï (Indonésie)', sortKey = 'moï Indonésie' }
+l['mxp'] = { name = 'mixe de Tlahuitoltepec', sortKey = 'mixe Tlahuitoltepec' }
+l['mxr'] = { name = 'murik' }
+l['mxt'] = { name = 'mixtèque de Jamiltepec', sortKey = 'mixtèque Jamiltepec' }
+l['mxx'] = { name = 'mahou' }
+l['mxy'] = { name = 'mixtèque de Nochixtlán du Sud-Est', sortKey = 'mixtèque Nochixtlán Sud Est' }
+l['mxz'] = { name = 'masela central' }
+l['my'] = { name = 'birman', wiktionaryExists = true }
+l['myb'] = { name = 'mbay' }
+l['mye'] = { name = 'myènè' }
+l['myf'] = { name = 'mao du Nord', sortKey = 'mao Nord' }
+l['myg'] = { name = 'manta' }
+l['myh'] = { name = 'makah' }
+l['myk'] = { name = 'mamara' }
+l['myl'] = { name = 'moma' }
+l['mym'] = { name = 'me’en' }
+l['myn'] = { name = 'langues mayas', sortKey = 'mayas langues', isGroup = true }
+l['myp'] = { name = 'pirahã' }
+l['myq'] = { name = 'maninka de forêt', sortKey = 'maninka forêt' }
+l['myr'] = { name = 'muniche' }
+l['mysien'] = { name = 'mysien' }
+l['myu'] = { name = 'mundurukú' }
+l['myv'] = { name = 'erza' }
+l['myw'] = { name = 'muyuw' }
+l['myx'] = { name = 'masaba' }
+l['myy'] = { name = 'macuna' }
+l['mza'] = { name = 'mixtèque de Santa María Zacatepec', sortKey = 'mixtèque Santa María Zacatepec' }
+l['mzb'] = { name = 'mozabite' }
+l['mzd'] = { name = 'malimba' }
+l['mzh'] = { name = 'wichí lhamtés güisnay' }
+l['mzi'] = { name = 'mazatèque d’Ixcatlán', sortKey = 'mazatèque Ixcatlán' }
+l['mzj'] = { name = 'manya' }
+l['mzk'] = { name = 'mambila de l’Ouest', sortKey = 'mambila Ouest' }
+l['mzm'] = { name = 'mumuye' }
+l['mzn'] = { name = 'mazandarani' }
+l['mzp'] = { name = 'movima' }
+l['mzq'] = { name = 'mori atas' }
+l['mzr'] = { name = 'marúbo' }
+l['mzs'] = { name = 'créole de Macao', sortKey = 'créole Macao' }
+l['mzv'] = { name = 'manza' }
+l['mzw'] = { name = 'deg' }
+l['na'] = { name = 'nauruan', wiktionaryExists = true }
+l['naa'] = { name = 'namla' }
+l['nab'] = { name = 'nambikwara du Sud', sortKey = 'nambikwara Sud' }
+l['nac'] = { name = 'narak' }
+l['nad'] = { name = 'nijadali' }
+l['nadou'] = { name = 'nadou' }
+l['nae'] = { name = 'naka’ela' }
+l['naf'] = { name = 'nabak' }
+l['nag'] = { name = 'nagamais' }
+l['nah'] = { name = 'nahuatl', wiktionaryExists = true }
+l['nai'] = { name = 'langues nord-amérindiennes', sortKey = 'nord amérindiennes langues', isGroup = true }
+l['nak'] = { name = 'nakanai' }
+l['nal'] = { name = 'nalik' }
+l['nam'] = { name = 'ngan’gityemerri' }
+l['nan'] = { name = 'minnan', wikimediaCode = 'zh-min-nan', wiktionaryExists = true }
+l['nanga ira’'] = { name = 'nanga ira’' }
+l['nao'] = { name = 'naaba' }
+l['nap'] = { name = 'napolitain' }
+l['naq'] = { name = 'nama (khoe)', sortKey = 'naam khoe' }
+l['nar'] = { name = 'iguta' }
+l['nas'] = { name = 'naasioi' }
+l['nat'] = { name = 'hungworo' }
+l['navarro-aragonais'] = { name = 'navarro-aragonais' }
+l['na’vi'] = { name = 'na’vi' }
+l['naw'] = { name = 'nawuri' }
+l['nay'] = { name = 'ngarrindjeri' }
+l['naz'] = { name = 'nahuatl du Coatepec', sortKey = 'nahuatl Coatepec' }
+l['nb'] = { name = 'norvégien (bokmål)', sortKey = 'norvégien bokmål', wikimediaCode = 'no', wiktionaryExists = true }
+l['nba'] = { name = 'ngangela' }
+l['nbb'] = { name = 'ndoe' }
+l['nbc'] = { name = 'chang naga' }
+l['nbe'] = { name = 'konyak' }
+l['nbh'] = { name = 'ngamo' }
+l['nbi'] = { name = 'mao' }
+l['nbk'] = { name = 'nake' }
+l['nbn'] = { name = 'kuri' }
+l['nbp'] = { name = 'nnam' }
+l['nbr'] = { name = 'numana-nunku-gbantu-numbu' }
+l['nbt'] = { name = 'nah' }
+l['nbu'] = { name = 'rongmei' }
+l['nbv'] = { name = 'ngamambo' }
+l['nbw'] = { name = 'ngbandi du Sud', sortKey = 'ngbandi Sud' }
+l['nca'] = { name = 'iyo' }
+l['ncb'] = { name = 'nicobarais central' }
+l['ncd'] = { name = 'nachering' }
+l['nce'] = { name = 'yale' }
+l['ncg'] = { name = 'nisga’a' }
+l['nch'] = { name = 'nahuatl de la Huasteca central', sortKey = 'nahuatl Huasteca central' }
+l['nci'] = { name = 'nahuatl classique' }
+l['ncj'] = { name = 'nahuatl du Puebla du Nord', sortKey = 'nahuatl Puebla Nord' }
+l['nck'] = { name = 'nakara' }
+l['ncl'] = { name = 'nahuatl du Michoacán', sortKey = 'nahuatl Michoacán' }
+l['ncr'] = { name = 'ncane' }
+l['nct'] = { name = 'naga des Chothe', sortKey = 'naga Chothe' }
+l['ncx'] = { name = 'nahuatl du Puebla central', sortKey = 'nahuatl Puebla central' }
+l['ncz'] = { name = 'natchez' }
+l['nd'] = { name = 'ndébélé du Nord', sortKey = 'ndébélé Nord' }
+l['nda'] = { name = 'ndasa' }
+l['ndc'] = { name = 'ndau' }
+l['ndd'] = { name = 'nde-nsele-nta' }
+l['ndg'] = { name = 'ndengereko' }
+l['ndh'] = { name = 'ndali' }
+l['ndi'] = { name = 'samba leko' }
+l['ndj'] = { name = 'ndamba' }
+l['ndm'] = { name = 'ndam' }
+l['ndp'] = { name = 'ndo' }
+l['ndr'] = { name = 'ndoola' }
+l['nds'] = { name = 'bas allemand', sortKey = 'allemand bas', wiktionaryExists = true }
+l['nds-nl'] = { name = 'bas-saxon néerlandais', sortKey = 'saxon bas néerlandais' }
+l['ndt'] = { name = 'ndunga' }
+l['ndu'] = { name = 'dugun' }
+l['ndv'] = { name = 'ndut' }
+l['ndy'] = { name = 'luto' }
+l['ndz'] = { name = 'ndogo' }
+l['ne'] = { name = 'népalais', wiktionaryExists = true }
+l['nea'] = { name = 'ngadha de l’Est', sortKey = 'ngadha Est' }
+l['neb'] = { name = 'toura (Côte d’Ivoire)', sortKey = 'toura Côte divoire' }
+l['nec'] = { name = 'nedebang' }
+l['ned'] = { name = 'nde-gbite' }
+l['nee'] = { name = 'nêlêmwa-nixumwak' }
+l['nef'] = { name = 'néfamais' }
+l['neg'] = { name = 'neguidal' }
+l['neh'] = { name = 'nyenkha' }
+l['nei'] = { name = 'néo-hittite', sortKey = 'hittite néo' }
+l['nej'] = { name = 'neko' }
+l['nek'] = { name = 'neku' }
+l['nem'] = { name = 'nemi' }
+l['nen'] = { name = 'nengone' }
+l['neo'] = { name = 'ná-meo' }
+l['ner'] = { name = 'yahadian' }
+l['nes'] = { name = 'kinnauri de Bhoti', sortKey = 'kinnauri Bhoti' }
+l['net'] = { name = 'nete' }
+l['neu'] = { name = 'neo' }
+l['nev'] = { name = 'nyaheun' }
+l['new'] = { name = 'newari' }
+l['newari du Dolakha'] = { name = 'newari du Dolakha', sortKey = 'newari Dolakha' }
+l['nex'] = { name = 'neme' }
+l['ney'] = { name = 'néyo' }
+l['nez'] = { name = 'nez-percé' }
+l['nfa'] = { name = 'dhao' }
+l['nfd'] = { name = 'ahwaï' }
+l['nfl'] = { name = 'äiwoo' }
+l['nfr'] = { name = 'nafaanra' }
+l['ng'] = { name = 'ndonga' }
+l['nga'] = { name = 'ngbaka minagende' }
+l['ngadjuri'] = { name = 'ngadjuri' }
+l['ngb'] = { name = 'ngbandi du Nord', sortKey = 'ngbandi Nord' }
+l['ngc'] = { name = 'ngombe (République démocratique du Congo)', sortKey = 'ngombe Congo démocratique' }
+l['ngd'] = { name = 'ngando (République centrafricaine)', sortKey = 'ngando Centrafrique' }
+l['nge'] = { name = 'mankon' }
+l['ngf'] = { name = 'langues trans-néo-guinéennes', sortKey = 'guinéennes trans néo langues', isGroup = true }
+l['ngg'] = { name = 'ngbaka manza' }
+l['ngh'] = { name = 'nǀu', sortKey = 'nu' }
+l['ngi'] = { name = 'ngizim' }
+l['ngj'] = { name = 'ngie' }
+l['ngk'] = { name = 'dalabon' }
+l['ngl'] = { name = 'elomwe' }
+l['ngn'] = { name = 'ngwo' }
+l['ngo'] = { name = 'ngoni' }
+l['ngp'] = { name = 'nguu' }
+l['ngr'] = { name = 'engdewu' }
+l['ngs'] = { name = 'gvoko' }
+l['ngt'] = { name = 'ngeq' }
+l['ngu'] = { name = 'nahuatl de Guerrero', sortKey = 'nahuatl Guerrero' }
+l['ngv'] = { name = 'nagumi' }
+l['nha'] = { name = 'nhanda' }
+l['nhb'] = { name = 'beng' }
+l['nhc'] = { name = 'nahuatl du Tabasco', sortKey = 'nahuatl Tabasco' }
+l['nhd'] = { name = 'guarani paraguayen' } -- aussi gug
+l['nhe'] = { name = 'nahuatl de la Huasteca oriental', sortKey = 'nahuatl Huasteca oriental' }
+l['nhg'] = { name = 'nahuatl de Tetelcingo', sortKey = 'nahuatl Tetelcingo' }
+l['nhi'] = { name = 'nahuatl de Zacatlán', sortKey = 'nahuatl Zacatlán' }
+l['nhk'] = { name = 'nahuatl de l’isthme de Cosoleacaque', sortKey = 'nahuatl Cosoleacaque isthme' }
+l['nhm'] = { name = 'nahuatl du Morelos', sortKey = 'nahuatl Morelos' }
+l['nhn'] = { name = 'nahuatl central' }
+l['nho'] = { name = 'takuu' }
+l['nhp'] = { name = 'nahuatl de l’isthme de Pajapan', sortKey = 'nahuatl Pajapan isthme' }
+l['nhq'] = { name = 'nahuatl de Huaxcaleca', sortKey = 'nahuatl Huaxcaleca' }
+l['nhr'] = { name = 'naro' }
+l['nht'] = { name = 'nahuatl de l’Ometepec', sortKey = 'nahuatl Ometepec' }
+l['nhu'] = { name = 'noone' }
+l['nhv'] = { name = 'nahuatl du Temascaltepec', sortKey = 'nahuatl Temascaltepec' }
+l['nhw'] = { name = 'nahuatl de la Huasteca occidental', sortKey = 'nahuatl Huasteca occidental' }
+l['nhx'] = { name = 'nahuatl de l’isthme de Mecayapan', sortKey = 'nahuatl Mecayapan isthme' }
+l['nhy'] = { name = 'nahuatl de l’Oaxaca du Nord', sortKey = 'nahuatl Oaxaca nord' }
+l['nhz'] = { name = 'nahuatl de Santa María la Alta', sortKey = 'nahuatl Santa María la Alta' }
+l['nia'] = { name = 'nias', wiktionaryExists = true }
+l['nib'] = { name = 'nakame' }
+l['nic'] = { name = 'langues nigéro-kordofaniennes', sortKey = 'nigéro kordofaniennes langues', isGroup = true }
+l['nid'] = { name = 'ngandi' }
+l['nie'] = { name = 'niellim' }
+l['nif'] = { name = 'nek' }
+l['nig'] = { name = 'ngalakan' }
+l['nih'] = { name = 'nyiha (Tanzanie)', sortKey = 'nyiha Tanzanie' }
+l['nii'] = { name = 'nii' }
+l['nij'] = { name = 'ngaju dayak' }
+l['nik'] = { name = 'grand nicobar' }
+l['nil'] = { name = 'nila' }
+l['nim'] = { name = 'nilamba' }
+l['nin'] = { name = 'ninzo' }
+l['nio'] = { name = 'nganassan' }
+l['nipissing'] = { name = 'nipissing' }
+l['niq'] = { name = 'nandi' }
+l['nir'] = { name = 'nimboran' }
+l['nis'] = { name = 'nimi' }
+l['nit'] = { name = 'kolami du Sud-Est', sortKey = 'kolami Sud Est' }
+l['niu'] = { name = 'niuéen' }
+l['niv'] = { name = 'nivkh' }
+l['niw'] = { name = 'nimo' }
+l['niy'] = { name = 'ngiti' }
+l['niz'] = { name = 'ningil' }
+l['nja'] = { name = 'nzanyi' }
+l['njh'] = { name = 'lotha' }
+l['nji'] = { name = 'gudanji' }
+l['njj'] = { name = 'njen' }
+l['njl'] = { name = 'njalgulgule' }
+l['njm'] = { name = 'angami' }
+l['njn'] = { name = 'liangmai' }
+l['njo'] = { name = 'ao' }
+l['njr'] = { name = 'njerep' }
+l['njs'] = { name = 'nisa' }
+l['njt'] = { name = 'pidgin ndyuka-trio' }
+l['nkd'] = { name = 'koireng' }
+l['nkg'] = { name = 'nekgini' }
+l['nkh'] = { name = 'khezha' }
+l['nki'] = { name = 'thangal' }
+l['nkj'] = { name = 'nakai' }
+l['nkk'] = { name = 'nokuku' }
+l['nkm'] = { name = 'namat' }
+l['nko'] = { name = 'nkonya' }
+l['nkp'] = { name = 'niuatoputapu' }
+l['nkr'] = { name = 'nukuoro' }
+l['nkx'] = { name = 'nkoroo' }
+l['nkz'] = { name = 'nkari' }
+l['nl'] = { name = 'néerlandais', hasPortal = true, wiktionaryExists = true }
+l['nla'] = { name = 'ngombale' }
+l['nlc'] = { name = 'nalca' }
+l['nld'] = { name = 'flamand oriental' }
+l['nle'] = { name = 'nyala de l’Est', sortKey = 'nyala Est' }
+l['nlg'] = { name = 'gela' }
+l['nll'] = { name = 'nihali' }
+l['nln'] = { name = 'nahuatl du Durango', sortKey = 'nahuatl Durango' }
+l['nlu'] = { name = 'nchumbulu' }
+l['nlv'] = { name = 'nahuatl de l’Orizaba', sortKey = 'nahuatl Orizaba' }
+l['nly'] = { name = 'nyamal' }
+l['nlz'] = { name = 'nalögo' }
+l['nma'] = { name = 'maram naga' }
+l['nmb'] = { name = 'big nambas' }
+l['nme'] = { name = 'mzieme naga' }
+l['nmf'] = { name = 'tangkhul naga' }
+l['nmh'] = { name = 'monsang' }
+l['nmk'] = { name = 'namakura' }
+l['nml'] = { name = 'ndemli' }
+l['nmm'] = { name = 'manangba' }
+l['nmn'] = { name = 'taa' }
+l['nmq'] = { name = 'nambya' }
+l['nms'] = { name = 'letemboi' }
+l['nmu'] = { name = 'maidu du Nord-Est', sortKey = 'maidu Nord Est' }
+l['nmv'] = { name = 'ngamini' }
+l['nmx'] = { name = 'nama (papou)', sortKey = 'nama papou' }
+l['nmy'] = { name = 'namuyi' }
+l['nmz'] = { name = 'nawdm' }
+l['nn'] = { name = 'norvégien (nynorsk)', sortKey = 'norvégien nynorsk', wikimediaCode = 'nn', wiktionaryExists = true }
+l['nna'] = { name = 'nyangumarta' }
+l['nnb'] = { name = 'kinande' }
+l['nnc'] = { name = 'nancere' }
+l['nnd'] = { name = 'ambae de l’Ouest' }
+l['nne'] = { name = 'ngandyera' }
+l['nnf'] = { name = 'ngaing' }
+l['nng'] = { name = 'maring naga' }
+l['nnh'] = { name = 'ngiemboon' }
+l['nnj'] = { name = 'nyangatom' }
+l['nnm'] = { name = 'namia' }
+l['nnn'] = { name = 'ngueté' }
+l['nnp'] = { name = 'naga wancho' }
+l['nnq'] = { name = 'ngindo' }
+l['nnr'] = { name = 'narungga' }
+l['nns'] = { name = 'ningye' }
+l['nnt'] = { name = 'nanticoke' }
+l['nnv'] = { name = 'nugunu (Australie)', sortKey = 'nugunu Australie' }
+l['nnw'] = { name = 'nuni du Sud', sortKey = 'nuni Sud' }
+l['no'] = { name = 'norvégien', wiktionaryExists = true }
+l['noa'] = { name = 'wounaan' }
+l['noc'] = { name = 'nuk' }
+l['nod'] = { name = 'thaï du Nord', sortKey = 'thaï Nord' }
+l['noe'] = { name = 'nimadi' }
+l['nog'] = { name = 'nogaï' }
+l['noi'] = { name = 'noiri' }
+l['noj'] = { name = 'nonuya' }
+l['nok'] = { name = 'nooksack' }
+l['nol'] = { name = 'nomlaki' }
+l['nom'] = { name = 'nokamán' }
+l['non'] = { name = 'vieux norrois', sortKey = 'norrois vieux' }
+l['noo'] = { name = 'nootka' }
+l['nop'] = { name = 'numanggang' }
+l['nordique commun'] = { name = 'nordique commun' }
+l['normand'] = { name = 'normand', wikimediaCode = 'nrm' }
+l['nos'] = { name = 'yi oriental' }
+l['not'] = { name = 'nomatsiguenga' }
+l['nou'] = { name = 'ewage-notu' }
+l['nov'] = { name = 'novial' }
+l['now'] = { name = 'nyambo' }
+l['noz'] = { name = 'nayi' }
+l['npa'] = { name = 'nar phu' }
+l['nph'] = { name = 'phom' }
+l['npl'] = { name = 'nahuatl du Puebla du Sud-Est', sortKey = 'nahuatl Puebla Sud Est' }
+l['npn'] = { name = 'mondropolon' }
+l['npy'] = { name = 'napu' }
+l['nqm'] = { name = 'ndom' }
+l['nqo'] = { name = 'n’ko' }
+l['nr'] = { name = 'ndébélé du Sud', sortKey = 'ndébélé Sud' }
+l['nra'] = { name = 'ngom' }
+l['nrb'] = { name = 'nara' }
+l['nrc'] = { name = 'norique' }
+l['nre'] = { name = 'naga des Rengma du Sud', sortKey = 'naga Rengma Sud' }
+l['nrg'] = { name = 'narango' }
+l['nri'] = { name = 'chokri' }
+l['nrk'] = { name = 'ngarla' }
+l['nrl'] = { name = 'ngarluma' }
+l['nrm'] = { name = 'narum' }
+l['nrn'] = { name = 'norne' }
+l['nrp'] = { name = 'picène du Nord', sortKey = 'picène Nord' }
+l['nrr'] = { name = 'nora' }
+l['nrt'] = { name = 'kalapuya du Nord', sortKey = 'kalapuya Nord' }
+l['nru'] = { name = 'mosuo' }
+l['nrx'] = { name = 'ngurmbur' }
+l['nrz'] = { name = 'lala' }
+l['nsa'] = { name = 'naga de Sangtam', sortKey = 'naga Sangtam' }
+l['nsc'] = { name = 'nshi' }
+l['nsf'] = { name = 'nisu du Nord-Ouest', sortKey = 'nisu Nord Ouest' }
+l['nsg'] = { name = 'ongamo' }
+l['nsh'] = { name = 'ngoshie' }
+l['nsk'] = { name = 'naskapi' }
+l['nsm'] = { name = 'sema' }
+l['nsn'] = { name = 'nehan' }
+l['nso'] = { name = 'sotho du Nord', sortKey = 'sotho Nord' }
+l['nsq'] = { name = 'miwok de la Sierra du Nord', sortKey = 'miwok Sierra Nord' }
+l['nst'] = { name = 'tangsa' }
+l['nsu'] = { name = 'nahuatl de la Sierra Negra', sortKey = 'nahuatl Sierra Negra' }
+l['nsw'] = { name = 'navut' }
+l['nsy'] = { name = 'nasal' }
+l['nsz'] = { name = 'nisenan' }
+l['nte'] = { name = 'nathembo' }
+l['nti'] = { name = 'natioro' }
+l['ntj'] = { name = 'ngaanyatjarra' }
+l['ntk'] = { name = 'ikoma-nata-isenye' }
+l['ntm'] = { name = 'naténi' }
+l['ntp'] = { name = 'tepehuan du Nord', sortKey = 'tepehuan Nord' }
+l['ntu'] = { name = 'natügu' }
+l['ntw'] = { name = 'nottoway' }
+l['ntz'] = { name = 'natanzi' }
+l['nua'] = { name = 'yuanga-zuanga' }
+l['nub'] = { name = 'langues nubiennes', sortKey = 'nubiennes langues', isGroup = true }
+l['nuc'] = { name = 'nukuini' }
+l['nud'] = { name = 'ngala' }
+l['nue'] = { name = 'ngundu' }
+l['nuf'] = { name = 'nusu' }
+l['nug'] = { name = 'nungali' }
+l['nuh'] = { name = 'ndunda' }
+l['nui'] = { name = 'ngumbi' }
+l['nuj'] = { name = 'nyole' }
+l['nuk'] = { name = 'nuuchahnulth' }
+l['nul'] = { name = 'nusa laut' }
+l['num'] = { name = 'niuafo’ou' }
+l['nun'] = { name = 'anong' }
+l['nunu de Bama'] = { name = 'nunu de Bama', sortKey = 'nunu Bama' }
+l['nuo'] = { name = 'nguôn' }
+l['nup'] = { name = 'nupe-nupe-tako' }
+l['nuq'] = { name = 'nukumanu' }
+l['nur'] = { name = 'nukuria' }
+l['nus'] = { name = 'naath' }
+l['nut'] = { name = 'nung (Viêt Nam)', sortKey = 'nung Vietnam' }
+l['nutabe'] = { name = 'nutabe' }
+l['nuu'] = { name = 'ngbundu' }
+l['nuv'] = { name = 'nuni du Nord', sortKey = 'nuni Nord' }
+l['nuw'] = { name = 'nguluwan' }
+l['nux'] = { name = 'mehek' }
+l['nuy'] = { name = 'nunggubuyu' }
+l['nuz'] = { name = 'nahuatl de Tlamacazapa', sortKey = 'nahuatl Tlamacazapa' }
+l['nv'] = { name = 'navajo' }
+l['nvh'] = { name = 'nasarian' }
+l['nvo'] = { name = 'nyokon' }
+l['nwa'] = { name = 'nawathinehena' }
+l['nwc'] = { name = 'newari classique' }
+l['nwg'] = { name = 'ngayawang' }
+l['nwi'] = { name = 'tanna du Sud-Ouest', sortKey = 'tanna Sud Ouest' }
+l['nwm'] = { name = 'nyamusa-molo' }
+l['nwr'] = { name = 'nawaru' }
+l['nwy'] = { name = 'nottoway-meherrin' }
+l['nxa'] = { name = 'naueti' }
+l['nxd'] = { name = 'ngando (République démocratique du Congo)', sortKey = 'ngando Congo démocratique' }
+l['nxe'] = { name = 'nage' }
+l['nxg'] = { name = 'ngadha' }
+l['nxq'] = { name = 'naxi' }
+l['nxr'] = { name = 'ninggerum' }
+l['nxu'] = { name = 'narau' }
+l['nxx'] = { name = 'nafri' }
+l['ny'] = { name = 'nyanja' }
+l['nya'] = { name = 'chichewa' }
+l['nyb'] = { name = 'nyangbo' }
+l['nye'] = { name = 'nyengo' }
+l['nyh'] = { name = 'nyigina' }
+l['nyi'] = { name = 'ama (Soudan)', sortKey = 'ama Soudan' }
+l['nyk'] = { name = 'nyaneka' }
+l['nyl'] = { name = 'nyeu' }
+l['nym'] = { name = 'nyamwezi' }
+l['nyn'] = { name = 'nyankore' }
+l['nyo'] = { name = 'nyoro' }
+l['nyp'] = { name = 'nyangi' }
+l['nyr'] = { name = 'nyiha (Malawi)', sortKey = 'nyiha Malawi' }
+l['nys'] = { name = 'noongar' }
+l['nyt'] = { name = 'nyawaygi' }
+l['nyu'] = { name = 'nyungwe' }
+l['nyx'] = { name = 'nganyaywana' }
+l['nyy'] = { name = 'nyakyusa-ngonde' }
+l['nzb'] = { name = 'nzèbi' }
+l['nzi'] = { name = 'nzéma' }
+l['nzu'] = { name = 'téké-nzikou' }
+l['nzz'] = { name = 'nanga' }
+l['oaa'] = { name = 'orok' }
+l['oac'] = { name = 'orotch' }
+l['oar'] = { name = 'araméen ancien' }
+l['oav'] = { name = 'avar ancien' }
+l['obi'] = { name = 'obispeño' }
+l['obk'] = { name = 'bontok du Sud', sortKey = 'bontok Sud' }
+l['obl'] = { name = 'oblo' }
+l['obm'] = { name = 'moabite' }
+l['obo'] = { name = 'obo' }
+l['obr'] = { name = 'vieux birman', sortKey = 'birman vieux' }
+l['obt'] = { name = 'vieux breton', sortKey = 'breton vieux' }
+l['obu'] = { name = 'obulom' }
+l['oc'] = { name = 'occitan', wiktionaryExists = true }
+l['oca'] = { name = 'ocaina' }
+l['och'] = { name = 'chinois archaïque' }
+l['ocm'] = { name = 'vieux cham', sortKey = 'cham vieux' }
+l['oco'] = { name = 'vieux cornique', sortKey = 'cornique vieux' }
+l['ocu'] = { name = 'matlatzinca d’Atzingo', sortKey = 'matlatzinca Atzingo' }
+l['oda'] = { name = 'odut' }
+l['odt'] = { name = 'vieux néerlandais', sortKey = 'néerlandais vieux' }
+l['odu'] = { name = 'odual' }
+l['ofo'] = { name = 'ofo' }
+l['ofs'] = { name = 'vieux frison', sortKey = 'frison vieux' }
+l['ofu'] = { name = 'efutop' }
+l['ogb'] = { name = 'ogbia' }
+l['ogc'] = { name = 'ogba' }
+l['oge'] = { name = 'ancien géorgien', sortKey = 'géorgien ancien' }
+l['ogg'] = { name = 'ogbogolo' }
+l['ogo'] = { name = 'khana' }
+l['ogu'] = { name = 'ogbronuagum' }
+l['ohu'] = { name = 'ancien hongrois', sortKey = 'hongrois ancien' }
+l['oia'] = { name = 'oirata' }
+l['oin'] = { name = 'one d’Inebu', sortKey = 'one Inebu' }
+l['oj'] = { name = 'ojibwa' }
+l['ojb'] = { name = 'ojibwa du Nord-Ouest', sortKey = 'ojibwa Nord Ouest' }
+l['ojc'] = { name = 'ojibwa central' }
+l['ojg'] = { name = 'ojibwa de l’Est', sortKey = 'ojibwa Est' }
+l['ojp'] = { name = 'ancien japonais', sortKey = 'japonais ancien' }
+l['ojs'] = { name = 'oji-cri' }
+l['ojv'] = { name = 'luangiua' }
+l['ojw'] = { name = 'saulteaux' }
+l['oka'] = { name = 'colville-okanagan' }
+l['okb'] = { name = 'okobo' }
+l['okd'] = { name = 'okodia' }
+l['oke'] = { name = 'okpe (langue édoïde du Sud-Ouest)', sortKey = 'okpe édoïde Sud Ouest' }
+l['oki'] = { name = 'okiek' }
+l['okm'] = { name = 'moyen coréen', sortKey = 'coréen moyen' }
+l['okn'] = { name = 'oki-no-erabu' }
+l['oko'] = { name = 'ancien coréen', sortKey = 'coréen ancien' }
+l['okr'] = { name = 'kirike' }
+l['oku'] = { name = 'oku' }
+l['okx'] = { name = 'okpe (langue édoïde du Nord-Ouest)', sortKey = 'okpe édoïde Nord Ouest' }
+l['ola'] = { name = 'walungge' }
+l['old'] = { name = 'mochi' }
+l['ole'] = { name = 'olekha' }
+l['olk'] = { name = 'olkol' }
+l['olm'] = { name = 'oloma' }
+l['olo'] = { name = 'olonetsien' }
+l['olr'] = { name = 'olrat' }
+l['olt'] = { name = 'vieux lituanien', sortKey = 'lituanien vieux' }
+l['olu'] = { name = 'kuvale' }
+l['om'] = { name = 'oromo', wiktionaryExists = true }
+l['oma'] = { name = 'omaha-ponca' }
+l['omb'] = { name = 'ambae de l’Est', sortKey = 'ambae Est' }
+l['omc'] = { name = 'mochica' }
+l['ome'] = { name = 'omejes' }
+l['omg'] = { name = 'omagua' }
+l['omi'] = { name = 'omi' }
+l['oml'] = { name = 'ombo' }
+l['omn'] = { name = 'minoéen' }
+l['omo'] = { name = 'utarmbung' }
+l['omp'] = { name = 'ancien manipouri', sortKey = 'manipouri ancien' }
+l['omq'] = { name = 'langues otomangues', sortKey = 'otomangues langues', isGroup = true }
+l['omr'] = { name = 'vieux marathi', sortKey = 'marathi vieux' }
+l['omt'] = { name = 'omotik' }
+l['omu'] = { name = 'omurana' }
+l['omv'] = { name = 'langues omotiques', sortKey = 'omotiques langues', isGroup = true }
+l['omx'] = { name = 'vieux môn', sortKey = 'môn vieux' }
+l['omy'] = { name = 'vieux malais', sortKey = 'malais vieux' }
+l['ona'] = { name = 'selknam' }
+l['onb'] = { name = 'lingao' }
+l['one'] = { name = 'oneida' }
+l['ong'] = { name = 'olo' }
+l['oni'] = { name = 'onin' }
+l['onk'] = { name = 'one de Kabore', sortKey = 'one Kabore' }
+l['onn'] = { name = 'onobasulu' }
+l['ono'] = { name = 'onondaga' }
+l['onom'] = { name = 'onomatopée', sortKey = '*onomatopée' }
+l['onp'] = { name = 'sartang' }
+l['ons'] = { name = 'ono' }
+l['ont'] = { name = 'ontena' }
+l['onu'] = { name = 'unua' }
+l['onw'] = { name = 'ancien nubien', sortKey = 'nubien ancien' }
+l['ood'] = { name = 'tohono o’odham' }
+l['oog'] = { name = 'ong' }
+l['oon'] = { name = 'onge' }
+l['oos'] = { name = 'ossète ancien' }
+l['opa'] = { name = 'okpamheri' }
+l['opm'] = { name = 'oksapmin' }
+l['opo'] = { name = 'opao' }
+l['opt'] = { name = 'opata' }
+l['opy'] = { name = 'ofayé' }
+l['or'] = { name = 'oriya', wiktionaryExists = true }
+l['ora'] = { name = 'oroha' }
+l['orc'] = { name = 'orma' }
+l['ore'] = { name = 'orejón' }
+l['org'] = { name = 'oring' }
+l['orh'] = { name = 'oroqen' }
+l['orléanais'] = { name = 'orléanais' }
+l['oro'] = { name = 'orokolo' }
+l['orr'] = { name = 'oruma' }
+l['ors'] = { name = 'orang seletar' }
+l['ort'] = { name = 'oriya kotia' }
+l['oru'] = { name = 'ormuri' }
+l['orv'] = { name = 'vieux russe', sortKey = 'russe vieux' }
+l['orx'] = { name = 'oro' }
+l['orz'] = { name = 'ormu' }
+l['os'] = { name = 'ossète' }
+l['osa'] = { name = 'osage' }
+l['osc'] = { name = 'osque' }
+l['osi'] = { name = 'osing' }
+l['osn'] = { name = 'vieux soundanais', sortKey = 'soundanais vieux' }
+l['osp'] = { name = 'vieil espagnol', sortKey = 'espagnol vieil' }
+l['ost'] = { name = 'osatu' }
+l['osx'] = { name = 'vieux saxon', sortKey = 'saxon vieux' }
+l['ota'] = { name = 'turc ottoman' }
+l['otb'] = { name = 'tibétain ancien' }
+l['otd'] = { name = 'dohoi' }
+l['ote'] = { name = 'otomi de la vallée de Mezquital', sortKey = 'otomi Mezquital vallée' }
+l['otk'] = { name = 'vieux turc', sortKey = 'turc vieux' }
+l['otl'] = { name = 'otomi de Tilapa', sortKey = 'otomi Tilapa' }
+l['otm'] = { name = 'otomi de la Sierra', sortKey = 'otomi Sierra' }
+l['otn'] = { name = 'otomi de Tenango', sortKey = 'otomi Tenango' }
+l['oto'] = { name = 'langues otomies', sortKey = 'otomies langues', isGroup = true }
+l['otq'] = { name = 'otomi de Querétaro', sortKey = 'otomi Querétaro' }
+l['otr'] = { name = 'otoro' }
+l['ots'] = { name = 'otomi de l’état de Mexico', sortKey = 'otomi Mexico état' }
+l['ott'] = { name = 'otomi de Temoaya', sortKey = 'otomi Temoaya' }
+l['otw'] = { name = 'ottawa' } -- outaouais
+l['otx'] = { name = 'otomi de Texcatepec', sortKey = 'otomi Texcatepec' }
+l['otz'] = { name = 'otomi d’Ixtenco', sortKey = 'otomi Ixtenco' }
+l['oua'] = { name = 'tagargrent' }
+l['oue'] = { name = 'oune' }
+l['oui'] = { name = 'vieil-ouïghour', sortKey = 'ouïghour vieil' }
+l['oum'] = { name = 'ouma' }
+l['oun'] = { name = '’o’ung', sortKey = 'o ung' }
+l['ovd'] = { name = 'elfdalien' }
+l['owi'] = { name = 'owiniga' }
+l['owl'] = { name = 'vieux gallois', sortKey = 'gallois vieux' }
+l['oyb'] = { name = 'oy' }
+l['oyd'] = { name = 'oyda' }
+l['oym'] = { name = 'wayampi' }
+l['ozm'] = { name = 'koonzime' }
+l['pa'] = { name = 'pendjabi', wiktionaryExists = true }
+l['paa'] = { name = 'langues papoues', sortKey = 'papoues langues', isGroup = true }
+l['pab'] = { name = 'parecís' }
+l['pac'] = { name = 'pacoh' }
+l['pad'] = { name = 'paumarí' }
+l['pae'] = { name = 'pagibete' }
+l['paf'] = { name = 'paranawát' }
+l['pag'] = { name = 'pangasinan' }
+l['pah'] = { name = 'parintintin' }
+l['pai'] = { name = 'pe' }
+l['paikoneka'] = { name = 'paikoneka' }
+l['pak'] = { name = 'parakanã' }
+l['pal'] = { name = 'pehlevi' }
+l['palouse'] = { name = 'palouse' }
+l['pam'] = { name = 'kapampangan' }
+l['pandunia'] = { name = 'pandunia' }
+l['pannonien'] = { name = 'pannonien' }
+l['pao'] = { name = 'paiute du Nord', sortKey = 'paiute Nord' }
+l['pap'] = { name = 'papiamento' }
+l['par'] = { name = 'timbisha' }
+l['pas'] = { name = 'papasena' }
+l['pat'] = { name = 'papitalai' }
+l['patagón de Bagua'] = { name = 'patagón de Bagua', sortKey = 'patagón Bagua' }
+l['patagón de Perico'] = { name = 'patagón de Perico', sortKey = 'patagón Perico' }
+l['patwin du Sud'] = { name = 'patwin du Sud', sortKey = 'patwin Sud' }
+l['pau'] = { name = 'palau' }
+l['pav'] = { name = 'wari’' }
+l['paw'] = { name = 'pawnee' }
+l['pax'] = { name = 'pankararé' }
+l['pay'] = { name = 'pech' }
+l['paz'] = { name = 'pankararú' }
+l['pbb'] = { name = 'paez' }
+l['pbf'] = { name = 'popoloca de Coyotepec', sortKey = 'popoloca Coyotepec' }
+l['pbh'] = { name = 'e’ñepa' }
+l['pbi'] = { name = 'parkwa' }
+l['pbl'] = { name = 'mak (Nigeria)', sortKey = 'mak Nigeria' }
+l['pbn'] = { name = 'kpasam' }
+l['pbr'] = { name = 'pangwa' }
+l['pbs'] = { name = 'pame central' }
+l['pbt'] = { name = 'pachto du Sud', sortKey = 'pachto Sud' }
+l['pbu'] = { name = 'pachto du Nord', sortKey = 'pachto Nord' }
+l['pbv'] = { name = 'pnar' }
+l['pby'] = { name = 'pyu (Papouasie Nouvelle-Guinée)', sortKey = 'pyu Papouasie' }
+l['pca'] = { name = 'popoloca de Santa Inés Ahuatempan', sortKey = 'popoloca Santa Inés Ahuatempan' }
+l['pcb'] = { name = 'pear' }
+l['pcc'] = { name = 'bouyei' }
+l['pcd'] = { name = 'picard' }
+l['pce'] = { name = 'palaung ruching' }
+l['pcf'] = { name = 'paliyan' }
+l['pcg'] = { name = 'paniya' }
+l['pch'] = { name = 'pardhan' }
+l['pci'] = { name = 'duruwa' }
+l['pcj'] = { name = 'gorum' }
+l['pck'] = { name = 'paite' }
+l['pcl'] = { name = 'pardhi' }
+l['pcm'] = { name = 'pidgin nigérian' }
+l['pcn'] = { name = 'piti' }
+l['pcp'] = { name = 'pacahuara' }
+l['pcw'] = { name = 'pyapun' }
+l['pda'] = { name = 'anam' }
+l['pdc'] = { name = 'pennsilfaanisch' }
+l['pdn'] = { name = 'fedan' }
+l['pdo'] = { name = 'padoe' }
+l['pdt'] = { name = 'plautdietsch' }
+l['pea'] = { name = 'peranakan' }
+l['peb'] = { name = 'pomo de l’Est', sortKey = 'pomo Est' }
+l['pef'] = { name = 'pomo du Nord-Est', sortKey = 'pomo Nord Est' }
+l['peh'] = { name = 'bonan' }
+l['pei'] = { name = 'chichimeca-jonaz' }
+l['pej'] = { name = 'pomo du Nord', sortKey = 'pomo Nord' }
+l['pel'] = { name = 'pekal' }
+l['penan benalui'] = { name = 'penan benalui' }
+l['penange'] = { name = 'penange' }
+l['peo'] = { name = 'vieux perse', sortKey = 'perse vieux' }
+l['pep'] = { name = 'kunja' }
+l['peq'] = { name = 'pomo du Sud', sortKey = 'pomo Sud' }
+l['percheron'] = { name = 'percheron' }
+l['pes'] = { name = 'persan iranien' }
+l['pez'] = { name = 'penan de l’Est', sortKey = 'penan Est' }
+l['pfa'] = { name = 'pááfang' }
+l['pfe'] = { name = 'peere' }
+l['pfl'] = { name = 'palatin' }
+l['pgk'] = { name = 'rerep' }
+l['pgl'] = { name = 'irlandais primitif' }
+l['pgn'] = { name = 'pélignien' }
+l['pgs'] = { name = 'pangseng' }
+l['pgu'] = { name = 'pagu' }
+l['pha'] = { name = 'baheng' }
+l['phi'] = { name = 'langues philippines', sortKey = 'philippines langues', isGroup = true }
+l['phk'] = { name = 'phake' }
+l['phl'] = { name = 'phalura' }
+l['phn'] = { name = 'phénicien' }
+l['pho'] = { name = 'phunoi' }
+l['phr'] = { name = 'potwari' }
+l['pi'] = { name = 'pali', wiktionaryExists = true }
+l['pia'] = { name = 'pima bajo' }
+l['pib'] = { name = 'yine' }
+l['pic'] = { name = 'apindji' }
+l['picuris'] = { name = 'picuris' }
+l['pid'] = { name = 'piaroa' }
+l['pie'] = { name = 'tompiro' }
+l['pif'] = { name = 'pingelap' }
+l['pig'] = { name = 'pisabo' }
+l['pih'] = { name = 'pitcairnais' }
+l['pii'] = { name = 'pini' }
+l['pij'] = { name = 'pijao' }
+l['pil'] = { name = 'yom' }
+l['pim'] = { name = 'powhatan' }
+l['pin'] = { name = 'piame' }
+l['pio'] = { name = 'piapoco' }
+l['pip'] = { name = 'pero' }
+l['pir'] = { name = 'piratapuya' }
+l['pis'] = { name = 'pidgin des îles Salomon', sortKey = 'pidgin Salomon' }
+l['pit'] = { name = 'pitta-pitta' }
+l['piu'] = { name = 'pintupi' }
+l['piv'] = { name = 'vaeakau-taumako' }
+l['piw'] = { name = 'pimbwe' }
+l['pix'] = { name = 'piu' }
+l['piz'] = { name = 'pije' }
+l['pjt'] = { name = 'pitjantjatjara' }
+l['pkc'] = { name = 'baekje' }
+l['pkn'] = { name = 'pakanha' }
+l['pko'] = { name = 'pökot' }
+l['pkp'] = { name = 'pakupaku' }
+l['pkr'] = { name = 'kurumba d’Attapady', sortKey = 'kurumba Attapady' }
+l['pkt'] = { name = 'malieng' }
+l['pku'] = { name = 'paku' }
+l['pl'] = { name = 'polonais', wiktionaryExists = true }
+l['plb'] = { name = 'polonombauk' }
+l['plc'] = { name = 'palawano central' }
+l['pld'] = { name = 'polari' }
+l['ple'] = { name = 'palu’e' }
+l['plf'] = { name = 'langues malayo-polynésiennes centrales', sortKey = 'malayo polynésiennes centrales langues', isGroup = true }
+l['plg'] = { name = 'pilagá' }
+l['plj'] = { name = 'polci' }
+l['pll'] = { name = 'palaung doré' }
+l['pln'] = { name = 'palenquero' }
+l['plo'] = { name = 'popoluca d’Oluta', sortKey = 'popoluca Oluta' }
+l['plodarisch'] = { name = 'plodarisch' }
+l['plq'] = { name = 'palaïte' }
+l['plr'] = { name = 'palaka' }
+l['pls'] = { name = 'popoloca de San Marcos Tlacoyalco', sortKey = 'popoloca San Marcos Tlacoyalco' }
+l['plt'] = { name = 'malgache du plateau', sortKey = 'malgache plateau' }
+l['plu'] = { name = 'palikur' }
+l['plw'] = { name = 'palawano de Brooke’s Point', sortKey = 'palawano Brookes Point' }
+l['ply'] = { name = 'palyu' }
+l['plz'] = { name = 'murut paluan' }
+l['pma'] = { name = 'paama' }
+l['pmb'] = { name = 'pambia' }
+l['pmc'] = { name = 'palumata' }
+l['pmd'] = { name = 'pallanganmiddang' }
+l['pme'] = { name = 'pwaamèi' }
+l['pmf'] = { name = 'pomona' }
+l['pmh'] = { name = 'prakrit maharashtri' }
+l['pmi'] = { name = 'primi du Nord', sortKey = 'primi Nord' }
+l['pmj'] = { name = 'primi du Sud', sortKey = 'primi Sud' }
+l['pmk'] = { name = 'pamlico' }
+l['pml'] = { name = 'lingua franca' }
+l['pmm'] = { name = 'pomo' }
+l['pmn'] = { name = 'pam' }
+l['pmo'] = { name = 'pom' }
+l['pmq'] = { name = 'pame du Nord', sortKey = 'pame Nord' }
+l['pmr'] = { name = 'paynamar' }
+l['pms'] = { name = 'piémontais' }
+l['pmt'] = { name = 'paumotu' }
+l['pmu'] = { name = 'panjabi de Mirpur', sortKey = 'panjabi Mirpur' }
+l['pmw'] = { name = 'miwok des plaines', sortKey = 'miwok plaines' }
+l['pmx'] = { name = 'naga poumei' }
+l['pmy'] = { name = 'malais papou' }
+l['pmz'] = { name = 'pame du Sud', sortKey = 'pame Sud' }
+l['pnb'] = { name = 'pendjabi de l’Ouest', sortKey = 'pendjabi Ouest', wiktionaryExists = true }
+l['png'] = { name = 'pongu' }
+l['pnh'] = { name = 'tongareva' }
+l['pni'] = { name = 'aoheng' }
+l['pnk'] = { name = 'paunaka' }
+l['pnn'] = { name = 'pinai-hagahai' }
+l['pno'] = { name = 'huariapano' }
+l['pnq'] = { name = 'pana (Burkina Faso)', sortKey = 'pana Burkina' }
+l['pnr'] = { name = 'panim' }
+l['pns'] = { name = 'ponosakan' }
+l['pnt'] = { name = 'pontique' }
+l['pnu'] = { name = 'jiongnai' }
+l['pnv'] = { name = 'pinigura' }
+l['pnw'] = { name = 'panytyima' }
+l['pnx'] = { name = 'phong-kniang' }
+l['pny'] = { name = 'pinyin' }
+l['pnz'] = { name = 'pana (République centrafricaine)', sortKey = 'pana Centrafrique' }
+l['poc'] = { name = 'pokomam' }
+l['pod'] = { name = 'ponares' }
+l['poe'] = { name = 'popoloca de San Juan Atzingo', sortKey = 'popoloca San Juan Atzingo' }
+l['pof'] = { name = 'poke' }
+l['pog'] = { name = 'potiguára' }
+l['poh'] = { name = 'poqomchi’' }
+l['poi'] = { name = 'popoluca de la Sierra', sortKey = 'popoluca Sierra' }
+l['poitevin-saintongeais'] = { name = 'poitevin-saintongeais' }
+l['pom'] = { name = 'pomo du Sud-Est', sortKey = 'pomo Sud Est' }
+l['pon'] = { name = 'pohnpei' }
+l['poo'] = { name = 'pomo central' }
+l['pop'] = { name = 'pwapwâ' }
+l['poq'] = { name = 'popoluca de Texistepec', sortKey = 'popoluca Texistepec' }
+l['pos'] = { name = 'popoluca de Sayula', sortKey = 'popoluca Sayula' }
+l['pot'] = { name = 'potawatomi' }
+l['pov'] = { name = 'créole de Guinée-Bissau', sortKey = 'créole Guinée Bissau' }
+l['pow'] = { name = 'popoloca otlaltepec de San Felipe', sortKey = 'popoloca otlaltepec San Felipe' }
+l['pox'] = { name = 'polabe' }
+l['poy'] = { name = 'pogoro' }
+l['poz'] = { name = 'langues malayo-polynésiennes', sortKey = 'malayo polynésiennes langues', isGroup = true }
+l['ppa'] = { name = 'pao' }
+l['ppe'] = { name = 'papi' }
+l['ppi'] = { name = 'paipai' }
+l['ppk'] = { name = 'uma' }
+l['ppl'] = { name = 'pipil' }
+l['ppm'] = { name = 'papuma' }
+l['ppn'] = { name = 'papapana' }
+l['ppo'] = { name = 'folopa' }
+l['ppp'] = { name = 'pelende' }
+l['ppt'] = { name = 'pare' }
+l['ppu'] = { name = 'papora' }
+l['pqa'] = { name = 'pa’a' }
+l['pqe'] = { name = 'langues malayo-polynésiennes orientales', sortKey = 'malayo polynésiennes orientales langues', isGroup = true }
+l['pqm'] = { name = 'malécite-passamaquoddy' }
+l['pqw'] = { name = 'langues malayo-polynésiennes occidentales', sortKey = 'malayo polynésiennes occidentales langues', isGroup = true }
+l['pra'] = { name = 'langues prâkrites', sortKey = 'prâkrites langues', isGroup = true }
+l['prb'] = { name = 'lua’' }
+l['prc'] = { name = 'parachi' }
+l['prd'] = { name = 'persan dari' }
+l['pre'] = { name = 'principense' }
+l['pré-ancien japonais'] = { name = 'pré-ancien japonais', sortKey = 'japonais ancien pré' }
+l['prf'] = { name = 'paranan' }
+l['prg'] = { name = 'vieux prussien', sortKey = 'prussien vieux' }
+l['pri'] = { name = 'paicî' }
+l['prk'] = { name = 'parauk' }
+l['prm'] = { name = 'porome' }
+l['pro'] = { name = 'ancien occitan', sortKey = 'occitan ancien' }
+l['prq'] = { name = 'perené' }
+l['prs'] = { name = 'dari' }
+l['prt'] = { name = 'phai' }
+l['pru'] = { name = 'puragi' }
+l['prx'] = { name = 'purki' }
+l['ps'] = { name = 'pachto', wiktionaryExists = true }
+l['psa'] = { name = 'aghu d’Asue', sortKey = 'aghu Asue' }
+l['psd'] = { name = 'langue des signes des Indiens des plaines', sortKey = 'signes indiens plaines' }
+l['pse'] = { name = 'malais central' }
+l['psi'] = { name = 'pashayi du Sud-Est', sortKey = 'pashayi Sud Est' }
+l['psl'] = { name = 'langue des signes de Porto Rico', sortKey = 'signes Porto Rico' }
+l['pso'] = { name = 'langue des signes polonaise', sortKey = 'signes polonaise' }
+l['psr'] = { name = 'langue des signes portugaise', sortKey = 'signes portugaise' }
+l['pss'] = { name = 'kaulong' }
+l['pst'] = { name = 'pachto central' }
+l['psw'] = { name = 'port Sandwich' }
+l['psy'] = { name = 'piscataway' }
+l['pt'] = { name = 'portugais', hasPortal = true, wiktionaryExists = true }
+l['pth'] = { name = 'pataxó hã-ha-hãe' }
+l['pti'] = { name = 'pintiini' }
+l['ptq'] = { name = 'pattapu' }
+l['ptr'] = { name = 'piamatsina' }
+l['ptt'] = { name = 'enrekang' }
+l['ptv'] = { name = 'port vato' }
+l['pua'] = { name = 'purépecha des hauts-plateaux de l’Ouest', sortKey = 'purépecha Ouest hauts plateaux' }
+l['pub'] = { name = 'purum' }
+l['puc'] = { name = 'punan merap' }
+l['pud'] = { name = 'punan aput' }
+l['pue'] = { name = 'gününa yajich' }
+l['puf'] = { name = 'punan merah' }
+l['pug'] = { name = 'phuie' }
+l['pui'] = { name = 'puinave' }
+l['puj'] = { name = 'punan tubu’' }
+l['pum'] = { name = 'puma' }
+l['puo'] = { name = 'ksingmul' }
+l['pup'] = { name = 'pulabu' }
+l['puq'] = { name = 'puquina' }
+l['pur'] = { name = 'puruborá' }
+l['put'] = { name = 'putoh' }
+l['puu'] = { name = 'pounou' }
+l['puw'] = { name = 'puluwat' }
+l['puy'] = { name = 'purisimeño' }
+l['pwb'] = { name = 'panawa' }
+l['pwg'] = { name = 'gapapaiwa' }
+l['pwi'] = { name = 'patwin' }
+l['pwm'] = { name = 'molbog' }
+l['pwn'] = { name = 'paiwan' }
+l['pwo'] = { name = 'pwo de l’Ouest', sortKey = 'pwo Ouest' }
+l['pxm'] = { name = 'mixe de Quetzaltepec', sortKey = 'mixe Quetzaltepec' }
+l['pym'] = { name = 'fyam' }
+l['pyn'] = { name = 'poyanáwa' }
+l['pyu'] = { name = 'puyuma' }
+l['pyx'] = { name = 'pyu (Birmanie)', sortKey = 'pyu Birmanie' }
+l['pyy'] = { name = 'pyen' }
+l['pzn'] = { name = 'para naga' }
+l['qcx'] = { name = 'mucuchí' }
+l['qdh'] = { name = 'chapakura' }
+l['qij'] = { name = 'maypure' }
+l['qlz'] = { name = 'masacara' }
+l['qok'] = { name = 'vieux khmer', sortKey = 'khmer vieux' }
+l['qpj'] = { name = 'timote' }
+l['qpl'] = { name = 'pamigua' }
+l['qu'] = { name = 'quechua', wiktionaryExists = true }
+l['qua'] = { name = 'quapaw' }
+l['qub'] = { name = 'quechua de Huallaga Huánuco', sortKey = 'quechua Huallaga Huánuco' }
+l['quc'] = { name = 'quiché' }
+l['qud'] = { name = 'quichua de Calderón', sortKey = 'quichua Calderón' }
+l['quf'] = { name = 'quechua de Lambayeque', sortKey = 'quechua Lambayeque' }
+l['qug'] = { name = 'quichua du Chimborazo', sortKey = 'quichua Chimborazo' }
+l['quh'] = { name = 'quechua de la Bolivie du Sud', sortKey = 'quechua Bolivie Sud' }
+l['qui'] = { name = 'quileute' }
+l['quk'] = { name = 'quechua de Chachapoyas', sortKey = 'quechua Chachapoyas' }
+l['qum'] = { name = 'sipakapense' }
+l['qun'] = { name = 'quinault' }
+l['qur'] = { name = 'quechua de Yanahuanca Pasco', sortKey = 'quechua Yanahuanca Pasco' }
+l['qus'] = { name = 'quechua de Santiago del Estero', sortKey = 'quechua Santiago del Estero' }
+l['quv'] = { name = 'sakapultèque' }
+l['quy'] = { name = 'quechua d’Ayacucho', sortKey = 'quechua Ayacucho' }
+l['quz'] = { name = 'quechua de Cuzco', sortKey = 'quechua Cuzco' }
+l['qva'] = { name = 'quechua d’Ambo-Pasco', sortKey = 'quechua Ambo Pasco' }
+l['qvc'] = { name = 'quechua de Cajamarca', sortKey = 'quechua Cajamarca' }
+l['qvi'] = { name = 'quichua d’Imbabura', sortKey = 'quichua Imbabura' }
+l['qvn'] = { name = 'quechua du Junín du Nord', sortKey = 'quechua Junín Nord' }
+l['qvo'] = { name = 'quechua de Napo', sortKey = 'quechua Napo' }
+l['qvp'] = { name = 'quechua de Pacaraos', sortKey = 'quechua Pacaraos' }
+l['qvs'] = { name = 'quechua de San Martín', sortKey = 'quechua San Martín' }
+l['qvw'] = { name = 'quechua de Huaylla Wanca', sortKey = 'quechua Huaylla Wanca' }
+l['qvy'] = { name = 'queyu' }
+l['qwa'] = { name = 'quechua de Corongo Ancash', sortKey = 'quechua Corongo Ancash' }
+l['qwc'] = { name = 'quechua classique' }
+l['qwe'] = { name = 'langues quechuas', sortKey = 'quechuas langues', isGroup = true }
+l['qwm'] = { name = 'couman' }
+l['qwt'] = { name = 'kwalhioqua-tlatskanai' }
+l['qxh'] = { name = 'quechua de Panao Huánuco', sortKey = 'quechua Panao Huánuco' }
+l['qxl'] = { name = 'quichua de Salasaca', sortKey = 'quichua Salasaca' }
+l['qxq'] = { name = 'kachkaï' }
+l['qxs'] = { name = 'qiang du Sud', sortKey = 'qiang Sud' }
+l['qxu'] = { name = 'quechua d’Arequipa-La Unión', sortKey = 'quechua Arequipa la Unión' }
+l['qya'] = { name = 'quenya' }
+l['qyp'] = { name = 'quiripi' }
+l['rab'] = { name = 'camling' }
+l['rac'] = { name = 'rasawa' }
+l['rad'] = { name = 'rhade' }
+l['rag'] = { name = 'logoli' }
+l['rah'] = { name = 'rabha' }
+l['raj'] = { name = 'rajasthani' }
+l['rak'] = { name = 'bohuai' }
+l['ral'] = { name = 'ralte' }
+l['ram'] = { name = 'canela' }
+l['ran'] = { name = 'riantana' }
+l['rao'] = { name = 'rao' }
+l['rap'] = { name = 'rapanui' }
+l['rar'] = { name = 'rarotongien' }
+l['ras'] = { name = 'tegali' }
+l['rat'] = { name = 'razajerdi' }
+l['rau'] = { name = 'raute' }
+l['rav'] = { name = 'sampang' }
+l['raw'] = { name = 'rawang' }
+l['rax'] = { name = 'rang' }
+l['ray'] = { name = 'rapa' }
+l['raz'] = { name = 'rahambuu' }
+l['rbb'] = { name = 'rumai' }
+l['rcf'] = { name = 'créole réunionnais' }
+l['rea'] = { name = 'rerau' }
+l['reb'] = { name = 'rembong' }
+l['ree'] = { name = 'rejang kayan' }
+l['reg'] = { name = 'kara (Tanzanie)', sortKey = 'kara Tanzanie' }
+l['rei'] = { name = 'reli' }
+l['rej'] = { name = 'rejang' }
+l['rel'] = { name = 'rendille' }
+l['ren'] = { name = 'rengao' }
+l['rer'] = { name = 'rer bare' }
+l['res'] = { name = 'reshe' }
+l['ret'] = { name = 'retta' }
+l['rey'] = { name = 'reyesano' }
+l['rga'] = { name = 'roria' }
+l['rge'] = { name = 'romano-grec' }
+l['rgn'] = { name = 'romagnol' }
+l['rgr'] = { name = 'resigaro' }
+l['rhg'] = { name = 'rohingya' }
+l['rhp'] = { name = 'yahang' }
+l['ria'] = { name = 'riang (Inde)', sortKey = 'riang Inde' }
+l['rif'] = { name = 'rifain' }
+l['ril'] = { name = 'riang (Birmanie)', sortKey = 'riang Birmanie' }
+l['rim'] = { name = 'nyaturu' }
+l['rin'] = { name = 'nungu' }
+l['rir'] = { name = 'ribun' }
+l['rit'] = { name = 'ritarungo' }
+l['rji'] = { name = 'raji' }
+l['rkb'] = { name = 'rikbaktsa' }
+l['rki'] = { name = 'arakanais' }
+l['rkm'] = { name = 'marka' }
+l['rm'] = { name = 'romanche', wiktionaryExists = true }
+l['rma'] = { name = 'rama' }
+l['rmb'] = { name = 'rembarunga' }
+l['rmc'] = { name = 'romani des Carpates', sortKey = 'romani Carpates' }
+l['rme'] = { name = 'angloromani' }
+l['rmf'] = { name = 'kalo finnois' }
+l['rmg'] = { name = 'voyageur norvégien' }
+l['rmh'] = { name = 'murkim' }
+l['rmi'] = { name = 'lomavren' }
+l['rml'] = { name = 'romani balte' }
+l['rmm'] = { name = 'roma' }
+l['rmn'] = { name = 'romani balkanique' }
+l['rmo'] = { name = 'sinte' }
+l['rmp'] = { name = 'rempi' }
+l['rmq'] = { name = 'caló' }
+l['rms'] = { name = 'langue des signes roumaine', sortKey = 'signes roumaine' }
+l['rmt'] = { name = 'domari' }
+l['rmu'] = { name = 'tavringer' }
+l['rmv'] = { name = 'romanova' }
+l['rmw'] = { name = 'romani gallois' }
+l['rmy'] = { name = 'vlax' }
+l['rmz'] = { name = 'marma' }
+l['rn'] = { name = 'kirundi', wiktionaryExists = true }
+l['rna'] = { name = 'runa' }
+l['rnd'] = { name = 'ruund' }
+l['rng'] = { name = 'ronga' }
+l['rnn'] = { name = 'roon' }
+l['rnp'] = { name = 'rongpo' }
+l['rnr'] = { name = 'nari nari' }
+l['rnw'] = { name = 'rungwa' }
+l['ro'] = { name = 'roumain', wiktionaryExists = true }
+l['roa'] = { name = 'langues romanes', sortKey = 'romanes langues', isGroup = true }
+l['roa-leo'] = { name = 'léonais' }
+l['roa-opt'] = { name = 'galaïco-portugais', sortKey = 'galaïco portugais' }
+l['roa-tara'] = { name = 'tarentin' }
+l['rob'] = { name = 'tae’' }
+l['roc'] = { name = 'roglai de Cac Gia', sortKey = 'roglai Cac Gia' }
+l['rod'] = { name = 'rogo' }
+l['roe'] = { name = 'ronji' }
+l['rof'] = { name = 'rombo' }
+l['rog'] = { name = 'roglai du Nord', sortKey = 'roglai Nord' }
+l['rol'] = { name = 'romblomanon' }
+l['rom'] = { name = 'romani' }
+l['romanica'] = { name = 'romanica' }
+l['roo'] = { name = 'rotokas' }
+l['rop'] = { name = 'kriol' }
+l['ror'] = { name = 'rongga' }
+l['rou'] = { name = 'rounga' }
+l['rouran'] = { name = 'rouran' }
+l['row'] = { name = 'dela-oenale' }
+l['rpn'] = { name = 'repanbitip' }
+l['rpt'] = { name = 'rapting' }
+l['rrm'] = { name = 'moriori' }
+l['rro'] = { name = 'roro' }
+l['rsi'] = { name = 'langue des signes rennellaise', sortKey = 'signes rennellaise' }
+l['rsk'] = { name = 'ruthène pannonien' }
+l['rsl'] = { name = 'langue des signes russe', sortKey = 'signes russe' }
+l['rtc'] = { name = 'rungtu chin' }
+l['rth'] = { name = 'ratahan' }
+l['rtm'] = { name = 'rotuman' }
+l['ru'] = { name = 'russe', hasPortal = true, wiktionaryExists = true }
+l['rub'] = { name = 'gungu' }
+l['rue'] = { name = 'ruthène' }
+l['ruf'] = { name = 'luguru' }
+l['rug'] = { name = 'roviana' }
+l['ruh'] = { name = 'ruga' }
+l['rui'] = { name = 'rufiji' }
+l['ruk'] = { name = 'rukuba' }
+l['ruo'] = { name = 'istro-roumain' }
+l['rup'] = { name = 'aroumain', wikimediaCode = 'roa-rup', wiktionaryExists = true }
+l['ruq'] = { name = 'mégléno-roumain' }
+l['russenorsk'] = { name = 'russenorsk' }
+l['ruthène ancien'] = { name = 'ruthène ancien' }
+l['rut'] = { name = 'rutul' }
+l['rw'] = { name = 'kinyarwanda', wiktionaryExists = true }
+l['rwa'] = { name = 'rawo' }
+l['rwk'] = { name = 'rwa' }
+l['rxd'] = { name = 'ngardi' }
+l['rxw'] = { name = 'karuwali' }
+l['ryn'] = { name = 'amami du Nord', sortKey = 'amami Nord' }
+l['rys'] = { name = 'yaeyama' }
+l['ryu'] = { name = 'okinawaïen', hasPortal = true }
+l['sa'] = { name = 'sanskrit', wiktionaryExists = true }
+l['saa'] = { name = 'saba' }
+l['sab'] = { name = 'buglere' }
+l['sac'] = { name = 'mesquakie' }
+l['sacata'] = { name = 'sacata' }
+l['sad'] = { name = 'sandawe' }
+l['sae'] = { name = 'sabanê' }
+l['saf'] = { name = 'safaliba' }
+l['sagz-âbâdi'] = { name = 'sagz-âbâdi' }
+l['sah'] = { name = 'iakoute' }
+l['sai'] = { name = 'langues sud-amérindiennes', sortKey = 'sud amérindiennes langues', isGroup = true }
+l['saj'] = { name = 'sahu' }
+l['sak'] = { name = 'sake' }
+l['sal'] = { name = 'langues salish', sortKey = 'salish langues', isGroup = true }
+l['salentin'] = { name = 'salentin' }
+l['sam'] = { name = 'araméen samaritain' }
+l['samnite'] = { name = 'samnite' }
+l['sao'] = { name = 'sause' }
+l['sap'] = { name = 'sanapaná' }
+l['saq'] = { name = 'samburu' }
+l['sar'] = { name = 'saraveca' }
+l['sarthois'] = { name = 'sarthois' }
+l['sas'] = { name = 'sassak' }
+l['sat'] = { name = 'santal', wiktionaryExists = true }
+l['sau'] = { name = 'saleman' }
+l['saurano'] = { name = 'saurano' }
+l['sav'] = { name = 'saafi' }
+l['saw'] = { name = 'sawi' }
+l['sax'] = { name = 'sa' }
+l['say'] = { name = 'saya' }
+l['saynawa'] = { name = 'saynawa' }
+l['saz'] = { name = 'saurachtra' }
+l['sba'] = { name = 'ngambay' }
+l['sbc'] = { name = 'kele (Papouasie-Nouvelle-Guinée)', sortKey = 'kele Papouasie' }
+l['sbd'] = { name = 'san du Sud', sortKey = 'san Sud' }
+l['sbf'] = { name = 'shabo' }
+l['sbg'] = { name = 'seget' }
+l['sbh'] = { name = 'sori-harengan' }
+l['sbi'] = { name = 'seti' }
+l['sbk'] = { name = 'safwa' }
+l['sbl'] = { name = 'sambal de Botolan', sortKey = 'sambal Botolan' }
+l['sbn'] = { name = 'sindhi bhil' }
+l['sbo'] = { name = 'sabüm' }
+l['sbp'] = { name = 'sangu' }
+l['sbq'] = { name = 'sirva' }
+l['sbr'] = { name = 'murut sembakung' }
+l['sbs'] = { name = 'subiya' }
+l['sbt'] = { name = 'kimki' }
+l['sbv'] = { name = 'sabin' }
+l['sbw'] = { name = 'himba' }
+l['sby'] = { name = 'soli' }
+l['sc'] = { name = 'sarde', wiktionaryExists = true }
+l['scb'] = { name = 'chut' }
+l['sce'] = { name = 'dongxiang' }
+l['sch'] = { name = 'sakachep' }
+l['sci'] = { name = 'malais du Sri Lanka', sortKey = 'malais Sri Lanka' }
+l['scl'] = { name = 'shina' }
+l['scn'] = { name = 'sicilien', wiktionaryExists = true }
+l['sco'] = { name = 'scots' }
+l['scp'] = { name = 'yolmo' }
+l['scq'] = { name = 'saoch' }
+l['scs'] = { name = 'esclave du Nord', sortKey = 'esclave Nord' }
+l['scw'] = { name = 'sha' }
+l['scx'] = { name = 'sicule' }
+l['sd'] = { name = 'sindhi', wiktionaryExists = true }
+l['sdc'] = { name = 'sassarais' }
+l['sde'] = { name = 'surubu' }
+l['sdf'] = { name = 'sarli' }
+l['sdg'] = { name = 'savi' }
+l['sdh'] = { name = 'kurde du Sud', sortKey = 'kurde Sud' }
+l['sdk'] = { name = 'sos kundi' }
+l['sdm'] = { name = 'semandang' }
+l['sdn'] = { name = 'gallurais' }
+l['sdo'] = { name = 'bukar sadong bidayuh' }
+l['sdp'] = { name = 'sherdukpen' }
+l['sds'] = { name = 'sened' }
+l['sdv'] = { name = 'langues soudaniques orientales', sortKey = 'soudaniques orientales langues', isGroup = true }
+l['sdz'] = { name = 'sallands' }
+l['se'] = { name = 'same du Nord', sortKey = 'same Nord' }
+l['sea'] = { name = 'semai' }
+l['seb'] = { name = 'shempire' }
+l['sec'] = { name = 'sechelt' }
+l['sed'] = { name = 'sedang' }
+l['see'] = { name = 'seneca' }
+l['sef'] = { name = 'tyébara' }
+l['seh'] = { name = 'cisena' }
+l['sei'] = { name = 'seri' }
+l['sek'] = { name = 'sekani' }
+l['sel'] = { name = 'selkoupe' }
+l['sem'] = { name = 'langues sémitiques', sortKey = 'sémitiques langues', isGroup = true }
+l['sen'] = { name = 'nanerge' }
+l['seo'] = { name = 'suarmin' }
+l['sep'] = { name = 'sucite' }
+l['seputan'] = { name = 'seputan' }
+l['seq'] = { name = 'senara' }
+l['ser'] = { name = 'serrano' }
+l['ses'] = { name = 'songhaï koyraboro senni' }
+l['set'] = { name = 'sentani' }
+l['seto'] = { name = 'seto' }
+l['seu'] = { name = 'serui-laut' }
+l['sev'] = { name = 'sénoufo nyarafolo', sortKey = 'sénoufo nyarafolo' }
+l['sew'] = { name = 'sewa bay' }
+l['sey'] = { name = 'secoya' }
+l['sez'] = { name = 'senthang chin' }
+l['sfb'] = { name = 'langue des signes de Belgique francophone', sortKey = 'signes Belgique francophone' }
+l['sfe'] = { name = 'subanen de l’Est', sortKey = 'subanen Est' }
+l['sfw'] = { name = 'sehwi' }
+l['sg'] = { name = 'sango', wiktionaryExists = true }
+l['sga'] = { name = 'vieil irlandais', sortKey = 'irlandais vieil' }
+l['sgb'] = { name = 'ayta mag-antsi' }
+l['sgc'] = { name = 'kipsigis' }
+l['sge'] = { name = 'punan kelai' }
+l['sgh'] = { name = 'shughni' }
+l['sgi'] = { name = 'suga' }
+l['sgk'] = { name = 'sangkong' }
+l['sgn'] = { name = 'langues des signes', sortKey = 'signes langues', isGroup = true }
+l['sgp'] = { name = 'singpho' }
+l['sys'] = { name = 'sinyar' }
+l['sgr'] = { name = 'sangesari' }
+l['sgs'] = { name = 'samogitien', wikimediaCode = 'bat-smg' }
+l['sgt'] = { name = 'brokpake' }
+l['sgw'] = { name = 'sebat bet gurage' }
+l['sgy'] = { name = 'sangletchi' }
+l['sgz'] = { name = 'sursurunga' }
+l['sh'] = { name = 'serbo-croate', wiktionaryExists = true }
+l['sha'] = { name = 'shall-zwall' }
+l['shang'] = { name = 'shang' }
+l['shb'] = { name = 'ninam' }
+l['she'] = { name = 'sheko' }
+l['shg'] = { name = 'shua' }
+l['shh'] = { name = 'shoshone' }
+l['shi'] = { name = 'chleuh' }
+l['shj'] = { name = 'caning' }
+l['shinman'] = { name = 'shinman' }
+l['shk'] = { name = 'shilluk' }
+l['shn'] = { name = 'shan', wiktionaryExists = true }
+l['sho'] = { name = 'shanga' }
+l['shp'] = { name = 'shipibo-conibo' }
+l['shr'] = { name = 'mashi (République démocratique du Congo)', sortKey = 'mashi Congo démocratique' }
+l['shs'] = { name = 'shuswap' }
+l['sht'] = { name = 'shasta' }
+l['shu'] = { name = 'arabe tchadien' }
+l['shv'] = { name = 'shehri' }
+l['shw'] = { name = 'shwai' }
+l['shx'] = { name = 'ho-nte' }
+l['shy'] = { name = 'chaoui', wiktionaryExists = true }
+l['shz'] = { name = 'syenara' }
+l['si'] = { name = 'cingalais', wiktionaryExists = true }
+l['sia'] = { name = 'same d’Akkala', sortKey = 'same Akkala' }
+l['sib'] = { name = 'sebop' }
+l['sic'] = { name = 'malinguat' }
+l['sid'] = { name = 'sidamo' }
+l['sie'] = { name = 'simaa' }
+l['sif'] = { name = 'sèmè' }
+l['sii'] = { name = 'shompen' }
+l['sij'] = { name = 'numbami' }
+l['sik'] = { name = 'sikiana' }
+l['sil'] = { name = 'sisaala des Tumulung', sortKey = 'sisaala tumulung' }
+l['sim'] = { name = 'mende (Papouasie-Nouvelle-Guinée)', sortKey = 'mende Papouasie' }
+l['sio'] = { name = 'langues siouanes', sortKey = 'siouanes langues', isGroup = true }
+l['sip'] = { name = 'sikkimais' }
+l['siq'] = { name = 'sonia' }
+l['sir'] = { name = 'siri' }
+l['sis'] = { name = 'siuslaw' }
+l['sit'] = { name = 'langues sino-tibétaines', sortKey = 'sino tibétaines langues', isGroup = true }
+l['situ'] = { name = 'situ' }
+l['siu'] = { name = 'sinagen' }
+l['siw'] = { name = 'siwai' }
+l['six'] = { name = 'sumau' }
+l['siy'] = { name = 'sivandi' }
+l['siz'] = { name = 'siwi' }
+l['sja'] = { name = 'epena saija' }
+l['sjc'] = { name = 'shaojiang' }
+l['sjd'] = { name = 'same de Kildin', sortKey = 'same Kildin' }
+l['sje'] = { name = 'same de Pite', sortKey = 'same Pite' }
+l['sjk'] = { name = 'same de Kemi', sortKey = 'same Kemi' }
+l['sjl'] = { name = 'miji' }
+l['sjm'] = { name = 'mapun' }
+l['sjn'] = { name = 'sindarin' }
+l['sjo'] = { name = 'xibe' }
+l['sjr'] = { name = 'siar' }
+l['sjt'] = { name = 'same de Ter', sortKey = 'same Ter' }
+l['sju'] = { name = 'same d’Ume', sortKey = 'same Ume' }
+l['sjw'] = { name = 'shawnee' }
+l['sk'] = { name = 'slovaque', wiktionaryExists = true }
+l['ska'] = { name = 'skagit' }
+l['skb'] = { name = 'saek' }
+l['skc'] = { name = 'ma manda' }
+l['skd'] = { name = 'miwok méridional de la Sierra', sortKey = 'miwok méridional Sierra' }
+l['ske'] = { name = 'seke (Vanuatu)', sortKey = 'seke Vanuatu' }
+l['skf'] = { name = 'mekens' }
+l['skg'] = { name = 'sakalava' }
+l['ski'] = { name = 'sika' }
+l['skj'] = { name = 'seke (Népal)', sortKey = 'seke Népal' }
+l['skr'] = { name = 'saraiki', wiktionaryExists = true }
+l['sks'] = { name = 'maia' }
+l['sku'] = { name = 'sakao' }
+l['skv'] = { name = 'skou' }
+l['skx'] = { name = 'seko padang' }
+l['sky'] = { name = 'sikaiana' }
+l['sl'] = { name = 'slovène', wiktionaryExists = true }
+l['sla'] = { name = 'langues slaves', sortKey = 'slaves langues', isGroup = true }
+l['slc'] = { name = 'sáliva' }
+l['sld'] = { name = 'sisaali' }
+l['sle'] = { name = 'sholega' }
+l['slg'] = { name = 'murut selungai' }
+l['slh'] = { name = 'lushootseed du Sud', sortKey = 'lushootseed Sud' }
+l['sli'] = { name = 'bas-silésien', sortKey = 'silésien bas' }
+l['slm'] = { name = 'sama pangutaran' }
+l['sln'] = { name = 'antoniaño' }
+l['slovince'] = { name = 'slovince' }
+l['slovio'] = { name = 'slovio' }
+l['slp'] = { name = 'lamaholot' }
+l['slr'] = { name = 'salar' }
+l['slt'] = { name = 'sila' }
+l['slu'] = { name = 'selaru' }
+l['sly'] = { name = 'selayar' }
+l['slz'] = { name = 'ma’ya' }
+l['sm'] = { name = 'samoan', wiktionaryExists = true }
+l['sma'] = { name = 'same du Sud', sortKey = 'same Sud' }
+l['smb'] = { name = 'simbari' }
+l['smc'] = { name = 'som' }
+l['smh'] = { name = 'samei' }
+l['smi'] = { name = 'langues sames', sortKey = 'sames langues', isGroup = true }
+l['smj'] = { name = 'same de Lule', sortKey = 'same Lule' }
+l['smk'] = { name = 'bolinao' }
+l['smn'] = { name = 'same d’Inari', sortKey = 'same Inari' }
+l['smp'] = { name = 'samaritain' }
+l['smq'] = { name = 'samo (Papouasie-Nouvelle-Guinée)', sortKey = 'samo Papouasie' }
+l['smr'] = { name = 'simeulue' }
+l['sms'] = { name = 'same skolt' }
+l['smt'] = { name = 'simte' }
+l['smu'] = { name = 'somray' }
+l['smw'] = { name = 'sumbawa' }
+l['smy'] = { name = 'semnani' }
+l['sn'] = { name = 'shona', wiktionaryExists = true }
+l['snc'] = { name = 'sinaugoro' }
+l['sne'] = { name = 'bau bidayuh' }
+l['snf'] = { name = 'noon' }
+l['snj'] = { name = 'sango riverain' }
+l['snk'] = { name = 'soninké' }
+l['snl'] = { name = 'sangil' }
+l['snm'] = { name = 'ma’di du Sud', sortKey = 'madi Sud' }
+l['snn'] = { name = 'siona' }
+l['sno'] = { name = 'snohomish' }
+l['snp'] = { name = 'siane' }
+l['snq'] = { name = 'massango' }
+l['snr'] = { name = 'sihan' }
+l['sns'] = { name = 'nahavaq' }
+l['snu'] = { name = 'senggi' }
+l['snv'] = { name = 'sa’ban' }
+l['snw'] = { name = 'selee' }
+l['snx'] = { name = 'sam' }
+l['sny'] = { name = 'saniyo-hiyewe' }
+l['snz'] = { name = 'sinsauru' }
+l['so'] = { name = 'somali', wiktionaryExists = true }
+l['sob'] = { name = 'sobei' }
+l['soc'] = { name = 'so (République démocratique du Congo)', sortKey = 'so Congo démocratique' }
+l['sod'] = { name = 'songoora' }
+l['sog'] = { name = 'sogdien' }
+l['soi'] = { name = 'sonha' }
+l['soj'] = { name = 'soi' }
+l['sok'] = { name = 'sokoro' }
+l['sol'] = { name = 'solos' }
+l['solon'] = { name = 'solon' }
+l['solrésol'] = { name = 'solrésol' }
+l['soltèque'] = { name = 'soltèque' }
+l['son'] = { name = 'langues songhaïes', sortKey = 'songhaïes langues', isGroup = true }
+l['sonqor'] = { name = 'sonqor' }
+l['soo'] = { name = 'songo' }
+l['sor'] = { name = 'somrai' }
+l['sorbung'] = { name = 'sorbung' }
+l['sos'] = { name = 'sembla' }
+l['sou'] = { name = 'thaï du Sud', sortKey = 'thaï Sud' }
+l['sov'] = { name = 'sonsorolais' }
+l['sow'] = { name = 'sowanda' }
+l['sox'] = { name = 'swo' }
+l['soy'] = { name = 'miyobe' }
+l['soz'] = { name = 'temi' }
+l['spb'] = { name = 'sepa (Indonésie)', sortKey = 'sepa Indonésie' }
+l['spd'] = { name = 'saep' }
+l['spe'] = { name = 'sepa (Papouasie-Nouvelle-Guinée)', sortKey = 'sepa Papouasie' }
+l['spi'] = { name = 'saponi' }
+l['spk'] = { name = 'sengo' }
+l['spl'] = { name = 'selepet' }
+l['spn'] = { name = 'sanapaná' }
+l['spo'] = { name = 'spokane' }
+l['spp'] = { name = 'supyiré' }
+l['spr'] = { name = 'saparua' }
+l['spu'] = { name = 'sapuan' }
+l['spx'] = { name = 'picène du Sud', sortKey = 'picène Sud' }
+l['spy'] = { name = 'sabaot' }
+l['sq'] = { name = 'albanais', wiktionaryExists = true }
+l['sqa'] = { name = 'shama' }
+l['sqh'] = { name = 'shau' }
+l['sqj'] = { name = 'langues albanaises', sortKey = 'albanaises langues', isGroup = true }
+l['sqk'] = { name = 'langue des signes albanaise', sortKey = 'signes albanaise' }
+l['sqm'] = { name = 'suma' }
+l['sqn'] = { name = 'susquehannock' }
+l['sqo'] = { name = 'sourkhei' }
+l['sqq'] = { name = 'sou' }
+l['sqr'] = { name = 'arabe sicilien' }
+l['sqs'] = { name = 'langue des signes sri-lankaise', sortKey = 'signes sri lankaise' }
+l['sqt'] = { name = 'soqotri' }
+l['squ'] = { name = 'squamish' }
+l['sr'] = { name = 'serbe', wiktionaryExists = true }
+l['sra'] = { name = 'saruga' }
+l['srb'] = { name = 'sora' }
+l['src'] = { name = 'logudorais' }
+l['sre'] = { name = 'sara' }
+l['srf'] = { name = 'nafi' }
+l['srh'] = { name = 'sariqoli' }
+l['sri'] = { name = 'siriano' }
+l['srk'] = { name = 'murut serudung' }
+l['srl'] = { name = 'isirawa' }
+l['srm'] = { name = 'saramaccan' }
+l['srn'] = { name = 'sranan' }
+l['sro'] = { name = 'campidanais' }
+l['srq'] = { name = 'siriono' }
+l['srr'] = { name = 'sérère' }
+l['srs'] = { name = 'sarsi' }
+l['sru'] = { name = 'suruí' }
+l['srw'] = { name = 'serua' }
+l['sry'] = { name = 'sera' }
+l['ss'] = { name = 'swazi', wiktionaryExists = true }
+l['ssa'] = { name = 'langues nilo-sahariennes', sortKey = 'nilo sahariennes langues', isGroup = true }
+l['ssb'] = { name = 'sama méridional' }
+l['ssc'] = { name = 'suba-simbiti' }
+l['ssd'] = { name = 'siroi' }
+l['sse'] = { name = 'sama balangingi' }
+l['ssf'] = { name = 'thao' }
+l['ssg'] = { name = 'seimat' }
+l['ssh'] = { name = 'arabe shihhi' }
+l['ssj'] = { name = 'sausi' }
+l['ssl'] = { name = 'sisaala de l’Ouest', sortKey = 'sisaala Ouest' }
+l['ssm'] = { name = 'semnam' }
+l['ssn'] = { name = 'waata' }
+l['sso'] = { name = 'sissano' }
+l['ssp'] = { name = 'langue des signes espagnole', sortKey = 'signes espagnole' }
+l['ssr'] = { name = 'langue des signes suisse romande', sortKey = 'signes suisse romande' }
+l['sss'] = { name = 'sô' }
+l['sst'] = { name = 'sinasina' }
+l['ssu'] = { name = 'susuami' }
+l['ssv'] = { name = 'shark bay' }
+l['ssx'] = { name = 'samberigi' }
+l['ssy'] = { name = 'saho' }
+l['st'] = { name = 'sotho du Sud', sortKey = 'sotho Sud', wiktionaryExists = true }
+l['sta'] = { name = 'settla' }
+l['stb'] = { name = 'subanen du Nord', sortKey = 'subanen Nord' }
+l['ste'] = { name = 'liana-seti' }
+l['stf'] = { name = 'seta' }
+l['stg'] = { name = 'trieng' }
+l['sth'] = { name = 'shelta' }
+l['sti'] = { name = 'stieng' }
+l['stj'] = { name = 'san matya' }
+l['stl'] = { name = 'stellingwarfs' }
+l['stm'] = { name = 'setaman' }
+l['stn'] = { name = 'owa' }
+l['sto'] = { name = 'stoney' }
+l['stp'] = { name = 'tepehuan du Sud-Est', sortKey = 'tepehuan Sud Est' }
+l['stq'] = { name = 'frison saterlandais' }
+l['str'] = { name = 'salish des détroits', sortKey = 'salish détroits' }
+l['sts'] = { name = 'shumashti' }
+l['stu'] = { name = 'samtao' }
+l['stv'] = { name = 'silt’e' }
+l['stw'] = { name = 'satawalais' }
+l['sty'] = { name = 'tatar de Sibérie', sortKey = 'tatar Sibérie' }
+l['su'] = { name = 'soundanais', wiktionaryExists = true }
+l['sua'] = { name = 'sulka' }
+l['sub'] = { name = 'suku' }
+l['suc'] = { name = 'subanen de l’Ouest', sortKey = 'subanen Ouest' }
+l['sue'] = { name = 'suena' }
+l['sui'] = { name = 'suki' }
+l['suj'] = { name = 'shubi' }
+l['suk'] = { name = 'soukouma' }
+l['sul'] = { name = 'surigaonon' }
+l['suq'] = { name = 'suri' }
+l['sur'] = { name = 'mwaghavul' }
+l['sus'] = { name = 'soussou' }
+l['sut'] = { name = 'subtiaba' }
+l['suv'] = { name = 'sulung' }
+l['suw'] = { name = 'sumbwa' }
+l['sux'] = { name = 'sumérien' }
+l['suy'] = { name = 'suyá' }
+l['suz'] = { name = 'sunwar' }
+l['sv'] = { name = 'suédois', wiktionaryExists = true }
+l['sva'] = { name = 'svane' }
+l['svb'] = { name = 'ulau-suain' }
+l['sve'] = { name = 'serili' }
+l['svm'] = { name = 'slave molisan' }
+l['svs'] = { name = 'savosavo' }
+l['sw'] = { name = 'swahili', wiktionaryExists = true }
+l['swb'] = { name = 'shimaoré', sortKey = 'shimaore' }
+l['swc'] = { name = 'swahili du Congo', sortKey = 'swahili Congo' }
+l['swg'] = { name = 'souabe' }
+l['swi'] = { name = 'sui' }
+l['swj'] = { name = 'shira' }
+l['swl'] = { name = 'langue des signes suédoise', sortKey = 'signes suédoise' }
+l['swm'] = { name = 'samosa' }
+l['swn'] = { name = 'sawknah' }
+l['swo'] = { name = 'shanenawa' }
+l['swq'] = { name = 'sharwa' }
+l['swr'] = { name = 'saweru' }
+l['swt'] = { name = 'sawila' }
+l['swu'] = { name = 'suwawa' }
+l['sww'] = { name = 'sowa' }
+l['swx'] = { name = 'suruwahá' }
+l['swy'] = { name = 'sarua' }
+l['sxb'] = { name = 'suba' }
+l['sxc'] = { name = 'sicanien' }
+l['sxg'] = { name = 'shixing' }
+l['sxk'] = { name = 'kalapuya du Sud', sortKey = 'kalapuya Sud' }
+l['sxm'] = { name = 'samre' }
+l['sxn'] = { name = 'sangir' }
+l['sxr'] = { name = 'saaroa' }
+l['sxu'] = { name = 'haut-saxon', sortKey = 'saxon haut' }
+l['sya'] = { name = 'siang' }
+l['syb'] = { name = 'subanen central' }
+l['syc'] = { name = 'syriaque classique' }
+l['syd'] = { name = 'langues samoyèdes', sortKey = 'samoyèdes langues', isGroup = true }
+l['syi'] = { name = 'seki' }
+l['syk'] = { name = 'sukur' }
+l['syl'] = { name = 'sylheti' }
+l['sym'] = { name = 'san maya' }
+l['syn'] = { name = 'senaya' }
+l['syr'] = { name = 'syriaque' }
+l['syw'] = { name = 'syuba' }
+l['sza'] = { name = 'semelai' }
+l['szb'] = { name = 'ngalum' }
+l['szc'] = { name = 'semaq beri' }
+l['sze'] = { name = 'seze' }
+l['szg'] = { name = 'sengele' }
+l['szl'] = { name = 'silésien' }
+l['szp'] = { name = 'inanwatan' }
+l['szw'] = { name = 'sawai' }
+l['szy'] = { name = 'sakizaya' }
+l['ta'] = { name = 'tamoul', wiktionaryExists = true }
+l['taa'] = { name = 'bas tanana', sortKey = 'tanana bas' }
+l['tab'] = { name = 'tabassaran' }
+l['tabancale'] = { name = 'tabancale' }
+l['tac'] = { name = 'tarahumara occidental' }
+l['tad'] = { name = 'tause' }
+l['tae'] = { name = 'tariana' }
+l['taf'] = { name = 'tapirapé' }
+l['tag'] = { name = 'tagoi' }
+l['tai'] = { name = 'langues taïes', sortKey = 'taïes langues', isGroup = true }
+l['taitnapam'] = { name = 'taitnapam' }
+l['taïfale'] = { name = 'taïfale' }
+l['taj'] = { name = 'tamang oriental' }
+l['tak'] = { name = 'tala' }
+l['tal'] = { name = 'tal' }
+l['tan'] = { name = 'tangale' }
+l['tangam'] = { name = 'tangam' }
+l['tao'] = { name = 'yami' }
+l['taokas'] = { name = 'taokas' }
+l['tap'] = { name = 'taabwa' }
+l['taq'] = { name = 'tamasheq' }
+l['tar'] = { name = 'tarahumara central' }
+l['tas'] = { name = 'tây bồi' }
+l['tau'] = { name = 'haut tanana', sortKey = 'tanana haut' }
+l['tav'] = { name = 'tatuyo' }
+l['tax'] = { name = 'tamki' }
+l['tay'] = { name = 'atayal' }
+l['taz'] = { name = 'tocho' }
+l['tba'] = { name = 'aikanã' }
+l['tbc'] = { name = 'takia' }
+l['tbd'] = { name = 'kaki ae' }
+l['tbf'] = { name = 'mandara' }
+l['tbi'] = { name = 'gaahmg' }
+l['tbj'] = { name = 'tiang' }
+l['tbk'] = { name = 'tagbanwa de Calamian', sortKey = 'tagbanwa Calamian' }
+l['tbl'] = { name = 'tboli' }
+l['tbm'] = { name = 'tagbu' }
+l['tbo'] = { name = 'tawala' }
+l['tbp'] = { name = 'taworta' }
+l['tbq'] = { name = 'langues tibéto-birmanes', sortKey = 'tibéto birmanes langues', isGroup = true }
+l['tbr'] = { name = 'tumtum' }
+l['tbu'] = { name = 'tubar' }
+l['tbv'] = { name = 'tobo' }
+l['tby'] = { name = 'tabaru' }
+l['tca'] = { name = 'ticuna' }
+l['tcb'] = { name = 'tanacross' }
+l['tcc'] = { name = 'datooga' }
+l['tcd'] = { name = 'tafi' }
+l['tce'] = { name = 'tutchone du Sud', sortKey = 'tutchone Sud' }
+l['tcf'] = { name = 'me’phaa de Malinaltepec', sortKey = 'mephaa Malinaltepec' }
+l['tcg'] = { name = 'tamagario' }
+l['tch'] = { name = 'créole anglais des îles Turques-et-Caïques', sortKey = 'créole turques et caïques anglais' }
+l['tcl'] = { name = 'taman' }
+l['tco'] = { name = 'taungyo' }
+l['tcp'] = { name = 'tawr' }
+l['tcq'] = { name = 'kaiy' }
+l['tcs'] = { name = 'créole du détroit de Torrès', sortKey = 'créole Torrès détroit' }
+l['tct'] = { name = 'then' }
+l['tcx'] = { name = 'toda' }
+l['tcy'] = { name = 'toulou' }
+l['tda'] = { name = 'tagdal' }
+l['tdc'] = { name = 'emberá tadó' }
+l['tdd'] = { name = 'tai nua' }
+l['tde'] = { name = 'tiranige diga' }
+l['tdf'] = { name = 'talieng' }
+l['tdh'] = { name = 'thulung' }
+l['tdi'] = { name = 'tomadino' }
+l['tdj'] = { name = 'tajio' }
+l['tdk'] = { name = 'tambas' }
+l['tdl'] = { name = 'sur' }
+l['tdm'] = { name = 'taruma' }
+l['tdn'] = { name = 'tondano' }
+l['tds'] = { name = 'doutai' }
+l['tdt'] = { name = 'tetun dili' }
+l['tdu'] = { name = 'tindal dusun' }
+l['tdv'] = { name = 'toro' }
+l['te'] = { name = 'télougou', wiktionaryExists = true }
+l['tea'] = { name = 'temiar' }
+l['tec'] = { name = 'terik' }
+l['ted'] = { name = 'kroumen tépo' }
+l['tee'] = { name = 'tepehua de Huehuetla', sortKey = 'tepehua Huehuetla' }
+l['tef'] = { name = 'teressa' }
+l['teg'] = { name = 'latege' }
+l['teh'] = { name = 'tehuelche' }
+l['tei'] = { name = 'torricelli' }
+l['tek'] = { name = 'téké-ibali' }
+l['tem'] = { name = 'temné' }
+l['ten'] = { name = 'tama (Colombie)', sortKey = 'tama Colombie' }
+l['teo'] = { name = 'teso' }
+l['tep'] = { name = 'tepecano' }
+l['tep (Nigeria)'] = { name = 'tep (Nigeria)', sortKey = 'tep Nigeria' }
+l['teq'] = { name = 'temein' }
+l['ter'] = { name = 'téréno' }
+l['tes'] = { name = 'tengger' }
+l['tet'] = { name = 'tétoum' }
+l['teu'] = { name = 'soo' }
+l['tev'] = { name = 'teor' }
+l['tew'] = { name = 'tewa' }
+l['tex'] = { name = 'tennet' }
+l['tey'] = { name = 'tulishi' }
+l['tez'] = { name = 'tetserret' }
+l['tfn'] = { name = 'dena’ina' }
+l['tfr'] = { name = 'teribe' }
+l['tft'] = { name = 'ternate' }
+l['tg'] = { name = 'tadjik', wiktionaryExists = true }
+l['tgb'] = { name = 'tobilung' }
+l['tgc'] = { name = 'tigak' }
+l['tgf'] = { name = 'chalikha' }
+l['tgo'] = { name = 'sudest' }
+l['tgp'] = { name = 'tangoa' }
+l['tgq'] = { name = 'tring' }
+l['tgs'] = { name = 'nume' }
+l['tgt'] = { name = 'tagbanwa central' }
+l['tgv'] = { name = 'tingui-boto' }
+l['tgw'] = { name = 'tagbana' }
+l['tgx'] = { name = 'tagish' }
+l['th'] = { name = 'thaï', wiktionaryExists = true }
+l['thd'] = { name = 'thayore' }
+l['the'] = { name = 'chitwania' }
+l['thf'] = { name = 'thangmi' }
+l['thh'] = { name = 'tarahumara du Nord', sortKey = 'tarahumara Nord' }
+l['thi'] = { name = 'tai long' }
+l['thk'] = { name = 'tharaka' }
+l['thm'] = { name = 'thavung' }
+l['thp'] = { name = 'thompson' }
+l['thr'] = { name = 'rana tharu' }
+l['ths'] = { name = 'thakali' }
+l['tht'] = { name = 'tahltan' }
+l['thu'] = { name = 'thuri' }
+l['thv'] = { name = 'tamahaq' }
+l['thx'] = { name = 'thaé' }
+l['thy'] = { name = 'tha' }
+l['thz'] = { name = 'tayart tamajeq' }
+l['ti'] = { name = 'tigrigna', wiktionaryExists = true }
+l['tia'] = { name = 'tamazight de Tidikelt', sortKey = 'tamazight Tidikelt' }
+l['tic'] = { name = 'tira' }
+l['tid'] = { name = 'tidong' }
+l['tiefo de Nyafogo'] = { name = 'tiefo de Nyafogo', sortKey = 'tiefo Nyafogo' }
+l['tif'] = { name = 'tifal' }
+l['tig'] = { name = 'tigré' }
+l['tih'] = { name = 'murut timugon' }
+l['tii'] = { name = 'tiene' }
+l['tij'] = { name = 'tilung' }
+l['tik'] = { name = 'tikar' }
+l['til'] = { name = 'tillamook' }
+l['tim'] = { name = 'timbe' }
+l['tin'] = { name = 'tindi' }
+l['tingalan'] = { name = 'tingalan' }
+l['tio'] = { name = 'teop' }
+l['tip'] = { name = 'trimuris' }
+l['tiq'] = { name = 'tiefo de Daramandugu', sortKey = 'tiefo Daramandugu' }
+l['tis'] = { name = 'itneg des Masadiit', sortKey = 'itneg Masadiit' }
+l['tischlbongarisch'] = { name = 'tischlbongarisch' }
+l['tit'] = { name = 'tinigua' }
+l['tiv'] = { name = 'tiv' }
+l['tiw'] = { name = 'tiwi' }
+l['tix'] = { name = 'tiwa du Sud', sortKey = 'tiwa Sud' }
+l['tiy'] = { name = 'tiruray' }
+l['tiz'] = { name = 'tai hongjin' }
+l['tjg'] = { name = 'tunjung' }
+l['tji'] = { name = 'tujia du Nord', sortKey = 'tujia Nord' }
+l['tjm'] = { name = 'timucua' }
+l['tjs'] = { name = 'tujia du Sud', sortKey = 'tujia Sud' }
+l['tju'] = { name = 'tjurruru' }
+l['tjw'] = { name = 'djabwurrung' }
+l['tk'] = { name = 'turkmène', wiktionaryExists = true }
+l['tkd'] = { name = 'tukudede' }
+l['tke'] = { name = 'takwane' }
+l['tkl'] = { name = 'tokelauien' }
+l['tkn'] = { name = 'toku-no-shima' }
+l['tkp'] = { name = 'tikopia' }
+l['tkq'] = { name = 'tèè' }
+l['tkr'] = { name = 'tsakhur' }
+l['tks'] = { name = 'takestani' }
+l['tkt'] = { name = 'tharu de Kathoriya', sortKey = 'tharu Kathoriya' }
+l['tku'] = { name = 'totonaque du haut Necaxa', sortKey = 'totonaque Necaxa haut' }
+l['tkw'] = { name = 'teanu' }
+l['tkx'] = { name = 'tangko' }
+l['tl'] = { name = 'tagalog', wiktionaryExists = true }
+l['tla'] = { name = 'tepehuan du Sud-Ouest', sortKey = 'tepehuan Sud Ouest' }
+l['tlb'] = { name = 'tobelo' }
+l['tlc'] = { name = 'totonaque de Misantla', sortKey = 'totonaque Misantla' }
+l['tld'] = { name = 'talaud' }
+l['tlf'] = { name = 'telefol' }
+l['tlg'] = { name = 'tofanma' }
+l['tlh'] = { name = 'klingon' }
+l['tli'] = { name = 'tlingit' }
+l['tlj'] = { name = 'kitalinga' }
+l['tlk'] = { name = 'taloki' }
+l['tll'] = { name = 'tetela' }
+l['tlm'] = { name = 'tolomako' }
+l['tlo'] = { name = 'talodi' }
+l['tlq'] = { name = 'tai loi' }
+l['tls'] = { name = 'tambotalo' }
+l['tlt'] = { name = 'teluti' }
+l['tlu'] = { name = 'tulehu' }
+l['tlv'] = { name = 'taliabu' }
+l['tlx'] = { name = 'khehek' }
+l['tly'] = { name = 'talysh' }
+l['tma'] = { name = 'tama (Tchad)', sortKey = 'tama Tchad' }
+l['tmb'] = { name = 'avava' }
+l['tmc'] = { name = 'tumak' }
+l['tmd'] = { name = 'haruai' }
+l['tmf'] = { name = 'toba mascoy' }
+l['tmh'] = { name = 'tamasheq (macrolangue)' }
+l['tmi'] = { name = 'tutuba' }
+l['tmj'] = { name = 'samarokena' }
+l['tmn'] = { name = 'taman' }
+l['tmo'] = { name = 'temoq' }
+l['tmp'] = { name = 'tai mène' }
+l['tmq'] = { name = 'tumleo' }
+l['tmr'] = { name = 'judéo-araméen babylonien' }
+l['tms'] = { name = 'tima' }
+l['tmt'] = { name = 'tasmate' }
+l['tmu'] = { name = 'iau' }
+l['tmw'] = { name = 'temuan' }
+l['tmz'] = { name = 'tamanaku' }
+l['tn'] = { name = 'tswana', wiktionaryExists = true }
+l['tna'] = { name = 'tacana' }
+l['tnc'] = { name = 'tanimuca' }
+l['tni'] = { name = 'tandia' }
+l['tnk'] = { name = 'kwamera' }
+l['tnl'] = { name = 'lenakel' }
+l['tnm'] = { name = 'tabla' }
+l['tnn'] = { name = 'tanna du Nord', sortKey = 'tanna Nord' }
+l['tnp'] = { name = 'whitesands' }
+l['tnq'] = { name = 'taïno' }
+l['tnr'] = { name = 'bédik' }
+l['tnt'] = { name = 'tontemboan' }
+l['tnw'] = { name = 'tonsawang' }
+l['tnx'] = { name = 'tanema' }
+l['tnz'] = { name = 'maniq' }
+l['to'] = { name = 'tongien', wiktionaryExists = true }
+l['tob'] = { name = 'toba' }
+l['toc'] = { name = 'totonaque de Coyutla', sortKey = 'totonaque Coyutla' }
+l['toe'] = { name = 'tomedes' }
+l['tog'] = { name = 'tonga (Malawi)', sortKey = 'tonga Malawi' }
+l['toi'] = { name = 'tonga (Zambie)', sortKey = 'tonga Zambie' }
+l['toj'] = { name = 'tojolabal' }
+l['tok'] = { name = 'toki pona' }
+l['tol'] = { name = 'tolowa' }
+l['tom'] = { name = 'tombulu' }
+l['tongzha'] = { name = 'tongzha' }
+l['too'] = { name = 'totonaque de Xicotepec de Juárez', sortKey = 'totonaque Xicotepec Juárez' }
+l['top'] = { name = 'totonaque de Papantla', sortKey = 'totonaque Papantla' }
+l['tor'] = { name = 'banda togbo-vara' }
+l['tos'] = { name = 'totonaque de la sierra', sortKey = 'totonaque Sierra' }
+l['tou'] = { name = 'tho' }
+l['tourangeau'] = { name = 'tourangeau' }
+l['tow'] = { name = 'jemez' }
+l['tox'] = { name = 'tobi' }
+l['toy'] = { name = 'topoiyo' }
+l['toz'] = { name = 'to' }
+l['tpa'] = { name = 'taupota' }
+l['tpc'] = { name = 'me’phaa d’Azoyu', sortKey = 'mephaa Azoyu' }
+l['tpe'] = { name = 'tippera' }
+l['tpf'] = { name = 'tarpia' }
+l['tpg'] = { name = 'kula' }
+l['tpi'] = { name = 'tok pisin', wiktionaryExists = true }
+l['tpj'] = { name = 'tapieté' }
+l['tpl'] = { name = 'me’phaa de Tlacoapa', sortKey = 'mephaa Tlacoapa' }
+l['tpm'] = { name = 'tampulma' }
+l['tpn'] = { name = 'tupinambá' }
+l['tpp'] = { name = 'tepehua de Pisaflores', sortKey = 'tepehua Pisaflores' }
+l['tpr'] = { name = 'tupari' }
+l['tpt'] = { name = 'tepehua de Tlachichilco', sortKey = 'tepehua Tlachichilco' }
+l['tpu'] = { name = 'tampuan' }
+l['tpv'] = { name = 'tanapag' }
+l['tpw'] = { name = 'tupi' }
+l['tpx'] = { name = 'me’phaa d’Acatepec', sortKey = 'mephaa Acatepec' }
+l['tpy'] = { name = 'trumai' }
+l['tqb'] = { name = 'tembé' }
+l['tql'] = { name = 'lehali' }
+l['tqn'] = { name = 'tenino' }
+l['tqo'] = { name = 'toaripi' }
+l['tqr'] = { name = 'torona' }
+l['tqt'] = { name = 'totonaque de l’Ouest', sortKey = 'totonaque Ouest' }
+l['tqu'] = { name = 'touo' }
+l['tqw'] = { name = 'tonkawa' }
+l['tr'] = { name = 'turc', wiktionaryExists = true }
+l['tra'] = { name = 'tirahi' }
+l['trb'] = { name = 'terebu' }
+l['trc'] = { name = 'trique de Copala', sortKey = 'trique Copala' }
+l['trd'] = { name = 'turi' }
+l['tre'] = { name = 'tarangan oriental' }
+l['trf'] = { name = 'créole trinidadien' }
+l['trg'] = { name = 'lishán didán' }
+l['trh'] = { name = 'turaka' }
+l['tri'] = { name = 'trio' }
+l['trj'] = { name = 'toram' }
+l['trk'] = { name = 'langues turques', sortKey = 'turques langues', isGroup = true }
+l['trl'] = { name = 'cryptolecte écossais' }
+l['trm'] = { name = 'tregami' }
+l['trn'] = { name = 'trinitario' }
+l['tro'] = { name = 'tarao' }
+l['trp'] = { name = 'kokborok' }
+l['trq'] = { name = 'trique de San Martín Itunyoso', sortKey = 'trique San Martín Itunyoso' }
+l['trr'] = { name = 'taushiro' }
+l['trs'] = { name = 'trique de Chicahuaxtla', sortKey = 'trique Chicahuaxtla' }
+l['trt'] = { name = 'tunggare' }
+l['tru'] = { name = 'turoyo' }
+l['trv'] = { name = 'seediq' }
+l['trw'] = { name = 'torwali' }
+l['trx'] = { name = 'tringgus-sembaan bidayuh' }
+l['try'] = { name = 'turung' }
+l['trz'] = { name = 'torá' }
+l['ts'] = { name = 'tsonga', wiktionaryExists = true }
+l['tsa'] = { name = 'tsaangi' }
+l['tsb'] = { name = 'tsamai' }
+l['tsc'] = { name = 'tswa' }
+l['tsd'] = { name = 'tsakonien' }
+l['tse'] = { name = 'langue des signes tunisienne', sortKey = 'signes tunisienne' }
+l['tsg'] = { name = 'tausug' }
+l['tsh'] = { name = 'tsuvan' }
+l['tshobdun'] = { name = 'tshobdun' }
+l['tsi'] = { name = 'tsimshian' }
+l['tsj'] = { name = 'tshangla' }
+l['tsk'] = { name = 'tseku' }
+l['tsm'] = { name = 'langue des signes turque', sortKey = 'signes turque' }
+l['tsolyáni'] = { name = 'tsolyáni' }
+l['tsr'] = { name = 'akei' }
+l['tss'] = { name = 'langue des signes taïwanaise', sortKey = 'signes taïwanaise' }
+l['tst'] = { name = 'tondi songway kiini' }
+l['tsu'] = { name = 'tsou' }
+l['tsv'] = { name = 'tsogo' }
+l['tsx'] = { name = 'mubami' }
+l['tsz'] = { name = 'purépecha' }
+l['tt'] = { name = 'tatare', wiktionaryExists = true }
+l['tta'] = { name = 'tutelo' }
+l['ttb'] = { name = 'gaa' }
+l['ttc'] = { name = 'tectitèque' }
+l['ttd'] = { name = 'tauade' }
+l['tte'] = { name = 'bwanabwana' }
+l['ttf'] = { name = 'tuotomb' }
+l['tth'] = { name = 'haut ta’oih' }
+l['tti'] = { name = 'tobati' }
+l['ttj'] = { name = 'tooro' }
+l['ttk'] = { name = 'totoró' }
+l['ttl'] = { name = 'totela' }
+l['ttm'] = { name = 'tutchone du Nord', sortKey = 'tutchone Nord' }
+l['ttn'] = { name = 'towei' }
+l['ttq'] = { name = 'tamajaq' }
+l['ttr'] = { name = 'tera' }
+l['tts'] = { name = 'isan' }
+l['ttt'] = { name = 'tat' }
+l['ttu'] = { name = 'torau' }
+l['ttw'] = { name = 'long wat' }
+l['tty'] = { name = 'sikaritai' }
+l['ttz'] = { name = 'tsum' }
+l['tub'] = { name = 'tubatulabal' }
+l['tuc'] = { name = 'mutu' }
+l['tud'] = { name = 'tuxá' }
+l['tue'] = { name = 'tuyuca' }
+l['tuf'] = { name = 'tunebo' }
+l['tug'] = { name = 'tunia' }
+l['tuh'] = { name = 'taulil' }
+l['tui'] = { name = 'toupouri' }
+l['tuj'] = { name = 'tugutil' }
+l['tul'] = { name = 'tula' }
+l['tum'] = { name = 'tumbuka' }
+l['tun'] = { name = 'tunica' }
+l['tuo'] = { name = 'tucano' }
+l['tup'] = { name = 'langues tupies', sortKey = 'tupies langues', isGroup = true }
+l['tuq'] = { name = 'tedaga' }
+l['tus'] = { name = 'tuscarora' }
+l['tussentaal'] = { name = 'tussentaal' }
+l['tut'] = { name = 'langues altaïques', sortKey = 'altaïques langues', isGroup = true }
+l['tuu'] = { name = 'tututni' }
+l['tuv'] = { name = 'turkana' }
+l['tuw'] = { name = 'langues toungouses', sortKey = 'toungouses langues', isGroup = true }
+l['tux'] = { name = 'tuxinawa' }
+l['tuy'] = { name = 'tuken' }
+l['tuz'] = { name = 'tchourama' }
+l['tva'] = { name = 'vaghua' }
+l['tvd'] = { name = 'tsuvadi' }
+l['tve'] = { name = 'te’un' }
+l['tvk'] = { name = 'ambrym du Sud-Est', sortKey = 'ambrym Sud est' }
+l['tvl'] = { name = 'tuvalu' }
+l['tvm'] = { name = 'tela-masbuar' }
+l['tvn'] = { name = 'tavoyan' }
+l['tvo'] = { name = 'tidore' }
+l['tvu'] = { name = 'tunen' }
+l['tvw'] = { name = 'sedoa' }
+l['tw'] = { name = 'twi', wiktionaryExists = true }
+l['twa'] = { name = 'twana' }
+l['twd'] = { name = 'tweants' }
+l['twe'] = { name = 'teiwa' }
+l['twf'] = { name = 'tiwa du Nord', sortKey = 'tiwa Nord' }
+l['twh'] = { name = 'tai don' }
+l['twm'] = { name = 'monba' }
+l['two'] = { name = 'tswapong' }
+l['twq'] = { name = 'tasawaq' }
+l['twt'] = { name = 'turiwara' }
+l['twu'] = { name = 'termanu' }
+l['twy'] = { name = 'taboyan' }
+l['txa'] = { name = 'tombonuwo' }
+l['txb'] = { name = 'tokharien B' }
+l['txc'] = { name = 'tsetsaut' }
+l['txe'] = { name = 'totoli' }
+l['txg'] = { name = 'tangoute' }
+l['txh'] = { name = 'thrace' }
+l['txj'] = { name = 'vieux kanembou', sortKey = 'kanembou vieux' }
+l['txi'] = { name = 'ikpeng' }
+l['txm'] = { name = 'tomini' }
+l['txn'] = { name = 'tarangan de l’Ouest', sortKey = 'tarangan Ouest' }
+l['txo'] = { name = 'toto' }
+l['txq'] = { name = 'tii' }
+l['txr'] = { name = 'tartessien' }
+l['txs'] = { name = 'tonsea' }
+l['txt'] = { name = 'citak' }
+l['txu'] = { name = 'kayapó' }
+l['txx'] = { name = 'tatana' }
+l['txy'] = { name = 'antanosy' }
+l['ty'] = { name = 'tahitien' }
+l['tya'] = { name = 'tauya' }
+l['tye'] = { name = 'kyanga' }
+l['tyi'] = { name = 'téké-tsaayi' }
+l['typ'] = { name = 'thaypan' }
+l['tyt'] = { name = 'tày tac' }
+l['tyv'] = { name = 'touvain' }
+l['tyz'] = { name = 'tày' }
+l['tza'] = { name = 'langue des signes tanzanienne', sortKey = 'signes tanzanienne' }
+l['tzh'] = { name = 'tzeltal' }
+l['tzj'] = { name = 'tz’utujil' }
+l['tzl'] = { name = 'talossien' }
+l['tzm'] = { name = 'tamazight du Maroc central', sortKey = 'tamazight Maroc central' }
+l['tzn'] = { name = 'tugun' }
+l['tzo'] = { name = 'tzotzil' }
+l['uam'] = { name = 'uamué' }
+l['uar'] = { name = 'tairuma' }
+l['ubi'] = { name = 'ubi' }
+l['ubl'] = { name = 'buhi’non' }
+l['ubr'] = { name = 'ubir' }
+l['ubu'] = { name = 'umbu-ungu' }
+l['uby'] = { name = 'oubykh' }
+l['uda'] = { name = 'uda' }
+l['ude'] = { name = 'oudégué' }
+l['udg'] = { name = 'muduga' }
+l['udi'] = { name = 'oudi' }
+l['udj'] = { name = 'ujir' }
+l['udl'] = { name = 'wuzlam' }
+l['udm'] = { name = 'oudmourte' }
+l['udu'] = { name = 'uduk' }
+l['ug'] = { name = 'ouïghour', wiktionaryExists = true }
+l['uga'] = { name = 'ougaritique' }
+l['uge'] = { name = 'ughele' }
+l['ugo'] = { name = 'ugong' }
+l['uhn'] = { name = 'damal' }
+l['uis'] = { name = 'uisai' }
+l['uiv'] = { name = 'iyive' }
+l['uji'] = { name = 'tanjijili' }
+l['uk'] = { name = 'ukrainien', wiktionaryExists = true }
+l['ukk'] = { name = 'muak sa-aak' }
+l['ukq'] = { name = 'ukwa' }
+l['ula'] = { name = 'fungwa' }
+l['ulc'] = { name = 'oultch' }
+l['ule'] = { name = 'lule' }
+l['ulf'] = { name = 'usku' }
+l['uli'] = { name = 'ulithi' }
+l['ulk'] = { name = 'meriam' }
+l['ull'] = { name = 'ullatan' }
+l['ulm'] = { name = 'ulumanda’' }
+l['uln'] = { name = 'unserdeutsch' }
+l['ulu'] = { name = 'oma longh' }
+l['ulw'] = { name = 'ulwa' }
+l['uma'] = { name = 'umatilla' }
+l['umb'] = { name = 'oumboundou' }
+l['umc'] = { name = 'marrucinien' }
+l['umd'] = { name = 'umbindhamu' }
+l['umg'] = { name = 'umbuygamu' }
+l['umi'] = { name = 'ukit' }
+l['umo'] = { name = 'umotina' }
+l['ump'] = { name = 'umpila' }
+l['ums'] = { name = 'pendau' }
+l['umu'] = { name = 'munsee' }
+l['una'] = { name = 'watut du Nord', sortKey = 'watut Nord' }
+l['und'] = { name = 'langue indéterminée', sortKey = '*indéterminée', isSpecial = true }
+l['une'] = { name = 'uneme' }
+l['ung'] = { name = 'ngarinyin' }
+l['unm'] = { name = 'unami' }
+l['unn'] = { name = 'kurnai' }
+l['unr'] = { name = 'mundari' }
+l['unz'] = { name = 'kaili d’Unde', sortKey = 'kaili Unde' }
+l['upv'] = { name = 'uripiv-wala-rano-atchin' }
+l['ur'] = { name = 'ourdou', wiktionaryExists = true }
+l['ura'] = { name = 'urarina' }
+l['urb'] = { name = 'kaapor' }
+l['ure'] = { name = 'uru' }
+l['urf'] = { name = 'uradhi' }
+l['urg'] = { name = 'urigina' }
+l['urh'] = { name = 'urhobo' }
+l['uri'] = { name = 'urim' }
+l['urj'] = { name = 'langues ouraliennes', sortKey = 'ouraliennes langues', isGroup = true }
+l['urk'] = { name = 'urak lawoi’' }
+l['url'] = { name = 'urali' }
+l['urn'] = { name = 'uruangnirin' }
+l['uro'] = { name = 'ura (Papouasie-Nouvelle-Guinée)', sortKey = 'ura Papouasie' }
+l['urp'] = { name = 'uru-pa-in' }
+l['urr'] = { name = 'löyöp' }
+l['urt'] = { name = 'urat' }
+l['uru'] = { name = 'urumi' }
+l['urv'] = { name = 'uruava' }
+l['urw'] = { name = 'sop' }
+l['ury'] = { name = 'orya' }
+l['usi'] = { name = 'usui' }
+l['usk'] = { name = 'usakade' }
+l['usp'] = { name = 'uspantèque' }
+l['uss'] = { name = 'us-saare' }
+l['usu'] = { name = 'uya' }
+l['ute'] = { name = 'ute' }
+l['ute-che'] = { name = 'chemehuevi' }
+l['ute-sou'] = { name = 'paiute du Sud', sortKey = 'paiute Sud' }
+l['uth'] = { name = 'ut-hun' }
+l['utr'] = { name = 'etulo' }
+l['utu'] = { name = 'utu' }
+l['uum'] = { name = 'urum' }
+l['uun'] = { name = 'pazeh' }
+l['uur'] = { name = 'ura (Vanuatu)', sortKey = 'ura Vanuatu' }
+l['uuu'] = { name = 'u' }
+l['uve'] = { name = 'fagauvea' }
+l['uvh'] = { name = 'uri' }
+l['uwa'] = { name = 'kuku-uwanh' }
+l['uz'] = { name = 'ouzbek', wiktionaryExists = true }
+l['vaa'] = { name = 'vaagri booli' }
+l['vae'] = { name = 'vale' }
+l['vaf'] = { name = 'vafsi' }
+l['vag'] = { name = 'vagla' }
+l['vai'] = { name = 'vaï' }
+l['vaj'] = { name = 'vasekele' }
+l['vam'] = { name = 'vanimo' }
+l['van'] = { name = 'valman' }
+l['vao'] = { name = 'vao' }
+l['vap'] = { name = 'vaiphei' }
+l['var'] = { name = 'guarijio' }
+l['vas'] = { name = 'vasavi' }
+l['vay'] = { name = 'wayu' }
+l['vbb'] = { name = 'babar du Sud-Est', sortKey = 'babar Sud Est' }
+l['ve'] = { name = 'venda' }
+l['vec'] = { name = 'vénitien', wiktionaryExists = true }
+l['ved'] = { name = 'veddah' }
+l['vel'] = { name = 'veluws' }
+l['vem'] = { name = 'vemgo-mabas' }
+l['veo'] = { name = 'ventureño' }
+l['vep'] = { name = 'vepse' }
+l['ver'] = { name = 'mom jango' }
+l['vi'] = { name = 'vietnamien', wiktionaryExists = true }
+l['vic'] = { name = 'créole des Îles Vierges', sortKey = 'créole Vierges' }
+l['vid'] = { name = 'vidunda' }
+l['vieil écossais'] = { name = 'vieil écossais', sortKey = 'écossais vieil' }
+l['vieil okinawaïen'] = { name = 'vieil okinawaïen', sortKey = 'okinawaïen vieux' }
+l['vieux balinais'] = { name = 'vieux balinais', sortKey = 'balinais vieux' }
+l['vieux brittonique'] = { name = 'vieux brittonique', sortKey = 'brittonique vieux' }
+l['vieux danois'] = { name = 'vieux danois', sortKey = 'danois vieux' }
+l['vieux khmer pré-angkorien'] = { name = 'vieux khmer pré-angkorien', sortKey = 'khmer vieux pré angkorien' }
+l['vieux mandarin'] = { name = 'vieux mandarin', sortKey = 'mandarin vieux' }
+l['vieux norvégien'] = { name = 'vieux norvégien', sortKey = 'norvégien vieux' }
+l['vieux novgorodien'] = { name = 'vieux novgorodien', sortKey = 'novgorodien vieux' }
+l['vieux polonais'] = { name = 'vieux polonais', sortKey = 'polonais vieux' }
+l['vieux suédois'] = { name = 'vieux suédois', sortKey = 'suédois vieux' }
+l['vif'] = { name = 'vili' }
+l['vig'] = { name = 'viemo' }
+l['vil'] = { name = 'vilela' }
+l['vin'] = { name = 'vinza' }
+l['vis'] = { name = 'vishavan' }
+l['vit'] = { name = 'viti' }
+l['viv'] = { name = 'iduna' }
+l['vka'] = { name = 'kariyarra' }
+l['vkl'] = { name = 'kulisusu' }
+l['vkm'] = { name = 'kamakan' }
+l['vko'] = { name = 'kodeoha' }
+l['vkp'] = { name = 'korlai' }
+l['vlp'] = { name = 'valpei' }
+l['vls'] = { name = 'flamand occidental' }
+l['vma'] = { name = 'martuthunira' }
+l['vmb'] = { name = 'mbabaram' }
+l['vme'] = { name = 'masela de l’Est', sortKey = 'masela Est' }
+l['vmf'] = { name = 'francique oriental' }
+l['vmj'] = { name = 'mixtèque d’Ixtayutla', sortKey = 'mixtèque Ixtayutla' }
+l['vml'] = { name = 'malgana' }
+l['vmp'] = { name = 'mazatèque de Soyaltepec', sortKey = 'mazatèque Soyaltepec' }
+l['vmw'] = { name = 'makhuwa' }
+l['vmy'] = { name = 'mazatèque de San Bartolomé Ayautla', sortKey = 'mazatèque San Bartolome Ayautla' }
+l['vmz'] = { name = 'mazatèque de Mazatlán', sortKey = 'mazatèque Mazatlán' }
+l['vnk'] = { name = 'lovono' }
+l['vnm'] = { name = 'neve’ei' }
+l['vnp'] = { name = 'vunapu' }
+l['vo'] = { name = 'volapük réformé', wiktionaryExists = true }
+l['volapük classique'] = { name = 'volapük classique' }
+l['volow'] = { name = 'volow' }
+l['volsque'] = { name = 'volsque' }
+l['vor'] = { name = 'voro' }
+l['vot'] = { name = 'vote' }
+l['vra'] = { name = 'vera’a' }
+l['vro'] = { name = 'võro', wikimediaCode = 'fiu-vro' }
+l['vrt'] = { name = 'banam bay' }
+l['vsn'] = { name = 'sanskrit védique' }
+l['vun'] = { name = 'wunjo' }
+l['vut'] = { name = 'vute' }
+l['vwa'] = { name = 'awa (môn-khmer)', sortKey = 'awa môn khmer' }
+l['wa'] = { name = 'wallon', wiktionaryExists = true }
+l['waa'] = { name = 'walla walla' }
+l['wab'] = { name = 'wab' }
+l['wac'] = { name = 'wasco-wishram' }
+l['wad'] = { name = 'wandamen' }
+l['wae'] = { name = 'walser' }
+l['wah'] = { name = 'watubela' }
+l['wai'] = { name = 'wares' }
+l['waj'] = { name = 'waffa' }
+l['wak'] = { name = 'langues wakashennes', sortKey = 'wakashennes langues', isGroup = true }
+l['wal'] = { name = 'wolaytta' }
+l['wam'] = { name = 'massachusett' }
+l['wan'] = { name = 'wan' }
+l['wañám'] = { name = 'wañám' }
+l['wao'] = { name = 'wappo' }
+l['wap'] = { name = 'wapishana' }
+l['waq'] = { name = 'wageman' }
+l['war'] = { name = 'waray (Philippines)', sortKey = 'waray Philippines' }
+l['was'] = { name = 'washo' }
+l['wat'] = { name = 'kaninuwa' }
+l['wau'] = { name = 'waurá' }
+l['wauyukma'] = { name = 'wauyukma' }
+l['wav'] = { name = 'waka' }
+l['waw'] = { name = 'waiwai' }
+l['wax'] = { name = 'marangis' }
+l['way'] = { name = 'wayana' }
+l['waz'] = { name = 'wampur' }
+l['wba'] = { name = 'warao' }
+l['wbb'] = { name = 'wabo' }
+l['wbe'] = { name = 'waritai' }
+l['wbf'] = { name = 'wara' }
+l['wbh'] = { name = 'wanda' }
+l['wbi'] = { name = 'wanji' }
+l['wbj'] = { name = 'alagwa' }
+l['wbk'] = { name = 'waigali' }
+l['wbl'] = { name = 'wakhi' }
+l['wbm'] = { name = 'vo' }
+l['wbp'] = { name = 'warlpiri' }
+l['wbt'] = { name = 'warnman' }
+l['wbv'] = { name = 'wajarri' }
+l['wbw'] = { name = 'woi' }
+l['wca'] = { name = 'yanomámi' }
+l['wdj'] = { name = 'wadjiginy' }
+l['wdk'] = { name = 'wadikali' }
+l['wea'] = { name = 'wewaw' }
+l['wec'] = { name = 'wé occidental' }
+l['wed'] = { name = 'wedau' }
+l['weg'] = { name = 'wergaia' }
+l['weh'] = { name = 'weh' }
+l['wei'] = { name = 'kiunum' }
+l['wem'] = { name = 'gbe weme' }
+l['wen'] = { name = 'langues sorabes', sortKey = 'sorabes langues', isGroup = true }
+l['weo'] = { name = 'wemale' }
+l['wep'] = { name = 'westphalien' }
+l['wer'] = { name = 'weri' }
+l['wes'] = { name = 'pidgin camerounais' }
+l['wet'] = { name = 'perai' }
+l['weu'] = { name = 'rawngtu' }
+l['wew'] = { name = 'wejewa' }
+l['wfg'] = { name = 'zorop' }
+l['wga'] = { name = 'wagaya' }
+l['wgg'] = { name = 'wangganguru' }
+l['wgi'] = { name = 'wahgi' }
+l['wgo'] = { name = 'waigeo' }
+l['wgu'] = { name = 'wirangu' }
+l['wgy'] = { name = 'warrgamay' }
+l['whg'] = { name = 'wahgi du Nord', sortKey = 'wahgi Nord' }
+l['whk'] = { name = 'lebu’ kulit' }
+l['wic'] = { name = 'wichita' }
+l['wie'] = { name = 'wik-epa' }
+l['wif'] = { name = 'wik-keyangan' }
+l['wig'] = { name = 'wik-ngathan' }
+l['wih'] = { name = 'wik-me’anha' }
+l['wii'] = { name = 'minidien' }
+l['wij'] = { name = 'wik-iiyanh' }
+l['wim'] = { name = 'wik-mungkan' }
+l['win'] = { name = 'winnebago' }
+l['wir'] = { name = 'wiraféd' }
+l['wiu'] = { name = 'wiru' }
+l['wiv'] = { name = 'vitu' }
+l['wiy'] = { name = 'wiyot' }
+l['wja'] = { name = 'waja' }
+l['wji'] = { name = 'warji' }
+l['wku'] = { name = 'kunduvadi' }
+l['wkw'] = { name = 'wakawaka' }
+l['wlc'] = { name = 'shimwali' }
+l['wle'] = { name = 'wolane' }
+l['wli'] = { name = 'waioli' }
+l['wlk'] = { name = 'wailaki' }
+l['wll'] = { name = 'wali (Soudan)', sortKey = 'wali Soudan' }
+l['wlm'] = { name = 'moyen gallois', sortKey = 'gallois moyen' }
+l['wlo'] = { name = 'wolio' }
+l['wlr'] = { name = 'wailapa' }
+l['wls'] = { name = 'wallisien' }
+l['wlv'] = { name = 'wichí lhamtés vejoz' }
+l['wmb'] = { name = 'wambaya' }
+l['wmc'] = { name = 'wamas' }
+l['wmd'] = { name = 'mamaindé' }
+l['wme'] = { name = 'wambule' }
+l['wmg'] = { name = 'muya de l’Ouest', sortKey = 'muya Ouest' }
+l['wmh'] = { name = 'waimaha' }
+l['wms'] = { name = 'wambon' }
+l['wmt'] = { name = 'walmajarri' }
+l['wmw'] = { name = 'mwani' }
+l['wnc'] = { name = 'wantoat' }
+l['wnd'] = { name = 'wandarang' }
+l['wne'] = { name = 'waneci' }
+l['wng'] = { name = 'wanggom' }
+l['wni'] = { name = 'shindzuani' }
+l['wnk'] = { name = 'wanokaka' }
+l['wno'] = { name = 'wano' }
+l['wnp'] = { name = 'wanap' }
+l['wnu'] = { name = 'usan' }
+l['wnw'] = { name = 'wintu' }
+l['wny'] = { name = 'wanyi' }
+l['wo'] = { name = 'wolof', wiktionaryExists = true }
+l['woc'] = { name = 'wogeo' }
+l['wod'] = { name = 'wolani' }
+l['woe'] = { name = 'woléaïen' }
+l['wog'] = { name = 'wogamusin' }
+l['woi'] = { name = 'kamang' }
+l['wok'] = { name = 'longto' }
+l['wom'] = { name = 'wom (Nigeria)', sortKey = 'wom Nigeria' }
+l['won'] = { name = 'wongo' }
+l['wor'] = { name = 'woria' }
+l['wos'] = { name = 'hanga hundi' }
+l['wow'] = { name = 'wawonii' }
+l['wpc'] = { name = 'maco' }
+l['wra'] = { name = 'warapu' }
+l['wrb'] = { name = 'warluwara' }
+l['wrg'] = { name = 'warungu' }
+l['wrh'] = { name = 'wiradjuri' }
+l['wrk'] = { name = 'garrwa' }
+l['wrm'] = { name = 'warumungu' }
+l['wro'] = { name = 'worrorra' }
+l['wrp'] = { name = 'waropen' }
+l['wrr'] = { name = 'wardaman' }
+l['wrs'] = { name = 'waris' }
+l['wru'] = { name = 'waru' }
+l['wrw'] = { name = 'gugu warra' }
+l['wrx'] = { name = 'wae rana' }
+l['wry'] = { name = 'merwari' }
+l['wrz'] = { name = 'waray (Australie)', sortKey = 'waray Australie' }
+l['wsa'] = { name = 'warembori' }
+l['wsi'] = { name = 'wusi' }
+l['wsk'] = { name = 'waskia' }
+l['wss'] = { name = 'wasa' }
+l['wsv'] = { name = 'wotapuri-katarqala' }
+l['wtf'] = { name = 'watiwa' }
+l['wth'] = { name = 'wathawurrung' }
+l['wti'] = { name = 'berta' }
+l['wtw'] = { name = 'wotu' }
+l['wuh'] = { name = 'wutunhua' }
+l['wul'] = { name = 'silimo' }
+l['wulguru'] = { name = 'wulguru' }
+l['wun'] = { name = 'bungu' }
+l['wut'] = { name = 'wutung' }
+l['wuu'] = { name = 'wu' }
+l['wuy'] = { name = 'wauyai' }
+l['wwo'] = { name = 'dorig' }
+l['wwr'] = { name = 'warrwa' }
+l['www'] = { name = 'wawa' }
+l['wxa'] = { name = 'waxiang' }
+l['wya'] = { name = 'wyandot' }
+l['wya-hur'] = { name = 'huron' }
+l['wyb'] = { name = 'wangaaybuwan-ngiyambaa' }
+l['wyi'] = { name = 'woiwurrung' }
+l['wym'] = { name = 'wilamowicien' }
+l['wyr'] = { name = 'ayuru' }
+l['wyy'] = { name = 'fidjien de l’Ouest', sortKey = 'fidjien Ouest' }
+l['xaa'] = { name = 'arabe andalou' }
+l['xab'] = { name = 'sambe' }
+l['xad'] = { name = 'adai' }
+l['xag'] = { name = 'albanien' }
+l['xal'] = { name = 'kalmouk' }
+l['xam'] = { name = 'ǀxam', sortKey = 'xam' }
+l['xan'] = { name = 'xamtanga' }
+l['xap'] = { name = 'apalachee' }
+l['xaq'] = { name = 'aquitain' }
+l['xas'] = { name = 'kamasse' }
+l['xat'] = { name = 'katawixi' }
+l['xau'] = { name = 'kauwera' }
+l['xav'] = { name = 'xavante' }
+l['xaw'] = { name = 'kawaiisu' }
+l['xay'] = { name = 'kayan de Mahakam', sortKey = 'kayan Mahakam' }
+l['xbc'] = { name = 'bactrien' }
+l['xbg'] = { name = 'bunganditj' }
+l['xbi'] = { name = 'kombio' }
+l['xbm'] = { name = 'moyen breton', sortKey = 'breton moyen' }
+l['xbn'] = { name = 'kenaboi' }
+l['xbr'] = { name = 'kambera' }
+l['xcb'] = { name = 'cambrien' }
+l['xce'] = { name = 'celtibère' }
+l['xch'] = { name = 'chimakum' }
+l['xcl'] = { name = 'arménien ancien' }
+l['xco'] = { name = 'chorasmien' }
+l['xcm'] = { name = 'comecrudo' }
+l['xcn'] = { name = 'cotoname' }
+l['xcr'] = { name = 'carien' }
+l['xct'] = { name = 'tibétain classique' }
+l['xcu'] = { name = 'couronien' }
+l['xcw'] = { name = 'coahuilteco' }
+l['xdc'] = { name = 'dace' }
+l['xdk'] = { name = 'dharug' }
+l['xdm'] = { name = 'édomite' }
+l['xdo'] = { name = 'kwandu' }
+l['xdq'] = { name = 'kaïtag' }
+l['xdy'] = { name = 'malais dayak' }
+l['xeb'] = { name = 'éblaïte' }
+l['xed'] = { name = 'hdi' }
+l['xeg'] = { name = 'ǁxegwi', sortKey = 'xegwi' }
+l['xem'] = { name = 'kembayan' }
+l['xer'] = { name = 'xerénte' }
+l['xes'] = { name = 'kesawai' }
+l['xet'] = { name = 'xéta' }
+l['xeu'] = { name = 'keoru-ahia' }
+l['xfa'] = { name = 'falisque' }
+l['xga'] = { name = 'galate' }
+l['xgf'] = { name = 'gabrielino-fernandeño' }
+l['xgm'] = { name = 'dharumbal' }
+l['xgn'] = { name = 'langues mongoles', sortKey = 'mongoles langues', isGroup = true }
+l['xh'] = { name = 'xhosa', wiktionaryExists = true }
+l['xha'] = { name = 'harami' }
+l['xhc'] = { name = 'hunnique' }
+l['xht'] = { name = 'hatti' }
+l['xia'] = { name = 'xiandao' }
+l['xib'] = { name = 'ibère' }
+l['xii'] = { name = 'xiri' }
+l['xil'] = { name = 'illyrien' }
+l['xin'] = { name = 'xinca' }
+l['xiong-nu'] = { name = 'xiong-nu' }
+l['xiy'] = { name = 'xipaya' }
+l['xkc'] = { name = 'kho’ini' }
+l['xke'] = { name = 'kereho' }
+l['xkf'] = { name = 'khengkha' }
+l['xkg'] = { name = 'kagoro' }
+l['xkj'] = { name = 'kajali' }
+l['xkq'] = { name = 'koroni' }
+l['xkr'] = { name = 'xakriabá' }
+l['xku'] = { name = 'kaamba' }
+l['xkw'] = { name = 'kembra' }
+l['xky'] = { name = 'uma’ lasan' }
+l['xkz'] = { name = 'kurtokha' }
+l['xla'] = { name = 'kamula' }
+l['xlc'] = { name = 'lycien' }
+l['xld'] = { name = 'lydien' }
+l['xlg'] = { name = 'ligure ancien' }
+l['xln'] = { name = 'alain' }
+l['xlo'] = { name = 'loup A' }
+l['xlp'] = { name = 'lépontique' }
+l['xls'] = { name = 'lusitain' }
+l['xlu'] = { name = 'louvite' }
+l['xma'] = { name = 'mushungulu' }
+l['xmb'] = { name = 'mboa' }
+l['xmc'] = { name = 'emakhuwa emarevoni' }
+l['xmd'] = { name = 'mbudum' }
+l['xme'] = { name = 'mède' }
+l['xmf'] = { name = 'mingrélien' }
+l['xmk'] = { name = 'ancien macédonien', sortKey = 'macédonien ancien' }
+l['xmm'] = { name = 'malais de Manado', sortKey = 'malais Manado' }
+l['xmr'] = { name = 'méroïtique' }
+l['xmt'] = { name = 'matbat' }
+l['xmz'] = { name = 'mori bawah' }
+l['xna'] = { name = 'ancien arabe du Nord', sortKey = 'arabe Nord ancien' }
+l['xnb'] = { name = 'kanakanabu' }
+l['xnd'] = { name = 'langues na-dénées', sortKey = 'na dénées langues', isGroup = true }
+l['xng'] = { name = 'moyen mongol', sortKey = 'mongol moyen' }
+l['xni'] = { name = 'ngarigu' }
+l['xno'] = { name = 'anglo-normand' }
+l['xnr'] = { name = 'kangri' }
+l['xns'] = { name = 'kanashi' }
+l['xnt'] = { name = 'narragansett' }
+l['xny'] = { name = 'nyiyaparli' }
+l['xnz'] = { name = 'kenzi' }
+l['xoc'] = { name = 'o’chi’chi’' }
+l['xod'] = { name = 'kokoda' }
+l['xom'] = { name = 'komo' }
+l['xon'] = { name = 'konkomba' }
+l['xoo'] = { name = 'xukuru' }
+l['xop'] = { name = 'kopar' }
+l['xpe'] = { name = 'kpellé du Liberia', sortKey = 'kpellé Liberia' }
+l['xpi'] = { name = 'picte' }
+l['xpg'] = { name = 'phrygien' }
+l['xpm'] = { name = 'pumpokol' }
+l['xpo'] = { name = 'pochutèque' }
+l['xpq'] = { name = 'mohegan' }
+l['xpr'] = { name = 'parthe' }
+l['xps'] = { name = 'pisidien' }
+l['xpu'] = { name = 'punique' }
+l['xpy'] = { name = 'puyo' }
+l['xra'] = { name = 'krahô' }
+l['xrb'] = { name = 'karaboro de l’Est', sortKey = 'karaboro Est' }
+l['xre'] = { name = 'kreye' }
+l['xrn'] = { name = 'arin' }
+l['xrr'] = { name = 'rhétique' }
+l['xrt'] = { name = 'aranama' }
+l['xrw'] = { name = 'karawa' }
+l['xsa'] = { name = 'sabéen' }
+l['xsb'] = { name = 'sambal' }
+l['xsc'] = { name = 'scythe' }
+l['xsd'] = { name = 'sidétique' }
+l['xse'] = { name = 'sempan' }
+l['xsi'] = { name = 'sio' }
+l['xsl'] = { name = 'esclave du Sud', sortKey = 'esclave Sud' }
+l['xsm'] = { name = 'kassem' }
+l['xso'] = { name = 'solano' }
+l['xsp'] = { name = 'silopi' }
+l['xsq'] = { name = 'makhuwa-saka' }
+l['xsr'] = { name = 'sherpa' }
+l['xss'] = { name = 'assane' }
+l['xsu'] = { name = 'sanumá' }
+l['xsv'] = { name = 'sudovien' }
+l['xsy'] = { name = 'saisiyat' }
+l['xta'] = { name = 'mixtèque de Xochapa', sortKey = 'mixtèque Xochapa' }
+l['xtc'] = { name = 'katcha-kadugli-miri' }
+l['xtd'] = { name = 'mixtèque de Diuxi-Tilantongo', sortKey = 'mixtèque Diuxi Tilantongo' }
+l['xtm'] = { name = 'mixtèque de Magdalena Peñasco', sortKey = 'mixtèque Magdalena Peñasco' }
+l['xto'] = { name = 'tokharien A' }
+l['xtw'] = { name = 'tawandê' }
+l['xty'] = { name = 'mixtèque de Yoloxochitl', sortKey = 'mixtèque Yoloxochitl' }
+l['xtz'] = { name = 'tasmanien' }
+l['xua'] = { name = 'alu kurumba' }
+l['xub'] = { name = 'bettu kurumba' }
+l['xud'] = { name = 'umiida' }
+l['xug'] = { name = 'kunigami' }
+l['xuj'] = { name = 'jennu kurumba' }
+l['xul'] = { name = 'ngunawal' }
+l['xum'] = { name = 'ombrien' }
+l['xun'] = { name = 'unggarranggu' }
+l['xup'] = { name = 'haut umpqua', sortKey = 'umpqua haut' }
+l['xur'] = { name = 'urartéen' }
+l['xuu'] = { name = 'kxoe' }
+l['xve'] = { name = 'vénète' }
+l['xvi'] = { name = 'kamviri' }
+l['xvn'] = { name = 'vandale' }
+l['xvs'] = { name = 'vestinien' }
+l['xwa'] = { name = 'kwaza' }
+l['xwc'] = { name = 'woccon' }
+l['xwd'] = { name = 'wadi wadi' }
+l['xwg'] = { name = 'kwegu' }
+l['xwk'] = { name = 'wangkumara' }
+l['xwo'] = { name = 'oïrate' }
+l['xww'] = { name = 'wemba wemba' }
+l['xxb'] = { name = 'boro' }
+l['xxk'] = { name = 'keo' }
+l['xxt'] = { name = 'tambora' }
+l['xyy'] = { name = 'yorta yorta' }
+l['xzh'] = { name = 'zhang-zhung' }
+l['yaa'] = { name = 'yaminahua' }
+l['yab'] = { name = 'yuhup' }
+l['yac'] = { name = 'yali de Pass Valley', sortKey = 'yali Pass valley' }
+l['yad'] = { name = 'yagua' }
+l['yae'] = { name = 'pumé' }
+l['yaf'] = { name = 'kiyaka' }
+l['yag'] = { name = 'yagan' }
+l['yah'] = { name = 'yazgulami' }
+l['yai'] = { name = 'yaghnobi' }
+l['yaj'] = { name = 'banda-yangere' }
+l['yak'] = { name = 'yakama' }
+l['yal'] = { name = 'dialonké' }
+l['yam'] = { name = 'yamba' }
+l['yan'] = { name = 'mayangna' }
+l['yao'] = { name = 'yao' }
+l['yap'] = { name = 'yapois' }
+l['yar'] = { name = 'yabarana' }
+l['yaq'] = { name = 'yaqui' }
+l['yas'] = { name = 'nugunu (Cameroun)', sortKey = 'nugunu Cameroun' }
+l['yat'] = { name = 'yambeta' }
+l['yau'] = { name = 'yuwana' }
+l['yav'] = { name = 'yangben' }
+l['yaw'] = { name = 'yawalapití' }
+l['yax'] = { name = 'yauma' }
+l['yay'] = { name = 'agwagwune' }
+l['yba'] = { name = 'yala' }
+l['ybb'] = { name = 'yemba' }
+l['ybe'] = { name = 'yugur occidental' }
+l['ybh'] = { name = 'yakha' }
+l['ybj'] = { name = 'hasha' }
+l['ybo'] = { name = 'yabong' }
+l['yby'] = { name = 'yaweyuha' }
+l['ycn'] = { name = 'yucuna' }
+l['ycr'] = { name = 'créole de Yilan', sortKey = 'créole Yilan' }
+l['ydd'] = { name = 'yiddish de l’Est', sortKey = 'yiddish Est' }
+l['ydg'] = { name = 'yidgha' }
+l['ydk'] = { name = 'yoidik' }
+l['yea'] = { name = 'ravula' }
+l['yec'] = { name = 'yéniche' }
+l['yee'] = { name = 'yimas' }
+l['yei'] = { name = 'yeni' }
+l['yej'] = { name = 'yévanique' }
+l['yel'] = { name = 'yela' }
+l['yer'] = { name = 'tarok' }
+l['yes'] = { name = 'nyankpa' }
+l['yet'] = { name = 'yetfa' }
+l['yeu'] = { name = 'yerukala' }
+l['yev'] = { name = 'yapunda' }
+l['yey'] = { name = 'yeyi' }
+l['yga'] = { name = 'malyangapa' }
+l['ygp'] = { name = 'gepo' }
+l['ygr'] = { name = 'yagaria' }
+l['ygw'] = { name = 'yagwoia' }
+l['yha'] = { name = 'buyang baha' }
+l['yhl'] = { name = 'hlepho' }
+l['yi'] = { name = 'yiddish', wiktionaryExists = true }
+l['yia'] = { name = 'yinggarda' }
+l['yif'] = { name = 'ache' }
+l['yig'] = { name = 'nasu wusa' }
+l['yih'] = { name = 'yiddish de l’Ouest', sortKey = 'yiddish Ouest' }
+l['yii'] = { name = 'yidiny' }
+l['yij'] = { name = 'yindjibarndi' }
+l['yik'] = { name = 'lalo de l’Est', sortKey = 'lalo Est' }
+l['yil'] = { name = 'yindjilandji' }
+l['yim'] = { name = 'yimchungru' }
+l['yiq'] = { name = 'miqie' }
+l['yis'] = { name = 'yis' }
+l['yir'] = { name = 'aghu du Nord', sortKey = 'aghu Nord' }
+l['yiu'] = { name = 'awu' }
+l['yix'] = { name = 'ahi' }
+l['yiy'] = { name = 'yir yoront' }
+l['yiz'] = { name = 'azhe' }
+l['yka'] = { name = 'yakan' }
+l['ykg'] = { name = 'youkaguir de la toundra', sortKey = 'youkaguir toundra' }
+l['ykh'] = { name = 'khamnigan' }
+l['yki'] = { name = 'yoke' }
+l['ykm'] = { name = 'yakamul' }
+l['yko'] = { name = 'yasa' }
+l['yky'] = { name = 'yakoma' }
+l['yla'] = { name = 'ulwa (Papouasie-Nouvelle-Guinée)', sortKey = 'ulwa Papouasie' }
+l['yle'] = { name = 'yele' }
+l['ylg'] = { name = 'yelogu' }
+l['yli'] = { name = 'yali d’Angguruk', sortKey = 'yali Angguruk' }
+l['yll'] = { name = 'yil' }
+l['yln'] = { name = 'buyang langjia' }
+l['ylo'] = { name = 'naluo yi' }
+l['ylr'] = { name = 'yalarnnga' }
+l['ylu'] = { name = 'aribwaung' }
+l['yly'] = { name = 'nyelâyu' }
+l['ymc'] = { name = 'muji du Sud', sortKey = 'muji Sud' }
+l['yme'] = { name = 'yameo' }
+l['ymg'] = { name = 'yamongeri' }
+l['yml'] = { name = 'iamalele' }
+l['ymo'] = { name = 'yangum mon' }
+l['ymt'] = { name = 'karagasse' }
+l['ynd'] = { name = 'yandruwandha' }
+l['ynk'] = { name = 'naukan' }
+l['ynl'] = { name = 'yangulam' }
+l['ynn'] = { name = 'yana' }
+l['ynq'] = { name = 'yendang' }
+l['yns'] = { name = 'yansi' }
+l['yo'] = { name = 'yoruba', wiktionaryExists = true }
+l['yob'] = { name = 'yoba' }
+l['yoi'] = { name = 'yonaguni' }
+l['yok-chk'] = { name = 'chukchansi' }
+l['yok-chw'] = { name = 'chawchila' }
+l['yok-chy'] = { name = 'choynimni' }
+l['yok-dum'] = { name = 'dumna' }
+l['yok-gas'] = { name = 'gashowu' }
+l['yok-hom'] = { name = 'hometwoli' }
+l['yok-lsj'] = { name = 'san joaquin inférieur' }
+l['yok-nut'] = { name = 'tachi' }
+l['yok-pos'] = { name = 'palewyami' }
+l['yok-tul'] = { name = 'tulamni' }
+l['yok-wik'] = { name = 'wikchamni' }
+l['yok-yaw'] = { name = 'yawelmani' }
+l['yok-ywd'] = { name = 'yawdanchi' }
+l['yol'] = { name = 'yola' }
+l['yom'] = { name = 'yombe' }
+l['yon'] = { name = 'yongkom' }
+l['yot'] = { name = 'yotti' }
+l['yoy'] = { name = 'yoy' }
+l['yox'] = { name = 'yoron' }
+l['ypa'] = { name = 'phala' }
+l['ypg'] = { name = 'phola' }
+l['ypk'] = { name = 'langues youpikes', sortKey = 'youpikes langues', isGroup = true }
+l['ypz'] = { name = 'phuza' }
+l['yrb'] = { name = 'yareba' }
+l['yre'] = { name = 'yaouré' }
+l['yrk'] = { name = 'nénètse' }
+l['yrl'] = { name = 'nheengatu' }
+l['yrn'] = { name = 'yerong' }
+l['yro'] = { name = 'yaroamë' }
+l['yrs'] = { name = 'yarsun' }
+l['yry'] = { name = 'yarluyandi' }
+l['ysd'] = { name = 'samu' }
+l['ysl'] = { name = 'langue des signes yougoslave', sortKey = 'signes yougoslave' }
+l['ysn'] = { name = 'sani' }
+l['ysr'] = { name = 'sirenik' }
+l['yss'] = { name = 'yessan-mayo' }
+l['ysy'] = { name = 'sanie' }
+l['yta'] = { name = 'talu' }
+l['ytl'] = { name = 'tanglang' }
+l['yua'] = { name = 'maya yucatèque' }
+l['yuanmen'] = { name = 'yuanmen' }
+l['yuc'] = { name = 'yuchi' }
+l['yud'] = { name = 'arabe judéo-tripolitain' }
+l['yue'] = { name = 'cantonais', wikimediaCode = 'zh-yue', hasPortal = true, wiktionaryExists = true }
+l['yuf-hav'] = { name = 'havasupai' }
+l['yuf-wal'] = { name = 'hualapai' }
+l['yuf-yav'] = { name = 'yavapai' }
+l['yug'] = { name = 'yug' }
+l['yui'] = { name = 'yuriti' }
+l['yuj'] = { name = 'karkar-yuri' }
+l['yuk'] = { name = 'yuki' }
+l['yul'] = { name = 'yulu' }
+l['yulparija'] = { name = 'yulparija' }
+l['yum'] = { name = 'quechan' }
+l['yun'] = { name = 'bena (Nigeria)', sortKey = 'bena Nigeria' }
+l['yup'] = { name = 'yukpa' }
+l['yuq'] = { name = 'yuqui' }
+l['yur'] = { name = 'yurok' }
+l['yurumanguí'] = { name = 'yurumanguí' }
+l['yut'] = { name = 'yopno' }
+l['yux'] = { name = 'youkaguir de la Kolyma', sortKey = 'youkaguir Kolyma' }
+l['yuy'] = { name = 'yugur oriental' }
+l['yuz'] = { name = 'yuracaré' }
+l['yva'] = { name = 'yawa' }
+l['yvt'] = { name = 'yavitero' }
+l['ywl'] = { name = 'lalo de l’Ouest', sortKey = 'lalo Ouest' }
+l['ywq'] = { name = 'yi de Wuding-Luquan', sortKey = 'yi Wuding Luquan' }
+l['ywr'] = { name = 'yawuru' }
+l['ywt'] = { name = 'lalo central' }
+l['ywu'] = { name = 'nasu de Wumeng', sortKey = 'nasu Wumeng' }
+l['yww'] = { name = 'yawarawarga' }
+l['yxg'] = { name = 'yagara' }
+l['yxl'] = { name = 'yardliyawarra' }
+l['yxu'] = { name = 'yuyu' }
+l['yyu'] = { name = 'yau (province de Sandaun)', sortKey = 'yau Sandaun province' }
+l['yzg'] = { name = 'buyang ecun' }
+l['za'] = { name = 'zhuang', wiktionaryExists = true }
+l['zaa'] = { name = 'zapotèque de la Sierra de Juárez', sortKey = 'zapotèque Juárez Sierra' }
+l['zab'] = { name = 'zapotèque de San Juan Guelavía', sortKey = 'zapotèque San Juan Guelavía' }
+l['zac'] = { name = 'zapotèque d’Ocotlán', sortKey = 'zapotèque Ocotlán' }
+l['zad'] = { name = 'zapotèque de Cajonos', sortKey = 'zapotèque Cajonos' }
+l['zae'] = { name = 'zapotèque de Yareni', sortKey = 'zapotèque Yareni' }
+l['zaf'] = { name = 'zapotèque d’Ayoquesco', sortKey = 'zapotèque Ayoquesco' }
+l['zag'] = { name = 'zaghawa' }
+l['zai'] = { name = 'zapotèque de l’Isthme', sortKey = 'zapotèque Isthme' }
+l['zaj'] = { name = 'zaramo' }
+l['zak'] = { name = 'zanaki' }
+l['zal'] = { name = 'zauzou' }
+l['zam'] = { name = 'zapotèque de Miahuatlán', sortKey = 'zapotèque Miahuatlán' }
+l['zandui'] = { name = 'zandui' }
+l['zao'] = { name = 'zapotèque d’Ozolotepec', sortKey = 'zapotèque Ozolotepec' }
+l['zap'] = { name = 'zapotèque' }
+l['zaq'] = { name = 'zapotèque d’Aloápam', sortKey = 'zapotèque Aloápam' }
+l['zar'] = { name = 'zapotèque de Rincón', sortKey = 'zapotèque Rincón' }
+l['zas'] = { name = 'zapotèque de Santo Domingo Albarradas', sortKey = 'zapotèque Santo Domingo Albarradas' }
+l['zat'] = { name = 'zapotèque de Tabaa', sortKey = 'zapotèque Tabaa' }
+l['zav'] = { name = 'zapotèque de Yatzachi', sortKey = 'zapotèque Yatzachi' }
+l['zaw'] = { name = 'zapotèque de Mitla', sortKey = 'zapotèque Mitla' }
+l['zax'] = { name = 'zapotèque de Xadani', sortKey = 'zapotèque Xadani' }
+l['zay'] = { name = 'zayse-zergulla' }
+l['zbc'] = { name = 'batu belah' }
+l['zbe'] = { name = 'berawan long jegan' }
+l['zbl'] = { name = 'bliss' }
+l['zbt'] = { name = 'batui' }
+l['zbu'] = { name = 'zbu' }
+l['zbw'] = { name = 'berawan long terawan' }
+l['zca'] = { name = 'zapotèque de Coatecas Altas', sortKey = 'zapotèque Coatecas Altas' }
+l['zdj'] = { name = 'shingazidja' }
+l['zea'] = { name = 'zélandais' }
+l['zeg'] = { name = 'zenag' }
+l['zen'] = { name = 'zénaga' }
+l['zga'] = { name = 'kinga' }
+l['zgb'] = { name = 'zhuang de Guibei', sortKey = 'zhuang Guibei' }
+l['zgh'] = { name = 'amazighe standard marocain' }
+l['zgr'] = { name = 'magori' }
+l['zh'] = { name = 'chinois', hasPortal = true, wiktionaryExists = true }
+l['zhb'] = { name = 'zhaba' }
+l['zhd'] = { name = 'dai zhuang' }
+l['zhn'] = { name = 'nong zhuang' }
+l['zhx'] = { name = 'langues chinoises', sortKey = 'chinoises langues', isGroup = true }
+l['zia'] = { name = 'zia' }
+l['zik'] = { name = 'zimakani' }
+l['zil'] = { name = 'zialo' }
+l['zin'] = { name = 'zinza' }
+l['ziw'] = { name = 'zigua' }
+l['zkb'] = { name = 'koibale' }
+l['zkg'] = { name = 'koguryo' }
+l['zkk'] = { name = 'karankawa' }
+l['zko'] = { name = 'kott' }
+l['zkr'] = { name = 'zakhring' }
+l['zkt'] = { name = 'khitan' }
+l['zku'] = { name = 'kaurna' }
+l['zkv'] = { name = 'krévinien' }
+l['zkz'] = { name = 'khazar' }
+l['zle'] = { name = 'langues slaves orientales', sortKey = 'slaves orientales langues', isGroup = true }
+l['zls'] = { name = 'langues slaves méridionales', sortKey = 'slaves méridionales langues', isGroup = true }
+l['zlw'] = { name = 'langues slaves occidentales', sortKey = 'slaves occidentales langues', isGroup = true }
+l['zma'] = { name = 'manda' }
+l['zmb'] = { name = 'zimba' }
+l['zmc'] = { name = 'margany' }
+l['zme'] = { name = 'mangerr' }
+l['zmf'] = { name = 'mfinu' }
+l['zmg'] = { name = 'magati ke' }
+l['zmh'] = { name = 'makolkol' }
+l['zmi'] = { name = 'malais de Negeri Sembilan', sortKey = 'malais Negeri Sembilan' }
+l['zmj'] = { name = 'maridjabin' }
+l['zmk'] = { name = 'mandandanyi' }
+l['zml'] = { name = 'madngele' }
+l['zmm'] = { name = 'marimanindji' }
+l['zmn'] = { name = 'mbangwe' }
+l['zmo'] = { name = 'molo' }
+l['zmp'] = { name = 'mpuono' }
+l['zmq'] = { name = 'mituku' }
+l['zmr'] = { name = 'maranunggu' }
+l['zms'] = { name = 'mbesa' }
+l['zmt'] = { name = 'marringarr' }
+l['zmu'] = { name = 'muruwari' }
+l['zmv'] = { name = 'mbariman-gudhinma' }
+l['zmw'] = { name = 'mbo (République démocratique du Congo)', sortKey = 'mbo Congo démocratique' }
+l['zmx'] = { name = 'leke' }
+l['zmy'] = { name = 'mariyedi' }
+l['zmz'] = { name = 'mbandja' }
+l['zna'] = { name = 'zan gula' }
+l['znd'] = { name = 'langues zandées', sortKey = 'zandées langues', isGroup = true }
+l['zne'] = { name = 'zandé' }
+l['zng'] = { name = 'mang' }
+l['znk'] = { name = 'manangkari' }
+l['zns'] = { name = 'mangas' }
+l['zoc'] = { name = 'zoque de Copainalá', sortKey = 'zoque Copainalá' }
+l['zoh'] = { name = 'zoque de Chimalapa', sortKey = 'zoque Chimalapa' }
+l['zom'] = { name = 'zou' }
+l['zoo'] = { name = 'zapotèque d’Asunción Mixtepec', sortKey = 'zapotèque Asunción Mixtepec' }
+l['zoq'] = { name = 'ayapaneco' }
+l['zor'] = { name = 'zoque de Rayón', sortKey = 'zoque Rayón' }
+l['zos'] = { name = 'zoque de Francisco León', sortKey = 'zoque Francisco León' }
+l['zpa'] = { name = 'zapotèque de Lachiguiri', sortKey = 'zapotèque Lachiguiri' }
+l['zpb'] = { name = 'zapotèque de Yautepec', sortKey = 'zapotèque Yautepec' }
+l['zpc'] = { name = 'zapotèque de Choapan', sortKey = 'zapotèque Choapan' }
+l['zpd'] = { name = 'zapotèque de l’Ixtlán du Sud-Est', sortKey = 'zapotèque Ixtlán Sud Est' }
+l['zpe'] = { name = 'zapotèque de Petapa', sortKey = 'zapotèque Petapa' }
+l['zpf'] = { name = 'zapotèque de San Pedro Quiatoni', sortKey = 'zapotèque San Pedro Quiatoni' }
+l['zpg'] = { name = 'zapotèque de Guevea De Humboldt', sortKey = 'zapotèque Guevea de Humboldt' }
+l['zph'] = { name = 'zapotèque de Totomachapan', sortKey = 'zapotèque Totomachapan' }
+l['zpi'] = { name = 'zapotèque de Santa María Quiegolani', sortKey = 'zapotèque Santa María Quiegolani' }
+l['zpj'] = { name = 'zapotèque de Quiavicuzas', sortKey = 'zapotèque Quiavicuzas' }
+l['zpk'] = { name = 'zapotèque de Tlacolulita', sortKey = 'zapotèque Tlacolulita' }
+l['zpl'] = { name = 'zapotèque de Lachixío', sortKey = 'zapotèque Lachixío' }
+l['zpm'] = { name = 'zapotèque de Mixtepec', sortKey = 'zapotèque Mixtepec' }
+l['zpn'] = { name = 'zapotèque de Santa Inés Yatzechi', sortKey = 'zapotèque Santa Inés Yatzechi' }
+l['zpo'] = { name = 'zapotèque d’Amatlán', sortKey = 'zapotèque Amatlán' }
+l['zpp'] = { name = 'zapotèque d’El Alto', sortKey = 'zapotèque El Alto' }
+l['zpq'] = { name = 'zapotèque de San Bartolomé Zoogocho', sortKey = 'zapotèque San Bartolomé Zoogocho' }
+l['zpr'] = { name = 'zapotèque de Xanica', sortKey = 'zapotèque Xanica' }
+l['zps'] = { name = 'zapotèque de Coatlán', sortKey = 'zapotèque Coatlán' }
+l['zpt'] = { name = 'zapotèque de San Vicente Coatlán', sortKey = 'zapotèque San Vicente Coatlán' }
+l['zpu'] = { name = 'zapotèque de Yalálag', sortKey = 'zapotèque Yalálag' }
+l['zpv'] = { name = 'zapotèque de San Baltazar Chichicápam', sortKey = 'zapotèque San Baltazar Chichicápam' }
+l['zpw'] = { name = 'zapotèque de Zaniza', sortKey = 'zapotèque Zaniza' }
+l['zpx'] = { name = 'zapotèque de San Baltazar Loxicha', sortKey = 'zapotèque San Baltazar Loxicha' }
+l['zpy'] = { name = 'zapotèque de Mazaltepec', sortKey = 'zapotèque Mazaltepec' }
+l['zpz'] = { name = 'zapotèque de Texmelucan', sortKey = 'zapotèque Texmelucan' }
+l['zqe'] = { name = 'qiubei zhuang' }
+l['zra'] = { name = 'gaya' }
+l['zrn'] = { name = 'zirenkel' }
+l['zro'] = { name = 'záparo' }
+l['zrp'] = { name = 'sarphatique' }
+l['zrs'] = { name = 'mairasi' }
+l['zsa'] = { name = 'sarasira' }
+l['zsk'] = { name = 'casquéen' }
+l['zsl'] = { name = 'langue des signes zambienne', sortKey = 'signes zambienne' }
+l['zsr'] = { name = 'zapotèque de Rincón du Sud', sortKey = 'zapotèque Rincón Sud' }
+l['zsu'] = { name = 'sukurum' }
+l['zte'] = { name = 'zapotèque d’Elotepec', sortKey = 'zapotèque Elotepec' }
+l['ztg'] = { name = 'zapotèque de San Francisco Ozolotepec', sortKey = 'zapotèque San Francisco Ozolotepec' }
+l['ztl'] = { name = 'zapotèque de Lapaguía-Guivini', sortKey = 'zapotèque Lapaguía Guivini' }
+l['ztm'] = { name = 'zapotèque de San Agustín Mixtepec', sortKey = 'zapotèque San Agustín Mixtepec' }
+l['ztn'] = { name = 'zapotèque de Santa Catarina Albarradas', sortKey = 'zapotèque Santa Catarina Albarradas' }
+l['ztp'] = { name = 'zapotèque de Loxicha', sortKey = 'zapotèque Loxicha' }
+l['ztq'] = { name = 'zapotèque de Quioquitani-Quierí', sortKey = 'zapotèque Quioquitani Quierí' }
+l['zts'] = { name = 'zapotèque de Tilquiapan', sortKey = 'zapotèque Tilquiapan' }
+l['ztt'] = { name = 'zapotèque de Tejalapan', sortKey = 'zapotèque Tejalapan' }
+l['ztu'] = { name = 'zapotèque de Güilá', sortKey = 'zapotèque Güilá' }
+l['ztx'] = { name = 'zapotèque de Zaachila', sortKey = 'zapotèque Zaachila' }
+l['zty'] = { name = 'zapotèque de Yateé', sortKey = 'zapotèque Yateé' }
+l['zu'] = { name = 'zoulou', wiktionaryExists = true }
+l['zuh'] = { name = 'tokano' }
+l['zum'] = { name = 'kumzari' }
+l['zun'] = { name = 'zuni' }
+l['zuy'] = { name = 'zumaya' }
+l['zwa'] = { name = 'zay' }
+l['zyb'] = { name = 'zhuang de Yongbei', sortKey = 'zhuang Yongbei' }
+l['zyg'] = { name = 'zhuang de Deqing', sortKey = 'zhuang Deqing' }
+l['zyj'] = { name = 'zhuang de Youjiang', sortKey = 'zhuang Youjiang' }
+l['zyn'] = { name = 'zhuang de Yongnan', sortKey = 'zhuang Yongnan' }
+l['zyp'] = { name = 'zyphe' }
+l['zza'] = { name = 'zazaki' }
+l['zzj'] = { name = 'zhuang de Zuojiang', sortKey = 'zhuang Zuojiang' }
 -- Fin langues
 
 -- Proto-langues
-l['indo-européen commun'] = { nom = 'indo-européen commun' }
-l['proto-afro-asiatique'] = { nom = 'proto-afro-asiatique', tri = 'afro asiatique proto' }
-l['proto-albanais'] = { nom = 'proto-albanais', tri = 'albanais proto' }
-l['proto-algonquien'] = { nom = 'proto-algonquien', tri = 'algonquien proto' }
-l['proto-algonquien oriental'] = { nom = 'proto-algonquien oriental', tri = 'algonquien est proto' }
-l['proto-altaïque'] = { nom = 'proto-altaïque', tri = 'altaïque proto' }
-l['proto-amami'] = { nom = 'proto-amami', tri = 'amami proto' }
-l['proto-aslien'] = { nom = 'proto-aslien', tri = 'aslien proto' }
-l['proto-athapascan'] = { nom = 'proto-athapascan', tri = 'athapascan proto' }
-l['proto-austroasiatique'] = { nom = 'proto-austroasiatique', tri = 'austroasiatique proto' }
-l['proto-austronésien'] = { nom = 'proto-austronésien', tri = 'austronésien proto' }
-l['proto-bahnarique'] = { nom = 'proto-bahnarique', tri = 'bahnarique proto' }
-l['proto-bahnarique central'] = { nom = 'proto-bahnarique central', tri = 'bahnarique central proto' }
-l['proto-bahnarique de l’Ouest'] = { nom = 'proto-bahnarique de l’Ouest', tri = 'bahnarique ouest proto' }
-l['proto-bahnarique du Nord'] = { nom = 'proto-bahnarique du Nord', tri = 'bahnarique nord proto' }
-l['proto-bahnarique du Sud'] = { nom = 'proto-bahnarique du Sud', tri = 'bahnarique sud proto' }
-l['proto-balte'] = { nom = 'proto-balte', tri = 'balte proto' }
-l['proto-balto-slave'] = { nom = 'proto-balto-slave', tri = 'balto slave proto' }
-l['proto-bantou'] = { nom = 'proto-bantou', tri = 'bantou proto' }
-l['proto-basque'] = { nom = 'proto-basque', tri = 'basque proto' }
-l['proto-berbère'] = { nom = 'proto-berbère', tri = 'berbère proto' }
-l['proto-bodique oriental'] = { nom = 'proto-bodique oriental', tri = 'bodique oriental proto' }
-l['proto-brittonique'] = { nom = 'proto-brittonique', tri = 'brittonique proto' }
-l['proto-caribe'] = { nom = 'proto-caribe', tri = 'caribe proto' }
-l['proto-celtique'] = { nom = 'proto-celtique', tri = 'celtique proto' }
-l['proto-coréen'] = { nom = 'proto-coréen', tri = 'coréen proto' }
-l['proto-costanoan'] = { nom = 'proto-costanoan', tri = 'costanoan proto' }
-l['proto-dravidien'] = { nom = 'proto-dravidien', tri = 'dravidien proto' }
-l['proto-dura'] = { nom = 'proto-dura', tri = 'dura proto' }
-l['proto-eskimo'] = { nom = 'proto-eskimo', tri = 'eskimo proto' }
-l['proto-fennique'] = { nom = 'proto-fennique', tri = 'fennique proto' }
-l['proto-finno-ougrien'] = { nom = 'proto-finno-ougrien', tri = 'finno ougrien proto' }
-l['proto-germanique'] = { nom = 'proto-germanique', tri = 'germanique proto' }
-l['proto-germanique occidental'] = { nom = 'proto-germanique occidental', tri = 'germanique occidental proto' }
-l['proto-grec'] = { nom = 'proto-grec', tri = 'grec proto' }
-l['proto-hlai'] = { nom = 'proto-hlai', tri = 'hlai proto' }
-l['proto-hrusique'] = { nom = 'proto-hrusique', tri = 'hrusique proto' }
-l['proto-ienisseïen'] = { nom = 'proto-ienisseïen', tri = 'ienisseïen proto' }
-l['proto-indo-aryen'] = { nom = 'proto-indo-aryen', tri = 'indo aryen proto' }
-l['proto-indo-iranien'] = { nom = 'proto-indo-iranien', tri = 'indo iranien proto' }
-l['proto-iranien'] = { nom = 'proto-iranien', tri = 'iranien proto' }
-l['proto-italique'] = { nom = 'proto-italique', tri = 'italique proto' }
-l['proto-japonique'] = { nom = 'proto-japonique', tri = 'japonique proto' }
-l['proto-japonique insulaire'] = { nom = 'proto-japonique insulaire', tri = 'japonique insulaire proto' }
-l['proto-japono-coréanique'] = { nom = 'proto-japono-coréanique', tri = 'japono coréanique proto' }
-l['proto-katuique'] = { nom = 'proto-katuique', tri = 'katuique proto' }
-l['proto-keresan'] = { nom = 'proto-keresan', tri = 'keresan proto' }
-l['proto-khanty'] = { nom = 'proto-khanty', tri = 'khanty proto' }
-l['proto-khasique'] = { nom = 'proto-khasique', tri = 'khasique proto' }
-l['proto-kherwarien'] = { nom = 'proto-kherwarien', tri = 'kherwarien proto' }
-l['proto-khmer'] = { nom = 'proto-khmer', tri = 'khmer proto' }
-l['proto-khmuique'] = { nom = 'proto-khmuique', tri = 'khmuique proto' }
-l['proto-kiowa-tanoan'] = { nom = 'proto-kiowa-tanoan', tri = 'kiowa tanoan proto' }
-l['proto-kiranti'] = { nom = 'proto-kiranti', tri = 'kiranti proto' }
-l['proto-lolo'] = { nom = 'proto-lolo', tri = 'lolo proto' }
-l['proto-lower cross'] = { nom = 'proto-lower cross', tri = 'lower cross proto' }
-l['proto-macro-yaeyama'] = { nom = 'proto-macro-yaeyama', tri = 'macro yaeyama proto' }
-l['proto-malais'] = { nom = 'proto-malais', tri = 'malais proto' }
-l['proto-malaïque'] = { nom = 'proto-malaïque', tri = 'malaïque proto' }
-l['proto-malayo-chamique'] = { nom = 'proto-malayo-chamique', tri = 'malayo chamique proto' }
-l['proto-malayo-polynésien'] = { nom = 'proto-malayo-polynésien', tri = 'malayo polynésien proto' }
-l['proto-malayo-sumbawien'] = { nom = 'proto-malayo-sumbawien', tri = 'malayo sumbawien proto' }
-l['proto-mansi'] = { nom = 'proto-mansi', tri = 'mansi proto' }
-l['proto-mari'] = { nom = 'proto-mari', tri = 'mari proto' }
-l['proto-masa'] = { nom = 'proto-masa', tri = 'masa proto' }
-l['proto-maya'] = { nom = 'proto-maya', tri = 'maya proto' }
-l['proto-micronésien'] = { nom = 'proto-micronésien', tri = 'micronésien proto' }
-l['proto-miyako'] = { nom = 'proto-miyako', tri = 'miyako proto' }
-l['proto-miyako central'] = { nom = 'proto-miyako central', tri = 'miyako central proto' }
-l['proto-miyako commun'] = { nom = 'proto-miyako commun', tri = 'miyako commun proto' }
-l['proto-miwok'] = { nom = 'proto-miwok', tri = 'miwok proto' }
-l['proto-mongol'] = { nom = 'proto-mongol', tri = 'mongol proto' }
-l['proto-môn-khmer'] = { nom = 'proto-môn-khmer', tri = 'mon khmer proto' }
-l['proto-mônique'] = { nom = 'proto-mônique', tri = 'mônique proto' }
-l['proto-mordve'] = { nom = 'proto-mordve', tri = 'mordve proto' }
-l['proto-munda'] = { nom = 'proto-munda', tri = 'munda proto' }
-l['proto-munda du Nord'] = { nom = 'proto-munda du Nord', tri = 'proto munda nord' }
-l['proto-murutique'] = { nom = 'proto-murutique', tri = 'murutique proto' }
-l['proto-muskogéen'] = { nom = 'proto-muskogéen', tri = 'muskogéen proto' }
-l['proto-nahuatl'] = { nom = 'proto-nahuatl', tri = 'nahuatl proto' }
-l['proto-nguni'] = { nom = 'proto-nguni', tri = 'nguni proto' }
-l['proto-nhanda-kartu'] = { nom = 'proto-nhanda-kartu', tri = 'nhanda kartu proto' }
-l['proto-nivkh'] = { nom = 'proto-nivkh', tri = 'nivkh proto' }
-l['proto-norrois'] = { nom = 'proto-norrois', tri = 'norrois proto' }
-l['proto-numique'] = { nom = 'proto-numique', tri = 'numique proto' }
-l['proto-océanien'] = { nom = 'proto-océanien', tri = 'océanien proto' }
-l['proto-okinawaïen'] = { nom = 'proto-okinawaïen', tri = 'okinawaïen proto' }
-l['proto-one'] = { nom = 'proto-one', tri = 'one proto' }
-l['proto-otomi'] = { nom = 'proto-otomi', tri = 'otomi proto' }
-l['proto-ougrien'] = { nom = 'proto-ougrien', tri = 'ougrien proto' }
-l['proto-ouralien'] = { nom = 'proto-ouralien', tri = 'ouralien proto' }
-l['proto-palaungique'] = { nom = 'proto-palaungique', tri = 'palaungique proto' }
-l['proto-pama-nyungan'] = { nom = 'proto-pama-nyungan', tri = 'pama nyungan proto' }
-l['proto-paman'] = { nom = 'proto-paman', tri = 'paman proto' }
-l['proto-péarique'] = { nom = 'proto-péarique', tri = 'péarique proto' }
-l['proto-permien'] = { nom = 'proto-permien', tri = 'permien proto' }
-l['proto-polynésien'] = { nom = 'proto-polynésien', tri = 'polynésien proto' }
-l['proto-pomo'] = { nom = 'proto-pomo', tri = 'pomo proto' }
-l['proto-pong'] = { nom = 'proto-pong', tri = 'pong proto' }
-l['proto-pramique'] = { nom = 'proto-pramique', tri = 'pramique proto' }
-l['proto-pwo'] = { nom = 'proto-pwo', tri = 'pwo proto' }
-l['proto-ryūkyū'] = { nom = 'proto-ryūkyū', tri = 'ryukyu proto' }
-l['proto-ryūkyū du Nord'] = { nom = 'proto-ryūkyū du Nord', tri = 'ryukyu nord proto' }
-l['proto-ryūkyū du Sud'] = { nom = 'proto-ryūkyū du Sud', tri = 'ryukyu sud proto' }
-l['proto-Sabah du Sud-Ouest'] = { nom = 'proto-Sabah du Sud-Ouest', tri = 'sabah sud ouest proto' }
-l['proto-sahaptien'] = { nom = 'proto-sahaptien', tri = 'sahaptien proto' }
-l['proto-same'] = { nom = 'proto-same', tri = 'same proto' }
-l['proto-samoyède'] = { nom = 'proto-samoyède', tri = 'samoyède proto' }
-l['proto-sangirien'] = { nom = 'proto-sangirien', tri = 'sangirien proto' }
-l['proto-sarawak du Nord'] = { nom = 'proto-sarawak du Nord', tri = 'sarawak nord proto' }
-l['proto-sémitique'] = { nom = 'proto-sémitique', tri = 'sémitique proto' }
-l['proto-sénoïque'] = { nom = 'proto-sénoïque', tri = 'sénoïque proto' }
-l['proto-sérère-peul'] = { nom = 'proto-sérère-peul', tri = 'sérère peul proto' }
-l['proto-sino-tibétain'] = { nom = 'proto-sino-tibétain', tri = 'sino tibétain proto' }
-l['proto-siouan'] = { nom = 'proto-siouan', tri = 'siouan proto' }
-l['proto-slave'] = { nom = 'proto-slave', tri = 'slave proto' }
-l['proto-subanen'] = { nom = 'proto-subanen', tri = 'subanen proto' }
-l['proto-sunda-sulawesi'] = { nom = 'proto-sunda-sulawesi', tri = 'sunda sulawesi proto' }
-l['proto-talodi'] = { nom = 'proto-talodi', tri = 'talodi proto' }
-l['proto-tangkique'] = { nom = 'proto-tangkique', tri = 'tangkique proto' }
-l['proto-tchadique central'] = { nom = 'proto-tchadique central', tri = 'tchadique central proto' }
-l['proto-tibéto-birman'] = { nom = 'proto-tibéto-birman', tri = 'tibéto birman proto' }
-l['proto-thaï'] = { nom = 'proto-thaï', tri = 'thaï proto' }
-l['proto-toungouse'] = { nom = 'proto-toungouse', tri = 'toungouse proto' }
-l['proto-toungouse du Nord'] = { nom = 'proto-toungouse du Nord', tri = 'toungouse nord proto' }
-l['proto-trans-néo-guinéen'] = { nom = 'proto-trans-néo-guinéen', tri = 'trans néo guinéen proto' }
-l['proto-tupi-guarani'] = { nom = 'proto-tupi-guarani', tri = 'tupi guarani proto' }
-l['proto-turc'] = { nom = 'proto-turc', tri = 'turc proto' }
-l['proto-vanuatu Nord-Central'] = { nom = 'proto-vanuatu Nord-Central', tri = 'vanuatu nord central proto' }
-l['proto-viétique'] = { nom = 'proto-viétique', tri = 'viétique proto' }
-l['proto-viêt-muong'] = { nom = 'proto-viêt-muong', tri = 'viêt muong proto' }
-l['proto-wa-lawa'] = { nom = 'proto-wa-lawa', tri = 'wa-lawa proto' }
-l['proto-waïque'] = { nom = 'proto-waïque', tri = 'waïque proto' }
-l['proto-wintuan'] = { nom = 'proto-wintuan', tri = 'wintuan proto' }
-l['proto-yaeyama'] = { nom = 'proto-yaeyama', tri = 'yaeyama proto' }
-l['proto-yonaguni'] = { nom = 'proto-yonaguni', tri = 'yonaguni proto' }
+l['indo-européen commun'] = { name = 'indo-européen commun' }
+l['proto-afro-asiatique'] = { name = 'proto-afro-asiatique', sortKey = 'afro asiatique proto' }
+l['proto-albanais'] = { name = 'proto-albanais', sortKey = 'albanais proto' }
+l['proto-algonquien'] = { name = 'proto-algonquien', sortKey = 'algonquien proto' }
+l['proto-algonquien oriental'] = { name = 'proto-algonquien oriental', sortKey = 'algonquien est proto' }
+l['proto-altaïque'] = { name = 'proto-altaïque', sortKey = 'altaïque proto' }
+l['proto-amami'] = { name = 'proto-amami', sortKey = 'amami proto' }
+l['proto-aslien'] = { name = 'proto-aslien', sortKey = 'aslien proto' }
+l['proto-athapascan'] = { name = 'proto-athapascan', sortKey = 'athapascan proto' }
+l['proto-austroasiatique'] = { name = 'proto-austroasiatique', sortKey = 'austroasiatique proto' }
+l['proto-austronésien'] = { name = 'proto-austronésien', sortKey = 'austronésien proto' }
+l['proto-bahnarique'] = { name = 'proto-bahnarique', sortKey = 'bahnarique proto' }
+l['proto-bahnarique central'] = { name = 'proto-bahnarique central', sortKey = 'bahnarique central proto' }
+l['proto-bahnarique de l’Ouest'] = { name = 'proto-bahnarique de l’Ouest', sortKey = 'bahnarique ouest proto' }
+l['proto-bahnarique du Nord'] = { name = 'proto-bahnarique du Nord', sortKey = 'bahnarique nord proto' }
+l['proto-bahnarique du Sud'] = { name = 'proto-bahnarique du Sud', sortKey = 'bahnarique sud proto' }
+l['proto-balte'] = { name = 'proto-balte', sortKey = 'balte proto' }
+l['proto-balto-slave'] = { name = 'proto-balto-slave', sortKey = 'balto slave proto' }
+l['proto-bantou'] = { name = 'proto-bantou', sortKey = 'bantou proto' }
+l['proto-basque'] = { name = 'proto-basque', sortKey = 'basque proto' }
+l['proto-berbère'] = { name = 'proto-berbère', sortKey = 'berbère proto' }
+l['proto-bodique oriental'] = { name = 'proto-bodique oriental', sortKey = 'bodique oriental proto' }
+l['proto-brittonique'] = { name = 'proto-brittonique', sortKey = 'brittonique proto' }
+l['proto-caribe'] = { name = 'proto-caribe', sortKey = 'caribe proto' }
+l['proto-celtique'] = { name = 'proto-celtique', sortKey = 'celtique proto' }
+l['proto-coréen'] = { name = 'proto-coréen', sortKey = 'coréen proto' }
+l['proto-costanoan'] = { name = 'proto-costanoan', sortKey = 'costanoan proto' }
+l['proto-dravidien'] = { name = 'proto-dravidien', sortKey = 'dravidien proto' }
+l['proto-dura'] = { name = 'proto-dura', sortKey = 'dura proto' }
+l['proto-eskimo'] = { name = 'proto-eskimo', sortKey = 'eskimo proto' }
+l['proto-fennique'] = { name = 'proto-fennique', sortKey = 'fennique proto' }
+l['proto-finno-ougrien'] = { name = 'proto-finno-ougrien', sortKey = 'finno ougrien proto' }
+l['proto-germanique'] = { name = 'proto-germanique', sortKey = 'germanique proto' }
+l['proto-germanique occidental'] = { name = 'proto-germanique occidental', sortKey = 'germanique occidental proto' }
+l['proto-grec'] = { name = 'proto-grec', sortKey = 'grec proto' }
+l['proto-hlai'] = { name = 'proto-hlai', sortKey = 'hlai proto' }
+l['proto-hrusique'] = { name = 'proto-hrusique', sortKey = 'hrusique proto' }
+l['proto-ienisseïen'] = { name = 'proto-ienisseïen', sortKey = 'ienisseïen proto' }
+l['proto-indo-aryen'] = { name = 'proto-indo-aryen', sortKey = 'indo aryen proto' }
+l['proto-indo-iranien'] = { name = 'proto-indo-iranien', sortKey = 'indo iranien proto' }
+l['proto-iranien'] = { name = 'proto-iranien', sortKey = 'iranien proto' }
+l['proto-italique'] = { name = 'proto-italique', sortKey = 'italique proto' }
+l['proto-japonique'] = { name = 'proto-japonique', sortKey = 'japonique proto' }
+l['proto-japonique insulaire'] = { name = 'proto-japonique insulaire', sortKey = 'japonique insulaire proto' }
+l['proto-japono-coréanique'] = { name = 'proto-japono-coréanique', sortKey = 'japono coréanique proto' }
+l['proto-katuique'] = { name = 'proto-katuique', sortKey = 'katuique proto' }
+l['proto-keresan'] = { name = 'proto-keresan', sortKey = 'keresan proto' }
+l['proto-khanty'] = { name = 'proto-khanty', sortKey = 'khanty proto' }
+l['proto-khasique'] = { name = 'proto-khasique', sortKey = 'khasique proto' }
+l['proto-kherwarien'] = { name = 'proto-kherwarien', sortKey = 'kherwarien proto' }
+l['proto-khmer'] = { name = 'proto-khmer', sortKey = 'khmer proto' }
+l['proto-khmuique'] = { name = 'proto-khmuique', sortKey = 'khmuique proto' }
+l['proto-kiowa-tanoan'] = { name = 'proto-kiowa-tanoan', sortKey = 'kiowa tanoan proto' }
+l['proto-kiranti'] = { name = 'proto-kiranti', sortKey = 'kiranti proto' }
+l['proto-lolo'] = { name = 'proto-lolo', sortKey = 'lolo proto' }
+l['proto-lower cross'] = { name = 'proto-lower cross', sortKey = 'lower cross proto' }
+l['proto-macro-yaeyama'] = { name = 'proto-macro-yaeyama', sortKey = 'macro yaeyama proto' }
+l['proto-malais'] = { name = 'proto-malais', sortKey = 'malais proto' }
+l['proto-malaïque'] = { name = 'proto-malaïque', sortKey = 'malaïque proto' }
+l['proto-malayo-chamique'] = { name = 'proto-malayo-chamique', sortKey = 'malayo chamique proto' }
+l['proto-malayo-polynésien'] = { name = 'proto-malayo-polynésien', sortKey = 'malayo polynésien proto' }
+l['proto-malayo-sumbawien'] = { name = 'proto-malayo-sumbawien', sortKey = 'malayo sumbawien proto' }
+l['proto-mansi'] = { name = 'proto-mansi', sortKey = 'mansi proto' }
+l['proto-mari'] = { name = 'proto-mari', sortKey = 'mari proto' }
+l['proto-masa'] = { name = 'proto-masa', sortKey = 'masa proto' }
+l['proto-maya'] = { name = 'proto-maya', sortKey = 'maya proto' }
+l['proto-micronésien'] = { name = 'proto-micronésien', sortKey = 'micronésien proto' }
+l['proto-miyako'] = { name = 'proto-miyako', sortKey = 'miyako proto' }
+l['proto-miyako central'] = { name = 'proto-miyako central', sortKey = 'miyako central proto' }
+l['proto-miyako commun'] = { name = 'proto-miyako commun', sortKey = 'miyako commun proto' }
+l['proto-miwok'] = { name = 'proto-miwok', sortKey = 'miwok proto' }
+l['proto-mongol'] = { name = 'proto-mongol', sortKey = 'mongol proto' }
+l['proto-môn-khmer'] = { name = 'proto-môn-khmer', sortKey = 'mon khmer proto' }
+l['proto-mônique'] = { name = 'proto-mônique', sortKey = 'mônique proto' }
+l['proto-mordve'] = { name = 'proto-mordve', sortKey = 'mordve proto' }
+l['proto-munda'] = { name = 'proto-munda', sortKey = 'munda proto' }
+l['proto-munda du Nord'] = { name = 'proto-munda du Nord', sortKey = 'proto munda nord' }
+l['proto-murutique'] = { name = 'proto-murutique', sortKey = 'murutique proto' }
+l['proto-muskogéen'] = { name = 'proto-muskogéen', sortKey = 'muskogéen proto' }
+l['proto-nahuatl'] = { name = 'proto-nahuatl', sortKey = 'nahuatl proto' }
+l['proto-nguni'] = { name = 'proto-nguni', sortKey = 'nguni proto' }
+l['proto-nhanda-kartu'] = { name = 'proto-nhanda-kartu', sortKey = 'nhanda kartu proto' }
+l['proto-nivkh'] = { name = 'proto-nivkh', sortKey = 'nivkh proto' }
+l['proto-norrois'] = { name = 'proto-norrois', sortKey = 'norrois proto' }
+l['proto-numique'] = { name = 'proto-numique', sortKey = 'numique proto' }
+l['proto-océanien'] = { name = 'proto-océanien', sortKey = 'océanien proto' }
+l['proto-okinawaïen'] = { name = 'proto-okinawaïen', sortKey = 'okinawaïen proto' }
+l['proto-one'] = { name = 'proto-one', sortKey = 'one proto' }
+l['proto-otomi'] = { name = 'proto-otomi', sortKey = 'otomi proto' }
+l['proto-ougrien'] = { name = 'proto-ougrien', sortKey = 'ougrien proto' }
+l['proto-ouralien'] = { name = 'proto-ouralien', sortKey = 'ouralien proto' }
+l['proto-palaungique'] = { name = 'proto-palaungique', sortKey = 'palaungique proto' }
+l['proto-pama-nyungan'] = { name = 'proto-pama-nyungan', sortKey = 'pama nyungan proto' }
+l['proto-paman'] = { name = 'proto-paman', sortKey = 'paman proto' }
+l['proto-péarique'] = { name = 'proto-péarique', sortKey = 'péarique proto' }
+l['proto-permien'] = { name = 'proto-permien', sortKey = 'permien proto' }
+l['proto-polynésien'] = { name = 'proto-polynésien', sortKey = 'polynésien proto' }
+l['proto-pomo'] = { name = 'proto-pomo', sortKey = 'pomo proto' }
+l['proto-pong'] = { name = 'proto-pong', sortKey = 'pong proto' }
+l['proto-pramique'] = { name = 'proto-pramique', sortKey = 'pramique proto' }
+l['proto-pwo'] = { name = 'proto-pwo', sortKey = 'pwo proto' }
+l['proto-ryūkyū'] = { name = 'proto-ryūkyū', sortKey = 'ryukyu proto' }
+l['proto-ryūkyū du Nord'] = { name = 'proto-ryūkyū du Nord', sortKey = 'ryukyu nord proto' }
+l['proto-ryūkyū du Sud'] = { name = 'proto-ryūkyū du Sud', sortKey = 'ryukyu sud proto' }
+l['proto-Sabah du Sud-Ouest'] = { name = 'proto-Sabah du Sud-Ouest', sortKey = 'sabah sud ouest proto' }
+l['proto-sahaptien'] = { name = 'proto-sahaptien', sortKey = 'sahaptien proto' }
+l['proto-same'] = { name = 'proto-same', sortKey = 'same proto' }
+l['proto-samoyède'] = { name = 'proto-samoyède', sortKey = 'samoyède proto' }
+l['proto-sangirien'] = { name = 'proto-sangirien', sortKey = 'sangirien proto' }
+l['proto-sarawak du Nord'] = { name = 'proto-sarawak du Nord', sortKey = 'sarawak nord proto' }
+l['proto-sémitique'] = { name = 'proto-sémitique', sortKey = 'sémitique proto' }
+l['proto-sénoïque'] = { name = 'proto-sénoïque', sortKey = 'sénoïque proto' }
+l['proto-sérère-peul'] = { name = 'proto-sérère-peul', sortKey = 'sérère peul proto' }
+l['proto-sino-tibétain'] = { name = 'proto-sino-tibétain', sortKey = 'sino tibétain proto' }
+l['proto-siouan'] = { name = 'proto-siouan', sortKey = 'siouan proto' }
+l['proto-slave'] = { name = 'proto-slave', sortKey = 'slave proto' }
+l['proto-subanen'] = { name = 'proto-subanen', sortKey = 'subanen proto' }
+l['proto-sunda-sulawesi'] = { name = 'proto-sunda-sulawesi', sortKey = 'sunda sulawesi proto' }
+l['proto-talodi'] = { name = 'proto-talodi', sortKey = 'talodi proto' }
+l['proto-tangkique'] = { name = 'proto-tangkique', sortKey = 'tangkique proto' }
+l['proto-tchadique central'] = { name = 'proto-tchadique central', sortKey = 'tchadique central proto' }
+l['proto-tibéto-birman'] = { name = 'proto-tibéto-birman', sortKey = 'tibéto birman proto' }
+l['proto-thaï'] = { name = 'proto-thaï', sortKey = 'thaï proto' }
+l['proto-toungouse'] = { name = 'proto-toungouse', sortKey = 'toungouse proto' }
+l['proto-toungouse du Nord'] = { name = 'proto-toungouse du Nord', sortKey = 'toungouse nord proto' }
+l['proto-trans-néo-guinéen'] = { name = 'proto-trans-néo-guinéen', sortKey = 'trans néo guinéen proto' }
+l['proto-tupi-guarani'] = { name = 'proto-tupi-guarani', sortKey = 'tupi guarani proto' }
+l['proto-turc'] = { name = 'proto-turc', sortKey = 'turc proto' }
+l['proto-vanuatu Nord-Central'] = { name = 'proto-vanuatu Nord-Central', sortKey = 'vanuatu nord central proto' }
+l['proto-viétique'] = { name = 'proto-viétique', sortKey = 'viétique proto' }
+l['proto-viêt-muong'] = { name = 'proto-viêt-muong', sortKey = 'viêt muong proto' }
+l['proto-wa-lawa'] = { name = 'proto-wa-lawa', sortKey = 'wa-lawa proto' }
+l['proto-waïque'] = { name = 'proto-waïque', sortKey = 'waïque proto' }
+l['proto-wintuan'] = { name = 'proto-wintuan', sortKey = 'wintuan proto' }
+l['proto-yaeyama'] = { name = 'proto-yaeyama', sortKey = 'yaeyama proto' }
+l['proto-yonaguni'] = { name = 'proto-yonaguni', sortKey = 'yonaguni proto' }
 -- Fin protolangues
 
 -- Redirections de langues

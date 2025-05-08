@@ -27,7 +27,7 @@ function p.getName(code, allowSpecial)
   if not code or not languagesData[code] or not allowSpecial and (languagesData[code].isSpecial or languagesData[code].isGroup) then
     return nil
   end
-  return languagesData[code].nom
+  return languagesData[code].name
 end
 
 --- Return the sort key for the given language code.
@@ -38,7 +38,7 @@ function p.getSortKey(code, allowSpecial)
   if not code or not languagesData[code] or not allowSpecial and (languagesData[code].isSpecial or languagesData[code].isGroup) then
     return nil
   end
-  return languagesData[code]["tri"] or languagesData[code]["nom"]
+  return languagesData[code].sortKey or languagesData[code].name
 end
 
 --- Return the name of the given language. Available to templates.
@@ -97,7 +97,7 @@ function p.getWikimediaCode(code)
   if not code or not languagesData[code] then
     return nil
   end
-  return languagesData[code].wmlien
+  return languagesData[code].wikimediaCode
 end
 
 --- Return the Wikimedia language code for the given internal language code if it exists.
@@ -117,14 +117,14 @@ end
 --- @param code string A language code.
 --- @return boolean True if a “Portail” page exists, false otherwise.
 function p.hasPortal(code)
-  return languagesData[code] ~= nil and languagesData[code]["portail"]
+  return languagesData[code] ~= nil and languagesData[code].hasPortal
 end
 
 --- Check whether a Wiktionary exists for the given language code.
 --- @param code string Le code de langue.
 --- @return boolean True if a Wiktionary exists, false otherwise.
 function p.hasWiktionary(code)
-  return languagesData[code] ~= nil and languagesData[code]["wiktionnaire"]
+  return languagesData[code] ~= nil and languagesData[code].wiktionaryExists
 end
 
 --- Return the code corresponding to the given language name.
@@ -144,7 +144,7 @@ function p.getLanguageCode(languageName, allowSpecial)
   end
   local result
   for code, languageData in pairs(languagesData) do
-    if languageName == languageData["nom"] and
+    if languageName == languageData.name and
         (allowSpecial or not languageData.isGroup and not languageData.isSpecial) then
       local codeLength = mw.ustring.len(code)
       if result == nil or code == languageName or
@@ -155,8 +155,8 @@ function p.getLanguageCode(languageName, allowSpecial)
     end
   end
   -- If no match yet, consider the name as an alias and try again
-  if result == nil and languagesData[languageName] and languagesData[languageName]["nom"] then
-    return p.getLanguageCode(languagesData[languageName]["nom"])
+  if result == nil and languagesData[languageName] and languagesData[languageName].name then
+    return p.getLanguageCode(languagesData[languageName].name)
   end
   return result
 end

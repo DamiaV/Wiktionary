@@ -18,10 +18,10 @@ local function getSortKey(langName)
 end
 
 local function sortLanguages(code1, code2)
-  local t1 = languagesData[code1]["tri"] and languagesData[code1]["tri"] or
-      getSortKey(languagesData[code1]["nom"]) or languagesData[code1]["nom"]
-  local t2 = languagesData[code2]["tri"] and languagesData[code2]["tri"] or
-      getSortKey(languagesData[code2]["nom"]) or languagesData[code2]["nom"]
+  local t1 = languagesData[code1].sortKey and languagesData[code1].sortKey or
+      getSortKey(languagesData[code1].name) or languagesData[code1].name
+  local t2 = languagesData[code2].sortKey and languagesData[code2].sortKey or
+      getSortKey(languagesData[code2].name) or languagesData[code2].name
   return t1 < t2
 end
 
@@ -47,11 +47,11 @@ function p.showLanguagesTable(_)
   table.insert(result, m_bases.tableau_entete(titres))
   for i, code in ipairs(keyset) do
     local infos = languagesData[code]
-    local langName = infos["nom"] or "NOM MANQUANT"
-    local langSortKey = infos["tri"] or getSortKey(langName) or langName
+    local langName = infos.name or "NOM MANQUANT"
+    local langSortKey = infos.sortKey or getSortKey(langName) or langName
     local langCategory = m_bases.fait_categorie(langName, langName, true)
     local langColumn = 'data-sort-value="' .. langSortKey .. '"|' .. langCategory
-    local wmLink = infos["wmlien"] or ""
+    local wmLink = infos.wikimediaCode or ""
     local row = { i, '<span id="' .. code .. '">' .. code .. '</span>', langColumn, wmLink }
     table.insert(result, m_bases.tableau_ligne(row))
   end
@@ -63,7 +63,7 @@ end
 function p.showLanguagesPython(_)
   local lines = {}
   for k, v in pairs(languagesData) do
-    table.insert(lines, '    "' .. k .. '": "' .. v["nom"] .. '",')
+    table.insert(lines, '    "' .. k .. '": "' .. v.name .. '",')
   end
   return "<pre>\nlanguages = {\n" .. table.concat(lines, "\n") .. "\n}\n</pre>\n"
 end
