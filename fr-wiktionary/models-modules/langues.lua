@@ -23,8 +23,7 @@ p.specialCodes = {
 --- @param code string A language code.
 --- @param allowSpecial boolean If true, codes marked as group or special also will be considered.
 --- @return string|nil The matching language name, nil otherwise.
-function p.get_nom(code, allowSpecial)
-  -- TODO rename
+function p.getName(code, allowSpecial)
   if not code or not languagesData[code] or not allowSpecial and (languagesData[code].isSpecial or languagesData[code].isGroup) then
     return nil
   end
