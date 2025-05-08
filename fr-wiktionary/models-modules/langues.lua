@@ -114,20 +114,18 @@ function p.wikimediaCode(frame)
   return p.getWikimediaCode(code) or code
 end
 
---- Indique s’il existe un « Portail » local pour le code de langue spécifié.
---- @param code string Le code de langue.
---- @return boolean True si un « Portail » existe, false sinon ou si l code de langue est inconnu.
-function p.has_portail(code)
-  -- TODO rename and refactor
-  return languagesData[code] and languagesData[code]["portail"]
+--- Check whether a page in the “Portail” namespace exists for the given language code.
+--- @param code string A language code.
+--- @return boolean True if a “Portail” page exists, false otherwise.
+function p.hasPortal(code)
+  return languagesData[code] ~= nil and languagesData[code]["portail"]
 end
 
---- Indique s’il existe un Wiktionnaire pour le code de langue spécifié.
+--- Check whether a Wiktionary exists for the given language code.
 --- @param code string Le code de langue.
---- @return boolean True si un Wiktionnaire existe, false sinon ou si le code est inconnu.
-function p.has_wiktionary(code)
-  -- TODO rename and refactor
-  return languagesData[code] and languagesData[code]["wiktionnaire"]
+--- @return boolean True if a Wiktionary exists, false otherwise.
+function p.hasWiktionary(code)
+  return languagesData[code] ~= nil and languagesData[code]["wiktionnaire"]
 end
 
 --- Return the code corresponding to the given language name.
