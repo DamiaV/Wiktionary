@@ -84,7 +84,7 @@ function p.languageNameForList(frame)
 
   local languageName = p.getName(code)
   if not languageName then
-    return mw.ustring.format('<span style="color: red">Code de inconnu : %s*<span>', code) ..
+    return mw.ustring.format('<span style="color: red">Code de langue inconnu&nbsp;: %s*<span>', code) ..
         m_bases.fait_categorie_contenu("Wiktionnaire:Codes langue non définis")
   end
   return m_bases.ucfirst(languageName)
