@@ -776,9 +776,9 @@ mw = {
     return value
   end,
   --- Returns the current frame object, typically the frame object from the most recent `#invoke`.
-  --- @return table
+  --- @return frame
   getCurrentFrame = function()
-    return {}
+    return frame:new()
   end,
   --- Adds one to the "expensive parser function" count, and throws an exception
   --- if it exceeds the limit (see `$wgExpensiveParserFunctionLimit`).
