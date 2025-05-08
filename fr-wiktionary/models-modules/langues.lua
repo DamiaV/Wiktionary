@@ -48,7 +48,7 @@ end
 --- @return string The name of the language or an empty string if the code is invalid.
 function p.languageName(frame)
   local args = m_params.process(frame:getParent().args, {
-    [1] = { required = true },
+    [1] = {},
   })
   return p.getName(args[1]) or ""
 end
@@ -56,11 +56,11 @@ end
 --- Return the sort key for the given language code. Available to templates.
 --- @param frame frame
 --- Parameters:
----  args[1] (string): Language code.
+---  args[1] (string, optional): Language code.
 --- @return string|nil The sort key for the language, nil if the code is invalid.
 function p.languageSortKey(frame)
   local args = m_params.process(frame:getParent().args, {
-    [1] = { required = true },
+    [1] = {},
   })
   return p.getSortKey(args[1]) or ""
 end
@@ -103,11 +103,11 @@ end
 --- Return the Wikimedia language code for the given internal language code if it exists.
 --- @param frame frame
 --- Parameters:
----  parent.args[1] (string): A language code.
+---  parent.args[1] (string, optional): A language code.
 --- @return string The corresponding Wikimedia language code, or an empty string if none matched.
 function p.wikimediaCode(frame)
   local args = m_params.process(frame:getParent().args, {
-    [1] = { required = true },
+    [1] = {},
   })
   local code = args[1]
   return p.getWikimediaCode(code) or code
