@@ -66,59 +66,52 @@ function p.languageSortKey(frame)
   return p.getSortKey(args[1]) or ""
 end
 
--- Fonction pour écrire le nom d’une langue dans une liste (ou traductions).
--- Elle met la première lettre en majuscule.
--- Cette fonction marche pour un modèle {{L}}.
-function p.langue_pour_liste(frame)
-  -- TODO rename and refactor
-  local args
-  if frame.args ~= nil and frame.args[1] ~= nil then
-    args = frame.args
-  else
-    args = frame:getParent().args
-  end
+--- Return the name of the given language with its first letter capitalized.
+--- This function is used by the template {{L}}.
+--- @param frame frame
+--- Parameters:
+---  parent.args[1] (string): A language code.
+--- @return string The capitalized name of the language, an error message if none matched.
+function p.languageNameForList(frame)
+  local args = m_params.process(frame:getParent().args, {
+    [1] = {}
+  })
+
   local code = args[1]
-
-  -- Un code est-il donné?
-  if code == nil or mw.text.trim(code) == "" then
-    return "''Pas de code donné''" .. m_bases.fait_categorie_contenu("Wiktionnaire:Codes langue manquants")
+  if not code then
+    return '<span style="color: red">Code de langue manquant<span>' ..
+        m_bases.fait_categorie_contenu("Wiktionnaire:Codes langue manquants")
   end
 
-  code = mw.text.trim(code)
-
-  local langue = p.get_nom(code)
-
-  if langue == nil or langue == "" then
-    return code .. "*" .. m_bases.fait_categorie_contenu("Wiktionnaire:Codes langue non définis")
-  else
-    return m_bases.ucfirst(langue)
+  local languageName = p.get_nom(code)
+  if not languageName then
+    return mw.ustring.format('<span style="color: red">Code de inconnu : %s*<span>', code) ..
+        m_bases.fait_categorie_contenu("Wiktionnaire:Codes langue non définis")
   end
+  return m_bases.ucfirst(languageName)
 end
 
--- Cherche et renvoie le code Wikimedia du Wiktionnaire correspondant s’il existe
-function p.get_lien_Wikimedia(code)
-  -- TODO rename and refactor
-  -- Permet l’usage depuis un modèle (via #invoke)
-  if table.getn(mw.getCurrentFrame()) == 0 then
-    code = mw.getCurrentFrame().args[1] or code
-  end
-
-  -- Pas de code langue ? Renvoie nil.
-  if code == nil then
+--- Return the Wikimedia language code for the given internal language code if it exists.
+--- @param code string A language code.
+--- @return string The corresponding Wikimedia language code, or nil if none matched.
+function p.getWikimediaCode(code)
+  if not code or not languagesData[code] then
     return nil
   end
+  return languagesData[code].wmlien
+end
 
-  -- Espaces avant et après enlevés
-  code = mw.text.trim(code)
-
-  -- A-t-on la langue correspondant au code donné ?
-  if languagesData[code] and languagesData[code]["wmlien"] then
-    -- Trouvé ! Renvoie le nom
-    return languagesData[code]["wmlien"]
-  else
-    -- Pas trouvé : on renvoie nil
-    return nil
-  end
+--- Return the Wikimedia language code for the given internal language code if it exists.
+--- @param frame frame
+--- Parameters:
+---  parent.args[1] (string): A language code.
+--- @return string The corresponding Wikimedia language code, or an empty string if none matched.
+function p.wikimediaCode(frame)
+  local args = m_params.process(frame:getParent().args, {
+    [1] = { required = true },
+  })
+  local code = args[1]
+  return p.getWikimediaCode(code) or code
 end
 
 --- Indique s’il existe un « Portail » local pour le code de langue spécifié.
