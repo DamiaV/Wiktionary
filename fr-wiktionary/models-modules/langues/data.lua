@@ -4002,6 +4002,7 @@ l['ocm'] = { name = 'vieux cham', sortKey = 'cham vieux' }
 l['oco'] = { name = 'vieux cornique', sortKey = 'cornique vieux' }
 l['ocu'] = { name = 'matlatzinca d’Atzingo', sortKey = 'matlatzinca Atzingo' }
 l['oda'] = { name = 'odut' }
+l['odk'] = { nom = 'od' }
 l['odt'] = { name = 'vieux néerlandais', sortKey = 'néerlandais vieux' }
 l['odu'] = { name = 'odual' }
 l['ofo'] = { name = 'ofo' }
