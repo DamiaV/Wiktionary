@@ -8,49 +8,6 @@ local SAME = 4
 
 local p = {}
 
---- Adapted from [[en:Module:sw-utilities]]
-local CLASS_CODES = {
-  ["wa"] = 1,
-  ["mw-wa"] = 1,
-  ["mw-w"] = 1,
-  ["m-wa"] = 1,
-  ["mi"] = 3,
-  ["mu-mi"] = 3,
-  ["mw-mi"] = 3,
-  ["m-mi"] = 3,
-  ["ji-ma"] = 5,
-  ["ja-ma"] = 5,
-  ["j-m"] = 5,
-  ["ji-me"] = 5,
-  ["ma"] = 5,
-  ["vi"] = 7,
-  ["vy"] = 7,
-  ["ch-vy"] = 7,
-  ["ki"] = 7,
-  ["ki-vi"] = 7,
-  ["n"] = 9,
-  ["u-n"] = 11,
-  ["u-ma"] = 11,
-  ["w"] = 11,
-  ["w-ny"] = 11,
-  ["u-m"] = 11,
-  ["ul-nd"] = 11,
-  ["ur-nd"] = 11,
-  ["uw-mb"] = 11,
-  ["u"] = 11,
-  ["1"] = 1, ["I"] = 1,
-  ["2"] = 2, ["II"] = 2,
-  ["3"] = 3, ["III"] = 3,
-  ["4"] = 4, ["IV"] = 4,
-  ["5"] = 5, ["V"] = 5,
-  ["6"] = 6, ["VI"] = 6,
-  ["7"] = 7, ["VII"] = 7,
-  ["8"] = 8, ["VIII"] = 8,
-  ["9"] = 9, ["IX"] = 9,
-  ["10"] = 10, ["X"] = 10,
-  ["11"] = 11, ["XI"] = 11,
-}
-
 --- Show an error message as a table.
 --- @param message string The message to display. May be nil.
 --- @param nocat boolean If true, do not categorize the page.
@@ -142,8 +99,8 @@ end
 --- @return string The generated table.
 function p.generateNounTable(frame)
   local spec = {
-    [1] = { required = true },
-    ["s"] = { default = mw.title.getCurrentTitle().text },
+    [1] = { required = true, type = m_params.INT },
+    ["s"] = { },
     ["mode"] = { enum = { "sing", "plur" } },
   }
   local pluralArgNames = { "p", "p2", "p3" }
@@ -164,24 +121,36 @@ function p.generateNounTable(frame)
     ))
   end
 
-  local classCode = CLASS_CODES[args[1]]
-  if not classCode then
+  local classCode = args[1]
+  if classCode > 11 or classCode < 1 then
     return errorMessage(mw.ustring.format(
-        "La classe nominale «&nbsp;%s&nbsp;» est inconnue.<br>Voir {{[[Modèle:sw-nom|sw-nom]]}}.",
-        args[1]
+        "La classe nominale «&nbsp;%d&nbsp;» est inconnue.<br>Voir {{[[Modèle:sw-nom|sw-nom]]}}.",
+        classCode
     ))
   end
 
-  local sing = args["s"]
-
+  local sing
   local pluralForms = {}
-  for _, argName in ipairs(pluralArgNames) do
-    if args[argName] then
-      table.insert(pluralForms, args[argName])
+  -- TODO: Class 11
+  if classCode == 1 or classCode == 3 or classCode == 5 or classCode == 7 or classCode == 9 then
+  	if args["mode"] == "plur" then
+  	  return errorMessage(mw.ustring.format(
+        "La classe «&nbsp;%d&nbsp;» (singulier) ne peut pas être uniquement au pluriel (<code>mode=plur</code>).",
+        classCode
+    ))
     end
-  end
-  if #pluralForms == 0 then
-    pluralForms[1] = generatePlural(sing, classCode)
+    sing = args["s"] or mw.title.getCurrentTitle().text
+    for _, argName in ipairs(pluralArgNames) do
+      if args[argName] then
+        table.insert(pluralForms, args[argName])
+      end
+    end
+    if #pluralForms == 0 then
+      pluralForms[1] = generatePlural(sing, classCode)
+    end
+  else
+    table.insert(pluralForms, args["p"] or mw.title.getCurrentTitle().text)
+    -- TODO: generateSingular
   end
 
   local numberMode
