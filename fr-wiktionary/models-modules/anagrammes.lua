@@ -13,7 +13,7 @@ local function normalize(langCode, s)
   local langConfig
   local dataModuleTitle = "Module:anagrammes/" .. langCode
   if mw.title.new(dataModuleTitle).exists then
-    langConfig = require(dataModuleTitle)
+    langConfig = mw.loadData(dataModuleTitle)
   else
     langConfig = {
       keep = {},
@@ -40,13 +40,12 @@ local function _toTable(langCode, title, rawTable)
   local maxLinks = 200
   local alphasTable = {}
   local paramsTable = {}
-  local alpha_title = mw.ustring.gsub(normalize(langCode, title), "[%p%s]", "")
 
   while rawTable[i] ~= nil and i <= maxLinks do
     local item = mw.text.trim(rawTable[i])
 
     local alpha = mw.ustring.gsub(normalize(langCode, item), "[%p%s]", "")
-    if alpha ~= alpha_title then
+    if title ~= item then
       if paramsTable[alpha] ~= nil then
         paramsTable[alpha] = mw.ustring.format("%s, [[%s#%s|%s]]", paramsTable[alpha], item, langCode, item)
       else
@@ -95,12 +94,12 @@ function p.listeAnagrammes(frame)
   local title = mw.title.getCurrentTitle()
   local text = _makeText(langCode, title.fullText, args)
   -- Catégorisation des sous-modèles de [[Modèle:anagrammes]]
-  local pattern = mw.ustring.format("^Modèle:anagrammes/%s/(.+)", langCode)
+  local pattern = mw.ustring.format("^Modèle:anagrammes/%s/(.+)", mw.ustring.gsub(langCode, "%-", "%-"))
   local _, _, match = mw.ustring.find(title.fullText, pattern)
   if match then
     text = text .. mw.ustring.format(
         "[[Catégorie:Modèles d’anagramme en %s|%s]]",
-        m_langues.get_nom(langCode),
+        m_langues.getName(langCode),
         match
     )
   end
@@ -143,7 +142,7 @@ function p.alphagramme(frame)
           .. 'Cliquez [[Modèle:%s|ici]] pour le créer.</span>'
           .. '[[Catégorie:Pages avec modèle d’anagrammes manquant en %s]]',
       templateName,
-      m_langues.get_nom(langCode)
+      m_langues.getName(langCode)
   )
 end
 
