@@ -641,4 +641,119 @@ function p.items(t)
   return res
 end
 
+--- Return the first index of the given value.
+--- @param t table<number, any> A table to search the value in.
+--- @param value any The value to search the index of.
+--- @return number The index of the first occurrence of the given value, or nil if it was not found.
+function p.indexOf(t, value)
+  for k, v in ipairs(t) do
+    if v == value then
+      return k
+    end
+  end
+  return nil
+end
+
+local specialChars = {
+  ["\a"] = "\\a",
+  ["\b"] = "\\b",
+  ["\f"] = "\\f",
+  ["\n"] = "\\n",
+  ["\r"] = "\\r",
+  ["\t"] = "\\t",
+  ["\v"] = "\\v",
+}
+
+--- Return the string representation of a table.
+--- @param t table The table to get the representation of.
+--- @return string The string representation of the table.
+function p.toString(t)
+  --- @type table<number, table>
+  local tables = {}
+  --- @type table<number, function>
+  local functions = {}
+  --- @type table<number, userdata>
+  local userdatas = {}
+
+  --- @param subtable table
+  --- @return string
+  local function serializeTable(subtable, depth)
+    --- @param value any
+    --- @return string
+    local function serialize(value)
+      if value == nil or type(value) == "boolean" or type(value) == "number" then
+        return tostring(value)
+
+      elseif type(value) == "string" then
+        value = mw.ustring.gsub(value, "\\", "\\\\")
+        if mw.ustring.find(value, '"', 1, true) and
+            not mw.ustring.find(value, "'", 1, true) then
+          value = "'" .. value .. "'"
+        else
+          value = '"' .. mw.ustring.gsub(value, '"', '\\"') .. '"'
+        end
+        for specialChar, escape in pairs(specialChars) do
+          value = mw.ustring.gsub(value, specialChar, escape)
+        end
+        return value
+
+      elseif type(value) == "table" then
+        return serializeTable(value, depth + 1)
+
+      elseif type(value) == "function" then
+        local i = p.indexOf(functions, value)
+        if not i then
+          table.insert(functions, value)
+          i = #functions
+        end
+        -- We can’t serialize functions
+        return mw.ustring.format("function#%d", i)
+
+      elseif type(value) == "userdata" then
+        local i = p.indexOf(userdatas, value)
+        if not i then
+          table.insert(userdatas, value)
+          i = #userdatas
+        end
+        -- We can’t serialize userdata
+        return mw.ustring.format("userdata#%d", i)
+      end
+    end
+
+    local i = p.indexOf(tables, subtable)
+    local alreadySeen = i ~= nil
+    if not alreadySeen then
+      table.insert(tables, subtable)
+      i = #tables
+    end
+
+    local text = mw.ustring.format("table#%d", i)
+    -- Avoid infinite recursion if we’ve already seen that table
+    if alreadySeen then
+      return text
+    end
+
+    text = text .. " {"
+    local anyContent = false
+    for k, v in pairs(subtable) do
+      if not anyContent then
+        text = text .. "\n"
+        anyContent = true
+      end
+      local keyRepr = serialize(k)
+      local valueRepr = serialize(v)
+      text = text .. mw.ustring.rep(" ", (depth + 1) * 2) ..
+          mw.ustring.format("[%s] = %s,\n", keyRepr, valueRepr)
+    end
+    if anyContent then
+      text = text .. mw.ustring.rep(" ", depth * 2)
+    end
+    text = text .. "}"
+
+    return text
+  end
+
+  return serializeTable(t, 0)
+end
+
 return p
