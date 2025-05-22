@@ -10,7 +10,7 @@
     return $(`<a rel="mw:WikiLink" href="//fr.wiktionary.org/wiki/${title}#${languageCode}" title="${title}"><i>${title}</i></a>`);
   }
 
-  function fetchedNearWords(category, limit, word) {
+  function fetchNearWords(category, limit, word) {
     const commonParams = {
       action: 'query',
       list: 'categorymembers',
@@ -25,14 +25,19 @@
       api.get($.extend({}, commonParams, {cmdir: 'descending'})),
       api.get(commonParams)
     ]).then(([beforeData, afterData]) => {
-      const beforeMembers = beforeData.query.categorymembers.reverse();
-      const afterMembers = afterData.query.categorymembers;
-      return beforeMembers.concat(afterMembers.slice(1)).map(m => m.title);
+      const beforeMembers = beforeData.query.categorymembers.reverse().map(m => m.title);
+      const afterMembers = afterData.query.categorymembers.map(m => m.title);
+
+      // Temporary fix because of a Mediawiki bug
+      beforeMembers.filter(title => title !== word);
+      if (beforeMembers.length === limit) beforeMembers.pop();
+
+      return beforeMembers.concat(afterMembers);
     });
   }
 
   function generateNavigationWordList(languageName, languageCode, category, word, limit = 6) {
-    fetchedNearWords(category, limit, word).then(titles => {
+    fetchNearWords(category, limit, word).then(titles => {
       const $header = $('div > h2#' + languageName).parent();
       const $navDiv = $('<div class="nav-wordlist"></div>');
       if (titles.length > 1) {
@@ -68,7 +73,7 @@
     const ids = $('div.mw-heading2 > h2')
         .map((_, e) => e.id)
         .get()
-        .filter((id) => id !== 'Caractère');
+        .filter(id => id !== 'Caractère');
 
     ids.forEach(id => {
       const idClean = id.replaceAll(/_/g, " ").toLowerCase();
@@ -82,6 +87,6 @@
           mw.config.get("wgTitle"),
           4
       );
-    })
+    });
   });
 })();
