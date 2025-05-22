@@ -11,6 +11,7 @@
  **********************************************************************
  * v1.0 2020-09-18 Initial version
  * v1.1 2021-10-17 Gadget now goes through redirections
+ * v1.2 2025-05-23 Refactor; use new [[MediaWiki:Gadget-langues.json]]
  **********************************************************************
  * [[Catégorie:JavaScript du Wiktionnaire|highlight missing sections]]
  */
@@ -23,18 +24,18 @@ if (mw.config.get("wgAction") === "view") {
   window.wikt.gadgets.highlightMissingSections = {
     NAME: "Highlight Missing Sections",
 
-    VERSION: "1.1",
+    VERSION: "1.2",
 
     init: function () {
       this.api = new mw.Api({userAgent: "Gadget-wikt.highlight-missing-sections/" + wikt.gadgets.highlightMissingSections.VERSION});
-      $.get(
-          "https://fr.wiktionary.org/wiki/MediaWiki:Gadget-translation_editor.js/langues.json?action=raw",
-          (function (languages) {
-            this._onResponse($.map(JSON.parse(languages), function (_, k) {
-              return k;
-            }));
-          }).bind(this)
-      );
+      $.getJSON(
+          "https://fr.wiktionary.org/wiki/MediaWiki:Gadget-langues.json",
+          {
+            action: "raw",
+          }
+      ).then((data) => {
+        this._onResponse([...Object.keys(data)]);
+      });
     },
 
     /**
@@ -43,17 +44,18 @@ if (mw.config.get("wgAction") === "view") {
      * @private
      */
     _onResponse: function (languages) {
-      var links = [];
+      const links = [];
 
-      $(".mw-parser-output a:not(.new)").each(function (_, link) {
-        var $link = $(link);
-        var match = /^https:\/\/fr\.wiktionary\.org\/wiki\/(.+?)#(.+)$/.exec($link.prop("href"));
+      $(".mw-parser-output a:not(.new)").each((_, link) => {
+        const $link = $(link);
+        const match = /^https:\/\/fr\.wiktionary\.org\/wiki\/(.+?)#(.+)$/
+            .exec($link.prop("href"));
 
         if (match) {
-          var pageTitle = decodeURIComponent(match[1]);
-          var namespace = pageTitle.substring(0, pageTitle.indexOf(":")).toLowerCase();
-          var anchor = match[2];
-          var namespaces = mw.config.get("wgNamespaceIds");
+          const pageTitle = decodeURIComponent(match[1]);
+          const namespace = pageTitle.substring(0, pageTitle.indexOf(":")).toLowerCase();
+          const anchor = match[2];
+          const namespaces = mw.config.get("wgNamespaceIds");
 
           // Vérifie que le lien pointe vers l’espace principal, pas vers un autre wiki et que l’ancre est un code de langue
           if (languages.includes(anchor) && !namespaces[namespace] && !languages.includes(namespace)) {
@@ -66,18 +68,15 @@ if (mw.config.get("wgAction") === "view") {
         }
       });
 
-      var self = this;
       // Cache pages’ code in case same page is linked several times
-      var pageCodes = {};
-      links.forEach(function (item) {
-        if (!pageCodes[item.pageTitle]) {
-          self._getPageContent(item.pageTitle, function (content) {
+      const pageCodes = {};
+      links.forEach((item) => {
+        if (!pageCodes[item.pageTitle])
+          this._getPageContent(item.pageTitle, content => {
             pageCodes[item.pageTitle] = content;
-            self._highlightLink(item.$link, item.langCode, pageCodes[item.pageTitle]);
+            this._highlightLink(item.$link, item.langCode, pageCodes[item.pageTitle]);
           });
-        } else {
-          self._highlightLink(item.$link, item.langCode, pageCodes[item.pageTitle]);
-        }
+        else this._highlightLink(item.$link, item.langCode, pageCodes[item.pageTitle]);
       });
     },
 
@@ -96,20 +95,16 @@ if (mw.config.get("wgAction") === "view") {
         titles: pageTitle,
         rvslots: "main",
         rvprop: "content",
-      }).then((function (queryResult) {
-        for (var pageID in queryResult.query.pages) {
-          if (queryResult.query.pages.hasOwnProperty(pageID)) {
+      }).then((queryResult) => {
+        let pageID;
+        for (pageID in queryResult.query.pages)
+          if (queryResult.query.pages.hasOwnProperty(pageID))
             break;
-          }
-        }
-        var content = queryResult.query.pages[pageID]["revisions"][0]["slots"]["main"]["*"];
-        var match = /^#REDIRECT\[\[([^\[]+)]]$/.exec(content.trim());
-        if (match) {
-          this._getPageContent(match[1], callback);
-        } else {
-          callback(content);
-        }
-      }).bind(this));
+        const content = queryResult.query.pages[pageID]["revisions"][0]["slots"]["main"]["*"];
+        const match = /^#REDIRECT\[\[([^\[]+)]]$/.exec(content.trim());
+        if (match) this._getPageContent(match[1], callback);
+        else callback(content);
+      });
     },
 
     /**

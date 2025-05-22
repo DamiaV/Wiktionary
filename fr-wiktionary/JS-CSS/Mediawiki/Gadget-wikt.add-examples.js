@@ -19,6 +19,7 @@
  * v1.3.1 2024-05-18 Add counter to avoid adding "Add Example" button when there are too many examples.
  * v1.3.2 2025-02-25 Fix "é" character causing crashes when present in section IDs.
  * v1.3.3 2025-02-25 Rejected edits now show an error message.
+ * v1.4 2025-05-23 Use new [[MediaWiki:Gadget-langues.json]].
  * ------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|add-examples.js]]
  * <nowiki>
@@ -32,7 +33,7 @@ $(() => {
   console.log("Chargement de Gadget-wikt.add-examples.js…");
 
   const NAME = "Ajouter des exemples";
-  const VERSION = "1.3.3";
+  const VERSION = "1.4";
 
   const COOKIE_KEY_TEXT = "add_examples_text";
   const COOKIE_KEY_SOURCE = "add_examples_source";
@@ -46,8 +47,8 @@ $(() => {
     console.log("Using preferred maximum number of examples: " + MAX_NUMBER_OF_EXAMPLES);
   }
 
-  const api = new mw.Api();
-  let languages = {};
+  const api = new mw.Api({userAgent: "Gadget-wikt.add-examples/" + VERSION});
+  const languages = {};
   const sectionNames = {
     "adj": ["adj", "adjectif", "adjectif qualificatif"],
     "adv": ["adv", "adverbe"],
@@ -118,20 +119,17 @@ $(() => {
   };
 
   // Get names of all defined languages
-  api.get({
-    action: "query",
-    format: "json",
-    titles: "MediaWiki:Gadget-translation editor.js/langues.json",
-    prop: "revisions",
-    rvprop: "content",
-    rvslots: "main",
-  }).then((data) => {
-    for (const pageID in data.query.pages) {
-      if (data.query.pages.hasOwnProperty(pageID)) {
-        // noinspection JSUnresolvedVariable
-        languages = JSON.parse(data.query.pages[pageID].revisions[0].slots.main["*"]);
-        break;
+  $.getJSON(
+      "/wiki/MediaWiki:Gadget-langues.json",
+      {
+        action: "raw",
       }
+  ).then((data) => {
+    /** @type {Record<string, {name: string, isGroup?: boolean, isSpecial?: boolean}>} */
+    const languagesData = data.codes;
+    for (const [langCode, langData] of Object.entries(languagesData)) {
+      if (langData.isGroup || langData.isSpecial) continue;
+      languages[langCode] = langData.name;
     }
   });
   let exampleCounter = 0;
@@ -241,10 +239,10 @@ $(() => {
       }
 
       generateButton("bold", "bold", false, "Gras", () => {
-        self.formatText("bold", $textInput);
+        self.applyTextEffect("bold", $textInput);
       });
       generateButton("italic", "italic", false, "Italique", () => {
-        self.formatText("italic", $textInput);
+        self.applyTextEffect("italic", $textInput);
       });
 
       toolbar.setup([
@@ -404,7 +402,7 @@ $(() => {
      * @param effect {string} The effect to apply (either "bold" or "italic").
      * @param $textInput {jQuery} The text input to format the text of.
      */
-    formatText: function (effect, $textInput) {
+    applyTextEffect: function (effect, $textInput) {
       const selectedText = wikt.edit.getSelectedText($textInput);
       let replText;
       switch (effect) {

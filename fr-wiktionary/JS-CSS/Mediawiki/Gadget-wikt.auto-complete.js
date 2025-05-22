@@ -21,15 +21,11 @@
 $(function () {
   "use strict";
 
-  if (!["edit", "submit"].includes(mw.config.get("wgAction"))) {
-    return;
-  }
-
   console.log("Chargement de Gadget-wikt.auto-complete.js…");
 
   class GadgetAutoComplete {
     static NAME = "Auto-complétion de modèles";
-    static VERSION = "1.1.1";
+    static VERSION = "1.4";
 
     /** Maximum number of suggestions to display. */
     static #MAX_SUGGESTIONS = 100;
@@ -254,54 +250,67 @@ $(function () {
    *                   Must have a /data subpage returning a table holding the authorized values.
    */
   function addTemplate(templateName, moduleName) {
-    $.get(
-        `https://fr.wiktionary.org/wiki/Module:${encodeURIComponent(moduleName)}/data/dump.json?action=raw`,
-        data => {
-          try {
-            gadget.addTemplateParameters(templateName, Object.keys(JSON.parse(data)));
-          } catch (e) {
-            console.log(`An error occured while parsing LUA table for [[Module:${moduleName}/data]] ([[Template:${templateName}]])`);
-          }
+    $.getJSON(
+        `/wiki/Module:${encodeURIComponent(moduleName)}/data/dump.json`,
+        {
+          action: "raw",
         }
-    );
+    ).then((data) => {
+      try {
+        gadget.addTemplateParameters(templateName, Object.keys(data));
+      } catch (e) {
+        console.log(`An error occured while parsing LUA table for [[Module:${moduleName}/data]] ([[Template:${templateName}]])`);
+      }
+    });
   }
 
-  // [[Modèle:langue]], [[MediaWiki:Gadget-translation_editor.js/langues.json]]
-  $.get(
-      "https://fr.wiktionary.org/wiki/MediaWiki:Gadget-translation_editor.js/langues.json?action=raw",
-      data => {
-        try {
-          gadget.addTemplateParameters("langue", Object.keys(JSON.parse(data)));
-        } catch (e) {
-          console.log("An error occured while parsing JSON for [[MediaWiki:Gadget-translation editor.js/langues.json]] ([[Template:langue]]): " + e);
-        }
+  // [[Modèle:langue]], [[MediaWiki:Gadget-langues.json]]
+  $.getJSON(
+      "/wiki/MediaWiki:Gadget-langues.json",
+      {
+        action: "raw",
       }
-  );
+  ).then((data) => {
+    try {
+      const langsData = [];
+      for (const [code, langData] of Object.entries(data.codes)) {
+        if (langData.isGroup || langData.isSpecial) continue;
+        langsData.push(code);
+      }
+      gadget.addTemplateParameters("langue", langsData);
+    } catch (e) {
+      console.log("An error occured while parsing JSON for [[MediaWiki:Gadget-translation editor.js/langues.json]] ([[Template:langue]]): " + e);
+    }
+  });
   // [[Modèle:lexique]], [[Module:lexique/data/dump.json]]
   addTemplate("lexique", "lexique");
   // [[Modèle:info lex]], [[Module:lexique/data/dump.json]]
   addTemplate("info lex", "lexique");
   // [[Modèle:S]], [[Module:section article/data/dump.json]], [[Module:types de mots/data/dump.json]]
-  $.get(
-      "https://fr.wiktionary.org/wiki/Module:section_article/data/dump.json?action=raw",
-      data => {
-        try {
-          const sectionIds = Object.keys(JSON.parse(data)["texte"]);
-          $.get(
-              "https://fr.wiktionary.org/wiki/Module:types_de_mots/data/dump.json?action=raw",
-              data => {
-                try {
-                  const wordTypes = Object.keys(JSON.parse(data)["texte"]);
-                  gadget.addTemplateParameters("S", sectionIds.concat(wordTypes));
-                } catch (e) {
-                  console.log("An error occured while parsing JSON for [[Module:types de mots/data/dump.json]] ([[Template:S]]): " + e);
-                }
-              }
-          );
-        } catch (e) {
-          console.log("An error occured while parsing JSON for [[Module:section article/data/dump.json]] ([[Template:S]]): " + e);
-        }
+  $.getJSON(
+      "/wiki/Module:section_article/data/dump.json",
+      {
+        action: "raw",
       }
-  );
+  ).then((data) => {
+    try {
+      const sectionIds = Object.keys(data["texte"]);
+      $.getJSON(
+          "/wiki/Module:types_de_mots/data/dump.json",
+          {
+            action: "raw",
+          }
+      ).then((data) => {
+        try {
+          const wordTypes = Object.keys(data["texte"]);
+          gadget.addTemplateParameters("S", sectionIds.concat(wordTypes));
+        } catch (e) {
+          console.log("An error occured while parsing JSON for [[Module:types de mots/data/dump.json]] ([[Template:S]]): " + e);
+        }
+      });
+    } catch (e) {
+      console.log("An error occured while parsing JSON for [[Module:section article/data/dump.json]] ([[Template:S]]): " + e);
+    }
+  });
 });
 // </nowiki>

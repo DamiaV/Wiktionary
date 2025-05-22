@@ -46,6 +46,7 @@
  * v5.5 2025-04-05 Add Portuguese language.
  * v5.6 2025-04-05 Make grammatical properties generic.
  * v5.6.1 2025-04-05 Split gadget into several files.
+ * v5.7 2025-05-22 Use new [[MediaWiki:Gadget-langues.json]].
  * -----------------------------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|CreerNouveauMot.js]]
  * <nowiki>
@@ -60,7 +61,7 @@ $(() => {
    */
   class GadgetCreerNouveauMot {
     static NAME = "Créer nouveau mot";
-    static VERSION = "5.6.1";
+    static VERSION = "5.7";
 
     static #COOKIE_NAME = "cnm_last_lang";
     /** Cookie duration in days. */
@@ -155,23 +156,20 @@ $(() => {
      * @type {MainGUI}
      */
     #mainGUI = null;
-    /**
-     * API hook.
-     */
-    #api = new mw.Api({userAgent: "Gadget-CreerNouveauMot/" + GadgetCreerNouveauMot.VERSION});
 
     constructor() {
-      this.#api.get({
-        action: "query",
-        format: "json",
-        titles: "MediaWiki:Gadget-translation editor.js/langues.json",
-        prop: "revisions",
-        rvprop: "content",
-        rvslots: "main",
-      }).then(data => {
-        for (const page of Object.values(data.query.pages)) // Get first entry
-            // noinspection JSUnresolvedVariable
-          this.#languageNames = JSON.parse(page.revisions[0].slots.main["*"]);
+      $.getJSON(
+          "/wiki/MediaWiki:Gadget-langues.json",
+          {
+            action: "raw",
+          }
+      ).then((data) => {
+        /** @type {Record<string, {name: string, isGroup?: boolean, isSpecial?: boolean}>} */
+        const languagesData = data.codes;
+        for (const [langCode, langData] of Object.entries(languagesData)) {
+          if (langData.isGroup || langData.isSpecial) continue;
+          this.#languageNames[langCode] = langData.name;
+        }
         if ($(GUI.TARGET_ELEMENT)) this.#generateStartUI();
       });
     }
