@@ -933,6 +933,7 @@ l['bxr'] = { name = 'bouriate de Russie', sortKey = 'bouriate Russie' }
 l['bxs'] = { name = 'busam' }
 l['bxu-bar'] = { name = 'bargu' }
 l['bxw'] = { name = 'bankagooma' }
+l['byb'] = { name = 'bikya' }
 l['byd'] = { name = 'benyadu’' }
 l['bye'] = { name = 'pouye' }
 l['byf'] = { name = 'bété (Nigeria)', sortKey = 'bété Nigeria' }
@@ -1126,6 +1127,7 @@ l['cnh'] = { name = 'haka chin' }
 l['cni'] = { name = 'asháninka' }
 l['cnk'] = { name = 'khumi' }
 l['cnl'] = { name = 'chinantèque de Lalana', sortKey = 'chinantèque Lalana' }
+l['cnr'] = { name = 'monténégrin' }
 l['cns'] = { name = 'asmat central' }
 l['cnt'] = { name = 'chinantèque de Tepetotutla', sortKey = 'chinantèque Tepetotutla' }
 l['cnx'] = { name = 'moyen cornique', sortKey = 'cornique moyen' }
@@ -5864,6 +5866,7 @@ l['xgn'] = { name = 'langues mongoles', sortKey = 'mongoles langues', isGroup = 
 l['xh'] = { name = 'xhosa', wiktionaryExists = true }
 l['xha'] = { name = 'harami' }
 l['xhc'] = { name = 'hunnique' }
+l['xhr'] = { name = 'hernique' }
 l['xht'] = { name = 'hatti' }
 l['xia'] = { name = 'xiandao' }
 l['xib'] = { name = 'ibère' }
@@ -5958,6 +5961,7 @@ l['xtc'] = { name = 'katcha-kadugli-miri' }
 l['xtd'] = { name = 'mixtèque de Diuxi-Tilantongo', sortKey = 'mixtèque Diuxi Tilantongo' }
 l['xtm'] = { name = 'mixtèque de Magdalena Peñasco', sortKey = 'mixtèque Magdalena Peñasco' }
 l['xto'] = { name = 'tokharien A' }
+l['xtq'] = { name = 'tumshuqais' }
 l['xtw'] = { name = 'tawandê' }
 l['xty'] = { name = 'mixtèque de Yoloxochitl', sortKey = 'mixtèque Yoloxochitl' }
 l['xtz'] = { name = 'tasmanien' }
@@ -5975,6 +5979,7 @@ l['xuu'] = { name = 'kxoe' }
 l['xve'] = { name = 'vénète' }
 l['xvi'] = { name = 'kamviri' }
 l['xvn'] = { name = 'vandale' }
+l['xvo'] = { name = 'volsque' }
 l['xvs'] = { name = 'vestinien' }
 l['xwa'] = { name = 'kwaza' }
 l['xwc'] = { name = 'woccon' }
@@ -6470,136 +6475,150 @@ l['proto-yaeyama'] = { name = 'proto-yaeyama', sortKey = 'yaeyama proto' }
 l['proto-yonaguni'] = { name = 'proto-yonaguni', sortKey = 'yonaguni proto' }
 -- Fin protolangues
 
+--- Return a copy of the given language’s data.
+--- @param code string The code of the language to copy the data of.
+--- @return table A new table containing a copy of the given language’s data,
+---               with an additional key `alias_of` pointing to the passed language code.
+local function aliasOf(code)
+  local copy = {
+    aliasOf = code,
+  }
+  for k, v in pairs(l[code]) do
+    copy[k] = v
+  end
+  return copy
+end
+
 -- Redirections de langues
-l['aar'] = l['aa']
-l['abk'] = l['ab']
-l['afr'] = l['af']
-l['aka'] = l['ak']
-l['ancien danois'] = l['vieux danois']
-l['ancien suédois'] = l['vieux suédois']
-l['anglo-saxon'] = l['ang']
-l['arb'] = l['ar']
-l['ava'] = l['av']
-l['bel'] = l['be']
-l['ben'] = l['bn']
-l['be-x-old'] = l['be-tarask']
-l['bih'] = l['bh']
-l['ca-val'] = l['ca-valencia']
-l['calabrais central et méridional'] = l['calabrais centro-méridional']
-l['celtique cisalpin'] = l['xlp']
-l['cha'] = l['ch']
-l['chu'] = l['cu']
-l['chv'] = l['cv']
-l['cym'] = l['cy']
-l['dan'] = l['da']
-l['dzo'] = l['dz']
-l['erse'] = l['gd']
-l['fas'] = l['fa']
-l['fra-jer'] = l['normand']
-l['fra-nor'] = l['normand']
-l['gaul'] = l['gaulois']
-l['gaumais'] = l['lorrain']
-l['créole guadeloupéen'] = l['gcf']
-l['gla'] = l['gd']
-l['gle'] = l['ga']
-l['glg'] = l['gl']
-l['guj'] = l['gu']
-l['hat'] = l['ht']
-l['hau'] = l['ha']
-l['hb'] = l['he']
-l['hbs'] = l['sh']
-l['heb'] = l['he']
-l['ibo'] = l['ig']
-l['insubre'] = l['xlp']
-l['ipk'] = l['ik']
-l['kal'] = l['kl']
-l['khamnigan'] = l['ykh']
-l['kau'] = l['kr']
-l['kaz'] = l['kk']
-l['ko-Hani'] = l['ko']
-l['ko-hanja'] = l['ko']
-l['kur'] = l['ku']
-l['lim'] = l['li']
-l['lin'] = l['ln']
-l['lit'] = l['lt']
-l['lusitanien'] = l['xls']
-l['mah'] = l['mh']
-l['mal'] = l['ml']
-l['manxois'] = l['gv']
-l['mon'] = l['mn']
-l['moyen scots'] = l['moyen écossais']
-l['nrf'] = l['normand']
-l['mri'] = l['mi']
-l['nav'] = l['nv']
-l['nde'] = l['nd']
-l['nep'] = l['ne']
-l['npi'] = l['ne']
-l['nob'] = l['nb']
-l['nno'] = l['nn']
-l['orm'] = l['om']
-l['per'] = l['fa']
-l['poitevin'] = l['poitevin-saintongeais']
-l['prv'] = l['oc']
-l['roa-rup'] = l['rup']
-l['roh'] = l['rm']
-l['ron'] = l['ro']
-l['run'] = l['rn']
-l['rus'] = l['ru']
-l['saintongeais'] = l['poitevin-saintongeais']
-l['sicilo-calabrais'] = l['calabrais centro-méridional']
-l['slk'] = l['sk']
-l['slo'] = l['sk']
-l['slv'] = l['sl']
-l['smo'] = l['sm']
-l['srd'] = l['sc']
-l['srp'] = l['sr']
-l['sud-picène'] = l['spx']
-l['tir'] = l['ti']
-l['tkk'] = l['twm']
-l['tokipona'] = l['tok']
-l['ton'] = l['to']
-l['tso'] = l['ts']
-l['ukr'] = l['uk']
-l['ven'] = l['ve']
-l['vi-chunho'] = l['vi']
-l['vi-chunom'] = l['vi']
-l['vi-Hani'] = l['vi']
-l['vieux curonien'] = l['xcu']
-l['vieux néerlandais'] = l['vieux bas francique']
-l['vieux scots'] = l['vieil écossais']
-l['wel'] = l['cy']
-l['xtg'] = l['gaulois']
-l['yid'] = l['yi']
-l['zahrar sproche'] = l['saurano']
-l['zh-classical'] = l['lzh']
-l['zh-min-nan'] = l['nan']
-l['zh-yue'] = l['yue']
+l['aar'] = aliasOf('aa')
+l['abk'] = aliasOf('ab')
+l['afr'] = aliasOf('af')
+l['aka'] = aliasOf('ak')
+l['ancien danois'] = aliasOf('vieux danois')
+l['ancien suédois'] = aliasOf('vieux suédois')
+l['anglo-saxon'] = aliasOf('ang')
+l['arb'] = aliasOf('ar')
+l['ava'] = aliasOf('av')
+l['bel'] = aliasOf('be')
+l['ben'] = aliasOf('bn')
+l['be-x-old'] = aliasOf('be-tarask')
+l['bih'] = aliasOf('bh')
+l['ca-val'] = aliasOf('ca-valencia')
+l['calabrais central et méridional'] = aliasOf('calabrais centro-méridional')
+l['celtique cisalpin'] = aliasOf('xlp')
+l['cha'] = aliasOf('ch')
+l['chu'] = aliasOf('cu')
+l['chv'] = aliasOf('cv')
+l['cym'] = aliasOf('cy')
+l['dan'] = aliasOf('da')
+l['dzo'] = aliasOf('dz')
+l['erse'] = aliasOf('gd')
+l['fas'] = aliasOf('fa')
+l['fra-jer'] = aliasOf('normand')
+l['fra-nor'] = aliasOf('normand')
+l['gaul'] = aliasOf('gaulois')
+l['gaumais'] = aliasOf('lorrain')
+l['créole guadeloupéen'] = aliasOf('gcf')
+l['gla'] = aliasOf('gd')
+l['gle'] = aliasOf('ga')
+l['glg'] = aliasOf('gl')
+l['guj'] = aliasOf('gu')
+l['hat'] = aliasOf('ht')
+l['hau'] = aliasOf('ha')
+l['hb'] = aliasOf('he')
+l['hbs'] = aliasOf('sh')
+l['heb'] = aliasOf('he')
+l['ibo'] = aliasOf('ig')
+l['insubre'] = aliasOf('xlp')
+l['ipk'] = aliasOf('ik')
+l['kal'] = aliasOf('kl')
+l['khamnigan'] = aliasOf('ykh')
+l['kau'] = aliasOf('kr')
+l['kaz'] = aliasOf('kk')
+l['ko-Hani'] = aliasOf('ko')
+l['ko-hanja'] = aliasOf('ko')
+l['kur'] = aliasOf('ku')
+l['lim'] = aliasOf('li')
+l['lin'] = aliasOf('ln')
+l['lit'] = aliasOf('lt')
+l['lusitanien'] = aliasOf('xls')
+l['mah'] = aliasOf('mh')
+l['mal'] = aliasOf('ml')
+l['manxois'] = aliasOf('gv')
+l['mon'] = aliasOf('mn')
+l['moyen scots'] = aliasOf('moyen écossais')
+l['nrf'] = aliasOf('normand')
+l['mri'] = aliasOf('mi')
+l['nav'] = aliasOf('nv')
+l['nde'] = aliasOf('nd')
+l['nep'] = aliasOf('ne')
+l['npi'] = aliasOf('ne')
+l['nob'] = aliasOf('nb')
+l['nno'] = aliasOf('nn')
+l['orm'] = aliasOf('om')
+l['per'] = aliasOf('fa')
+l['poitevin'] = aliasOf('poitevin-saintongeais')
+l['prv'] = aliasOf('oc')
+l['roa-rup'] = aliasOf('rup')
+l['roh'] = aliasOf('rm')
+l['ron'] = aliasOf('ro')
+l['run'] = aliasOf('rn')
+l['rus'] = aliasOf('ru')
+l['saintongeais'] = aliasOf('poitevin-saintongeais')
+l['sicilo-calabrais'] = aliasOf('calabrais centro-méridional')
+l['slk'] = aliasOf('sk')
+l['slo'] = aliasOf('sk')
+l['slv'] = aliasOf('sl')
+l['smo'] = aliasOf('sm')
+l['srd'] = aliasOf('sc')
+l['srp'] = aliasOf('sr')
+l['sud-picène'] = aliasOf('spx')
+l['tir'] = aliasOf('ti')
+l['tkk'] = aliasOf('twm')
+l['tokipona'] = aliasOf('tok')
+l['ton'] = aliasOf('to')
+l['tso'] = aliasOf('ts')
+l['ukr'] = aliasOf('uk')
+l['ven'] = aliasOf('ve')
+l['vi-chunho'] = aliasOf('vi')
+l['vi-chunom'] = aliasOf('vi')
+l['vi-Hani'] = aliasOf('vi')
+l['vieux curonien'] = aliasOf('xcu')
+l['vieux néerlandais'] = aliasOf('odt')
+l['vieux scots'] = aliasOf('vieil écossais')
+l['wel'] = aliasOf('cy')
+l['xtg'] = aliasOf('gaulois')
+l['yid'] = aliasOf('yi')
+l['zahrar sproche'] = aliasOf('saurano')
+l['zh-classical'] = aliasOf('lzh')
+l['zh-min-nan'] = aliasOf('nan')
+l['zh-yue'] = aliasOf('yue')
 -- Fin redirections de langues
 
 -- Redirections de proto-langues
-l['alg-pro'] = l['proto-algonquien']
-l['ath-pro'] = l['proto-athapascan']
-l['cel-pro'] = l['proto-celtique']
-l['cost-pro'] = l['proto-costanoan']
-l['fiu-pro'] = l['proto-finno-ougrien']
-l['gem-pro'] = l['proto-germanique']
-l['gmw-pro'] = l['proto-germanique occidental']
-l['grk-pro'] = l['proto-grec']
-l['ine-pie'] = l['indo-européen commun']
-l['kere-pro'] = l['proto-keresan']
-l['kita-pro'] = l['proto-kiowa-tanoan']
-l['mus-pro'] = l['proto-muskogéen']
-l['ougrien commun'] = l['proto-ougrien']
-l['proto-chamito-sémitique'] = l['proto-afro-asiatique']
-l['proto-indo-européen'] = l['indo-européen commun']
-l['pomo-pro'] = l['proto-pomo']
-l['sem-pro'] = l['proto-sémitique']
-l['siou-pro'] = l['proto-siouan']
-l['sit-pro'] = l['proto-sino-tibétain']
-l['sla-pro'] = l['proto-slave']
-l['trk-pro'] = l['proto-turc']
-l['tupi-guarani'] = l['proto-tupi-guarani']
-l['wint-pro'] = l['proto-wintuan']
+l['alg-pro'] = aliasOf('proto-algonquien')
+l['ath-pro'] = aliasOf('proto-athapascan')
+l['cel-pro'] = aliasOf('proto-celtique')
+l['cost-pro'] = aliasOf('proto-costanoan')
+l['fiu-pro'] = aliasOf('proto-finno-ougrien')
+l['gem-pro'] = aliasOf('proto-germanique')
+l['gmw-pro'] = aliasOf('proto-germanique occidental')
+l['grk-pro'] = aliasOf('proto-grec')
+l['ine-pie'] = aliasOf('indo-européen commun')
+l['kere-pro'] = aliasOf('proto-keresan')
+l['kita-pro'] = aliasOf('proto-kiowa-tanoan')
+l['mus-pro'] = aliasOf('proto-muskogéen')
+l['ougrien commun'] = aliasOf('proto-ougrien')
+l['proto-chamito-sémitique'] = aliasOf('proto-afro-asiatique')
+l['proto-indo-européen'] = aliasOf('indo-européen commun')
+l['pomo-pro'] = aliasOf('proto-pomo')
+l['sem-pro'] = aliasOf('proto-sémitique')
+l['siou-pro'] = aliasOf('proto-siouan')
+l['sit-pro'] = aliasOf('proto-sino-tibétain')
+l['sla-pro'] = aliasOf('proto-slave')
+l['trk-pro'] = aliasOf('proto-turc')
+l['tupi-guarani'] = aliasOf('proto-tupi-guarani')
+l['wint-pro'] = aliasOf('proto-wintuan')
 -- Fin redirections de proto-langues
 
 return l
