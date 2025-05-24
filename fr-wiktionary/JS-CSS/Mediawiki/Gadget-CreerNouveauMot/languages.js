@@ -202,7 +202,7 @@ window.languages = {
         [
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.ADJECTIVE, [], getEnglishModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.ADVERB, [], getEnglishModel),
-          new GrammaticalItem(this.GRAMMATICAL_CLASSES.NOUN, [[this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], (word, grammarClass, properties, pron) => properties[0] !== this.NUMBERS.DIFF_SINGULAR_PLURAL.label ? getEnglishModel(grammarClass, properties, pron) : `{{en-nom-rég|${pron}}}`),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.NOUN, [[this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], (word, grammarClass, properties, pron) => properties[0] !== this.NUMBERS.DIFF_SINGULAR_PLURAL.label ? getEnglishModel(null, grammarClass, properties, pron) : `{{en-nom-rég|${pron}}}`),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PROPER_NOUN, [[this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.INVARIABLE]], getEnglishModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.VERB, [[this.VERBS.REGULAR_VERB, this.VERBS.IRREGULAR_VERB]], (word, grammarClass, properties, pron) => properties[0] === this.VERBS.REGULAR_VERB.label ? `{{en-conj-rég|inf.pron=${pron}}}` : `{{en-conj-irrég|inf=${word}|inf.pron=${pron}|<!-- Compléter -->}}`),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PHRASE),
