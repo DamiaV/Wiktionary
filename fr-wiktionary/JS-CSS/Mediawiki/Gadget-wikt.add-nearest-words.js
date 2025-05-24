@@ -7,17 +7,17 @@
   }
 
   function createWikiLink(title, languageCode) {
-    return $(`<a rel="mw:WikiLink" href="//fr.wiktionary.org/wiki/${title}#${languageCode}" title="${title}"><i>${title}</i></a>`);
+    return $(`<a rel="mw:WikiLink" href="/wiki/${title}#${languageCode}" title="${title}"><i>${title}</i></a>`);
   }
 
-  function fetchNearWords(category, limit, word) {
+  function fetchNearWords(category, limit, word, key) {
     const commonParams = {
       action: 'query',
       list: 'categorymembers',
       cmtitle: 'Category:' + category,
       cmlimit: limit,
       cmprop: 'title',
-      cmstartsortkeyprefix: word,
+      cmstarthexsortkey: key,
       cmtype: 'page'
     };
 
@@ -28,17 +28,15 @@
       const beforeMembers = beforeData.query.categorymembers.reverse().map(m => m.title);
       const afterMembers = afterData.query.categorymembers.map(m => m.title);
 
-      // Temporary fix because of a Mediawiki bug
-      beforeMembers.filter(title => title !== word);
-      if (beforeMembers.length === limit) beforeMembers.pop();
+      beforeMembers.pop();
 
       return beforeMembers.concat(afterMembers);
     });
   }
 
-  function generateNavigationWordList(languageName, languageCode, category, word, limit = 6) {
-    fetchNearWords(category, limit, word).then(titles => {
-      const $header = $('div > h2#' + languageName).parent();
+  function generateNavigationWordList(languageCode, category, word, key, limit = 6) {
+    fetchNearWords(category, limit, word, key).then((titles) => {
+      const $header = $('div > h2 > #' + languageCode).parent().parent();
       const $navDiv = $('<div class="nav-wordlist"></div>');
       if (titles.length > 1) {
         $header.after($navDiv);
@@ -52,41 +50,45 @@
   }
 
   function loadLanguageMap() {
-    const url = mw.config.get("wgServer") + mw.config.get("wgScript");
-    return $.getJSON(url, {
-      title: "MediaWiki:Gadget-langues.json",
-      action: "raw"
-    }).then((codesToNamesMap) => {
-      const namesToCodesMap = {};
-      $.each(codesToNamesMap.codes, (code, data) => {
-        if (data.isGroup || data.isSpecial) return;
-        const name = data.name;
-        if (typeof name === "string")
-          namesToCodesMap[name.toLowerCase()] = code;
-      });
-      return namesToCodesMap;
-    });
+    return $.getJSON(
+        "/wiki/MediaWiki:Gadget-langues.json",
+        {
+          action: "raw"
+        }
+    );
   }
 
-
   loadLanguageMap().then((languageMap) => {
-    const ids = $('div.mw-heading2 > h2')
-        .map((_, e) => e.id)
-        .get()
-        .filter(id => id !== 'Caractère');
+    const langCodes = $('div.mw-heading2 > h2 > span.sectionlangue')
+        .map((_, e) => e.id).get();
 
-    ids.forEach(id => {
-      const idClean = id.replaceAll(/_/g, " ").toLowerCase();
-      const languageCode = languageMap[idClean];
-      if (!languageCode) return;
+    const pageName = mw.config.get("wgTitle");
+    api.get({
+      action: 'query',
+      prop: 'categories',
+      titles: pageName,
+      clprop: 'sortkey',
+      cllimit: 'max'
+    }).then(data => {
+      const categories = data.query.pages[mw.config.get("wgArticleId")].categories;
+      langCodes.forEach((languageCode) => {
+        const languageCodeClean = languageCode.replaceAll(/_/g, " ");
+        const languageData = languageMap.codes[languageCodeClean];
+        if (!languageData) return;
 
-      generateNavigationWordList(
-          id,
-          languageCode,
-          id.charAt(0).toLowerCase() + id.slice(1),
-          mw.config.get("wgTitle"),
-          4
-      );
+        const categoryName = languageData.name;
+        const filteredCategories = categories.filter(c => c.title === `Catégorie:${categoryName}`);
+
+        if (filteredCategories.length === 0) return;
+
+        generateNavigationWordList(
+            languageCode,
+            categoryName,
+            pageName,
+            filteredCategories[0].sortkey,
+            4
+        );
+      });
     });
   });
 })();
