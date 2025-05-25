@@ -36,7 +36,7 @@ window.languages = {
     GROUP2: new GrammaticalProperty("2<sup>ème</sup> groupe", "{{type|{0}}} {{conjugaison|{0}|groupe=2}}"),
     GROUP3: new GrammaticalProperty("3<sup>ème</sup> groupe", "{{type|{0}}} {{conjugaison|{0}|groupe=3}}"),
     REGULAR_VERB: new GrammaticalProperty("régulier", "{{type|{0}}}"),
-    IRREGULAR_VERB: new GrammaticalProperty("irrégulier", "{{type|{0}}}"),
+    IRREGULAR_VERB: new GrammaticalProperty("irrégulier", "{{type|{0}}} {{irrégulier|{0}}}"),
     VERB: new GrammaticalProperty("verbe", "{{type|{0}}}"),
   },
   /**
@@ -286,7 +286,7 @@ window.languages = {
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.COORDINATION_CONJUNCTION, [], getItalianModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.INTERJECTION, [], getItalianModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.ONOMATOPOEIA, [], getItalianModel),
-          new GrammaticalItem(this.GRAMMATICAL_CLASSES.LAST_NAME, []),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.LAST_NAME),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PARTICLE, [], getItalianModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.POSTPOSITION, [], getItalianModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PREFIX),
@@ -299,6 +299,86 @@ window.languages = {
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PERSONAL_PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getItalianModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.POSSESSIVE_PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getItalianModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.RELATIVE_PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getItalianModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.SUFFIX),
+        ]
+    )); // it
+
+    /*
+     * Spanish language definition.
+     */
+
+    const getSpanishModel = (word, grammarClass, properties, pron) => {
+      const [gender, number] = properties.length >= 2 ? properties : [null, this.NUMBERS.INVARIABLE.label];
+      let mf = "";
+      if (gender === this.GENDERS.FEMININE_MASCULINE.label)
+        mf = "|mf=oui";
+
+      if (number === this.NUMBERS.INVARIABLE.label)
+        return `{{es-inv|${pron}|inv_titre=${grammarClass}${mf}}`;
+      if (number === this.NUMBERS.SAME_SINGULAR_PLURAL.label)
+        return `{{es-inv|${pron}|inv_titre=Singulier et pluriel${mf}}}`;
+      if (number === this.NUMBERS.SINGULAR_ONLY.label)
+        return `{{es-inv|${pron}|inv_titre=Singulier${mf}}}`;
+      if (number === this.NUMBERS.PLURAL_ONLY.label)
+        return `{{es-inv|${pron}|inv_titre=Pluriel${mf}}}`;
+
+      if (!mf) {
+        if (grammarClass === this.GRAMMATICAL_CLASSES.ADJECTIVE.label && word.endsWith("o"))
+          return `{{es-accord-oa|${word.slice(0, -1)}|${pron ? pron.slice(0, -1) : ""}}`;
+        if (grammarClass === this.GRAMMATICAL_CLASSES.ADJECTIVE.label && !/[aáeéiíoóuúüyý]$/.test(word))
+          return `{{es-accord-mixte-cons|${word}|${pron}}`;
+        if ([this.GRAMMATICAL_CLASSES.ADJECTIVE.label, this.GRAMMATICAL_CLASSES.NOUN.label].includes(grammarClass) &&
+            !/[aáeéiíoóuúüyý]$/.test(word))
+          return `{{es-accord-ón|${word.slice(0, -2)}|${pron ? pron.slice(0, -2) : ""}}`;
+      }
+
+      return `{{es-rég|${pron}${mf}}}`;
+    };
+
+    gadget.addLanguage(new Language(
+        "es",
+        "es",
+        "spa",
+        "espagnol",
+        [
+          ["a", "e", "ɛ", "i", "o", "ɔ", "u"],
+          ["m", "n", "ɲ", "p", "b", "β", "f", "t", "d", "ð", "θ", "s", "t͡ʃ", "ʃ",
+            "k", "ɡ", "ɣ", "x", "\u03c7", "l", "ʎ", "ɾ", "r"],
+          ["j", "w"],
+          [".", "ˈ"],
+        ],
+        [
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.ADJECTIVE, [[this.GENDERS.FEMININE_MASCULINE_DIFF, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.ADVERB, [], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.NOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.PROPER_NOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE]]),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.VERB, [[this.VERBS.GROUP1, this.VERBS.GROUP2, this.VERBS.GROUP3], [this.VERBS.REGULAR_VERB, this.VERBS.IRREGULAR_VERB]]),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.PHRASE),
+
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.INTERROGATIVE_ADJECTIVE, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.NUMERAL_ADJECTIVE, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.POSSESSIVE_ADJECTIVE, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.INTERROGATIVE_ADVERB, [], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.DEFINITE_ARTICLE, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.INDEFINITE_ARTICLE, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.PARTITIVE_ARTICLE, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.CONJUNCTION, [], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.COORDINATION_CONJUNCTION, [], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.INTERJECTION, [], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.ONOMATOPOEIA, [], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.LAST_NAME),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.PARTICLE, [], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.POSTPOSITION, [], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.PREFIX),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.FIRST_NAME, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE]]),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.PREPOSITION, [], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.DEMONSTRATIVE_PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.INDEFINITE_PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.INTERROGATIVE_PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.PERSONAL_PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.POSSESSIVE_PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.RELATIVE_PRONOUN, [[this.GENDERS.MASCULINE, this.GENDERS.FEMININE, this.GENDERS.FEMININE_MASCULINE], [this.NUMBERS.DIFF_SINGULAR_PLURAL, this.NUMBERS.SAME_SINGULAR_PLURAL, this.NUMBERS.SINGULAR_ONLY, this.NUMBERS.PLURAL_ONLY, this.NUMBERS.INVARIABLE]], getSpanishModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.SUFFIX),
         ]
     )); // it
@@ -353,7 +433,7 @@ window.languages = {
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.COORDINATION_CONJUNCTION, [], getPortugueseModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.INTERJECTION, [], getPortugueseModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.ONOMATOPOEIA, [], getPortugueseModel),
-          new GrammaticalItem(this.GRAMMATICAL_CLASSES.LAST_NAME, []),
+          new GrammaticalItem(this.GRAMMATICAL_CLASSES.LAST_NAME),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PARTICLE, [], getPortugueseModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.POSTPOSITION, [], getPortugueseModel),
           new GrammaticalItem(this.GRAMMATICAL_CLASSES.PREFIX),
