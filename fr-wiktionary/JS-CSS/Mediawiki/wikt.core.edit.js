@@ -25,7 +25,7 @@ function getEditAreaText($textInput) {
  * @param text {string} The text to set.
  * @param $textInput {*?} The text input or textarea to use instead of the main edit box.
  */
-function setText(text, $textInput) {
+function setEditAreaText(text, $textInput) {
   const $editBox = $textInput || getEditBox();
   if ($editBox) $editBox.val(text);
 }
@@ -274,7 +274,7 @@ function getEditSummaryField() {
 module.exports = {
   getEditBox,
   getEditAreaText,
-  setText,
+  setEditAreaText,
   insertTextInEditArea,
   replaceEditAreaText,
   getCursorLocation,
