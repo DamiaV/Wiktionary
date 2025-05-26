@@ -63,7 +63,7 @@ const {
 } = require("./wikt.core.edit.js");
 const { setCookie, getCookie } = require("./wikt.core.cookies.js");
 const { loadLanguages, getDefaultLanguage } = require("./CreerNouveauMot/languages.js");
-const { Wiki, ArticleSection } = require("./CreerNouveauMot/data-model.js");
+const { Wiki, ArticleSection, GrammaticalProperty, Example } = require("./CreerNouveauMot/data-model.js");
 const { GUI, StartGUI, MainGUI, interpolateString } = require("./CreerNouveauMot/ui.js");
 
 // Activate only in main namespace when in edit/submit mode.
