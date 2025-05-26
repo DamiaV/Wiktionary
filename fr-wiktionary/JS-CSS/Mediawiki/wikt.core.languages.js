@@ -18,7 +18,7 @@
 /**
  * @type {LanguagesData}
  */
-const languagesData = require("./langues.json");
+const languagesData = require("./wikt.core.languages.json");
 /**
  * @type {Map<string, LanguageData>}
  */
