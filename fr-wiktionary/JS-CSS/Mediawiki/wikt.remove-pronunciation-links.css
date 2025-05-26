@@ -1,0 +1,8 @@
+a.disabled-pron-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a.disabled-pron-link:hover {
+  text-decoration: none;
+}
