@@ -34,7 +34,8 @@
     });
   }
 
-  function generateNavigationWordList(languageCode, category, word, key, limit = 6) {
+  function generateNavigationWordList(languageCode, category, word, key, limit = 3) {
+    limit++;
     fetchNearWords(category, limit, word, key).then((titles) => {
       const $header = $('div > h2 > #' + languageCode).parent().parent();
       const $navDiv = $('<div class="nav-wordlist"></div>');
@@ -49,16 +50,8 @@
     });
   }
 
-  function loadLanguageMap() {
-    return $.getJSON(
-        "/wiki/MediaWiki:Gadget-langues.json",
-        {
-          action: "raw"
-        }
-    );
-  }
-
-  loadLanguageMap().then((languageMap) => {
+  wikt.languages.init(() => {
+    const languagesNames = wikt.languages.getLanguagesNames(true);
     const langCodes = $('div.mw-heading2 > h2 > span.sectionlangue')
         .map((_, e) => e.id).get();
 
@@ -73,10 +66,9 @@
       const categories = data.query.pages[mw.config.get("wgArticleId")].categories;
       langCodes.forEach((languageCode) => {
         const languageCodeClean = languageCode.replaceAll(/_/g, " ");
-        const languageData = languageMap.codes[languageCodeClean];
-        if (!languageData) return;
+        const categoryName = languagesNames.get(languageCodeClean);
+        if (!categoryName) return;
 
-        const categoryName = languageData.name;
         const filteredCategories = categories.filter(c => c.title === `Catégorie:${categoryName}`);
 
         if (filteredCategories.length === 0) return;
@@ -85,8 +77,8 @@
             languageCode,
             categoryName,
             pageName,
-            filteredCategories[0].sortkey,
-            4
+            filteredCategories[0]["sortkey"],
+            window.nearWordsLimit || 3
         );
       });
     });

@@ -28,13 +28,9 @@ if (mw.config.get("wgAction") === "view") {
 
     init: function () {
       this.api = new mw.Api({userAgent: "Gadget-wikt.highlight-missing-sections/" + wikt.gadgets.highlightMissingSections.VERSION});
-      $.getJSON(
-          "https://fr.wiktionary.org/wiki/MediaWiki:Gadget-langues.json",
-          {
-            action: "raw",
-          }
-      ).then((data) => {
-        this._onResponse([...Object.keys(data)]);
+      wikt.languages.init(() => {
+        const languagesData = wikt.languages.getLanguages(true);
+        this._onResponse(Array.from(languagesData.keys()));
       });
     },
 

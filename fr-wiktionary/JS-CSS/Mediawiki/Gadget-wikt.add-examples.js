@@ -48,7 +48,8 @@ $(() => {
   }
 
   const api = new mw.Api({userAgent: "Gadget-wikt.add-examples/" + VERSION});
-  const languages = {};
+  /** @type {Map<string, string>} */
+  let languagesNames = new Map();
   const sectionNames = {
     "adj": ["adj", "adjectif", "adjectif qualificatif"],
     "adv": ["adv", "adverbe"],
@@ -119,18 +120,8 @@ $(() => {
   };
 
   // Get names of all defined languages
-  $.getJSON(
-      "/wiki/MediaWiki:Gadget-langues.json",
-      {
-        action: "raw",
-      }
-  ).then((data) => {
-    /** @type {Record<string, {name: string, isGroup?: boolean, isSpecial?: boolean}>} */
-    const languagesData = data.codes;
-    for (const [langCode, langData] of Object.entries(languagesData)) {
-      if (langData.isGroup || langData.isSpecial) continue;
-      languages[langCode] = langData.name;
-    }
+  wikt.languages.init(() => {
+    languagesNames = wikt.languages.getLanguagesNames(true);
   });
   let exampleCounter = 0;
   $("ul > li > .example").each(function () {
@@ -333,7 +324,7 @@ $(() => {
       content.push(translationToolbar, translationInputLayout, transcriptionToolbar, transcriptionInputLayout, disableTranslationChkLayout);
     }
     const fieldsLayout = new OO.ui.FieldsetLayout({
-      label: "Ajout d’un exemple en " + (languages[this._language] || "langue inconnue"),
+      label: "Ajout d’un exemple en " + (languagesNames.get(this._language) || "langue inconnue"),
       items: content,
       classes: ["add-example-fieldset"],
     });

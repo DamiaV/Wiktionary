@@ -158,18 +158,9 @@ $(() => {
     #mainGUI = null;
 
     constructor() {
-      $.getJSON(
-          "/wiki/MediaWiki:Gadget-langues.json",
-          {
-            action: "raw",
-          }
-      ).then((data) => {
-        /** @type {Record<string, {name: string, isGroup?: boolean, isSpecial?: boolean}>} */
-        const languagesData = data.codes;
-        for (const [langCode, langData] of Object.entries(languagesData)) {
-          if (langData.isGroup || langData.isSpecial) continue;
-          this.#languageNames[langCode] = langData.name;
-        }
+      wikt.languages.init(() => {
+        for (const [langCode, langName] of wikt.languages.getLanguagesNames(true))
+          this.#languageNames[langCode] = langName;
         if ($(GUI.TARGET_ELEMENT)) this.#generateStartUI();
       });
     }

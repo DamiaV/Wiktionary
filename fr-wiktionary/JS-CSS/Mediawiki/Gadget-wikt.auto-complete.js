@@ -265,21 +265,15 @@ $(function () {
   }
 
   // [[Modèle:langue]], [[MediaWiki:Gadget-langues.json]]
-  $.getJSON(
-      "/wiki/MediaWiki:Gadget-langues.json",
-      {
-        action: "raw",
-      }
-  ).then((data) => {
+  wikt.languages.init(() => {
     try {
+      /** @type {string[]} */
       const langsData = [];
-      for (const [code, langData] of Object.entries(data.codes)) {
-        if (langData.isGroup || langData.isSpecial) continue;
+      for (const code of wikt.languages.getLanguages().keys())
         langsData.push(code);
-      }
       gadget.addTemplateParameters("langue", langsData);
     } catch (e) {
-      console.log("An error occured while parsing JSON for [[MediaWiki:Gadget-translation editor.js/langues.json]] ([[Template:langue]]): " + e);
+      console.log("An error occured while parsing JSON for [[MediaWiki:Gadget-langues.json]] ([[Template:langue]]): " + e);
     }
   });
   // [[Modèle:lexique]], [[Module:lexique/data/dump.json]]
