@@ -179,7 +179,6 @@ $(() => {
    * @constructor
    */
   function Form($lastExample, $button, language, definitionLevel) {
-    const self = this;
     this._language = language;
     this._definitionLevel = definitionLevel;
     this._$lastExample = $lastExample;
@@ -216,24 +215,18 @@ $(() => {
         CustomTool.static.name = name;
         CustomTool.static.icon = icon;
         CustomTool.static.title = title;
-        if (progressive) {
-          CustomTool.static.flags = ["primary", "progressive"];
-        }
+        if (progressive) CustomTool.static.flags = ["primary", "progressive"];
         CustomTool.static.displayBothIconAndLabel = !!displayBothIconAndLabel;
         CustomTool.prototype.onSelect = onSelect;
-        // noinspection JSUnusedGlobalSymbols
-        CustomTool.prototype.onUpdateState = onUpdateState || (() => {
-          this.setActive(false);
-        });
 
         toolFactory.register(CustomTool);
       }
 
       generateButton("bold", "bold", false, "Gras", () => {
-        self.applyTextEffect("bold", $textInput);
+        this.applyTextEffect("bold", $textInput);
       });
       generateButton("italic", "italic", false, "Italique", () => {
-        self.applyTextEffect("italic", $textInput);
+        this.applyTextEffect("italic", $textInput);
       });
 
       toolbar.setup([
@@ -251,7 +244,7 @@ $(() => {
       align: "top",
     });
     this._textInput.on("change", (value) => {
-      self._applyButton.setDisabled(!value);
+      this._applyButton.setDisabled(!value);
     })
 
     this._sourceInput = new OO.ui.MultilineTextInputWidget();
@@ -290,7 +283,7 @@ $(() => {
       helpInline: true,
     });
     this._disableTranslationChk.on("change", (selected) => {
-      self._translationInput.setDisabled(selected);
+      this._translationInput.setDisabled(selected);
     });
 
     this._applyButton = new OO.ui.ButtonWidget({
@@ -306,7 +299,7 @@ $(() => {
       flags: ["destructive"],
     });
     this._cancelButton.on("click", () => {
-      self.setVisible(false);
+      this.setVisible(false);
     });
 
     this._loadingImage = new OO.ui.LabelWidget({
