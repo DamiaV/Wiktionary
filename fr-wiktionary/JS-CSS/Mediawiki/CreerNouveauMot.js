@@ -46,7 +46,7 @@
  * v5.5 2025-04-05 Add Portuguese language.
  * v5.6 2025-04-05 Make grammatical properties generic.
  * v5.6.1 2025-04-05 Split gadget into several files.
- * v5.7 2025-05-22 Use new [[MediaWiki:Gadget-langues.json]].
+ * v5.7 2025-05-22 Use new [[MediaWiki:Gadget-wikt.core.languages.json]].
  * v5.8 2025-05-26 Conversion into a module.
  * -----------------------------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|CreerNouveauMot.js]]

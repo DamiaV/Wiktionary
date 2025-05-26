@@ -275,16 +275,12 @@ function addTemplate(templateName, moduleName) {
   });
 }
 
-// [[Modèle:langue]], [[MediaWiki:Gadget-langues.json]]
-try {
-  /** @type {string[]} */
-  const langsData = [];
-  for (const code of getLanguages().keys())
-    langsData.push(code);
-  gadget.addTemplateParameters("langue", langsData);
-} catch (e) {
-  console.log("An error occured while parsing JSON for [[MediaWiki:Gadget-langues.json]] ([[Template:langue]]): " + e);
-}
+// [[Modèle:langue]], [[MediaWiki:Gadget-wikt.core.languages.json]]
+/** @type {string[]} */
+const langsData = [];
+for (const code of getLanguages(true).keys())
+  langsData.push(code);
+gadget.addTemplateParameters("langue", langsData);
 
 // [[Modèle:lexique]], [[Module:lexique/data/dump.json]]
 addTemplate("lexique", "lexique");

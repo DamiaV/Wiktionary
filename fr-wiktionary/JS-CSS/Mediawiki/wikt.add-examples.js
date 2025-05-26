@@ -19,7 +19,7 @@
  * v1.3.1 2024-05-18 Add counter to avoid adding "Add Example" button when there are too many examples.
  * v1.3.2 2025-02-25 Fix "é" character causing crashes when present in section IDs.
  * v1.3.3 2025-02-25 Rejected edits now show an error message.
- * v1.4 2025-05-23 Use new [[MediaWiki:Gadget-langues.json]].
+ * v1.4 2025-05-23 Use new [[MediaWiki:Gadget-wikt.core.languages.json]].
  * v1.5 2025-05-26 Conversion into a module.
  * ------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|add-examples.js]]
@@ -29,6 +29,11 @@
 
 const { getLanguagesNames } = require("./wikt.core.languages.js");
 const { getSelectedText, replaceSelectedText } = require("./wikt.core.edit.js")
+const {
+  getCookie,
+  setCookie,
+  deleteCookie
+} = require("./wikt.core.cookies.js");
 
 console.log("Chargement de Gadget-wikt.add-examples.js…");
 
@@ -48,8 +53,7 @@ if (!window.max_number_of_examples && window.max_number_of_examples instanceof N
 }
 
 const api = new mw.Api({ userAgent: "Gadget-wikt.add-examples/" + VERSION });
-/** @type {Map<string, string>} */
-let languagesNames = new Map();
+const languagesNames = getLanguagesNames(true);
 const sectionNames = {
   "adj": ["adj", "adjectif", "adjectif qualificatif"],
   "adv": ["adv", "adverbe"],
@@ -119,8 +123,6 @@ const sectionNames = {
   "rafsi": ["rafsi"],
 };
 
-// Get names of all defined languages
-languagesNames = getLanguagesNames(true);
 let exampleCounter = 0;
 $("ul > li > .example").each(function () {
   const $element = $(this);
@@ -366,20 +368,20 @@ Form.prototype = {
     this._$button.toggle(!visible);
     this._frame.toggle(visible);
     if (visible) {
-      if (!this._textInput.getValue() && $.cookie(COOKIE_KEY_TEXT)) {
-        this._textInput.setValue($.cookie(COOKIE_KEY_TEXT));
+      if (!this._textInput.getValue() && getCookie(COOKIE_KEY_TEXT)) {
+        this._textInput.setValue(getCookie(COOKIE_KEY_TEXT));
       }
-      if (!this._sourceInput.getValue() && $.cookie(COOKIE_KEY_SOURCE)) {
-        this._sourceInput.setValue($.cookie(COOKIE_KEY_SOURCE));
+      if (!this._sourceInput.getValue() && getCookie(COOKIE_KEY_SOURCE)) {
+        this._sourceInput.setValue(getCookie(COOKIE_KEY_SOURCE));
       }
-      if (!this._sourceURLInput.getValue() && $.cookie(COOKIE_KEY_SOURCE_URL)) {
-        this._sourceURLInput.setValue($.cookie(COOKIE_KEY_SOURCE_URL));
+      if (!this._sourceURLInput.getValue() && getCookie(COOKIE_KEY_SOURCE_URL)) {
+        this._sourceURLInput.setValue(getCookie(COOKIE_KEY_SOURCE_URL));
       }
-      if (!this._translationInput.getValue() && $.cookie(COOKIE_KEY_TRANSLATION)) {
-        this._translationInput.setValue($.cookie(COOKIE_KEY_TRANSLATION));
+      if (!this._translationInput.getValue() && getCookie(COOKIE_KEY_TRANSLATION)) {
+        this._translationInput.setValue(getCookie(COOKIE_KEY_TRANSLATION));
       }
-      if (!this._transcriptionInput.getValue() && $.cookie(COOKIE_KEY_TRANSCRIPTION)) {
-        this._transcriptionInput.setValue($.cookie(COOKIE_KEY_TRANSCRIPTION));
+      if (!this._transcriptionInput.getValue() && getCookie(COOKIE_KEY_TRANSCRIPTION)) {
+        this._transcriptionInput.setValue(getCookie(COOKIE_KEY_TRANSCRIPTION));
       }
     }
   },
@@ -604,11 +606,11 @@ Form.prototype = {
             });
             this.setVisible(false);
             this.clear();
-            $.removeCookie(COOKIE_KEY_TEXT);
-            $.removeCookie(COOKIE_KEY_SOURCE);
-            $.removeCookie(COOKIE_KEY_SOURCE_URL);
-            $.removeCookie(COOKIE_KEY_TRANSLATION);
-            $.removeCookie(COOKIE_KEY_TRANSCRIPTION);
+            deleteCookie(COOKIE_KEY_TEXT);
+            deleteCookie(COOKIE_KEY_SOURCE);
+            deleteCookie(COOKIE_KEY_SOURCE_URL);
+            deleteCookie(COOKIE_KEY_TRANSLATION);
+            deleteCookie(COOKIE_KEY_TRANSCRIPTION);
             reenable();
           },
           // On fail
@@ -625,11 +627,12 @@ Form.prototype = {
     function error(reason) {
       const msg = reason || "la page a probablement été modifiée entre temps. Veuillez recharger la page et réessayer."
       alert(`L’exemple n’a pas pu être publié car ${msg}`);
-      $.cookie(COOKIE_KEY_TEXT, self._textInput.getValue());
-      $.cookie(COOKIE_KEY_SOURCE, self._sourceInput.getValue());
-      $.cookie(COOKIE_KEY_SOURCE_URL, self._sourceURLInput.getValue());
-      $.cookie(COOKIE_KEY_TRANSLATION, self._translationInput.getValue());
-      $.cookie(COOKIE_KEY_TRANSCRIPTION, self._transcriptionInput.getValue());
+      const days = 2;
+      setCookie(COOKIE_KEY_TEXT, self._textInput.getValue(), days);
+      setCookie(COOKIE_KEY_SOURCE, self._sourceInput.getValue(), days);
+      setCookie(COOKIE_KEY_SOURCE_URL, self._sourceURLInput.getValue(), days);
+      setCookie(COOKIE_KEY_TRANSLATION, self._translationInput.getValue(), days);
+      setCookie(COOKIE_KEY_TRANSCRIPTION, self._transcriptionInput.getValue(), days);
       reenable();
     }
 

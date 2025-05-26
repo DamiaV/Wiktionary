@@ -11,7 +11,7 @@
  **********************************************************************
  * v1.0 2020-09-18 Initial version
  * v1.1 2021-10-17 Gadget now goes through redirections
- * v1.2 2025-05-23 Refactor; use new [[MediaWiki:Gadget-langues.json]]
+ * v1.2 2025-05-23 Refactor; use new [[MediaWiki:Gadget-wikt.core.languages.json]]
  * v1.3 2025-05-26 Conversion into a module.
  **********************************************************************
  * [[Catégorie:JavaScript du Wiktionnaire|highlight missing sections]]
