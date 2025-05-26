@@ -242,7 +242,7 @@ Object.defineProperty(DefinitionForm.prototype, "examplesCount", {
 DefinitionForm.prototype.getExample = function (index) {
   const exampleForm = this._examplesFlds[index];
   return new Example(
-      exampleForm.getEditAreaText(),
+      exampleForm.getText(),
       exampleForm.getTranslation(),
       exampleForm.getTranscription(),
       exampleForm.getSource(),
@@ -1257,7 +1257,7 @@ class MainGUI extends GUI {
     for (let i = 0; i < definitionForm.examplesCount; i++) {
       examples.push(definitionForm.getExample(i));
     }
-    return new Definition(definitionForm.getEditAreaText(), examples);
+    return new Definition(definitionForm.getText(), examples);
   }
 
   /**
