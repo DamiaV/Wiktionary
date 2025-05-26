@@ -218,6 +218,9 @@ $(() => {
         if (progressive) CustomTool.static.flags = ["primary", "progressive"];
         CustomTool.static.displayBothIconAndLabel = !!displayBothIconAndLabel;
         CustomTool.prototype.onSelect = onSelect;
+        CustomTool.prototype.onUpdateState = onUpdateState || (function () {
+          this.setActive(false);
+        });
 
         toolFactory.register(CustomTool);
       }
