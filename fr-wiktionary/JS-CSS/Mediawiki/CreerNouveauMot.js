@@ -54,10 +54,10 @@
  */
 "use strict";
 
-const { getLanguagesNames, getDefaultLanguage } = require("./languages.js")
-const { loadLanguages } = require("./CreerNouveauMot.js/languages.js")
-const { Wiki, ArticleSection } = require("./CreerNouveauMot.js/data-model.js");
-const { GUI, StartGUI, MainGUI, interpolateString } = require("./CreerNouveauMot.js/ui.js");
+const { getLanguagesNames } = require("./languages.js")
+const { loadLanguages, getDefaultLanguage } = require("./CreerNouveauMot/languages.js")
+const { Wiki, ArticleSection } = require("./CreerNouveauMot/data-model.js");
+const { GUI, StartGUI, MainGUI, interpolateString } = require("./CreerNouveauMot/ui.js");
 
 // Activate only in main namespace when in edit/submit mode.
 console.log("Chargement de Gadget-CreerNouveauMot.js…");
