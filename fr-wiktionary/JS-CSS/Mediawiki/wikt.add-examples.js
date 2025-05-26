@@ -28,6 +28,7 @@
 "use strict";
 
 const { getLanguagesNames } = require("./wikt.core.languages.js");
+const { getSelectedText, replaceSelectedText } = require("./wikt.core.edit.js")
 
 console.log("Chargement de Gadget-wikt.add-examples.js…");
 
@@ -389,7 +390,7 @@ Form.prototype = {
    * @param $textInput {jQuery} The text input to format the text of.
    */
   applyTextEffect: function (effect, $textInput) {
-    const selectedText = wikt.edit.getSelectedText($textInput);
+    const selectedText = getSelectedText($textInput);
     let replText;
     switch (effect) {
       case "bold":
@@ -401,7 +402,7 @@ Form.prototype = {
       default:
         throw new Error("Invalid effect: " + effect);
     }
-    wikt.edit.replaceSelectedText(replText, $textInput);
+    replaceSelectedText(replText, $textInput);
   },
 
   /**
