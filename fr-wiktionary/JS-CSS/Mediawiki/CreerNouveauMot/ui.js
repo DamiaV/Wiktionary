@@ -5,6 +5,8 @@
 // <nowiki>
 "use strict";
 
+const { Example, Definition } = require("./data-model.js");
+
 /**
  * Format a string by replacing placeholders (e.g., "{0}", "{1}") with provided values.
  * @param str {string} The string containing placeholders.
