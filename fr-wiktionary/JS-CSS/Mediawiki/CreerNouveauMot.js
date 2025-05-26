@@ -54,8 +54,15 @@
  */
 "use strict";
 
-const { getLanguagesNames } = require("./languages.js")
-const { loadLanguages, getDefaultLanguage } = require("./CreerNouveauMot/languages.js")
+const { getLanguagesNames } = require("./wikt.core.languages.js");
+const { getSortingKey } = require("./wikt.core.page.js");
+const {
+  insertTextInEditArea,
+  getCursorLocation,
+  getEditSummaryField,
+} = require("./wikt.core.edit.js");
+const { setCookie, getCookie } = require("./wikt.core.cookies.js");
+const { loadLanguages, getDefaultLanguage } = require("./CreerNouveauMot/languages.js");
 const { Wiki, ArticleSection } = require("./CreerNouveauMot/data-model.js");
 const { GUI, StartGUI, MainGUI, interpolateString } = require("./CreerNouveauMot/ui.js");
 
@@ -67,7 +74,7 @@ console.log("Chargement de Gadget-CreerNouveauMot.js…");
  */
 class GadgetCreerNouveauMot {
   static NAME = "Créer nouveau mot";
-  static VERSION = "5.7";
+  static VERSION = "5.8";
 
   static #COOKIE_NAME = "cnm_last_lang";
   /** Cookie duration in days. */
@@ -221,9 +228,9 @@ class GadgetCreerNouveauMot {
         GadgetCreerNouveauMot.#OTHER_PROJECTS
     );
 
-    const previousLang = wikt.cookie.read(GadgetCreerNouveauMot.#COOKIE_NAME);
+    const previousLang = getCookie(GadgetCreerNouveauMot.#COOKIE_NAME);
     this.#onLanguageSelect(previousLang || this.#languages[0].code);
-    this.#mainGUI.sortingKey = wikt.page.getSortingKey(this.#word);
+    this.#mainGUI.sortingKey = getSortingKey(this.#word);
     this.#mainGUI.isDraft = false;
     // Display alert if the page does not exist yet and its title starts with an upper case letter
     if (this.#word && this.#word[0].toUpperCase() === this.#word[0] && $(".mw-newarticletext").length) {
@@ -250,7 +257,7 @@ class GadgetCreerNouveauMot {
         language = getDefaultLanguage(languageCode, this.#languageNames[languageCode]);
       }
       this.#selectedLanguage = language;
-      wikt.cookie.create(GadgetCreerNouveauMot.#COOKIE_NAME, language.code, GadgetCreerNouveauMot.#COOKIE_DURATION);
+      setCookie(GadgetCreerNouveauMot.#COOKIE_NAME, language.code, GadgetCreerNouveauMot.#COOKIE_DURATION);
       this.#mainGUI.selectLanguage(this.#selectedLanguage);
 
       this.#mainGUI.pronunciation = language.generatePronunciation(this.#word);
@@ -485,9 +492,9 @@ class GadgetCreerNouveauMot {
 
     this.#mainGUI.categories.forEach(category => wikicode += `[[Catégorie:${category}]]\n`);
 
-    wikt.edit.insertText(wikt.edit.getCursorLocation(), wikicode);
+    insertTextInEditArea(getCursorLocation(), wikicode);
 
-    const $summaryFld = wikt.edit.getEditSummaryField();
+    const $summaryFld = getEditSummaryField();
     const summary = $summaryFld.val();
     const comment = GadgetCreerNouveauMot.#EDIT_COMMENT;
     if (!summary.includes(comment))

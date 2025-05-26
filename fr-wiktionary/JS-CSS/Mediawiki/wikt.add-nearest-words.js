@@ -1,6 +1,6 @@
 "use strict";
 
-const { getLanguagesNames } = require("./languages.js");
+const { getLanguagesNames } = require("./wikt.core.languages.js");
 
 console.log("Chargement de Gadget-wikt.add-nearest-words.js…");
 

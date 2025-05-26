@@ -20,13 +20,23 @@
  */
 "use strict";
 
-const { getLanguages } = require("./languages.js");
+const { getLanguages } = require("./wikt.core.languages.js");
+const {
+  getCursorLocation,
+  setCursorLocation,
+  isCodeMirrorEnabled,
+  getCodeMirror,
+  getEditBox,
+  getEditAreaText,
+  replaceEditAreaText,
+  insertTextInEditArea,
+} = require("./wikt.core.edit.js");
 
 console.log("Chargement de Gadget-wikt.auto-complete.js…");
 
 class GadgetAutoComplete {
   static NAME = "Auto-complétion de modèles";
-  static VERSION = "1.4";
+  static VERSION = "1.5";
 
   /** Maximum number of suggestions to display. */
   static #MAX_SUGGESTIONS = 100;
@@ -66,7 +76,7 @@ class GadgetAutoComplete {
 
     $(document.body).keyup(event => {
       // Register cursor position for insertion
-      this.#cursorPosition = wikt.edit.getCursorLocation();
+      this.#cursorPosition = getCursorLocation();
 
       if (!this.#suggestMode) {
         if (event.ctrlKey && event.code === "Space") {
@@ -91,7 +101,7 @@ class GadgetAutoComplete {
         }
 
         if (["ArrowUp", "ArrowDown", "Tab"].includes(event.code)) {
-          wikt.edit.setCursorLocation(cursorPos);
+          setCursorLocation(cursorPos);
         }
       }
     });
@@ -100,15 +110,15 @@ class GadgetAutoComplete {
       // Check if click target is inside the suggestions box.
       if ($(event.target).closest(this.#$suggestionBox).length) {
         let editBox;
-        if (wikt.edit.isCodeMirrorEnabled()) {
-          editBox = wikt.edit.getCodeMirror();
+        if (isCodeMirrorEnabled()) {
+          editBox = getCodeMirror();
         } else {
-          editBox = wikt.edit.getEditBox();
+          editBox = getEditBox();
         }
         if (editBox) {
           editBox.focus();
         }
-        wikt.edit.setCursorLocation(this.#cursorPosition);
+        setCursorLocation(this.#cursorPosition);
       } else {
         this.#enableSuggestions(false);
       }
@@ -146,8 +156,8 @@ class GadgetAutoComplete {
    * @return {boolean} True if the cursor is in a template and there are suggestions for it.
    */
   #suggest() {
-    const cursorPosition = wikt.edit.getCursorLocation();
-    const text = wikt.edit.getText().substring(0, cursorPosition);
+    const cursorPosition = getCursorLocation();
+    const text = getEditAreaText().substring(0, cursorPosition);
     const templateStart = text.lastIndexOf("{{");
     const templateEnd = text.lastIndexOf("}}");
 
@@ -223,14 +233,14 @@ class GadgetAutoComplete {
 
   #insertSuggestion() {
     if (this.#suggestionIndex !== -1) {
-      const cursorPosition = wikt.edit.getCursorLocation();
+      const cursorPosition = getCursorLocation();
       const suggestionPrefix = this.#suggestions[this.#suggestionIndex][0];
       const suggestionSuffix = this.#suggestions[this.#suggestionIndex][1];
 
       // Replace already typed text by the start of the selected suggestion.
-      wikt.edit.replaceText(this.#cursorPosition - suggestionPrefix.length, this.#cursorPosition, suggestionPrefix);
+      replaceEditAreaText(this.#cursorPosition - suggestionPrefix.length, this.#cursorPosition, suggestionPrefix);
       // Insert the rest of the suggestion on the right of the cursor.
-      wikt.edit.insertText(cursorPosition, suggestionSuffix);
+      insertTextInEditArea(cursorPosition, suggestionSuffix);
       this.#cursorPosition += suggestionSuffix.length;
       this.#enableSuggestions(false);
 

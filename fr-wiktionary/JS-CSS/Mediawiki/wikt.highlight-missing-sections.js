@@ -19,17 +19,17 @@
 // <nowiki>
 "use strict";
 
-const { getLanguages } = require("./languages.js");
+const { getLanguages } = require("./wikt.core.languages.js");
 
 console.log("Chargement de Gadget-wikt.highlight-missing-sections.js…");
 
-window.wikt.gadgets.highlightMissingSections = {
+const highlightMissingSections = {
   NAME: "Highlight Missing Sections",
 
-  VERSION: "1.2",
+  VERSION: "1.3",
 
   init: function () {
-    this.api = new mw.Api({ userAgent: "Gadget-wikt.highlight-missing-sections/" + wikt.gadgets.highlightMissingSections.VERSION });
+    this.api = new mw.Api({ userAgent: "Gadget-wikt.highlight-missing-sections/" + highlightMissingSections.VERSION });
     const languagesData = getLanguages(true);
     this._onResponse(Array.from(languagesData.keys()));
   },
@@ -119,5 +119,5 @@ window.wikt.gadgets.highlightMissingSections = {
   },
 };
 
-wikt.gadgets.highlightMissingSections.init();
+highlightMissingSections.init();
 // </nowiki>

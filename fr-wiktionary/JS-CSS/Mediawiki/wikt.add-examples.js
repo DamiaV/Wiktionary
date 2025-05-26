@@ -27,12 +27,12 @@
  */
 "use strict";
 
-const { getLanguagesNames } = require("./languages.js");
+const { getLanguagesNames } = require("./wikt.core.languages.js");
 
 console.log("Chargement de Gadget-wikt.add-examples.js…");
 
 const NAME = "Ajouter des exemples";
-const VERSION = "1.4";
+const VERSION = "1.5";
 
 const COOKIE_KEY_TEXT = "add_examples_text";
 const COOKIE_KEY_SOURCE = "add_examples_source";
@@ -223,9 +223,11 @@ function Form($lastExample, $button, language, definitionLevel) {
     }
 
     generateButton("bold", "bold", false, "Gras", () => {
+      // FIXME this is undefined
       this.applyTextEffect("bold", $textInput);
     });
     generateButton("italic", "italic", false, "Italique", () => {
+      // FIXME this is undefined
       this.applyTextEffect("italic", $textInput);
     });
 
