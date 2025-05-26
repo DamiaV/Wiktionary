@@ -3,6 +3,8 @@
  */
 
 // <nowiki>
+"use strict";
+
 /**
  * Wrapper object for a single definition and its examples.
  */
@@ -407,5 +409,16 @@ class ArticleSection {
     this.hidden = hidden;
   }
 }
+
+module.exports = {
+  Definition,
+  Example,
+  GrammaticalProperty,
+  GrammaticalClass,
+  GrammaticalItem,
+  Language,
+  Wiki,
+  ArticleSection,
+};
 
 // </nowiki>

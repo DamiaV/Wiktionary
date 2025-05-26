@@ -3,6 +3,8 @@
  */
 
 // <nowiki>
+"use strict";
+
 /**
  * Format a string by replacing placeholders (e.g., "{0}", "{1}") with provided values.
  * @param str {string} The string containing placeholders.
@@ -829,7 +831,7 @@ class MainGUI extends GUI {
 
     const toolFactory = new OO.ui.ToolFactory();
     const toolGroupFactory = new OO.ui.ToolGroupFactory();
-    const toolbar = new OO.ui.Toolbar(toolFactory, toolGroupFactory, {actions: true});
+    const toolbar = new OO.ui.Toolbar(toolFactory, toolGroupFactory, { actions: true });
 
     /**
      * Adds a custom button to the tool factory.
@@ -1420,5 +1422,15 @@ class MainGUI extends GUI {
     this.#sortKeyFld.setValue(key.trim());
   }
 }
+
+module.exports = {
+  interpolateString,
+  Tab,
+  DefinitionForm,
+  ExampleForm,
+  GUI,
+  StartGUI,
+  MainGUI,
+};
 
 // </nowiki>
