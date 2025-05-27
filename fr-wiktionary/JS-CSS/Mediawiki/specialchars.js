@@ -12,6 +12,8 @@
  * [[Catégorie:JavaScript du Wiktionnaire|specialchars.js]]
  ********************************************************************/
 // <nowiki>
+"use strict";
+
 const {
   isCodeMirrorEnabled,
   getCodeMirror,
@@ -58,10 +60,8 @@ const TAGS = {
   ">>": "\u00a0»",
 };
 
-// noinspection JSUnresolvedReference
-if (typeof window.specialCharsAdditional === "object") {
-  // noinspection JSUnresolvedReference
-  for (const [from, to] of window.specialCharsAdditional)
+if (typeof window.specialCharsCustom === "object") {
+  for (const [from, to] of Object.entries(window.specialCharsCustom))
     TAGS[from] = to;
 }
 
