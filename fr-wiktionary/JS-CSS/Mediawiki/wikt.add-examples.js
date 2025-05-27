@@ -190,7 +190,7 @@ function Form($lastExample, $button, language, definitionLevel) {
    * @param $textInput {jQuery} The text input to associate the toolbar to.
    * @return {OO.ui.Toolbar} A new toolbar.
    */
-  function createToolbar($textInput) {
+  const createToolbar = ($textInput) => {
     const toolFactory = new OO.ui.ToolFactory();
     const toolGroupFactory = new OO.ui.ToolGroupFactory();
     const toolbar = new OO.ui.Toolbar(toolFactory, toolGroupFactory, { actions: true });
@@ -226,11 +226,9 @@ function Form($lastExample, $button, language, definitionLevel) {
     }
 
     generateButton("bold", "bold", false, "Gras", () => {
-      // FIXME this is undefined
       this.applyTextEffect("bold", $textInput);
     });
     generateButton("italic", "italic", false, "Italique", () => {
-      // FIXME this is undefined
       this.applyTextEffect("italic", $textInput);
     });
 
