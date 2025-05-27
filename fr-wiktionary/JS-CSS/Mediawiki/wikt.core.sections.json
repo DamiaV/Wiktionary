@@ -1,0 +1,1351 @@
+{
+  "vocabulaire apparenté": {
+    "level": 4,
+    "name": "vocabulaire"
+  },
+  "voc": {
+    "level": 4,
+    "name": "vocabulaire"
+  },
+  "vocabulaire proche": {
+    "level": 4,
+    "name": "vocabulaire"
+  },
+  "vocabulaire": {
+    "level": 4,
+    "name": "vocabulaire"
+  },
+  "étym": {
+    "level": 3,
+    "name": "étymologie"
+  },
+  "etym": {
+    "level": 3,
+    "name": "étymologie"
+  },
+  "étymologie": {
+    "level": 3,
+    "name": "étymologie"
+  },
+  "vidéos": {
+    "level": 4,
+    "name": "vidéos"
+  },
+  "tropo": {
+    "level": 4,
+    "name": "troponymes"
+  },
+  "troponymes": {
+    "level": 4,
+    "name": "troponymes"
+  },
+  "écrit": {
+    "level": 3,
+    "name": "écriture"
+  },
+  "écriture": {
+    "level": 3,
+    "name": "écriture"
+  },
+  "dico-sino": {
+    "level": 3,
+    "name": "dico sinogrammes"
+  },
+  "sino-dico": {
+    "level": 3,
+    "name": "dico sinogrammes"
+  },
+  "dico sinogrammes": {
+    "level": 3,
+    "name": "dico sinogrammes"
+  },
+  "paro": {
+    "level": 4,
+    "name": "paronymes"
+  },
+  "paronymes": {
+    "level": 4,
+    "name": "paronymes"
+  },
+  "trad": {
+    "level": 4,
+    "name": "traductions"
+  },
+  "traductions": {
+    "level": 4,
+    "name": "traductions"
+  },
+  "hypervb": {
+    "level": 4,
+    "name": "hyper-verbes"
+  },
+  "hyper-verbes": {
+    "level": 4,
+    "name": "hyper-verbes"
+  },
+  "dérivés int": {
+    "level": 4,
+    "name": "dérivés autres langues"
+  },
+  "drv-int": {
+    "level": 4,
+    "name": "dérivés autres langues"
+  },
+  "dérivés autres langues": {
+    "level": 4,
+    "name": "dérivés autres langues"
+  },
+  "ant": {
+    "level": 4,
+    "name": "antonymes"
+  },
+  "anto": {
+    "level": 4,
+    "name": "antonymes"
+  },
+  "antonymes": {
+    "level": 4,
+    "name": "antonymes"
+  },
+  "augm": {
+    "level": 4,
+    "name": "augmentatifs"
+  },
+  "augmentatifs": {
+    "level": 4,
+    "name": "augmentatifs"
+  },
+  "homo": {
+    "level": 4,
+    "name": "homophones"
+  },
+  "homophones": {
+    "level": 4,
+    "name": "homophones"
+  },
+  "pron": {
+    "level": 3,
+    "name": "prononciation"
+  },
+  "prononciations": {
+    "level": 3,
+    "name": "prononciation"
+  },
+  "prononciation": {
+    "level": 3,
+    "name": "prononciation"
+  },
+  "hyper": {
+    "level": 4,
+    "name": "hyperonymes"
+  },
+  "hyperonymes": {
+    "level": 4,
+    "name": "hyperonymes"
+  },
+  "taux de reconnaissance": {
+    "level": 3,
+    "name": "taux de reconnaissance"
+  },
+  "décl": {
+    "level": 4,
+    "name": "déclinaison"
+  },
+  "déclinaison": {
+    "level": 4,
+    "name": "déclinaison"
+  },
+  "voir": {
+    "level": 3,
+    "name": "voir aussi"
+  },
+  "voir aussi": {
+    "level": 3,
+    "name": "voir aussi"
+  },
+  "variantes ortho": {
+    "level": 4,
+    "name": "variantes orthographiques"
+  },
+  "var-ortho": {
+    "level": 4,
+    "name": "variantes orthographiques"
+  },
+  "variantes orthographiques": {
+    "level": 4,
+    "name": "variantes orthographiques"
+  },
+  "compos": {
+    "level": 4,
+    "name": "composés"
+  },
+  "composés": {
+    "level": 4,
+    "name": "composés"
+  },
+  "var": {
+    "level": 4,
+    "name": "variantes"
+  },
+  "variantes": {
+    "level": 4,
+    "name": "variantes"
+  },
+  "phrases": {
+    "level": 4,
+    "name": "phrases"
+  },
+  "holo": {
+    "level": 4,
+    "name": "holonymes"
+  },
+  "holonymes": {
+    "level": 4,
+    "name": "holonymes"
+  },
+  "note": {
+    "level": 5,
+    "name": "notes"
+  },
+  "notes": {
+    "level": 5,
+    "name": "notes"
+  },
+  "gent": {
+    "level": 4,
+    "name": "gentilés"
+  },
+  "gentilés": {
+    "level": 4,
+    "name": "gentilés"
+  },
+  "translit": {
+    "level": 4,
+    "name": "translittérations"
+  },
+  "translittérations": {
+    "level": 4,
+    "name": "translittérations"
+  },
+  "bib": {
+    "level": 4,
+    "name": "bibliographie"
+  },
+  "bibliographie": {
+    "level": 4,
+    "name": "bibliographie"
+  },
+  "tran": {
+    "level": 4,
+    "name": "transcriptions"
+  },
+  "trans": {
+    "level": 4,
+    "name": "transcriptions"
+  },
+  "transcriptions": {
+    "level": 4,
+    "name": "transcriptions"
+  },
+  "src": {
+    "level": 4,
+    "name": "sources"
+  },
+  "sources": {
+    "level": 4,
+    "name": "sources"
+  },
+  "drv": {
+    "level": 4,
+    "name": "dérivés"
+  },
+  "dérivés": {
+    "level": 4,
+    "name": "dérivés"
+  },
+  "apr": {
+    "level": 4,
+    "name": "apparentés"
+  },
+  "app": {
+    "level": 4,
+    "name": "apparentés"
+  },
+  "apparentés étymologiques": {
+    "level": 4,
+    "name": "apparentés"
+  },
+  "apparentés": {
+    "level": 4,
+    "name": "apparentés"
+  },
+  "variantes dial": {
+    "level": 4,
+    "name": "variantes dialectales"
+  },
+  "var-dial": {
+    "level": 4,
+    "name": "variantes dialectales"
+  },
+  "dial": {
+    "level": 4,
+    "name": "variantes dialectales"
+  },
+  "variantes dialectes": {
+    "level": 4,
+    "name": "variantes dialectales"
+  },
+  "dialectes": {
+    "level": 4,
+    "name": "variantes dialectales"
+  },
+  "variantes dialectales": {
+    "level": 4,
+    "name": "variantes dialectales"
+  },
+  "conjug": {
+    "level": 4,
+    "name": "conjugaison"
+  },
+  "conjugaison": {
+    "level": 4,
+    "name": "conjugaison"
+  },
+  "ref": {
+    "level": 3,
+    "name": "références"
+  },
+  "référence": {
+    "level": 3,
+    "name": "références"
+  },
+  "réf": {
+    "level": 3,
+    "name": "références"
+  },
+  "références": {
+    "level": 3,
+    "name": "références"
+  },
+  "hist": {
+    "level": 4,
+    "name": "attestations"
+  },
+  "attest": {
+    "level": 4,
+    "name": "attestations"
+  },
+  "attestations": {
+    "level": 4,
+    "name": "attestations"
+  },
+  "syn": {
+    "level": 4,
+    "name": "synonymes"
+  },
+  "synonymes": {
+    "level": 4,
+    "name": "synonymes"
+  },
+  "abrév": {
+    "level": 4,
+    "name": "abréviations"
+  },
+  "abréviations": {
+    "level": 4,
+    "name": "abréviations"
+  },
+  "faux-amis": {
+    "level": 4,
+    "name": "faux-amis"
+  },
+  "modphon": {
+    "level": 4,
+    "name": "modification phonétique"
+  },
+  "mutation": {
+    "level": 4,
+    "name": "modification phonétique"
+  },
+  "modification phonétique": {
+    "level": 4,
+    "name": "modification phonétique"
+  },
+  "trad trier": {
+    "level": 5,
+    "name": "traductions à trier"
+  },
+  "trad-trier": {
+    "level": 5,
+    "name": "traductions à trier"
+  },
+  "traductions à trier": {
+    "level": 5,
+    "name": "traductions à trier"
+  },
+  "méro": {
+    "level": 4,
+    "name": "méronymes"
+  },
+  "méronymes": {
+    "level": 4,
+    "name": "méronymes"
+  },
+  "quasi-syn": {
+    "level": 4,
+    "name": "quasi-synonymes"
+  },
+  "q-syn": {
+    "level": 4,
+    "name": "quasi-synonymes"
+  },
+  "quasi-synonymes": {
+    "level": 4,
+    "name": "quasi-synonymes"
+  },
+  "noms-vern": {
+    "level": 4,
+    "name": "noms vernaculaires"
+  },
+  "noms vernaculaires": {
+    "level": 4,
+    "name": "noms vernaculaires"
+  },
+  "hypo": {
+    "level": 4,
+    "name": "hyponymes"
+  },
+  "hyponymes": {
+    "level": 4,
+    "name": "hyponymes"
+  },
+  "cit": {
+    "level": 4,
+    "name": "citations"
+  },
+  "citations": {
+    "level": 4,
+    "name": "citations"
+  },
+  "anciennes ortho": {
+    "level": 4,
+    "name": "anciennes orthographes"
+  },
+  "ortho-arch": {
+    "level": 4,
+    "name": "anciennes orthographes"
+  },
+  "anciennes orthographes": {
+    "level": 4,
+    "name": "anciennes orthographes"
+  },
+  "dimin": {
+    "level": 4,
+    "name": "diminutifs"
+  },
+  "diminutifs": {
+    "level": 4,
+    "name": "diminutifs"
+  },
+  "anagr": {
+    "level": 3,
+    "name": "anagrammes"
+  },
+  "anagramme": {
+    "level": 3,
+    "name": "anagrammes"
+  },
+  "anagrammes": {
+    "level": 3,
+    "name": "anagrammes"
+  },
+
+  "pronom": {
+    "level": 3,
+    "name": "pronom",
+    "requiresLanguageCode": true
+  },
+  "copule": {
+    "level": 3,
+    "name": "copule",
+    "requiresLanguageCode": true
+  },
+  "adj-int": {
+    "level": 3,
+    "name": "adjectif interrogatif",
+    "requiresLanguageCode": true
+  },
+  "adjectif int": {
+    "level": 3,
+    "name": "adjectif interrogatif",
+    "requiresLanguageCode": true
+  },
+  "adjectif interrogatif": {
+    "level": 3,
+    "name": "adjectif interrogatif",
+    "requiresLanguageCode": true
+  },
+  "circon": {
+    "level": 3,
+    "name": "circonfixe",
+    "requiresLanguageCode": true
+  },
+  "circonf": {
+    "level": 3,
+    "name": "circonfixe",
+    "requiresLanguageCode": true
+  },
+  "circonfixe": {
+    "level": 3,
+    "name": "circonfixe",
+    "requiresLanguageCode": true
+  },
+  "sinog": {
+    "level": 3,
+    "name": "sinogramme",
+    "requiresLanguageCode": true
+  },
+  "sino": {
+    "level": 3,
+    "name": "sinogramme",
+    "requiresLanguageCode": true
+  },
+  "sinogramme": {
+    "level": 3,
+    "name": "sinogramme",
+    "requiresLanguageCode": true
+  },
+  "inf": {
+    "level": 3,
+    "name": "infixe",
+    "requiresLanguageCode": true
+  },
+  "infixe": {
+    "level": 3,
+    "name": "infixe",
+    "requiresLanguageCode": true
+  },
+  "adjectif rel": {
+    "level": 3,
+    "name": "adjectif relatif",
+    "requiresLanguageCode": true
+  },
+  "adj-rel": {
+    "level": 3,
+    "name": "adjectif relatif",
+    "requiresLanguageCode": true
+  },
+  "adjectif relatif": {
+    "level": 3,
+    "name": "adjectif relatif",
+    "requiresLanguageCode": true
+  },
+  "quantif": {
+    "level": 3,
+    "name": "quantificateur",
+    "requiresLanguageCode": true
+  },
+  "quantificateur": {
+    "level": 3,
+    "name": "quantificateur",
+    "requiresLanguageCode": true
+  },
+  "verb-pr": {
+    "level": 3,
+    "name": "verbe pronominal",
+    "requiresLanguageCode": true
+  },
+  "verbe pr": {
+    "level": 3,
+    "name": "verbe pronominal",
+    "requiresLanguageCode": true
+  },
+  "verbe pronominal": {
+    "level": 3,
+    "name": "verbe pronominal",
+    "requiresLanguageCode": true
+  },
+  "adjectif qualificatif": {
+    "level": 3,
+    "name": "adjectif",
+    "requiresLanguageCode": true
+  },
+  "adj": {
+    "level": 3,
+    "name": "adjectif",
+    "requiresLanguageCode": true
+  },
+  "adjectif": {
+    "level": 3,
+    "name": "adjectif",
+    "requiresLanguageCode": true
+  },
+  "pronom réf": {
+    "level": 3,
+    "name": "pronom personnel",
+    "requiresLanguageCode": true
+  },
+  "pronom-per": {
+    "level": 3,
+    "name": "pronom personnel",
+    "requiresLanguageCode": true
+  },
+  "pronom réfléchi": {
+    "level": 3,
+    "name": "pronom personnel",
+    "requiresLanguageCode": true
+  },
+  "pronom-réfl": {
+    "level": 3,
+    "name": "pronom personnel",
+    "requiresLanguageCode": true
+  },
+  "pronom-pers": {
+    "level": 3,
+    "name": "pronom personnel",
+    "requiresLanguageCode": true
+  },
+  "pronom personnel": {
+    "level": 3,
+    "name": "pronom personnel",
+    "requiresLanguageCode": true
+  },
+  "postpos": {
+    "level": 3,
+    "name": "postposition",
+    "requiresLanguageCode": true
+  },
+  "post": {
+    "level": 3,
+    "name": "postposition",
+    "requiresLanguageCode": true
+  },
+  "postposition": {
+    "level": 3,
+    "name": "postposition",
+    "requiresLanguageCode": true
+  },
+  "rafsi": {
+    "level": 3,
+    "name": "rafsi",
+    "requiresLanguageCode": true
+  },
+  "dét pos": {
+    "level": 3,
+    "name": "déterminant possessif",
+    "requiresLanguageCode": true
+  },
+  "déterminant pos": {
+    "level": 3,
+    "name": "déterminant possessif",
+    "requiresLanguageCode": true
+  },
+  "déterminant possessif": {
+    "level": 3,
+    "name": "déterminant possessif",
+    "requiresLanguageCode": true
+  },
+  "art-part": {
+    "level": 3,
+    "name": "article partitif",
+    "requiresLanguageCode": true
+  },
+  "article par": {
+    "level": 3,
+    "name": "article partitif",
+    "requiresLanguageCode": true
+  },
+  "article partitif": {
+    "level": 3,
+    "name": "article partitif",
+    "requiresLanguageCode": true
+  },
+  "prénom": {
+    "level": 3,
+    "name": "prénom",
+    "requiresLanguageCode": true
+  },
+  "interf": {
+    "level": 3,
+    "name": "interfixe",
+    "requiresLanguageCode": true
+  },
+  "interfixe": {
+    "level": 3,
+    "name": "interfixe",
+    "requiresLanguageCode": true
+  },
+  "adv-rel": {
+    "level": 3,
+    "name": "adverbe relatif",
+    "requiresLanguageCode": true
+  },
+  "adverbe rel": {
+    "level": 3,
+    "name": "adverbe relatif",
+    "requiresLanguageCode": true
+  },
+  "adverbe relatif": {
+    "level": 3,
+    "name": "adverbe relatif",
+    "requiresLanguageCode": true
+  },
+  "pronom dém": {
+    "level": 3,
+    "name": "pronom démonstratif",
+    "requiresLanguageCode": true
+  },
+  "pronom-dém": {
+    "level": 3,
+    "name": "pronom démonstratif",
+    "requiresLanguageCode": true
+  },
+  "pronom démonstratif": {
+    "level": 3,
+    "name": "pronom démonstratif",
+    "requiresLanguageCode": true
+  },
+  "adj-dém": {
+    "level": 3,
+    "name": "adjectif démonstratif",
+    "requiresLanguageCode": true
+  },
+  "adjectif dém": {
+    "level": 3,
+    "name": "adjectif démonstratif",
+    "requiresLanguageCode": true
+  },
+  "adjectif démonstratif": {
+    "level": 3,
+    "name": "adjectif démonstratif",
+    "requiresLanguageCode": true
+  },
+  "verb": {
+    "level": 3,
+    "name": "verbe",
+    "requiresLanguageCode": true
+  },
+  "verbe": {
+    "level": 3,
+    "name": "verbe",
+    "requiresLanguageCode": true
+  },
+  "adjectif ind": {
+    "level": 3,
+    "name": "adjectif indéfini",
+    "requiresLanguageCode": true
+  },
+  "adj-indéf": {
+    "level": 3,
+    "name": "adjectif indéfini",
+    "requiresLanguageCode": true
+  },
+  "adjectif indéfini": {
+    "level": 3,
+    "name": "adjectif indéfini",
+    "requiresLanguageCode": true
+  },
+  "adv-ind": {
+    "level": 3,
+    "name": "adverbe indéfini",
+    "requiresLanguageCode": true
+  },
+  "adverbe ind": {
+    "level": 3,
+    "name": "adverbe indéfini",
+    "requiresLanguageCode": true
+  },
+  "adverbe indéfini": {
+    "level": 3,
+    "name": "adverbe indéfini",
+    "requiresLanguageCode": true
+  },
+  "adj-excl": {
+    "level": 3,
+    "name": "adjectif exclamatif",
+    "requiresLanguageCode": true
+  },
+  "adjectif exc": {
+    "level": 3,
+    "name": "adjectif exclamatif",
+    "requiresLanguageCode": true
+  },
+  "adjectif exclamatif": {
+    "level": 3,
+    "name": "adjectif exclamatif",
+    "requiresLanguageCode": true
+  },
+  "patronyme": {
+    "level": 3,
+    "name": "patronyme",
+    "requiresLanguageCode": true
+  },
+  "aff": {
+    "level": 3,
+    "name": "affixe",
+    "requiresLanguageCode": true
+  },
+  "affixe": {
+    "level": 3,
+    "name": "affixe",
+    "requiresLanguageCode": true
+  },
+  "loc-phr": {
+    "level": 3,
+    "name": "locution-phrase",
+    "requiresLanguageCode": true
+  },
+  "phrase": {
+    "level": 3,
+    "name": "locution-phrase",
+    "requiresLanguageCode": true
+  },
+  "locution phrase": {
+    "level": 3,
+    "name": "locution-phrase",
+    "requiresLanguageCode": true
+  },
+  "locution-phrase": {
+    "level": 3,
+    "name": "locution-phrase",
+    "requiresLanguageCode": true
+  },
+  "conj-coord": {
+    "level": 3,
+    "name": "conjonction de coordination",
+    "requiresLanguageCode": true
+  },
+  "conjonction coo": {
+    "level": 3,
+    "name": "conjonction de coordination",
+    "requiresLanguageCode": true
+  },
+  "conjonction de coordination": {
+    "level": 3,
+    "name": "conjonction de coordination",
+    "requiresLanguageCode": true
+  },
+  "dét": {
+    "level": 3,
+    "name": "déterminant",
+    "requiresLanguageCode": true
+  },
+  "déterminant": {
+    "level": 3,
+    "name": "déterminant",
+    "requiresLanguageCode": true
+  },
+  "part-num": {
+    "level": 3,
+    "name": "particule numérale",
+    "requiresLanguageCode": true
+  },
+  "particule num": {
+    "level": 3,
+    "name": "particule numérale",
+    "requiresLanguageCode": true
+  },
+  "particule numérale": {
+    "level": 3,
+    "name": "particule numérale",
+    "requiresLanguageCode": true
+  },
+  "pré-verbe": {
+    "level": 3,
+    "name": "pré-verbe",
+    "requiresLanguageCode": true
+  },
+  "pronom-adjectif": {
+    "level": 3,
+    "name": "pronom-adjectif",
+    "requiresLanguageCode": true
+  },
+  "symb": {
+    "level": 3,
+    "name": "symbole",
+    "requiresLanguageCode": true
+  },
+  "symbole": {
+    "level": 3,
+    "name": "symbole",
+    "requiresLanguageCode": true
+  },
+  "adverbe int": {
+    "level": 3,
+    "name": "adverbe interrogatif",
+    "requiresLanguageCode": true
+  },
+  "adv-int": {
+    "level": 3,
+    "name": "adverbe interrogatif",
+    "requiresLanguageCode": true
+  },
+  "adverbe interrogatif": {
+    "level": 3,
+    "name": "adverbe interrogatif",
+    "requiresLanguageCode": true
+  },
+  "préf": {
+    "level": 3,
+    "name": "préfixe",
+    "requiresLanguageCode": true
+  },
+  "préfixe": {
+    "level": 3,
+    "name": "préfixe",
+    "requiresLanguageCode": true
+  },
+  "adjectif pos": {
+    "level": 3,
+    "name": "adjectif possessif",
+    "requiresLanguageCode": true
+  },
+  "adj-pos": {
+    "level": 3,
+    "name": "adjectif possessif",
+    "requiresLanguageCode": true
+  },
+  "adjectif possessif": {
+    "level": 3,
+    "name": "adjectif possessif",
+    "requiresLanguageCode": true
+  },
+  "onoma": {
+    "level": 3,
+    "name": "onomatopée",
+    "requiresLanguageCode": true
+  },
+  "onom": {
+    "level": 3,
+    "name": "onomatopée",
+    "requiresLanguageCode": true
+  },
+  "onomatopée": {
+    "level": 3,
+    "name": "onomatopée",
+    "requiresLanguageCode": true
+  },
+  "art-indéf": {
+    "level": 3,
+    "name": "article indéfini",
+    "requiresLanguageCode": true
+  },
+  "article ind": {
+    "level": 3,
+    "name": "article indéfini",
+    "requiresLanguageCode": true
+  },
+  "article indéfini": {
+    "level": 3,
+    "name": "article indéfini",
+    "requiresLanguageCode": true
+  },
+  "nom-sciences": {
+    "level": 3,
+    "name": "nom scientifique",
+    "requiresLanguageCode": true
+  },
+  "nom scient": {
+    "level": 3,
+    "name": "nom scientifique",
+    "requiresLanguageCode": true
+  },
+  "nom science": {
+    "level": 3,
+    "name": "nom scientifique",
+    "requiresLanguageCode": true
+  },
+  "nom scientifique": {
+    "level": 3,
+    "name": "nom scientifique",
+    "requiresLanguageCode": true
+  },
+  "interj": {
+    "level": 3,
+    "name": "interjection",
+    "requiresLanguageCode": true
+  },
+  "interjection": {
+    "level": 3,
+    "name": "interjection",
+    "requiresLanguageCode": true
+  },
+  "variante typo": {
+    "level": 3,
+    "name": "variante typographique",
+    "requiresLanguageCode": true
+  },
+  "variante par contrainte typographique": {
+    "level": 3,
+    "name": "variante typographique",
+    "requiresLanguageCode": true
+  },
+  "var-typo": {
+    "level": 3,
+    "name": "variante typographique",
+    "requiresLanguageCode": true
+  },
+  "variante typographique": {
+    "level": 3,
+    "name": "variante typographique",
+    "requiresLanguageCode": true
+  },
+  "article déf": {
+    "level": 3,
+    "name": "article défini",
+    "requiresLanguageCode": true
+  },
+  "art-déf": {
+    "level": 3,
+    "name": "article défini",
+    "requiresLanguageCode": true
+  },
+  "article défini": {
+    "level": 3,
+    "name": "article défini",
+    "requiresLanguageCode": true
+  },
+  "pronom-rel": {
+    "level": 3,
+    "name": "pronom relatif",
+    "requiresLanguageCode": true
+  },
+  "pronom rel": {
+    "level": 3,
+    "name": "pronom relatif",
+    "requiresLanguageCode": true
+  },
+  "pronom relatif": {
+    "level": 3,
+    "name": "pronom relatif",
+    "requiresLanguageCode": true
+  },
+  "pronom int": {
+    "level": 3,
+    "name": "pronom interrogatif",
+    "requiresLanguageCode": true
+  },
+  "pronom-int": {
+    "level": 3,
+    "name": "pronom interrogatif",
+    "requiresLanguageCode": true
+  },
+  "pronom interrogatif": {
+    "level": 3,
+    "name": "pronom interrogatif",
+    "requiresLanguageCode": true
+  },
+  "encl": {
+    "level": 3,
+    "name": "enclitique",
+    "requiresLanguageCode": true
+  },
+  "enclitique": {
+    "level": 3,
+    "name": "enclitique",
+    "requiresLanguageCode": true
+  },
+  "dét-dem": {
+    "level": 3,
+    "name": "déterminant démonstratif",
+    "requiresLanguageCode": true
+  },
+  "dét-dém": {
+    "level": 3,
+    "name": "déterminant démonstratif",
+    "requiresLanguageCode": true
+  },
+  "déterminant dém": {
+    "level": 3,
+    "name": "déterminant démonstratif",
+    "requiresLanguageCode": true
+  },
+  "déterminant démonstratif": {
+    "level": 3,
+    "name": "déterminant démonstratif",
+    "requiresLanguageCode": true
+  },
+  "part": {
+    "level": 3,
+    "name": "particule",
+    "requiresLanguageCode": true
+  },
+  "particule": {
+    "level": 3,
+    "name": "particule",
+    "requiresLanguageCode": true
+  },
+  "gismu": {
+    "level": 3,
+    "name": "gismu",
+    "requiresLanguageCode": true
+  },
+  "racine": {
+    "level": 3,
+    "name": "racine",
+    "requiresLanguageCode": true
+  },
+  "conj": {
+    "level": 3,
+    "name": "conjonction",
+    "requiresLanguageCode": true
+  },
+  "conjonction": {
+    "level": 3,
+    "name": "conjonction",
+    "requiresLanguageCode": true
+  },
+  "nom-fam": {
+    "level": 3,
+    "name": "nom de famille",
+    "requiresLanguageCode": true
+  },
+  "nom de famille": {
+    "level": 3,
+    "name": "nom de famille",
+    "requiresLanguageCode": true
+  },
+  "pré-nom": {
+    "level": 3,
+    "name": "pré-nom",
+    "requiresLanguageCode": true
+  },
+  "procl": {
+    "level": 3,
+    "name": "proclitique",
+    "requiresLanguageCode": true
+  },
+  "proclitique": {
+    "level": 3,
+    "name": "proclitique",
+    "requiresLanguageCode": true
+  },
+  "adv-pron": {
+    "level": 3,
+    "name": "adverbe pronominal",
+    "requiresLanguageCode": true
+  },
+  "adverbe pro": {
+    "level": 3,
+    "name": "adverbe pronominal",
+    "requiresLanguageCode": true
+  },
+  "adverbe pronominal": {
+    "level": 3,
+    "name": "adverbe pronominal",
+    "requiresLanguageCode": true
+  },
+  "prép": {
+    "level": 3,
+    "name": "préposition",
+    "requiresLanguageCode": true
+  },
+  "préposition": {
+    "level": 3,
+    "name": "préposition",
+    "requiresLanguageCode": true
+  },
+  "adjectif num": {
+    "level": 3,
+    "name": "adjectif numéral",
+    "requiresLanguageCode": true
+  },
+  "adj-num": {
+    "level": 3,
+    "name": "adjectif numéral",
+    "requiresLanguageCode": true
+  },
+  "adjectif numéral": {
+    "level": 3,
+    "name": "adjectif numéral",
+    "requiresLanguageCode": true
+  },
+  "idéophone": {
+    "level": 3,
+    "name": "idéophone",
+    "requiresLanguageCode": true
+  },
+  "num": {
+    "level": 3,
+    "name": "numéral",
+    "requiresLanguageCode": true
+  },
+  "numér": {
+    "level": 3,
+    "name": "numéral",
+    "requiresLanguageCode": true
+  },
+  "numéral": {
+    "level": 3,
+    "name": "numéral",
+    "requiresLanguageCode": true
+  },
+  "class": {
+    "level": 3,
+    "name": "classificateur",
+    "requiresLanguageCode": true
+  },
+  "classif": {
+    "level": 3,
+    "name": "classificateur",
+    "requiresLanguageCode": true
+  },
+  "classificateur": {
+    "level": 3,
+    "name": "classificateur",
+    "requiresLanguageCode": true
+  },
+  "lettre": {
+    "level": 3,
+    "name": "lettre",
+    "requiresLanguageCode": true
+  },
+  "pronom ind": {
+    "level": 3,
+    "name": "pronom indéfini",
+    "requiresLanguageCode": true
+  },
+  "pronom-indéf": {
+    "level": 3,
+    "name": "pronom indéfini",
+    "requiresLanguageCode": true
+  },
+  "pronom indéfini": {
+    "level": 3,
+    "name": "pronom indéfini",
+    "requiresLanguageCode": true
+  },
+  "prov": {
+    "level": 3,
+    "name": "proverbe",
+    "requiresLanguageCode": true
+  },
+  "proverbe": {
+    "level": 3,
+    "name": "proverbe",
+    "requiresLanguageCode": true
+  },
+  "loc": {
+    "level": 3,
+    "name": "locution",
+    "requiresLanguageCode": true
+  },
+  "locution": {
+    "level": 3,
+    "name": "locution",
+    "requiresLanguageCode": true
+  },
+  "suf": {
+    "level": 3,
+    "name": "suffixe",
+    "requiresLanguageCode": true
+  },
+  "suff": {
+    "level": 3,
+    "name": "suffixe",
+    "requiresLanguageCode": true
+  },
+  "suffixe": {
+    "level": 3,
+    "name": "suffixe",
+    "requiresLanguageCode": true
+  },
+  "rad": {
+    "level": 3,
+    "name": "radical",
+    "requiresLanguageCode": true
+  },
+  "radical": {
+    "level": 3,
+    "name": "radical",
+    "requiresLanguageCode": true
+  },
+  "pronom pos": {
+    "level": 3,
+    "name": "pronom possessif",
+    "requiresLanguageCode": true
+  },
+  "pronom-pos": {
+    "level": 3,
+    "name": "pronom possessif",
+    "requiresLanguageCode": true
+  },
+  "pronom possessif": {
+    "level": 3,
+    "name": "pronom possessif",
+    "requiresLanguageCode": true
+  },
+  "nom-pr": {
+    "level": 3,
+    "name": "nom propre",
+    "requiresLanguageCode": true
+  },
+  "nom propre": {
+    "level": 3,
+    "name": "nom propre",
+    "requiresLanguageCode": true
+  },
+  "nom commun": {
+    "level": 3,
+    "name": "nom",
+    "requiresLanguageCode": true
+  },
+  "substantif": {
+    "level": 3,
+    "name": "nom",
+    "requiresLanguageCode": true
+  },
+  "nom": {
+    "level": 3,
+    "name": "nom",
+    "requiresLanguageCode": true
+  },
+  "adv": {
+    "level": 3,
+    "name": "adverbe",
+    "requiresLanguageCode": true
+  },
+  "adverbe": {
+    "level": 3,
+    "name": "adverbe",
+    "requiresLanguageCode": true
+  },
+  "art": {
+    "level": 3,
+    "name": "article",
+    "requiresLanguageCode": true
+  },
+  "article": {
+    "level": 3,
+    "name": "article",
+    "requiresLanguageCode": true
+  },
+
+  "étymologies": {
+    "level": 3,
+    "name": "étymologie"
+  },
+
+  "quantifieur": {
+    "level": 3,
+    "name": "quantificateur",
+    "requiresLanguageCode": true
+  },
+
+  "synonyme": {
+    "level": 4,
+    "name": "synonymes"
+  },
+  "antonyme": {
+    "level": 4,
+    "name": "antonymes"
+  },
+  "abréviation": {
+    "level": 4,
+    "name": "abréviations"
+  },
+  "variante": {
+    "level": 4,
+    "name": "variantes"
+  }
+}
