@@ -82,7 +82,7 @@ function getLanguage(code, allowAliases = false, allowSpecial = false) {
  * @return {string|null} The language name for the given code, or `null` if it is invalid.
  */
 function getLanguageName(code, allowAliases = false, allowSpecial = false) {
-  const languageData = this.getLanguage(code, allowAliases, allowSpecial);
+  const languageData = getLanguage(code, allowAliases, allowSpecial);
   return languageData ? languageData.name : null;
 }
 
