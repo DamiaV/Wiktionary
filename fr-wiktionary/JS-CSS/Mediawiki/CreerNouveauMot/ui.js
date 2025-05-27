@@ -6,6 +6,7 @@
 "use strict";
 
 const { Example, Definition } = require("./data-model.js");
+const { getSelectedText, replaceSelectedText } = require("../wikt.core.edit.js");
 
 /**
  * Format a string by replacing placeholders (e.g., "{0}", "{1}") with provided values.
@@ -41,7 +42,7 @@ function getPageLink(pageName) {
  * @param $textInput {jQuery} The text input to format the text of.
  */
 function applyTextEffect(effect, $textInput) {
-  const selectedText = wikt.edit.getSelectedText($textInput);
+  const selectedText = getSelectedText($textInput);
   let replText;
   switch (effect) {
     case "bold":
@@ -53,7 +54,7 @@ function applyTextEffect(effect, $textInput) {
     default:
       throw new Error("Invalid effect: " + effect);
   }
-  wikt.edit.replaceSelectedText(replText, $textInput);
+  replaceSelectedText(replText, $textInput);
 }
 
 /**
@@ -670,10 +671,7 @@ class MainGUI extends GUI {
                     help: getPageLink("Aide:Étymologies"),
                   }),
                 ],
-                help: new OO.ui.HtmlSnippet(wikt.page.renderWikicode(
-                    "Laisser le champ de texte vide ajoutera le modèle {{M|ébauche-étym}}.",
-                    true
-                )),
+                help: new OO.ui.HtmlSnippet("Laisser le champ de texte vide ajoutera le modèle <code>{{ébauche-étym}}</code>."),
                 helpInline: true,
               }),
               new OO.ui.FieldsetLayout({
@@ -710,12 +708,12 @@ class MainGUI extends GUI {
                     help: getPageLink("Aide:Références#Le_format_développé"),
                   }),
                 ],
-                help: new OO.ui.HtmlSnippet(wikt.page.renderWikicode(
-                    "La section «&nbsp;Sources&nbsp;» contenant le modèle {{M|Références}} " +
-                    "est insérée automatiquement si le modèle {{M|R}}, {{M|RÉF}} ou {{M|réf}} ou la balise <code>&lt;ref></code> " +
-                    "sont présentes dans les autres champs.",
-                    true
-                )),
+                help: new OO.ui.HtmlSnippet(
+                    "La section «&nbsp;Sources&nbsp;» contenant le modèle <code>{{Références}}</code> " +
+                    "est insérée automatiquement si le modèle <code>{{R}}</code>, <code>{{RÉF}}</code> ou " +
+                    "<code>{{réf}}</code> ou la balise <code>&lt;ref></code> " +
+                    "sont présentes dans les autres champs."
+                ),
                 helpInline: true,
               }),
               new OO.ui.FieldsetLayout({
