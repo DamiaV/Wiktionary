@@ -1,7 +1,7 @@
 // [[Catégorie:JavaScript du Wiktionnaire|edit-voir-template.js]]
 "use strict";
 
-(() => {
+$(() => {
   const API = new mw.Api({ userAgent: "Gadget-wikt.edit-voir-template" });
   const INPAGE_REGEX = /{{voir\|([^}]+)}}/;
   const OUTPAGE_REGEX = /{{voir\/([^}]+)}}/;
@@ -51,9 +51,10 @@
   }
 
   /**
+   * @param title {string}
    * @param inPageMatch {RegExpExecArray}
    */
-  function merge(inPageMatch) {
+  function merge(title, inPageMatch) {
     console.debug("Début");
     var toSee = [];
     var seen = [];
@@ -128,7 +129,7 @@
     if (!match) return;
     const portletLink = mw.util.addPortletLink("p-cactions", "#", "Fusionner les modèles voir");
     $(portletLink).click(() => {
-      merge(match);
+      merge(title, match);
     });
   }
 
@@ -150,4 +151,4 @@
 
     templates.append($editLink);
   }
-})();
+});
