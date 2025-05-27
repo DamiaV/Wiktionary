@@ -16,16 +16,17 @@ function getCurrentPageNamespaceId() {
 
 /**
  * Tells whether the current page’s namespace is one of the given ones.
- * @param namespacesNames {Array<string>} The list of namespace names.
+ * @param namespacesNames {string[]} The list of namespace names.
  * @return {boolean} True if the current page’s namespace is in the list, false otherwise.
  */
 function hasNamespaceIn(namespacesNames) {
+  /** @type {number[]} */
   const authorizedNamespaces = [];
   for (const namespaceName of namespacesNames) {
     const ns = namespaceName.toLowerCase().replace(/\s/g, "_");
     authorizedNamespaces.push(mw.config.get("wgNamespaceIds")[ns]);
   }
-  return authorizedNamespaces.includes(wikt.page.getCurrentPageNamespaceId())
+  return authorizedNamespaces.includes(getCurrentPageNamespaceId())
 }
 
 /**
