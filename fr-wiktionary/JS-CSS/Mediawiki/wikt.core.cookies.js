@@ -1,3 +1,6 @@
+// <nowiki>
+"use strict";
+
 /**
  * Set a cookie’s value.
  * @param name {string} The cookie’s name.
@@ -35,9 +38,10 @@ function deleteCookie(name) {
   setCookie(name, "", -1);
 }
 
+// </nowiki>
 /**
  * This module defines functions to manage cookies.
- * [[Catégorie:JavaScript du Wiktionnaire|core.cookies.js]]
+ * [[Catégorie:JavaScript du Wiktionnaire|!wikt.core.cookies.js]]
  */
 module.exports = {
   setCookie,

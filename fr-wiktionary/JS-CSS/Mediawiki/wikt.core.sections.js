@@ -1,4 +1,4 @@
-// [[Catégorie:JavaScript du Wiktionnaire|core.sections.json]]
+// <nowiki>
 "use strict";
 
 /**
@@ -19,6 +19,12 @@ function getSectionData(code) {
   return sectionsData[code] || null;
 }
 
+// </nowiki>
+/**
+ * This module declares functions to get data about article sections
+ * defined in [[MediaWiki:Gadget-wikt.core.sections.json]].
+ * [[Catégorie:JavaScript du Wiktionnaire|!wikt.core.sections.json]]
+ */
 module.exports = {
   getSectionData,
 };

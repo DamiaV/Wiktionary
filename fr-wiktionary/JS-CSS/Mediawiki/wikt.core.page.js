@@ -1,3 +1,6 @@
+// <nowiki>
+"use strict";
+
 /**
  * Returns the title the current page.
  * @return {string} The title without the namespace.
@@ -167,9 +170,10 @@ function getSortingKey(word) {
   return key;
 }
 
+// </nowiki>
 /**
  * This module defines function to get information about the current page.
- * [[Catégorie:JavaScript du Wiktionnaire|core.pages.js]]
+ * [[Catégorie:JavaScript du Wiktionnaire|!wikt.core.pages.js]]
  */
 module.exports = {
   getCurrentPageTitle,

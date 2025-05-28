@@ -1,3 +1,6 @@
+// <nowiki>
+"use strict";
+
 /**
  * Returns the edit box as a jQuery object.
  * @return {{wikiEditor?: function}|null} The jQuery element corresponding
@@ -267,9 +270,10 @@ function getEditSummaryField() {
   return $("#wpSummary");
 }
 
+// </nowiki>
 /**
  * This module defines function to interact with the edit form’s fields.
- * [[Catégorie:JavaScript du Wiktionnaire|core.edit.js]]
+ * [[Catégorie:JavaScript du Wiktionnaire|!wikt.core.edit.js]]
  */
 module.exports = {
   getEditBox,

@@ -1,3 +1,6 @@
+// <nowiki>
+"use strict";
+
 /**
  * Converts the first character in the given string to lower case.
  * @param string {string} The string to convert.
@@ -107,9 +110,10 @@ function romanNumeralToInt(romanNumeral) {
   return n;
 }
 
+// </nowiki>
 /**
  * This module defines function to transform text.
- * [[Catégorie:JavaScript du Wiktionnaire|core.text.js]]
+ * [[Catégorie:JavaScript du Wiktionnaire|!wikt.core.text.js]]
  */
 module.exports = {
   toLowerCaseFirst,

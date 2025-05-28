@@ -1,3 +1,4 @@
+// <nowiki>
 "use strict";
 
 /**
@@ -86,8 +87,11 @@ function getLanguageName(code, allowAliases = false, allowSpecial = false) {
   return languageData ? languageData.name : null;
 }
 
+// </nowiki>
 /**
- * This module declares functions to get data about languages defined in the Wiktionnaire.
+ * This module declares functions to get data about languages
+ * defined in [[MediaWiki:Gadget-wikt.core.languages.json]].
+ * [[Catégorie:JavaScript du Wiktionnaire|!wikt.core.languages.js]]
  */
 module.exports = {
   getLanguages,

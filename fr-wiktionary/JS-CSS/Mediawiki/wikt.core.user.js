@@ -1,3 +1,6 @@
+// <nowiki>
+"use strict";
+
 /**
  * Tests whether the current user belongs to the given group.
  * @param groupname {string} The group’s name.
@@ -8,9 +11,10 @@ function isInUsergroup(groupname) {
   return mw.config.get("wgUserGroups").includes(groupname);
 }
 
+// </nowiki>
 /**
  * This module defines functions to get information about the current user.
- * [[Catégorie:JavaScript du Wiktionnaire|core.user.js]]
+ * [[Catégorie:JavaScript du Wiktionnaire|!wikt.core.user.js]]
  */
 module.exports = {
   isInUsergroup,
