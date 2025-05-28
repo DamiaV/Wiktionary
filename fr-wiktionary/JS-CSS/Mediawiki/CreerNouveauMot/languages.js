@@ -184,7 +184,8 @@ function loadLanguages(gadget) {
    * English language definition.
    */
 
-  const getEnglishModel = (_, grammarClass, properties, pron) => {
+  const getEnglishModel = (word, grammarClass, properties, pron) => {
+    const grammarClass_ = grammarClass.toLowerCase();
     const number = properties[0];
     if (number === NUMBERS.SAME_SINGULAR_PLURAL.label)
       return `{{en-inv|${pron}|sp=oui}}`;
@@ -192,6 +193,15 @@ function loadLanguages(gadget) {
       return `{{en-inv|${pron}|inv_titre=Singulier}}`;
     if (number === NUMBERS.PLURAL_ONLY.label)
       return `{{en-inv|${pron}|inv_titre=Pluriel}}`;
+    if (grammarClass_ === GRAMMATICAL_CLASSES.ADJECTIVE.label)
+      return `{{en-adj|pron=${pron}}}`;
+    if (grammarClass_ === GRAMMATICAL_CLASSES.VERB.label)
+      return VERBS.REGULAR_VERB.label
+          ? `{{en-conj-rég|inf.pron=${pron}}}`
+          : `{{en-conj-irrég|inf=${word}|inf.pron=${pron}|<!-- Compléter -->}}`;
+    if ([GRAMMATICAL_CLASSES.NOUN.label, GRAMMATICAL_CLASSES.LAST_NAME.label, GRAMMATICAL_CLASSES.FIRST_NAME.label].includes(grammarClass_) &&
+        number === NUMBERS.DIFF_SINGULAR_PLURAL.label)
+      return `{{en-nom-rég|${pron}}}`;
     return `{{en-inv|${pron}|inv_titre=${grammarClass}}}`;
   };
 
@@ -210,9 +220,9 @@ function loadLanguages(gadget) {
       [
         new GrammaticalItem(GRAMMATICAL_CLASSES.ADJECTIVE, [], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.ADVERB, [], getEnglishModel),
-        new GrammaticalItem(GRAMMATICAL_CLASSES.NOUN, [[NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.SINGULAR_ONLY, NUMBERS.PLURAL_ONLY, NUMBERS.INVARIABLE]], (word, grammarClass, properties, pron) => properties[0] !== NUMBERS.DIFF_SINGULAR_PLURAL.label ? getEnglishModel(null, grammarClass, properties, pron) : `{{en-nom-rég|${pron}}}`),
+        new GrammaticalItem(GRAMMATICAL_CLASSES.NOUN, [[NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.SINGULAR_ONLY, NUMBERS.PLURAL_ONLY, NUMBERS.INVARIABLE]], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.PROPER_NOUN, [[NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.INVARIABLE]], getEnglishModel),
-        new GrammaticalItem(GRAMMATICAL_CLASSES.VERB, [[VERBS.REGULAR_VERB, VERBS.IRREGULAR_VERB]], (word, grammarClass, properties, pron) => properties[0] === VERBS.REGULAR_VERB.label ? `{{en-conj-rég|inf.pron=${pron}}}` : `{{en-conj-irrég|inf=${word}|inf.pron=${pron}|<!-- Compléter -->}}`),
+        new GrammaticalItem(GRAMMATICAL_CLASSES.VERB, [[VERBS.REGULAR_VERB, VERBS.IRREGULAR_VERB]], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.PHRASE),
 
         new GrammaticalItem(GRAMMATICAL_CLASSES.INTERROGATIVE_ADJECTIVE, [], getEnglishModel),
@@ -226,11 +236,11 @@ function loadLanguages(gadget) {
         new GrammaticalItem(GRAMMATICAL_CLASSES.COORDINATION_CONJUNCTION, [], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.INTERJECTION, [], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.ONOMATOPOEIA, [], getEnglishModel),
-        new GrammaticalItem(GRAMMATICAL_CLASSES.LAST_NAME, [[NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.INVARIABLE]], (word, grammarClass, properties, pron) => properties[0] !== NUMBERS.DIFF_SINGULAR_PLURAL.label ? getEnglishModel(grammarClass, properties, pron) : `{{en-nom-rég|${pron}}}`),
+        new GrammaticalItem(GRAMMATICAL_CLASSES.LAST_NAME, [[NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.INVARIABLE]], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.PARTICLE, [], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.POSTPOSITION, [], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.PREFIX),
-        new GrammaticalItem(GRAMMATICAL_CLASSES.FIRST_NAME, [[NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.INVARIABLE]], (word, grammarClass, properties, pron) => properties[0] !== NUMBERS.DIFF_SINGULAR_PLURAL.label ? getEnglishModel(grammarClass, properties, pron) : `{{en-nom-rég|${pron}}}`),
+        new GrammaticalItem(GRAMMATICAL_CLASSES.FIRST_NAME, [[NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.INVARIABLE]], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.PREPOSITION, [], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.PRONOUN, [], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.DEMONSTRATIVE_PRONOUN, [], getEnglishModel),
@@ -331,11 +341,12 @@ function loadLanguages(gadget) {
       return `{{es-inv|${pron}|inv_titre=Pluriel${mf}}}`;
 
     if (!mf) {
-      if (grammarClass === GRAMMATICAL_CLASSES.ADJECTIVE.label && word.endsWith("o"))
+      const grammarClass_ = grammarClass.toLowerCase();
+      if (grammarClass_ === GRAMMATICAL_CLASSES.ADJECTIVE.label && word.endsWith("o"))
         return `{{es-accord-oa|${word.slice(0, -1)}|${pron ? pron.slice(0, -1) : ""}}`;
-      if (grammarClass === GRAMMATICAL_CLASSES.ADJECTIVE.label && !/[aáeéiíoóuúüyý]$/.test(word))
+      if (grammarClass_ === GRAMMATICAL_CLASSES.ADJECTIVE.label && !/[aáeéiíoóuúüyý]$/.test(word))
         return `{{es-accord-mixte-cons|${word}|${pron}}`;
-      if ([GRAMMATICAL_CLASSES.ADJECTIVE.label, GRAMMATICAL_CLASSES.NOUN.label].includes(grammarClass) &&
+      if ([GRAMMATICAL_CLASSES.ADJECTIVE.label, GRAMMATICAL_CLASSES.NOUN.label].includes(grammarClass_) &&
           !/[aáeéiíoóuúüyý]$/.test(word))
         return `{{es-accord-ón|${word.slice(0, -2)}|${pron ? pron.slice(0, -2) : ""}}`;
     }
