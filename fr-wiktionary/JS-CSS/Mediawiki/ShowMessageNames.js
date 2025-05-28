@@ -5,7 +5,7 @@
 // <nowiki>
 console.log("Chargement de Gadget-ShowMessageNames.js…");
 mw.util.addPortletLink(
-    "p-tb",
+    "p-cactions",
     location.href.replace(location.hash, "") + (location.search ? "&" : "?") + "uselang=qqx",
     "Noms des messages",
     "t-messagenames",

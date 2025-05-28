@@ -5,7 +5,7 @@
 // <nowiki>
 console.log("Chargement de Gadget-DebugMode.js…");
 mw.util.addPortletLink(
-    "p-tb",
+    "p-cactions",
     location.href.replace(location.hash, "") + (location.search ? "&" : "?") + "debug=true",
     "Mode debug",
     "t-debugmode",

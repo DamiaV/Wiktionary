@@ -5,7 +5,7 @@
 // <nowiki>
 console.log("Chargement de Gadget-SousPages.js…");
 mw.util.addPortletLink(
-    "p-tb",
+    "p-cactions",
     `/wiki/Special:PrefixIndex/${mw.config.get("wgPageName")}/`,
     "Sous-pages",
     "t-subpages",
