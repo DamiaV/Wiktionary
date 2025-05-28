@@ -135,7 +135,7 @@ $(() => {
 
   const templates = $(".modele-voir");
   if (templates.length) {
-    const title = mw.config.get("wgTitle");
+    const title = mw.config.get("wgPageName");
 
     getPageWikicode(title, (data) => {
       addMergeButton(title, data)
@@ -143,7 +143,6 @@ $(() => {
 
     const $editLink = $('<a style="float:right" href="#">(modifier)</a>');
     $editLink.click(() => {
-      const title = mw.config.get("wgTitle");
       getPageWikicode(title, (data) => {
         searchVoir(title, data);
       });
