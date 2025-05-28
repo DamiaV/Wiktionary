@@ -58,7 +58,7 @@ const languagesNames = getLanguagesNames(true);
 const langCodes = $('div.mw-heading2 > h2 > span.sectionlangue')
     .map((_, e) => e.id).get();
 
-const pageName = mw.config.get("wgTitle");
+const pageName = mw.config.get("wgPageName");
 api.get({
   action: 'query',
   prop: 'categories',
