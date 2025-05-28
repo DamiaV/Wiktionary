@@ -1,17 +1,23 @@
-/*
-[[Catégorie:JavaScript du Wiktionnaire|FlecheHaut.js]]
- Auteur : Marc Mongenet */
-
-jQuery(function PageHomeArrows() {
+// [[Catégorie:JavaScript du Wiktionnaire|FlecheHaut.js]]
+// <nowiki>
+(() => {
   for (var level = 2; level <= 6; ++level) {
-    var h = document.getElementById('bodyContent').getElementsByTagName("h" + level);
-    for (var i = 0; i < h.length; ++i) {
-      var arrow = document.createElement("a");
+    const headers = document.getElementById("bodyContent")
+        .getElementsByTagName("h" + level);
+    for (const header of headers) {
+      const arrow = document.createElement("a");
       arrow.className = "noprint";
+      arrow.style.userSelect = "none";
       arrow.appendChild(document.createTextNode(" ↑"));
-      arrow.href = "javascript:window.scrollTo(0,0); void 0;";
+      arrow.href = "#";
       arrow.title = "Haut de page";
-      h[i].appendChild(arrow);
+      arrow.onclick = (e) => {
+        e.preventDefault();
+        window.scrollTo(0, 0);
+        return false;
+      }
+      header.appendChild(arrow);
     }
   }
-});
+})();
+// </nowiki>
