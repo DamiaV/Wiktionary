@@ -6,14 +6,31 @@ console.log("Chargement de Gadget-wikt.add-nearest-words.js…");
 
 const api = new mw.Api({ userAgent: "Gadget-wikt.add-nearest-words.js" });
 
+/**
+ * @param title {string}
+ * @returns {jQuery}
+ */
 function createCurrentNode(title) {
-  return $(`<bdi><i><b>${title}</b></i></bdi>`);
+  return $(`<bdi style="font-style: italic; font-weight: bold;">${title}</bdi>`);
 }
 
-function createWikiLink(title, languageCode) {
-  return $(`<a rel="mw:WikiLink" href="/wiki/${title}#${languageCode}" title="${title}"><i>${title}</i></a>`);
+/**
+ * @param title {string}
+ * @param text {string}
+ * @param languageCode {string}
+ * @returns {jQuery}
+ */
+function createWikiLink(title, text, languageCode) {
+  return $(`<a rel="mw:WikiLink" href="/wiki/${title}#${languageCode}" title="${title}"><i>${text}</i></a>`);
 }
 
+/**
+ * @param category {string}
+ * @param limit {number}
+ * @param word {string}
+ * @param key {string}
+ * @returns {Promise}
+ */
 function fetchNearWords(category, limit, word, key) {
   const commonParams = {
     action: 'query',
@@ -38,6 +55,13 @@ function fetchNearWords(category, limit, word, key) {
   }).catch(error => console.log("[Gadget-wikt.add-nearest-word.js]", "[list=categorymembers]", error));
 }
 
+/**
+ * @param languageCode {string}
+ * @param category {string}
+ * @param word {string}
+ * @param key {string}
+ * @param limit {number}
+ */
 function generateNavigationWordList(languageCode, category, word, key, limit = 3) {
   limit++;
   fetchNearWords(category, limit, word, key).then((titles) => {
@@ -46,8 +70,9 @@ function generateNavigationWordList(languageCode, category, word, key, limit = 3
     if (titles.length > 1) {
       $header.after($navDiv);
       titles.forEach((title, index) => {
-        if (title !== word) $navDiv.append(createWikiLink(title, languageCode));
-        else $navDiv.append(createCurrentNode(title));
+        const text = title.includes("/") ? title.substring(title.lastIndexOf("/") + 1) : title;
+        if (title !== word) $navDiv.append(createWikiLink(title, text, languageCode));
+        else $navDiv.append(createCurrentNode(text));
         if (index < titles.length - 1) $navDiv.append(' · ');
       });
     }
