@@ -1,0 +1,339 @@
+{
+  "aïnou (Japon)": {
+    "hasTransliteration": true
+  },
+  "allemand": {
+    "properties": "m f n p",
+    "expectsUpperCase": true
+  },
+  "alémanique alsacien": {
+    "expectsUpperCase": true
+  },
+  "arabe": {
+    "properties": "m f d p",
+    "hasTransliteration": true
+  },
+  "arabe égyptien": {
+    "properties": "m f d p",
+    "hasTransliteration": true
+  },
+  "arabe marocain": {
+    "properties": "m f d p",
+    "hasTransliteration": true
+  },
+  "aragonais": {
+    "properties": "m f p"
+  },
+  "arménien": {
+    "hasTransliteration": true
+  },
+  "arménien ancien": {
+    "hasTransliteration": true
+  },
+  "asturien": {
+    "properties": "m f n p"
+  },
+  "bachkir": {
+    "hasTransliteration": true
+  },
+  "bengali": {
+    "hasTransliteration": true
+  },
+  "biélorusse": {
+    "properties": "m f n p",
+    "hasTransliteration": true
+  },
+  "birman": {
+    "hasTransliteration": true
+  },
+  "breton": {
+    "properties": "m f p"
+  },
+  "bulgare": {
+    "properties": "m f n p",
+    "hasTransliteration": true
+  },
+  "calabrais centro-méridional": {
+    "properties": "m f mf p"
+  },
+  "catalan": {
+    "properties": "m f p"
+  },
+  "chinois": {
+    "hasTransliteration": true,
+    "hasTraditional": true
+  },
+  "cilentain méridional": {
+    "properties": "m f mf p"
+  },
+  "copte": {
+    "properties": "m f",
+    "hasTransliteration": true
+  },
+  "coréen": {
+    "hasTransliteration": true,
+    "hasTraditional": true
+  },
+  "corse": {
+    "properties": "m f p"
+  },
+  "danois": {
+    "properties": "c n p"
+  },
+  "dzongkha": {
+    "hasTransliteration": true
+  },
+  "erza": {
+    "hasTransliteration": true
+  },
+  "espagnol": {
+    "properties": "m f p"
+  },
+  "féroïen": {
+    "properties": "m f n"
+  },
+  "francique mosellan": {
+    "expectsUpperCase": true
+  },
+  "francique rhénan": {
+    "expectsUpperCase": true
+  },
+  "francique ripuaire": {
+    "expectsUpperCase": true
+  },
+  "frioulan": {
+    "properties": "m f p"
+  },
+  "frison occidental": {
+    "properties": "c n"
+  },
+  "gallo-italique de Sicile": {
+    "properties": "m f p mf"
+  },
+  "géorgien": {
+    "hasTransliteration": true
+  },
+  "gaélique écossais": {
+    "properties": "m f d p"
+  },
+  "gaélique irlandais": {
+    "properties": "m f p"
+  },
+  "galicien": {
+    "properties": "m f p"
+  },
+  "gallois": {
+    "properties": "m f p"
+  },
+  "gotique": {
+    "properties": "m f n p",
+    "hasTransliteration": true
+  },
+  "gujarati": {
+    "properties": "m f n",
+    "hasTransliteration": true
+  },
+  "grec": {
+    "properties": "trans m f n p"
+  },
+  "grec ancien": {
+    "properties": "trans m f n d p"
+  },
+  "grec byzantin": {
+    "hasTransliteration": true
+  },
+  "hébreu": {
+    "properties": "m f",
+    "hasTransliteration": true
+  },
+  "hébreu ancien": {
+    "properties": "m f",
+    "hasTransliteration": true
+  },
+  "hindi": {
+    "properties": "m f",
+    "hasTransliteration": true
+  },
+  "inuktitut": {
+    "hasTransliteration": true
+  },
+  "islandais": {
+    "properties": "m f n p"
+  },
+  "italien": {
+    "properties": "m f mf p"
+  },
+  "japonais": {
+    "hasTransliteration": true
+  },
+  "kazakh": {
+    "hasTransliteration": true
+  },
+  "khmer": {
+    "hasTransliteration": true
+  },
+  "kurde": {
+    "properties": "m f"
+  },
+  "laotien": {
+    "hasTransliteration": true
+  },
+  "latin": {
+    "properties": "m f n p"
+  },
+  "letton": {
+    "properties": "m f p"
+  },
+  "ligure": {
+    "properties": "m f p"
+  },
+  "lituanien": {
+    "properties": "m f p"
+  },
+  "lorrain": {
+    "properties": "m f"
+  },
+  "luxembourgeois": {
+    "properties": "m f n p",
+    "expectsUpperCase": true
+  },
+  "macédonien": {
+    "properties": "m f n p",
+    "hasTransliteration": true
+  },
+  "malayalam": {
+    "hasTransliteration": true
+  },
+  "mandarin": {
+    "hasTransliteration": true,
+    "hasTraditional": true
+  },
+  "marathe": {
+    "hasTransliteration": true
+  },
+  "minnan": {
+    "hasTraditional": true
+  },
+  "mirandais": {
+    "properties": "m f p"
+  },
+  "mongol": {
+    "hasTransliteration": true
+  },
+  "néerlandais": {
+    "properties": "m f n p"
+  },
+  "népalais": {
+    "hasTransliteration": true
+  },
+  "norvégien (bokmål)": {
+    "properties": "m f n p mfp"
+  },
+  "norvégien (nynorsk)": {
+    "properties": "m f n p mfp"
+  },
+  "ossète": {
+    "hasTransliteration": true
+  },
+  "persan": {
+    "hasTransliteration": true
+  },
+  "piémontais": {
+    "properties": "m f p"
+  },
+  "plodarisch": {
+    "properties": "m f n p"
+  },
+  "polonais": {
+    "properties": "m f n p"
+  },
+  "portugais": {
+    "properties": "m f p"
+  },
+  "romanche": {
+    "properties": "m f p"
+  },
+  "roumain": {
+    "properties": "m f n p"
+  },
+  "russe": {
+    "properties": "m f n",
+    "hasTransliteration": true
+  },
+  "salentin": {
+    "properties": "m f mf p"
+  },
+  "sanskrit": {
+    "properties": "m f n d p",
+    "hasTransliteration": true
+  },
+  "sarde": {
+    "properties": "m f p"
+  },
+  "serbe": {
+    "properties": "m f n p",
+    "hasTransliteration": true
+  },
+  "sherpa": {
+    "hasTransliteration": true
+  },
+  "sicilien": {
+    "properties": "m f mf p"
+  },
+  "slovaque": {
+    "properties": "m f n"
+  },
+  "slovène": {
+    "properties": "m f n"
+  },
+  "suédois": {
+    "properties": "c n"
+  },
+  "tamoul": {
+    "hasTransliteration": true
+  },
+  "tadjik": {
+    "hasTransliteration": true
+  },
+  "tatare": {
+    "hasTransliteration": true
+  },
+  "tchèque": {
+    "properties": "m f n"
+  },
+  "tchouvache": {
+    "hasTransliteration": true
+  },
+  "télougou": {
+    "hasTransliteration": true
+  },
+  "thaï": {
+    "hasTransliteration": true
+  },
+  "tibétain": {
+    "hasTransliteration": true
+  },
+  "ukrainien": {
+    "properties": "m f n p",
+    "hasTransliteration": true
+  },
+  "vénitien": {
+    "properties": "m f p"
+  },
+  "vieil irlandais": {
+    "properties": "m f n d p"
+  },
+  "vieux francique": {
+    "expectsUpperCase": true
+  },
+  "vieux norrois": {
+    "properties": "m f n p"
+  },
+  "vieux slave": {
+    "properties": "m f n d p"
+  },
+  "yiddish": {
+    "properties": "m f n p",
+    "hasTransliteration": true
+  }
+}
