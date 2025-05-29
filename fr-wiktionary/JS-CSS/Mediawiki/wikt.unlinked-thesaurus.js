@@ -1,23 +1,11 @@
 // [[Catégorie:JavaScript du Wiktionnaire|unlinked-thesaurus.js]]
 "use strict";
 
-const { getLanguagesNames } = require("./wikt.core.languages.js");
+const { getLanguageToCodeMap } = require("./wikt.core.languages.js");
 
 console.log("Chargement de Gadget-wikt.unlinked-thesaurus.js…");
 
 const api = new mw.Api({ userAgent: "Gadget-wikt.unlinked-thesaurus.js" });
-
-/**
- * @param codeTolanguageMap {Map<string, string>}
- * @returns {{[name: string]: string}}
- */
-function buildLanguageToCodeMap(codeTolanguageMap) {
-  const languageToCodeMap = {};
-  for (const [code, name] of codeTolanguageMap) {
-    languageToCodeMap[name] = code;
-  }
-  return languageToCodeMap;
-}
 
 /**
  * @param data1 {{query: {pages: {[key: string]: {title: string}}}}}
@@ -44,7 +32,7 @@ Promise.all([
     blnamespace: '106'
   })
 ]).then(([data1, data2]) => {
-  const languageToCodeMap = buildLanguageToCodeMap(getLanguagesNames());
+  const languageToCodeMap = getLanguageToCodeMap();
   const missingTitles = getMissingTitles(data1, data2);
 
   if (missingTitles.length === 0) return;
@@ -61,8 +49,8 @@ Promise.all([
   $('#bodyContent').prepend(thesaurusList);
   const generateLink = title => $(`<a rel="mw:WikiLink" href="/wiki/${title}"><i>${title}</i></a>`)[0].outerHTML;
   for (const [language, missingLinks] of Object.entries(languages)) {
-    const code = `{{voir thésaurus|${languageToCodeMap[language]}|${missingLinks.map(title => title.split(':')[1].split('/')[0]).join("|")}}}`;
-    thesaurusList.append(`<li>Cette page est présente dans ${missingLinks.length} thésaurus en ${language} qui ${missingLinks.length > 1 ? "ne sont pas présents" : "n’est pas présent"} sur cette page : ${missingLinks.map(generateLink).join(", ")}. Utilisez <code>${code}</code> (<a href="#" class="copy-link" data-code="${code}">copier</a>).</li>`);
+    const code = `{{voir thésaurus|${languageToCodeMap.get(language)}|${missingLinks.map(title => title.split(':')[1].split('/')[0]).join("|")}}}`;
+    thesaurusList.append(`<li>Cette page est présente dans ${missingLinks.length} thésaurus en ${language} qui ${missingLinks.length > 1 ? "ne sont pas présents" : "n’est pas présent"} sur cette page : ${missingLinks.map(generateLink).join(", ")}. Utilisez <code>${code}</code> (<a href="#" class="copy-link" data-code="${code}">copier</a> ; <a href="#" class="copy-link-with-header" data-code="${code}">copier avec l’entête de section</a>).</li>`);
   }
 
   $('.copy-link').on('click', function (event) {
@@ -72,5 +60,15 @@ Promise.all([
     $link.text("copié !");
     navigator.clipboard.writeText(code);
     setTimeout(() => $link.text("copier"), 1000);
+  });
+
+  $('.copy-link-with-header').on('click', function (event) {
+    event.preventDefault();
+    const $link = $(this);
+    const code = $link.data('code');
+    $link.text("copié !");
+    console.log("copié !");
+    navigator.clipboard.writeText('==== {{S|vocabulaire}} ====\n' + code);
+    setTimeout(() => $link.text("copier avec l’entête de section"), 1000);
   });
 });

@@ -37,6 +37,22 @@ for (const [code, targetCode] of Object.entries(languagesData.redirects)) {
 }
 
 /**
+ * Checks if aliases are allowed.
+ * @returns {boolean} True if aliases are allowed or if data is not an alias.
+ */
+function checkAllowAliases(allowAliases, data) {
+  return allowAliases || !data.aliasOf;
+}
+
+/**
+ * Checks if group or special languages are allowed.
+ * @returns {boolean} True if languages marked as `isGroup` or `isSpecial` are allowed.
+ */
+function checkAllowSpecial(allowSpecial, data) {
+  return allowSpecial || !data.isGroup && !data.isSpecial;
+}
+
+/**
  * Return a map of all defined languages’ data.
  * @param allowAliases {boolean} If true, code aliases will also be returned.
  * @param allowSpecial {boolean} If true, languages marked as `isGroup` or `isSpecial` will also be returned.
@@ -45,8 +61,21 @@ for (const [code, targetCode] of Object.entries(languagesData.redirects)) {
 function getLanguages(allowAliases = false, allowSpecial = false) {
   const copy = new Map();
   for (const [code, data] of langDataMap)
-    if ((allowAliases || !data.aliasOf) && (allowSpecial || !data.isGroup && !data.isSpecial))
+    if (checkAllowAliases(allowAliases, data) && checkAllowSpecial(allowSpecial, data))
       copy.set(code, data);
+  return copy;
+}
+
+/**
+ * Return a map of language to code data.
+ * @param allowSpecial {boolean} If true, languages marked as `isGroup` or `isSpecial` will also be returned.
+ * @returns {Map<string, string>} The pairs <language, code>.
+ */
+function getLanguageToCodeMap(allowSpecial = false) {
+  const copy = new Map();
+  for (const [code, data] of Object.entries(languagesData.codes))
+    if (checkAllowSpecial(allowSpecial, data))
+      copy.set(data.name, code);
   return copy;
 }
 
@@ -72,7 +101,7 @@ function getLanguagesNames(allowAliases = false, allowSpecial = false) {
  */
 function getLanguage(code, allowAliases = false, allowSpecial = false) {
   const data = langDataMap.get(code);
-  return data && (allowAliases || !data.aliasOf) && (allowSpecial || !data.isGroup && !data.isSpecial) ? data : null;
+  return data && checkAllowAliases(allowAliases, data) && checkAllowSpecial(allowSpecial, data) ? data : null;
 }
 
 /**
@@ -95,6 +124,7 @@ function getLanguageName(code, allowAliases = false, allowSpecial = false) {
  */
 module.exports = {
   getLanguages,
+  getLanguageToCodeMap,
   getLanguagesNames,
   getLanguage,
   getLanguageName,
