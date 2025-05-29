@@ -133,9 +133,8 @@ window.editor = (function () {
       );
       history[0].wikitext = wikitext;
       update_disabled();
-    }).fail(function (error) {
+    }).fail(function () {
       log.find('b').addClass('error').text('Enregistrement impossible');
-      return;
     });
   }
 

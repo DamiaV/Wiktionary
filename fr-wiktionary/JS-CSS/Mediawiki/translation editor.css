@@ -123,7 +123,7 @@
 }
 
 @media screen and (min-width: 851px) {
-  /* pour les écrans où width>850, la barre de recherche est fixe */
+  /* pour les écrans où width > 850, la barre de recherche est fixe */
   .skin-timeless .ed-box {
     top: calc(3.125em + 6px) !important; /* Pour apparaitre en bas de la barre de recherche */
   }
@@ -136,5 +136,3 @@
 .skin-timeless .ed-gender {
   margin-top: 0.5em;
 }
-
-/************/
