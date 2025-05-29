@@ -12,7 +12,7 @@ local p = {}
 --- @return string The formatted title.
 local function getTitleText(langName, langCode)
   local langNameUc = m_bases.ucfirst(langName)
-  if m_langues.has_portail(langCode) then
+  if m_langues.hasPortal(langCode) then
     return mw.ustring.format("[[Portail:%s|%s]]", langNameUc, langNameUc)
   end
   -- Do not link to [[conventions internationales]] as no specific meaning has been established as of 2015-06-22.
@@ -38,10 +38,12 @@ local function getRareLettersCategories(langCode, pageTitle)
   for i = 1, mw.ustring.len(pageTitle) do
     local char = mw.ustring.sub(pageTitle, i, i)
     if mw.ustring.find(char, langData[langCode]["rare"]) then
+      -- Special case for "İ" whose lower-case is "i", so we keep it upper-cased
+      local c = char == "İ" and char or mw.ustring.lower(char)
       table.insert(categories, mw.ustring.format(
           "[[Catégorie:%s en %s]]",
-          mw.ustring.lower(char),
-          m_langues.get_nom(langCode)
+          c,
+          m_langues.getName(langCode)
       ))
     end
   end
@@ -69,7 +71,7 @@ end
 --- @param noCat boolean If true, categories will not be appended to the returned title.
 --- @return string The formatted title.
 local function buildTitle(langCode, pageTitle, noCat)
-  local langName = m_langues.get_nom(langCode)
+  local langName = m_langues.getName(langCode)
 
   local categories = {}
   if not noCat then
@@ -94,7 +96,7 @@ function p.sectionLangue(frame)
   -- Récupération des variables nécessaires à la création du titre
   local args, success = m_params.process(frame:getParent().args, {
     [1] = { required = true, checker = function(lang)
-      return m_langues.get_nom(lang) ~= nil
+      return m_langues.getName(lang) ~= nil
     end },
     ["nocat"] = { type = m_params.BOOLEAN, default = false },
   }, true)
