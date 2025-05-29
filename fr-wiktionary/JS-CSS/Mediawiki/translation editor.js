@@ -501,6 +501,7 @@ console.log("Chargement de Gadget-translation editor.js…");
           // On crée le tableau des noms de langues pour l'autocomplétion
           var tab_lang_names = [];
           for (const [code, data] of Object.entries(codes)) {
+            if (data.isGroup || data.isSpecial) continue; // Skip special codes
             tab_langues[code] = data.name;
             tab_lang_names.push(data.name);
           }
