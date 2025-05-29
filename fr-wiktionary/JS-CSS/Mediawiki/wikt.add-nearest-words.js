@@ -83,13 +83,13 @@ const languagesNames = getLanguagesNames(true);
 const langCodes = $('div.mw-heading2 > h2 > span.sectionlangue')
     .map((_, e) => e.id).get();
 
-const pageName = mw.config.get("wgPageName");
+const pageName = mw.config.get("wgPageName").replaceAll("_", " ");
 api.get({
-  action: 'query',
-  prop: 'categories',
+  action: "query",
+  prop: "categories",
   titles: pageName,
-  clprop: 'sortkey',
-  cllimit: 'max'
+  clprop: "sortkey",
+  cllimit: "max"
 }).then(data => {
   const categories = data.query.pages[mw.config.get("wgArticleId")].categories;
   langCodes.forEach((languageCode) => {
