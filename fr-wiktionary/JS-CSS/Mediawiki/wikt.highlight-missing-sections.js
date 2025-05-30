@@ -65,10 +65,11 @@ function getPageContent(pageTitle, callback) {
 function highlightLink($link, langCode, pageCode) {
   if (!pageCode.includes(`{{langue|${langCode}}}`)) {
     $link.addClass(["wikt-missing-entry", `wikt-missing-entry-${langCode}`]);
-    $link.attr("title", $link.attr("title") + ` (section « ${langCode} » manquante)`);
+    $link.attr("title", `${$link.attr("title")} (section « ${langCode} » manquante)`);
   }
 }
 
+/** @type {{$link: any, pageTitle: string, langCode: string}[]} */
 const links = [];
 const serverName = mw.config.get("wgServerName");
 const namespaces = mw.config.get("wgNamespaceIds");
