@@ -36,29 +36,33 @@ const highlightMissingSections = {
 
   /**
    * Callback function called when the GET query succeeds in init().
-   * @param languages {Array<string>} The array containing language codes.
+   * @param languages {string[]} The array containing language codes.
    * @private
    */
   _onResponse: function (languages) {
     const links = [];
+    const serverName = mw.config.get("wgServerName");
+    const namespaces = mw.config.get("wgNamespaceIds");
 
     $(".mw-parser-output a:not(.new)").each((_, link) => {
       const $link = $(link);
-      const match = /^https:\/\/fr\.wiktionary\.org\/wiki\/(.+?)#(.+)$/
-          .exec($link.prop("href"));
+      const href = $link.prop("href");
+      if (!href) return;
+      const url = new URL(href);
+      const hash = decodeURIComponent(url.hash.substring(1)); // Strip #
 
-      if (match) {
-        const pageTitle = decodeURIComponent(match[1]);
+      if (url.hostname === serverName &&
+          url.pathname.startsWith("/wiki/") &&
+          languages.includes(hash)) {
+        const pageTitle = decodeURIComponent(url.pathname.substring(6));
         const namespace = pageTitle.substring(0, pageTitle.indexOf(":")).toLowerCase();
-        const anchor = match[2];
-        const namespaces = mw.config.get("wgNamespaceIds");
 
-        // Vérifie que le lien pointe vers l’espace principal, pas vers un autre wiki et que l’ancre est un code de langue
-        if (languages.includes(anchor) && !namespaces[namespace] && !languages.includes(namespace)) {
+        // Check that the link points to the main namespace, and that the namespace is not a language code.
+        if (!namespaces[namespace] && !languages.includes(namespace)) {
           links.push({
             $link: $link,
             pageTitle: pageTitle,
-            langCode: anchor,
+            langCode: hash,
           });
         }
       }
@@ -96,7 +100,8 @@ const highlightMissingSections = {
       for (pageID in queryResult.query.pages)
         if (queryResult.query.pages.hasOwnProperty(pageID))
           break;
-      const content = queryResult.query.pages[pageID]["revisions"][0]["slots"]["main"]["*"];
+      const revisions = queryResult.query.pages[pageID]["revisions"];
+      const content = revisions[0]["slots"]["main"]["*"];
       const match = /^#REDIRECT\[\[([^\[]+)]]$/.exec(content.trim());
       if (match) this._getPageContent(match[1], callback);
       else callback(content);
