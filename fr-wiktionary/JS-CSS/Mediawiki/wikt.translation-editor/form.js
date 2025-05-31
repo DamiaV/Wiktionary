@@ -50,6 +50,12 @@ const GRAMMATICAL_PROPERTIES = {
   na: "neutre animé",
   ni: "neutre inanimé",
 };
+/**
+ * Name of the "conv" language (International Conventions).
+ * Cached to avoid multiple queries.
+ * @type {string}
+ */
+const CONV_LANG_NAME = getLanguageName("conv");
 
 class EditForm {
   /**
@@ -343,13 +349,19 @@ class EditForm {
                     newLine.append(element);
                   });
                   newLine.append(wrapper);
-                  // TODO insert newLine
+                  this._insertLineInHTML(newLine, translation.langCode);
                   this._pushTranslationToDialog(translation);
                 })
-                .catch(() => alert("Une erreur est survenue, veuillez réessayer."));
+                .catch((e) => {
+                  console.error(e);
+                  alert("Une erreur est survenue, veuillez réessayer.");
+                });
           }
         })
-        .catch(() => alert("Une erreur est survenue, veuillez réessayer."));
+        .catch((e) => {
+          console.error(e);
+          alert("Une erreur est survenue, veuillez réessayer.");
+        });
   }
 
   /**
@@ -370,9 +382,45 @@ class EditForm {
    */
   _findTranslationLineInHTML(langCode) {
     for (const childNode of this._translationsList.children)
-      if (childNode.tagName === "LI" && childNode.querySelector(`.trad-${langCode}`))
+      if (childNode.tagName === "LI" && childNode.querySelector(`span[data-translation-lang='${langCode}']`))
         return childNode;
     return null;
+  }
+
+  /**
+   * Insert the given translation line into the managed list.
+   * @param line {HTMLLIElement} The line to insert.
+   * @param langCode {string} The language code for the line, used to find where to insert it.
+   * @private
+   */
+  _insertLineInHTML(line, langCode) {
+    const langName = getLanguageName(langCode);
+    for (const childNode of this._translationsList.children) {
+      if (childNode.tagName === "LI") {
+        const lineLangCode = childNode.querySelector("span:first-child")
+            .getAttribute("data-translation-lang");
+        const lineLangName = getLanguageName(lineLangCode);
+        if (this._compareLanguages(langName, lineLangName) < 0) {
+          this._translationsList.insertBefore(line, childNode);
+          return;
+        }
+      }
+    }
+    this._translationsList.append(line);
+  }
+
+  /**
+   * Compare two language names according to Wiktionnaire’s rules.
+   * @param langName1 {string} A language name.
+   * @param langName2 {string} Another language name.
+   * @returns {number} -1 if the first name is before the second one, 0 if they are equal, 1 otherwise.
+   * @private
+   */
+  _compareLanguages(langName1, langName2) {
+    if (langName1 === langName2) return 0;
+    if (langName1 === CONV_LANG_NAME) return -1;
+    if (langName2 === CONV_LANG_NAME) return 1;
+    return langName1.localeCompare(langName2, "fr");
   }
 
   /**
