@@ -1,0 +1,75 @@
+/* [[Catégorie:CSS du Wiktionnaire|translation-editor.css]] */
+
+.trans-form-help {
+  cursor: pointer;
+}
+
+.trans-new-item,
+.trans-new-line {
+  border: 2px dashed orange;
+}
+
+/* Dialog box */
+
+#trans-dialog {
+  width: 18em;
+  padding: 0.5em;
+  border-radius: 3px;
+  box-shadow: gray 0 0 0.5em;
+  background-color: lightgray;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+#td-close-button {
+  font-weight: bold;
+  float: right;
+}
+
+#td-buttons {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+#td-message-box {
+  padding: 0.5em;
+  border: 2px solid black;
+  border-radius: 3px;
+}
+
+#td-message {
+  font-size: 1.1em;
+}
+
+#td-hide-message-button {
+  font-size: 1.5em;
+  font-weight: bold;
+  float: right;
+  margin-left: 1em;
+}
+
+#td-hide-message-permanently-button {
+  font-size: 0.8em;
+}
+
+#td-close-button:hover,
+#td-hide-message-button:hover,
+#td-hide-message-permanently-button:hover {
+  text-decoration: none;
+}
+
+/* Timeless */
+
+.skin-timeless #trans-dialog {
+  /* To avoid being hidden by the search bar */
+  z-index: 101;
+}
+
+/* On screens wider than 850px, the search bar is fixed to the top */
+@media screen and (min-width: 851px) {
+  .skin-timeless #trans-dialog {
+    /* To appear below the search bar */
+    top: calc(3.125em + 6px) !important;
+  }
+}

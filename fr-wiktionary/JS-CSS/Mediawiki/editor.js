@@ -35,7 +35,7 @@ window.editor = (function () {
     if (elem.hasClass('ed-highlight')) {
       setTimeout(function () {
         elem.removeClass('ed-highlight');
-        if (!silentFailStorage.getItem('ed-noinfo')) {
+        if (!window.localStorage.getItem('ed-noinfo')) {
           elem.find('.ed-info').show();
         }
       }, 500);
@@ -214,7 +214,7 @@ window.editor = (function () {
       infobulle.fadeOut();
     });
     infobulle.find('.ed-info-leave').click(function () {
-      silentFailStorage.setItem('ed-noinfo', 'true');
+      window.localStorage.setItem('ed-noinfo', 'true');
       infobulle.fadeOut();
     });
 

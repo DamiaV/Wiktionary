@@ -1,8 +1,8 @@
 {
-  "aïnou (Japon)": {
+  "ain": {
     "hasTransliteration": true
   },
-  "allemand": {
+  "de": {
     "properties": [
       "m",
       "f",
@@ -11,10 +11,10 @@
     ],
     "expectsUpperCase": true
   },
-  "alémanique alsacien": {
+  "gsw-fr": {
     "expectsUpperCase": true
   },
-  "arabe": {
+  "ar": {
     "properties": [
       "m",
       "f",
@@ -23,7 +23,7 @@
     ],
     "hasTransliteration": true
   },
-  "arabe égyptien": {
+  "arz": {
     "properties": [
       "m",
       "f",
@@ -32,7 +32,7 @@
     ],
     "hasTransliteration": true
   },
-  "arabe marocain": {
+  "ary": {
     "properties": [
       "m",
       "f",
@@ -41,20 +41,20 @@
     ],
     "hasTransliteration": true
   },
-  "aragonais": {
+  "an": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "arménien": {
+  "hy": {
     "hasTransliteration": true
   },
-  "arménien ancien": {
+  "xcl": {
     "hasTransliteration": true
   },
-  "asturien": {
+  "ast": {
     "properties": [
       "m",
       "f",
@@ -62,13 +62,13 @@
       "p"
     ]
   },
-  "bachkir": {
+  "ba": {
     "hasTransliteration": true
   },
-  "bengali": {
+  "bn": {
     "hasTransliteration": true
   },
-  "biélorusse": {
+  "be": {
     "properties": [
       "m",
       "f",
@@ -77,17 +77,17 @@
     ],
     "hasTransliteration": true
   },
-  "birman": {
+  "my": {
     "hasTransliteration": true
   },
-  "breton": {
+  "br": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "bulgare": {
+  "bg": {
     "properties": [
       "m",
       "f",
@@ -104,14 +104,14 @@
       "p"
     ]
   },
-  "catalan": {
+  "ca": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "chinois": {
+  "zh": {
     "hasTransliteration": true,
     "hasTraditional": true
   },
@@ -123,45 +123,45 @@
       "p"
     ]
   },
-  "copte": {
+  "cop": {
     "properties": [
       "m",
       "f"
     ],
     "hasTransliteration": true
   },
-  "coréen": {
+  "ko": {
     "hasTransliteration": true,
     "hasTraditional": true
   },
-  "corse": {
+  "co": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "danois": {
+  "da": {
     "properties": [
       "c",
       "n",
       "p"
     ]
   },
-  "dzongkha": {
+  "dz": {
     "hasTransliteration": true
   },
-  "erza": {
+  "myv": {
     "hasTransliteration": true
   },
-  "espagnol": {
+  "es": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "féroïen": {
+  "fo": {
     "properties": [
       "m",
       "f",
@@ -174,17 +174,17 @@
   "francique rhénan": {
     "expectsUpperCase": true
   },
-  "francique ripuaire": {
+  "ksh": {
     "expectsUpperCase": true
   },
-  "frioulan": {
+  "fur": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "frison occidental": {
+  "fry": {
     "properties": [
       "c",
       "n"
@@ -198,10 +198,10 @@
       "mf"
     ]
   },
-  "géorgien": {
+  "ka": {
     "hasTransliteration": true
   },
-  "gaélique écossais": {
+  "gd": {
     "properties": [
       "m",
       "f",
@@ -209,28 +209,28 @@
       "p"
     ]
   },
-  "gaélique irlandais": {
+  "ga": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "galicien": {
+  "gl": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "gallois": {
+  "cy": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "gotique": {
+  "got": {
     "properties": [
       "m",
       "f",
@@ -239,7 +239,7 @@
     ],
     "hasTransliteration": true
   },
-  "gujarati": {
+  "gu": {
     "properties": [
       "m",
       "f",
@@ -247,7 +247,7 @@
     ],
     "hasTransliteration": true
   },
-  "grec": {
+  "el": {
     "properties": [
       "trans",
       "m",
@@ -256,7 +256,7 @@
       "p"
     ]
   },
-  "grec ancien": {
+  "grc": {
     "properties": [
       "trans",
       "m",
@@ -266,34 +266,34 @@
       "p"
     ]
   },
-  "grec byzantin": {
+  "gkm": {
     "hasTransliteration": true
   },
-  "hébreu": {
+  "he": {
     "properties": [
       "m",
       "f"
     ],
     "hasTransliteration": true
   },
-  "hébreu ancien": {
+  "hbo": {
     "properties": [
       "m",
       "f"
     ],
     "hasTransliteration": true
   },
-  "hindi": {
+  "hi": {
     "properties": [
       "m",
       "f"
     ],
     "hasTransliteration": true
   },
-  "inuktitut": {
+  "iu": {
     "hasTransliteration": true
   },
-  "islandais": {
+  "is": {
     "properties": [
       "m",
       "f",
@@ -301,7 +301,7 @@
       "p"
     ]
   },
-  "italien": {
+  "it": {
     "properties": [
       "m",
       "f",
@@ -309,25 +309,25 @@
       "p"
     ]
   },
-  "japonais": {
+  "ja": {
     "hasTransliteration": true
   },
-  "kazakh": {
+  "kk": {
     "hasTransliteration": true
   },
-  "khmer": {
+  "km": {
     "hasTransliteration": true
   },
-  "kurde": {
+  "ku": {
     "properties": [
       "m",
       "f"
     ]
   },
-  "laotien": {
+  "lo": {
     "hasTransliteration": true
   },
-  "latin": {
+  "la": {
     "properties": [
       "m",
       "f",
@@ -335,21 +335,21 @@
       "p"
     ]
   },
-  "letton": {
+  "lv": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "ligure": {
+  "lij": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "lituanien": {
+  "lt": {
     "properties": [
       "m",
       "f",
@@ -362,7 +362,7 @@
       "f"
     ]
   },
-  "luxembourgeois": {
+  "lb": {
     "properties": [
       "m",
       "f",
@@ -371,7 +371,7 @@
     ],
     "expectsUpperCase": true
   },
-  "macédonien": {
+  "mk": {
     "properties": [
       "m",
       "f",
@@ -380,30 +380,30 @@
     ],
     "hasTransliteration": true
   },
-  "malayalam": {
+  "ml": {
     "hasTransliteration": true
   },
-  "mandarin": {
+  "cmn": {
     "hasTransliteration": true,
     "hasTraditional": true
   },
-  "marathe": {
+  "mr": {
     "hasTransliteration": true
   },
-  "minnan": {
+  "nan": {
     "hasTraditional": true
   },
-  "mirandais": {
+  "mwl": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "mongol": {
+  "mn": {
     "hasTransliteration": true
   },
-  "néerlandais": {
+  "nl": {
     "properties": [
       "m",
       "f",
@@ -411,10 +411,10 @@
       "p"
     ]
   },
-  "népalais": {
+  "ne": {
     "hasTransliteration": true
   },
-  "norvégien (bokmål)": {
+  "nb": {
     "properties": [
       "m",
       "f",
@@ -423,7 +423,7 @@
       "mfp"
     ]
   },
-  "norvégien (nynorsk)": {
+  "nn": {
     "properties": [
       "m",
       "f",
@@ -432,13 +432,13 @@
       "mfp"
     ]
   },
-  "ossète": {
+  "os": {
     "hasTransliteration": true
   },
-  "persan": {
+  "fa": {
     "hasTransliteration": true
   },
-  "piémontais": {
+  "pms": {
     "properties": [
       "m",
       "f",
@@ -453,7 +453,7 @@
       "p"
     ]
   },
-  "polonais": {
+  "pl": {
     "properties": [
       "m",
       "f",
@@ -461,21 +461,21 @@
       "p"
     ]
   },
-  "portugais": {
+  "pt": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "romanche": {
+  "rm": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "roumain": {
+  "ro": {
     "properties": [
       "m",
       "f",
@@ -483,7 +483,7 @@
       "p"
     ]
   },
-  "russe": {
+  "ru": {
     "properties": [
       "m",
       "f",
@@ -499,7 +499,7 @@
       "p"
     ]
   },
-  "sanskrit": {
+  "sa": {
     "properties": [
       "m",
       "f",
@@ -509,14 +509,14 @@
     ],
     "hasTransliteration": true
   },
-  "sarde": {
+  "sc": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "serbe": {
+  "sr": {
     "properties": [
       "m",
       "f",
@@ -525,10 +525,10 @@
     ],
     "hasTransliteration": true
   },
-  "sherpa": {
+  "xsr": {
     "hasTransliteration": true
   },
-  "sicilien": {
+  "scn": {
     "properties": [
       "m",
       "f",
@@ -536,55 +536,55 @@
       "p"
     ]
   },
-  "slovaque": {
+  "sk": {
     "properties": [
       "m",
       "f",
       "n"
     ]
   },
-  "slovène": {
+  "sl": {
     "properties": [
       "m",
       "f",
       "n"
     ]
   },
-  "suédois": {
+  "sv": {
     "properties": [
       "c",
       "n"
     ]
   },
-  "tamoul": {
+  "ta": {
     "hasTransliteration": true
   },
-  "tadjik": {
+  "tg": {
     "hasTransliteration": true
   },
-  "tatare": {
+  "tt": {
     "hasTransliteration": true
   },
-  "tchèque": {
+  "cs": {
     "properties": [
       "m",
       "f",
       "n"
     ]
   },
-  "tchouvache": {
+  "cv": {
     "hasTransliteration": true
   },
-  "télougou": {
+  "te": {
     "hasTransliteration": true
   },
-  "thaï": {
+  "th": {
     "hasTransliteration": true
   },
-  "tibétain": {
+  "bo": {
     "hasTransliteration": true
   },
-  "ukrainien": {
+  "uk": {
     "properties": [
       "m",
       "f",
@@ -593,14 +593,14 @@
     ],
     "hasTransliteration": true
   },
-  "vénitien": {
+  "vec": {
     "properties": [
       "m",
       "f",
       "p"
     ]
   },
-  "vieil irlandais": {
+  "sga": {
     "properties": [
       "m",
       "f",
@@ -609,10 +609,10 @@
       "p"
     ]
   },
-  "vieux francique": {
+  "frk": {
     "expectsUpperCase": true
   },
-  "vieux norrois": {
+  "non": {
     "properties": [
       "m",
       "f",
@@ -620,7 +620,7 @@
       "p"
     ]
   },
-  "vieux slave": {
+  "cu": {
     "properties": [
       "m",
       "f",
@@ -629,7 +629,7 @@
       "p"
     ]
   },
-  "yiddish": {
+  "yi": {
     "properties": [
       "m",
       "f",

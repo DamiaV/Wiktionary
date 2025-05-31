@@ -87,7 +87,7 @@ class GadgetAutoComplete {
       } else {
         let cursorPos = this.#cursorPosition;
 
-        if (event.code === "Escape" || event.key === "}") {
+        if (event.code === "Escape" || event._HIDE_MESSAGE_KEY === "}") {
           this.#enableSuggestions(false);
         } else if (event.code === "ArrowUp") { // FIXME fait nimp avec CodeMirror
           this.#selectSuggestion(this.#suggestionIndex - 1);

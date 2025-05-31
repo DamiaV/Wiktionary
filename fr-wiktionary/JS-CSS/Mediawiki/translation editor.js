@@ -11,15 +11,12 @@
  *
  * [[Catégorie:JavaScript du Wiktionnaire|translation editor]]
  */
-
-/* global jQuery, mediaWiki, editor, silentFailStorage, gadget_createTranslation */
+"use strict";
 
 console.log("Chargement de Gadget-translation editor.js…");
 
-(function (mw, $) { // Closure (fermée à la toute fin du script)
-  'use strict';
-
-  var
+(() => {
+  let
       // Tableau de correspondance langue <-> code langue
       // que l’on va charger à la prise de focus sur un formulaire
       tab_langues,
@@ -28,70 +25,67 @@ console.log("Chargement de Gadget-translation editor.js…");
       heading_id_counter = 0;
 
   if (editor.enabled) {
-    $('div.translations')
+    $("div.translations")
         .each(function (i) {
           add_translation_form(this, i);
           add_heading_updater(this);
         });
     // Cache les liens d'ébauche traductions s'il y en a
-    var $tradStub = $('.trad-stub');
+    const $tradStub = $(".trad-stub");
     $tradStub.hide();
     $tradStub.parent('li').hide();
   }
 
-// Ce qu'on appelle 'table' est en fait un 'div' sur fr.wikt
-// mais peu importe (ça a l'apparence d'un tableau de valeurs)
+  // Ce qu'on appelle 'table' est en fait un 'div' sur fr.wikt
+  // mais peu importe (ça a l'apparence d'un tableau de valeurs)
   function get_translation_table_index(table) {
     return $.inArray(table, $('div.translations'));
   }
 
   function get_error_html(message) {
-    return '<img src="//upload.wikimedia.org/wikipedia/commons/4/4e/MW-Icon-AlertMark.png" alt="Alerte"> ' + message;
+    return '<img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/MW-Icon-AlertMark.png" alt="Alerte"> ' + message;
   }
 
   function get_info_html(message) {
-    return '<img src="//upload.wikimedia.org/wikipedia/commons/f/f8/Farm-Fresh_information.png" alt="Info"> ' + message;
+    return '<img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Farm-Fresh_information.png" alt="Info"> ' + message;
   }
 
   function add_heading_updater(table) {
-    var id = heading_id_counter++;
-
-    var self = $(table).parent().parent('.NavContent').prev('.NavHead');
-
-    var edit_head = $('<a>', {
-      href: '#',
-      text: '±',
-      'class': 'ed-edit-head',
-      title: 'Changer la description'
-    }).prependTo(self);
+    const id = heading_id_counter++;
+    const $self = $(table).parent().parent(".NavContent").prev(".NavHead");
+    const $editHead = $("<a>", {
+      href: "#",
+      text: "±",
+      "class": "ed-edit-head",
+      title: "Changer la description"
+    }).prependTo($self);
 
     function remove_gloss_nodes() {
       var nodes = [];
-      $.each(self[0].childNodes, function (i, node) {
-        if (node.className !== 'ed-edit-head' && node.className !== 'NavToggle') {
+      $.each($self[0].childNodes, (i, node) => {
+        if (node.className !== "ed-edit-head" && node.className !== "NavToggle")
           nodes.push(node);
-        }
       });
       $(nodes).detach();
       return nodes;
     }
 
-    var gloss_nodes;
-    edit_head.click(function (e) {
+    let glossNodes;
+    $editHead.click((e) => {
       e.preventDefault();
-      if (self.find('form').length) {
-        self.find('form').remove();
-        self.append(gloss_nodes);
+      if ($self.find("form").length) {
+        $self.find("form").remove();
+        $self.append(glossNodes);
         return;
       }
 
-      edit_head.text('Chargement…');
+      $editHead.text("Chargement…");
 
       editor.wikitext()
           .then(function (wikitext) {
-            edit_head.text('±');
-            gloss_nodes = remove_gloss_nodes();
-            var prev_gloss_nodes = gloss_nodes;
+            $editHead.text('±');
+            glossNodes = remove_gloss_nodes();
+            var prev_gloss_nodes = glossNodes;
 
             var gloss = translation.get_gloss(wikitext, get_translation_table_index(table));
             var gloss_to_handle = gloss.standard ? gloss.text : gloss.trans_top;
@@ -109,7 +103,7 @@ console.log("Chargement de Gadget-translation editor.js…");
                   .html(get_error_html(msg));
             }
 
-            self.append(form);
+            $self.append(form);
 
             form.find('input')
                 .val(gloss_to_handle)
@@ -141,7 +135,7 @@ console.log("Chargement de Gadget-translation editor.js…");
                   editor.wikitext()
               ).done(function (gloss_html, wikitext) {
                 gloss_html = $(gloss_html);
-                var prev_class = self.parent('.NavFrame').attr('class');
+                var prev_class = $self.parent('.NavFrame').attr('class');
                 var new_class = gloss_html.filter('.NavFrame').attr('class');
 
                 gloss_html = gloss_html.find('.NavHead').contents();
@@ -161,16 +155,16 @@ console.log("Chargement de Gadget-translation editor.js…");
                     $('<span>', {
                       'class': 'ed-added',
                       html: gloss_html
-                    }).appendTo(self);
+                    }).appendTo($self);
                     if (prev_class !== new_class) {
-                      self.parent('.NavFrame').attr('class', new_class);
+                      $self.parent('.NavFrame').attr('class', new_class);
                     }
                   },
                   undo: function () {
                     remove_gloss_nodes();
-                    self.append(prev_gloss_nodes);
+                    $self.append(prev_gloss_nodes);
                     if (prev_class !== new_class) {
-                      self.parent('.NavFrame').attr('class', prev_class);
+                      $self.parent('.NavFrame').attr('class', prev_class);
                     }
                   }
                 });
@@ -373,7 +367,7 @@ console.log("Chargement de Gadget-translation editor.js…");
         // If the item exists, the value will be used as the value,
         // otherwise it's 'null', which empties (the already empty)
         // text field.
-        .val(silentFailStorage.getItem('trans-lang'));
+        .val(window.localStorage.getItem('trans-lang'));
 
     form.find('.ed-more').click(function (e) {
       e.preventDefault();
@@ -539,7 +533,7 @@ console.log("Chargement de Gadget-translation editor.js…");
       var pagename = $.trim(this.pagename.value) !== $.trim(this.pagename.getAttribute('placeholder')) ?
           $.trim(this.pagename.value) : '';
 
-      silentFailStorage.setItem('trans-lang', lang_name);
+      window.localStorage.setItem('trans-lang', lang_name);
 
       var title = mw.config.get('wgTitle');
 
@@ -554,32 +548,32 @@ console.log("Chargement de Gadget-translation editor.js…");
       // n'en contient pas
       else if (word.indexOf(',') !== -1 &&
           title.indexOf(',') === -1 &&
-          silentFailStorage.getItem('comma-knowledge') !== 'ok'
+          window.localStorage.getItem('comma-knowledge') !== 'ok'
       ) {
         show_error(new CommaWordError('une virgule'));
         return;
       } else if (word.indexOf('،') !== -1 &&
           title.indexOf('،') === -1 &&
-          silentFailStorage.getItem('comma-knowledge') !== 'ok'
+          window.localStorage.getItem('comma-knowledge') !== 'ok'
       ) {
         show_error(new CommaWordError('une virgule'));
         return;
       } else if (word.indexOf(';') !== -1 &&
           title.indexOf(';') === -1 &&
-          silentFailStorage.getItem('comma-knowledge') !== 'ok'
+          window.localStorage.getItem('comma-knowledge') !== 'ok'
       ) {
         show_error(new CommaWordError('un point-virgule'));
         return;
       } else if (word.indexOf('/') !== -1 &&
           title.indexOf('/') === -1 &&
-          silentFailStorage.getItem('comma-knowledge') !== 'ok'
+          window.localStorage.getItem('comma-knowledge') !== 'ok'
       ) {
         show_error(new CommaWordError('une barre oblique'));
         return;
       } else if (word.charAt(0) !== word.charAt(0).toLowerCase() &&
           title.charAt(0) === title.charAt(0).toLowerCase() &&
           expected_case.indexOf(lang_name) === -1 &&
-          silentFailStorage.getItem('case-knowledge') !== 'ok'
+          window.localStorage.getItem('case-knowledge') !== 'ok'
       ) {
         // noinspection JSCheckFunctionSignatures
         show_error(new CaseWordError());
@@ -648,13 +642,13 @@ console.log("Chargement de Gadget-translation editor.js…");
         // En cas de virgule détectée
         $('.ed-error-comma')
             .click(function () {
-              silentFailStorage.setItem('comma-knowledge', 'ok');
+              window.localStorage.setItem('comma-knowledge', 'ok');
               form.find(':submit').click();
             });
         // En cas de majuscule détectée
         $('.ed-error-case')
             .click(function () {
-              silentFailStorage.setItem('case-knowledge', 'ok');
+              window.localStorage.setItem('case-knowledge', 'ok');
               form.find(':submit').click();
             });
       }
@@ -711,7 +705,7 @@ console.log("Chargement de Gadget-translation editor.js…");
         show_error(false);
         form.find('.ed-info-msg').empty();
 
-        silentFailStorage.setItem('trans-lang', lang_name);
+        window.localStorage.setItem('trans-lang', lang_name);
 
         form[0].word.value = '';
         form[0].trans.value = '';
@@ -1144,4 +1138,4 @@ console.log("Chargement de Gadget-translation editor.js…");
   window.parse_wikitext = parse_wikitext;
   window.add_heading_updater = add_heading_updater;
   window.add_translation_form = add_translation_form;
-}(mediaWiki, jQuery)); // Fin de la closure ouverte au tout début
+})();

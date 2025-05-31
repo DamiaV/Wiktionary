@@ -10,19 +10,16 @@
  *  wiktionaryExists?: boolean,
  *  hasPortal?: boolean,
  *  aliasOf?: string,
+ *  wikimediaCode?: string,
  * }} LanguageData
  */
 /**
  * @typedef {{codes: {[code: string]: LanguageData}, redirects: {[code: string]: string}}} LanguagesData
  */
 
-/**
- * @type {LanguagesData}
- */
+/** @type {LanguagesData} */
 const languagesData = require("./wikt.core.languages.json");
-/**
- * @type {Map<string, LanguageData>}
- */
+/** @type {Map<string, LanguageData>} */
 const langDataMap = new Map();
 
 for (const [code, langData] of Object.entries(languagesData.codes))
