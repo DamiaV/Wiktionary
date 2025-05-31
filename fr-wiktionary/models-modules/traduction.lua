@@ -34,7 +34,7 @@ end
 --- @return string The formated language name.
 local function formatLanguageName(langName, langCode)
   if langName and langCode then
-    return mw.ustring.format('<span class="trad-%s">%s</span>', langCode, langName)
+    return mw.ustring.format('<span data-translation-lang="%s" class="trad-%s">%s</span>', langCode, langCode, langName)
   else
     return ""
   end
@@ -58,7 +58,7 @@ function p.templateT(frame)
         .. getCategory("Wiktionnaire:Traductions T sans langue précisée")
   end
 
-  local langName = m_langs.get_nom(langCode)
+  local langName = m_langs.getName(langCode)
   local formatedText
   local category
 
@@ -85,13 +85,13 @@ local function generateOutgoingLink(langCode, word, status)
   local displayedText = ""
 
   -- Link destination
-  local wikiLangCode = m_langs.get_lien_Wikimedia(langCode) or langCode
+  local wikiLangCode = m_langs.getWikimediaCode(langCode) or langCode
   if not keepApos[langCode] then
     word = mw.ustring.gsub(word, "[’ʼ]", "'") -- apostrophes dactylographique et modificative
   end
   local destination = mw.ustring.format(":%s:%s", wikiLangCode, word)
 
-  if not m_langs.has_wiktionary(langCode) and langCode ~= 'conv' then
+  if not m_langs.hasWiktionary(langCode) and langCode ~= 'conv' then
     displayedText = '<span class="trad-nowikt">(*)</span>'
     destination = "Wiktionnaire:Pas de wiktionnaire dans cette langue"
   elseif status == "existe" then
@@ -162,6 +162,8 @@ local function formatGender(gender)
     ["s"] = "singulier",
     ["p"] = "pluriel",
     ["d"] = "duel",
+    ["a"] = "animé",
+    ["i"] = "inanimé",
     ["mf"] = "masculin et féminin identiques",
     ["mp"] = "masculin pluriel",
     ["fp"] = "féminin pluriel",
@@ -197,7 +199,7 @@ function p._templateTrad(status, langCode, word, gender, alternativeText, transc
   if not langCode then
     table.insert(cats, getCategory("Wiktionnaire:Traductions sans langue précisée"))
     return '<span style="color:red;">[[WT:Liste des langues|Langue à préciser]] (paramètre 1)</span>'
-  elseif m_langs.get_nom(langCode) == nil then
+  elseif m_langs.getName(langCode) == nil then
     table.insert(cats, getCategory("Wiktionnaire:Traductions trad avec code langue non défini"))
   end
 
