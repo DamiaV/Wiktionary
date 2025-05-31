@@ -149,6 +149,12 @@ class EditForm {
     /**
      * @private
      */
+    this._$messageLine = $('<p class="trans-form-error">');
+    this._$messageLine.hide();
+
+    /**
+     * @private
+     */
     this._$transliterationLine = $("<p>");
     this._$transliterationLine.append(
         `<label for="translit-input-${index}">Translittération&nbsp;:</label> `,
@@ -178,6 +184,7 @@ class EditForm {
 
     $form.append(
         $translationLine,
+        this._$messageLine,
         $grammarPropsLine,
         this._$transliterationLine,
         this._$traditionalLine,
@@ -383,9 +390,12 @@ class EditForm {
 
     if (!langCode) {
       this._$submitButton.prop("disabled", true);
+      this._showError(`La langue «\u00a0${langNameOrCode}\u00a0» n’est pas définie.`);
       return;
-    } else if (this._$submitButton.is(":disabled"))
+    } else if (this._$submitButton.is(":disabled")) {
       this._$submitButton.prop("disabled", false);
+      this._hideError();
+    }
 
     this._selectedLanguage = LANG_PROPERTIES[langCode] || {};
     this._selectedLangCode = langCode;
@@ -514,6 +524,25 @@ class EditForm {
             .then((data) => onSuccess(!data.query.pages["-1"]))
             .catch(onFail))
         .catch(onFail);
+  }
+
+  /**
+   * Show an error message.
+   * @param message {string} The message to show.
+   * @private
+   */
+  _showError(message) {
+    this._$messageLine.text(message);
+    this._$messageLine.show();
+  }
+
+  /**
+   * Hide the error message.
+   * @private
+   */
+  _hideError() {
+    this._$messageLine.text("");
+    this._$messageLine.hide();
   }
 }
 
