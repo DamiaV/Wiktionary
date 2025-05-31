@@ -1,5 +1,6 @@
 // [[Catégorie:JavaScript du Wiktionnaire|translation-editor/form.js]]
 // <nowiki>
+"use strict";
 
 /**
  * @typedef {{
@@ -22,7 +23,7 @@
  */
 
 const { getLanguageToCodeMap, getLanguageName, getLanguage } = require("../wikt.core.languages.js");
-const LANGS_NAME_TO_CODE = getLanguageToCodeMap();
+const LANG_NAME_TO_CODE = getLanguageToCodeMap();
 /** @type {{[code: string]: LangProperties}} */
 const LANG_PROPERTIES = require("./lang-properties.json");
 
@@ -49,7 +50,6 @@ const GRAMMATICAL_PROPERTIES = {
   na: "neutre animé",
   ni: "neutre inanimé",
 };
-const API = new mw.Api({ userAgent: "Gadget-wikt.translation-editor" });
 
 class EditForm {
   /**
@@ -57,39 +57,63 @@ class EditForm {
    * @param index {number} The index of the associated translations box.
    * @param translationsDiv {HTMLDivElement} The DIV tag containing the list of translations.
    * @param dialog {EditDialog} The global edit dialog.
+   * @param api {mw.Api} The gadget’s API instance.
    */
-  constructor(index, translationsDiv, dialog) {
-    /** @type {LangProperties} */
-    this.selectedLanguage = {};
-    /** @type {string|null} */
-    this.selectedLangCode = null;
-    this.fullView = false;
-    this.dialog = dialog;
-
-    /** @type {HTMLUListElement|null} */
-    let list = translationsDiv.querySelector("ul");
-    if (!list) {
-      list = document.createElement("ul");
-      translationsDiv.append(list);
-    }
-    // Assign to a new constant to avoid accidental re-assignment
-    /** @type {HTMLUListElement} */
-    this.translationsList = list;
+  constructor(index, translationsDiv, dialog, api) {
+    /**
+     * @type {LangProperties}
+     * @private
+     */
+    this._selectedLanguage = {};
+    /**
+     * @type {string|null}
+     * @private
+     */
+    this._selectedLangCode = null;
+    /**
+     * @type {boolean}
+     * @private
+     */
+    this._fullView = false;
+    /**
+     * @type {EditDialog}
+     * @private
+     */
+    this._dialog = dialog;
+    /**
+     * @type {mw.Api}
+     * @private
+     */
+    this._api = api;
+    /**
+     * @type {HTMLUListElement}
+     * @private
+     */
+    this._translationsList = this._getOrCreateList(translationsDiv);
 
     const $form = $(`<form class="translation-editor" data-trans-form-index="${index}">`);
-    this.$langInput = $(`<input type="text" size="12" id="lang-input-${index}" placeholder="Langues">`);
+    /**
+     * @private
+     */
+    this._$langInput = $(`<input type="text" size="12" id="lang-input-${index}" placeholder="Langues">`);
     const $translationInput = $(`<input type="text" id="trans-input-${index}" placeholder="Traduction">`);
     const $transliterationInput = $(`<input type="text" id="translit-input-${index}" placeholder="ex : khimera pour химера">`);
     const $traditionalInput = $(`<input type="text" id="tradit-input-${index}" placeholder="ex : 軍團 pour 군단">`);
     const $pageNameInput = $(`<input type="text" id="page-name-input-${index}" placeholder="ex : amo pour amō">`);
-    this.$submitButton = $(`<button type="submit">Ajouter</button>`);
+    /**
+     * @private
+     */
+    this._$submitButton = $(`<button type="submit">Ajouter</button>`);
     const $showMoreButton = $(`<a href="#">Plus</a>`);
-    /** @type {Record<string, Object>} */
-    this.radioButtons = {};
+    /**
+     * @type {Record<string, any>}
+     * @private
+     */
+    this._radioButtons = {};
 
     // TODO autosuggestions
-    this.$langInput.on("focusout", () => {
-      this._setLanguage(this.$langInput.val().trim());
+    this._$langInput.on("focusout", () => {
+      this._setLanguage(this._$langInput.val().trim());
     });
 
     $showMoreButton.on("click", (e) => {
@@ -100,11 +124,11 @@ class EditForm {
     const $translationLine = $("<p>");
     $translationLine.append(
         `<label for="lang-input-${index}">Ajouter une traduction en</label> `,
-        this.$langInput,
+        this._$langInput,
         "&nbsp;: ",
         $translationInput,
         " ",
-        this.$submitButton,
+        this._$submitButton,
         " ",
         $showMoreButton
     );
@@ -114,7 +138,7 @@ class EditForm {
     for (const [code, label] of Object.entries(GRAMMATICAL_PROPERTIES)) {
       const id = `grammar-prop-${code}-${index}`;
       const $button = $(`<input id="${id}" type="radio" name="grammar-prop">`);
-      this.radioButtons[code] = $button;
+      this._radioButtons[code] = $button;
       if (!firstEntry) $grammarPropsLine.append(" ");
       else firstEntry = false;
       const $container = $('<span>');
@@ -122,22 +146,31 @@ class EditForm {
       $grammarPropsLine.append($container);
     }
 
-    this.$transliterationLine = $("<p>");
-    this.$transliterationLine.append(
+    /**
+     * @private
+     */
+    this._$transliterationLine = $("<p>");
+    this._$transliterationLine.append(
         `<label for="translit-input-${index}">Translittération&nbsp;:</label> `,
         $transliterationInput
     );
 
-    this.$traditionalLine = $("<p>");
-    this.$traditionalLine.append(
+    /**
+     * @private
+     */
+    this._$traditionalLine = $("<p>");
+    this._$traditionalLine.append(
         `<label for="tradit-input-${index}">Écriture traditionnelle&nbsp;:</label> `,
         $traditionalInput
     );
 
-    this.$pageNameLine = $("<p>");
+    /**
+     * @private
+     */
+    this._$pageNameLine = $("<p>");
     const helpText = "Si la traduction ne correspond pas à un nom de page valide sur le Wiktionnaire, " +
         "il est possible de préciser le nom de page à utiliser ici (le lien sur la traduction visera alors cette page).";
-    this.$pageNameLine.append(
+    this._$pageNameLine.append(
         `<label for="page-name-${index}">Nom de la page&nbsp;:</label> `,
         `<sup class="trans-form-help" title="${helpText}">(?)</sup> `,
         $pageNameInput
@@ -146,16 +179,16 @@ class EditForm {
     $form.append(
         $translationLine,
         $grammarPropsLine,
-        this.$transliterationLine,
-        this.$traditionalLine,
-        this.$pageNameLine
+        this._$transliterationLine,
+        this._$traditionalLine,
+        this._$pageNameLine
     );
 
     $form.submit((e) => {
       e.preventDefault();
 
       const translation = $translationInput.val().trim();
-      if (!this.selectedLanguage.expectsUpperCase) {
+      if (!this._selectedLanguage.expectsUpperCase) {
         const firstChar = translation.charAt(0);
         if (firstChar.toUpperCase() === firstChar) {
           const proceed = confirm("Êtes vous sûr·e que le mot commence bien par une majuscule\u00a0? " +
@@ -171,7 +204,7 @@ class EditForm {
 
       /** @type {string|null} */
       let grammarProperty = null;
-      for (const [code, $button] of Object.entries(this.radioButtons)) {
+      for (const [code, $button] of Object.entries(this._radioButtons)) {
         if ($button.is(":visible") && $button.prop("checked")) {
           grammarProperty = code;
           break;
@@ -181,7 +214,7 @@ class EditForm {
       /** @type {Translation} */
       const edit = {
         boxIndex: index,
-        langCode: this.selectedLangCode,
+        langCode: this._selectedLangCode,
         word: translation,
       };
 
@@ -201,7 +234,11 @@ class EditForm {
     const storedLangCode = window.localStorage.getItem(LAST_LANG_CODE_KEY);
     if (storedLangCode) this._setLanguage(storedLangCode.trim());
 
-    this._html = $form;
+    /**
+     * @type {HTMLFormElement}
+     * @private
+     */
+    this._html = $form[0];
   }
 
   /**
@@ -209,7 +246,7 @@ class EditForm {
    * @return {HTMLFormElement}
    */
   get html() {
-    return this._html[0];
+    return this._html;
   }
 
   /**
@@ -240,6 +277,23 @@ class EditForm {
       // Line ends up empty, deleted it
       if (!line.querySelector(".trans-item")) line.remove();
     }
+  }
+
+  /**
+   * Return the UL list contained in the given DIV element.
+   * If no UL element is found, a new one is created and inserted into the DIV before being returned.
+   * @param translationsDiv {HTMLDivElement} The DIV element to search into.
+   * @return {HTMLUListElement} The found or created UL element.
+   * @private
+   */
+  _getOrCreateList(translationsDiv) {
+    /** @type {HTMLUListElement|null} */
+    let list = translationsDiv.querySelector("ul");
+    if (!list) {
+      list = document.createElement("ul");
+      translationsDiv.append(list);
+    }
+    return list;
   }
 
   /**
@@ -297,8 +351,8 @@ class EditForm {
    * @private
    */
   _pushTranslationToDialog(translation) {
-    this.dialog.pushEdit(translation);
-    if (!this.dialog.isVisible()) this.dialog.show();
+    this._dialog.pushEdit(translation);
+    if (!this._dialog.isVisible()) this._dialog.show();
   }
 
   /**
@@ -308,7 +362,7 @@ class EditForm {
    * @private
    */
   _findTranslationLineInHTML(langCode) {
-    for (const childNode of this.translationsList.children)
+    for (const childNode of this._translationsList.children)
       if (childNode.tagName === "LI" && childNode.querySelector(`.trad-${langCode}`))
         return childNode;
     return null;
@@ -324,35 +378,35 @@ class EditForm {
 
     if (langName = getLanguageName(langNameOrCode))
       langCode = langNameOrCode;
-    else if (langCode = LANGS_NAME_TO_CODE.get(langNameOrCode))
+    else if (langCode = LANG_NAME_TO_CODE.get(langNameOrCode))
       langName = langNameOrCode;
 
     if (!langCode) {
-      this.$langInput.prop("disabled", true);
+      this._$submitButton.prop("disabled", true);
       return;
-    } else if (this.$langInput.is(":disabled"))
-      this.$langInput.prop("disabled", false);
+    } else if (this._$submitButton.is(":disabled"))
+      this._$submitButton.prop("disabled", false);
 
-    this.selectedLanguage = LANG_PROPERTIES[langCode] || {};
-    this.selectedLangCode = langCode;
-    this.$langInput.val(langName || "");
+    this._selectedLanguage = LANG_PROPERTIES[langCode] || {};
+    this._selectedLangCode = langCode;
+    this._$langInput.val(langName || "");
 
     if (window.localStorage.getItem(LAST_LANG_CODE_KEY) !== langCode)
       window.localStorage.setItem(LAST_LANG_CODE_KEY, langCode);
 
-    if (this.fullView) return;
+    if (this._fullView) return;
 
     /** @type {string[]} */
-    const properties = this.selectedLanguage.properties || [];
-    for (const [code, $button] of Object.entries(this.radioButtons))
+    const properties = this._selectedLanguage.properties || [];
+    for (const [code, $button] of Object.entries(this._radioButtons))
       if (properties.includes(code)) $button.parent().show();
       else $button.parent().hide();
 
-    if (this.selectedLanguage.hasTransliteration) this.$transliterationLine.show();
-    else this.$transliterationLine.hide();
+    if (this._selectedLanguage.hasTransliteration) this._$transliterationLine.show();
+    else this._$transliterationLine.hide();
 
-    if (this.selectedLanguage.hasTraditional) this.$traditionalLine.show();
-    else this.$traditionalLine.hide();
+    if (this._selectedLanguage.hasTraditional) this._$traditionalLine.show();
+    else this._$traditionalLine.hide();
   }
 
   /**
@@ -361,23 +415,23 @@ class EditForm {
    * @private
    */
   _toggleFullView(fullView) {
-    this.fullView = typeof fullView === "boolean" ? fullView : !this.fullView;
-    if (this.fullView) {
-      for (const $button of Object.values(this.radioButtons))
+    this._fullView = typeof fullView === "boolean" ? fullView : !this._fullView;
+    if (this._fullView) {
+      for (const $button of Object.values(this._radioButtons))
         $button.parent().show();
-      this.$transliterationLine.show();
-      this.$traditionalLine.show();
-      this.$pageNameLine.show();
+      this._$transliterationLine.show();
+      this._$traditionalLine.show();
+      this._$pageNameLine.show();
     } else {
-      const properties = this.selectedLanguage.properties || [];
-      for (const [code, $button] of Object.entries(this.radioButtons))
+      const properties = this._selectedLanguage.properties || [];
+      for (const [code, $button] of Object.entries(this._radioButtons))
         if (!properties.includes(code))
           $button.parent().hide();
-      if (!this.selectedLanguage.hasTransliteration)
-        this.$transliterationLine.hide();
-      if (!this.selectedLanguage.hasTraditional)
-        this.$traditionalLine.hide();
-      this.$pageNameLine.hide();
+      if (!this._selectedLanguage.hasTransliteration)
+        this._$transliterationLine.hide();
+      if (!this._selectedLanguage.hasTraditional)
+        this._$traditionalLine.hide();
+      this._$pageNameLine.hide();
     }
   }
 
@@ -388,7 +442,7 @@ class EditForm {
    * @private
    */
   _renderWikicode(wikicode) {
-    return API.get({
+    return this._api.get({
       action: "parse",
       text: `<div id="trans-editor-wrapper">${wikicode}</div>`
     }).then(data => {

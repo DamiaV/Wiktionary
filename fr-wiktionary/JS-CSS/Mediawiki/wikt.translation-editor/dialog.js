@@ -110,17 +110,6 @@ class EditDialog {
   }
 
   /**
-   * Update the state of the submit, undo, and redo buttons.
-   * @private
-   */
-  _updateButtons() {
-    const empty = this._editCursor === -1;
-    this._submitButton.disabled = empty;
-    this._undoButton.disabled = empty;
-    this._redoButton.disabled = this._editCursor === this._editHistory.length - 1;
-  }
-
-  /**
    * The HTML element for this dialog.
    * @return {HTMLElement}
    */
@@ -165,6 +154,17 @@ class EditDialog {
    */
   isVisible() {
     return this._html.style.display !== "none";
+  }
+
+  /**
+   * Update the state of the submit, undo, and redo buttons.
+   * @private
+   */
+  _updateButtons() {
+    const empty = this._editCursor === -1;
+    this._submitButton.disabled = empty;
+    this._undoButton.disabled = empty;
+    this._redoButton.disabled = this._editCursor === this._editHistory.length - 1;
   }
 }
 

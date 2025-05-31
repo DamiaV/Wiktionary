@@ -9,6 +9,11 @@
   border: 2px dashed orange;
 }
 
+.translation-editor button[type="submit"]:disabled {
+  cursor: not-allowed;
+  color: gray;
+}
+
 /* Dialog box */
 
 #trans-dialog {

@@ -6,6 +6,7 @@ const { EditForm } = require("./wikt.translation-editor/form.js");
 
 console.log("Chargement de Gadget-wikt.translation-editor.js…");
 
+const api = new mw.Api({ userAgent: "Gadget-wikt.translation-editor" });
 const dialog = new EditDialog(onSubmit, onUndo, onRedo, onCancel);
 /** @type {EditForm[]} */
 const forms = [];
@@ -45,7 +46,7 @@ function onCancel() {
 
 document.body.append(dialog.html);
 document.querySelectorAll(".translations").forEach((div, i) => {
-  const form = new EditForm(i, div, dialog);
+  const form = new EditForm(i, div, dialog, api);
   forms.push(form);
   /** @type {HTMLElement} */
   const container = $(div).parents(".NavContent")[0];
