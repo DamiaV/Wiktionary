@@ -42,7 +42,7 @@ class EditDialog {
     this._submitButton = document.createElement("button");
     this._submitButton.textContent = "Enregistrer les modifications";
     this._submitButton.onclick = () => {
-      onSubmit(this._editHistory);
+      onSubmit(this._editHistory.slice(0, this._editCursor + 1));
     };
     buttonsWrapper.append(this._submitButton);
 
