@@ -198,7 +198,7 @@ end
 function p._templateTrad(status, langCode, word, gender, alternativeText, transcription, traditionalLangCode, traditionalTerm)
   if not langCode then
     table.insert(cats, getCategory("Wiktionnaire:Traductions sans langue précisée"))
-    return '<span style="color:red;">[[WT:Liste des langues|Langue à préciser]] (paramètre 1)</span>'
+    return '<span class="translation" style="color:red;">[[WT:Liste des langues|Langue à préciser]] (paramètre 1)</span>'
   elseif m_langs.getName(langCode) == nil then
     table.insert(cats, getCategory("Wiktionnaire:Traductions trad avec code langue non défini"))
   end
@@ -233,7 +233,7 @@ function p._templateTrad(status, langCode, word, gender, alternativeText, transc
     finalText = finalText .. " " .. formatedGender
   end
 
-  return finalText
+  return mw.ustring.format('<span class="translation">%s</span>', finalText)
 end
 
 --- Generates the code for the templates {{trad}}, {{trad+}}, {{trad-}} and {{trad--}}.
