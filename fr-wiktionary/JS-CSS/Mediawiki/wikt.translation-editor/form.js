@@ -56,6 +56,16 @@ const GRAMMATICAL_PROPERTIES = {
  * @type {string}
  */
 const CONV_LANG_NAME = getLanguageName("conv");
+/**
+ * The list of possible mistake characters and their name.
+ * @type {Record<string, string>}
+ */
+const POSSIBLE_MISTAKES = {
+  ",": "une virgule",
+  "،": "une virgule",
+  ";": "un point-virgule",
+  "/": "une barre oblique (slash)",
+};
 
 class EditForm {
   /**
@@ -200,19 +210,36 @@ class EditForm {
     $form.submit((e) => {
       e.preventDefault();
 
+      /** @type {string} */
+      const title = mw.config.get("wgPageName");
       const translation = $translationInput.val().trim();
+
+      if (!translation) {
+        this._showError("Veuillez renseigner une traduction.");
+        return;
+      }
+      if (/[\[\]{}#|=]/.test(translation)) {
+        this._showError("La traduction n’est pas dans un format correct, elle contient du wikicode ([]{}#|=).");
+        return;
+      }
+      this._hideError();
+
       if (!this._selectedLanguage.expectsUpperCase) {
         const firstChar = translation.charAt(0);
-        if (firstChar.toUpperCase() === firstChar) {
-          const proceed = confirm("Êtes vous sûr·e que le mot commence bien par une majuscule\u00a0? " +
+        if (firstChar !== firstChar.toLowerCase() && title.charAt(0) === title.charAt(0).toLowerCase()) {
+          const proceed = confirm("Êtes vous sûr·e que le mot commence bien par une majuscule\u00a0?\n" +
               "Si ce n’est pas le cas, veuillez corriger avant de valider.");
           if (!proceed) return;
         }
       }
-      if (translation.includes(",")) {
-        const proceed = confirm("Êtes vous sûr·e que la traduction contient bien une virgule\u00a0? " +
-            "Si ce n’est pas le cas, veuillez corriger avant de valider.");
-        if (!proceed) return;
+
+      for (const [char, name] of Object.entries(POSSIBLE_MISTAKES)) {
+        if (!title.includes(char) && translation.includes(char)) {
+          const proceed = confirm(`Êtes vous sûr·e que la traduction contient bien ${name}\u00a0?\n` +
+              "Si ce n’est pas le cas, veuillez insérer les traductions une par une, " +
+              "en cliquant sur le bouton «\u00a0Ajouter\u00a0» après chaque insertion de traduction.");
+          if (!proceed) return;
+        }
       }
 
       /** @type {string|null} */
@@ -453,6 +480,12 @@ class EditForm {
    * @private
    */
   _setLanguage(langNameOrCode) {
+    if (!langNameOrCode) {
+      this._$submitButton.prop("disabled", true);
+      this._showError("Veuillez renseigner une langue.");
+      return;
+    }
+
     let langCode, langName;
 
     if (langName = getLanguageName(langNameOrCode))
@@ -463,6 +496,11 @@ class EditForm {
     if (!langCode) {
       this._$submitButton.prop("disabled", true);
       this._showError(`La langue «\u00a0${langNameOrCode}\u00a0» n’est pas définie.`);
+      return;
+    } else if (langCode === "fr") {
+      this._$submitButton.prop("disabled", true);
+      this._showError("Il n’est pas possible d’ajouter une traduction en français. " +
+          "À la place, veuillez utiliser la section «\u00a0Synonymes\u00a0» ou «\u00a0Variantes dialectales\u00a0».");
       return;
     } else if (this._$submitButton.is(":disabled")) {
       this._$submitButton.prop("disabled", false);
@@ -613,8 +651,8 @@ class EditForm {
    * @private
    */
   _hideError() {
-    this._$messageLine.text("");
     this._$messageLine.hide();
+    this._$messageLine.text("");
   }
 }
 
