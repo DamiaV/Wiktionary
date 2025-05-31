@@ -17,6 +17,7 @@ class EditDialog {
     /** @type {Translation[]} */
     this._editHistory = [];
     this._editCursor = -1;
+    this._disabled = false;
 
     const _HIDE_MESSAGE_KEY = "trans-editor-hide-message";
 
@@ -30,6 +31,7 @@ class EditDialog {
     closeButton.title = "Fermer et annuler toutes les modifications";
     closeButton.onclick = (e) => {
       e.preventDefault();
+      if (this._disabled) return;
       this.hide();
       onCancel();
     };
@@ -51,8 +53,9 @@ class EditDialog {
     this._undoButton = document.createElement("button");
     this._undoButton.textContent = "← Annuler";
     this._undoButton.onclick = () => {
-      onUndo(this._editHistory[this._editCursor--]);
+      const edit = this._editHistory[this._editCursor--];
       this._updateButtons();
+      onUndo(edit);
     };
     buttonsWrapper.append(this._undoButton);
 
@@ -61,8 +64,9 @@ class EditDialog {
     this._redoButton = document.createElement("button");
     this._redoButton.textContent = "Rétablir →";
     this._redoButton.onclick = () => {
-      onRedo(this._editHistory[++this._editCursor]);
+      const edit = this._editHistory[++this._editCursor];
       this._updateButtons();
+      onRedo(edit);
     };
     buttonsWrapper.append(this._redoButton);
 
@@ -154,6 +158,22 @@ class EditDialog {
    */
   isVisible() {
     return this._html.style.display !== "none";
+  }
+
+  /**
+   * Disable the buttons of this dialog.
+   * @param disabled {boolean} True to disable, false to re-enable.
+   */
+  setDisabled(disabled) {
+    if (this._disabled === disabled) return;
+
+    this._disabled = disabled;
+
+    if (disabled) {
+      this._submitButton.disabled = true;
+      this._undoButton.disabled = true;
+      this._redoButton.disabled = true;
+    } else this._updateButtons();
   }
 
   /**

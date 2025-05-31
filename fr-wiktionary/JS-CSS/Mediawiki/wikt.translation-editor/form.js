@@ -11,6 +11,7 @@
  *  traditional?: string,
  *  grammarProperty?: string,
  *  pageName?: string,
+ *  externalExists?: boolean,
  * }} Translation
  */
 /**
@@ -92,6 +93,11 @@ class EditForm {
      */
     this._fullView = false;
     /**
+     * @type {boolean}
+     * @private
+     */
+    this._disabled = false;
+    /**
      * @type {EditDialog}
      * @private
      */
@@ -121,6 +127,8 @@ class EditForm {
      */
     this._$submitButton = $(`<button type="submit">Ajouter</button>`);
     const $showMoreButton = $(`<a href="#">Plus</a>`);
+    this._$spinner = $('<img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Ajax_loader_metal_512.gif" alt="loading" style="width: 1.5em">');
+    this._$spinner.hide();
     /**
      * @type {Record<string, any>}
      * @private
@@ -135,6 +143,7 @@ class EditForm {
     $showMoreButton.on("click", (e) => {
       e.preventDefault();
       this._toggleFullView();
+      $showMoreButton.text(this._fullView ? "Moins" : "Plus");
     });
 
     const $translationLine = $("<p>");
@@ -146,7 +155,9 @@ class EditForm {
         " ",
         this._$submitButton,
         " ",
-        $showMoreButton
+        $showMoreButton,
+        " ",
+        this._$spinner
     );
 
     const $grammarPropsLine = $("<p>");
@@ -209,6 +220,7 @@ class EditForm {
 
     $form.submit((e) => {
       e.preventDefault();
+      if (this._disabled) return;
 
       /** @type {string} */
       const title = mw.config.get("wgPageName");
@@ -295,11 +307,18 @@ class EditForm {
    * @param updateDialog {boolean} Indicate whether the dialog should be updated.
    */
   insertTranslation(translation, updateDialog = false) {
+    this.setDisabled(true);
     this._externalPageExists(
         translation.langCode,
         translation.word,
-        (exists) => this._insertTranslation(translation, updateDialog, exists),
-        () => this._insertTranslation(translation, updateDialog)
+        (exists) => {
+          translation.externalExists = exists;
+          this._insertTranslation(translation, updateDialog);
+        },
+        () => {
+          translation.externalExists = undefined;
+          this._insertTranslation(translation, updateDialog);
+        }
     );
   }
 
@@ -342,6 +361,27 @@ class EditForm {
   }
 
   /**
+   * Disable form submission.
+   * @param disabled {boolean} True to disable, false to enable.
+   */
+  setDisabled(disabled) {
+    if (this._disabled === disabled) return;
+
+    this._disabled = disabled;
+
+    if (disabled) {
+      // Save the button’s state to be restored when form is re-enabled
+      this._submitState = this._$submitButton.prop("disabled");
+      this._$submitButton.prop("disabled", true);
+      this._$spinner.show();
+    } else {
+      this._$submitButton.prop("disabled", !!this._submitState);
+      this._$spinner.hide();
+    }
+    this._dialog.setDisabled(disabled);
+  }
+
+  /**
    * Return the UL list contained in the given DIV element.
    * If no UL element is found, a new one is created and inserted into the DIV before being returned.
    * @param translationsDiv {HTMLDivElement} The DIV element to search into.
@@ -361,25 +401,20 @@ class EditForm {
   /**
    * Insert the given translation into the HTML list.
    * @param translation {Translation} The translation to insert.
-   * @param updateDialog {boolean?} Indicate whether the dialog should be updated.
-   * @param exists {boolean?} Indicate whether the page exists on the target wiki (true) or not (false).
-   * If undefined, no wiki exists for the language code.
+   * @param updateHistory {boolean?} Indicate whether the edit history should be updated.
    * @private
    */
-  _insertTranslation(translation, updateDialog, exists) {
-    let plusMinus = exists === undefined ? "" : exists ? "+" : "-";
-    let transWikicode = `, {{trad${plusMinus}|${translation.langCode}|${translation.word}`;
-    if (translation.grammarProperty) transWikicode += `|${translation.grammarProperty}`;
-    if (translation.transliteration) transWikicode += `|tr=${translation.transliteration}`;
-    if (translation.traditional) transWikicode += `|tradi=${translation.traditional}`;
-    if (translation.pageName) transWikicode += `|dif=${translation.pageName}`;
-    transWikicode += "}}";
-
+  _insertTranslation(translation, updateHistory) {
     const wrapper = document.createElement("span");
     wrapper.classList.add("trans-new-item");
     wrapper.setAttribute("data-trans-word", this._escapeHTML(translation.word));
 
-    this._renderWikicode(transWikicode)
+    const onDone = () => {
+      this.setDisabled(false);
+      if (updateHistory) this._pushTranslationToDialog(translation);
+    }
+
+    this._renderWikicode(generateTranslationWikicode(translation))
         .then((elements) => {
           Array.from(elements).forEach((element) => {
             wrapper.append(element);
@@ -388,12 +423,12 @@ class EditForm {
           const line = this._findTranslationLineInHTML(translation.langCode);
           if (line) {
             line.append(wrapper);
-            if (updateDialog) this._pushTranslationToDialog(translation);
+            onDone();
           } else {
             const newLine = document.createElement("li");
             newLine.classList.add("trans-new-line");
 
-            this._renderWikicode(`{{T|${translation.langCode}}} : `)
+            this._renderWikicode(generateTranslationHeaderWikicode(translation.langCode))
                 .then((elements) => {
                   Array.from(elements).forEach((element) => {
                     newLine.append(element);
@@ -401,7 +436,7 @@ class EditForm {
                   wrapper.childNodes[0].textContent = ""; // Remove leading comma
                   newLine.append(wrapper);
                   this._insertLineInHTML(newLine, translation.langCode);
-                  if (updateDialog) this._pushTranslationToDialog(translation);
+                  onDone();
                 })
                 .catch((e) => {
                   console.error(e);
@@ -451,27 +486,13 @@ class EditForm {
         const lineLangCode = childNode.querySelector("span:first-child")
             .getAttribute("data-translation-lang");
         const lineLangName = getLanguageName(lineLangCode);
-        if (this._compareLanguages(langName, lineLangName) < 0) {
+        if (compareLanguages(langName, lineLangName) < 0) {
           this._translationsList.insertBefore(line, childNode);
           return;
         }
       }
     }
     this._translationsList.append(line);
-  }
-
-  /**
-   * Compare two language names according to Wiktionnaire’s rules.
-   * @param langName1 {string} A language name.
-   * @param langName2 {string} Another language name.
-   * @returns {number} -1 if the first name is before the second one, 0 if they are equal, 1 otherwise.
-   * @private
-   */
-  _compareLanguages(langName1, langName2) {
-    if (langName1 === langName2) return 0;
-    if (langName1 === CONV_LANG_NAME) return -1;
-    if (langName2 === CONV_LANG_NAME) return 1;
-    return langName1.localeCompare(langName2, "fr");
   }
 
   /**
@@ -656,5 +677,59 @@ class EditForm {
   }
 }
 
-module.exports = { EditForm };
+/**
+ * Generate the {{T}} template wikicode for the given language code.
+ * @param langCode {string} A language code.
+ * @returns {string} The generated wikicode.
+ */
+function generateTranslationHeaderWikicode(langCode) {
+  return `{{T|${langCode}}} : `;
+}
+
+/**
+ * Generate the {{trad}} template wikicode for the given translation.
+ * @param translation {Translation} A translation.
+ * @returns {string} The generated wikicode.
+ */
+function generateTranslationWikicode(translation) {
+  const {
+    word,
+    langCode,
+    transliteration,
+    traditional,
+    grammarProperty,
+    pageName,
+    externalExists,
+  } = translation;
+
+  const plusMinus = externalExists === undefined ? "" : externalExists ? "+" : "-";
+  let transWikicode = `, {{trad${plusMinus}|${langCode}|${word}`;
+  if (grammarProperty) transWikicode += `|${grammarProperty}`;
+  if (transliteration) transWikicode += `|tr=${transliteration}`;
+  if (traditional) transWikicode += `|tradi=${traditional}`;
+  if (pageName) transWikicode += `|dif=${pageName}`;
+  transWikicode += "}}";
+
+  return transWikicode;
+}
+
+/**
+ * Compare two language names according to Wiktionnaire’s rules.
+ * @param langName1 {string} A language name.
+ * @param langName2 {string} Another language name.
+ * @returns {number} -1 if the first name is before the second one, 0 if they are equal, 1 otherwise.
+ */
+function compareLanguages(langName1, langName2) {
+  if (langName1 === langName2) return 0;
+  if (langName1 === CONV_LANG_NAME) return -1;
+  if (langName2 === CONV_LANG_NAME) return 1;
+  return langName1.localeCompare(langName2, "fr");
+}
+
+module.exports = {
+  EditForm,
+  compareLanguages,
+  generateTranslationWikicode,
+  generateTranslationHeaderWikicode,
+};
 // </nowiki>
