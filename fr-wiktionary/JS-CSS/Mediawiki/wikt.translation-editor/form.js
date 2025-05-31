@@ -240,7 +240,7 @@ class EditForm {
       if ($pageNameInput.is(":visible"))
         edit.pageName = $pageNameInput.val().trim();
 
-      this.insertTranslation(edit);
+      this.insertTranslation(edit, true);
     });
 
     this._toggleFullView(false);
@@ -265,13 +265,14 @@ class EditForm {
   /**
    * Insert the given translation into the managed HTML list.
    * @param translation {Translation} The translation to insert.
+   * @param updateDialog {boolean} Indicate whether the dialog should be updated.
    */
-  insertTranslation(translation) {
+  insertTranslation(translation, updateDialog = false) {
     this._externalPageExists(
         translation.langCode,
         translation.word,
-        (exists) => this._insertTranslation(translation, exists),
-        () => this._insertTranslation(translation)
+        (exists) => this._insertTranslation(translation, updateDialog, exists),
+        () => this._insertTranslation(translation, updateDialog)
     );
   }
 
@@ -284,12 +285,33 @@ class EditForm {
     const line = this._findTranslationLineInHTML(translation.langCode);
     if (!line) return;
     const word = this._escapeHTML(translation.word);
-    const element = line.querySelector(`.trans-item[data-trans-word="${word}"]`);
+    const element = line.querySelector(`.trans-new-item[data-trans-word="${word}"]`);
     if (element) {
       element.remove();
-      // Line ends up empty, deleted it
-      if (!line.querySelector(".trans-item")) line.remove();
+      // Line ends up empty, delete it
+      if (!line.querySelector(".translation")) line.remove();
     }
+  }
+
+  /**
+   * Clear all edit markers created by this form.
+   */
+  clearFlags() {
+    this._translationsList.querySelectorAll(".trans-new-item")
+        .forEach((e) => {
+          e.classList.remove("trans-new-item");
+          e.removeAttribute("data-trans-word");
+        });
+    this._translationsList.querySelectorAll(".trans-new-line")
+        .forEach((e) => e.classList.remove("trans-new-line"));
+  }
+
+  /**
+   * Clear all edits made by this form.
+   */
+  clear() {
+    this._translationsList.querySelectorAll(".trans-new-line, .trans-new-item")
+        .forEach((e) => e.remove());
   }
 
   /**
@@ -312,11 +334,12 @@ class EditForm {
   /**
    * Insert the given translation into the HTML list.
    * @param translation {Translation} The translation to insert.
+   * @param updateDialog {boolean?} Indicate whether the dialog should be updated.
    * @param exists {boolean?} Indicate whether the page exists on the target wiki (true) or not (false).
    * If undefined, no wiki exists for the language code.
    * @private
    */
-  _insertTranslation(translation, exists) {
+  _insertTranslation(translation, updateDialog, exists) {
     let plusMinus = exists === undefined ? "" : exists ? "+" : "-";
     let transWikicode = `, {{trad${plusMinus}|${translation.langCode}|${translation.word}`;
     if (translation.grammarProperty) transWikicode += `|${translation.grammarProperty}`;
@@ -338,7 +361,7 @@ class EditForm {
           const line = this._findTranslationLineInHTML(translation.langCode);
           if (line) {
             line.append(wrapper);
-            this._pushTranslationToDialog(translation);
+            if (updateDialog) this._pushTranslationToDialog(translation);
           } else {
             const newLine = document.createElement("li");
             newLine.classList.add("trans-new-line");
@@ -348,9 +371,10 @@ class EditForm {
                   Array.from(elements).forEach((element) => {
                     newLine.append(element);
                   });
+                  wrapper.childNodes[0].textContent = ""; // Remove leading comma
                   newLine.append(wrapper);
                   this._insertLineInHTML(newLine, translation.langCode);
-                  this._pushTranslationToDialog(translation);
+                  if (updateDialog) this._pushTranslationToDialog(translation);
                 })
                 .catch((e) => {
                   console.error(e);

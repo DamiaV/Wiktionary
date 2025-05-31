@@ -17,7 +17,7 @@ const forms = [];
  */
 function onSubmit(edits) {
   // TODO edit page’s wikicode
-  // TODO remove all wrapper spans and tagging classes
+  forms.forEach((form) => form.clearFlags());
   dialog.hide();
 }
 
@@ -26,7 +26,7 @@ function onSubmit(edits) {
  * @param edit {Translation} The edit to undo.
  */
 function onUndo(edit) {
-  // TODO
+  forms[edit.boxIndex].removeTranslation(edit);
 }
 
 /**
@@ -34,14 +34,14 @@ function onUndo(edit) {
  * @param edit {Translation} The edit to redo.
  */
 function onRedo(edit) {
-  // TODO
+  forms[edit.boxIndex].insertTranslation(edit);
 }
 
 /**
  * Called when the user clicks the cancel button.
  */
 function onCancel() {
-  // TODO remove all wrapped elements
+  forms.forEach((form) => form.clear());
 }
 
 document.body.append(dialog.html);
