@@ -4,3 +4,4 @@ user-*.py
 apicache-py3/
 venv/
 .idea/
+modules/node_modules/
