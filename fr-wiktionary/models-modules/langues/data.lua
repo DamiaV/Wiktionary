@@ -1157,13 +1157,13 @@ l['cox'] = { name = 'nanti' }
 l['coz'] = { name = 'chocho' }
 l['cpa'] = { name = 'chinantèque de Palantla', sortKey = 'chinantèque Palantla' }
 l['cpc'] = { name = 'ajyíninka apurucayali' }
-l['cpe'] = { name = 'créoles et pidgins basés sur l’anglais', sortKey = 'créoles et pidgins anglais' }
+l['cpe'] = { name = 'créoles et pidgins basés sur l’anglais', sortKey = 'créoles et pidgins anglais', isGroup = true }
 l['cpe-spp'] = { name = 'pidgin des plantations samoanes', sortKey = 'pidgin Samoa plantations' }
-l['cpf'] = { name = 'créoles et pidgins basés sur le français', sortKey = 'créoles et pidgins français' }
+l['cpf'] = { name = 'créoles et pidgins basés sur le français', sortKey = 'créoles et pidgins français', isGroup = true }
 l['cpg'] = { name = 'cappadocien' }
 l['cpi'] = { name = 'anglais pidgin chinois', sortKey = 'pidgin chinois anglais' }
 l['cpo'] = { name = 'kpeego' }
-l['cpp'] = { name = 'créoles et pidgins basés sur le portugais', sortKey = 'créoles et pidgins portugais' }
+l['cpp'] = { name = 'créoles et pidgins basés sur le portugais', sortKey = 'créoles et pidgins portugais', isGroup = true }
 l['cpu'] = { name = 'ashéninka de Pichis', sortKey = 'ashéninka Pichis' }
 l['cpx'] = { name = 'puxian' }
 l['cqd'] = { name = 'miao chuanqiandian' }
@@ -1183,7 +1183,7 @@ l['crl'] = { name = 'cri de l’Est, dialecte du Nord', sortKey = 'cri Est diale
 l['crm'] = { name = 'cri de Moose', sortKey = 'cri Moose' }
 l['crn'] = { name = 'cora d’El Nayar', sortKey = 'cora El Nayar' }
 l['cro'] = { name = 'crow' }
-l['crp'] = { name = 'créoles et pidgins' }
+l['crp'] = { name = 'créoles et pidgins', isGroup = true }
 l['crq'] = { name = 'chorote iyo’wujwa' }
 l['crr'] = { name = 'algonquien de Caroline' }
 l['crs'] = { name = 'créole seychellois' }
