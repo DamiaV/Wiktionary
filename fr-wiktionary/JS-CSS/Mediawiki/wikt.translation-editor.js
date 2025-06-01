@@ -7,7 +7,7 @@
  * Ce gadget ajoute une formulaire dans chaque boite de traductions
  * qui permet d’ajouter des traductions sans avoir à éditer la page.
  * --
- * v2.0 2025-05-31 Full rewrite of [[MediaWiki:Gadget-translation editor.js]].
+ * v2.0 2025-06-01 Full rewrite of [[MediaWiki:Gadget-translation editor.js]].
  * --
  * [[Catégorie:JavaScript du Wiktionnaire|translation-editor.js]]
  */
@@ -45,15 +45,10 @@ function onSubmit(edits) {
   forms.forEach(form => form.setDisabled(true));
 
   api.edit(mw.config.get("wgPageName"), (revision) => {
-    // TODO group summary by language
     const [text, summary] = applyChanges(revision.content, groupEdits(edits));
-    // DEBUG
-    console.log(text);
-    console.log(summary);
-    throw new Error("test"); // TEMP
     return {
       text: text,
-      summary: `Traductions\u00a0: ${summary.join(", ")} (gadget v${VERSION})`,
+      summary: `Traductions\u00a0: ${summary.join("\u00a0; ")} (gadget v${VERSION})`,
     };
   }).then(() => {
     mw.notify(" Traduction(s) ajoutée(s).");
@@ -100,11 +95,10 @@ function groupEdits(edits) {
  * @param edits {GroupedEdits} The edits to apply.
  * @return {[string, string[]]} The edited text and an array containing the summaries of each edit.
  */
-function applyChanges(wikicode, edits) { // FIXME edits not applied
-  console.log(edits); // DEBUG
+function applyChanges(wikicode, edits) {
   const lines = wikicode.split("\n");
   const summary = [];
-  let boxIndex = 0;
+  let boxIndex = -1;
 
   // We use an indexed for-loop as the array size may change if new lines are inserted
   for (let i = 0; i < lines.length; i++) {
@@ -131,6 +125,12 @@ function applyChanges(wikicode, edits) { // FIXME edits not applied
 function insertTranslations(start, lines, langCode, translations, summary) {
   let i = start;
 
+  function insertLine() {
+    const header = generateTranslationHeaderWikicode(langCode);
+    const transWithoutComma = buildTranslationsLine(translations, summary).substring(2);
+    lines.splice(i, 0, `* ${header}${transWithoutComma}`);
+  }
+
   while (!lines[i].startsWith("{{trad-fin")) {
     const match = /{{T\|([^}]+)}}/.exec(lines[i]);
     if (!match) continue;
@@ -138,16 +138,16 @@ function insertTranslations(start, lines, langCode, translations, summary) {
     const lineLangCode = match[1].trim();
     if (lineLangCode === langCode) {
       lines[i] += buildTranslationsLine(translations, summary);
-      break;
+      return;
     } else if (compareLanguages(getLanguageName(langCode), getLanguageName(lineLangCode)) < 0) {
-      const header = "* " + generateTranslationHeaderWikicode(langCode);
-      const transWithoutComma = buildTranslationsLine(translations, summary).substring(2);
-      lines.splice(i, 0, `* ${header} : ${transWithoutComma}`);
-      break;
+      insertLine();
+      return;
     }
 
     i++;
   }
+
+  insertLine();
 }
 
 /**
