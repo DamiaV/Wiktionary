@@ -105,11 +105,15 @@ $(() => {
                 summary: "Fusion des modèles voir."
               })).then(console.log);
             });
-            mw.notify("Fusion effectuée.");
+            mw.notify("Fusion effectuée avec succès.", {
+              type: "success",
+            });
           },
           (error) => {
             if (error === "articleexists") {
-              mw.notify("Modèle existant. Fusion automatique impossible. Remplacement local uniquement.");
+              mw.notify("Modèle existant. Fusion automatique impossible. Remplacement local uniquement.", {
+                type: "warn",
+              });
               API.edit(title,
                   (revision) => ({
                     text: revision.content.replace(INPAGE_REGEX, `{{voir/${value}}}`),
