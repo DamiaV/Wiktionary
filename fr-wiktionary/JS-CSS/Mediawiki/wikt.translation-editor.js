@@ -60,9 +60,12 @@ function onSubmit(edits) {
       form.setDisabled(false);
     });
     dialog.hide();
-  }).catch((reason) => {
-    console.error(reason);
-    mw.notify("Une erreur est survenue, veuillez réessayer.", {
+  }).catch((error) => {
+    console.warn(error);
+    const message = error instanceof Error && error.message === "not_found"
+        ? "Une des boites de traductions n’a pas pu être trouvée, impossible de modifier la page."
+        : "Une erreur est survenue, veuillez réessayer.";
+    mw.notify(message, {
       type: "error",
     });
     dialog.setDisabled(false);
@@ -114,6 +117,8 @@ function applyChanges(wikicode, edits) {
         insertTranslations(i + 1, lines, langCode, translations, summary);
     }
   }
+
+  if (boxIndex < edits.length) throw new Error("not_found");
 
   return [lines.join("\n"), summary];
 }

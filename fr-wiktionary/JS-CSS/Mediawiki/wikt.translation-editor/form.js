@@ -465,13 +465,13 @@ class EditForm {
                   onDone();
                 })
                 .catch((e) => {
-                  console.error(e);
+                  console.warn(e);
                   alert("Une erreur est survenue, veuillez réessayer.");
                 });
           }
         })
         .catch((e) => {
-          console.error(e);
+          console.warn(e);
           alert("Une erreur est survenue, veuillez réessayer.");
         });
   }
