@@ -51,7 +51,9 @@ function onSubmit(edits) {
       summary: `Traductions\u00a0: ${summary.join("\u00a0; ")} (gadget v${VERSION})`,
     };
   }).then(() => {
-    mw.notify(" Traduction(s) ajoutée(s).");
+    mw.notify(" Traduction(s) ajoutée(s) avec succès.", {
+      type: "success",
+    });
     dialog.setDisabled(false);
     forms.forEach((form) => {
       form.clearFlags();
@@ -60,7 +62,9 @@ function onSubmit(edits) {
     dialog.hide();
   }).catch((reason) => {
     console.error(reason);
-    mw.notify("Une erreur est survenue, veuillez réessayer.");
+    mw.notify("Une erreur est survenue, veuillez réessayer.", {
+      type: "error",
+    });
     dialog.setDisabled(false);
     forms.forEach(form => form.setDisabled(false));
   });
