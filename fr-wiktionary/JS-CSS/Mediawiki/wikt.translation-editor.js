@@ -31,7 +31,7 @@ console.log("Chargement de Gadget-wikt.translation-editor.js…");
 
 const VERSION = "2.0";
 
-const api = new mw.Api({ userAgent: "Gadget-wikt.translation-editor" });
+const api = new mw.Api({ userAgent: `Gadget-wikt.translation-editor/${VERSION}` });
 const dialog = new EditDialog(onSubmit, onUndo, onRedo, onCancel);
 /** @type {EditForm[]} */
 const forms = [];
