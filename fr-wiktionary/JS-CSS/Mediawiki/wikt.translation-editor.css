@@ -68,7 +68,11 @@
   text-decoration: none;
 }
 
-/* Timeless */
+/* Skin-specific */
+
+.skin-vector-2022 #trans-dialog {
+  top: 6em;
+}
 
 .skin-timeless #trans-dialog {
   /* To avoid being hidden by the search bar */
