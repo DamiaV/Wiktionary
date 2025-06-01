@@ -133,7 +133,7 @@ class EditForm {
      */
     this._$submitButton = $(`<button type="submit">Ajouter</button>`);
     const $showMoreButton = $(`<a href="#">Plus</a>`);
-    this._$spinner = $('<img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Ajax_loader_metal_512.gif" alt="loading" style="width: 1.5em">');
+    this._$spinner = $('<img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Ajax_loader_metal_512.gif" alt="loading" class="trans-spinner">');
     this._$spinner.hide();
     /**
      * @type {Record<string, any>}

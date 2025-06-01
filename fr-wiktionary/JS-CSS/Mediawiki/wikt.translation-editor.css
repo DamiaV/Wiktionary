@@ -1,5 +1,7 @@
 /* [[Catégorie:CSS du Wiktionnaire|translation-editor.css]] */
 
+/* Translations form */
+
 .trans-form-error {
   color: #fd6463;
 }
@@ -16,6 +18,16 @@
 .translation-editor button[type="submit"]:disabled {
   cursor: not-allowed;
   color: gray;
+}
+
+.trans-spinner {
+  width: 1.5em;
+}
+
+/* Title form */
+
+.trans-box-title-editor {
+  display: inline;
 }
 
 /* Dialog box */
