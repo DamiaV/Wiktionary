@@ -147,8 +147,20 @@ class EditForm {
     this._$langInput.autocomplete({
       source: (request, response) => {
         // noinspection JSUnresolvedReference
-        const matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
-        const suggestions = LANG_NAMES.filter((item) => matcher.test(item));
+        /** @type {string} */
+        const term = request.term.toLowerCase();
+        // noinspection JSUnresolvedReference
+        const matcher = new RegExp($.ui.autocomplete.escapeRegex(term), "i");
+        const suggestions = LANG_NAMES
+            .filter((item) => matcher.test(item))
+            .sort((name1, name2) => {
+              // Put items starting with the term first
+              if (name1.toLowerCase().startsWith(term) && !name2.toLowerCase().startsWith(term))
+                return -1;
+              if (name2.toLowerCase().startsWith(term) && !name1.toLowerCase().startsWith(term))
+                return 1;
+              return compareLanguages(name1, name2);
+            });
         response(suggestions);
       },
       minLength: 2
