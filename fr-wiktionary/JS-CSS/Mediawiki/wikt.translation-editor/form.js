@@ -52,6 +52,12 @@ const GRAMMATICAL_PROPERTIES = {
   ni: "neutre inanimé",
 };
 /**
+ * An array containing the name of every available language.
+ * Used for auto-suggestions.
+ * @type {string[]}
+ */
+const LANG_NAMES = Array.from(LANG_NAME_TO_CODE.keys());
+/**
  * Name of the "conv" language (International Conventions).
  * Cached to avoid multiple queries.
  * @type {string}
@@ -135,9 +141,17 @@ class EditForm {
      */
     this._radioButtons = {};
 
-    // TODO autosuggestions
     this._$langInput.on("focusout", () => {
       this._setLanguage(this._$langInput.val().trim());
+    });
+    this._$langInput.autocomplete({
+      source: (request, response) => {
+        // noinspection JSUnresolvedReference
+        const matcher = new RegExp($.ui.autocomplete.escapeRegex(request.term), "i");
+        const suggestions = LANG_NAMES.filter((item) => matcher.test(item));
+        response(suggestions);
+      },
+      minLength: 2
     });
 
     $showMoreButton.on("click", (e) => {
