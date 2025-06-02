@@ -8,9 +8,7 @@
   },
   "author": "Danÿa",
   "license": "ISC",
-  "devDependencies": {
-    "@types/jquery": "^3.5.32",
-    "@wikimedia/codex": "^2.0.0-rc.2",
-    "@wikimedia/codex-icons": "^2.0.0-rc.2"
+  "dependencies": {
+    "types-mediawiki": "^1.10.1"
   }
 }
