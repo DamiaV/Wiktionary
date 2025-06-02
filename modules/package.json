@@ -9,6 +9,7 @@
   "author": "Danÿa",
   "license": "ISC",
   "dependencies": {
+    "@types/codemirror": "^5.60.16",
     "types-mediawiki": "^1.10.1"
   }
 }

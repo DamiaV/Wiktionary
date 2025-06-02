@@ -51,7 +51,7 @@ function getFullPageName(namespaceId, pageName) {
  * @param namespaceId {number} The page’s namespace ID.
  * @param basePageName {string} The page’s name.
  * @param subPagesPattern {string} The CirrusSearch pattern subpages’ names must match.
- * @param callback {(Object) => void} A callback function.
+ * @param callback {JQuery.jqXHR.DoneCallback} A callback function.
  */
 function getSubpages(namespaceId, basePageName, subPagesPattern, callback) {
   // Échapement des caractères spéciaux de regex
@@ -73,16 +73,14 @@ function getSubpages(namespaceId, basePageName, subPagesPattern, callback) {
 
 /**
  * Adds the given buttons to the current page’s title.
- * @param buttons {{text: string, title: string, callback: (event) => void}[]} The buttons to add.
+ * @param buttons {{text: string, title: string, callback: function(ClickEvent<HTMLAnchorElement, undefined, HTMLAnchorElement, HTMLAnchorElement>): void}[]} The buttons to add.
  * Each button object has to define a text, a title and
  * a callback function.
  */
 function addButtonAfterTitle(buttons) {
   const $heading = $("#firstHeading");
 
-  for (const button of buttons) {
-    const text = button.text;
-    const title = button.title;
+  for (const { text, title, callback } of buttons) {
     const $span = $("<span>");
     const $link = $("<a>");
 
@@ -94,7 +92,7 @@ function addButtonAfterTitle(buttons) {
     $link.text(text);
     $link.attr("href", "#");
     $link.attr("title", title);
-    $link.on("click", button.callback);
+    $link.on("click", callback);
 
     $span.append($link);
     $heading.append($span);
@@ -123,7 +121,7 @@ function onDOMChanges(callback, node, options) {
  * ⚠️ Makes a synced AJAX request to the server. ⚠️
  * @param wikicode {string} The wikicode to parse.
  * @param onlyFirstParagraph {boolean?} If true, only returns the HTML contents of the first paragraph.
- * @return {Object|string} The corresponding jQuery object or the HTML code if onlyFirstParagraph is true.
+ * @return {JQuery|string} The corresponding jQuery object or the HTML code if onlyFirstParagraph is true.
  */
 function renderWikicode(wikicode, onlyFirstParagraph) {
   let html;

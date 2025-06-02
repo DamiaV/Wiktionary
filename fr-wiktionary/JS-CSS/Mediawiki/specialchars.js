@@ -60,23 +60,28 @@ const TAGS = {
   ">>": "\u00a0»",
 };
 
+// noinspection JSUnresolvedReference
 if (typeof window.specialCharsCustom === "object") {
+  // noinspection JSUnresolvedReference
   for (const [from, to] of Object.entries(window.specialCharsCustom))
     TAGS[from] = to;
 }
 
-/** @type {Record<jQuery, string>} */
+/** @type {Record<JQueryTextInput, string>} */
 const previousText = {};
 let codeMirrorActive = false;
 
-const onKeyUp = e => parse($(e.target));
+/**
+ * @param e {JQuery.KeyUpEvent<HTMLInputElement, any, HTMLInputElement, HTMLInputElement>}
+ */
+const onKeyUp = (e) => parse($(e.target));
 
 function mark($element) {
   $element.data("sc-marked", true);
 }
 
 $("input[type='text'], input[type='search'], textarea")
-    .keyup(onKeyUp)
+    .on("keyup", onKeyUp)
     .each((_, element) => mark($(element)));
 onDOMChanges((mutationsList) => {
   mutationsList.forEach((mutation) => {
@@ -85,12 +90,11 @@ onDOMChanges((mutationsList) => {
           .find("input[type='text']:not([data-sc-marked]), input[type='search']:not([data-sc-marked]), textarea:not([data-sc-marked])")
           .each((_, element) => {
             const $element = $(element);
-            $element.keyup(onKeyUp);
+            $element.on("keyup", onKeyUp);
             mark($element);
           });
 
       if (!codeMirrorActive && isCodeMirrorEnabled()) {
-        // noinspection JSCheckFunctionSignatures
         getCodeMirror().on("keyup", () => parse(getEditBox()));
         codeMirrorActive = true;
       }
@@ -100,7 +104,7 @@ onDOMChanges((mutationsList) => {
 
 /**
  * Parses the text of the given text input.
- * @param $input {jQuery} The input element.
+ * @param $input {JQueryTextInput} The input element.
  */
 function parse($input) {
   let text = getEditAreaText($input);
