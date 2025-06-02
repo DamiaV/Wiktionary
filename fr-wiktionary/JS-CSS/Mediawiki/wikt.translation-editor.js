@@ -118,7 +118,7 @@ function applyChanges(wikicode, edits) {
     }
   }
 
-  if (boxIndex < edits.length) throw new Error("not_found");
+  if (boxIndex < edits.length - 1) throw new Error("not_found");
 
   return [lines.join("\n"), summary];
 }
