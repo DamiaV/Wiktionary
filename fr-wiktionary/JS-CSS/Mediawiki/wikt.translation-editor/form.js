@@ -119,24 +119,36 @@ class EditForm {
      */
     this._translationsList = this._getOrCreateList(translationsDiv);
 
+    /** @type {JQuery<HTMLFormElement>} */
     const $form = $(`<form class="translation-editor" data-trans-form-index="${index}">`);
     /**
+     * @type {JQuery<HTMLInputElement>}
      * @private
      */
     this._$langInput = $(`<input type="text" size="12" id="lang-input-${index}" placeholder="Langues">`);
+    /** @type {JQuery<HTMLInputElement>} */
     const $translationInput = $(`<input type="text" id="trans-input-${index}" placeholder="Traduction">`);
+    /** @type {JQuery<HTMLInputElement>} */
     const $transliterationInput = $(`<input type="text" id="translit-input-${index}" placeholder="ex : khimera pour химера">`);
+    /** @type {JQuery<HTMLInputElement>} */
     const $traditionalInput = $(`<input type="text" id="tradit-input-${index}" placeholder="ex : 軍團 pour 군단">`);
+    /** @type {JQuery<HTMLInputElement>} */
     const $pageNameInput = $(`<input type="text" id="page-name-input-${index}" placeholder="ex : amo pour amō">`);
     /**
+     * @type {JQuery<HTMLInputElement>}
      * @private
      */
     this._$submitButton = $(`<button type="submit">Ajouter</button>`);
+    /** @type {JQuery<HTMLAnchorElement>} */
     const $showMoreButton = $(`<a href="#">Plus</a>`);
+    /**
+     * @type {JQuery<HTMLImageElement>}
+     * @private
+     */
     this._$spinner = $('<img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Ajax_loader_metal_512.gif" alt="loading" class="trans-spinner">');
     this._$spinner.hide();
     /**
-     * @type {Record<string, any>}
+     * @type {Record<string, JQuery<HTMLInputElement>>}
      * @private
      */
     this._radioButtons = {};
@@ -144,6 +156,7 @@ class EditForm {
     this._$langInput.on("focusout", () => {
       this._setLanguage(this._$langInput.val().trim());
     });
+    // noinspection JSUnresolvedReference
     this._$langInput.autocomplete({
       source: (request, response) => {
         // noinspection JSUnresolvedReference
@@ -244,7 +257,7 @@ class EditForm {
         this._$pageNameLine
     );
 
-    $form.submit((e) => {
+    $form.on("submit", (e) => {
       e.preventDefault();
       if (this._disabled) return;
 
@@ -605,14 +618,15 @@ class EditForm {
   /**
    * Render the given wikicode.
    * @param wikicode {string} The wikicode to render.
-   * @return {Promise<NodeListOf<ChildNode>>} A Promise that returns the rendered HTML elements.
+   * @return {PromiseBase<NodeListOf<ChildNode>>} A Promise that returns the rendered HTML elements.
    * @private
    */
   _renderWikicode(wikicode) {
     return this._api.get({
       action: "parse",
       text: `<div id="trans-editor-wrapper">${wikicode}</div>`
-    }).then(data => {
+    }).then((data) => {
+      // noinspection JSUnresolvedReference
       const html = data.parse.text["*"];
       // Convert the parsed wikicode into DOM objects with jQuery then return the wrapping div’s contents
       return $(html)[0].querySelector("#trans-editor-wrapper").childNodes;

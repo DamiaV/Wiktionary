@@ -14,9 +14,18 @@ class EditDialog {
    * @param onCancel {() => void} The function to call when the cancel button is clicked and this dialog has closed.
    */
   constructor(onSubmit, onUndo, onRedo, onCancel) {
-    /** @type {Translation[]} */
+    /**
+     * @type {Translation[]}
+     * @private
+     */
     this._editHistory = [];
+    /**
+     * @private
+     */
     this._editCursor = -1;
+    /**
+     * @private
+     */
     this._disabled = false;
 
     const _HIDE_MESSAGE_KEY = "trans-editor-hide-message";
@@ -41,6 +50,9 @@ class EditDialog {
     buttonsWrapper.id = "td-buttons";
     box.append(buttonsWrapper);
 
+    /**
+     * @private
+     */
     this._submitButton = document.createElement("button");
     this._submitButton.textContent = "Enregistrer les modifications";
     this._submitButton.onclick = () => {
@@ -50,6 +62,9 @@ class EditDialog {
 
     buttonsWrapper.append(document.createElement("br"));
 
+    /**
+     * @private
+     */
     this._undoButton = document.createElement("button");
     this._undoButton.textContent = "← Annuler";
     this._undoButton.onclick = () => {
@@ -61,6 +76,9 @@ class EditDialog {
 
     buttonsWrapper.append(" ");
 
+    /**
+     * @private
+     */
     this._redoButton = document.createElement("button");
     this._redoButton.textContent = "Rétablir →";
     this._redoButton.onclick = () => {
@@ -104,6 +122,9 @@ class EditDialog {
       messageBox.append(hideMessageButton, messageWrapper, hideMessagePermanentlyButton);
     }
 
+    /**
+     * @private
+     */
     this._html = box;
 
     window.onbeforeunload = (e) => {
