@@ -39,7 +39,7 @@ function getPageLink(pageName) {
 /**
  * Applies the selected text formatting effect.
  * @param effect {string} The effect to apply (either "bold" or "italic").
- * @param $textInput {jQuery} The text input to format the text of.
+ * @param $textInput {JQuery} The text input to format the text of.
  */
 function applyTextEffect(effect, $textInput) {
   const selectedText = getSelectedText($textInput);
@@ -64,7 +64,7 @@ function applyTextEffect(effect, $textInput) {
  * @param cssClass {string|null?} Optional additonnal CSS classes.
  * @param text {(string|null)?} Some text that will be appended before the links.
  * @param insertFormatButtons {boolean?} Whether to insert formatting buttons before the list. Defaults to false.
- * @return {jQuery|HTMLElement} A jQuery object.
+ * @return {JQuery<HTMLElement>} A jQuery object.
  */
 function createLinks(
     list,
@@ -441,7 +441,7 @@ class MainGUI extends GUI {
   #otherProjects = {};
   /**
    * Language span tag in gadget’s title.
-   * @type {jQuery|HTMLElement}
+   * @type {JQuery<HTMLElement>}
    */
   #$titleLangSpan = null;
 
@@ -1052,7 +1052,7 @@ class MainGUI extends GUI {
   /**
    * Creates an HTML list of IPA symbols from an array of symbols.
    * @param ipaSymbols {string[][]} The list of IPA symbols.
-   * @return {Object} A jQuery object.
+   * @return {JQuery} A jQuery object.
    */
   #formatApi(ipaSymbols) {
     const $label = $("<span>");
