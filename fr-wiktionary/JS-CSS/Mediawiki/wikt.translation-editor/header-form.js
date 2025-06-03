@@ -66,7 +66,7 @@ class EditHeaderForm {
     this._numberInput.type = "text";
     this._numberInput.placeholder = "Numéro";
     this._numberInput.name = "number";
-    this._numberInput.size = 3;
+    this._numberInput.size = 5;
     this._numberInput.value = this._headerNumber.textContent.trim().slice(1, -1); // Remove enclosing ( )
     this._numberInput.onclick = (e) => e.stopPropagation();
     this._numberInput.onchange = () => this._updateSubmitButton();
