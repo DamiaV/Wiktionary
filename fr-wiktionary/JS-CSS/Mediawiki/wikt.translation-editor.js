@@ -8,6 +8,7 @@
  * qui permet d’ajouter des traductions sans avoir à éditer la page.
  * --
  * v2.0 2025-06-01 Full rewrite of [[MediaWiki:Gadget-translation editor.js]].
+ * v2.1 2025-06-03 Re-implement the editing of translation boxes’ titles.
  * --
  * [[Catégorie:JavaScript du Wiktionnaire|translation-editor.js]]
  */
@@ -26,10 +27,11 @@ const {
   generateTranslationWikicode,
   generateTranslationHeaderWikicode,
 } = require("./wikt.translation-editor/form.js");
+const { EditHeaderForm } = require("./wikt.translation-editor/header-form.js");
 
 console.log("Chargement de Gadget-wikt.translation-editor.js…");
 
-const VERSION = "2.0";
+const VERSION = "2.1";
 
 const api = new mw.Api({ userAgent: `Gadget-wikt.translation-editor/${VERSION}` });
 const dialog = new EditDialog(onSubmit, onUndo, onRedo, onCancel);
@@ -200,10 +202,14 @@ function onCancel() {
 
 document.body.append(dialog.html);
 document.querySelectorAll(".translations").forEach((div, i) => {
+  const $div = $(div);
+  const frame = $div.parents(".NavFrame")[0];
+  const header = frame.querySelector(".NavHead");
+  const headerForm = new EditHeaderForm(i, header, api);
+  header.prepend(headerForm.html, " ");
   const form = new EditForm(i, div, dialog, api);
   forms.push(form);
-  /** @type {HTMLElement} */
-  const container = $(div).parents(".NavContent")[0];
+  const container = $div.parents(".NavContent")[0];
   container.append(form.html);
 });
 // </nowiki>
