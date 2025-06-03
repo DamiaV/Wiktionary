@@ -18,7 +18,7 @@
       "Purger le cache de la page",
       "*"
   );
-  $(node).click((e) => {
+  $(node).on("click", (e) => {
     new mw.Api({ userAgent: "Gadget-OngletPurge" })
         .post({
           action: "purge",

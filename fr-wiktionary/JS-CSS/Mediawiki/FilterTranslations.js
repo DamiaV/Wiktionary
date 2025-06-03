@@ -19,7 +19,9 @@ console.log("Chargement de Gadget-FilterTranslations.js…");
   let $button = null;
 
   // Variable should be declared in user page.
+  // noinspection JSUnresolvedReference
   if (Array.isArray(window.ft_whitelist)) {
+    // noinspection JSUnresolvedReference
     /** @type {string[]} */
     const whitelist = window.ft_whitelist;
     console.log(`Found ${whitelist.length} languages in whitelist.`);

@@ -1,3 +1,4 @@
+// [[Catégorie:JavaScript du Wiktionnaire|add-nearest-words.js]]
 "use strict";
 
 const { getLanguagesNames } = require("./wikt.core.languages.js");
@@ -8,7 +9,7 @@ const api = new mw.Api({ userAgent: "Gadget-wikt.add-nearest-words.js" });
 
 /**
  * @param title {string}
- * @returns {jQuery}
+ * @returns {JQuery}
  */
 function createCurrentNode(title) {
   return $(`<bdi style="font-style: italic; font-weight: bold;">${title}</bdi>`);
@@ -18,7 +19,7 @@ function createCurrentNode(title) {
  * @param title {string}
  * @param text {string}
  * @param languageCode {string}
- * @returns {jQuery}
+ * @returns {JQuery}
  */
 function createWikiLink(title, text, languageCode) {
   return $(`<a rel="mw:WikiLink" href="/wiki/${title}#${languageCode}" title="${title}"><i>${text}</i></a>`);
@@ -43,7 +44,7 @@ function fetchNearWords(category, limit, word, key) {
   };
 
   return Promise.all([
-    api.get($.extend({}, commonParams, { cmdir: 'descending' })),
+    api.get(Object.assign({}, commonParams, { cmdir: "descending" })),
     api.get(commonParams)
   ]).then(([beforeData, afterData]) => {
     const beforeMembers = beforeData.query.categorymembers.reverse().map(m => m.title);
@@ -83,7 +84,7 @@ const languagesNames = getLanguagesNames(true);
 const langCodes = $('div.mw-heading2 > h2 > span.sectionlangue')
     .map((_, e) => e.id).get();
 
-const pageName = mw.config.get("wgPageName").replaceAll("_", " ");
+const pageName = String(mw.config.get("wgPageName")).replaceAll("_", " ");
 api.get({
   action: "query",
   prop: "categories",
@@ -101,6 +102,7 @@ api.get({
 
     if (filteredCategories.length === 0) return;
 
+    // noinspection JSUnresolvedReference
     generateNavigationWordList(
         languageCode,
         categoryName,

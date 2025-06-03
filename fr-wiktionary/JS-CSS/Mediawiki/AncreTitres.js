@@ -19,7 +19,9 @@
     showInternalLinkButton: true,
   };
 
-  if (window.titleLinks)
+  // noinspection JSUnresolvedReference
+  if (typeof window.titleLinks === "object")
+      // noinspection JSUnresolvedReference
     Object.assign(options, window.titleLinks);
 
   if (!$("#content").length || !options.showInternalLinkButton && !options.showUrlButton)
@@ -40,7 +42,7 @@
 
     if (options.showUrlButton) {
       $span.append(" ");
-      $(`<a href="#" title="${options.urlButtonDescription}">${options.urlButtonLabel}</a>`).click(() => {
+      $(`<a href="#" title="${options.urlButtonDescription}">${options.urlButtonLabel}</a>`).on("click", () => {
         window.prompt(
             "Lien :",
             `https:${mw.config.get("wgServer")}${mw.util.getUrl()}#${anchor}`
@@ -51,7 +53,7 @@
 
     if (options.showInternalLinkButton) {
       $span.append(" ");
-      $(`<a href="#" title="${options.internalLinkButtonDescription}">${options.internalLinkButtonLabel}</a>`).click(() => {
+      $(`<a href="#" title="${options.internalLinkButtonDescription}">${options.internalLinkButtonLabel}</a>`).on("click", () => {
         const escapedAnchor =
             anchor
                 // Escape HTML tags
@@ -65,7 +67,7 @@
                 .replaceAll("}", "&#125;");
         window.prompt(
             "Lien :",
-            `[[${mw.config.get("wgPageName").replaceAll("_", " ")}#${escapedAnchor}]]`
+            `[[${String(mw.config.get("wgPageName")).replaceAll("_", " ")}#${escapedAnchor}]]`
         );
         return false;
       }).appendTo($span);

@@ -20,7 +20,7 @@
  */
 "use strict";
 
-const { getLanguages } = require("./wikt.core.languages.js");
+const { getLanguagesNames } = require("./wikt.core.languages.js");
 const {
   getCursorLocation,
   setCursorLocation,
@@ -31,6 +31,8 @@ const {
   replaceEditAreaText,
   insertTextInEditArea,
 } = require("./wikt.core.edit.js");
+const { getSectionCodes, getWordTypeCodes } = require("./wikt.core.sections.js");
+const { getLexiconCodes } = require("./wikt.core.lexicons.js");
 
 console.log("Chargement de Gadget-wikt.auto-complete.js…");
 
@@ -65,7 +67,7 @@ class GadgetAutoComplete {
    * the document body and inserting the suggestions box.
    */
   constructor() {
-    $(document.body).keydown(event => {
+    $(document.body).on("keydown", (event) => {
       if (this.#suggestMode) {
         if (["ArrowUp", "ArrowDown", "Tab"].includes(event.code)) {
           // Prevent caret from moving and focus from changing
@@ -74,7 +76,7 @@ class GadgetAutoComplete {
       }
     });
 
-    $(document.body).keyup(event => {
+    $(document.body).on("keyup", (event) => {
       // Register cursor position for insertion
       this.#cursorPosition = getCursorLocation();
 
@@ -87,15 +89,14 @@ class GadgetAutoComplete {
       } else {
         let cursorPos = this.#cursorPosition;
 
-        if (event.code === "Escape" || event._HIDE_MESSAGE_KEY === "}") {
+        if (event.code === "Escape" || event.key === "}") {
           this.#enableSuggestions(false);
         } else if (event.code === "ArrowUp") { // FIXME fait nimp avec CodeMirror
           this.#selectSuggestion(this.#suggestionIndex - 1);
         } else if (event.code === "ArrowDown") { // FIXME fait nimp avec CodeMirror
           this.#selectSuggestion(this.#suggestionIndex + 1);
         } else if (event.code === "Tab") {
-          var text = this.#insertSuggestion();
-          cursorPos += text.length;
+          cursorPos += this.#insertSuggestion().length;
         } else if (!this.#suggest()) {
           this.#enableSuggestions(false);
         }
@@ -106,7 +107,7 @@ class GadgetAutoComplete {
       }
     });
 
-    $(document.body).click(event => {
+    $(document.body).on("click", (event) => {
       // Check if click target is inside the suggestions box.
       if ($(event.target).closest(this.#$suggestionBox).length) {
         let editBox;
@@ -189,7 +190,7 @@ class GadgetAutoComplete {
     $list.empty();
     this.#suggestions.splice(0, this.#suggestions.length); // Clear array
 
-    var filteredValues = values.filter(function (v) {
+    const filteredValues = values.filter(function (v) {
       // noinspection JSUnresolvedFunction
       return v.toLowerCase().startsWith(value.toLowerCase());
     });
@@ -199,11 +200,11 @@ class GadgetAutoComplete {
         return;
       }
 
-      var prefix = v.substr(0, value.length);
-      var rest = v.substr(value.length);
-      var $item = $(`<li><span class="autocomplete-highlight">${prefix}</span>${rest}</li>`);
+      const prefix = v.substring(0, value.length);
+      const rest = v.substring(value.length);
+      const $item = $(`<li><span class="autocomplete-highlight">${prefix}</span>${rest}</li>`);
 
-      $item.click(() => {
+      $item.on("click", () => {
         this.#selectSuggestion(i);
         this.#insertSuggestion();
       });
@@ -211,7 +212,7 @@ class GadgetAutoComplete {
       this.#suggestions.push([prefix, rest]);
     });
 
-    var $message = this.#$suggestionBox.find("span:not(.autocomplete-highlight)");
+    const $message = this.#$suggestionBox.find("span:not(.autocomplete-highlight)");
     if (filteredValues.length) {
       this.#selectSuggestion(0);
       $message.hide();
@@ -252,64 +253,8 @@ class GadgetAutoComplete {
 }
 
 const gadget = new GadgetAutoComplete();
-window.gadget_autoComplete = gadget;
-
-/**
- * Utility function that adds support to the given template that uses a single data module.
- * @param templateName {string} Template’s name without "Template:".
- * @param moduleName {string} Name of the module used by the template without "Module:".
- *                   Must have a /data subpage returning a table holding the authorized values.
- */
-function addTemplate(templateName, moduleName) {
-  $.getJSON(
-      `/wiki/Module:${encodeURIComponent(moduleName)}/data/dump.json`,
-      {
-        action: "raw",
-      }
-  ).then((data) => {
-    try {
-      gadget.addTemplateParameters(templateName, Object.keys(data));
-    } catch (e) {
-      console.log(`An error occured while parsing JSON for [[Module:${moduleName}/data]] ([[Template:${templateName}]])`);
-    }
-  });
-}
-
-// [[Modèle:langue]], [[MediaWiki:Gadget-wikt.core.languages.json]]
-/** @type {string[]} */
-const langsData = [];
-for (const code of getLanguages(true).keys())
-  langsData.push(code);
-gadget.addTemplateParameters("langue", langsData);
-
-// [[Modèle:lexique]], [[Module:lexique/data/dump.json]]
-addTemplate("lexique", "lexique");
-// [[Modèle:info lex]], [[Module:lexique/data/dump.json]]
-addTemplate("info lex", "lexique");
-// [[Modèle:S]], [[Module:section article/data/dump.json]], [[Module:types de mots/data/dump.json]]
-$.getJSON(
-    "/wiki/Module:section_article/data/dump.json",
-    {
-      action: "raw",
-    }
-).then((data) => {
-  try {
-    const sectionIds = Object.keys(data["texte"]);
-    $.getJSON(
-        "/wiki/Module:types_de_mots/data/dump.json",
-        {
-          action: "raw",
-        }
-    ).then((data) => {
-      try {
-        const wordTypes = Object.keys(data["texte"]);
-        gadget.addTemplateParameters("S", sectionIds.concat(wordTypes));
-      } catch (e) {
-        console.log("An error occured while parsing JSON for [[Module:types de mots/data/dump.json]] ([[Template:S]]): " + e);
-      }
-    });
-  } catch (e) {
-    console.log("An error occured while parsing JSON for [[Module:section article/data/dump.json]] ([[Template:S]]): " + e);
-  }
-});
+gadget.addTemplateParameters("langue", Array.from(getLanguagesNames().values()));
+gadget.addTemplateParameters("S", getSectionCodes().concat(getWordTypeCodes()));
+gadget.addTemplateParameters("lexique", getLexiconCodes());
+gadget.addTemplateParameters("info lex", getLexiconCodes());
 // </nowiki>

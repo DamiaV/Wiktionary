@@ -81,12 +81,9 @@ function formatSections(text) {
 
     let langCode = null;
     if (sectionData.requiresLanguageCode) {
-      if (isTemplateS)
-        langCode = /{{S\|[^|}]+?\|([^|}=]+?)[|}]/.exec(sectionText);
-      else
-        langCode = /\|([^|}=]+?)[|}]/.exec(sectionText);
-      if (langCode !== null)
-        langCode = $.trim(langCode[1]);
+      if (isTemplateS) langCode = /{{S\|[^|}]+?\|([^|}=]+?)[|}]/.exec(sectionText);
+      else langCode = /\|([^|}=]+?)[|}]/.exec(sectionText);
+      if (langCode !== null) langCode = langCode[1].trim();
       else {
         errors.push({
           invalidLine: sectionText,

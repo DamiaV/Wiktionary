@@ -40,7 +40,7 @@
     let defaultsub = $("#specialcharsets p").first().attr("title");
     if ($.cookie("Commonedit_selected")) {
       defaultsub = $.cookie("Commonedit_selected");
-      $(`#specialcharsets select option[value='${defaultsub}']`).attr("selected", true);
+      $(`#specialcharsets select option[value='${defaultsub}']`).prop("selected", true);
     }
     chooseCharSubset(defaultsub);
   }

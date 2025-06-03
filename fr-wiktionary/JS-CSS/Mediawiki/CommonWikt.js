@@ -39,9 +39,9 @@ function CommonWikt_CleTri(word) {
  */
 function CommonWikt_AddTabMenu(link, title) {
   $(() => {
-    const cactionsTab = document.getElementById('p-cactions');
+    const cactionsTab = document.getElementById("p-cactions");
     if (cactionsTab) {
-      const tabList = cactionsTab.getElementsByTagName('ul')[0];
+      const tabList = cactionsTab.getElementsByTagName("ul")[0];
       tabList.innerHTML += '<li><a href="' + link + '">' + title + '</a></li>';
       if (cactionsTab.className)
         cactionsTab.className = cactionsTab.className.replace(/\s*emptyPortlet\s*/, " ");
@@ -54,13 +54,28 @@ function CommonWikt_AddTabMenu(link, title) {
  */
 
 /**
+ * @typedef {{
+ *  method?: "GET" | "POST",
+ *  url: string,
+ *  headers: Record<string, string>,
+ *  data: any,
+ *  onSuccess?: (XMLHttpRequest, AjaxBundle) => void,
+ *  onFailure?: (XMLHttpRequest, AjaxBundle) => void,
+ *  [key: string]: any,
+ * }} AjaxBundle
+ */
+/**
  * Objet permettant d’envoyer une requête AJAX aux serveurs WikiMedia.
  * - soit via l’interface standard (index.php)
  * - soit via l’API (api.php)
  * - soit via les requêtes POST et GET
- * @deprecated Utiliser $.get() à la place.
+ * @deprecated Utiliser $.ajax() à la place.
  */
 var CommonWikt_ajax = {
+  /**
+   * @param bundle {AjaxBundle}
+   * @return {XMLHttpRequest}
+   */
   http: (bundle) => {
     const xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = () => {
@@ -69,11 +84,15 @@ var CommonWikt_ajax = {
     };
     xmlhttp.open(bundle.method ? bundle.method : "GET", bundle.url);
     if (bundle.headers)
-      for (const field of bundle.headers)
-        xmlhttp.setRequestHeader(field, bundle.headers[field]);
-    xmlhttp.send(bundle.data ? bundle.data : null);
+      for (const [field, value] of Object.entries(bundle.headers))
+        xmlhttp.setRequestHeader(field, value);
+    xmlhttp.send(bundle.data || null);
     return xmlhttp;
   },
+  /**
+   * @param xmlhttp {XMLHttpRequest}
+   * @param bundle {AjaxBundle}
+   */
   httpComplete: (xmlhttp, bundle) => {
     if (xmlhttp.status === 200 || xmlhttp.status === 302) {
       if (bundle.onSuccess)

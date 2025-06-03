@@ -47,7 +47,9 @@ const COOKIE_KEY_TRANSLATION = "add_examples_translation";
 const COOKIE_KEY_TRANSCRIPTION = "add_examples_transcription";
 
 let MAX_NUMBER_OF_EXAMPLES = 5;
+// noinspection JSUnresolvedReference
 if (!window.max_number_of_examples && window.max_number_of_examples instanceof Number) {
+  // noinspection JSUnresolvedReference
   MAX_NUMBER_OF_EXAMPLES = window.max_number_of_examples;
   console.log("Using preferred maximum number of examples: " + MAX_NUMBER_OF_EXAMPLES);
 }
@@ -172,10 +174,10 @@ $("ul > li > .example").each(function () {
 
 /**
  * Constructor for the edit form.
- * @param $lastExample {jQuery} The element corresponding to the example right above the button.
- * @param $button {jQuery} The button that shows this form.
+ * @param $lastExample {JQuery} The element corresponding to the example right above the button.
+ * @param $button {JQuery} The button that shows this form.
  * @param language {string} Language for the example.
- * @param definitionLevel {Array<string|number>} Indices of the associated definition.
+ * @param definitionLevel {(string|number)[]} Indices of the associated definition.
  * @constructor
  */
 function Form($lastExample, $button, language, definitionLevel) {
@@ -187,7 +189,7 @@ function Form($lastExample, $button, language, definitionLevel) {
 
   /**
    * Create a toolbar for the given text input.
-   * @param $textInput {jQuery} The text input to associate the toolbar to.
+   * @param $textInput {JQueryTextInput} The text input to associate the toolbar to.
    * @return {OO.ui.Toolbar} A new toolbar.
    */
   const createToolbar = ($textInput) => {
@@ -352,7 +354,7 @@ function Form($lastExample, $button, language, definitionLevel) {
 Form.prototype = {
   /**
    * Returns the jQuery object for this form.
-   * @return {jQuery}
+   * @return {JQuery}
    */
   get $element() {
     return this._frame.$element;
@@ -387,7 +389,7 @@ Form.prototype = {
   /**
    * Format the selected text using the given effect.
    * @param effect {string} The effect to apply (either "bold" or "italic").
-   * @param $textInput {jQuery} The text input to format the text of.
+   * @param $textInput {JQueryTextInput} The text input to format the text of.
    */
   applyTextEffect: function (effect, $textInput) {
     const selectedText = getSelectedText($textInput);

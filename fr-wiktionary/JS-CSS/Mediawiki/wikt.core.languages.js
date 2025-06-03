@@ -36,7 +36,9 @@ for (const [code, targetCode] of Object.entries(languagesData.redirects)) {
 
 /**
  * Checks if aliases are allowed.
- * @returns {boolean} True if aliases are allowed or if data is not an alias.
+ * @param allowAliases {boolean} Whether to allow aliases.
+ * @param data {LanguageData} The data object to check.
+ * @return {boolean} True if aliases are allowed or if data is not an alias.
  */
 function checkAllowAliases(allowAliases, data) {
   return allowAliases || !data.aliasOf;
@@ -44,7 +46,9 @@ function checkAllowAliases(allowAliases, data) {
 
 /**
  * Checks if group or special languages are allowed.
- * @returns {boolean} True if languages marked as `isGroup` or `isSpecial` are allowed.
+ * @param allowSpecial {boolean} Whether to allow group or special codes.
+ * @param data {LanguageData} The data object to check.
+ * @return {boolean} True if languages marked as `isGroup` or `isSpecial` are allowed.
  */
 function checkAllowSpecial(allowSpecial, data) {
   return allowSpecial || !data.isGroup && !data.isSpecial;

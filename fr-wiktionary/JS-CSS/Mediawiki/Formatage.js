@@ -119,15 +119,17 @@ function logChanges(errors, changesCount) {
 }
 
 function disableWikEd() {
-  if (window.wikEdUseWikEd) {
+  // noinspection JSUnresolvedReference
+  if (window.wikEdUseWikEd)
+      // noinspection JSUnresolvedReference
     window.WikEdUpdateTextarea();
-  }
 }
 
 function enableWikEd() {
-  if (window.wikEdUseWikEd) {
+  // noinspection JSUnresolvedReference
+  if (window.wikEdUseWikEd)
+      // noinspection JSUnresolvedReference
     window.WikEdUpdateFrame();
-  }
 }
 
 createFormatButton();

@@ -1,0 +1,698 @@
+{
+  "codes": {
+    "conjonction de coordination": {
+      "alias": [
+        "conj-coord",
+        "conjonction coo"
+      ],
+      "abrev": "conj-coord",
+      "mot": "conjonction de coordination",
+      "mot_pl": "conjonctions de coordination"
+    },
+    "nom scientifique": {
+      "alias": [
+        "nom-sciences",
+        "nom science",
+        "nom scient"
+      ],
+      "abrev": "nom-sciences",
+      "mot": "nom scientifique",
+      "mot_pl": "noms scientifiques"
+    },
+    "adverbe": {
+      "abrev": "adv",
+      "mot": "adverbe",
+      "locution_pl": "locutions adverbiales",
+      "mot_pl": "adverbes",
+      "alias": [
+        "adv"
+      ],
+      "locution": "locution adverbiale"
+    },
+    "lettre": {
+      "abrev": "lettre",
+      "mot": "lettre",
+      "mot_pl": "lettres"
+    },
+    "pronom": {
+      "abrev": "pronom",
+      "mot": "pronom",
+      "locution_pl": "locutions pronominales",
+      "mot_pl": "pronoms",
+      "locution": "locution pronominale"
+    },
+    "locution": {
+      "abrev": "loc",
+      "mot": "locution",
+      "locution_pl": "locutions",
+      "mot_pl": "locutions",
+      "alias": [
+        "loc"
+      ],
+      "locution": "locution"
+    },
+    "copule": {
+      "abrev": "copule",
+      "mot": "copule",
+      "mot_pl": "copules"
+    },
+    "adverbe interrogatif": {
+      "alias": [
+        "adv-int",
+        "adverbe int"
+      ],
+      "abrev": "adv-int",
+      "mot": "adverbe interrogatif",
+      "mot_pl": "adverbes interrogatifs"
+    },
+    "adjectif interrogatif": {
+      "alias": [
+        "adj-int",
+        "adjectif int"
+      ],
+      "abrev": "adj-int",
+      "mot": "adjectif interrogatif",
+      "mot_pl": "adjectifs interrogatifs"
+    },
+    "postposition": {
+      "alias": [
+        "post",
+        "postpos"
+      ],
+      "abrev": "post",
+      "mot": "postposition",
+      "mot_pl": "postpositions"
+    },
+    "adjectif exclamatif": {
+      "alias": [
+        "adj-excl",
+        "adjectif exc"
+      ],
+      "abrev": "adj-excl",
+      "mot": "adjectif exclamatif",
+      "mot_pl": "adjectifs exclamatifs"
+    },
+    "sinogramme": {
+      "alias": [
+        "sinog",
+        "sino"
+      ],
+      "abrev": "sinogramme",
+      "mot": "sinogramme",
+      "mot_pl": "sinogrammes"
+    },
+    "article indéfini": {
+      "alias": [
+        "art-indéf",
+        "article ind"
+      ],
+      "abrev": "art-indéf",
+      "mot": "article indéfini",
+      "mot_pl": "articles indéfinis"
+    },
+    "nom de famille": {
+      "alias": [
+        "nom-fam"
+      ],
+      "abrev": "nom-fam",
+      "mot": "nom de famille",
+      "mot_pl": "noms de famille"
+    },
+    "nom propre": {
+      "alias": [
+        "nom-pr"
+      ],
+      "abrev": "nom-pr",
+      "mot": "nom propre",
+      "mot_pl": "noms propres"
+    },
+    "gismu": {
+      "abrev": "gismu",
+      "mot": "gismu",
+      "mot_pl": "gismu"
+    },
+    "adverbe relatif": {
+      "alias": [
+        "adv-rel",
+        "adverbe rel"
+      ],
+      "abrev": "adv-rel",
+      "mot": "adverbe relatif",
+      "mot_pl": "adverbes relatifs"
+    },
+    "conjonction": {
+      "abrev": "conj",
+      "mot": "conjonction",
+      "locution_pl": "locutions conjonctives",
+      "mot_pl": "conjonctions",
+      "alias": [
+        "conj"
+      ],
+      "locution": "locution conjonctive"
+    },
+    "proclitique": {
+      "alias": [
+        "procl"
+      ],
+      "abrev": "procl",
+      "mot": "proclitique",
+      "mot_pl": "proclitiques"
+    },
+    "article défini": {
+      "alias": [
+        "art-déf",
+        "article déf"
+      ],
+      "abrev": "art-déf",
+      "mot": "article défini",
+      "mot_pl": "articles définis"
+    },
+    "verbe pronominal": {
+      "abrev": "verb",
+      "mot": "verbe",
+      "locution_pl": "locutions verbales",
+      "mot_pl": "verbes",
+      "alias": [
+        "verb-pr",
+        "verbe pr"
+      ],
+      "locution": "locution verbale"
+    },
+    "enclitique": {
+      "alias": [
+        "encl"
+      ],
+      "abrev": "encl",
+      "mot": "enclitique",
+      "mot_pl": "enclitiques"
+    },
+    "rafsi": {
+      "abrev": "rafsi",
+      "mot": "rafsi",
+      "mot_pl": "rafsi"
+    },
+    "particule numérale": {
+      "alias": [
+        "part-num",
+        "particule num"
+      ],
+      "abrev": "part-num",
+      "mot": "particule numérale",
+      "mot_pl": "particules numérales"
+    },
+    "adverbe indéfini": {
+      "alias": [
+        "adv-ind",
+        "adverbe ind"
+      ],
+      "abrev": "adv-ind",
+      "mot": "adverbe indéfini",
+      "mot_pl": "adverbes indéfinis"
+    },
+    "adjectif numéral": {
+      "alias": [
+        "adj-num",
+        "adjectif num"
+      ],
+      "abrev": "adj-num",
+      "mot": "adjectif numéral",
+      "mot_pl": "adjectifs numéraux"
+    },
+    "patronyme": {
+      "abrev": "patronyme",
+      "mot": "patronyme",
+      "mot_pl": "patronymes"
+    },
+    "adverbe pronominal": {
+      "alias": [
+        "adv-pron",
+        "adverbe pro"
+      ],
+      "abrev": "adv-pron",
+      "mot": "adverbe pronominal",
+      "mot_pl": "adverbes pronominaux"
+    },
+    "infixe": {
+      "alias": [
+        "inf"
+      ],
+      "abrev": "inf",
+      "mot": "infixe",
+      "mot_pl": "infixes"
+    },
+    "adjectif indéfini": {
+      "alias": [
+        "adj-indéf",
+        "adjectif ind"
+      ],
+      "abrev": "adj-indéf",
+      "mot": "adjectif indéfini",
+      "mot_pl": "adjectifs indéfinis"
+    },
+    "adjectif": {
+      "abrev": "adj",
+      "mot": "adjectif",
+      "locution_pl": "locutions adjectivales",
+      "mot_pl": "adjectifs",
+      "alias": [
+        "adj",
+        "adjectif qualificatif"
+      ],
+      "locution": "locution adjectivale"
+    },
+    "affixe": {
+      "alias": [
+        "aff"
+      ],
+      "abrev": "aff",
+      "mot": "affixe",
+      "mot_pl": "affixes"
+    },
+    "circonfixe": {
+      "alias": [
+        "circonf",
+        "circon"
+      ],
+      "abrev": "circon",
+      "mot": "circonfixe",
+      "mot_pl": "circonfixes"
+    },
+    "article partitif": {
+      "alias": [
+        "art-part",
+        "article par"
+      ],
+      "abrev": "art-part",
+      "mot": "article partitif",
+      "mot_pl": "articles partitifs"
+    },
+    "déterminant démonstratif": {
+      "alias": [
+        "dét-dém",
+        "déterminant dém",
+        "dét-dem"
+      ],
+      "abrev": "dét-dém",
+      "mot": "déterminant démonstratif",
+      "mot_pl": "déterminants démonstratifs"
+    },
+    "locution-phrase": {
+      "abrev": "phr",
+      "mot": "locution-phrase",
+      "locution_pl": "locutions-phrases",
+      "mot_pl": "locutions-phrases",
+      "alias": [
+        "loc-phr",
+        "locution phrase",
+        "phrase"
+      ],
+      "locution": "locution-phrase"
+    },
+    "interjection": {
+      "abrev": "interj",
+      "mot": "interjection",
+      "locution_pl": "locutions interjectives",
+      "mot_pl": "interjections",
+      "alias": [
+        "interj"
+      ],
+      "locution": "locution interjective"
+    },
+    "nom": {
+      "abrev": "nom",
+      "mot": "nom commun",
+      "locution_pl": "locutions nominales",
+      "mot_pl": "noms communs",
+      "alias": [
+        "substantif",
+        "nom commun"
+      ],
+      "locution": "locution nominale"
+    },
+    "pronom interrogatif": {
+      "alias": [
+        "pronom-int",
+        "pronom int"
+      ],
+      "abrev": "pronom-int",
+      "mot": "pronom interrogatif",
+      "mot_pl": "pronoms interrogatifs"
+    },
+    "adjectif possessif": {
+      "alias": [
+        "adj-pos",
+        "adjectif pos"
+      ],
+      "abrev": "adj-pos",
+      "mot": "adjectif possessif",
+      "mot_pl": "adjectifs possessifs"
+    },
+    "pronom relatif": {
+      "alias": [
+        "pronom-rel",
+        "pronom rel"
+      ],
+      "abrev": "pronom-rel",
+      "mot": "pronom relatif",
+      "mot_pl": "pronoms relatifs"
+    },
+    "préfixe": {
+      "alias": [
+        "préf"
+      ],
+      "abrev": "préf",
+      "mot": "préfixe",
+      "mot_pl": "préfixes"
+    },
+    "adjectif démonstratif": {
+      "alias": [
+        "adj-dém",
+        "adjectif dém"
+      ],
+      "abrev": "adj-dém",
+      "mot": "adjectif démonstratif",
+      "mot_pl": "adjectifs démonstratifs"
+    },
+    "pré-verbe": {
+      "abrev": "pré-verb",
+      "mot": "pré-verbe",
+      "mot_pl": "pré-verbes"
+    },
+    "préposition": {
+      "abrev": "prép",
+      "mot": "préposition",
+      "locution_pl": "locutions prépositives",
+      "mot_pl": "prépositions",
+      "alias": [
+        "prép"
+      ],
+      "locution": "locution prépositive"
+    },
+    "déterminant": {
+      "alias": [
+        "dét"
+      ],
+      "abrev": "dét",
+      "mot": "déterminant",
+      "mot_pl": "déterminants"
+    },
+    "adjectif relatif": {
+      "alias": [
+        "adj-rel",
+        "adjectif rel"
+      ],
+      "abrev": "adj-rel",
+      "mot": "adjectif relatif",
+      "mot_pl": "adjectifs relatifs"
+    },
+    "suffixe": {
+      "alias": [
+        "suff",
+        "suf"
+      ],
+      "abrev": "suf",
+      "mot": "suffixe",
+      "mot_pl": "suffixes"
+    },
+    "interfixe": {
+      "alias": [
+        "interf"
+      ],
+      "abrev": "interf",
+      "mot": "interfixe",
+      "mot_pl": "interfixes"
+    },
+    "racine": {
+      "mot": "racine",
+      "mot_pl": "racines"
+    },
+    "numéral": {
+      "alias": [
+        "numér",
+        "num"
+      ],
+      "abrev": "numeral",
+      "mot": "numéral",
+      "mot_pl": "numéraux"
+    },
+    "classificateur": {
+      "alias": [
+        "class",
+        "classif"
+      ],
+      "abrev": "class",
+      "mot": "classificateur",
+      "mot_pl": "classificateurs"
+    },
+    "symbole": {
+      "alias": [
+        "symb"
+      ],
+      "abrev": "symb",
+      "mot": "symbole",
+      "mot_pl": "symboles"
+    },
+    "article": {
+      "alias": [
+        "art"
+      ],
+      "abrev": "art",
+      "mot": "article",
+      "mot_pl": "articles"
+    },
+    "variante typographique": {
+      "alias": [
+        "var-typo",
+        "variante typo",
+        "variante par contrainte typographique"
+      ],
+      "abrev": "var-typo",
+      "mot": "variante par contrainte typographique",
+      "mot_pl": "variantes par contrainte typographique"
+    },
+    "quantificateur": {
+      "alias": [
+        "quantif"
+      ],
+      "abrev": "quantif",
+      "mot": "quantificateur",
+      "mot_pl": "quantificateurs"
+    },
+    "idéophone": {
+      "mot": "idéophone",
+      "mot_pl": "idéophones"
+    },
+    "proverbe": {
+      "abrev": "prov",
+      "mot": "proverbe",
+      "locution_pl": "proverbes",
+      "mot_pl": "proverbes",
+      "alias": [
+        "prov"
+      ],
+      "locution": "proverbe"
+    },
+    "pré-nom": {
+      "abrev": "pré-nom",
+      "mot": "pré-nom",
+      "mot_pl": "pré-noms"
+    },
+    "onomatopée": {
+      "alias": [
+        "onoma",
+        "onom"
+      ],
+      "abrev": "onoma",
+      "mot": "onomatopée",
+      "mot_pl": "onomatopées"
+    },
+    "particule": {
+      "alias": [
+        "part"
+      ],
+      "abrev": "part",
+      "mot": "particule",
+      "mot_pl": "particules"
+    },
+    "radical": {
+      "alias": [
+        "rad"
+      ],
+      "abrev": "radical",
+      "mot": "radical",
+      "mot_pl": "radicaux"
+    },
+    "verbe": {
+      "abrev": "verb",
+      "mot": "verbe",
+      "locution_pl": "locutions verbales",
+      "mot_pl": "verbes",
+      "alias": [
+        "verb"
+      ],
+      "locution": "locution verbale"
+    },
+    "pronom possessif": {
+      "alias": [
+        "pronom-pos",
+        "pronom pos"
+      ],
+      "abrev": "pronom-pos",
+      "mot": "pronom possessif",
+      "mot_pl": "pronoms possessifs"
+    },
+    "pronom personnel": {
+      "alias": [
+        "pronom-pers",
+        "pronom-per",
+        "pronom réf",
+        "pronom-réfl",
+        "pronom réfléchi"
+      ],
+      "abrev": "pronom-pers",
+      "mot": "pronom personnel",
+      "mot_pl": "pronoms personnels"
+    },
+    "pronom indéfini": {
+      "alias": [
+        "pronom-indéf",
+        "pronom ind"
+      ],
+      "abrev": "pronom-indéf",
+      "mot": "pronom indéfini",
+      "mot_pl": "pronoms indéfinis"
+    },
+    "pronom démonstratif": {
+      "alias": [
+        "pronom-dém",
+        "pronom dém"
+      ],
+      "abrev": "pronom-dém",
+      "mot": "pronom démonstratif",
+      "mot_pl": "pronoms démonstratifs"
+    },
+    "pronom-adjectif": {
+      "abrev": "pronom-adj",
+      "mot": "pronom-adjectif",
+      "mot_pl": "pronoms-adjectifs"
+    },
+    "prénom": {
+      "abrev": "prénom",
+      "mot": "prénom",
+      "mot_pl": "prénoms"
+    },
+    "déterminant possessif": {
+      "alias": [
+        "dét pos",
+        "déterminant pos"
+      ],
+      "abrev": "dét-pos",
+      "mot": "déterminant possessif",
+      "mot_pl": "déterminants possessifs"
+    }
+  },
+  "aliases": {
+    "interj": "interjection",
+    "adv": "adverbe",
+    "pronom-pers": "pronom personnel",
+    "adv-rel": "adverbe relatif",
+    "conjonction coo": "conjonction de coordination",
+    "déterminant dém": "déterminant démonstratif",
+    "suff": "suffixe",
+    "verb": "verbe",
+    "conj": "conjonction",
+    "adj-dém": "adjectif démonstratif",
+    "adverbe ind": "adverbe indéfini",
+    "pronom-int": "pronom interrogatif",
+    "adjectif int": "adjectif interrogatif",
+    "pronom-indéf": "pronom indéfini",
+    "adjectif rel": "adjectif relatif",
+    "num": "numéral",
+    "article par": "article partitif",
+    "adv-int": "adverbe interrogatif",
+    "suf": "suffixe",
+    "adjectif dém": "adjectif démonstratif",
+    "adj-indéf": "adjectif indéfini",
+    "aff": "affixe",
+    "part": "particule",
+    "pronom dém": "pronom démonstratif",
+    "pronom-dém": "pronom démonstratif",
+    "pronom ind": "pronom indéfini",
+    "procl": "proclitique",
+    "pronom réfléchi": "pronom personnel",
+    "adj": "adjectif",
+    "symb": "symbole",
+    "circonf": "circonfixe",
+    "circon": "circonfixe",
+    "pronom-per": "pronom personnel",
+    "postpos": "postposition",
+    "verb-pr": "verbe pronominal",
+    "dét": "déterminant",
+    "rad": "radical",
+    "adverbe pro": "adverbe pronominal",
+    "dét pos": "déterminant possessif",
+    "loc": "locution",
+    "numér": "numéral",
+    "onoma": "onomatopée",
+    "prov": "proverbe",
+    "adv-pron": "adverbe pronominal",
+    "adjectif pos": "adjectif possessif",
+    "encl": "enclitique",
+    "particule num": "particule numérale",
+    "prép": "préposition",
+    "adjectif ind": "adjectif indéfini",
+    "variante par contrainte typographique": "variante typographique",
+    "pronom-réfl": "pronom personnel",
+    "var-typo": "variante typographique",
+    "art": "article",
+    "pronom réf": "pronom personnel",
+    "classif": "classificateur",
+    "adverbe rel": "adverbe relatif",
+    "class": "classificateur",
+    "onom": "onomatopée",
+    "interf": "interfixe",
+    "adj-rel": "adjectif relatif",
+    "pronom-pos": "pronom possessif",
+    "phrase": "locution-phrase",
+    "adj-excl": "adjectif exclamatif",
+    "quantif": "quantificateur",
+    "nom commun": "nom",
+    "adj-int": "adjectif interrogatif",
+    "substantif": "nom",
+    "nom science": "nom scientifique",
+    "adjectif num": "adjectif numéral",
+    "nom scient": "nom scientifique",
+    "pronom pos": "pronom possessif",
+    "conj-coord": "conjonction de coordination",
+    "adjectif exc": "adjectif exclamatif",
+    "adverbe int": "adverbe interrogatif",
+    "verbe pr": "verbe pronominal",
+    "nom-sciences": "nom scientifique",
+    "post": "postposition",
+    "sino": "sinogramme",
+    "nom-pr": "nom propre",
+    "art-indéf": "article indéfini",
+    "pronom rel": "pronom relatif",
+    "art-déf": "article défini",
+    "article ind": "article indéfini",
+    "nom-fam": "nom de famille",
+    "adj-pos": "adjectif possessif",
+    "adv-ind": "adverbe indéfini",
+    "préf": "préfixe",
+    "adj-num": "adjectif numéral",
+    "inf": "infixe",
+    "variante typo": "variante typographique",
+    "article déf": "article défini",
+    "adjectif qualificatif": "adjectif",
+    "déterminant pos": "déterminant possessif",
+    "part-num": "particule numérale",
+    "dét-dém": "déterminant démonstratif",
+    "pronom-rel": "pronom relatif",
+    "art-part": "article partitif",
+    "dét-dem": "déterminant démonstratif",
+    "locution phrase": "locution-phrase",
+    "sinog": "sinogramme",
+    "loc-phr": "locution-phrase",
+    "pronom int": "pronom interrogatif"
+  }
+}
