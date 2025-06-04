@@ -118,7 +118,7 @@ local function getParams(frame, allow_multiple_prons)
   if allow_multiple_prons then
     local prons = {}
     for _, arg in ipairs(frame:getParent().args) do
-      table.insert(prons, arg)
+      table.insert(prons, mw.text.trim(arg))
     end
     if #prons == 0 then
       return nil, false
