@@ -15,7 +15,7 @@ p.racine_pron = 'Annexe:Prononciation'
 --- @param lang_code string le code de langue
 --- @return string|nil la page de prononciation si elle existe, nil sinon
 function p.page_pron(lang_code)
-  local langName = m_langues.get_nom(lang_code)
+  local langName = m_langues.getName(lang_code)
 
   if langName then
     local pronPage = p.racine_pron .. '/' .. langName
@@ -40,7 +40,7 @@ function p.lua_pron(prons, langCode, delimiters, isAudioLinked, enforceCharset)
   isAudioLinked = isAudioLinked
   local delimiter1 = string.sub(delimiters, 1, 1)
   local delimiter2 = string.sub(delimiters, 2, 2)
-  local langName = m_langues.get_nom(langCode)
+  local langName = m_langues.getName(langCode)
   local currentPageTitle = mw.title.getCurrentTitle()
 
   if not langCode or langCode == "" or not langName then
@@ -239,7 +239,7 @@ function p.pron_reg(frame)
           title
       )
       if langCode and mw.title.getCurrentTitle().namespace == 0 then
-        local langName = m_langues.get_nom(langCode)
+        local langName = m_langues.getName(langCode)
         if langName then
           text = text .. mw.ustring.format('[[Catégorie:Prononciations audio en %s]]', langName)
         else
