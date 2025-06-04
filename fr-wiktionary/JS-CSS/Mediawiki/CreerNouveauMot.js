@@ -48,6 +48,7 @@
  * v5.6.1 2025-04-05 Split gadget into several files.
  * v5.7 2025-05-22 Use new [[MediaWiki:Gadget-wikt.core.languages.json]].
  * v5.8 2025-05-26 Conversion into a module.
+ * v5.8.1 2025-06-04 Notification when the code is inserted.
  * -----------------------------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|CreerNouveauMot.js]]
  * <nowiki>
@@ -74,7 +75,7 @@ console.log("Chargement de Gadget-CreerNouveauMot.js…");
  */
 class GadgetCreerNouveauMot {
   static NAME = "Créer nouveau mot";
-  static VERSION = "5.8";
+  static VERSION = "5.8.1";
 
   static #COOKIE_NAME = "cnm_last_lang";
   /** Cookie duration in days. */
@@ -502,6 +503,11 @@ class GadgetCreerNouveauMot {
 
     // Collapse gadget after inserting wikicode.
     // $(".oo-ui-tool-name-hide > a")[0].click(); // FIXME not triggered
+
+    mw.notify("Le code a été inséré dans le champ de texte ci-dessous. " +
+        "Avant de publier les modifications, veuillez vérifier que le code généré est correct.", {
+      type: "success",
+    });
   }
 }
 

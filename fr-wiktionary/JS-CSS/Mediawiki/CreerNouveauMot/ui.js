@@ -602,7 +602,8 @@ class MainGUI extends GUI {
                 items: [
                   this.#categoriesWidget,
                 ],
-                help: "Indiquer seulement les noms des catégories (sans «\u00a0Catégorie:\u00a0»), " +
+                help: "Pour les cas où aucun modèle n’ajoute une catégorie spécifique, vous pouvez la renseigner ici. " +
+                    "Indiquez seulement le nom de la catégorie (sans «\u00a0Catégorie:\u00a0»), " +
                     "en respectant la casse (majuscules/minuscules).",
                 helpInline: true,
               }),
@@ -643,7 +644,7 @@ class MainGUI extends GUI {
            * and should contain the IDs of the sections they wish to keep.
            * @type {string[]}
            */
-          const filter = typeof cnmFilter !== "undefined" && cnmFilter instanceof Array ? cnmFilter : [];
+          const filter = Array.isArray(window.cnmFilter) ? window.cnmFilter : [];
           const fields = [];
           for (const section of sections) {
             if (!section.hidden && (filter.length === 0 || filter.includes(section.code))) {
@@ -718,6 +719,11 @@ class MainGUI extends GUI {
               }),
               new OO.ui.FieldsetLayout({
                 label: "Autres sections",
+                help: new OO.ui.HtmlSnippet(
+                    "Renseignez un mot/expression par ligne, en omettant la syntaxe pour créer " +
+                    "un lien (<code>[[mot]]</code>, <code>{{lien|mot|…}}</code>) ou une liste (<code>* item</code>)."
+                ),
+                helpInline: true,
                 items: [
                   new OO.ui.HorizontalLayout({
                     items: fields,
@@ -817,17 +823,6 @@ class MainGUI extends GUI {
     /*
      * Construct GUI
      */
-
-    // TODO display this text somewhere
-    // const popup = new OO.ui.PopupWidget({
-    //   // $autoCloseIgnore: button.$element,
-    //   $content: $("<p>Le code a été inséré dans la boite d’édition ci-dessous. " +
-    //       "Vous devriez <strong>vérifier</strong> que le résultat est conforme à vos souhaits, " +
-    //       "et en particulier utiliser le bouton «&nbsp;Prévisualer&nbsp;» avant de publier.</p>"),
-    //   padded: true,
-    //   width: 300,
-    //   anchor: false,
-    // });
 
     const toolFactory = new OO.ui.ToolFactory();
     const toolGroupFactory = new OO.ui.ToolGroupFactory();
