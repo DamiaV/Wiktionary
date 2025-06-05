@@ -122,7 +122,7 @@ function createLinks(
 
 const SPECIAL_CHARS = [
   "’", "à", "À", "â", "Â", "æ", "Æ", "ç", "Ç", "é", "É", "è", "È", "ê", "Ê", "ë", "Ë", "î", "Î", "ï", "Ï",
-  "ô", "Ô", "œ", "Œ", "ù", "Ù", "û", "Û", "ü", "Ü", "ÿ", "Ÿ", "«\u00a0", "\u00a0»",
+  "ſ", "ô", "Ô", "œ", "Œ", "ù", "Ù", "û", "Û", "ü", "Ü", "ÿ", "Ÿ", "«\u00a0", "\u00a0»",
 ];
 
 /**
@@ -183,7 +183,7 @@ function DefinitionForm(definitionID, langCode) {
         ],
       }),
     ],
-  })
+  });
 }
 
 DefinitionForm.prototype = Object.create(OO.ui.FieldsetLayout.prototype);
@@ -584,7 +584,10 @@ class MainGUI extends GUI {
                 label: imageSectionLabel,
                 items: [
                   this.#imageFld,
-                  this.#imageDescriptionFld,
+                  new OO.ui.FieldLayout(this.#imageDescriptionFld, {
+                    label: createLinks(SPECIAL_CHARS, this.#imageDescriptionFld, null, null, true),
+                    align: "inline",
+                  }),
                 ],
                 help: "Indiquer seulement le nom de l’image, " +
                     "sans «\u00a0File:\u00a0», «\u00a0Fichier:\u00a0» ni «\u00a0Image:\u00a0».",
