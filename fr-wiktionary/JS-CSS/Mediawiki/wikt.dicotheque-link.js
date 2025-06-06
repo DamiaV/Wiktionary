@@ -18,6 +18,7 @@
     return;
   }
 
+  /** @type {string} */
   const entry = mw.config.get("wgTitle");
   $.get(
       "https://api.dicotheque.org/v1/entries/" + encodeURIComponent(entry),
