@@ -11,7 +11,7 @@
 
   $("section[data-mw-section-id]").each((_, section) => {
     const $section = $(section);
-    if ($section.data("mw-section-id") === "0") return;
+    if (+$section.data("mw-section-id") === 0) return;
 
     // Replace the title’s text by a link to the corresponding "MediaWiki:Gadget-section-*" page
     const $headerTextNode = $section.find("h2").contents().filter(function () {
