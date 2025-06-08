@@ -6,53 +6,12 @@
  */
 // <nowiki>
 $(() => {
-  const Modes = Object.freeze({
+  /** @type {{titlePrefix: string, substitutions: [string, string][]}[]} */
+  const SUBSTS = [
     // For [[Livre:De la Ramée - Grammaire de P. de la Ramée, 1572.pdf]]
-    LA_RAMEE: "La Ramée",
-    // For [[Livre:Féline - Dictionnaire de la prononciation de la langue française, 1851.pdf]]
-    FELINE: "Féline",
-  });
-  const MODE = Modes.FELINE;
-
-  let substMode = false;
-  let pressedOnce = false;
-
-  const $textBox = $("#wpTextbox1");
-  $textBox.on("keyup", (event) => {
-    if (event.originalEvent.code === "ControlLeft") {
-      if (!pressedOnce) {
-        pressedOnce = true;
-        setTimeout(() => {
-          pressedOnce = false;
-        }, 500);
-      } else {
-        substMode = !substMode;
-        pressedOnce = false;
-        $textBox.css("color", substMode ? "orange" : "inherit");
-      }
-    } else if (substMode) {
-      const text = $textBox.val();
-      const cursorPos = $textBox.prop("selectionStart");
-      const [subst, len] = getSubst(text, cursorPos);
-      if (subst) {
-        $textBox.val(text.substring(0, cursorPos - len) + subst + text.substring(cursorPos));
-        const newPos = cursorPos - len + subst.length;
-        $textBox.prop("selectionStart", newPos);
-        $textBox.prop("selectionEnd", newPos);
-      }
-    }
-  });
-
-  /**
-   * @param text {string}
-   * @param cursorPos {number}
-   * @returns {[string|null, number]}
-   */
-  function getSubst(text, cursorPos) {
-    /** @type {[string, string][]} */
-    let substs = [];
-    if (MODE === Modes.LA_RAMEE) {
-      substs = [
+    {
+      titlePrefix: "De la Ramée - Grammaire de P. de la Ramée, 1572.pdf",
+      substitutions: [
         // 3 chars
         ["g̛n", "ņ"],
         ["G̛n", "Ņ"],
@@ -83,9 +42,12 @@ $(() => {
         ["È", "E̛"],
         ["é", "ȩ"],
         ["É", "Ȩ"],
-      ];
-    } else if (MODE === Modes.FELINE) {
-      substs = [
+      ]
+    },
+    // For [[Livre:Féline - Dictionnaire de la prononciation de la langue française, 1851.pdf]]
+    {
+      titlePrefix: "Féline - Dictionnaire de la prononciation de la langue française, 1851.pdf",
+      substitutions: [
         // 2 chars
         ["aa", "â"],
         ["Aa", "Â"],
@@ -122,20 +84,66 @@ $(() => {
         ["L_", "Ḻ"],
         ["..", ".\n\n{{sc|"], // End current line and begin next
         [",,", "}}, "], // Close "{{sc|" before pronunciation
-      ];
-      // Upper-case letters precedeed by "{{sc|"
-      for (let i = 0; i < 26; i++) {
-        const letter = String.fromCharCode(97 + i);
-        substs.push([`{{sc|${letter}`, `{{sc|${letter.toUpperCase()}`]);
+      ]
+    },
+  ];
+  // Upper-case letters precedeed by "{{sc|"
+  for (let i = 0; i < 26; i++) {
+    const letter = String.fromCharCode(97 + i);
+    SUBSTS[1].substitutions.push([`{{sc|${letter}`, `{{sc|${letter.toUpperCase()}`]);
+  }
+
+  let substs;
+  for (const { titlePrefix, substitutions } of SUBSTS) {
+    if (String(mw.config.get("wgPageName")).replaceAll("_", " ").startsWith("Page:" + titlePrefix)) {
+      substs = substitutions;
+      break;
+    }
+  }
+  if (!substs) return;
+
+  let substMode = false;
+  let pressedOnce = false;
+
+  /** @type {JQuery<HTMLTextAreaElement>} */
+  const $textBox = $("#wpTextbox1");
+  $textBox.on("keyup", (event) => {
+    if (event.originalEvent.code === "ControlLeft") {
+      if (!pressedOnce) {
+        pressedOnce = true;
+        setTimeout(() => {
+          pressedOnce = false;
+        }, 500);
+      } else {
+        substMode = !substMode;
+        pressedOnce = false;
+        $textBox.css("color", substMode ? "orange" : "inherit");
+      }
+    } else if (substMode) {
+      const text = $textBox.val();
+      const cursorPos = $textBox.prop("selectionStart");
+      const [subst, len] = getSubst(text, cursorPos, substs);
+      if (subst) {
+        $textBox.val(text.substring(0, cursorPos - len) + subst + text.substring(cursorPos));
+        const newPos = cursorPos - len + subst.length;
+        $textBox.prop("selectionStart", newPos);
+        $textBox.prop("selectionEnd", newPos);
       }
     }
+  });
 
+  /**
+   * @param text {string}
+   * @param cursorPos {number}
+   * @param substs {[string, string][]}
+   * @returns {[string|null, number]}
+   */
+  function getSubst(text, cursorPos, substs) {
     for (const [needle, subst] of substs) {
       const len = needle.length;
       const s = text.substring(cursorPos - len, cursorPos);
       if (s === needle) return [subst, len];
     }
-
     return [null, 0];
   }
 });
