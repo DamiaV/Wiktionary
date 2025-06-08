@@ -93,23 +93,23 @@ table.table-jaune td {
 
 @media screen {
   html.skin-theme-clientpref-night .boite {
-    background: #00062d;
+    background: #131520;
     border-color: gray;
   }
 
   html.skin-theme-clientpref-night .boite table {
-    background: #00062d;
+    background: #131520;
   }
 }
 
 @media screen and (prefers-color-scheme: dark) {
   html.skin-theme-clientpref-os .boite {
-    background: #00062d;
+    background: #131520;
     border-color: gray;
   }
 
   html.skin-theme-clientpref-os .boite table {
-    background: #00062d;
+    background: #131520;
   }
 }
 

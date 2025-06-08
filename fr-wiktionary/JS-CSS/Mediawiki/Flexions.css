@@ -43,14 +43,6 @@ table.flextable .invisible {
   border: none;
 }
 
-/* Titres à gauche du tableau */
-table.flextable .titre {
-  padding: 0.3em;
-  background: #EEEEFF;
-  border: 1px solid #AAAACC;
-  font-weight: bold;
-}
-
 /* Sous-titres du tableau */
 table.flextable .sous-titre {
   padding: 0.3em;

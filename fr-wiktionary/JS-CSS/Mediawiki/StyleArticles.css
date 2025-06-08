@@ -38,7 +38,7 @@
 @media screen {
   html.skin-theme-clientpref-night .ns-0 #mw-content-text div.mw-heading2,
   html.skin-theme-clientpref-night .ns-118 #mw-content-text div.mw-heading2 {
-    background-color: #000031;
+    background-color: #282a3a;
     border-color: white;
   }
 }
@@ -46,7 +46,7 @@
 @media screen and (prefers-color-scheme: dark) {
   html.skin-theme-clientpref-os .ns-0 #mw-content-text div.mw-heading2,
   html.skin-theme-clientpref-os .ns-118 #mw-content-text div.mw-heading2 {
-    background-color: #000031;
+    background-color: #282a3a;
     border-color: white;
   }
 }
