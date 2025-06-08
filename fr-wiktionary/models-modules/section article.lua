@@ -73,7 +73,7 @@ end
 --- @param code string The code of a section type as defined in [[Module:section article/data]].
 --- @return boolean True if the section requires a language code, false otherwise.
 function p.sectionRequiresLanguageCode(code)
-  return getProperty(code, "requiresLangCode")
+  return getProperty(code, "requiresLanguageCode")
 end
 
 return p
