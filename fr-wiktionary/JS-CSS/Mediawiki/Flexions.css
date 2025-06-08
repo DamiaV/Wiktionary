@@ -1,0 +1,90 @@
+/* [[Catégorie:CSS du Wiktionnaire|Flexions]] */
+/***************************************/
+/* Styles des tableaux de conjugaisons */
+/***************************************/
+.conj-case-grise {
+  color: gray;
+  background: none;
+  font-style: italic;
+}
+
+.conj-case-grise a {
+  color: #5A5A8E;
+}
+
+.conj-case-grise .new {
+  color: #8E5A5A;
+}
+
+/**********************************/
+/*  Style des tables de flexions  */
+/**********************************/
+table.flextable {
+  clear: right;
+  float: right;
+  margin: 0.5em 0 0.5em 0.5em;
+  background: inherit;
+  text-align: center;
+  border: none;
+}
+
+/* Titres de colonnes */
+table.flextable th {
+  padding: 0.2em;
+}
+
+/* Cacher la case en haut à gauche */
+table.flextable .notopleft {
+  border: none;
+}
+
+/* Cacher une case quelconque */
+table.flextable .invisible {
+  border: none;
+}
+
+/* Titres à gauche du tableau */
+table.flextable .titre {
+  padding: 0.3em;
+  background: #EEEEFF;
+  border: 1px solid #AAAACC;
+  font-weight: bold;
+}
+
+/* Sous-titres du tableau */
+table.flextable .sous-titre {
+  padding: 0.3em;
+  background: #FAFAFF;
+  border: 1px solid #AAAACC;
+  font-weight: bold;
+}
+
+/* Cellule normale du tableau */
+table.flextable td {
+  padding: 0.3em;
+}
+
+/* Adjacence de contenus dans les flextables */
+table.flextable .colle-gauche {
+  border-left: 0;
+  text-align: left;
+  padding-left: 0;
+}
+
+table.flextable .colle-droite {
+  border-right: 0;
+  text-align: right;
+  padding-right: 0;
+}
+
+/* Placement à gauche ou droite simplement */
+.flextable .droite {
+  text-align: right;
+}
+
+.flextable .gauche {
+  text-align: left;
+}
+
+/* Style d'article dans les flexions (si quelqu'un veut les styliser séparément) */
+/*.flextable .article {color:red;}*/
