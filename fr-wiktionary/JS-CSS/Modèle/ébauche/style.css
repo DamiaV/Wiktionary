@@ -1,0 +1,36 @@
+.stub-banner {
+  clear: both;
+  margin: 0.5em 0;
+  border: 1px solid #aaa;
+  background: #f7f8ff;
+  padding: 0.25em;
+  font-size: small;
+  display: flex;
+  align-items: center
+}
+
+.stub-banner p:first-child {
+  margin: 0;
+}
+
+.stub-banner img {
+  background: transparent !important;
+}
+
+.stub-text {
+  padding-left: 0.5em;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .stub-banner {
+    background: #292929;
+    border-color: gray;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .stub-banner {
+    background: #292929;
+    border-color: gray;
+  }
+}
