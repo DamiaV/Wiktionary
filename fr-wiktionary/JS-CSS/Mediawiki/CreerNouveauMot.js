@@ -85,7 +85,7 @@ class GadgetCreerNouveauMot {
    * @type {Record<string, Wiki>}
    */
   static #OTHER_PROJECTS = {
-    "multi-project": new Wiki("QID pour le modèle « liste projets »", "liste projets", ""),
+    "multi-project": new Wiki("QID pour le modèle « liste projets »", "liste projets", "wikidata.org"),
     w: new Wiki("Wikipédia", "WP", "{0}.wikipedia.org"),
     s: new Wiki("Wikisource", "WS", "{0}.wikisource.org"),
     q: new Wiki("Wikiquote", "WQ", "{0}.wikiquote.org"),
@@ -94,7 +94,6 @@ class GadgetCreerNouveauMot {
     species: new Wiki("Wikispecies", "WSP", "wikispecies.org"),
     voy: new Wiki("Wikivoyage", "VOY", "{0}.wikivoyage.org"),
     n: new Wiki("Wikinews", "WN", "{0}.wikinews.org"),
-    d: new Wiki("Wikidata", "WD", "wikidata.org"),
     c: new Wiki("Wikimedia Commons", "Commons", "commons.wikimedia.org"),
     vikidia: new Wiki("Vikidia", "Vikidia", "{0}.vikidia.org", null,
         ["fr", "ca", "de", "el", "en", "es", "eu", "it", "ru", "scn", "hy"]),

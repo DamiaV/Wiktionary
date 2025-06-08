@@ -766,7 +766,7 @@ class MainGUI extends GUI {
                 {
                   align: "inline",
                   id: `cnm-sister-project-${projectCode}`,
-                  label: projectCode === "multi-project" ? "" : new OO.ui.HtmlSnippet('<a href="#" target="_blank">Rechercher</a>'),
+                  label: new OO.ui.HtmlSnippet('<a href="#" target="_blank">Rechercher</a>'),
                 }
             ));
           }
@@ -1023,8 +1023,6 @@ class MainGUI extends GUI {
    */
   #updateSisterProjectsLinks(language) {
     for (const [projectCode, projectData] of Object.entries(this.#otherProjects)) {
-      if (projectCode === "multi-project")
-        continue;
       const forLangs = projectData.showOnlyForLangs;
       const disabled = forLangs.length !== 0 && !forLangs.includes(language.code);
       const checkbox = this.#seeOtherProjectsChk[projectCode]["checkbox"];
@@ -1108,11 +1106,9 @@ class MainGUI extends GUI {
    * @return {string} The search URL.
    */
   static #generateProjectLink(projectDomain, urlBase, langCode, word) {
-    if (!langCode) {
-      return "#";
-    }
+    if (!langCode) return "#";
     const domain = interpolateString(projectDomain, langCode);
-    return `https://${domain}/${urlBase}${encodeURI(word)}`;
+    return `https://${domain}/${urlBase}${encodeURIComponent(word)}`;
   }
 
   /**
