@@ -81,14 +81,36 @@ table.table-jaune td {
 .boite {
   border: 1px solid #aaa;
   overflow: auto;
-  background-color: #F7F8FF;
+  background-color: #f7f8ff;
 }
 
 .boite table {
   border-spacing: 0;
   width: 100%;
   text-align: left;
-  background: #F7F8FF;
+  background: #f7f8ff;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .boite {
+    background: #00062d;
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-night .boite table {
+    background: #00062d;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .boite {
+    background: #00062d;
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-os .boite table {
+    background: #00062d;
+  }
 }
 
 /*****************************************/
