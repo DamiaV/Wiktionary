@@ -1,5 +1,9 @@
 /* Soulignement des titres niveau 3 + clear + interligne */
-.ns-0 #mw-content-text h3, .ns-106 #mw-content-text h3, .ns-110 #mw-content-text h3, .ns-118 #mw-content-text h3 {
+/* [[Catégorie:CSS du Wiktionnaire]] */
+.ns-0 #mw-content-text div.mw-heading3,
+.ns-106 #mw-content-text div.mw-heading3,
+.ns-110 #mw-content-text div.mw-heading3,
+.ns-118 #mw-content-text div.mw-heading3 {
   border-bottom: dotted 1px #aaa;
   line-height: 2;
 }
@@ -12,6 +16,21 @@ body:not(.skin-timeless) .mw-editsection {
 /* Espace fine insécable devant les numéros de référence */
 .reference:before {
   content: '\202f';
+}
+
+/* T156351: Support for Parsoid’s Cite implementation */
+span[rel="mw:referencedBy"] {
+  counter-reset: mw-ref-linkback 0;
+}
+
+span[rel="mw:referencedBy"] > a::before {
+  content: counter(mw-ref-linkback, lower-alpha);
+  vertical-align: inherit;
+  font-size: 100%;
+}
+
+span[rel="mw:referencedBy"] > a:nth-last-child(2)::after {
+  content: " et ";
 }
 
 /****************************************/
@@ -192,6 +211,9 @@ tr.statistics-group-zero {
 .bandeau-voir-systemes {
   background-color: #eee;
   font-size: 90%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin-bottom: .5em;
 }
 
 /* Cadre des documentations */
@@ -199,6 +221,20 @@ tr.statistics-group-zero {
   background-color: #ECFCF4;
   border: 1px solid #aaa;
   padding: 0.5em;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .documentation {
+    background-color: #074324;
+    border-color: gray;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .documentation {
+    background-color: #074324;
+    border-color: gray;
+  }
 }
 
 /***************************************************************************/
@@ -223,7 +259,7 @@ tr.statistics-group-zero {
 /* Style des boîtes de l’accueil */
 .boite-accueil-haut {
   background-color: #C8D8FF;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
+  /* font-family: sans-serif; */
   font-size: small;
   font-weight: bold;
   border: 1px solid #AAAAAA;
@@ -331,13 +367,26 @@ div.navbox_group table.navbox {
 
 /* Fin styles de [[Modèle:Méta palette de navigation]] */
 
-
-/* * Boites et messages * */
+/* Boites et messages */
 
 .boite-grise {
   background: #F9F9F9;
   border: 1px solid #aaa;
   padding: 5px;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .boite-grise {
+    background: #494949;
+    border-color: gray;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .boite-grise {
+    background: #494949;
+    border-color: gray;
+  }
 }
 
 .boite-a-droite {
@@ -353,7 +402,6 @@ div.navbox_group table.navbox {
   margin: 0 1em 1em 1em;
   width: auto;
 }
-
 
 /* Modèle:Autres projets et interprojet */
 .interprojet li.interprojet_top {
@@ -517,17 +565,12 @@ q {
 }
 
 /* Message d’avertissement des illustrations. */
-.show-illus-btn {
-  cursor: pointer;
+.show-illus-frame {
   border: #eaecf0 solid 1px;
   border-radius: 3px;
   background-color: #f8f9fa;
-  width: 100px;
-  padding: 5px;
-}
-
-.hide-illus-btn {
-  cursor: pointer;
+  width: 15em;
+  padding: 0.5em;
 }
 
 kbd {
@@ -544,19 +587,6 @@ kbd {
   white-space: nowrap;
 }
 
-/* Chinois traditionnel et simplifié, vietnamien */
-
-.Hani, .Hans, .Hant {
-  font-size: 120%;
-  line-height: 1;
-}
-
-.Hani, .Hani *, .Hans, .Hans *, .Hant, .Hant * {
-  font-style: normal;
-}
-
-:lang(vi-Hani) {
-  font-family: 'Nom Na Tong', 'HAN NOM A', 'HAN NOM B', Sun-ExtA, Sun-ExtB, Ming-Lt-HKSCS-UNI-H, Ming-Lt-HKSCS-ExtB,
-  HanaMinA, HanaMinB, HanaMin, 'PingFang TC', MingLiU, MingLiU-ExtB, 'MingLiU_HKSCS', 'MingLiU_HKSCS-ExtB', SimSun,
-  SimSun-ExtB, 'Arial Unicode MS', 'TITUS Cyberbit Basic', sans-serif;
+.nav-wordlist {
+  margin-left: 1.6em;
 }
