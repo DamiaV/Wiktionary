@@ -69,4 +69,11 @@ function p.getSectionTypePopupText(code)
   return getProperty(code, "infobulle")
 end
 
+--- Return whether the given section needs a language code as its parameter.
+--- @param code string The code of a section type as defined in [[Module:section article/data]].
+--- @return boolean True if the section requires a language code, false otherwise.
+function p.sectionRequiresLanguageCode(code)
+  return getProperty(code, "requiresLangCode")
+end
+
 return p

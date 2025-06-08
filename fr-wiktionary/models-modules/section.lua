@@ -99,7 +99,7 @@ local function appendContentCategories(categories, langCode, wordType, isFlexion
     end
   end
 
-  local langName = m_langues.get_nom(langCode)
+  local langName = m_langues.getName(langCode)
 
   -- Build "Category:<wordType> en <langName>"
   local catName = ""
@@ -199,24 +199,17 @@ end
 --- @param categories table<string> A table to put categories into.
 --- @return string The formatted section title.
 local function buildOtherSectionTitle(sectionType, pageTitle, langCode, sortKey, noCat, categories)
-  local sectionTypesWithLanguageCode = {
-    ["homophones"] = true,
-    ["homo"] = true,
-    ["traductions à trier"] = true,
-    ["trad-trier"] = true
-  }
-
-  if sectionTypesWithLanguageCode[sectionType] then
+  if m_sectionArticle.sectionRequiresLanguageCode(sectionType) then
     if not noCat then
       if langCode then
-        local langName = m_langues.get_nom(langCode)
+        local langName = m_langues.getName(langCode)
         local key
         if mw.ustring.find(sectionType, "^homo") then
           key = sortKey
         end
         appendCategory(categories, m_sectionArticle.getSectionTypeCategoryName(sectionType) .. " en " .. langName, key)
       else
-        appendCategory(categories, m_sectionArticle.getSectionTypeCategoryName(sectionType))
+        appendCategory(categories, m_sectionArticle.getSectionTypeCategoryName(sectionType) .. " sans langue précisée")
       end
     end
   elseif langCode or sortKey or noCat then
@@ -267,7 +260,7 @@ function p.section(frame)
       return m_typesDeMots.isValidWordType(s) or m_sectionArticle.isValidSectionType(s)
     end }, -- section code
     [2] = { checker = function(s)
-      return m_langues.get_nom(s) ~= nil
+      return m_langues.getName(s) ~= nil
     end }, -- language code
     [3] = { enum = { "flexion" } },
     ["num"] = { type = m_params.INT, checker = function(v)

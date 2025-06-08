@@ -216,6 +216,7 @@ local t = {
       parent = "trad",
       alias = { "trad-trier", "trad trier" },
       category = "Wiktionnaire:Traductions à trier",
+      requiresLanguageCode = true,
     },
     ["transcriptions"] = {
       nom = "transcriptions dans diverses écritures",
@@ -306,6 +307,7 @@ local t = {
       parent = "pron",
       alias = { "homo" },
       category = "Mots ayant des homophones",
+      requiresLanguageCode = true,
     },
     ["paronymes"] = {
       nom = "paronymes",
