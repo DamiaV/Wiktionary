@@ -1,0 +1,18 @@
+.archives {
+  text-align: center;
+  display: inline-block;
+  padding: 0 5px 5px;
+  background: #f9f9f9;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .archives {
+    background-color: #313131;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .archives {
+    background-color: #313131;
+  }
+}
