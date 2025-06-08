@@ -1,0 +1,81 @@
+/****************************/
+/*  Sous les modifications  */
+/****************************/
+/* [[Catégorie:CSS du Wiktionnaire|Common edit]] */
+
+/* Style de la boîte à outils */
+.mw-editTools {
+  border: 1px solid #AAA;
+  margin-top: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+/* Style de la boîte à outils déroulante */
+
+#specialcharsets {
+  background-color: #FFD;
+  border: 1px solid #AAA;
+  padding: 0.5em;
+}
+
+/* Liste des modèles et des catégories cachées */
+/* Style : écrit plus petit, encadré, fond gris */
+/*
+ * TODO :
+ * une simple espace dans le markup suffit à prendre en défaut :empty,
+ * donc lorsque :has() sera davantage supporté par les navigateurs, remplacer :not(:empty) par :has(> *)
+ * rappel : sur Chrome, :has(> *) est plus performant que :has(*)
+ */
+.templatesUsed:not(:empty),
+.hiddencats:not(:empty) {
+  font-size: smaller;
+  padding: 0.2em;
+  border: 1px solid #AAA;
+  background-color: #EEE;
+  margin-top: 1em;
+}
+
+/* 4 colonnes pour les modèles */
+.templatesUsed ul {
+  column-count: 4;
+}
+
+/* 3 colonnes pour les catégories (plus larges que les modèles) */
+.hiddencats ul {
+  column-count: 3;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .mw-editTools {
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-night #specialcharsets {
+    background-color: #464600;
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-night .templatesUsed:not(:empty),
+  html.skin-theme-clientpref-night .hiddencats:not(:empty) {
+    background-color: #292929;
+    border-color: gray;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .mw-editTools {
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-os #specialcharsets {
+    background-color: #464600;
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-os .templatesUsed:not(:empty),
+  html.skin-theme-clientpref-os .hiddencats:not(:empty) {
+    background-color: #292929;
+    border-color: gray;
+  }
+}
