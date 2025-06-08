@@ -1,0 +1,37 @@
+.reconstructed-form-box {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  clear: both;
+  margin: 1em 10%;
+  padding: 0.5em;
+  border: 1px solid #aaa;
+  background: #def;
+  line-height: 1.2;
+}
+
+.reconstructed-form-box p:first-child {
+  margin: 0;
+}
+
+.reconstructed-form-box img {
+  background: transparent !important;
+}
+
+.reconstructed-form-text {
+  padding-left: 0.5em;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .reconstructed-form-box {
+    background: #003e7b;
+    border-color: gray;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .reconstructed-form-box {
+    background: #003e7b;
+    border-color: gray;
+  }
+}

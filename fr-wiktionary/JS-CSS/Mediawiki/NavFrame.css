@@ -1,0 +1,95 @@
+/* [[Catégorie:CSS du Wiktionnaire|NavFrame]] */
+
+.boite .NavFrame {
+  background: transparent;
+  border: 0;
+  clear: both;
+}
+
+.boite .NavHead {
+  text-align: left;
+  padding-left: 0.5em;
+}
+
+/* Import original (à vérifier) */
+div.NavFrame {
+  margin: 0;
+  padding: 2px;
+  border: 1px solid #aaa;
+  text-align: center;
+  border-collapse: collapse;
+  overflow: auto;
+  font-size: 95%;
+}
+
+div.NavFrame + div.NavFrame {
+  border-top-style: none;
+}
+
+.NavPic {
+  background-color: #fff;
+  margin: 0;
+  padding: 2px;
+  float: left;
+}
+
+div.NavHead {
+  font-weight: bold;
+  font-size: 100%;
+  background-color: #efefef;
+}
+
+div.NavFrame p {
+  font-size: 100%;
+}
+
+div.NavContent {
+  font-size: 100%;
+}
+
+div.NavContent p {
+  font-size: 100%;
+}
+
+.NavEnd {
+  margin: 0;
+  padding: 0;
+  line-height: 1px;
+  clear: both;
+}
+
+.NavToggle {
+  font-size: x-small;
+  font-weight: normal;
+  float: right;
+}
+
+/* Traductions en conventions internationales : retrait de l'italique pour le lien (wikispecies) */
+.translations i .trad-exposant {
+  font-style: normal;
+}
+
+/* Alignement vertical des colonnes des listes traductions */
+.translations > ul {
+  margin-top: 0;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night div.NavFrame {
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-night div.NavHead {
+    background: #2b2b2b;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os div.NavFrame {
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-os div.NavHead {
+    background: #2b2b2b;
+  }
+}
