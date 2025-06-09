@@ -351,7 +351,7 @@ table.navbox th {
   padding-right: 1em;
 }
 
-table.navbox td.group {
+table.navbox th.group {
   background: #DDF;
   vertical-align: middle;
   width: 150px;
@@ -385,6 +385,44 @@ div.navbox_group {
 div.navbox_group table.navbox {
   border: 0;
   margin: 0;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night table.navbox {
+    background: #40406d;
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-night table.navbox th {
+    background: #3b3b6d;
+  }
+
+  html.skin-theme-clientpref-night table.navbox th.group {
+    background: #2b2b4f;
+  }
+
+  html.skin-theme-clientpref-night table.navbox td.even {
+    background: #202022;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os table.navbox {
+    background: #40406d;
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-os table.navbox th {
+    background: #3b3b6d;
+  }
+
+  html.skin-theme-clientpref-os table.navbox th.group {
+    background: #2b2b4f;
+  }
+
+  html.skin-theme-clientpref-os table.navbox td.even {
+    background: #202022;
+  }
 }
 
 /* Fin styles de [[Modèle:Méta palette de navigation]] */
