@@ -1,0 +1,30 @@
+.blue {
+  color: blue;
+}
+
+.blue.background {
+  color: white;
+  background: blue;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .blue {
+    color: #7b7bff;
+  }
+
+  html.skin-theme-clientpref-night .blue.background {
+    color: black;
+    background: #7b7bff;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .blue {
+    color: #7b7bff;
+  }
+
+  html.skin-theme-clientpref-os .blue.background {
+    color: black;
+    background: #7b7bff;
+  }
+}
