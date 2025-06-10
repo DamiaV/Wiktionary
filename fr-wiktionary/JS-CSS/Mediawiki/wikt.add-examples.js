@@ -590,6 +590,7 @@ Form.prototype = {
       }).then(() => {
             api.parse(code).done((data) => {
               const $renderedExample = $(data).find("ul > li").html();
+              /** @type {JQuery} */
               let $item;
               // Insert rendered example into page
               if (emptyTemplate) {
@@ -598,9 +599,9 @@ Form.prototype = {
               } else {
                 this._$lastExample.after($item = $("<li>").append($renderedExample));
               }
-              $item.css("background-color", "lightgreen");
+              $item.addClass("new-example");
               setTimeout(() => {
-                $item.css("background-color", "inherit");
+                $item.removeClass("new-example");
               }, 1000);
               this._$lastExample = $item;
             });
