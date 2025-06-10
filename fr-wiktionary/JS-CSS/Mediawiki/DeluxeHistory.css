@@ -1,0 +1,83 @@
+/* Styles pour [[Mediawiki:Gadget-DeluxeHistory.js]], fortement inspiré de [[w:Utilisateur:Od1n/HistoryDeluxe.css]] */
+/* [[Catégorie:CSS du Wiktionnaire|DeluxeHistory]] */
+
+.UserIs-IP {
+  background-color: #ffcccc !important;
+}
+
+.UserIs-User {
+  background-color: #dbdbff !important;
+}
+
+.UserIs-Bot {
+  background-color: #c6ffb3 !important;
+}
+
+.UserIs-Sysop {
+  background-color: #ffff99 !important;
+}
+
+.UserIs-Patroller {
+  background-color: #d9fff6 !important;
+}
+
+.UserIs-OldBot {
+  background-color: #c6ffb3 !important;
+}
+
+/* Spécial:Nouvelles pages */
+.not-patrolled {
+  text-decoration: underline !important;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .UserIs-IP {
+    background: #460000 !important;
+  }
+
+  html.skin-theme-clientpref-night .UserIs-User {
+    background: #2d2d5e !important;
+  }
+
+  html.skin-theme-clientpref-night .UserIs-Bot {
+    background: #1c4010 !important;
+  }
+
+  html.skin-theme-clientpref-night .UserIs-Sysop {
+    background: #4f4f00 !important;
+  }
+
+  html.skin-theme-clientpref-night .UserIs-Patroller {
+    background: #005944 !important;
+  }
+
+  html.skin-theme-clientpref-night .UserIs-OldBot {
+    background: #0a2900 !important;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .UserIs-IP {
+    background: #460000 !important;
+  }
+
+  html.skin-theme-clientpref-os .UserIs-User {
+    background: #2d2d5e !important;
+  }
+
+  html.skin-theme-clientpref-os .UserIs-Bot {
+    background: #1c4010 !important;
+  }
+
+  html.skin-theme-clientpref-os .UserIs-Sysop {
+    background: #4f4f00 !important;
+  }
+
+  html.skin-theme-clientpref-os .UserIs-Patroller {
+    background: #005944 !important;
+  }
+
+  html.skin-theme-clientpref-os .UserIs-OldBot {
+    background: #0a2900 !important;
+  }
+}
