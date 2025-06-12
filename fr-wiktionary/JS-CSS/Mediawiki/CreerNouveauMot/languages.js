@@ -408,8 +408,6 @@ function loadLanguages(gadget) {
 
   const getPortugueseModel = (word, grammarClass, properties, pron) => {
     const [gender, number] = properties.length >= 2 ? properties : [null, NUMBERS.INVARIABLE.label];
-    if (number === NUMBERS.INVARIABLE.label)
-      return `{{pt-inv|${pron}|inv_titre=${grammarClass}}}`;
     if (number === NUMBERS.SAME_SINGULAR_PLURAL.label)
       return `{{pt-inv|${pron}|sp=oui}}`;
     if (number === NUMBERS.SINGULAR_ONLY.label)
@@ -420,7 +418,7 @@ function loadLanguages(gadget) {
     if (gender === GENDERS.FEMININE_MASCULINE.label)
       return `{{pt-rég|${pron}|mf=oui}}`;
 
-    return `{{pt-rég|${pron}}}`;
+    return `{{pt-inv|${pron}|inv_titre=${grammarClass}}}`;
   };
 
   gadget.addLanguage(new Language(
