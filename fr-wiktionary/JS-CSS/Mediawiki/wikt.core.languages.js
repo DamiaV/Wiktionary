@@ -1,7 +1,6 @@
 // <nowiki>
 "use strict";
-// TODO transformer en gadget pour voir si il peut être importé dans d’autres gadgets
-// pour éviter la spécification des deux fichiers à chaque fois
+
 /**
  * @typedef {{
  *  name: string,
