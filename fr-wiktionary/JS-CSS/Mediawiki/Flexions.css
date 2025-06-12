@@ -9,11 +9,11 @@
 }
 
 .conj-case-grise a {
-  color: #5A5A8E;
+  color: #5a5a8e;
 }
 
 .conj-case-grise .new {
-  color: #8E5A5A;
+  color: #8e5a5a;
 }
 
 /**********************************/
@@ -23,7 +23,6 @@ table.flextable {
   clear: right;
   float: right;
   margin: 0.5em 0 0.5em 0.5em;
-  background: inherit;
   text-align: center;
   border: none;
 }
@@ -46,8 +45,7 @@ table.flextable .invisible {
 /* Sous-titres du tableau */
 table.flextable .sous-titre {
   padding: 0.3em;
-  background: #FAFAFF;
-  border: 1px solid #AAAACC;
+  border: 1px solid #aaaacc;
   font-weight: bold;
 }
 
@@ -77,6 +75,3 @@ table.flextable .colle-droite {
 .flextable .gauche {
   text-align: left;
 }
-
-/* Style d'article dans les flexions (si quelqu'un veut les styliser séparément) */
-/*.flextable .article {color:red;}*/
