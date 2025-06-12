@@ -415,7 +415,7 @@ class GadgetCreerNouveauMot {
             ? this.#mainGUI.getSectionContent(sectionCode)
             : "{{trad-début}}\n{{trad-fin}}\n\n";
         if (content) {
-          const titleLevel = Array(sectionLevel + 1).join("=");
+          const titleLevel = "=".repeat(sectionLevel);
           const section = `${titleLevel} {{S|${sectionCode}}} ${titleLevel}\n${linkify(content)}\n\n`;
           if (sectionCode === "anagrammes") {
             anagramsSection = section;
