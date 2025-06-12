@@ -6,7 +6,7 @@
  * @typedef {{invalidLine: string, lineNumber: number, error: string}} LineError
  */
 
-const { getSectionData } = require("../wikt.core.sections.js");
+const { getSectionData, getWordTypeData } = require("../wikt.core.sections.js");
 
 /**
  * Format the sections in the given text.
@@ -61,22 +61,26 @@ function formatSections(text) {
     }
 
     // Remove "loc-" from the old section name
-    if (sectionCode !== 'loc-phr' && sectionCode.length >= 5 && sectionCode.indexOf('loc-') === 0)
+    if (sectionCode !== "loc-phr" && sectionCode.length >= 5 && sectionCode.indexOf("loc-") === 0)
       sectionCode = sectionCode.substring(4);
 
     // Handle old "s" parameter for "note" section type
     if (sectionCode === "note" && /\|s=[^|}]/.test(sectionText))
       sectionCode = "notes";
 
-    const sectionData = getSectionData(sectionCode);
+    /** @type {SectionData|WordTypeData} */
+    let sectionData = getSectionData(sectionCode);
     // Section not recognized, push an error and return
     if (!sectionData) {
-      errors.push({
-        invalidLine: sectionText,
-        lineNumber: lineNumber,
-        error: "Nom de section inconnu : " + sectionCode
-      });
-      return sectionText;
+      sectionData = getWordTypeData(sectionCode);
+      if (!sectionData) {
+        errors.push({
+          invalidLine: sectionText,
+          lineNumber: lineNumber,
+          error: "Nom de section inconnu : " + sectionCode
+        });
+        return sectionText;
+      }
     }
 
     let langCode = null;
@@ -116,7 +120,7 @@ function formatSections(text) {
     }
 
     // Generate final text
-    let formattedText = "{{S|" + sectionData.name;
+    let formattedText = "{{S|" + sectionCode;
     if (langCode)
       formattedText += "|" + langCode;
     if (flexion)

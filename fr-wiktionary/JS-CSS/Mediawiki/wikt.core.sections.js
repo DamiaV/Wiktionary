@@ -21,8 +21,10 @@
  */
 /**
  * @typedef {{
+ *  level: 3,
  *  name: string,
  *  namePlural: string,
+ *  requiresLanguageCode: true,
  *  locution?: string,
  *  locutionPlural?: string,
  *  abbreviation?: string,
@@ -57,8 +59,11 @@ for (const [code, targetCode] of Object.entries(sectionsData.aliases)) {
   }
 }
 
-for (const [code, wordTypeData] of Object.entries(wordTypesData.codes))
+for (const [code, wordTypeData] of Object.entries(wordTypesData.codes)) {
+  wordTypeData.requiresLanguageCode = true;
+  wordTypeData.level = 3;
   wordTypesDataMap.set(code, wordTypeData);
+}
 
 for (const [code, targetCode] of Object.entries(wordTypesData.aliases)) {
   const wordTypeData = wordTypesDataMap.get(targetCode);
