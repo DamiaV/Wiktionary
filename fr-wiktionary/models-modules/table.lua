@@ -654,6 +654,25 @@ function p.indexOf(t, value)
   return nil
 end
 
+--- Return a shallow copy of the given table between two indices.
+--- @param t table The table to splice.
+--- @param from number The start index.
+--- @param to number The end index (inclusive).
+--- @return table A new table containing the values between the two indices.
+function p.slice(t, from, to)
+  local copy = {}
+  local length = p.length(t)
+  from = from ~= nil and (from < 0 and length + from + 1 or from) or 1
+  to = to ~= nil and (to < 0 and length + to + 1 or to) or length
+  if from > to then
+    return {}
+  end
+  for i = math.min(math.max(from, 1), length), math.min(math.max(to, 1), length) do
+    table.insert(copy, t[i])
+  end
+  return copy
+end
+
 local specialChars = {
   ["\a"] = "\\a",
   ["\b"] = "\\b",
