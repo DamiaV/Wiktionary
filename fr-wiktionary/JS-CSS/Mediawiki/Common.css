@@ -650,3 +650,20 @@ kbd {
 .nav-wordlist {
   margin-left: 1.6em;
 }
+
+/* Alphabet tables */
+
+.letters-table {
+  width: 100%;
+  margin: 0;
+}
+
+.letters-table td {
+  text-align: center;
+}
+
+.letters-block {
+  display: inline-block;
+  margin-right: 0.5em;
+  letter-spacing: 0.1em;
+}
