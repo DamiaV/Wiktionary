@@ -3,3 +3,15 @@
 .wikt-missing-entry {
   background-color: #ffb8b8;
 }
+
+@media screen {
+  html.skin-theme-clientpref-night .wikt-missing-entry {
+    background-color: #4d0000;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .wikt-missing-entry {
+    background-color: #4d0000;
+  }
+}

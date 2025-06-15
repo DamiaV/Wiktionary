@@ -1,0 +1,17 @@
+/* [[Catégorie:CSS du Wiktionnaire|CreerTrad.css]] */
+
+.create-translation {
+  background-color: #77b5fe;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .create-translation {
+    background-color: #003b82;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .create-translation {
+    background-color: #003b82;
+  }
+}

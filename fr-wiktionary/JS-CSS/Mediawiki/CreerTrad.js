@@ -458,6 +458,7 @@ registerWordLineGeneratorForLanguage(
  * @param langCode {string} The translation’s language code.
  */
 function createTranslation(translation, translationText, langCode) {
+  /** @type {string} */
   const word = mw.config.get("wgTitle");
   switch (langCode) {
     case "zh-Hans":
@@ -510,9 +511,9 @@ $(".translations .new").each(function () {
 
   if (translation) {
     const langCode = $link.parent().attr("lang");
-    $link.css("background-color", "#77b5fe");
+    $link.addClass("create-translation");
     $link.attr("title", `Cliquez pour créer «\u00a0${translation}\u00a0» avec le gadget`);
-    $link.click((event) => {
+    $link.on("click", (event) => {
       event.preventDefault();
       createTranslation(translation, translationText, langCode);
     });
