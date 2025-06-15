@@ -9,3 +9,15 @@
   z-index: 1000;
   padding: 0.25em;
 }
+
+@media screen {
+  html.skin-theme-clientpref-night #search-popup {
+    background-color: #292929;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os #search-popup {
+    background-color: #292929;
+  }
+}

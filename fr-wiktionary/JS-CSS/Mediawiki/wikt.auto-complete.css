@@ -36,3 +36,31 @@
   font-style: italic;
   padding: 0 5px;
 }
+
+@media screen {
+  html.skin-theme-clientpref-night #autocomplete-suggestion-box {
+    background-color: #292929;
+  }
+
+  html.skin-theme-clientpref-night #autocomplete-suggestion-box ul > li:hover {
+    background-color: #666;
+  }
+
+  html.skin-theme-clientpref-night #autocomplete-suggestion-box ul > .autocomplete-selected {
+    background-color: #484848;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os #autocomplete-suggestion-box {
+    background-color: #292929;
+  }
+
+  html.skin-theme-clientpref-os #autocomplete-suggestion-box ul > li:hover {
+    background-color: #666;
+  }
+
+  html.skin-theme-clientpref-os #autocomplete-suggestion-box ul > .autocomplete-selected {
+    background-color: #484848;
+  }
+}

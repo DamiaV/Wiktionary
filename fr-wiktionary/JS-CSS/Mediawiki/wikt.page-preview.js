@@ -19,100 +19,174 @@ const INTERWIKI_PREFIXES = new Map([["acronym", 0], ["advisory", 0], ["aew", 0],
 const LANGUAGES = getLanguagesNames(true);
 
 const animationSpeed = 0.2; // seconds
+// language=css
 mw.util.addCSS(`
-	.page-preview ol {
-		margin: 0 0.5em 0 1.5em;
-		padding: 0;
-	}
-	.page-preview dl {
-		margin-bottom: 0;
-	}
-	.page-preview p {
-		margin: 0;
-	}
+  .page-preview ol {
+    margin: 0 0.5em 0 1.5em;
+    padding: 0;
+  }
 
-	/* popupContainer has the opacity animation, while popup gets translated. */
-	.popup-fade-in-up, .popup-fade-in-down {
-		animation: popup-fade-in ${animationSpeed}s ease forwards;
-	}
-	.popup-fade-out-up, .popup-fade-out-down {
-		animation: popup-fade-out ${animationSpeed}s ease forwards;
-	}
-	.popup-fade-in-up > div {
-		animation: popup-move-in-up ${animationSpeed}s ease forwards;
-	}
-	.popup-fade-in-down > div {
-		animation: popup-move-in-down ${animationSpeed}s ease forwards;
-	}
-	.popup-fade-out-up > div {
-		animation: popup-move-out-up ${animationSpeed}s ease forwards;
-	}
-	.popup-fade-out-down > div {
-		animation: popup-move-out-down ${animationSpeed}s ease forwards;
-	}
+  .page-preview dl {
+    margin-bottom: 0;
+  }
 
-	@keyframes popup-move-in-up {
-		0% {
-			transform: translate(0, 20px);
-		}
-	}
-	@keyframes popup-move-in-down {
-		0% {
-			transform: translate(0, -20px);
-		}
-	}
-	@keyframes popup-move-out-up {
-		100% {
-			transform: translate(0, -20px);
-		}
-	}
-	@keyframes popup-move-out-down {
-		100% {
-			transform: translate(0, 20px);
-		}
-	}
-	@keyframes popup-fade-out {
-		100% {
-			opacity: 0;
-		}
-	}
-	@keyframes popup-fade-in {
-		0% {
-			opacity: 0;
-		}
-	}
+  .page-preview p {
+    margin: 0;
+  }
 
-	.ring-loader {
-		margin: auto;
-		width: 24px;
-		height: 24px;
-		border-radius: 50%;
-		border-top: 5px solid var(--wikt-palette-black, #202122);
-		border-bottom: 5px solid var(--wikt-palette-black, #202122);
-		border-left: 5px solid transparent;
-		border-right: 5px solid transparent;
-		animation: spin 1.2s linear infinite;
-	}
-	@keyframes spin {
-		100% {
-			transform: rotate(360deg);
-		}
-	}
+  /* popupContainer has the opacity animation, while popup gets translated. */
+  .popup-fade-in-up, .popup-fade-in-down {
+    animation: popup-fade-in ${animationSpeed}s ease forwards;
+  }
 
-	.preview-headerlink, .preview-headerlink:visited {
-		color: inherit;
-		font-weight: bold;
-	}
+  .popup-fade-out-up, .popup-fade-out-down {
+    animation: popup-fade-out ${animationSpeed}s ease forwards;
+  }
 
-	/* Hack: get the speaker icon on Wikipedia articles without having to load Phonos. */
-	.ext-phonos .oo-ui-buttonElement-button:after {
-		content: "🔊";
-	}
-	.ext-phonos * {
-		display: inline !important;
-		padding: 0 !important;
-		margin: 0 !important;
-	}
+  .popup-fade-in-up > div {
+    animation: popup-move-in-up ${animationSpeed}s ease forwards;
+  }
+
+  .popup-fade-in-down > div {
+    animation: popup-move-in-down ${animationSpeed}s ease forwards;
+  }
+
+  .popup-fade-out-up > div {
+    animation: popup-move-out-up ${animationSpeed}s ease forwards;
+  }
+
+  .popup-fade-out-down > div {
+    animation: popup-move-out-down ${animationSpeed}s ease forwards;
+  }
+
+  @keyframes popup-move-in-up {
+    0% {
+      transform: translate(0, 20px);
+    }
+  }
+
+  @keyframes popup-move-in-down {
+    0% {
+      transform: translate(0, -20px);
+    }
+  }
+
+  @keyframes popup-move-out-up {
+    100% {
+      transform: translate(0, -20px);
+    }
+  }
+
+  @keyframes popup-move-out-down {
+    100% {
+      transform: translate(0, 20px);
+    }
+  }
+
+  @keyframes popup-fade-out {
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes popup-fade-in {
+    0% {
+      opacity: 0;
+    }
+  }
+
+  .ring-loader {
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    /* noinspection CssUnresolvedCustomProperty */
+    border-top: 5px solid var(--wikt-palette-black, #202122);
+    /* noinspection CssUnresolvedCustomProperty */
+    border-bottom: 5px solid var(--wikt-palette-black, #202122);
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    animation: spin 1.2s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .preview-headerlink, .preview-headerlink:visited {
+    color: inherit;
+    font-weight: bold;
+  }
+
+  /* Hack: get the speaker icon on Wikipedia articles without having to load Phonos. */
+  .ext-phonos .oo-ui-buttonElement-button:after {
+    content: "🔊";
+  }
+
+  .ext-phonos * {
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .page-preview {
+    position: absolute;
+    /* noinspection CssUnresolvedCustomProperty */
+    filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.15)) drop-shadow(0px 0px 0.75px var(--wikt-palette-dullblue, #49555f));
+    z-index: 801;
+  }
+
+  .popup {
+    box-sizing: border-box;
+    height: 100%;
+    /* noinspection CssUnresolvedCustomProperty */
+    background: var(--wikt-palette-white, #ffffff);
+  }
+
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    box-sizing: border-box;
+    overflow: auto;
+    height: 100%;
+    overflow-wrap: break-word;
+    scrollbar-width: thin;
+  }
+
+  .popup-header {
+    font-size: 90%;
+    /* noinspection CssUnresolvedCustomProperty */
+    color: var(--wikt-palette-deepblue, #2f445c);
+  }
+
+  .popup-header .icon {
+    float: right;
+    margin-left: 10px;
+    height: 20px;
+  }
+
+  @media screen {
+    html.skin-theme-clientpref-night .popup {
+      background-color: #292929;
+    }
+
+    html.skin-theme-clientpref-night .popup-header {
+      color: #3b86db;
+    }
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    html.skin-theme-clientpref-os .popup {
+      background-color: #292929;
+    }
+
+    html.skin-theme-clientpref-os .popup-header {
+      color: #3b86db;
+    }
+  }
 `);
 
 const definitionIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="currentColor"><g><path d="M15 2a7.65 7.65 0 00-5 2 7.65 7.65 0 00-5-2H1v15h4a7.65 7.65 0 015 2 7.65 7.65 0 015-2h4V2zm2.5 13.5H14a4.38 4.38 0 00-3 1V5s1-1.5 4-1.5h2.5z"></path></g></svg>`;
@@ -125,10 +199,10 @@ const popupContainer = document.createElement("div");
 const popup = document.createElement("div");
 const popupContent = document.createElement("div");
 
-popupContainer.style = "display: none; position: absolute; filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.15)) drop-shadow(0px 0px 0.75px var(--wikt-palette-dullblue, #49555f)); z-index: 801";
+popupContainer.style.display = "none";
 popupContainer.className = "page-preview";
-popup.style = "box-sizing: border-box; height: 100%; background: var(--wikt-palette-white, #ffffff)";
-popupContent.style = "display: flex; flex-direction: column; border-radius: 2px; box-sizing: border-box; color: var(--wikt-palette-black, #202122); overflow: auto; height: 100%; overflow-wrap: break-word; scrollbar-width: thin";
+popup.className = "popup";
+popupContent.className = "popup-content";
 
 document.body.append(popupContainer);
 popupContainer.append(popup);
@@ -324,11 +398,11 @@ function processLink(link) {
         let language = LANGUAGES.get(linkAnchor);
 
         const popupHeader = document.createElement("div");
-        popupHeader.style = "font-size: 90%; color: var(--wikt-palette-deepblue, #2f445c)";
+        popupHeader.className = "popup-header";
         popupContent.append(popupHeader);
 
         const iconContainer = document.createElement("span");
-        iconContainer.style = "float: right; margin-left: 10px; height: 20px; color: var(--wikt-palette-black, #202122)";
+        iconContainer.className = "icon";
         popupHeader.append(iconContainer);
 
         const titleLink = document.createElement("a");
