@@ -574,13 +574,18 @@ class EditForm {
     if (window.localStorage.getItem(LAST_LANG_CODE_KEY) !== langCode)
       window.localStorage.setItem(LAST_LANG_CODE_KEY, langCode);
 
-    if (this._fullView) return;
+    if (this._fullView) {
+      for (const $button of Object.values(this._radioButtons))
+        $button.prop("checked", false);
+      return;
+    }
 
     /** @type {string[]} */
     const properties = this._selectedLanguage.properties || [];
-    for (const [code, $button] of Object.entries(this._radioButtons))
+    for (const [code, $button] of Object.entries(this._radioButtons)) {
       if (properties.includes(code)) $button.parent().show();
       else $button.parent().hide();
+    }
 
     if (this._selectedLanguage.hasTransliteration) this._$transliterationLine.show();
     else this._$transliterationLine.hide();
