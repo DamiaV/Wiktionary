@@ -250,11 +250,21 @@ tr.statistics-group-zero {
     background-color: #074324;
     border-color: gray;
   }
+
+  html.skin-theme-clientpref-night .bandeau-voir-systemes {
+    background-color: #1c1c1c;
+    border-color: gray;
+  }
 }
 
 @media screen and (prefers-color-scheme: dark) {
   html.skin-theme-clientpref-os .documentation {
     background-color: #074324;
+    border-color: gray;
+  }
+
+  html.skin-theme-clientpref-os .bandeau-voir-systemes {
+    background-color: #1c1c1c;
     border-color: gray;
   }
 }
@@ -660,6 +670,10 @@ kbd {
 
 .letters-table td {
   text-align: center;
+}
+
+.letters-table:not(.no-space) td {
+  letter-spacing: 0.1em;
 }
 
 .letters-block {
