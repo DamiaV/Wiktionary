@@ -681,3 +681,29 @@ kbd {
   margin-right: 0.5em;
   letter-spacing: 0.1em;
 }
+
+/* Banners */
+
+.deleted-page-banner {
+  background-color: white;
+  border: 1px solid black;
+  width: 50%;
+  margin: 0.5em auto auto;
+  padding: 0.2em;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .deleted-page-banner {
+    background-color: #242424;
+    border-color: gray;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .deleted-page-banner {
+    background-color: #242424;
+    border-color: gray;
+  }
+}
