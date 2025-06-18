@@ -24,6 +24,11 @@
   width: 1.5em;
 }
 
+.help-text {
+  font-size: 0.8em;
+  color: #404040;
+}
+
 /* Title form */
 
 .trans-box-title-editor {
@@ -96,5 +101,29 @@
   .skin-timeless #trans-dialog {
     /* To appear below the search bar */
     top: calc(3.125em + 6px) !important;
+  }
+}
+
+/* Dark mode */
+
+@media screen {
+  html.skin-theme-clientpref-night .help-text {
+    color: #909090;
+  }
+
+  html.skin-theme-clientpref-night #trans-dialog {
+    background-color: #292929;
+    box-shadow: black 0 0 0.5em;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .help-text {
+    color: #909090;
+  }
+
+  html.skin-theme-clientpref-os #trans-dialog {
+    background-color: #292929;
+    box-shadow: black 0 0 0.5em;
   }
 }

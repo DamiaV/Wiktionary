@@ -125,7 +125,7 @@ class EditForm {
      * @type {JQuery<HTMLInputElement>}
      * @private
      */
-    this._$langInput = $(`<input type="text" size="12" id="lang-input-${index}" placeholder="Langues">`);
+    this._$langInput = $(`<input type="text" id="lang-input-${index}" placeholder="Nom ou code de langue">`);
     /** @type {JQuery<HTMLInputElement>} */
     const $translationInput = $(`<input type="text" id="trans-input-${index}" placeholder="Traduction">`);
     /** @type {JQuery<HTMLInputElement>} */
@@ -196,7 +196,10 @@ class EditForm {
         " ",
         $showMoreButton,
         " ",
-        this._$spinner
+        this._$spinner,
+        "<br>",
+        "<span class='help-text'>Vous pouvez taper un code de langue à la place du nom. " +
+        "Appuyez sur <kbd>Tab</kbd> pour qu’il soit remplacé automatiquement par le nom correspondant.</span>"
     );
 
     const $grammarPropsLine = $("<p>");
