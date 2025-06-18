@@ -14,18 +14,18 @@ $(() => {
     return;
   }
 
-  const api = new mw.Api({userAgent: "Gadget-wikt.manage-page-deletions"});
+  const api = new mw.Api({ userAgent: "Gadget-wikt.manage-page-deletions" });
 
   /**
    * @type {{[key: string]: {text: string, templateName: string, radio: HTMLInputElement}}}
    */
   const statuses = {
-    waiting: {text: "En attente", templateName: "Élément en attente"},
-    deleted: {text: "Supprimé", templateName: "Élément supprimé"},
-    kept: {text: "Conservé", templateName: "Élément conservé"},
-    renamed: {text: "Renommé", templateName: "Élément renommé"},
-    merged: {text: "Fusionné", templateName: "Élément fusionné"},
-    redirect: {text: "Transformé en redirection", templateName: "Élément transformé en redirection"},
+    waiting: { text: "En attente", templateName: "Élément en attente" },
+    deleted: { text: "Supprimé", templateName: "Élément supprimé" },
+    kept: { text: "Conservé", templateName: "Élément conservé" },
+    renamed: { text: "Renommé", templateName: "Élément renommé" },
+    merged: { text: "Fusionné", templateName: "Élément fusionné" },
+    redirect: { text: "Transformé en redirection", templateName: "Élément transformé en redirection" },
   };
 
   const $dialog = $(`
@@ -40,7 +40,7 @@ $(() => {
 </dialog>`);
   {
     let i = 0;
-    for (const [status, {text}] of Object.entries(statuses)) {
+    for (const [status, { text }] of Object.entries(statuses)) {
       const id = `status-choice-${i}`;
       const $choice = $(`<input id="${id}" name="status" type="radio" value="${status}">`);
       $dialog.find("form").prepend($choice, ` <label for="${id}">${text}</label><br>`);
@@ -79,7 +79,7 @@ $(() => {
 
         if (!line.toLowerCase().startsWith("{{élément ")) continue;
 
-        for (const {templateName} of Object.values(statuses)) {
+        for (const { templateName } of Object.values(statuses)) {
           if (new RegExp(`^{{${templateName}.*}}$`, "i").exec(line)) {
             requestI++;
             if (requestI === requestIndex) {
