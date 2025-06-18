@@ -123,7 +123,7 @@ $(() => {
       const currentStatus = $banner.data("tag").substring(7);
       statuses[currentStatus].radio.checked = true;
       $dialog.data("request-id", index);
-      const sectionTitle = $banner.prev(".mw-heading.mw-heading2").find("h2")
+      const sectionTitle = $banner.parent("section").find(".mw-heading.mw-heading2 > h2")
           .attr("id").replaceAll("_", " ");
       $dialog.data("section-title", sectionTitle)
       dialog.showModal();
