@@ -287,7 +287,7 @@ function ExampleForm(exampleID, langCode) {
     label: "Exemple n°" + exampleID,
     items: [
       new OO.ui.FieldLayout(this._textFld, {
-        label: createLinks(SPECIAL_CHARS, this._textFld, null, null, true),
+        label: createLinks(SPECIAL_CHARS, this._textFld, null, "Texte", true),
         align: "inline",
         help: getPageLink("Aide:Exemples"),
       }),
