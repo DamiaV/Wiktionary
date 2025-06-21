@@ -9,6 +9,7 @@
  * --
  * v2.0 2025-06-01 Full rewrite of [[MediaWiki:Gadget-translation editor.js]].
  * v2.1 2025-06-03 Re-implement the editing of translation boxes’ titles.
+ * v2.1.1 2025-06-21 Revert sort algorithm to use sort keys.
  * --
  * [[Catégorie:JavaScript du Wiktionnaire|translation-editor.js]]
  */
@@ -19,21 +20,21 @@
  * @typedef {Record<string, Translation[]>[]} GroupedEdits
  */
 
-const { getLanguageName } = require("./wikt.core.languages.js");
-const { EditDialog } = require("./wikt.translation-editor/dialog.js");
+const {getLanguage} = require("./wikt.core.languages.js");
+const {EditDialog} = require("./wikt.translation-editor/dialog.js");
 const {
   EditForm,
   compareLanguages,
   generateTranslationWikicode,
   generateTranslationHeaderWikicode,
 } = require("./wikt.translation-editor/form.js");
-const { EditHeaderForm } = require("./wikt.translation-editor/header-form.js");
+const {EditHeaderForm} = require("./wikt.translation-editor/header-form.js");
 
 console.log("Chargement de Gadget-wikt.translation-editor.js…");
 
-const VERSION = "2.1";
+const VERSION = "2.1.1";
 
-const api = new mw.Api({ userAgent: `Gadget-wikt.translation-editor/${VERSION}` });
+const api = new mw.Api({userAgent: `Gadget-wikt.translation-editor/${VERSION}`});
 const dialog = new EditDialog(onSubmit, onUndo, onRedo, onCancel);
 /** @type {EditForm[]} */
 const forms = [];
@@ -150,9 +151,15 @@ function insertTranslations(start, lines, langCode, translations, summary) {
     if (lineLangCode === langCode) {
       lines[i] += buildTranslationsLine(translations, summary);
       return;
-    } else if (compareLanguages(getLanguageName(langCode), getLanguageName(lineLangCode)) < 0) {
-      insertLine();
-      return;
+    } else {
+      const lang1 = getLanguage(langCode);
+      const lang2 = getLanguage(lineLangCode);
+      const langName1 = lang1.sortKey || lang1.name;
+      const langName2 = lang2.sortKey || lang2.name;
+      if (compareLanguages(langName1, langName2) < 0) {
+        insertLine();
+        return;
+      }
     }
 
     i++;
@@ -170,7 +177,7 @@ function insertTranslations(start, lines, langCode, translations, summary) {
 function buildTranslationsLine(translations, summary) {
   let line = "";
   for (const translation of translations) {
-    const { word, langCode } = translation;
+    const {word, langCode} = translation;
     line += generateTranslationWikicode(translation);
     summary.push(`+ ${getLanguageName(langCode)} [[${word}#${langCode}|${word}]]`);
   }

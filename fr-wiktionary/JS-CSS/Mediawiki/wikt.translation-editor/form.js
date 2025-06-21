@@ -522,12 +522,14 @@ class EditForm {
    * @private
    */
   _insertLineInHTML(line, langCode) {
-    const langName = getLanguageName(langCode);
+    const language1 = getLanguage(langCode);
+    const langName = language1.sortKey || language1.name;
     for (const childNode of this._translationsList.children) {
       if (childNode.tagName === "LI") {
         const lineLangCode = childNode.querySelector("span:first-child")
             .getAttribute("data-translation-lang");
-        const lineLangName = getLanguageName(lineLangCode);
+        const language2 = getLanguage(lineLangCode);
+        const lineLangName = language2.sortKey || language2.name;
         if (compareLanguages(langName, lineLangName) < 0) {
           this._translationsList.insertBefore(line, childNode);
           return;
