@@ -20,7 +20,7 @@
  * @typedef {Record<string, Translation[]>[]} GroupedEdits
  */
 
-const {getLanguage} = require("./wikt.core.languages.js");
+const {getLanguage, getLanguageName} = require("./wikt.core.languages.js");
 const {EditDialog} = require("./wikt.translation-editor/dialog.js");
 const {
   EditForm,
