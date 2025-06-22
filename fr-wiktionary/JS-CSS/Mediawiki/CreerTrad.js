@@ -13,6 +13,7 @@
  *                 page reloads instead of having its content replaced.
  * v2.2 2021-05-18 Now requires gadget wikt.preload-edit-text.
  * v2.3 2025-05-27 Conversion into a module.
+ * v2.3.1 2025-06-22 Show language name instead of code in the edit message.
  *******************************************************************************************
  * [[Catégorie:JavaScript du Wiktionnaire|CreerTrad.js]]
  *******************************************************************************************/
@@ -20,12 +21,13 @@
 "use strict";
 
 const { romanNumeralToInt } = require("./wikt.core.text.js");
+const { getLanguageName } = require("./wikt.core.languages.js");
 
 console.log("Chargement de Gadget-CreerTrad.js…");
 
 const NAME = "Créer traduction";
 
-const VERSION = "2.3";
+const VERSION = "2.3.1";
 
 /**
  * A function that generates the word line for the given translation.
@@ -231,7 +233,7 @@ function generateWikicode(
   location.href = "/wiki/" + encodeURIComponent(translation)
       + "?action=edit"
       + "&preload-edit-text=" + encodeURIComponent(newWikicode)
-      + "&preload-edit-summary=" + encodeURIComponent(`Création d’une entrée en ${langCode} avec [[Aide:Gadget-CreerTrad|${NAME} v${VERSION}]].`);
+      + "&preload-edit-summary=" + encodeURIComponent(`Création d’une entrée en ${getLanguageName(langCode)} avec [[Aide:Gadget-CreerTrad|${NAME} v${VERSION}]].`);
 }
 
 /**
