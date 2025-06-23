@@ -255,16 +255,6 @@ function p.is_elidable(word)
   return mw.ustring.match(p.lcfirst(word), "^h?[aáàâäeéèêëiíìîïoóòôöuúùûüǘǜ]") ~= nil
 end
 
---- Indique si le mot donné est une locution (s’il contient au moins une espace).
---- @param word string Le mot à tester.
---- @return boolean Vrai si le mot contient une espace, faux sinon.
-function p.is_locution(word)
-  if word == nil then
-    return nil
-  end
-  return mw.ustring.find(word, ". .") ~= nil
-end
-
 --- Indique si la page donnée existe.
 --- @param title string Le titre de la page.
 --- @return boolean Vrai si la page correspondante existe, faux sinon.
@@ -330,7 +320,7 @@ end
 --- @param name string Le nom de la catégorie.
 --- @param sortingKey string La clé de tri.
 --- @param asLink boolean Indique si la fonction doit retourner un lien (:Catégorie:…) ou non.
---- @return string La catégorie ou une chaine vide si le nom est nil.
+--- @return string La catégorie ou une chaîne vide si le nom est nil.
 function p.fait_categorie(name, sortingKey, asLink)
   local cat = asLink and ':Catégorie:' or 'Catégorie:'
 
@@ -350,7 +340,7 @@ end
 --- @param name string Le nom de la catégorie.
 --- @param sortingKey string La clé de tri.
 --- @param asLink boolean Indique si la fonction doit retourner un lien (:Catégorie:…) ou non.
---- @return string La catégorie ou une chaine vide si le nom est nil.
+--- @return string La catégorie ou une chaîne vide si le nom est nil.
 function p.fait_categorie_contenu(name, sortingKey, asLink)
   if p.page_de_contenu() then
     return p.fait_categorie(name, sortingKey, asLink) or ''
@@ -363,7 +353,7 @@ end
 --- @param name string Le nom de la catégorie.
 --- @param sortingKey string La clé de tri.
 --- @param asLink boolean Indique si la fonction doit retourner un lien (:Catégorie:…) ou non.
---- @return string La catégorie ou une chaine vide si le nom est nil.
+--- @return string La catégorie ou une chaîne vide si le nom est nil.
 function p.fait_categorie_principale(name, sortingKey, asLink)
   if p.page_principale() then
     return p.fait_categorie(name, sortingKey, asLink) or ''
@@ -477,9 +467,9 @@ function p.lien_modele(word, langCode, anchor, text, keepLangAnchor)
   return link
 end
 
---- Cherche la position de la dernière occurence de la seconde chaine dans la première.
---- @param subject string La chaine dans laquelle chercher.
---- @param s string La chaine à rechercher.
+--- Cherche la position de la dernière occurence de la seconde chaîne dans la première.
+--- @param subject string La chaîne dans laquelle chercher.
+--- @param s string La chaîne à rechercher.
 --- @return number La position de la dernière occurence de “s” dans “subject” ou 0 si aucune n’a été trouvée.
 function p.derniereOccurrence(subject, s)
   local dernier = 0
