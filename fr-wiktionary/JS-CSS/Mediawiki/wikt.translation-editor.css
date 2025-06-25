@@ -85,6 +85,29 @@
   text-decoration: none;
 }
 
+/* Auto-complete popup */
+
+.autocomplete-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.autocomplete-popup li {
+  cursor: pointer;
+  padding: 0 0.5em;
+}
+
+.autocomplete-popup li.active,
+.autocomplete-popup li:hover {
+  background-color: #d5d5d5;
+}
+
 /* Skin-specific */
 
 .skin-vector-2022 #trans-dialog {
@@ -111,26 +134,14 @@
     color: #909090;
   }
 
-  html.skin-theme-clientpref-night .ui-widget-content {
-    border-color: gray;
+  html.skin-theme-clientpref-night .autocomplete-popup {
     background-color: #292929;
-  }
-
-  html.skin-theme-clientpref-night .ui-state-default,
-  html.skin-theme-clientpref-night .ui-widget-content .ui-state-default,
-  html.skin-theme-clientpref-night .ui-widget-header .ui-state-default {
     border-color: gray;
-    background-color: #303030;
   }
 
-  html.skin-theme-clientpref-night .ui-state-hover,
-  html.skin-theme-clientpref-night .ui-widget-content .ui-state-hover,
-  html.skin-theme-clientpref-night .ui-widget-header .ui-state-hover,
-  html.skin-theme-clientpref-night .ui-state-focus,
-  html.skin-theme-clientpref-night .ui-widget-content .ui-state-focus,
-  html.skin-theme-clientpref-night .ui-widget-header .ui-state-focus {
-    border-color: lightgray;
-    background-color: #393939;
+  html.skin-theme-clientpref-night .autocomplete-popup li.active,
+  html.skin-theme-clientpref-night .autocomplete-popup li:hover {
+    background-color: #404040;
   }
 
   html.skin-theme-clientpref-night #trans-dialog {
@@ -144,26 +155,14 @@
     color: #909090;
   }
 
-  html.skin-theme-clientpref-os .ui-widget-content {
-    border-color: gray;
+  html.skin-theme-clientpref-os .autocomplete-popup {
     background-color: #292929;
-  }
-
-  html.skin-theme-clientpref-os .ui-state-default,
-  html.skin-theme-clientpref-os .ui-widget-content .ui-state-default,
-  html.skin-theme-clientpref-os .ui-widget-header .ui-state-default {
     border-color: gray;
-    background-color: #303030;
   }
 
-  html.skin-theme-clientpref-os .ui-state-hover,
-  html.skin-theme-clientpref-os .ui-widget-content .ui-state-hover,
-  html.skin-theme-clientpref-os .ui-widget-header .ui-state-hover,
-  html.skin-theme-clientpref-os .ui-state-focus,
-  html.skin-theme-clientpref-os .ui-widget-content .ui-state-focus,
-  html.skin-theme-clientpref-os .ui-widget-header .ui-state-focus {
-    border-color: lightgray;
-    background-color: #393939;
+  html.skin-theme-clientpref-os .autocomplete-popup li.active,
+  html.skin-theme-clientpref-os .autocomplete-popup li:hover {
+    background-color: #404040;
   }
 
   html.skin-theme-clientpref-os #trans-dialog {

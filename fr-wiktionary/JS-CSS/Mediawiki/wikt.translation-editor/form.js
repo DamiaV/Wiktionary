@@ -27,6 +27,7 @@ const { getLanguageToCodeMap, getLanguageName, getLanguage } = require("../wikt.
 const LANG_NAME_TO_CODE = getLanguageToCodeMap();
 /** @type {{[code: string]: LangProperties}} */
 const LANG_PROPERTIES = require("./lang-properties.json");
+const { autocomplete } = require("./autocomplete.js")
 
 const LAST_LANG_CODE_KEY = "trans-editor-lang";
 const GRAMMATICAL_PROPERTIES = {
@@ -153,19 +154,14 @@ class EditForm {
      */
     this._radioButtons = {};
 
-    this._$langInput.on("focusout", () => {
+    this._$langInput.on("blur", () => {
       this._setLanguage(this._$langInput.val().trim());
     });
-    // noinspection JSUnresolvedReference
-    this._$langInput.autocomplete({
-      source: (request, response) => {
-        // noinspection JSUnresolvedReference
-        /** @type {string} */
-        const term = request.term.toLowerCase();
-        // noinspection JSUnresolvedReference
-        const matcher = new RegExp($.ui.autocomplete.escapeRegex(term), "i");
-        const suggestions = LANG_NAMES
-            .filter((item) => matcher.test(item))
+    autocomplete(this._$langInput[0], {
+      source: (term) => {
+        term = term.toLowerCase();
+        return LANG_NAMES
+            .filter((item) => item.toLowerCase().includes(term))
             .sort((name1, name2) => {
               // Put items starting with the term first
               if (name1.toLowerCase().startsWith(term) && !name2.toLowerCase().startsWith(term))
@@ -174,9 +170,8 @@ class EditForm {
                 return 1;
               return compareLanguages(name1, name2);
             });
-        response(suggestions);
       },
-      minLength: 2
+      minLength: 2,
     });
 
     $showMoreButton.on("click", (e) => {
