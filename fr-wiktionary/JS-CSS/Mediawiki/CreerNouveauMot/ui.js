@@ -368,83 +368,45 @@ ExampleForm.prototype.isTranslationDisabled = function () {
   return this._disableTranslationChk.isSelected() && !this._disableTranslationChk.isDisabled();
 };
 
-/**
- * Base class for the gadget’s GUIs.
- */
-class GUI {
-  /** jQuery selector of the HTML element GUIs will be inserted into. */
-  static TARGET_ELEMENT = "#Editnotice-0";
-}
+/** CSS selector of the HTML element GUIs will be inserted into. */
+const TARGET_ELEMENT = "#Editnotice-0";
 
 /**
  * Gadget’s start GUI consists of a simple button that will open the actual GUI upon being clicked.
  */
-class StartGUI extends GUI {
-  static #ELEMENT_ID = "cnm-open-ui";
-
+class StartGUI {
   /**
    * @param gadgetName {string}
-   * @param onActivateGadget {function}
+   * @param onActivateGadget {() => void}
    */
   constructor(gadgetName, onActivateGadget) {
-    super();
-    const $target = $(GUI.TARGET_ELEMENT);
+    /**
+     * @type {string}
+     * @private
+     */
+    this._ELEMENT_ID = "cnm-open-ui";
+
+    const $target = $(TARGET_ELEMENT);
     const headerText = `
 <div class="center" style="margin-bottom: 5px">
-  <span id="${StartGUI.#ELEMENT_ID}" class="mw-ui-button mw-ui-progressive">Ouvrir le gadget ${gadgetName}</span>
+  <span id="${this._ELEMENT_ID}" class="mw-ui-button mw-ui-progressive">Ouvrir le gadget ${gadgetName}</span>
 </div>`.trim();
     $target.append(headerText);
-    $target.find("#" + StartGUI.#ELEMENT_ID).on("click", onActivateGadget);
+    $target.find("#" + this._ELEMENT_ID).on("click", onActivateGadget);
   }
 
   /**
    * Removes this GUI from the DOM.
    */
   remove() {
-    $("#" + StartGUI.#ELEMENT_ID).remove();
+    $("#" + this._ELEMENT_ID).remove();
   }
 }
 
 /**
  * Gadget’s main GUI.
  */
-class MainGUI extends GUI {
-  /** @type {string} */
-  #word;
-  /** @type {Tab[]} */
-  #tabs = [];
-
-  #languageSelectFld = null;
-  #grammarClassSelectFld = null;
-  #grammaticalPropertyComboboxes = [null, null];
-  #imageFld = null;
-  #imageDescriptionFld = null;
-  #pronunciationFld = null;
-  #pronunciationPnl = null;
-  #addDefinitionBtn = null;
-  #removeDefinitionBtn = null;
-  #definitionsLayout = null;
-  #definitionFlds = [];
-  #categoriesWidget = null;
-  #etymologyFld = null;
-  #pronunciationSectionFld = null;
-  #homophonesFld = null;
-  #paronymsFld = null;
-  #referencesFld = null;
-  #bibliographyFld = null;
-  /** @type {Record<string, Object>} */
-  #otherSectionFields = {};
-  #seeOtherProjectsChk = {};
-  #draftChk = null;
-  #sortKeyFld = null;
-  /** @type {Record<string, Wiki>} */
-  #otherProjects = {};
-  /**
-   * Language span tag in gadget’s title.
-   * @type {JQuery<HTMLElement>}
-   */
-  #$titleLangSpan = null;
-
+class MainGUI {
   /**
    * @param word {string} The word.
    * @param languages {Language[]} The language.
@@ -455,9 +417,47 @@ class MainGUI extends GUI {
    * @param otherProjects {Record<string, Wiki>} Object containing data for sister projects.
    */
   constructor(word, languages, sections, onLanguageSelect, onClassSelect, onInsertWikicode, otherProjects) {
-    super();
-    this.#word = word;
-    this.#otherProjects = otherProjects;
+    /**
+     * @type {string}
+     * @private
+     */
+    this._word = word;
+    /**
+     * @type {Record<string, Wiki>}
+     * @private
+     */
+    this._otherProjects = otherProjects;
+    /**
+     * @type {[OO.ui.DropdownWidget, OO.ui.DropdownWidget]}
+     * @private
+     */
+    this._grammaticalPropertyComboboxes = [null, null];
+    /**
+     * @type {DefinitionForm[]}
+     * @private
+     */
+    this._definitionFlds = [];
+    /**
+     * @type {Record<string, Object>}
+     * @private
+     */
+    this._otherSectionFields = {};
+    /**
+     * @type {Record<string, {checkbox: OO.ui.CheckboxInputWidget, textfield: OO.ui.TextInputWidget}>}
+     * @private
+     */
+    this._seeOtherProjectsChk = {};
+    /**
+     * @type {JQuery<HTMLElement>}
+     * @private
+     */
+    this._$titleLangSpan = null;
+
+    /**
+     * @type {Tab[]}
+     * @private
+     */
+    this._tabs = [];
 
     // Tabs declaration
     const tabs = [
@@ -480,64 +480,68 @@ class MainGUI extends GUI {
               label: lang.name,
             }));
           }
-          this.#languageSelectFld = new OO.ui.DropdownWidget({
+          this._languageSelectFld = new OO.ui.DropdownWidget({
             menu: {
               items: languageOptions,
             },
           });
           // noinspection JSCheckFunctionSignatures,JSValidateTypes
-          this.#languageSelectFld.getMenu().on("select", e => onLanguageSelect(e.getData()));
+          this._languageSelectFld.getMenu().on("select", e => onLanguageSelect(e.getData()));
 
-          this.#grammarClassSelectFld = new OO.ui.DropdownWidget();
+          this._grammarClassSelectFld = new OO.ui.DropdownWidget();
           // noinspection JSCheckFunctionSignatures
-          this.#grammarClassSelectFld.getMenu().on("select", e => onClassSelect(e.getData()));
-          this.#grammaticalPropertyComboboxes[0] = new OO.ui.DropdownWidget();
-          this.#grammaticalPropertyComboboxes[1] = new OO.ui.DropdownWidget();
+          this._grammarClassSelectFld.getMenu().on("select", e => onClassSelect(e.getData()));
+          this._grammaticalPropertyComboboxes[0] = new OO.ui.DropdownWidget();
+          this._grammaticalPropertyComboboxes[1] = new OO.ui.DropdownWidget();
 
           const imageSectionLabel = new OO.ui.HtmlSnippet(
               `Image &mdash; <a href="https://commons.wikimedia.org/w/index.php?search=${word}" ` +
               'target="_blank" title="S’ouvre dans un nouvel onglet">Rechercher sur Commons</a>'
           );
-          this.#imageFld = new OO.ui.TextInputWidget({
+          this._imageFld = new OO.ui.TextInputWidget({
             id: "cnm-image-field",
             placeholder: "Nom du fichier",
           });
-          this.#imageDescriptionFld = new OO.ui.TextInputWidget({
+          this._imageDescriptionFld = new OO.ui.TextInputWidget({
             id: "cnm-image-description-field",
             placeholder: "Légende",
           });
 
-          this.#pronunciationFld = new OO.ui.TextInputWidget({
+          this._pronunciationFld = new OO.ui.TextInputWidget({
             id: "cnm-pronunciation-field",
           });
-          this.#pronunciationPnl = new OO.ui.FieldLayout(this.#pronunciationFld, {
+          this._pronunciationPnl = new OO.ui.FieldLayout(this._pronunciationFld, {
             align: "inline",
             help: getPageLink("Aide:Prononciation"),
           });
 
-          this.#addDefinitionBtn = new OO.ui.ButtonWidget({
+          this._addDefinitionBtn = new OO.ui.ButtonWidget({
             label: "Ajouter une définition",
           });
-          this.#addDefinitionBtn.on("click", () => this.addDefinition());
-          this.#removeDefinitionBtn = new OO.ui.ButtonWidget({
+          this._addDefinitionBtn.on("click", () => this.addDefinition());
+          this._removeDefinitionBtn = new OO.ui.ButtonWidget({
             label: "Retirer la dernière définition",
           });
-          this.#removeDefinitionBtn.on("click", () => this.removeDefinition(this.definitionsCount - 1));
-          this.#removeDefinitionBtn.toggle(false); // Hide by default
+          this._removeDefinitionBtn.on("click", () => this.removeDefinition(this.definitionsCount - 1));
+          this._removeDefinitionBtn.toggle(false); // Hide by default
 
-          this.#definitionsLayout = new OO.ui.FieldsetLayout({
+          /**
+           * @type {OO.ui.FieldsetLayout}
+           * @private
+           */
+          this._definitionsLayout = new OO.ui.FieldsetLayout({
             label: "Définition(s)",
             items: [
               new OO.ui.HorizontalLayout({
                 items: [
-                  this.#addDefinitionBtn,
-                  this.#removeDefinitionBtn,
+                  this._addDefinitionBtn,
+                  this._removeDefinitionBtn,
                 ],
               }),
             ],
           });
 
-          this.#categoriesWidget = new OO.ui.TagMultiselectWidget({
+          this._categoriesWidget = new OO.ui.TagMultiselectWidget({
             inputPosition: "inline",
             allowArbitrary: true,
           });
@@ -549,7 +553,7 @@ class MainGUI extends GUI {
                 items: [
                   new OO.ui.HorizontalLayout({
                     items: [
-                      new OO.ui.FieldLayout(this.#languageSelectFld, {
+                      new OO.ui.FieldLayout(this._languageSelectFld, {
                         align: "inline",
                       }),
                       new OO.ui.ActionFieldLayout(languageFld, languageBnt, {
@@ -567,13 +571,13 @@ class MainGUI extends GUI {
                 items: [
                   new OO.ui.HorizontalLayout({
                     items: [
-                      new OO.ui.FieldLayout(this.#grammarClassSelectFld, {
+                      new OO.ui.FieldLayout(this._grammarClassSelectFld, {
                         align: "inline",
                       }),
-                      new OO.ui.FieldLayout(this.#grammaticalPropertyComboboxes[0], {
+                      new OO.ui.FieldLayout(this._grammaticalPropertyComboboxes[0], {
                         align: "inline",
                       }),
-                      new OO.ui.FieldLayout(this.#grammaticalPropertyComboboxes[1], {
+                      new OO.ui.FieldLayout(this._grammaticalPropertyComboboxes[1], {
                         align: "inline",
                       }),
                     ],
@@ -583,9 +587,9 @@ class MainGUI extends GUI {
               new OO.ui.FieldsetLayout({
                 label: imageSectionLabel,
                 items: [
-                  this.#imageFld,
-                  new OO.ui.FieldLayout(this.#imageDescriptionFld, {
-                    label: createLinks(SPECIAL_CHARS, this.#imageDescriptionFld, null, null, true),
+                  this._imageFld,
+                  new OO.ui.FieldLayout(this._imageDescriptionFld, {
+                    label: createLinks(SPECIAL_CHARS, this._imageDescriptionFld, null, null, true),
                     align: "inline",
                   }),
                 ],
@@ -596,14 +600,14 @@ class MainGUI extends GUI {
               new OO.ui.FieldsetLayout({
                 label: "Prononciation",
                 items: [
-                  this.#pronunciationPnl,
+                  this._pronunciationPnl,
                 ],
               }),
-              this.#definitionsLayout,
+              this._definitionsLayout,
               new OO.ui.FieldsetLayout({
                 label: "Catégories",
                 items: [
-                  this.#categoriesWidget,
+                  this._categoriesWidget,
                 ],
                 help: "Pour les cas où aucun modèle n’ajoute une catégorie spécifique, vous pouvez la renseigner ici. " +
                     "Indiquez seulement le nom de la catégorie (sans «\u00a0Catégorie:\u00a0»), " +
@@ -617,7 +621,7 @@ class MainGUI extends GUI {
       {
         title: "Sections supplémentaires",
         content: () => {
-          this.#etymologyFld = new OO.ui.MultilineTextInputWidget({
+          this._etymologyFld = new OO.ui.MultilineTextInputWidget({
             rows: 4,
             autofocus: true,
           });
@@ -625,19 +629,19 @@ class MainGUI extends GUI {
               'Prononciation (section)<span> &mdash; <a id="cnm-commons-audio-link" href="#" ' +
               'target="_blank" title="S’ouvre dans un nouvel onglet">Rechercher des fichiers audio sur Commons</a></span>'
           );
-          this.#pronunciationSectionFld = new OO.ui.MultilineTextInputWidget({
+          this._pronunciationSectionFld = new OO.ui.MultilineTextInputWidget({
             rows: 4,
           });
-          this.#homophonesFld = new OO.ui.MultilineTextInputWidget({
+          this._homophonesFld = new OO.ui.MultilineTextInputWidget({
             rows: 4,
           });
-          this.#paronymsFld = new OO.ui.MultilineTextInputWidget({
+          this._paronymsFld = new OO.ui.MultilineTextInputWidget({
             rows: 4,
           });
-          this.#referencesFld = new OO.ui.MultilineTextInputWidget({
+          this._referencesFld = new OO.ui.MultilineTextInputWidget({
             rows: 4,
           });
-          this.#bibliographyFld = new OO.ui.MultilineTextInputWidget({
+          this._bibliographyFld = new OO.ui.MultilineTextInputWidget({
             rows: 4,
           });
 
@@ -655,7 +659,7 @@ class MainGUI extends GUI {
                 rows: 4,
                 columns: 20,
               });
-              this.#otherSectionFields[section.code] = field;
+              this._otherSectionFields[section.code] = field;
               fields.push(new OO.ui.FieldLayout(field, {
                 label: section.label,
                 align: "inline",
@@ -669,8 +673,8 @@ class MainGUI extends GUI {
               new OO.ui.FieldsetLayout({
                 label: "Étymologie",
                 items: [
-                  new OO.ui.FieldLayout(this.#etymologyFld, {
-                    label: createLinks(SPECIAL_CHARS, this.#etymologyFld, null, null, true),
+                  new OO.ui.FieldLayout(this._etymologyFld, {
+                    label: createLinks(SPECIAL_CHARS, this._etymologyFld, null, null, true),
                     align: "inline",
                     help: getPageLink("Aide:Étymologies"),
                   }),
@@ -681,18 +685,18 @@ class MainGUI extends GUI {
               new OO.ui.FieldsetLayout({
                 label: pronSectionLabel,
                 items: [
-                  new OO.ui.FieldLayout(this.#pronunciationSectionFld, {
-                    label: createLinks(SPECIAL_CHARS, this.#pronunciationSectionFld, null, null, true),
+                  new OO.ui.FieldLayout(this._pronunciationSectionFld, {
+                    label: createLinks(SPECIAL_CHARS, this._pronunciationSectionFld, null, null, true),
                     align: "inline",
                     help: getPageLink("Aide:Prononciation"),
                   }),
-                  new OO.ui.FieldLayout(this.#homophonesFld, {
-                    label: createLinks(SPECIAL_CHARS, this.#homophonesFld, null, "Homophones", true),
+                  new OO.ui.FieldLayout(this._homophonesFld, {
+                    label: createLinks(SPECIAL_CHARS, this._homophonesFld, null, "Homophones", true),
                     align: "inline",
                     help: getPageLink("Aide:Homophones et paronymes"),
                   }),
-                  new OO.ui.FieldLayout(this.#paronymsFld, {
-                    label: createLinks(SPECIAL_CHARS, this.#paronymsFld, null, "Paronymes", true),
+                  new OO.ui.FieldLayout(this._paronymsFld, {
+                    label: createLinks(SPECIAL_CHARS, this._paronymsFld, null, "Paronymes", true),
                     align: "inline",
                     help: getPageLink("Aide:Homophones et paronymes"),
                   }),
@@ -701,13 +705,13 @@ class MainGUI extends GUI {
               new OO.ui.FieldsetLayout({
                 label: "Références",
                 items: [
-                  new OO.ui.FieldLayout(this.#referencesFld, {
-                    label: createLinks(SPECIAL_CHARS, this.#referencesFld, null, null, true),
+                  new OO.ui.FieldLayout(this._referencesFld, {
+                    label: createLinks(SPECIAL_CHARS, this._referencesFld, null, null, true),
                     align: "inline",
                     help: getPageLink("Aide:Références#Le_format_développé"),
                   }),
-                  new OO.ui.FieldLayout(this.#bibliographyFld, {
-                    label: createLinks(SPECIAL_CHARS, this.#bibliographyFld, null, "Bibliographie", true),
+                  new OO.ui.FieldLayout(this._bibliographyFld, {
+                    label: createLinks(SPECIAL_CHARS, this._bibliographyFld, null, "Bibliographie", true),
                     align: "inline",
                     help: getPageLink("Aide:Références#Le_format_développé"),
                   }),
@@ -742,7 +746,7 @@ class MainGUI extends GUI {
         content: () => {
           const otherProjectsFields = [];
 
-          for (const [projectCode, projectData] of Object.entries(this.#otherProjects)) {
+          for (const [projectCode, projectData] of Object.entries(this._otherProjects)) {
             const projectName = projectData.name;
             const checkbox = new OO.ui.CheckboxInputWidget({
               value: projectCode,
@@ -755,7 +759,7 @@ class MainGUI extends GUI {
 
             checkbox.on("change", selected => textFld.setDisabled(!selected));
 
-            this.#seeOtherProjectsChk[projectCode] = {
+            this._seeOtherProjectsChk[projectCode] = {
               checkbox: checkbox,
               textfield: textFld,
             };
@@ -771,8 +775,8 @@ class MainGUI extends GUI {
             ));
           }
 
-          this.#draftChk = new OO.ui.CheckboxInputWidget();
-          this.#sortKeyFld = new OO.ui.TextInputWidget();
+          this._draftChk = new OO.ui.CheckboxInputWidget();
+          this._sortKeyFld = new OO.ui.TextInputWidget();
 
           return new OO.ui.FieldsetLayout({
             items: [
@@ -786,11 +790,11 @@ class MainGUI extends GUI {
               new OO.ui.FieldsetLayout({
                 label: "Autres options",
                 items: [
-                  new OO.ui.FieldLayout(this.#draftChk, {
+                  new OO.ui.FieldLayout(this._draftChk, {
                     label: "Ébauche",
                     align: "inline",
                   }),
-                  new OO.ui.FieldLayout(this.#sortKeyFld, {
+                  new OO.ui.FieldLayout(this._sortKeyFld, {
                     label: "Clé de tri",
                     help: "Permet de trier les pages dans les catégories.",
                     align: "inline",
@@ -820,7 +824,7 @@ class MainGUI extends GUI {
       const content = tabData.content();
       tab.$element.append(typeof content === "string" ? content : content.$element);
       tabsWidget.addTabPanels([tab]);
-      this.#tabs.push(tab);
+      this._tabs.push(tab);
     }
 
     /*
@@ -917,12 +921,12 @@ class MainGUI extends GUI {
      * Insert elements into DOM
      */
 
-    const $tedit = $(GUI.TARGET_ELEMENT);
+    const $tedit = $(TARGET_ELEMENT);
     $tedit.append('<h1 id="cnm-title">Ajout d’un mot en <span id="cnm-title-lang">…</span></h1>');
-    this.#$titleLangSpan = $("#cnm-title-lang");
+    this._$titleLangSpan = $("#cnm-title-lang");
     $tedit.append(gadgetBox.$element);
 
-    for (const projectCode of Object.keys(this.#otherProjects)) {
+    for (const projectCode of Object.keys(this._otherProjects)) {
       $(`#cnm-sister-project-${projectCode} span.oo-ui-actionFieldLayout-button`).attr("style", "width: 100%");
       $(`#cnm-sister-project-${projectCode} span.oo-ui-fieldLayout-field`).attr("style", "width: 100%");
     }
@@ -938,7 +942,7 @@ class MainGUI extends GUI {
    * @param index {number} The index.
    */
   selectTab(index) {
-    this.#tabs[index].select();
+    this._tabs[index].select();
   }
 
   /**
@@ -947,20 +951,20 @@ class MainGUI extends GUI {
    * @param language {Language} The language object.
    */
   selectLanguage(language) {
-    this.#$titleLangSpan.text(language.name);
-    if (!this.#languageSelectFld.getMenu().findItemFromData(language.code)) {
-      this.#languageSelectFld.getMenu().addItems([new OO.ui.MenuOptionWidget({
+    this._$titleLangSpan.text(language.name);
+    if (!this._languageSelectFld.getMenu().findItemFromData(language.code)) {
+      this._languageSelectFld.getMenu().addItems([new OO.ui.MenuOptionWidget({
         data: language.code,
         label: language.name,
       })], 0);
     }
-    this.#updateFields(language);
-    this.#updateSisterProjectsLinks(language);
+    this._updateFields(language);
+    this._updateSisterProjectsLinks(language);
     const $link = $("#cnm-commons-audio-link");
     const $span = $link.parent();
     let commonsAudioUrl = "#";
     if (language.iso6393Code) {
-      const w = this.#word.replace(" ", "_");
+      const w = this._word.replace(" ", "_");
       commonsAudioUrl =
           `https://commons.wikimedia.org/w/index.php?search=${w}.wav+incategory:"Lingua+Libre+pronunciation-${language.iso6393Code}"`;
       $span.show();
@@ -968,20 +972,20 @@ class MainGUI extends GUI {
       $span.hide();
     }
     $link.attr("href", commonsAudioUrl);
-    this.#languageSelectFld.getMenu().selectItemByData(language.code);
-    this.#pronunciationPnl.setLabel(this.#formatApi(language.ipaSymbols));
+    this._languageSelectFld.getMenu().selectItemByData(language.code);
+    this._pronunciationPnl.setLabel(this._formatApi(language.ipaSymbols));
     if (this.definitionsCount === 0) {
       // No definition is added until the user selects a language or its cookie has been read
       this.addDefinition();
     }
-    this.#definitionFlds.forEach(f => f.onLanguageUpdate(language.code));
+    this._definitionFlds.forEach(f => f.onLanguageUpdate(language.code));
   }
 
   /**
    * @returns {number} The number of grammatical property comboboxes.
    */
   get grammaticalPropertyFieldsCount() {
-    return this.#grammaticalPropertyComboboxes.length;
+    return this._grammaticalPropertyComboboxes.length;
   }
 
   /**
@@ -990,15 +994,15 @@ class MainGUI extends GUI {
    * @param properties {GrammaticalProperty[]} The list of values.
    */
   setAvailableGrammaticalProperties(index, properties) {
-    MainGUI.#setListValues(properties, this.#grammaticalPropertyComboboxes[index]);
+    this._setListValues(properties, this._grammaticalPropertyComboboxes[index]);
   }
 
   /**
    * Updates all language-related fields.
    * @param language {Language} The selected language.
    */
-  #updateFields(language) {
-    this.#grammarClassSelectFld.getMenu().clearItems();
+  _updateFields(language) {
+    this._grammarClassSelectFld.getMenu().clearItems();
     const items = [];
     items.push(new OO.ui.MenuOptionWidget({
       data: "",
@@ -1012,26 +1016,26 @@ class MainGUI extends GUI {
       }));
     }
 
-    this.#grammarClassSelectFld.getMenu().addItems(items);
-    this.#grammarClassSelectFld.getMenu().selectItem(items[0]);
-    this.#pronunciationFld.setDisabled(language.code === "conv");
+    this._grammarClassSelectFld.getMenu().addItems(items);
+    this._grammarClassSelectFld.getMenu().selectItem(items[0]);
+    this._pronunciationFld.setDisabled(language.code === "conv");
   }
 
   /**
    * Updates the link search links to sister projects based on the selected language.
    * @param language {Language} The selected language.
    */
-  #updateSisterProjectsLinks(language) {
-    for (const [projectCode, projectData] of Object.entries(this.#otherProjects)) {
+  _updateSisterProjectsLinks(language) {
+    for (const [projectCode, projectData] of Object.entries(this._otherProjects)) {
       const forLangs = projectData.showOnlyForLangs;
       const disabled = forLangs.length !== 0 && !forLangs.includes(language.code);
-      const checkbox = this.#seeOtherProjectsChk[projectCode]["checkbox"];
+      const checkbox = this._seeOtherProjectsChk[projectCode].checkbox;
 
       const projectDomain = projectData.urlDomain;
       const urlBase = projectData.urlBase;
 
       const $link = $(`#cnm-sister-project-${projectCode} a`);
-      const url = MainGUI.#generateProjectLink(projectDomain, urlBase, language.wikimediaCode, this.#word);
+      const url = this._generateProjectLink(projectDomain, urlBase, language.wikimediaCode, this._word);
 
       checkbox.setDisabled(disabled);
       // Unselect if disabled
@@ -1050,11 +1054,11 @@ class MainGUI extends GUI {
    * @param ipaSymbols {string[][]} The list of IPA symbols.
    * @return {JQuery} A jQuery object.
    */
-  #formatApi(ipaSymbols) {
+  _formatApi(ipaSymbols) {
     const $label = $("<span>");
 
     for (const [i, ipaSymbol] of ipaSymbols.entries()) {
-      $label.append(createLinks(ipaSymbol, this.#pronunciationFld, "API"));
+      $label.append(createLinks(ipaSymbol, this._pronunciationFld, "API"));
       if (i < ipaSymbols.length - 1) {
         $label.append(" &mdash; ");
       }
@@ -1068,7 +1072,7 @@ class MainGUI extends GUI {
    * @param values {GrammaticalProperty[]} The list of values.
    * @param field {OO.ui.DropdownWidget} The OOUI widget.
    */
-  static #setListValues(values, field) {
+  _setListValues(values, field) {
     // noinspection JSUnresolvedFunction
     field.getMenu().clearItems();
     const items = [];
@@ -1105,7 +1109,7 @@ class MainGUI extends GUI {
    * @param word {string} The word to search for.
    * @return {string} The search URL.
    */
-  static #generateProjectLink(projectDomain, urlBase, langCode, word) {
+  _generateProjectLink(projectDomain, urlBase, langCode, word) {
     if (!langCode) return "#";
     const domain = interpolateString(projectDomain, langCode);
     return `https://${domain}/${urlBase}${encodeURIComponent(word)}`;
@@ -1117,7 +1121,7 @@ class MainGUI extends GUI {
    * @return {string} The section’s contents.
    */
   getSectionContent(sectionCode) {
-    return this.#otherSectionFields[sectionCode] ? this.#otherSectionFields[sectionCode].getValue().trim() : "";
+    return this._otherSectionFields[sectionCode] ? this._otherSectionFields[sectionCode].getValue().trim() : "";
   }
 
   /**
@@ -1126,7 +1130,7 @@ class MainGUI extends GUI {
    * @param content {string} The section’s contents.
    */
   setSectionContent(sectionCode, content) {
-    this.#otherSectionFields[sectionCode].setValue(content.trim());
+    this._otherSectionFields[sectionCode].setValue(content.trim());
   }
 
   /**
@@ -1135,7 +1139,7 @@ class MainGUI extends GUI {
    * @return {boolean} True if a link has to be inserted.
    */
   hasAddLinkToProject(projectCode) {
-    return this.#seeOtherProjectsChk[projectCode]["checkbox"].isSelected();
+    return this._seeOtherProjectsChk[projectCode].checkbox.isSelected();
   }
 
   /**
@@ -1144,7 +1148,7 @@ class MainGUI extends GUI {
    * @param link {boolean} True if a link has to be inserted.
    */
   setAddLinkToProject(projectCode, link) {
-    this.#seeOtherProjectsChk[projectCode]["checkbox"].setSelected(link);
+    this._seeOtherProjectsChk[projectCode].checkbox.setSelected(link);
   }
 
   /**
@@ -1153,7 +1157,7 @@ class MainGUI extends GUI {
    * @return {string} Template’s parameters.
    */
   getProjectLinkParams(projectCode) {
-    return this.#seeOtherProjectsChk[projectCode]["textfield"].getValue().trim();
+    return this._seeOtherProjectsChk[projectCode].textfield.getValue().trim();
   }
 
   /**
@@ -1162,42 +1166,42 @@ class MainGUI extends GUI {
    * @param params {string} Template’s parameters.
    */
   setProjectLinkParams(projectCode, params) {
-    this.#seeOtherProjectsChk[projectCode]["textfield"].setValue(params.trim());
+    this._seeOtherProjectsChk[projectCode].textfield.setValue(params.trim());
   }
 
   /**
    * @return {number} The number of tabs.
    */
   get tabsNumber() {
-    return this.#tabs.length;
+    return this._tabs.length;
   }
 
   /**
    * @return {string} Selected language’s code.
    */
   get selectedLanguage() {
-    return this.#languageSelectFld.getMenu().findSelectedItem().getData();
+    return this._languageSelectFld.getMenu().findSelectedItem().getData();
   }
 
   /**
    * @returns {string[]} Selected grammatical properties’ codes.
    */
   get grammaticalPropertyCodes() {
-    return this.#grammaticalPropertyComboboxes.map(cb => cb.getMenu().findSelectedItem().getData())
+    return this._grammaticalPropertyComboboxes.map(cb => cb.getMenu().findSelectedItem().getData())
   }
 
   /**
    * @return {string} Selected grammatical class.
    */
   get grammarClass() {
-    return this.#grammarClassSelectFld.getMenu().findSelectedItem().getData();
+    return this._grammarClassSelectFld.getMenu().findSelectedItem().getData();
   }
 
   /**
    * @return {string} The image name.
    */
   get imageName() {
-    return this.#imageFld.getValue().trim();
+    return this._imageFld.getValue().trim();
   }
 
   /**
@@ -1205,14 +1209,14 @@ class MainGUI extends GUI {
    * @param imageName {string} The image name.
    */
   set imageName(imageName) {
-    this.#imageFld.setValue(imageName.trim());
+    this._imageFld.setValue(imageName.trim());
   }
 
   /**
    * @return {string} The image description.
    */
   get imageDescription() {
-    return this.#imageDescriptionFld.getValue().trim();
+    return this._imageDescriptionFld.getValue().trim();
   }
 
   /**
@@ -1220,14 +1224,14 @@ class MainGUI extends GUI {
    * @param imageDesc {string} The image description.
    */
   set imageDescription(imageDesc) {
-    this.#imageDescriptionFld.setValue(imageDesc.trim());
+    this._imageDescriptionFld.setValue(imageDesc.trim());
   }
 
   /**
    * @return {string} The pronunciation.
    */
   get pronunciation() {
-    return this.#pronunciationFld.getValue().trim();
+    return this._pronunciationFld.getValue().trim();
   }
 
   /**
@@ -1235,7 +1239,7 @@ class MainGUI extends GUI {
    * @param pron {string} The pronunciation.
    */
   set pronunciation(pron) {
-    this.#pronunciationFld.setValue(pron.trim());
+    this._pronunciationFld.setValue(pron.trim());
   }
 
   /**
@@ -1244,7 +1248,7 @@ class MainGUI extends GUI {
    * @return {Definition} A definition object.
    */
   getDefinition(index) {
-    const definitionForm = this.#definitionFlds[index];
+    const definitionForm = this._definitionFlds[index];
     const examples = [];
     for (let i = 0; i < definitionForm.examplesCount; i++) {
       examples.push(definitionForm.getExample(i));
@@ -1256,7 +1260,7 @@ class MainGUI extends GUI {
    * @return {number} The number of definitions.
    */
   get definitionsCount() {
-    return this.#definitionFlds.length;
+    return this._definitionFlds.length;
   }
 
   /**
@@ -1264,9 +1268,9 @@ class MainGUI extends GUI {
    */
   addDefinition() {
     const definitionForm = new DefinitionForm(this.definitionsCount + 1, this.selectedLanguage);
-    this.#definitionFlds.push(definitionForm);
-    this.#definitionsLayout.addItems([definitionForm], this.#definitionsLayout.items.length - 1);
-    this.#removeDefinitionBtn.toggle(this.definitionsCount > 1);
+    this._definitionFlds.push(definitionForm);
+    this._definitionsLayout.addItems([definitionForm], this._definitionsLayout.items.length - 1);
+    this._removeDefinitionBtn.toggle(this.definitionsCount > 1);
   }
 
   /**
@@ -1274,17 +1278,17 @@ class MainGUI extends GUI {
    * @param index {number} The definition’s index.
    */
   removeDefinition(index) {
-    const definitionForm = this.#definitionFlds[index];
-    this.#definitionFlds.splice(index, 1);
-    this.#definitionsLayout.removeItems([definitionForm]);
-    this.#removeDefinitionBtn.toggle(this.definitionsCount > 1);
+    const definitionForm = this._definitionFlds[index];
+    this._definitionFlds.splice(index, 1);
+    this._definitionsLayout.removeItems([definitionForm]);
+    this._removeDefinitionBtn.toggle(this.definitionsCount > 1);
   }
 
   /**
    * @return {string[]} The categories.
    */
   get categories() {
-    return this.#categoriesWidget.getValue();
+    return this._categoriesWidget.getValue();
   }
 
   /**
@@ -1292,14 +1296,14 @@ class MainGUI extends GUI {
    * @param categories {string[]} The image categories.
    */
   set categories(categories) {
-    this.#categoriesWidget.setValue(categories);
+    this._categoriesWidget.setValue(categories);
   }
 
   /**
    * @return {string} The etymology.
    */
   get etymology() {
-    return this.#etymologyFld.getValue().trim();
+    return this._etymologyFld.getValue().trim();
   }
 
   /**
@@ -1307,14 +1311,14 @@ class MainGUI extends GUI {
    * @param etym {string} The etymology.
    */
   set etymology(etym) {
-    this.#etymologyFld.setValue(etym.trim());
+    this._etymologyFld.setValue(etym.trim());
   }
 
   /**
    * @return {string} The pronunciation section.
    */
   get pronunciationSection() {
-    return this.#pronunciationSectionFld.getValue().trim();
+    return this._pronunciationSectionFld.getValue().trim();
   }
 
   /**
@@ -1322,14 +1326,14 @@ class MainGUI extends GUI {
    * @param pronunciationSection {string} The pronunciation section content.
    */
   set pronunciationSection(pronunciationSection) {
-    this.#pronunciationSectionFld.setValue(pronunciationSection.trim());
+    this._pronunciationSectionFld.setValue(pronunciationSection.trim());
   }
 
   /**
    * @return {string} The homophones.
    */
   get homophones() {
-    return this.#homophonesFld.getValue().trim();
+    return this._homophonesFld.getValue().trim();
   }
 
   /**
@@ -1337,14 +1341,14 @@ class MainGUI extends GUI {
    * @param homophones {string} The homophones.
    */
   set homophones(homophones) {
-    this.#homophonesFld.setValue(homophones.trim());
+    this._homophonesFld.setValue(homophones.trim());
   }
 
   /**
    * @return {string} The paronyms.
    */
   get paronyms() {
-    return this.#paronymsFld.getValue().trim();
+    return this._paronymsFld.getValue().trim();
   }
 
   /**
@@ -1352,14 +1356,14 @@ class MainGUI extends GUI {
    * @param paronyms {string} The paronyms.
    */
   set paronyms(paronyms) {
-    this.#paronymsFld.setValue(paronyms.trim());
+    this._paronymsFld.setValue(paronyms.trim());
   }
 
   /**
    * @return {string} The references.
    */
   get references() {
-    return this.#referencesFld.getValue().trim();
+    return this._referencesFld.getValue().trim();
   }
 
   /**
@@ -1367,14 +1371,14 @@ class MainGUI extends GUI {
    * @param references {string} The references.
    */
   set references(references) {
-    this.#referencesFld.setValue(references.trim());
+    this._referencesFld.setValue(references.trim());
   }
 
   /**
    * @return {string} The bibliography.
    */
   get bibliography() {
-    return this.#bibliographyFld.getValue().trim();
+    return this._bibliographyFld.getValue().trim();
   }
 
   /**
@@ -1382,7 +1386,7 @@ class MainGUI extends GUI {
    * @param bibliography {string} The bibliography.
    */
   set bibliography(bibliography) {
-    this.#bibliographyFld.setValue(bibliography.trim());
+    this._bibliographyFld.setValue(bibliography.trim());
   }
 
   /**
@@ -1390,7 +1394,7 @@ class MainGUI extends GUI {
    * @return {boolean} True if it is a draft.
    */
   get isDraft() {
-    return this.#draftChk.isSelected();
+    return this._draftChk.isSelected();
   }
 
   /**
@@ -1398,14 +1402,14 @@ class MainGUI extends GUI {
    * @param draft {boolean} True if it is a draft.
    */
   set isDraft(draft) {
-    this.#draftChk.setSelected(draft);
+    this._draftChk.setSelected(draft);
   }
 
   /**
    * @return {string} The sorting key.
    */
   get sortingKey() {
-    return this.#sortKeyFld.getValue().trim();
+    return this._sortKeyFld.getValue().trim();
   }
 
   /**
@@ -1413,16 +1417,16 @@ class MainGUI extends GUI {
    * @param key {string} The sorting key.
    */
   set sortingKey(key) {
-    this.#sortKeyFld.setValue(key.trim());
+    this._sortKeyFld.setValue(key.trim());
   }
 }
 
 module.exports = {
+  TARGET_ELEMENT,
   interpolateString,
   Tab,
   DefinitionForm,
   ExampleForm,
-  GUI,
   StartGUI,
   MainGUI,
 };
