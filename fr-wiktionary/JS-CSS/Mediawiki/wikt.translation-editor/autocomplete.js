@@ -82,7 +82,7 @@ function autocomplete(input, options) {
     const nextIndex = index + dir;
     if (dir === 0 || dir > 0 && nextIndex >= list.length || dir < 0 && nextIndex < 0) return;
 
-    if (index !== -1) list.children[index].classList.remove("active"); // FIXME
+    if (index !== -1) list.children[index].classList.remove("active");
     internalUpdate = true;
     input.value = list.children[nextIndex].getAttribute("data-text");
     internalUpdate = false;
