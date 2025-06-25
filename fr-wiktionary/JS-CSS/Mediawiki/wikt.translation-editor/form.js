@@ -203,25 +203,34 @@ class EditForm {
     );
 
     const $grammarPropsLine = $("<p>");
-    let firstEntry = true;
+    /**
+     * @type {JQuery<HTMLInputElement>}
+     * @private
+     */
+    this._$resetButton = $('<input type="button" value="Tout décocher">');
+    this._$resetButton.on("click", () => {
+      for (const $button of Object.values(this._radioButtons))
+        $button.prop("checked", false);
+    });
+    $grammarPropsLine.append(this._$resetButton);
     for (const [code, label] of Object.entries(GRAMMATICAL_PROPERTIES)) {
       const id = `grammar-prop-${code}-${index}`;
       const $button = $(`<input id="${id}" type="radio" name="grammar-prop">`);
       this._radioButtons[code] = $button;
-      if (!firstEntry) $grammarPropsLine.append(" ");
-      else firstEntry = false;
-      const $container = $('<span>');
+      const $container = $("<span>");
       $container.append($button, ` <label for="${id}">${label}</label>`);
-      $grammarPropsLine.append($container);
+      $grammarPropsLine.append(" ", $container);
     }
 
     /**
+     * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
     this._$messageLine = $('<p class="trans-form-error">');
     this._$messageLine.hide();
 
     /**
+     * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
     this._$transliterationLine = $("<p>");
@@ -231,6 +240,7 @@ class EditForm {
     );
 
     /**
+     * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
     this._$traditionalLine = $("<p>");
@@ -240,6 +250,7 @@ class EditForm {
     );
 
     /**
+     * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
     this._$pageNameLine = $("<p>");
@@ -585,18 +596,8 @@ class EditForm {
       return;
     }
 
-    /** @type {string[]} */
-    const properties = this._selectedLanguage.properties || [];
-    for (const [code, $button] of Object.entries(this._radioButtons)) {
-      if (properties.includes(code)) $button.parent().show();
-      else $button.parent().hide();
-    }
-
-    if (this._selectedLanguage.hasTransliteration) this._$transliterationLine.show();
-    else this._$transliterationLine.hide();
-
-    if (this._selectedLanguage.hasTraditional) this._$traditionalLine.show();
-    else this._$traditionalLine.hide();
+    // Force refresh without changing view mode
+    this._toggleFullView(this._fullView);
   }
 
   /**
@@ -607,6 +608,7 @@ class EditForm {
   _toggleFullView(fullView) {
     this._fullView = typeof fullView === "boolean" ? fullView : !this._fullView;
     if (this._fullView) {
+      this._$resetButton.show();
       for (const $button of Object.values(this._radioButtons))
         $button.parent().show();
       this._$transliterationLine.show();
@@ -614,9 +616,15 @@ class EditForm {
       this._$pageNameLine.show();
     } else {
       const properties = this._selectedLanguage.properties || [];
-      for (const [code, $button] of Object.entries(this._radioButtons))
-        if (!properties.includes(code))
-          $button.parent().hide();
+      let anyButtonVisible = false;
+      for (const [code, $button] of Object.entries(this._radioButtons)) {
+        if (properties.includes(code)) {
+          $button.parent().show();
+          anyButtonVisible = true;
+        } else $button.parent().hide();
+      }
+      if (anyButtonVisible) this._$resetButton.show();
+      else this._$resetButton.hide();
       if (!this._selectedLanguage.hasTransliteration)
         this._$transliterationLine.hide();
       if (!this._selectedLanguage.hasTraditional)
