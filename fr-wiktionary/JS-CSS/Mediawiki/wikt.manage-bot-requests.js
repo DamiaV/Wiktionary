@@ -14,8 +14,9 @@ $(() => {
   const pages = {
     "Wiktionnaire:Bots/Requêtes": 2,
     "Wiktionnaire:Boîte à idées": 3,
+    "Projet:Gadget de création d’entrées/Suggestions": 2,
   }
-  const pageTitle = mw.config.get("wgPageName").replaceAll("_", " ");
+  const pageTitle = String(mw.config.get("wgPageName")).replaceAll("_", " ");
   if (!pages[pageTitle]) {
     console.log(`Pas sur une page éligible, désactivation du gadget.`);
     return;
@@ -23,19 +24,19 @@ $(() => {
   const titleLevel = pages[pageTitle];
   const titleEquals = "=".repeat(titleLevel);
 
-  const api = new mw.Api({userAgent: "Gadget-wikt.manage-bot-requests"});
+  const api = new mw.Api({ userAgent: "Gadget-wikt.manage-bot-requests" });
 
   /**
-   * @type {{[key: string]: {text: string, templateName?: string, radio: HTMLInputElement}}}
+   * @type {{[key: string]: {text: string, templateName?: string, radio?: HTMLInputElement}}}
    */
   const statuses = {
-    none: {text: "Aucun"},
-    doing: {text: "En cours", templateName: "Requête en cours"},
-    done: {text: "Traitée", templateName: "Requête fait"},
-    refused: {text: "Refusée", templateName: "Requête refus"},
-    info: {text: "Demande d’informations", templateName: "Requête info"},
-    pause: {text: "En pause", templateName: "Requête pause"},
-    noFollowUp: {text: "Sans suite", templateName: "Requête sans suite"},
+    none: { text: "Aucun" },
+    doing: { text: "En cours", templateName: "Requête en cours" },
+    done: { text: "Traitée", templateName: "Requête fait" },
+    refused: { text: "Refusée", templateName: "Requête refus" },
+    info: { text: "Demande d’informations", templateName: "Requête info" },
+    pause: { text: "En pause", templateName: "Requête pause" },
+    noFollowUp: { text: "Sans suite", templateName: "Requête sans suite" },
   };
 
   const $dialog = $(`
@@ -48,7 +49,7 @@ $(() => {
 </dialog>`);
   {
     let i = 0;
-    for (const [status, {text}] of Object.entries(statuses)) {
+    for (const [status, { text }] of Object.entries(statuses)) {
       const id = `status-choice-${i}`;
       const $choice = $(`<input id="${id}" name="status" type="radio" value="${status}">`);
       $dialog.find("form").prepend($choice, ` <label for="${id}">${text}</label><br>`);
