@@ -111,6 +111,28 @@
     color: #909090;
   }
 
+  html.skin-theme-clientpref-night .ui-widget-content {
+    border-color: gray;
+    background-color: #292929;
+  }
+
+  html.skin-theme-clientpref-night .ui-state-default,
+  html.skin-theme-clientpref-night .ui-widget-content .ui-state-default,
+  html.skin-theme-clientpref-night .ui-widget-header .ui-state-default {
+    border-color: gray;
+    background-color: #303030;
+  }
+
+  html.skin-theme-clientpref-night .ui-state-hover,
+  html.skin-theme-clientpref-night .ui-widget-content .ui-state-hover,
+  html.skin-theme-clientpref-night .ui-widget-header .ui-state-hover,
+  html.skin-theme-clientpref-night .ui-state-focus,
+  html.skin-theme-clientpref-night .ui-widget-content .ui-state-focus,
+  html.skin-theme-clientpref-night .ui-widget-header .ui-state-focus {
+    border-color: lightgray;
+    background-color: #393939;
+  }
+
   html.skin-theme-clientpref-night #trans-dialog {
     background-color: #292929;
     box-shadow: black 0 0 0.5em;
@@ -120,6 +142,28 @@
 @media screen and (prefers-color-scheme: dark) {
   html.skin-theme-clientpref-os .help-text {
     color: #909090;
+  }
+
+  html.skin-theme-clientpref-os .ui-widget-content {
+    border-color: gray;
+    background-color: #292929;
+  }
+
+  html.skin-theme-clientpref-os .ui-state-default,
+  html.skin-theme-clientpref-os .ui-widget-content .ui-state-default,
+  html.skin-theme-clientpref-os .ui-widget-header .ui-state-default {
+    border-color: gray;
+    background-color: #303030;
+  }
+
+  html.skin-theme-clientpref-os .ui-state-hover,
+  html.skin-theme-clientpref-os .ui-widget-content .ui-state-hover,
+  html.skin-theme-clientpref-os .ui-widget-header .ui-state-hover,
+  html.skin-theme-clientpref-os .ui-state-focus,
+  html.skin-theme-clientpref-os .ui-widget-content .ui-state-focus,
+  html.skin-theme-clientpref-os .ui-widget-header .ui-state-focus {
+    border-color: lightgray;
+    background-color: #393939;
   }
 
   html.skin-theme-clientpref-os #trans-dialog {
