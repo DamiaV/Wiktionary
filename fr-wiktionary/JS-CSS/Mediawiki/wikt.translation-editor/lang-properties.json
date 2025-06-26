@@ -269,6 +269,12 @@
   "gkm": {
     "hasTransliteration": true
   },
+  "gv": {
+    "properties": [
+      "m",
+      "f"
+    ]
+  },
   "he": {
     "properties": [
       "m",
