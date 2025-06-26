@@ -10,6 +10,8 @@
  * v2.0 2025-06-01 Full rewrite of [[MediaWiki:Gadget-translation editor.js]].
  * v2.1 2025-06-03 Re-implement the editing of translation boxes’ titles.
  * v2.1.1 2025-06-21 Revert sort algorithm to use sort keys.
+ * v2.2 2025-06-26 Fix transliteration and traditional writing fields not appearing;
+ *                 add grammatical properties to Manx language
  * --
  * [[Catégorie:JavaScript du Wiktionnaire|translation-editor.js]]
  */
@@ -20,21 +22,21 @@
  * @typedef {Record<string, Translation[]>[]} GroupedEdits
  */
 
-const {getLanguage, getLanguageName} = require("./wikt.core.languages.js");
-const {EditDialog} = require("./wikt.translation-editor/dialog.js");
+const { getLanguage, getLanguageName } = require("./wikt.core.languages.js");
+const { EditDialog } = require("./wikt.translation-editor/dialog.js");
 const {
   EditForm,
   compareLanguages,
   generateTranslationWikicode,
   generateTranslationHeaderWikicode,
 } = require("./wikt.translation-editor/form.js");
-const {EditHeaderForm} = require("./wikt.translation-editor/header-form.js");
+const { EditHeaderForm } = require("./wikt.translation-editor/header-form.js");
 
 console.log("Chargement de Gadget-wikt.translation-editor.js…");
 
-const VERSION = "2.1.1";
+const VERSION = "2.2";
 
-const api = new mw.Api({userAgent: `Gadget-wikt.translation-editor/${VERSION}`});
+const api = new mw.Api({ userAgent: `Gadget-wikt.translation-editor/${VERSION}` });
 const dialog = new EditDialog(onSubmit, onUndo, onRedo, onCancel);
 /** @type {EditForm[]} */
 const forms = [];
@@ -177,7 +179,7 @@ function insertTranslations(start, lines, langCode, translations, summary) {
 function buildTranslationsLine(translations, summary) {
   let line = "";
   for (const translation of translations) {
-    const {word, langCode} = translation;
+    const { word, langCode } = translation;
     line += generateTranslationWikicode(translation);
     summary.push(`+ ${getLanguageName(langCode)} [[${word}#${langCode}|${word}]]`);
   }

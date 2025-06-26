@@ -620,10 +620,13 @@ class EditForm {
       }
       if (anyButtonVisible) this._$resetButton.show();
       else this._$resetButton.hide();
-      if (!this._selectedLanguage.hasTransliteration)
-        this._$transliterationLine.hide();
-      if (!this._selectedLanguage.hasTraditional)
-        this._$traditionalLine.hide();
+
+      if (this._selectedLanguage.hasTransliteration) this._$transliterationLine.show();
+      else this._$transliterationLine.hide();
+
+      if (this._selectedLanguage.hasTraditional) this._$traditionalLine.show();
+      else this._$traditionalLine.hide();
+
       this._$pageNameLine.hide();
     }
   }
