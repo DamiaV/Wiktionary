@@ -319,28 +319,29 @@ tr.statistics-group-zero {
 
 */
 
-table.alternance tr, .alternance .wikitable th[scope="row"] {
-  background: #fff;
-}
-
-table.alternance tr:nth-child(odd), .alternance .wikitable tr:nth-child(odd) th[scope="row"] {
+table.alternance tr:nth-child(odd),
+table.alternance tr:nth-child(odd) th[scope="row"],
+table.alternance tr.odd,
+table.alternance tr.odd th[scope="row"] {
   background: #E9E9E9;
 }
 
-table.alternance tr.odd, table.alternance .wikitable tr.odd th[scope="row"] {
-  background: #E9E9E9;
+@media screen {
+  html.skin-theme-clientpref-night table.alternance tr:nth-child(odd),
+  html.skin-theme-clientpref-night table.alternance tr:nth-child(odd) th[scope="row"],
+  html.skin-theme-clientpref-night table.alternance tr.odd,
+  html.skin-theme-clientpref-night table.alternance tr.odd th[scope="row"] {
+    background: #1a1a1a;
+  }
 }
 
-table.alternance2 tr, table.alternance .sortable tr {
-  background: #E9E9E9;
-}
-
-table.alternance2 tr:nth-child(odd), table.alternance .sortable tr:nth-child(2n+1) {
-  background: #fff;
-}
-
-table.alternance2 tr.odd, table.alternance .sortable tr.odd {
-  background: #fff;
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os table.alternance tr:nth-child(odd),
+  html.skin-theme-clientpref-os table.alternance tr:nth-child(odd) th[scope="row"],
+  html.skin-theme-clientpref-os table.alternance tr.odd,
+  html.skin-theme-clientpref-os table.alternance tr.odd th[scope="row"] {
+    background: #1a1a1a;
+  }
 }
 
 /* Styles de [[Modèle:Méta palette de navigation]] */
