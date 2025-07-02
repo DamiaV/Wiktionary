@@ -89,18 +89,19 @@ function generateWikicode(
     return;
   }
 
-  const tradTemplateArgs = $.grep(translationLine.match(/{{trad[+-]?\|[^}]+?}}/g), function (m) {
-    return m.includes(translation);
-  })[0];
-  const templateArgsArray = $.map(
-      tradTemplateArgs.substring(2, tradTemplateArgs.length - 2).split("|"),
-      s => s.trim()
-  );
+  const tradTemplateArgs = Array.from(translationLine.match(/{{trad[+-]?\|[^}]+?}}/g))
+      .filter(m => m.includes(translation))[0];
+  const templateArgsArray = tradTemplateArgs
+      .substring(2, tradTemplateArgs.length - 2) // Strip enclosing braces
+      .split("|")
+      .slice(1) // Skip template name
+      .map(s => s.trim());
 
   let transcription = "";
   let dif = "";
   let gender = "";
 
+  let positionalArgIndex = 0;
   for (const arg of templateArgsArray) {
     let match;
     // Get transcription if there is one.
@@ -110,9 +111,12 @@ function generateWikicode(
     // Example : * {{T|he}} : {{trad+|he|מכלב|R=makhlev|dif=מַכְלֵב}}
     else if (match = /^dif\s*=\s*(.+)$/.exec(arg))
       dif = match[1];
-    // Get gender if there is one.
-    else if (/^(m|f|n|c|s|p|d|mf|mp|fp|mfp|np|ma|mi|fa|fi|na|ni)$/.test(arg))
-      gender = arg;
+    else if (!arg.includes("=")) {
+      positionalArgIndex++;
+      // Get gender if there is one.
+      if (positionalArgIndex === 3 && GENDERS[arg])
+        gender = arg;
+    }
   }
 
   let sectionLineIndex = 0;
@@ -236,6 +240,27 @@ function generateWikicode(
       + "&preload-edit-summary=" + encodeURIComponent(`Création d’une entrée en ${getLanguageName(langCode)} avec [[Aide:Gadget-CreerTrad|${NAME} v${VERSION}]].`);
 }
 
+const GENDERS = {
+  m: "{{m}}",
+  f: "{{f}}",
+  n: "{{n}}",
+  c: "{{c}}",
+  s: "{{s}}",
+  p: "{{p}}",
+  d: "{{d}}",
+  mf: "{{mf}}",
+  mp: "{{m}} {{p}}",
+  fp: "{{f}} {{p}}",
+  np: "{{n}} {{p}}",
+  mfp: "{{mf}} {{p}}",
+  ma: "{{m|a}}",
+  mi: "{{m|i}}",
+  fa: "{{f|a}}",
+  fi: "{{f|i}}",
+  na: "{{n|a}}",
+  ni: "{{n|i}}",
+};
+
 /**
  * Appends the appropriate gender templates to the wikicode, and return the wikicode.
  *
@@ -244,26 +269,7 @@ function generateWikicode(
  * @param gender {string} Gender parameter extracted from {{trad}}.
  */
 function addGender(wikicode, nature, gender) {
-  const genderWikicode = {
-    m: "{{m}}",
-    f: "{{f}}",
-    n: "{{n}}",
-    c: "{{c}}",
-    s: "{{s}}",
-    p: "{{p}}",
-    d: "{{d}}",
-    mf: "{{mf}}",
-    mp: "{{m}} {{p}}",
-    fp: "{{f}} {{p}}",
-    np: "{{n}} {{p}}",
-    mfp: "{{mf}} {{p}}",
-    ma: "{{m|a}}",
-    mi: "{{m|i}}",
-    fa: "{{f|a}}",
-    fi: "{{f|i}}",
-    na: "{{n|a}}",
-    ni: "{{n|i}}",
-  }[gender];
+  const genderWikicode = GENDERS[gender];
 
   if (nature === "nom" && genderWikicode)
     wikicode += " " + genderWikicode;
