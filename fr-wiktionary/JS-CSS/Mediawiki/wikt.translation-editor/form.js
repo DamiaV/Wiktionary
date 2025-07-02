@@ -759,11 +759,11 @@ function generateTranslationWikicode(translation) {
   } = translation;
 
   const plusMinus = externalExists === undefined ? "" : externalExists ? "+" : "-";
-  let transWikicode = `, {{trad${plusMinus}|${langCode}|${word}`;
+  let transWikicode = `, {{trad${plusMinus}|${langCode}|${pageName || word}`;
   if (grammarProperty) transWikicode += `|${grammarProperty}`;
   if (transliteration) transWikicode += `|tr=${transliteration}`;
   if (traditional) transWikicode += `|tradi=${traditional}`;
-  if (pageName) transWikicode += `|dif=${pageName}`;
+  if (pageName) transWikicode += `|dif=${word}`;
   transWikicode += "}}";
 
   return transWikicode;
