@@ -92,11 +92,136 @@ local dutchVerbParticles = {
   "zwart",
 }
 
---- Check whether the given dutch verb ends with a particle.
+local germanVerbParticles = {
+  "ab",
+  "acht",
+  "an",
+  "aneinander",
+  "auf",
+  "aufrecht",
+  "aus",
+  "auseinander",
+  "bankrott",
+  "bei",
+  "bekannt",
+  "bereit",
+  "bevor",
+  "da",
+  "daher",
+  "dahin",
+  "dahinter",
+  "dar",
+  "darunter",
+  "davon",
+  "dazu",
+  "dazwischen",
+  "drauflos",
+  "drumrum",
+  "durch",
+  "durcheinander",
+  "ein",
+  "einher",
+  "empor",
+  "entgegen",
+  "entlang",
+  "entzwei",
+  "fehl",
+  "feil",
+  "fern",
+  "fest",
+  "flach",
+  "fort",
+  "frei",
+  "fremd",
+  "gegen",
+  "gegenüber",
+  "gerade",
+  "gering",
+  "hängen",
+  "heim",
+  "her",
+  "herab",
+  "heran",
+  "herauf",
+  "heraus",
+  "herbei",
+  "herein",
+  "hernieder",
+  "herüber",
+  "herum",
+  "herunter",
+  "hervor",
+  "herzu",
+  "hier",
+  "hierher",
+  "hin",
+  "hinab",
+  "hinan",
+  "hinauf",
+  "hinaus",
+  "hinein",
+  "hinfort",
+  "hinterher",
+  "hinüber",
+  "hinunter",
+  "hinweg",
+  "hinzu",
+  "hoch",
+  "kaputt",
+  "klar",
+  "leid",
+  "los",
+  "mit",
+  "nach",
+  "näher",
+  "nieder",
+  "pleite",
+  "preis",
+  "ran",
+  "raus",
+  "rein",
+  "rüber",
+  "runter",
+  "satt",
+  "statt",
+  "schwer",
+  "teil",
+  "tot",
+  "über",
+  "überein",
+  "übrig",
+  "um",
+  "umher",
+  "unter",
+  "verloren",
+  "voll",
+  "vonstatten",
+  "vor",
+  "vorab",
+  "voran",
+  "voraus",
+  "vorbei",
+  "vornüber",
+  "vorüber",
+  "vorweg",
+  "weg",
+  "weiter",
+  "wider",
+  "wieder",
+  "zu",
+  "zueinander",
+  "zufrieden",
+  "zurecht",
+  "zurück",
+  "zusammen",
+}
+
+--- Check whether the given verb ends with a particle.
 --- @param word string The word to check.
---- @return boolean True if the word ends with any particle from `dutchVerbParticles`, false otherwise.
-local function isDutchVerbWithParticle(word)
-  for _, particle in ipairs(dutchVerbParticles) do
+--- @param particles string[] The list of possible particles.
+--- @return boolean True if the word ends with any particle from the given list, false otherwise.
+local function isVerbWithParticle(word, particles)
+  for _, particle in ipairs(particles) do
     if mw.ustring.find(word, " " .. particle .. "$") then
       return true
     end
@@ -132,11 +257,13 @@ local function isLocution(word, wordType, langCode)
         return spaceCount > 2
       end
     elseif langCode == "nl" then
-      if isVerb
-          -- Pronominal verb
-          and (mw.ustring.find(word, "^zich ")
-          -- Verb with a particle
-          or isDutchVerbWithParticle(word)) then
+      if isVerb and
+          (mw.ustring.find(word, "^zich ") or -- Pronominal verb
+              isVerbWithParticle(word, dutchVerbParticles)) then
+        return spaceCount > 1
+      end
+    elseif langCode == "de" then
+      if isVerb and isVerbWithParticle(word, germanVerbParticles) then
         return spaceCount > 1
       end
     end
