@@ -736,10 +736,11 @@ class EditForm {
 /**
  * Generate the {{T}} template wikicode for the given language code.
  * @param langCode {string} A language code.
+ * @param addSortOption {boolean?} Whether the `trier` option should be added to the template.
  * @returns {string} The generated wikicode.
  */
-function generateTranslationHeaderWikicode(langCode) {
-  return `{{T|${langCode}}} : `;
+function generateTranslationHeaderWikicode(langCode, addSortOption) {
+  return `{{T|${langCode}${addSortOption ? "|trier" : ""}}} : `;
 }
 
 /**

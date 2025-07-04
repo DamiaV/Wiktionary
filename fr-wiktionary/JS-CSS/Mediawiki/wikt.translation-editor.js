@@ -10,8 +10,10 @@
  * v2.0 2025-06-01 Full rewrite of [[MediaWiki:Gadget-translation editor.js]].
  * v2.1 2025-06-03 Re-implement the editing of translation boxes’ titles.
  * v2.1.1 2025-06-21 Revert sort algorithm to use sort keys.
- * v2.2 2025-06-26 Fix transliteration and traditional writing fields not appearing;
- *                 add grammatical properties to Manx language
+ * v2.2 2025-06-26 Add grammatical properties to Manx language;
+ *                 fix transliteration and traditional writing fields not appearing.
+ * v2.2.1 2025-07-04 Fix crash when {{T}} template has the `trier` option;
+ *                   insert `trier` option when box in ”Traductions à trier” section.
  * --
  * [[Catégorie:JavaScript du Wiktionnaire|translation-editor.js]]
  */
@@ -34,7 +36,7 @@ const { EditHeaderForm } = require("./wikt.translation-editor/header-form.js");
 
 console.log("Chargement de Gadget-wikt.translation-editor.js…");
 
-const VERSION = "2.2";
+const VERSION = "2.2.1";
 
 const api = new mw.Api({ userAgent: `Gadget-wikt.translation-editor/${VERSION}` });
 const dialog = new EditDialog(onSubmit, onUndo, onRedo, onCancel);
@@ -111,6 +113,8 @@ function applyChanges(wikicode, edits) {
   const lines = wikicode.split("\n");
   const summary = [];
   let boxIndex = -1;
+  let isInToSortSection = false;
+  let match;
 
   // We use an indexed for-loop as the array size may change if new lines are inserted
   for (let i = 0; i < lines.length; i++) {
@@ -119,8 +123,9 @@ function applyChanges(wikicode, edits) {
       if (boxIndex >= edits.length) break;
 
       for (const [langCode, translations] of Object.entries(edits[boxIndex]))
-        insertTranslations(i + 1, lines, langCode, translations, summary);
-    }
+        insertTranslations(i + 1, isInToSortSection, lines, langCode, translations, summary);
+    } else if (match = /(=+)([^\n]+?)\1/.exec(lines[i]))
+      isInToSortSection = /{{\s*S\s*\|\s*(traductions à trier|trad[ -]trier)\s*}}/.test(match[2].trim());
   }
 
   if (boxIndex < edits.length - 1) throw new Error("not_found");
@@ -131,22 +136,23 @@ function applyChanges(wikicode, edits) {
 /**
  * Insert the given translations in the box starting at the given index.
  * @param start {number} The index of the first line of the box’s content.
+ * @param isInToSortSection {boolean} Whether the translations are in a “Traductions à trier” (translations to sort) section.
  * @param lines {string[]} The page’s lines.
  * @param langCode {string} The translations’ language code.
  * @param translations {Translation[]} The translations to insert.
  * @param summary {string[]} An array to update with the edit summary.
  */
-function insertTranslations(start, lines, langCode, translations, summary) {
+function insertTranslations(start, isInToSortSection, lines, langCode, translations, summary) {
   let i = start;
 
   function insertLine() {
-    const header = generateTranslationHeaderWikicode(langCode);
+    const header = generateTranslationHeaderWikicode(langCode, isInToSortSection);
     const transWithoutComma = buildTranslationsLine(translations, summary).substring(2);
     lines.splice(i, 0, `* ${header}${transWithoutComma}`);
   }
 
   while (!lines[i].startsWith("{{trad-fin")) {
-    const match = /{{T\|([^}]+)}}/.exec(lines[i]);
+    const match = /{{T\|([^|}]+)(?:\|[^}]*)?}}/.exec(lines[i]);
     if (!match) continue;
 
     const lineLangCode = match[1].trim();
