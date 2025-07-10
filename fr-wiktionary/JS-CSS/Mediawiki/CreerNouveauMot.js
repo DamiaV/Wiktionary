@@ -50,6 +50,7 @@
  * v5.8 2025-05-26 Conversion into a module.
  * v5.8.1 2025-06-04 Notification when the code is inserted.
  * v5.9 2025-06-25 Refactor to enable by default.
+ * v5.9.1 2025-07-10 Better handling of English adjectives.
  * -----------------------------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|CreerNouveauMot.js]]
  * <nowiki>
@@ -72,7 +73,7 @@ const { TARGET_ELEMENT, StartGUI, MainGUI, interpolateString } = require("./Cree
 console.log("Chargement de Gadget-CreerNouveauMot.js…");
 
 const NAME = "Créer nouveau mot";
-const VERSION = "5.9";
+const VERSION = "5.9.1";
 
 const COOKIE_NAME = "cnm_last_lang";
 /** Cookie duration in days. */

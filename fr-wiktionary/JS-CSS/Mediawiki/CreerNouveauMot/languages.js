@@ -35,6 +35,12 @@ const NUMBERS = {
   SINGULATIVE_DUAL_PLURAL: new GrammaticalProperty("singulier, duel, et pluriel"),
 };
 
+const COMPARATIVES = {
+  COMPARABLE_MORE_MOST: new GrammaticalProperty("comparable (more…/most…)"),
+  COMPARABLE_ER_EST: new GrammaticalProperty("comparable (-er/-est)"),
+  UNCOMPARABLE: new GrammaticalProperty("incomparable"),
+};
+
 /**
  * All available verb groups and types.
  */
@@ -193,8 +199,16 @@ function loadLanguages(gadget) {
       return `{{en-inv|${pron}|inv_titre=Singulier}}`;
     if (number === NUMBERS.PLURAL_ONLY.label)
       return `{{en-inv|${pron}|inv_titre=Pluriel}}`;
-    if (grammarClass_ === GRAMMATICAL_CLASSES.ADJECTIVE.label)
-      return `{{en-adj|pron=${pron}}}`;
+    if (grammarClass_ === GRAMMATICAL_CLASSES.ADJECTIVE.label) {
+      if (number === COMPARATIVES.COMPARABLE_ER_EST.label) {
+        if (word.endsWith("e")) return `{{en-adj-e|pron=${pron}}}`;
+        if (word.endsWith("y")) return `{{en-adj-y|${word.substring(0, word.length - 1)}|pron=${pron}}}`;
+        return `{{en-adj-er|pron=${pron}}}`;
+      }
+      if (number === COMPARATIVES.COMPARABLE_MORE_MOST.label)
+        return `{{en-adj|pron=${pron}}}`;
+      return `{{en-adj-inc|${pron}}}`;
+    }
     if (grammarClass_ === GRAMMATICAL_CLASSES.VERB.label)
       return VERBS.REGULAR_VERB.label
           ? `{{en-conj-rég|inf.pron=${pron}}}`
@@ -218,7 +232,7 @@ function loadLanguages(gadget) {
         [".", "ˈ", "ˌ", "ː"],
       ],
       [
-        new GrammaticalItem(GRAMMATICAL_CLASSES.ADJECTIVE, [], getEnglishModel),
+        new GrammaticalItem(GRAMMATICAL_CLASSES.ADJECTIVE, [[COMPARATIVES.COMPARABLE_MORE_MOST, COMPARATIVES.COMPARABLE_ER_EST, COMPARATIVES.UNCOMPARABLE]], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.ADVERB, [], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.NOUN, [[NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL, NUMBERS.SINGULAR_ONLY, NUMBERS.PLURAL_ONLY]], getEnglishModel),
         new GrammaticalItem(GRAMMATICAL_CLASSES.PROPER_NOUN, [[NUMBERS.DIFF_SINGULAR_PLURAL, NUMBERS.SAME_SINGULAR_PLURAL]], getEnglishModel),
