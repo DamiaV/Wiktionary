@@ -1,0 +1,20 @@
+.user-box {
+  clear: both;
+  float: right;
+  border: solid 1px #99b3ff;
+  background-color: white;
+}
+
+@media screen {
+  html.skin-theme-clientpref-night .user-box {
+    border-color: #31406d;
+    background-color: #222;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html.skin-theme-clientpref-os .user-box {
+    border-color: #31406d;
+    background-color: #222;
+  }
+}
