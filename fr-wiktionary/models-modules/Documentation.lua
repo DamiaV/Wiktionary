@@ -15,8 +15,9 @@ local function textPagebase(page)
 	--On est dans une sous-page
 	local sousPage = page.subpageText
 	if sousPage == 'Documentation'
-	or sousPage == 'Bac à sable'
-	or sousPage == 'Test' then
+	or sousPage == 'bac à sable'
+	or sousPage == 'testcases'
+	or sousPage == 'tests' then
 		return page.baseText
 	else
 		return page.text
@@ -170,15 +171,20 @@ local function contenu(args, doc, existeDoc)
 
 		elseif existeDoc then
 			local contenuDoc = mw.getCurrentFrame():expandTemplate{title = doc.prefixedText}
-			if page.subpageText == 'Bac à sable' or page.subpageText == 'Test' then
+			if page.subpageText == 'bac à sable'
+			   or page.subpageText == 'tests'
+			   or page.subpageText == 'testcases' then
 				contenuDoc = retireBalisesCategories(contenuDoc)
 			end
 			res:newline()
 			   :wikitext(contenuDoc)
 			   :newline()
 
-		elseif page.subpageText ~= 'Bac à sable' and page.subpageText ~= 'Test' and args['contenu facultatif'] == nil then
-			local texteBandeau = '<b>Ce %s ne possède aucune [[Aide:Documentation de modèle|documentation]] '
+		elseif page.subpageText ~= 'bac à sable'
+			   and page.subpageText ~= 'tests'
+			   and page.subpageText ~= 'testcases'
+			   and args['contenu facultatif'] == nil then
+			local texteBandeau = '<b>Ce %s ne possède aucune [[Aide:Modèles/Comment documenter un modèle ?|documentation]] '
 				..'explicative en sous-page</b>, pas même une description succincte.<br> '
 				..'Vous pouvez %s afin de documenter ce %s adéquatement.'
 			if page.namespace == 828 then -- Module
@@ -195,12 +201,12 @@ local function contenu(args, doc, existeDoc)
 				)
 			end
 			if page.namespace == 10 then -- Modèle
-				texteBandeau = texteBandeau .. '[[Catégorie:Modèle sans documentation]]'
+				texteBandeau = texteBandeau .. '[[Catégorie:Wiktionnaire:Modèles à documenter]]'
 			elseif page.namespace == 828 then -- Module
 				if page.text:sub(1, 12) == 'Utilisateur:' then
 					-- Pas de catégorisation pour le pseudo-namespace "Module:Utilisateur:Toto/Nom du module"
 				elseif existeDoc == false then
-					texteBandeau = texteBandeau .. '[[Catégorie:Module sans documentation]]'
+					texteBandeau = texteBandeau .. '[[Catégorie:Modules Lua non documentés]]'
 				end
 			end
 			local param = {
@@ -227,18 +233,11 @@ local function contenu(args, doc, existeDoc)
 	return res
 end
 
-local function lienWstat(nomPage, texteLien)
-	local nomPageEncoded = mw.text.encode(nomPage)
-	local nomPageNoSpaces = mw.ustring.gsub(nomPageEncoded, ' ', '_')
-	local url = 'https://wstat.fr/template/info/' .. nomPageNoSpaces
-	return mw.ustring.format('[%s %s]', url, texteLien)
-end
-
 local function lienRechercheModule(nomModule, texteLien)
 	local nomModuleEncoded = mw.text.encode(nomModule)
 	local nomModuleNoSpaces = mw.ustring.gsub(nomModuleEncoded, ' ', '+')
 	local quote = mw.text.encode('"')
-	local url = 'https://fr.wikipedia.org/w/index.php?title=Spécial:Recherche&ns828=1&search=insource:' .. quote .. nomModuleNoSpaces .. quote
+	local url = 'https://fr.wiktionary.org/w/index.php?title=Spécial:Recherche&ns828=1&search=insource:' .. quote .. nomModuleNoSpaces .. quote
 	return mw.ustring.format('[%s %s]', url, texteLien)
 end
 
@@ -256,9 +255,9 @@ local function notice(args, page, doc, existeDoc)
 
 	-- Phrase "la documentation est générée par ..."
 	if args['nom modèle'] then
-		local lienAide = '[[Aide:Modèle|modèle]]'
+		local lienAide = '[[Aide:Modèles|modèle]]'
 		if page.namespace == 828 then
-			lienAide = '[[Aide:Module|module]]'
+			lienAide = '[[Aide:Modules|module]]'
 		end
 
 		contenuParagraphe
@@ -278,14 +277,14 @@ local function notice(args, page, doc, existeDoc)
 	if args['aucun contenu additionnel'] == nil then
 		if args.contenu then
 			contenuParagraphe
-				:wikitext('Elle est directement [[Aide:Inclusion|incluse]] dans l\'appel de ce dernier. ')
+				:wikitext('Elle est directement [[mw:Help:Transclusion/fr|incluse]] dans l\'appel de ce dernier. ')
 				:wikitext('Si cette page est protégée, veuillez ')
 				:wikitext('transférer le contenu de la documentation vers sa ')
 				:wikitext(lienUrl(doc, 'sous-page dédiée', 'edit', 'Preload'))
 				:wikitext('.<br>')
 		elseif existeDoc then
 			contenuParagraphe
-				:wikitext('Elle est [[Aide:Inclusion|incluse]] depuis ')
+				:wikitext('Elle est [[mw:Help:Transclusion/fr|incluse]] depuis ')
 
 			if args['page doc'] then
 				contenuParagraphe
@@ -308,7 +307,7 @@ local function notice(args, page, doc, existeDoc)
 	contenuParagraphe
 		:wikitext('Les éditeurs peuvent travailler dans le ')
 
-	local titrePageBacasable = nomSouspage(page, 'Bac à sable')
+	local titrePageBacasable = nomSouspage(page, 'bac à sable')
 	local pageBacasable = mw.title.new(titrePageBacasable)
 
 	if existePage(pageBacasable) then
@@ -338,7 +337,7 @@ local function notice(args, page, doc, existeDoc)
 	if page.namespace ~= 828 then
 		contenuParagraphe:wikitext(' et la page de ')
 
-		local titrePageTest = nomSouspage(page, 'Test')
+		local titrePageTest = nomSouspage(page, 'tests')
 		local pageTest = mw.title.new(titrePageTest)
 
 		if existePage(pageTest) then
@@ -360,31 +359,49 @@ local function notice(args, page, doc, existeDoc)
 					:wikitext(lienUrl(pageTest, 'créer', 'edit', 'Preload3'))
 					:wikitext(')')
 		end
+	else
+		contenuParagraphe:wikitext(' et créer des ')
+
+		local titrePageTest = nomSouspage(page, 'testcases')
+		local pageTest = mw.title.new(titrePageTest)
+
+		if existePage(pageTest) then
+			contenuParagraphe
+				:wikitext('[[' .. titrePageTest .. '|tests unitaires]]&nbsp;')
+				:tag('span')
+					:css('font-size', '89%')
+					:css('font-style', 'normal')
+					:wikitext('(')
+					:wikitext(lienUrl(pageTest, 'modifier', 'edit'))
+					:wikitext(')')
+		else
+			contenuParagraphe
+				:wikitext('tests unitaires&nbsp;')
+				:tag('span')
+					:css('font-size', '89%')
+					:css('font-style', 'normal')
+					:wikitext('(')
+					:wikitext(lienUrl(pageTest, 'créer', 'edit', 'Preload3'))
+					:wikitext(')')
+		end
 	end
+
 	contenuParagraphe:wikitext('.<br>')
 
 	-- Phrase indiquant les liens vers les statistiques
-	local nomStat, texteWstat
+	local nomStat
 	if page.namespace == 828 then
 		nomStat = 'Module:' .. textPagebase(page)
-		texteWstat = "statistiques d'appel depuis le wikicode"
 	else
 		nomStat = textPagebase(page)
-		texteWstat = "statistiques d'utilisation du modèle"
 	end
-
-	contenuParagraphe
-		:wikitext('Voir les ')
-		:wikitext(lienWstat(nomStat, texteWstat))
-		:wikitext(" sur l'outil [[Aide:Wstat|wstat]]")
 
 	if page.namespace == 828 then --pour les modules, recherche de "Module:..." dans l'espace de noms Module:
 		contenuParagraphe
-			:wikitext(' et les ')
+			:wikitext('Voir les ')
 			:wikitext(lienRechercheModule(nomStat, "appels depuis d'autres modules"))
+			:wikitext('.')
 	end
-
-	contenuParagraphe:wikitext(".")
 
 	return res
 end
@@ -396,8 +413,8 @@ function p._documentation(args)
 	local existeDoc = existePage(doc)
 	local res = mw.html.create()
 
-	--Bandeau pour les sous-pages /Bac à sable
-	if page.subpageText == 'Bac à sable' then
+	--Bandeau pour les sous-pages /bac à sable
+	if page.subpageText == 'bac à sable' then
 		res
 			:tag('div')
 				:css('clear', 'both')
@@ -423,10 +440,8 @@ function p._documentation(args)
 			:node(notice(args, page, doc, existeDoc))
 
 	-- Catégorisation par défaut pour les modules sans documentation
-	if page.namespace == 828 and page.subpageText ~= 'Bac à sable' and page.subpageText ~= 'Test' then
-		if existeDoc == false then
-			res:wikitext("[[Catégorie:Module en langage Lua]]")
-		end
+	if page.namespace == 828 and page.subpageText ~= 'bac à sable' and page.subpageText ~= 'testcases' and not existeDoc then
+		res:wikitext("[[Catégorie:Modules Lua]]")
 	end
 
 	return tostring(res)
