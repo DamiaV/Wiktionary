@@ -120,7 +120,7 @@ function formatSections(text) {
     }
 
     // Generate final text
-    let formattedText = "{{S|" + sectionCode;
+    let formattedText = "{{S|" + (sectionData.aliasOf || sectionCode);
     if (langCode)
       formattedText += "|" + langCode;
     if (flexion)
