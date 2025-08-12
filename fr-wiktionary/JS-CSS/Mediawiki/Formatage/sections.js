@@ -69,10 +69,10 @@ function formatSections(text) {
       sectionCode = "notes";
 
     /** @type {SectionData|WordTypeData} */
-    let sectionData = getSectionData(sectionCode);
+    let sectionData = getSectionData(sectionCode, true);
     // Section not recognized, push an error and return
     if (!sectionData) {
-      sectionData = getWordTypeData(sectionCode);
+      sectionData = getWordTypeData(sectionCode, true);
       if (!sectionData) {
         errors.push({
           invalidLine: sectionText,
