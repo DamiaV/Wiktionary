@@ -101,8 +101,8 @@ function getSectionData(code, allowAliases = false) {
 function getSectionCodes(allowAliases = false) {
   return Array.from(
       sectionsDataMap.entries()
-          .filter(([_, data]) => checkAllowAliases(allowAliases, data))
-          .map(([code, _]) => code)
+          .filter(([, data]) => checkAllowAliases(allowAliases, data))
+          .map(([code,]) => code)
   );
 }
 
@@ -124,8 +124,8 @@ function getWordTypeData(code, allowAliases = false) {
 function getWordTypeCodes(allowAliases = false) {
   return Array.from(
       wordTypesDataMap.entries()
-          .filter(([_, data]) => checkAllowAliases(allowAliases, data))
-          .map(([code, _]) => code)
+          .filter(([, data]) => checkAllowAliases(allowAliases, data))
+          .map(([code,]) => code)
   );
 }
 
