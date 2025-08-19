@@ -535,6 +535,8 @@ class EditForm {
         const lineLangCode = childNode.querySelector("span:first-child")
             .getAttribute("data-translation-lang");
         const language2 = getLanguage(lineLangCode);
+        if (!language2) continue; // Undefined language code, skip
+
         const lineLangName = language2.sortKey || language2.name;
         if (compareLanguages(langName, lineLangName) < 0) {
           this._translationsList.insertBefore(line, childNode);
