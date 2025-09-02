@@ -14,6 +14,7 @@
  *                 fix transliteration and traditional writing fields not appearing.
  * v2.2.1 2025-07-04 Fix crash when {{T}} template has the `trier` option;
  *                   insert `trier` option when box in ”Traductions à trier” section.
+ * v2.2.2 2025-09-02 Fix error when a language code in the translations box is undefined.
  * --
  * [[Catégorie:JavaScript du Wiktionnaire|translation-editor.js]]
  */
@@ -36,7 +37,7 @@ const { EditHeaderForm } = require("./wikt.translation-editor/header-form.js");
 
 console.log("Chargement de Gadget-wikt.translation-editor.js…");
 
-const VERSION = "2.2.1";
+const VERSION = "2.2.2";
 
 const api = new mw.Api({ userAgent: `Gadget-wikt.translation-editor/${VERSION}` });
 const dialog = new EditDialog(onSubmit, onUndo, onRedo, onCancel);
@@ -151,20 +152,27 @@ function insertTranslations(start, isInToSortSection, lines, langCode, translati
     lines.splice(i, 0, `* ${header}${transWithoutComma}`);
   }
 
+  const language = getLanguage(langCode);
+  const langName = language.sortKey || language.name;
   while (!lines[i].startsWith("{{trad-fin")) {
     const match = /{{T\|([^|}]+)(?:\|[^}]*)?}}/.exec(lines[i]);
-    if (!match) continue;
+    if (!match) {
+      i++;
+      continue;
+    }
 
     const lineLangCode = match[1].trim();
     if (lineLangCode === langCode) {
       lines[i] += buildTranslationsLine(translations, summary);
       return;
     } else {
-      const lang1 = getLanguage(langCode);
-      const lang2 = getLanguage(lineLangCode);
-      const langName1 = lang1.sortKey || lang1.name;
-      const langName2 = lang2.sortKey || lang2.name;
-      if (compareLanguages(langName1, langName2) < 0) {
+      const lineLanguage = getLanguage(lineLangCode);
+      if (!lineLanguage) {
+        i++;
+        continue;
+      }
+      const lineLangName = lineLanguage.sortKey || lineLanguage.name;
+      if (compareLanguages(langName, lineLangName) < 0) {
         insertLine();
         return;
       }
