@@ -98,9 +98,9 @@ l['adt'] = { name = 'adnyamathanha' }
 l['adu'] = { name = 'aduge' }
 l['adw'] = { name = 'amundava' }
 l['adx'] = { name = 'amdo' }
-l['ady'] = { name = 'adyghé' }
+l['ady'] = { name = 'adyghé', hasPronunciationAppendix = true }
 l['adz'] = { name = 'adzera' }
-l['ae'] = { name = 'avestique' }
+l['ae'] = { name = 'avestique', hasPronunciationAppendix = true }
 l['aea'] = { name = 'areba' }
 l['aeb'] = { name = 'arabe tunisien' }
 l['aec'] = { name = 'arabe saïdi' }
@@ -296,7 +296,7 @@ l['ancien normand'] = { name = 'ancien normand', sortKey = 'normand ancien' }
 l['and'] = { name = 'ansus' }
 l['ane'] = { name = 'xârâcùù' }
 l['anf'] = { name = 'animere' }
-l['ang'] = { name = 'vieil anglais', sortKey = 'anglais vieil', wiktionaryExists = true }
+l['ang'] = { name = 'vieil anglais', sortKey = 'anglais vieil', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['angevin'] = { name = 'angevin' }
 l['anggreso'] = { name = 'anggreso' }
 l['anh'] = { name = 'nend' }
@@ -378,7 +378,7 @@ l['aqp'] = { name = 'atakapa' }
 l['aqr'] = { name = 'arhâ' }
 l['aqt'] = { name = 'angaité' }
 l['aqz'] = { name = 'akuntsu' }
-l['ar'] = { name = 'arabe', hasPortal = true, wiktionaryExists = true }
+l['ar'] = { name = 'arabe', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['arb'] = { name = 'arabe standard moderne' }
 l['arc'] = { name = 'araméen' }
 l['ard'] = { name = 'arabana' }
@@ -388,7 +388,7 @@ l['ari'] = { name = 'arikara' }
 l['arj'] = { name = 'arapaso' }
 l['ark'] = { name = 'arikapú' }
 l['arl'] = { name = 'arabela' }
-l['arn'] = { name = 'mapuche' }
+l['arn'] = { name = 'mapuche', hasPronunciationAppendix = true }
 l['aro'] = { name = 'araona' }
 l['arp'] = { name = 'arapaho' }
 l['arq'] = { name = 'arabe algérien' }
@@ -477,11 +477,11 @@ l['auw'] = { name = 'awyi' }
 l['aux'] = { name = 'aurá' }
 l['auy'] = { name = 'auyana' }
 l['auz'] = { name = 'arabe ouzbek' }
-l['av'] = { name = 'avar', wiktionaryExists = true }
+l['av'] = { name = 'avar', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['avb'] = { name = 'avau' }
 l['avd'] = { name = 'alviri-vidari' }
 l['avi'] = { name = 'avikam' }
-l['avk'] = { name = 'kotava' }
+l['avk'] = { name = 'kotava', hasPronunciationAppendix = true }
 l['avl'] = { name = 'arabe bedawi' }
 l['avm'] = { name = 'angkamuthi' }
 l['avn'] = { name = 'avatime' }
@@ -518,7 +518,7 @@ l['axg'] = { name = 'arara de Mato Grosso', sortKey = 'arara Mato Grosso' }
 l['axk'] = { name = 'yaka (République centrafricaine)', sortKey = 'yaka Centrafrique' }
 l['axl'] = { name = 'bas arrernte du Sud', sortKey = 'arrernte bas Sud' }
 l['axm'] = { name = 'moyen arménien', sortKey = 'arménien moyen' }
-l['axx'] = { name = 'xârâgurè' }
+l['axx'] = { name = 'xârâgurè', hasPronunciationAppendix = true }
 l['ay'] = { name = 'aymara', wiktionaryExists = true }
 l['aya'] = { name = 'awar' }
 l['ayb'] = { name = 'ayizo' }
@@ -540,7 +540,7 @@ l['ayt'] = { name = 'mariveleño' }
 l['ayx'] = { name = 'ayi (Chine)', sortKey = 'ayi Chine' }
 l['ayu'] = { name = 'ayu' }
 l['ayz'] = { name = 'mai brat' }
-l['az'] = { name = 'azéri', wiktionaryExists = true }
+l['az'] = { name = 'azéri', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['aza'] = { name = 'azha' }
 l['azb'] = { name = 'azéri du Sud', sortKey = 'azéri Sud' }
 l['azc'] = { name = 'langues uto-aztèques', sortKey = 'uto aztèques langues', isGroup = true }
@@ -552,7 +552,7 @@ l['azn'] = { name = 'nahuatl de Durango de l’Ouest', sortKey = 'nahuatl Durang
 l['azo'] = { name = 'awing' }
 l['azt'] = { name = 'atta de Faire', sortKey = 'atta Faire' }
 l['azz'] = { name = 'nahuatl du haut Puebla', sortKey = 'nahuatl Puebla haut' }
-l['ba'] = { name = 'bachkir' }
+l['ba'] = { name = 'bachkir', hasPronunciationAppendix = true }
 l['baa'] = { name = 'babatana' }
 l['bab'] = { name = 'baïnouk-gunyuño' }
 l['bac'] = { name = 'baduy' }
@@ -715,7 +715,7 @@ l['bfw'] = { name = 'remo' }
 l['bfx'] = { name = 'bantayanon' }
 l['bfy'] = { name = 'bagheli' }
 l['bfz'] = { name = 'mahasu pahari' }
-l['bg'] = { name = 'bulgare', wiktionaryExists = true }
+l['bg'] = { name = 'bulgare', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['bga'] = { name = 'gwamhi-wuri' }
 l['bgb'] = { name = 'bobongko' }
 l['bgc'] = { name = 'haryanvi' }
@@ -753,7 +753,7 @@ l['bhj'] = { name = 'bahing' }
 l['bhl'] = { name = 'bimin' }
 l['bhm'] = { name = 'bathari' }
 l['bhn'] = { name = 'néo-araméen de Bohtan', sortKey = 'araméen néo bohtan' }
-l['bho'] = { name = 'bhojpouri' }
+l['bho'] = { name = 'bhojpouri', hasPronunciationAppendix = true }
 l['bhp'] = { name = 'bimanais' }
 l['bhq'] = { name = 'tukang besi du Sud', sortKey = 'tukang besi Sud' }
 l['bhr'] = { name = 'malgache bara' }
@@ -993,7 +993,7 @@ l['bqw'] = { name = 'buru-angwe' }
 l['bqx'] = { name = 'baangi' }
 l['bqy'] = { name = 'langue des signes balinaise', sortKey = 'signes balinaise' }
 l['bqz'] = { name = 'bakaka' }
-l['br'] = { name = 'breton', wiktionaryExists = true }
+l['br'] = { name = 'breton', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['bra'] = { name = 'braj' }
 l['brabançon'] = { name = 'brabançon' }
 l['brb'] = { name = 'lave' }
@@ -1224,7 +1224,7 @@ l['bzw'] = { name = 'basa' }
 l['bzx'] = { name = 'bozo-kelengaxo' }
 l['bzy'] = { name = 'obanliku' }
 l['bzz'] = { name = 'evant' }
-l['ca'] = { name = 'catalan', hasPortal = true, wiktionaryExists = true }
+l['ca'] = { name = 'catalan', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ca-valencia'] = { name = 'valencien' }
 l['caa'] = { name = 'ch’orti’' }
 l['cab'] = { name = 'garifuna' }
@@ -1342,7 +1342,7 @@ l['chn'] = { name = 'jargon chinook' }
 l['cho'] = { name = 'choctaw' }
 l['chp'] = { name = 'chipewyan' }
 l['chq'] = { name = 'chinantèque de Quiotepec', sortKey = 'chinantèque Quiotepec' }
-l['chr'] = { name = 'cherokee', wiktionaryExists = true }
+l['chr'] = { name = 'cherokee', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['chs'] = { name = 'langues chumash', sortKey = 'chumash langues', isGroup = true }
 l['cht'] = { name = 'cholón' }
 l['chw'] = { name = 'echuwabo' }
@@ -1375,7 +1375,7 @@ l['cjp'] = { name = 'cabécar' }
 l['cjs'] = { name = 'chor' }
 l['cjv'] = { name = 'chuave' }
 l['cjy'] = { name = 'jinyu' }
-l['ckb'] = { name = 'soranî', wiktionaryExists = true }
+l['ckb'] = { name = 'soranî', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ckh'] = { name = 'chak' }
 l['ckl'] = { name = 'cibak' }
 l['ckm'] = { name = 'tchakavien' }
@@ -1413,7 +1413,7 @@ l['cmg'] = { name = 'mongol classique' }
 l['cmi'] = { name = 'emberá chamí' }
 l['cml'] = { name = 'campalagian' }
 l['cmm'] = { name = 'michigamie' }
-l['cmn'] = { name = 'mandarin', wikimediaCode = 'zh', wiktionaryExists = true }
+l['cmn'] = { name = 'mandarin', hasPronunciationAppendix = true, wikimediaCode = 'zh', wiktionaryExists = true }
 l['cmo'] = { name = 'mnong central' }
 l['cmr'] = { name = 'mro' }
 l['cms'] = { name = 'messapien' }
@@ -1435,7 +1435,7 @@ l['cnt'] = { name = 'chinantèque de Tepetotutla', sortKey = 'chinantèque Tepet
 l['cnu'] = { name = 'chenoui' }
 l['cnw'] = { name = 'ngawn' }
 l['cnx'] = { name = 'moyen cornique', sortKey = 'cornique moyen' }
-l['co'] = { name = 'corse', wiktionaryExists = true }
+l['co'] = { name = 'corse', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['coa'] = { name = 'malais des îles Cocos', sortKey = 'malais Cocos îles' }
 l['cob'] = { name = 'chicomuceltec' }
 l['coc'] = { name = 'cocopa' }
@@ -1450,7 +1450,7 @@ l['col'] = { name = 'salish wenatchi-columbian' }
 l['colac'] = { name = 'colac' }
 l['com'] = { name = 'comanche' }
 l['con'] = { name = 'cofan' }
-l['conv'] = { name = 'conventions internationales', wikimediaCode = 'wikispecies', sortKey = '*conventions' }
+l['conv'] = { name = 'conventions internationales', sortKey = '*conventions', wikimediaCode = 'wikispecies' }
 l['coo'] = { name = 'comox' }
 l['cop'] = { name = 'copte' }
 l['copallén'] = { name = 'copallén' }
@@ -1503,7 +1503,7 @@ l['crw'] = { name = 'chrau' }
 l['crx'] = { name = 'porteur' }
 l['cry'] = { name = 'chori' }
 l['crz'] = { name = 'cruzeño' }
-l['cs'] = { name = 'tchèque', wiktionaryExists = true }
+l['cs'] = { name = 'tchèque', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['csa'] = { name = 'chinantèque de Chiltepec', sortKey = 'chinantèque Chiltepec' }
 l['csb'] = { name = 'kachoube', wiktionaryExists = true }
 l['csc'] = { name = 'langue des signes catalane', sortKey = 'signes catalane' }
@@ -1550,7 +1550,7 @@ l['ctt'] = { name = 'wayanad chetti' }
 l['ctu'] = { name = 'chol' }
 l['cty'] = { name = 'maundadan chetti' }
 l['ctz'] = { name = 'chatino de Zacatepec', sortKey = 'chatino Zacatepec' }
-l['cu'] = { name = 'vieux slave', sortKey = 'slave vieux' }
+l['cu'] = { name = 'vieux slave', sortKey = 'slave vieux', hasPronunciationAppendix = true }
 l['cua'] = { name = 'cua' }
 l['cub'] = { name = 'cubeo' }
 l['cuc'] = { name = 'chinantèque d’Usila', sortKey = 'chinantèque Usila' }
@@ -1640,7 +1640,7 @@ l['ddj'] = { name = 'jaru' }
 l['ddo'] = { name = 'tsez' }
 l['ddr'] = { name = 'dhudhuroa' }
 l['ddw'] = { name = 'dawera-daweloor' }
-l['de'] = { name = 'allemand', hasPortal = true, wiktionaryExists = true }
+l['de'] = { name = 'allemand', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['dec'] = { name = 'dagik' }
 l['ded'] = { name = 'dedua' }
 l['dee'] = { name = 'dewoin' }
@@ -1857,7 +1857,7 @@ l['ega'] = { name = 'éga', sortKey = 'ega' }
 l['egl'] = { name = 'émilien', wikimediaCode = 'eml' }
 l['ego'] = { name = 'eggon' }
 l['egx'] = { name = 'langues égyptiennes', sortKey = 'égyptiennes langues', isGroup = true }
-l['egy'] = { name = 'égyptien ancien' }
+l['egy'] = { name = 'égyptien ancien', hasPronunciationAppendix = true }
 l['eip'] = { name = 'eipo' }
 l['eit'] = { name = 'eitiep' }
 l['eja'] = { name = 'ejamat' }
@@ -1871,7 +1871,7 @@ l['eko'] = { name = 'ekoti' }
 l['ekp'] = { name = 'ekpeye' }
 l['ekr'] = { name = 'yace' }
 l['eky'] = { name = 'kayah li de l’Est', sortKey = 'kayah li Est' }
-l['el'] = { name = 'grec', wiktionaryExists = true }
+l['el'] = { name = 'grec', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ele'] = { name = 'elepi' }
 l['eli'] = { name = 'nding' }
 l['elk'] = { name = 'elkei' }
@@ -1892,14 +1892,14 @@ l['ems'] = { name = 'alutiiq' }
 l['emu'] = { name = 'muria de l’Est', sortKey = 'muria Est' }
 l['emw'] = { name = 'emplawas' }
 l['emx'] = { name = 'erromintxela' }
-l['en'] = { name = 'anglais', hasPortal = true, wiktionaryExists = true }
+l['en'] = { name = 'anglais', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ena'] = { name = 'apali' }
 l['enb'] = { name = 'markweta' }
 l['end'] = { name = 'ende' }
 l['enf'] = { name = 'énètse des forêts', sortKey = 'énètse forêts' }
 l['enh'] = { name = 'énètse de la toundra', sortKey = 'énètse toundra' }
 l['enl'] = { name = 'enlhet' }
-l['enm'] = { name = 'moyen anglais', hasPortal = true, sortKey = 'anglais moyen' }
+l['enm'] = { name = 'moyen anglais', sortKey = 'anglais moyen', hasPortal = true }
 l['enn'] = { name = 'engenni' }
 l['eno'] = { name = 'enganno' }
 l['enq'] = { name = 'enga' }
@@ -1907,7 +1907,7 @@ l['enr'] = { name = 'emumu' }
 l['enu'] = { name = 'enu' }
 l['enw'] = { name = 'enwan' }
 l['enx'] = { name = 'enxet' }
-l['eo'] = { name = 'espéranto', hasPortal = true, wiktionaryExists = true }
+l['eo'] = { name = 'espéranto', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['eot'] = { name = 'eotilé' }
 l['epi'] = { name = 'epie' }
 l['èque'] = { name = 'èque' }
@@ -1918,7 +1918,7 @@ l['erk'] = { name = 'éfaté du Sud', sortKey = 'éfaté Sud' }
 l['ero'] = { name = 'horpa' }
 l['ers'] = { name = 'ersu' }
 l['ert'] = { name = 'eritai' }
-l['es'] = { name = 'espagnol', hasPortal = true, wiktionaryExists = true }
+l['es'] = { name = 'espagnol', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ese'] = { name = 'ese ejja' }
 l['esh'] = { name = 'eshtehardi' }
 l['esi'] = { name = 'inupiaq d’Alaska du Nord', sortKey = 'inupiaq Alaska Nord' }
@@ -1929,9 +1929,9 @@ l['esmeraldeño'] = { name = 'esmeraldeño' }
 l['eso'] = { name = 'langue des signes estonienne', sortKey = 'signes estonienne' }
 l['esq'] = { name = 'esselen' }
 l['ess'] = { name = 'yupik sibérien central' }
-l['esu'] = { name = 'yupik central' }
+l['esu'] = { name = 'yupik central', hasPronunciationAppendix = true }
 l['esx'] = { name = 'langues eskimo-aléoutes', sortKey = 'eskimo aléoutes langues', isGroup = true }
-l['et'] = { name = 'estonien', wiktionaryExists = true }
+l['et'] = { name = 'estonien', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['etb'] = { name = 'etebi' }
 l['etc'] = { name = 'etchemin' }
 l['etn'] = { name = 'eton (Vanuatu)', sortKey = 'eton Vanuatu' }
@@ -1952,7 +1952,7 @@ l['ewo'] = { name = 'éwondo' }
 l['ext'] = { name = 'estrémègne' }
 l['eya'] = { name = 'eyak' }
 l['eyo'] = { name = 'keyo' }
-l['fa'] = { name = 'persan', wiktionaryExists = true }
+l['fa'] = { name = 'persan', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['fa-cls'] = { name = 'persan classique' }
 l['faa'] = { name = 'fasu' }
 l['fab'] = { name = 'fá d’Ambô', sortKey = 'fá Ambô' }
@@ -1968,14 +1968,14 @@ l['far'] = { name = 'fataleka' }
 l['fat'] = { name = 'fanti' }
 l['fau'] = { name = 'fayu' }
 l['fax'] = { name = 'valicien' }
-l['fc'] = { name = 'franc-comtois' }
+l['fc'] = { name = 'franc-comtois', hasPronunciationAppendix = true }
 l['fcs'] = { name = 'langue des signes québécoise', sortKey = 'signes québécoise' }
 l['fer'] = { name = 'feroge' }
 l['ff'] = { name = 'peul' }
 l['ffg'] = { name = 'bohurá' }
 l['ffi'] = { name = 'foia foia' }
 l['ffm'] = { name = 'peul du Maasina', sortKey = 'peul Maasina' }
-l['fi'] = { name = 'finnois', wiktionaryExists = true }
+l['fi'] = { name = 'finnois', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['fia'] = { name = 'nubien' }
 l['fie'] = { name = 'fyer' }
 l['fil'] = { name = 'filipino' }
@@ -2003,7 +2003,7 @@ l['fos'] = { name = 'siraya' }
 l['fox'] = { name = 'langues formosanes', sortKey = 'formosanes langues', isGroup = true }
 l['fpe'] = { name = 'pichi' }
 l['fqs'] = { name = 'fas' }
-l['fr'] = { name = 'français', hasPortal = true, wiktionaryExists = true }
+l['fr'] = { name = 'français', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['francilien'] = { name = 'francilien' }
 l['francique central'] = { name = 'francique central' }
 l['francique méridional'] = { name = 'francique méridional' }
@@ -2013,7 +2013,7 @@ l['frc'] = { name = 'français cadien' }
 l['frd'] = { name = 'fordata' }
 l['frk'] = { name = 'vieux-francique', sortKey = 'francique vieux' }
 l['frm'] = { name = 'moyen français', sortKey = 'français moyen' }
-l['fro'] = { name = 'ancien français', sortKey = 'français ancien', hasPortal = true }
+l['fro'] = { name = 'ancien français', sortKey = 'français ancien', hasPortal = true, hasPronunciationAppendix = true }
 l['frp'] = { name = 'francoprovençal' }
 l['frq'] = { name = 'forak' }
 l['frr'] = { name = 'frison septentrional' }
@@ -2052,7 +2052,7 @@ l['gaj'] = { name = 'gadsup' }
 l['gak'] = { name = 'gamkonora' }
 l['gal'] = { name = 'galoli' }
 l['galaïco-portugais'] = { name = 'galaïco-portugais', sortKey = 'galaïco portugais' }
-l['gallo'] = { name = 'gallo' }
+l['gallo'] = { name = 'gallo', hasPronunciationAppendix = true }
 l['gallo-italique de Basilicate'] = { name = 'gallo-italique de Basilicate', sortKey = 'gallo italique Basilicate' }
 l['gallo-italique de Sicile'] = { name = 'gallo-italique de Sicile', sortKey = 'gallo italique Sicile' }
 l['gan'] = { name = 'gan' }
@@ -2064,7 +2064,7 @@ l['gar'] = { name = 'galeya' }
 l['gas'] = { name = 'garasia des Adiwasi', sortKey = 'garasia Adiwasi' }
 l['gat'] = { name = 'kenati' }
 l['gau'] = { name = 'gadaba mudhili' }
-l['gaulois'] = { name = 'gaulois', hasPortal = true }
+l['gaulois'] = { name = 'gaulois', hasPortal = true, hasPronunciationAppendix = true }
 l['gaw'] = { name = 'nobonob' }
 l['gax'] = { name = 'borana' }
 l['gay'] = { name = 'gayo' }
@@ -2195,7 +2195,7 @@ l['gmv'] = { name = 'gamo' }
 l['gmw'] = { name = 'langues germaniques occidentales', sortKey = 'germaniques occidentales langues', isGroup = true }
 l['gmx'] = { name = 'magoma' }
 l['gmy'] = { name = 'mycénien' }
-l['gn'] = { name = 'guarani', wiktionaryExists = true }
+l['gn'] = { name = 'guarani', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['gna'] = { name = 'kaansa' }
 l['gnb'] = { name = 'gangte' }
 l['gnc'] = { name = 'guanche' }
@@ -2229,7 +2229,7 @@ l['goo'] = { name = 'gone dau' }
 l['gop'] = { name = 'yeretuar' }
 l['gor'] = { name = 'gorontalo' }
 l['gos'] = { name = 'groningois' }
-l['got'] = { name = 'gotique' }
+l['got'] = { name = 'gotique', hasPronunciationAppendix = true }
 l['gotique de Crimée'] = { name = 'gotique de Crimée', sortKey = 'gotique Crimée' }
 l['gottscheerish'] = { name = 'gottscheerish' }
 l['gou'] = { name = 'gavar' }
@@ -2243,7 +2243,7 @@ l['gqr'] = { name = 'gor' }
 l['gqu'] = { name = 'gao de Wanzi', sortKey = 'gao Wanzi' }
 l['gra'] = { name = 'rajput garasia' }
 l['grb'] = { name = 'grébo' }
-l['grc'] = { name = 'grec ancien', hasPortal = true }
+l['grc'] = { name = 'grec ancien', hasPortal = true, hasPronunciationAppendix = true }
 l['grd'] = { name = 'guruntum' }
 l['grec byzantin'] = { name = 'grec byzantin' }
 l['grec cargésien'] = { name = 'grec cargésien' }
@@ -2268,7 +2268,7 @@ l['gsl'] = { name = 'gusilay' }
 l['gsm'] = { name = 'langue des signes guatémaltèque', sortKey = 'signes guatemaltèque' }
 l['gso'] = { name = 'gbaya du Sud-Ouest', sortKey = 'gbaya Sud Ouest' }
 l['gsw'] = { name = 'alémanique', wikimediaCode = 'als' }
-l['gsw-fr'] = { name = 'alémanique alsacien' }
+l['gsw-fr'] = { name = 'alémanique alsacien', hasPronunciationAppendix = true }
 l['gta'] = { name = 'guató' }
 l['gti'] = { name = 'gbati-ri' }
 l['gu'] = { name = 'gujarati', wiktionaryExists = true }
@@ -2375,7 +2375,7 @@ l['hgw'] = { name = 'haigwai' }
 l['hhi'] = { name = 'hoia hoia de Ukusi-Koparamio', sortKey = 'hoia hoia Ukusi-Koparamio' }
 l['hhr'] = { name = 'keerak' }
 l['hhy'] = { name = 'hoia hoia de Matakaia', sortKey = 'hoia hoia Matakaia' }
-l['hi'] = { name = 'hindi', wiktionaryExists = true }
+l['hi'] = { name = 'hindi', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['hia'] = { name = 'lamang' }
 l['hib'] = { name = 'hibito' }
 l['hid'] = { name = 'hidatsa' }
@@ -2460,13 +2460,13 @@ l['hrt'] = { name = 'hertevin' }
 l['hru'] = { name = 'hruso' }
 l['hrx'] = { name = 'hunsrik' }
 l['hsb'] = { name = 'haut-sorabe', sortKey = 'sorabe haut', wiktionaryExists = true }
-l['hsn'] = { name = 'xiang' }
+l['hsn'] = { name = 'xiang', hasPronunciationAppendix = true }
 l['hss'] = { name = 'harsusi' }
 l['ht'] = { name = 'créole haïtien' }
 l['hto'] = { name = 'witoto mɨnɨca' }
 l['hts'] = { name = 'hadza' }
 l['htu'] = { name = 'hitu' }
-l['hu'] = { name = 'hongrois', wiktionaryExists = true }
+l['hu'] = { name = 'hongrois', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['hub'] = { name = 'huambisa' }
 l['huc'] = { name = 'ǂhoan', sortKey = 'hoan' }
 l['hue'] = { name = 'huave de San Francisco del Mar', sortKey = 'huave San Fancisco del Mar' }
@@ -2498,7 +2498,7 @@ l['hy'] = { name = 'arménien', wiktionaryExists = true }
 l['hya'] = { name = 'hya' }
 l['hyx'] = { name = 'langues arméniennes', sortKey = 'arméniennes langues', isGroup = true }
 l['hz'] = { name = 'héréro' }
-l['ia'] = { name = 'interlingua', wiktionaryExists = true }
+l['ia'] = { name = 'interlingua', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['iai'] = { name = 'iaai' }
 l['ian'] = { name = 'iatmul' }
 l['iar'] = { name = 'purari' }
@@ -2521,7 +2521,7 @@ l['ida'] = { name = 'luidakho-luisukha-lutirichi' }
 l['idb'] = { name = 'créole indo-portugais' }
 l['ide'] = { name = 'idere' }
 l['idi'] = { name = 'idi' }
-l['idiom neutral'] = { name = 'idiom neutral' }
+l['idiom neutral'] = { name = 'idiom neutral', hasPronunciationAppendix = true }
 l['idt'] = { name = 'idaté' }
 l['idu'] = { name = 'idoma' }
 l['ie'] = { name = 'interlingue', wiktionaryExists = true }
@@ -2586,7 +2586,7 @@ l['inp'] = { name = 'iñapari' }
 l['ins'] = { name = 'langue des signes indienne', sortKey = 'signes indienne' }
 l['int'] = { name = 'intha' }
 l['inz'] = { name = 'ineseño' }
-l['io'] = { name = 'ido', wiktionaryExists = true }
+l['io'] = { name = 'ido', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ior'] = { name = 'inor' }
 l['iow'] = { name = 'iowa-oto' }
 l['ipi'] = { name = 'ipili' }
@@ -2602,7 +2602,7 @@ l['iro'] = { name = 'langues iroquoiennes', sortKey = 'iroquoiennes langues', is
 l['irr'] = { name = 'ir' }
 l['iru'] = { name = 'irula' }
 l['irx'] = { name = 'kamberau' }
-l['is'] = { name = 'islandais', hasPortal = true, wiktionaryExists = true }
+l['is'] = { name = 'islandais', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['isa'] = { name = 'isabi' }
 l['isc'] = { name = 'isconahua' }
 l['isd'] = { name = 'isnag' }
@@ -2618,7 +2618,7 @@ l['isr'] = { name = 'langue des signes israélienne', sortKey = 'signes israéli
 l['ist'] = { name = 'istriote' }
 l['isu'] = { name = 'isu (Menchum)', sortKey = 'isu Menchum' }
 l['isv'] = { name = 'interslave' }
-l['it'] = { name = 'italien', hasPortal = true, wiktionaryExists = true }
+l['it'] = { name = 'italien', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['itb'] = { name = 'itneg de Binongan', sortKey = 'itneg Binongan' }
 l['itc'] = { name = 'langues italiques', sortKey = 'italiques langues', isGroup = true }
 l['ite'] = { name = 'itenez' }
@@ -2632,7 +2632,7 @@ l['itw'] = { name = 'ito' }
 l['itx'] = { name = 'itik' }
 l['ity'] = { name = 'itneg du Moyadan', sortKey = 'itneg Moyadan' }
 l['itz'] = { name = 'itzá' }
-l['iu'] = { name = 'inuktitut', wiktionaryExists = true }
+l['iu'] = { name = 'inuktitut', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ium'] = { name = 'iu mien' }
 l['ivb'] = { name = 'ibatan' }
 l['ivv'] = { name = 'ivatan' }
@@ -2645,7 +2645,7 @@ l['iyo'] = { name = 'mesaka' }
 l['iyx'] = { name = 'yaka (Congo)', sortKey = 'yaka Congo' }
 l['izh'] = { name = 'ingrien' }
 l['izr'] = { name = 'izere' }
-l['ja'] = { name = 'japonais', hasPortal = true, wiktionaryExists = true }
+l['ja'] = { name = 'japonais', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ja-kun'] = { name = 'kun’yomi' }
 l['ja-on'] = { name = 'on’yomi' }
 l['japhug'] = { name = 'japhug' }
@@ -2741,7 +2741,7 @@ l['juy'] = { name = 'juray' }
 l['jv'] = { name = 'javanais', wiktionaryExists = true }
 l['jvn'] = { name = 'javanais des Caraïbes', sortKey = 'javanais Caraïbes' }
 l['jya'] = { name = 'rgyalrong' }
-l['ka'] = { name = 'géorgien', wiktionaryExists = true }
+l['ka'] = { name = 'géorgien', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['kaa'] = { name = 'karakalpak' }
 l['kab'] = { name = 'kabyle' }
 l['kac'] = { name = 'kachin' }
@@ -2767,7 +2767,7 @@ l['kax'] = { name = 'kao' }
 l['kay'] = { name = 'kamayura' }
 l['kbb'] = { name = 'kashuyana' }
 l['kbc'] = { name = 'kadiwéu' }
-l['kbd'] = { name = 'kabarde', wiktionaryExists = true }
+l['kbd'] = { name = 'kabarde', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['kbh'] = { name = 'camsá' }
 l['kbi'] = { name = 'kaptiau' }
 l['kbj'] = { name = 'kari' }
@@ -2988,7 +2988,7 @@ l['kmm'] = { name = 'kom (Inde)', sortKey = 'kom Inde' }
 l['kmn'] = { name = 'awtuw' }
 l['kmo'] = { name = 'kwoma' }
 l['kmq'] = { name = 'gwama' }
-l['kmr'] = { name = 'kurmandji' }
+l['kmr'] = { name = 'kurmandji', hasPronunciationAppendix = true }
 l['kms'] = { name = 'kamasau' }
 l['kmt'] = { name = 'kemtuik' }
 l['kmv'] = { name = 'karipúna' }
@@ -3013,15 +3013,15 @@ l['knv'] = { name = 'waia' }
 l['knw'] = { name = 'kung-ekoka' }
 l['knx'] = { name = 'kendayan' }
 l['kny'] = { name = 'kanyok' }
-l['ko'] = { name = 'coréen', hasPortal = true, wiktionaryExists = true }
+l['ko'] = { name = 'coréen', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['koa'] = { name = 'konomala' }
 l['kod'] = { name = 'kodi' }
 l['koe'] = { name = 'kacipo-balesi' }
 l['kof'] = { name = 'kubi' }
-l['kog'] = { name = 'kogui' }
+l['kog'] = { name = 'kogui', hasPronunciationAppendix = true }
 l['koh'] = { name = 'koyo' }
 l['koi'] = { name = 'komi-permyak' }
-l['kok'] = { name = 'konkânî' }
+l['kok'] = { name = 'konkânî', hasPronunciationAppendix = true }
 l['kol'] = { name = 'kol (Papouasie-Nouvelle-Guinée)', sortKey = 'kol Papouasie' }
 l['konomihu'] = { name = 'konomihu' }
 l['koo'] = { name = 'konjo' }
@@ -3083,7 +3083,7 @@ l['krt'] = { name = 'kanuri de Tumari', sortKey = 'kanuri Tumari' }
 l['kru'] = { name = 'kurukh' }
 l['krx'] = { name = 'karon' }
 l['kry'] = { name = 'kryz' }
-l['ks'] = { name = 'kashmiri', wiktionaryExists = true }
+l['ks'] = { name = 'kashmiri', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ksb'] = { name = 'shambala' }
 l['ksd'] = { name = 'kuanua' }
 l['kse'] = { name = 'kuni' }
@@ -3120,7 +3120,7 @@ l['ktu'] = { name = 'kituba' }
 l['ktw'] = { name = 'kato' }
 l['ktx'] = { name = 'kaxararí' }
 l['ktz'] = { name = 'juǀ’hoan', sortKey = 'ju hoan' }
-l['ku'] = { name = 'kurde', wiktionaryExists = true }
+l['ku'] = { name = 'kurde', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['kub'] = { name = 'kutep' }
 l['kuc'] = { name = 'kwinsu' }
 l['kud'] = { name = '’auhelawa', sortKey = 'auhelawa' }
@@ -3225,7 +3225,7 @@ l['kzu'] = { name = 'kayupulau' }
 l['kzv'] = { name = 'komyandaret' }
 l['kzw'] = { name = 'karirí-xocó' }
 l['kzz'] = { name = 'kalabra' }
-l['la'] = { name = 'latin', hasPortal = true, wiktionaryExists = true }
+l['la'] = { name = 'latin', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['laa'] = { name = 'subanen du Sud', sortKey = 'subanen Sud' }
 l['lab'] = { name = 'linéaire A' }
 l['lac'] = { name = 'lacandon' }
@@ -3255,7 +3255,7 @@ l['lazé'] = { name = 'lazé' }
 l['lb'] = { name = 'luxembourgeois', hasPortal = true, wiktionaryExists = true }
 l['lbb'] = { name = 'label' }
 l['lbc'] = { name = 'lakkja' }
-l['lbe'] = { name = 'lak' }
+l['lbe'] = { name = 'lak', hasPronunciationAppendix = true }
 l['lbj'] = { name = 'ladakhi' }
 l['lbk'] = { name = 'bontok central' }
 l['lbn'] = { name = 'lamet' }
@@ -3281,7 +3281,7 @@ l['ldd'] = { name = 'luri' }
 l['ldh'] = { name = 'lamja-dengsa-tola', sortKey = 'lamja dengsa tola' }
 l['ldi'] = { name = 'laari' }
 l['ldm'] = { name = 'landuma' }
-l['ldn'] = { name = 'láadan' }
+l['ldn'] = { name = 'láadan', hasPronunciationAppendix = true }
 l['lea'] = { name = 'lega de Shabunda', sortKey = 'lega Shabunda' }
 l['leb'] = { name = 'lala-bisa' }
 l['lec'] = { name = 'leko' }
@@ -3306,7 +3306,7 @@ l['lev'] = { name = 'pantar de l’Ouest', sortKey = 'pantar Ouest' }
 l['lew'] = { name = 'kaili de Ledo', sortKey = 'kaili Ledo' }
 l['lex'] = { name = 'luang' }
 l['ley'] = { name = 'lemolang' }
-l['lez'] = { name = 'lezghien' }
+l['lez'] = { name = 'lezghien', hasPronunciationAppendix = true }
 l['lfn'] = { name = 'lingua franca nova' }
 l['lg'] = { name = 'ganda' }
 l['lga'] = { name = 'lungga' }
@@ -3426,7 +3426,7 @@ l['lom'] = { name = 'loma' }
 l['lon'] = { name = 'lomwe du Malawi', sortKey = 'lonwe malawi' }
 l['lop'] = { name = 'lopa' }
 l['lor'] = { name = 'téén' }
-l['lorrain'] = { name = 'lorrain' }
+l['lorrain'] = { name = 'lorrain', hasPronunciationAppendix = true }
 l['los'] = { name = 'loniu' }
 l['lot'] = { name = 'otuho' }
 l['lou'] = { name = 'créole louisianais' }
@@ -3452,7 +3452,7 @@ l['lsi'] = { name = 'lashi' }
 l['lsl'] = { name = 'langue des signes lettonne', sortKey = 'signes lettonne' }
 l['lsm'] = { name = 'saamia' }
 l['lsr'] = { name = 'aruop' }
-l['lt'] = { name = 'lituanien', wiktionaryExists = true }
+l['lt'] = { name = 'lituanien', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ltc'] = { name = 'chinois médiéval' }
 l['ltg'] = { name = 'latgalien' }
 l['lti'] = { name = 'leti (Indonésie)', sortKey = 'leti Indonésie' }
@@ -3480,7 +3480,7 @@ l['luv'] = { name = 'luwati' }
 l['luw'] = { name = 'luo (Cameroun)', sortKey = 'luo Cameroun' }
 l['luy'] = { name = 'luhya' }
 l['luz'] = { name = 'lori du Sud', sortKey = 'lori Sud' }
-l['lv'] = { name = 'letton', wiktionaryExists = true }
+l['lv'] = { name = 'letton', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['lva'] = { name = 'makuva' }
 l['lvk'] = { name = 'lavukaleve' }
 l['lwg'] = { name = 'wanga' }
@@ -3628,7 +3628,7 @@ l['mfw'] = { name = 'mulaha' }
 l['mfx'] = { name = 'melo' }
 l['mfy'] = { name = 'mayo' }
 l['mfz'] = { name = 'mabaan' }
-l['mg'] = { name = 'malgache', wiktionaryExists = true }
+l['mg'] = { name = 'malgache', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['mga'] = { name = 'moyen irlandais', sortKey = 'irlandais moyen' }
 l['mgc'] = { name = 'morokodo' }
 l['mgd'] = { name = 'moru' }
@@ -3768,7 +3768,7 @@ l['mmu'] = { name = 'mmaala' }
 l['mmw'] = { name = 'emae' }
 l['mmx'] = { name = 'madak' }
 l['mmy'] = { name = 'migaama' }
-l['mn'] = { name = 'mongol', wiktionaryExists = true }
+l['mn'] = { name = 'mongol', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['mna'] = { name = 'mbula' }
 l['mnb'] = { name = 'muna' }
 l['mnc'] = { name = 'mandchou' }
@@ -3865,7 +3865,7 @@ l['mqw'] = { name = 'murupi' }
 l['mqx'] = { name = 'mamuju' }
 l['mqy'] = { name = 'manggarai' }
 l['mqz'] = { name = 'pano-malasanga' }
-l['mr'] = { name = 'marathe', wiktionaryExists = true }
+l['mr'] = { name = 'marathe', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['mra'] = { name = 'mlabri' }
 l['mrb'] = { name = 'sungwadia' }
 l['mrc'] = { name = 'maricopa' }
@@ -3902,7 +3902,7 @@ l['msj'] = { name = 'ma (Congo-Kinshasa)', sortKey = 'ma Congo démocratique' }
 l['msk'] = { name = 'mansaka' }
 l['msl'] = { name = 'molof' }
 l['msm'] = { name = 'manobo agusan' }
-l['msn'] = { name = 'vurës' }
+l['msn'] = { name = 'vurës', hasPronunciationAppendix = true }
 l['mso'] = { name = 'mombum' }
 l['msq'] = { name = 'caac' }
 l['msv'] = { name = 'maslam' }
@@ -4005,7 +4005,7 @@ l['myk'] = { name = 'mamara' }
 l['myl'] = { name = 'moma' }
 l['mym'] = { name = 'me’en' }
 l['myn'] = { name = 'langues mayas', sortKey = 'mayas langues', isGroup = true }
-l['myp'] = { name = 'pirahã' }
+l['myp'] = { name = 'pirahã', hasPronunciationAppendix = true }
 l['myq'] = { name = 'maninka de forêt', sortKey = 'maninka forêt' }
 l['myr'] = { name = 'muniche' }
 l['mysien'] = { name = 'mysien' }
@@ -4045,7 +4045,7 @@ l['nai'] = { name = 'langues nord-amérindiennes', sortKey = 'nord amérindienne
 l['nak'] = { name = 'nakanai' }
 l['nal'] = { name = 'nalik' }
 l['nam'] = { name = 'ngan’gityemerri' }
-l['nan'] = { name = 'minnan', wikimediaCode = 'zh-min-nan', wiktionaryExists = true }
+l['nan'] = { name = 'minnan', hasPronunciationAppendix = true, wikimediaCode = 'zh-min-nan', wiktionaryExists = true }
 l['nanga ira’'] = { name = 'nanga ira’' }
 l['nao'] = { name = 'naaba' }
 l['nap'] = { name = 'napolitain' }
@@ -4108,7 +4108,7 @@ l['ndu'] = { name = 'dugun' }
 l['ndv'] = { name = 'ndut' }
 l['ndy'] = { name = 'luto' }
 l['ndz'] = { name = 'ndogo' }
-l['ne'] = { name = 'népalais', wiktionaryExists = true }
+l['ne'] = { name = 'népalais', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['nea'] = { name = 'ngadha de l’Est', sortKey = 'ngadha Est' }
 l['neb'] = { name = 'toura (Côte d’Ivoire)', sortKey = 'toura Côte divoire' }
 l['nec'] = { name = 'nedebang' }
@@ -4231,7 +4231,7 @@ l['nkp'] = { name = 'niuatoputapu' }
 l['nkr'] = { name = 'nukuoro' }
 l['nkx'] = { name = 'nkoroo' }
 l['nkz'] = { name = 'nkari' }
-l['nl'] = { name = 'néerlandais', hasPortal = true, wiktionaryExists = true }
+l['nl'] = { name = 'néerlandais', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['nla'] = { name = 'ngombale' }
 l['nlc'] = { name = 'nalca' }
 l['nld'] = { name = 'flamand oriental' }
@@ -4281,7 +4281,7 @@ l['nns'] = { name = 'ningye' }
 l['nnt'] = { name = 'nanticoke' }
 l['nnv'] = { name = 'nugunu (Australie)', sortKey = 'nugunu Australie' }
 l['nnw'] = { name = 'nuni du Sud', sortKey = 'nuni Sud' }
-l['no'] = { name = 'norvégien', wiktionaryExists = true }
+l['no'] = { name = 'norvégien', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['noa'] = { name = 'wounaan' }
 l['noc'] = { name = 'nuk' }
 l['nod'] = { name = 'thaï du Nord', sortKey = 'thaï Nord' }
@@ -4433,7 +4433,7 @@ l['obo'] = { name = 'obo' }
 l['obr'] = { name = 'vieux birman', sortKey = 'birman vieux' }
 l['obt'] = { name = 'vieux breton', sortKey = 'breton vieux' }
 l['obu'] = { name = 'obulom' }
-l['oc'] = { name = 'occitan', wiktionaryExists = true }
+l['oc'] = { name = 'occitan', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['oca'] = { name = 'ocaina' }
 l['och'] = { name = 'chinois archaïque' }
 l['ocm'] = { name = 'vieux cham', sortKey = 'cham vieux' }
@@ -4622,7 +4622,7 @@ l['pby'] = { name = 'pyu (Papouasie Nouvelle-Guinée)', sortKey = 'pyu Papouasie
 l['pca'] = { name = 'popoloca de Santa Inés Ahuatempan', sortKey = 'popoloca Santa Inés Ahuatempan' }
 l['pcb'] = { name = 'pear' }
 l['pcc'] = { name = 'bouyei' }
-l['pcd'] = { name = 'picard' }
+l['pcd'] = { name = 'picard', hasPronunciationAppendix = true }
 l['pce'] = { name = 'palaung ruching' }
 l['pcf'] = { name = 'paliyan' }
 l['pcg'] = { name = 'paniya' }
@@ -4711,7 +4711,7 @@ l['pkp'] = { name = 'pakupaku' }
 l['pkr'] = { name = 'kurumba d’Attapady', sortKey = 'kurumba Attapady' }
 l['pkt'] = { name = 'malieng' }
 l['pku'] = { name = 'paku' }
-l['pl'] = { name = 'polonais', wiktionaryExists = true }
+l['pl'] = { name = 'polonais', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['plb'] = { name = 'polonombauk' }
 l['plc'] = { name = 'palawano central' }
 l['pld'] = { name = 'polari' }
@@ -4721,7 +4721,7 @@ l['plg'] = { name = 'pilagá' }
 l['plj'] = { name = 'polci' }
 l['plk'] = { name = 'shina kohistani' }
 l['pll'] = { name = 'palaung doré' }
-l['pln'] = { name = 'palenquero' }
+l['pln'] = { name = 'palenquero', hasPronunciationAppendix = true }
 l['plo'] = { name = 'popoluca d’Oluta', sortKey = 'popoluca Oluta' }
 l['plodarisch'] = { name = 'plodarisch' }
 l['plq'] = { name = 'palaïte' }
@@ -4836,7 +4836,7 @@ l['pss'] = { name = 'kaulong' }
 l['pst'] = { name = 'pachto central' }
 l['psw'] = { name = 'port Sandwich' }
 l['psy'] = { name = 'piscataway' }
-l['pt'] = { name = 'portugais', hasPortal = true, wiktionaryExists = true }
+l['pt'] = { name = 'portugais', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['pth'] = { name = 'pataxó hã-ha-hãe' }
 l['pti'] = { name = 'pintiini' }
 l['ptp'] = { name = 'patep' }
@@ -5003,7 +5003,7 @@ l['rnn'] = { name = 'roon' }
 l['rnp'] = { name = 'rongpo' }
 l['rnr'] = { name = 'nari nari' }
 l['rnw'] = { name = 'rungwa' }
-l['ro'] = { name = 'roumain', wiktionaryExists = true }
+l['ro'] = { name = 'roumain', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['roa'] = { name = 'langues romanes', sortKey = 'romanes langues', isGroup = true }
 l['roa-leo'] = { name = 'léonais' }
 l['roa-opt'] = { name = 'galaïco-portugais', sortKey = 'galaïco portugais' }
@@ -5034,7 +5034,7 @@ l['rsl'] = { name = 'langue des signes russe', sortKey = 'signes russe' }
 l['rtc'] = { name = 'rungtu chin' }
 l['rth'] = { name = 'ratahan' }
 l['rtm'] = { name = 'rotuman' }
-l['ru'] = { name = 'russe', hasPortal = true, wiktionaryExists = true }
+l['ru'] = { name = 'russe', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['rub'] = { name = 'gungu' }
 l['rue'] = { name = 'ruthène' }
 l['ruf'] = { name = 'luguru' }
@@ -5055,7 +5055,7 @@ l['rxd'] = { name = 'ngardi' }
 l['rxw'] = { name = 'karuwali' }
 l['ryn'] = { name = 'amami du Nord', sortKey = 'amami Nord' }
 l['rys'] = { name = 'yaeyama' }
-l['ryu'] = { name = 'okinawaïen', hasPortal = true }
+l['ryu'] = { name = 'okinawaïen', hasPortal = true, hasPronunciationAppendix = true }
 l['sa'] = { name = 'sanskrit', wiktionaryExists = true }
 l['saa'] = { name = 'saba' }
 l['sab'] = { name = 'buglere' }
@@ -5115,7 +5115,7 @@ l['sce'] = { name = 'dongxiang' }
 l['sch'] = { name = 'sakachep' }
 l['sci'] = { name = 'malais du Sri Lanka', sortKey = 'malais Sri Lanka' }
 l['scl'] = { name = 'shina' }
-l['scn'] = { name = 'sicilien', wiktionaryExists = true }
+l['scn'] = { name = 'sicilien', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['sco'] = { name = 'scots' }
 l['scp'] = { name = 'yolmo' }
 l['scq'] = { name = 'saoch' }
@@ -5127,7 +5127,7 @@ l['sdc'] = { name = 'sassarais' }
 l['sde'] = { name = 'surubu' }
 l['sdf'] = { name = 'sarli' }
 l['sdg'] = { name = 'savi' }
-l['sdh'] = { name = 'kurde du Sud', sortKey = 'kurde Sud' }
+l['sdh'] = { name = 'kurde du Sud', sortKey = 'kurde Sud', hasPronunciationAppendix = true }
 l['sdk'] = { name = 'sos kundi' }
 l['sdm'] = { name = 'semandang' }
 l['sdn'] = { name = 'gallurais' }
@@ -5136,7 +5136,7 @@ l['sdp'] = { name = 'sherdukpen' }
 l['sds'] = { name = 'sened' }
 l['sdv'] = { name = 'langues soudaniques orientales', sortKey = 'soudaniques orientales langues', isGroup = true }
 l['sdz'] = { name = 'sallands' }
-l['se'] = { name = 'same du Nord', sortKey = 'same Nord' }
+l['se'] = { name = 'same du Nord', sortKey = 'same Nord', hasPronunciationAppendix = true }
 l['sea'] = { name = 'semai' }
 l['seb'] = { name = 'shempire' }
 l['sec'] = { name = 'sechelt' }
@@ -5165,7 +5165,7 @@ l['sez'] = { name = 'senthang chin' }
 l['sfb'] = { name = 'langue des signes de Belgique francophone', sortKey = 'signes Belgique francophone' }
 l['sfe'] = { name = 'subanen de l’Est', sortKey = 'subanen Est' }
 l['sfw'] = { name = 'sehwi' }
-l['sg'] = { name = 'sango', wiktionaryExists = true }
+l['sg'] = { name = 'sango', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['sga'] = { name = 'vieil irlandais', sortKey = 'irlandais vieil' }
 l['sgb'] = { name = 'ayta mag-antsi' }
 l['sgc'] = { name = 'kipsigis' }
@@ -5204,7 +5204,7 @@ l['shu'] = { name = 'arabe tchadien' }
 l['shv'] = { name = 'shehri' }
 l['shw'] = { name = 'shwai' }
 l['shx'] = { name = 'ho-nte' }
-l['shy'] = { name = 'chaoui', wiktionaryExists = true }
+l['shy'] = { name = 'chaoui', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['shz'] = { name = 'syenara' }
 l['si'] = { name = 'cingalais', wiktionaryExists = true }
 l['sia'] = { name = 'same d’Akkala', sortKey = 'same Akkala' }
@@ -5243,7 +5243,7 @@ l['sjr'] = { name = 'siar' }
 l['sjt'] = { name = 'same de Ter', sortKey = 'same Ter' }
 l['sju'] = { name = 'same d’Ume', sortKey = 'same Ume' }
 l['sjw'] = { name = 'shawnee' }
-l['sk'] = { name = 'slovaque', wiktionaryExists = true }
+l['sk'] = { name = 'slovaque', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['ska'] = { name = 'skagit' }
 l['skb'] = { name = 'saek' }
 l['skc'] = { name = 'ma manda' }
@@ -5325,7 +5325,7 @@ l['soj'] = { name = 'soi' }
 l['sok'] = { name = 'sokoro' }
 l['sol'] = { name = 'solos' }
 l['solon'] = { name = 'solon' }
-l['solrésol'] = { name = 'solrésol' }
+l['solrésol'] = { name = 'solrésol', hasPronunciationAppendix = true }
 l['soltèque'] = { name = 'soltèque' }
 l['son'] = { name = 'langues songhaïes', sortKey = 'songhaïes langues', isGroup = true }
 l['sonqor'] = { name = 'sonqor' }
@@ -5355,7 +5355,7 @@ l['sps'] = { name = 'saposa' }
 l['spu'] = { name = 'sapuan' }
 l['spx'] = { name = 'picène du Sud', sortKey = 'picène Sud' }
 l['spy'] = { name = 'sabaot' }
-l['sq'] = { name = 'albanais', wiktionaryExists = true }
+l['sq'] = { name = 'albanais', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['sqa'] = { name = 'shama' }
 l['sqh'] = { name = 'shau' }
 l['sqj'] = { name = 'langues albanaises', sortKey = 'albanaises langues', isGroup = true }
@@ -5442,21 +5442,21 @@ l['suk'] = { name = 'soukouma' }
 l['sul'] = { name = 'surigaonon' }
 l['suq'] = { name = 'suri' }
 l['sur'] = { name = 'mwaghavul' }
-l['sus'] = { name = 'soussou' }
+l['sus'] = { name = 'soussou', hasPronunciationAppendix = true }
 l['sut'] = { name = 'subtiaba' }
 l['suv'] = { name = 'sulung' }
 l['suw'] = { name = 'sumbwa' }
 l['sux'] = { name = 'sumérien' }
 l['suy'] = { name = 'suyá' }
 l['suz'] = { name = 'sunwar' }
-l['sv'] = { name = 'suédois', wiktionaryExists = true }
+l['sv'] = { name = 'suédois', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['sva'] = { name = 'svane' }
 l['svb'] = { name = 'ulau-suain' }
 l['sve'] = { name = 'serili' }
 l['svm'] = { name = 'slave molisan' }
 l['svs'] = { name = 'savosavo' }
-l['sw'] = { name = 'swahili', wiktionaryExists = true }
-l['swb'] = { name = 'shimaoré', sortKey = 'shimaore' }
+l['sw'] = { name = 'swahili', hasPronunciationAppendix = true, wiktionaryExists = true }
+l['swb'] = { name = 'shimaoré', sortKey = 'shimaore', hasPronunciationAppendix = true }
 l['swc'] = { name = 'swahili du Congo', sortKey = 'swahili Congo' }
 l['swg'] = { name = 'souabe' }
 l['swi'] = { name = 'sui' }
@@ -5503,7 +5503,7 @@ l['szw'] = { name = 'sawai' }
 l['szy'] = { name = 'sakizaya' }
 l['ta'] = { name = 'tamoul', wiktionaryExists = true }
 l['taa'] = { name = 'bas tanana', sortKey = 'tanana bas' }
-l['tab'] = { name = 'tabassaran' }
+l['tab'] = { name = 'tabassaran', hasPronunciationAppendix = true }
 l['tabancale'] = { name = 'tabancale' }
 l['tac'] = { name = 'tarahumara occidental' }
 l['tad'] = { name = 'tause' }
@@ -5521,7 +5521,7 @@ l['tangam'] = { name = 'tangam' }
 l['tao'] = { name = 'yami' }
 l['taokas'] = { name = 'taokas' }
 l['tap'] = { name = 'taabwa' }
-l['taq'] = { name = 'tamasheq' }
+l['taq'] = { name = 'tamasheq', hasPronunciationAppendix = true }
 l['tar'] = { name = 'tarahumara central' }
 l['tas'] = { name = 'tây bồi' }
 l['tau'] = { name = 'haut tanana', sortKey = 'tanana haut' }
@@ -5689,7 +5689,7 @@ l['tlc'] = { name = 'totonaque de Misantla', sortKey = 'totonaque Misantla' }
 l['tld'] = { name = 'talaud' }
 l['tlf'] = { name = 'telefol' }
 l['tlg'] = { name = 'tofanma' }
-l['tlh'] = { name = 'klingon' }
+l['tlh'] = { name = 'klingon', hasPronunciationAppendix = true }
 l['tli'] = { name = 'tlingit' }
 l['tlj'] = { name = 'kitalinga' }
 l['tlk'] = { name = 'taloki' }
@@ -5746,7 +5746,7 @@ l['toe'] = { name = 'tomedes' }
 l['tog'] = { name = 'tonga (Malawi)', sortKey = 'tonga Malawi' }
 l['toi'] = { name = 'tonga (Zambie)', sortKey = 'tonga Zambie' }
 l['toj'] = { name = 'tojolabal' }
-l['tok'] = { name = 'toki pona' }
+l['tok'] = { name = 'toki pona', hasPronunciationAppendix = true }
 l['tol'] = { name = 'tolowa' }
 l['tom'] = { name = 'tombulu' }
 l['tongzha'] = { name = 'tongzha' }
@@ -5788,7 +5788,7 @@ l['tqr'] = { name = 'torona' }
 l['tqt'] = { name = 'totonaque de l’Ouest', sortKey = 'totonaque Ouest' }
 l['tqu'] = { name = 'touo' }
 l['tqw'] = { name = 'tonkawa' }
-l['tr'] = { name = 'turc', wiktionaryExists = true }
+l['tr'] = { name = 'turc', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['tra'] = { name = 'tirahi' }
 l['trb'] = { name = 'terebu' }
 l['trc'] = { name = 'trique de Copala', sortKey = 'trique Copala' }
@@ -5828,7 +5828,7 @@ l['tsi'] = { name = 'tsimshian' }
 l['tsj'] = { name = 'tshangla' }
 l['tsk'] = { name = 'tseku' }
 l['tsm'] = { name = 'langue des signes turque', sortKey = 'signes turque' }
-l['tsolyáni'] = { name = 'tsolyáni' }
+l['tsolyáni'] = { name = 'tsolyáni', hasPronunciationAppendix = true }
 l['tsr'] = { name = 'akei' }
 l['tss'] = { name = 'langue des signes taïwanaise', sortKey = 'signes taïwanaise' }
 l['tst'] = { name = 'tondi songway kiini' }
@@ -6064,7 +6064,7 @@ l['vem'] = { name = 'vemgo-mabas' }
 l['veo'] = { name = 'ventureño' }
 l['vep'] = { name = 'vepse' }
 l['ver'] = { name = 'mom jango' }
-l['vi'] = { name = 'vietnamien', wiktionaryExists = true }
+l['vi'] = { name = 'vietnamien', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['vic'] = { name = 'créole des Îles Vierges', sortKey = 'créole Vierges' }
 l['vid'] = { name = 'vidunda' }
 l['vieil écossais'] = { name = 'vieil écossais', sortKey = 'écossais vieil' }
@@ -6093,7 +6093,7 @@ l['vkm'] = { name = 'kamakan' }
 l['vko'] = { name = 'kodeoha' }
 l['vkp'] = { name = 'korlai' }
 l['vlp'] = { name = 'valpei' }
-l['vls'] = { name = 'flamand occidental' }
+l['vls'] = { name = 'flamand occidental', hasPronunciationAppendix = true }
 l['vma'] = { name = 'martuthunira' }
 l['vmb'] = { name = 'mbabaram' }
 l['vme'] = { name = 'masela de l’Est', sortKey = 'masela Est' }
@@ -6108,8 +6108,8 @@ l['vmz'] = { name = 'mazatèque de Mazatlán', sortKey = 'mazatèque Mazatlán' 
 l['vnk'] = { name = 'lovono' }
 l['vnm'] = { name = 'neve’ei' }
 l['vnp'] = { name = 'vunapu' }
-l['vo'] = { name = 'volapük réformé', wiktionaryExists = true }
-l['volapük classique'] = { name = 'volapük classique' }
+l['vo'] = { name = 'volapük réformé', hasPronunciationAppendix = true, wiktionaryExists = true }
+l['volapük classique'] = { name = 'volapük classique', hasPronunciationAppendix = true }
 l['volow'] = { name = 'volow' }
 l['volsque'] = { name = 'volsque' }
 l['vor'] = { name = 'voro' }
@@ -6352,7 +6352,7 @@ l['xgf'] = { name = 'gabrielino-fernandeño' }
 l['xgi'] = { name = 'garingbal' }
 l['xgm'] = { name = 'dharumbal' }
 l['xgn'] = { name = 'langues mongoles', sortKey = 'mongoles langues', isGroup = true }
-l['xh'] = { name = 'xhosa', wiktionaryExists = true }
+l['xh'] = { name = 'xhosa', hasPronunciationAppendix = true, wiktionaryExists = true }
 l['xha'] = { name = 'harami' }
 l['xhc'] = { name = 'hunnique' }
 l['xhr'] = { name = 'hernique' }
@@ -6463,7 +6463,7 @@ l['xtz'] = { name = 'tasmanien' }
 l['xua'] = { name = 'alu kurumba' }
 l['xub'] = { name = 'bettu kurumba' }
 l['xud'] = { name = 'umiida' }
-l['xug'] = { name = 'kunigami' }
+l['xug'] = { name = 'kunigami', hasPronunciationAppendix = true }
 l['xuj'] = { name = 'jennu kurumba' }
 l['xul'] = { name = 'ngunawal' }
 l['xum'] = { name = 'ombrien' }
@@ -6642,7 +6642,7 @@ l['yua'] = { name = 'maya yucatèque' }
 l['yuanmen'] = { name = 'yuanmen' }
 l['yuc'] = { name = 'yuchi' }
 l['yud'] = { name = 'arabe judéo-tripolitain' }
-l['yue'] = { name = 'cantonais', wikimediaCode = 'zh-yue', hasPortal = true, wiktionaryExists = true }
+l['yue'] = { name = 'cantonais', hasPortal = true, hasPronunciationAppendix = true, wikimediaCode = 'zh-yue', wiktionaryExists = true }
 l['yuf-hav'] = { name = 'havasupai' }
 l['yuf-wal'] = { name = 'hualapai' }
 l['yuf-yav'] = { name = 'yavapai' }
@@ -6712,11 +6712,11 @@ l['zeg'] = { name = 'zenag' }
 l['zen'] = { name = 'zénaga' }
 l['zga'] = { name = 'kinga' }
 l['zgb'] = { name = 'zhuang de Guibei', sortKey = 'zhuang Guibei' }
-l['zgh'] = { name = 'amazighe standard marocain' }
+l['zgh'] = { name = 'amazighe standard marocain', hasPronunciationAppendix = true }
 l['zgm'] = { name = 'minz zhuang' }
 l['zgn'] = { name = 'zhuang de Guibian', sortKey = 'zhuang Guibian' }
 l['zgr'] = { name = 'magori' }
-l['zh'] = { name = 'chinois', hasPortal = true, wiktionaryExists = true }
+l['zh'] = { name = 'chinois', hasPortal = true, hasPronunciationAppendix = true, wiktionaryExists = true }
 l['zhb'] = { name = 'zhaba' }
 l['zhd'] = { name = 'dai zhuang' }
 l['zhn'] = { name = 'nong zhuang' }
@@ -6881,7 +6881,7 @@ l['proto-dura'] = { name = 'proto-dura', sortKey = 'dura proto' }
 l['proto-eskimo'] = { name = 'proto-eskimo', sortKey = 'eskimo proto' }
 l['proto-fennique'] = { name = 'proto-fennique', sortKey = 'fennique proto' }
 l['proto-finno-ougrien'] = { name = 'proto-finno-ougrien', sortKey = 'finno ougrien proto' }
-l['proto-germanique'] = { name = 'proto-germanique', sortKey = 'germanique proto' }
+l['proto-germanique'] = { name = 'proto-germanique', sortKey = 'germanique proto', hasPronunciationAppendix = true }
 l['proto-germanique occidental'] = { name = 'proto-germanique occidental', sortKey = 'germanique occidental proto' }
 l['proto-grec'] = { name = 'proto-grec', sortKey = 'grec proto' }
 l['proto-hlai'] = { name = 'proto-hlai', sortKey = 'hlai proto' }
@@ -6955,7 +6955,7 @@ l['proto-pomo'] = { name = 'proto-pomo', sortKey = 'pomo proto' }
 l['proto-pong'] = { name = 'proto-pong', sortKey = 'pong proto' }
 l['proto-pramique'] = { name = 'proto-pramique', sortKey = 'pramique proto' }
 l['proto-pwo'] = { name = 'proto-pwo', sortKey = 'pwo proto' }
-l['proto-ryūkyū'] = { name = 'proto-ryūkyū', sortKey = 'ryukyu proto' }
+l['proto-ryūkyū'] = { name = 'proto-ryūkyū', sortKey = 'ryukyu proto', hasPronunciationAppendix = true }
 l['proto-ryūkyū du Nord'] = { name = 'proto-ryūkyū du Nord', sortKey = 'ryukyu nord proto' }
 l['proto-ryūkyū du Sud'] = { name = 'proto-ryūkyū du Sud', sortKey = 'ryukyu sud proto' }
 l['proto-Sabah du Sud-Ouest'] = { name = 'proto-Sabah du Sud-Ouest', sortKey = 'sabah sud ouest proto' }
