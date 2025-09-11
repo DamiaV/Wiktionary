@@ -9,6 +9,7 @@
  *  isSpecial?: boolean,
  *  wiktionaryExists?: boolean,
  *  hasPortal?: boolean,
+ *  hasPronunciationAppendix?: boolean,
  *  aliasOf?: string,
  *  wikimediaCode?: string,
  * }} LanguageData
