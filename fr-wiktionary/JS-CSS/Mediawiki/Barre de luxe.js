@@ -47,7 +47,7 @@ $(() => {
     defaultButtons = [
       {
         tagOpen: "’",
-        imageFileName: "5/57/Apostrophe.png",
+        imageFileName: "7/75/Apos_dact_typo",
         imageFileNameOOUI: "8/88/Upper_single_apostrophe_toolbar_symbol.png",
         tooltip: "Apostrophe typographique",
         buttonId: "apos",
@@ -81,7 +81,7 @@ $(() => {
         tagOpen: "{{w|",
         tagClose: "}}",
         imageFileName: "c/cb/Button_wikipedia.png",
-        imageFileNameOOUI: "thumb/1/14/OOjs_UI_icon_logo-wikipedia.svg/24px-OOjs_UI_icon_logo-wikipedia.svg.png",
+        imageFileNameOOUI: "thumb/c/cb/Codex_icon_logo-Wikipedia.svg/24px-Codex_icon_logo-Wikipedia.svg.png",
         tooltip: "Lien vers Wikipédia",
         buttonId: "link-wp",
         group: "links",
@@ -198,7 +198,7 @@ $(() => {
       {
         tagOpen: "== {{langue|fr}} ==\n=== {{S|étymologie}} ===\n{{ébauche-étym" + "\|fr}}\n\n=== {{S|nom|fr}} ===\n{{fr-rég\|}}\n\'\'\'{{subst:" + "PAGENAME}}\'\'\' {{m}}\n# ",
         tagClose: "\n\n==== {{S|traductions}} ====\n{{trad-début}}\n* {{T|en}}\u00a0: {{trad|en|}}\n{{trad-fin}}\n\n=== {{S|voir aussi}} ===\n* {{WP}}",
-        imageFileName: "a/a7/Francefilm.png",
+        imageFileName: "e/e1/Button_flag_of_France.png",
         imageFileNameOOUI: "thumb/7/71/OOjs_UI_icon_stripeSummary-ltr.svg/24px-OOjs_UI_icon_stripeSummary-ltr.svg.png",
         tooltip: "Patron court",
         buttonId: "short-template",
@@ -307,6 +307,17 @@ $(() => {
         imageFileNameOOUI: "thumb/9/90/VisualEditor_icon_page-redirect-ltr.svg/24px-VisualEditor_icon_page-redirect-ltr.svg.png",
         tooltip: "Remplacer les liens",
         buttonId: "replace-links",
+        group: "links",
+      },
+      {
+        action: (selectedText, language) =>
+            `[[${selectedText.charAt(0).toLowerCase()}${selectedText.substring(1)}#${language}|${selectedText}]]`,
+        promptText: "Langue",
+        promptDefault: "fr",
+        imageFileName: "0/0c/Button_Link_DifferentName.png",
+        imageFileNameOOUI: "thumb/7/72/OOjs_UI_icon_link-ltr.svg/24px-OOjs_UI_icon_link-ltr.svg.png",
+        tooltip: "Lien",
+        buttonId: "link",
         group: "links",
       },
     ];
