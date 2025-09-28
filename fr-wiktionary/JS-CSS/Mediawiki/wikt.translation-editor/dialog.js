@@ -127,9 +127,9 @@ class EditDialog {
      */
     this._html = box;
 
-    window.onbeforeunload = (e) => {
+    window.addEventListener("beforeunload", (e) => {
       if (this.isVisible()) e.preventDefault();
-    };
+    });
 
     this.hide();
   }
