@@ -20,7 +20,7 @@ local t = {
     },
     ["écriture"] = {
       nom = "autre alphabet ou système d’écriture",
-      niveau = 3,
+      niveau = 4,
       parent = "type de mot",
       alias = { "écrit" },
     },
@@ -165,11 +165,6 @@ local t = {
       parent = "type de mot",
       alias = { "hypervb" },
       infobulle = "Verbes généralisant l’action de « {mot} »",
-    },
-    ["vidéos"] = {
-      nom = "vidéos",
-      niveau = 4,
-      parent = "type de mot",
     },
     ["méronymes"] = {
       nom = "méronymes",
