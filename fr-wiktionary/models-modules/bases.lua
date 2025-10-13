@@ -394,7 +394,8 @@ end
 --- @param code string Le code de la langue ([[Module:langues/data]]).
 --- @return string Le texte balisé.
 function p.balise_langue(text, code)
-  return mw.ustring.format('<bdi lang="%s" xml:lang="%s" class="lang-%s">%s</bdi>', code, code, code, text)
+  local escapedCode = mw.ustring.gsub(code, " ", "_")
+  return mw.ustring.format('<bdi lang="%s" xml:lang="%s" class="lang-%s">%s</bdi>', code, code, escapedCode, text)
 end
 
 --- Enlève les espaces de part et d’autre de tous les paramètres fournis.
