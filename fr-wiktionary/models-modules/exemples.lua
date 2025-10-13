@@ -17,15 +17,25 @@ local p = {}
 --- @param frame table The frame object for expanding templates.
 --- @return string The wikicode.
 local function _formatExample(text, transcription, meaning, source, link, heading, lang, scriptLang, disableTranslation, frame)
-  if not text then
+  if not text and not transcription then
     return mw.ustring.format(
         [=[<span class="example">''[[Aide:Exemples|Exemple d’utilisation]] manquant.'' <span class="plainlinks stubedit">([%s Ajouter])</span><!--
         --><bdi lang="%s" style="display: none"><!-- Balise de marquage pour le gadget [[MediaWiki:Gadget-wikt.add-examples]], ne pas retirer ! --></bdi></span>]=],
         mw.title.getCurrentTitle():fullUrl({ action = "edit" }), lang
-    ) .. m_bases.fait_categorie_contenu(mw.ustring.format("Wiktionnaire:Exemples manquants en %s", m_langs.get_nom(lang)))
+    ) .. m_bases.fait_categorie_contenu(mw.ustring.format("Wiktionnaire:Exemples manquants en %s", m_langs.getName(lang)))
   end
 
-  local italics = m_unicode.shouldItalicize(text) and "''" or ""
+  local italics
+
+  -- Uses the transcription if no text is given
+  if not text and transcription then
+    text = transcription
+    transcription = nil
+    italics = ""
+  else
+    italics = m_unicode.shouldItalicize(text) and "''" or ""
+  end
+
   local quoteTagOpen = link and mw.ustring.format('<q cite="%s">', mw.ustring.gsub(link, '"', '%%22')) or '<q>'
   text = m_unicode.setWritingDirection(text)
   -- Insert spaces if text starts or ends with “'” to correctly format the text
@@ -51,7 +61,7 @@ local function _formatExample(text, transcription, meaning, source, link, headin
 
   if disableTranslation then
     wikicode = wikicode .. m_bases.fait_categorie_contenu(
-        mw.ustring.format("Exemples en %s avec traduction désactivée", m_langs.get_nom(lang)))
+        mw.ustring.format("Exemples en %s avec traduction désactivée", m_langs.getName(lang)))
   else
     local translation
     if meaning then
@@ -59,14 +69,14 @@ local function _formatExample(text, transcription, meaning, source, link, headin
     elseif lang ~= "fr" then
       translation = "''La traduction en français de l’[[Aide:Exemples|exemple]] manque.'' "
       translation = translation .. mw.ustring.format("<span class=\"plainlinks stubedit\">([%s%s Ajouter])</span>", mw.site.server, mw.title.getCurrentTitle():localUrl("action=edit"))
-      translation = translation .. m_bases.fait_categorie_contenu(mw.ustring.format("Exemples en %s à traduire", m_langs.get_nom(lang)))
+      translation = translation .. m_bases.fait_categorie_contenu(mw.ustring.format("Exemples en %s à traduire", m_langs.getName(lang)))
     end
     if translation then
       wikicode = wikicode .. mw.ustring.format("\n%s: ", heading) .. translation
     end
   end
 
-  return wikicode .. m_bases.fait_categorie_contenu("Exemples en " .. m_langs.get_nom(lang))
+  return wikicode .. m_bases.fait_categorie_contenu("Exemples en " .. m_langs.getName(lang))
 end
 
 --- Formats an example. Function to call from templates.
@@ -92,7 +102,7 @@ function p.formatExample(frame)
     ["lien"] = {},
     ["tête"] = { default = "#*" },
     ["lang"] = { required = true, checker = function(lang)
-      return m_langs.specialCodes[lang] ~= nil or m_langs.get_nom(lang) ~= nil
+      return m_langs.specialCodes[lang] ~= nil or m_langs.getName(lang) ~= nil
     end },
     ["pas-trad"] = { type = m_params.BOOLEAN, default = false }
   }, true)
