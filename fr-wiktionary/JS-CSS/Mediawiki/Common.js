@@ -128,21 +128,32 @@ $(() => {
  * Permet d’afficher/cacher les illustrations cachées.
  */
 $(() => {
-  $(".show-illus-btn").each(function () {
-    const $showBtn = $(this);
-    const $div = $showBtn.parent().parent();
-    const $illusDiv = $div.next();
-    // Hide button
-    $illusDiv.find(".hide-illus-btn").on("click", () => {
-      $div.show();
-      $illusDiv.hide();
-    });
-    // Show div
-    $showBtn.on("click", () => {
-      $illusDiv.show();
-      $div.hide();
-    });
-  });
+  for (const div of document.querySelectorAll("[data-thumb='hidden']")) {
+    const warningBox = div.querySelector("[data-thumb='warning']");
+    const illustrationBox = div.querySelector("[data-thumb='illustration']");
+    const showBtnContainer = div.querySelector("[data-thumb-button='show']");
+    const hideBtnContainer = div.querySelector("[data-thumb-button='hide']");
+
+    const showBtn = document.createElement("button");
+    showBtn.innerText = "Afficher";
+    showBtn.type = "button";
+    showBtn.className = "cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed";
+    showBtn.onclick = () => {
+      warningBox.style.display = "none";
+      illustrationBox.style.display = "block";
+    };
+    showBtnContainer.appendChild(showBtn);
+
+    const hideBtn = document.createElement("button");
+    hideBtn.innerText = "Cacher";
+    hideBtn.type = "button";
+    hideBtn.className = "cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed";
+    hideBtn.onclick = () => {
+      illustrationBox.style.display = "none";
+      warningBox.style.display = "block";
+    };
+    hideBtnContainer.appendChild(hideBtn);
+  }
 });
 
 /*
