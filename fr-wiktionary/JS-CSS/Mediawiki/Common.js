@@ -10,8 +10,8 @@
  * Applique le style des pages de discussion à des pages qui n’en sont
  * techniquement pas, comme la Wikidémie (cas spécial).
  */
-$(function () {
-  var pages = [
+$(() => {
+  const pages = [
     "Bulletin_des_administrateurs",
     "Bulletin_des_bureaucrates",
     "Bulletin_de_la_patrouille",
@@ -32,7 +32,7 @@ $(function () {
       new RegExp("^Wiktionnaire:(" + pages.join("|") + ")").test(mw.config.get("wgPageName")) ||
       $("#transformeEnPageDeDiscussion").length
   ) {
-    var $body = $("body");
+    const $body = $("body");
 
     $body.removeClass("ns-4").addClass("ns-1");
     $body.removeClass("ns-subject").addClass("ns-talk");
@@ -45,8 +45,8 @@ $(function () {
  */
 if (window.location.hash) {
   // execute on window.load to try to get the best accuracy
-  $(window).on("load", function () {
-    var currentTarget = document.getElementById(window.location.hash.substring(1));
+  $(window).on("load", () => {
+    const currentTarget = document.getElementById(window.location.hash.substring(1));
     if (currentTarget) {
       currentTarget.scrollIntoView();
     }
@@ -58,20 +58,20 @@ if (window.location.hash) {
  * un article de qualité.
  * (Copié depuis [[w:MediaWiki:Common.js]])
  */
-$(function () {
+$(() => {
   // links are only replaced in p-lang
   if (typeof window.disableFeaturedInterwikiLinks !== "undefined") {
     return;
   }
-  var pLang = document.getElementById("p-lang");
+  const pLang = document.getElementById("p-lang");
   if (!pLang) {
     return;
   }
-  var listItems = pLang.getElementsByTagName("li");
-  var listLength = listItems.length;
+  const listItems = pLang.getElementsByTagName("li");
+  const listLength = listItems.length;
 
   if (mw.config.get("wgNamespaceNumber") === 0) {
-    for (var i = 0; i < listLength; i++) {
+    for (let i = 0; i < listLength; i++) {
       // ADQ- est intentionnel pour correspondre au modèle Lien AdQ, on
       // ne doit pas le corriger.
       if (document.getElementById("ADQ-" + listItems[i].className)) {
@@ -93,13 +93,13 @@ $(function () {
  * Un élément comportant id="DisableRealTitle" désactive la fonction.
  * (Copié de Wikipédia)
  */
-$(function () {
-  var $titleBanner = $("#RealTitleBanner");
+$(() => {
+  const $titleBanner = $("#RealTitleBanner");
 
   if ($titleBanner && !$("#DisableRealTitle").length) {
-    var $realTitle = $("#RealTitle");
-    var realTitle = $realTitle.html();
-    var $h1 = $("h1")[0];
+    const $realTitle = $("#RealTitle");
+    const realTitle = $realTitle.html();
+    const $h1 = $("h1")[0];
 
     if (realTitle && $h1) {
       if (realTitle === "") {
@@ -120,25 +120,25 @@ $(function () {
  * Change le lien d’import en lien vers la page [[Aide:Importer un fichier]].
  * Copié depuis Wikipédia.
  */
-$(function () {
+$(() => {
   $("#t-upload a").attr("href", "/wiki/Aide:Importer_un_fichier");
 });
 
 /*
  * Permet d’afficher/cacher les illustrations cachées.
  */
-$(function () {
+$(() => {
   $(".show-illus-btn").each(function () {
-    var $showBtn = $(this);
-    var $div = $showBtn.parent().parent();
-    var $illusDiv = $div.next();
+    const $showBtn = $(this);
+    const $div = $showBtn.parent().parent();
+    const $illusDiv = $div.next();
     // Hide button
-    $illusDiv.find(".hide-illus-btn").on("click", function () {
+    $illusDiv.find(".hide-illus-btn").on("click", () => {
       $div.show();
       $illusDiv.hide();
     });
     // Show div
-    $showBtn.on("click", function () {
+    $showBtn.on("click", () => {
       $illusDiv.show();
       $div.hide();
     });
@@ -154,19 +154,19 @@ $(function () {
 // FIXME code dupliqué dans [[MediaWiki:Gadget-Section links.js]]
 $(function stubeditLink() {
   $(".stubedit a").attr("href", function () {
-    var $ol = $(this);
-    var lim = 0;
+    let $ol = $(this);
+    let lim = 0;
     // Remonte en haut de la hiérarchie
     while ($ol.parent().attr("id") !== "mw-content-text" && lim < 50) {
       $ol = $ol.parent();
       lim++;
     }
     // On remonte et on récupère le premier titre venu
-    var $hall = $ol.prevAll("h2, h3, h4");
+    const $hall = $ol.prevAll("h2, h3, h4");
     if ($hall.length > 0) {
-      var href = "";
+      let href = "";
       $hall.each(function () {
-        var $modif = $(this).find(".mw-editsection a");
+        const $modif = $(this).find(".mw-editsection a");
         href = $modif.attr("href");
         return false;	// break each loop
       });
@@ -182,11 +182,11 @@ $(function stubeditLink() {
  * d’édition (preload-edit-text) et/ou le résumé de
  * modification (preload-edit-summary).
  */
-$(function () {
+$(() => {
   if (["edit", "submit"].includes(mw.config.get("wgAction"))) {
-    var searchParams = new URL(location.href).searchParams;
-    var content = (searchParams.get("preload-edit-text") || "").trim();
-    var summary = (searchParams.get("preload-edit-summary") || "").trim();
+    const searchParams = new URL(location.href).searchParams;
+    const content = (searchParams.get("preload-edit-text") || "").trim();
+    const summary = (searchParams.get("preload-edit-summary") || "").trim();
 
     if (content) {
       $("#wpTextbox1").val(content);
