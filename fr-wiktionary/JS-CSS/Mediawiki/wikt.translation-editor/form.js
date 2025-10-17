@@ -122,26 +122,37 @@ class EditForm {
 
     /** @type {JQuery<HTMLFormElement>} */
     const $form = $(`<form class="translation-editor" data-trans-form-index="${index}">`);
+
+    document.head.append($(`
+<style>
+  .translation-editor .inline {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+  }
+</style>`).get(0));
+
     /**
      * @type {JQuery<HTMLInputElement>}
      * @private
      */
-    this._$langInput = $(`<input type="text" id="lang-input-${index}" placeholder="Nom ou code de langue">`);
+    this._$langInput = $(`<input class="cdx-text-input__input" type="text" id="lang-input-${index}" placeholder="Nom ou code de langue">`);
     /** @type {JQuery<HTMLInputElement>} */
-    const $translationInput = $(`<input type="text" id="trans-input-${index}" placeholder="Traduction">`);
+    const $translationInput = $(`<input class="cdx-text-input__input" type="text" id="trans-input-${index}" placeholder="Traduction">`);
     /** @type {JQuery<HTMLInputElement>} */
-    const $transliterationInput = $(`<input type="text" id="translit-input-${index}" placeholder="ex : khimera pour химера">`);
+    const $transliterationInput = $(`<input class="cdx-text-input__input" type="text" id="translit-input-${index}" placeholder="ex : khimera pour химера">`);
     /** @type {JQuery<HTMLInputElement>} */
-    const $traditionalInput = $(`<input type="text" id="tradit-input-${index}" placeholder="ex : 軍團 pour 군단">`);
+    const $traditionalInput = $(`<input class="cdx-text-input__input" type="text" id="tradit-input-${index}" placeholder="ex : 軍團 pour 군단">`);
     /** @type {JQuery<HTMLInputElement>} */
-    const $pageNameInput = $(`<input type="text" id="page-name-input-${index}" placeholder="ex : amo pour amō">`);
+    const $pageNameInput = $(`<input class="cdx-text-input__input" type="text" id="page-name-input-${index}" placeholder="ex : amo pour amō">`);
     /**
      * @type {JQuery<HTMLInputElement>}
      * @private
      */
-    this._$submitButton = $(`<button type="submit">Ajouter</button>`);
+    this._$submitButton = $(`<button class="cdx-button cdx-button--action-progressive cdx-button--weight-primary cdx-button--size-medium cdx-button--framed" type="submit">Ajouter</button>`);
     /** @type {JQuery<HTMLAnchorElement>} */
-    const $showMoreButton = $(`<a href="#">Plus</a>`);
+    const $showMoreButton = $(`<button class="cdx-button cdx-button--action-default cdx-button--weight-quiet cdx-button--size-medium" type="button">Plus</button>`);
     /**
      * @type {JQuery<HTMLImageElement>}
      * @private
@@ -180,21 +191,19 @@ class EditForm {
       $showMoreButton.text(this._fullView ? "Moins" : "Plus");
     });
 
-    const $translationLine = $("<p>");
+    const $translationLine = $('<p class="inline">');
+    const $langInputWrapper = $('<div class="cdx-text-input">');
+    $langInputWrapper.append(this._$langInput);
+    const $translationInputWrapper = $('<div class="cdx-text-input">');
+    $translationInputWrapper.append($translationInput);
     $translationLine.append(
         `<label for="lang-input-${index}">Ajouter une traduction en</label> `,
-        this._$langInput,
-        "&nbsp;: ",
-        $translationInput,
-        " ",
+        $langInputWrapper,
+        ":",
+        $translationInputWrapper,
         this._$submitButton,
-        " ",
         $showMoreButton,
-        " ",
-        this._$spinner,
-        "<br>",
-        "<span class='help-text'>Vous pouvez taper un code de langue à la place du nom. " +
-        "Appuyez sur <kbd>Tab</kbd> pour qu’il soit remplacé automatiquement par le nom correspondant.</span>"
+        this._$spinner
     );
 
     const $grammarPropsLine = $("<p>");
@@ -202,7 +211,7 @@ class EditForm {
      * @type {JQuery<HTMLInputElement>}
      * @private
      */
-    this._$resetButton = $('<input type="button" value="Tout décocher">');
+    this._$resetButton = $('<input class="cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed" type="button" value="Tout décocher">');
     this._$resetButton.on("click", () => {
       for (const $button of Object.values(this._radioButtons))
         $button.prop("checked", false);
@@ -228,37 +237,45 @@ class EditForm {
      * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
-    this._$transliterationLine = $("<p>");
+    this._$transliterationLine = $('<p class="inline">');
+    const $transliterationInputWrapper = $('<div class="cdx-text-input">');
+    $transliterationInputWrapper.append($transliterationInput);
     this._$transliterationLine.append(
         `<label for="translit-input-${index}">Translittération&nbsp;:</label> `,
-        $transliterationInput
+        $transliterationInputWrapper
     );
 
     /**
      * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
-    this._$traditionalLine = $("<p>");
+    this._$traditionalLine = $('<p class="inline">');
+    const $traditionalInputWrapper = $('<div class="cdx-text-input">');
+    $traditionalInputWrapper.append($traditionalInput);
     this._$traditionalLine.append(
         `<label for="tradit-input-${index}">Écriture traditionnelle&nbsp;:</label> `,
-        $traditionalInput
+        $traditionalInputWrapper
     );
 
     /**
      * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
-    this._$pageNameLine = $("<p>");
+    this._$pageNameLine = $('<p class="inline">');
     const helpText = "Si la traduction ne correspond pas à un nom de page valide sur le Wiktionnaire, " +
         "il est possible de préciser le nom de page à utiliser ici (le lien sur la traduction visera alors cette page).";
+    const $pageNameInputWrapper = $('<div class="cdx-text-input">');
+    $pageNameInputWrapper.append($pageNameInput);
     this._$pageNameLine.append(
         `<label for="page-name-${index}">Nom de la page&nbsp;:</label> `,
         `<sup class="trans-form-help" title="${helpText}">(?)</sup> `,
-        $pageNameInput
+        $pageNameInputWrapper
     );
 
     $form.append(
         $translationLine,
+        "<span class='help-text'>Vous pouvez taper un code de langue à la place du nom. " +
+        "Appuyez sur <kbd>Tab</kbd> pour qu’il soit remplacé automatiquement par le nom correspondant.</span>",
         this._$messageLine,
         $grammarPropsLine,
         this._$transliterationLine,

@@ -32,7 +32,9 @@
 /* Title form */
 
 .trans-box-title-editor {
-  display: inline;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
 }
 
 /* Dialog box */

@@ -54,6 +54,8 @@ class EditDialog {
      * @private
      */
     this._submitButton = document.createElement("button");
+    this._submitButton.className = "cdx-button cdx-button--action-progressive cdx-button--weight-primary cdx-button--size-medium cdx-button--framed";
+    this._submitButton.style.marginBottom = "0.5em";
     this._submitButton.textContent = "Enregistrer les modifications";
     this._submitButton.onclick = () => {
       onSubmit(this._editHistory.slice(0, this._editCursor + 1));
@@ -66,6 +68,7 @@ class EditDialog {
      * @private
      */
     this._undoButton = document.createElement("button");
+    this._undoButton.className = "cdx-button cdx-button--action-normal cdx-button--weight-normal cdx-button--size-medium cdx-button--framed";
     this._undoButton.textContent = "← Annuler";
     this._undoButton.onclick = () => {
       const edit = this._editHistory[this._editCursor--];
@@ -80,6 +83,7 @@ class EditDialog {
      * @private
      */
     this._redoButton = document.createElement("button");
+    this._redoButton.className = "cdx-button cdx-button--action-normal cdx-button--weight-normal cdx-button--size-medium cdx-button--framed";
     this._redoButton.textContent = "Rétablir →";
     this._redoButton.onclick = () => {
       const edit = this._editHistory[++this._editCursor];

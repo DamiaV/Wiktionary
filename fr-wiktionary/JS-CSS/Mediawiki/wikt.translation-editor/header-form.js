@@ -43,6 +43,8 @@ class EditHeaderForm {
      * @private
      */
     this._wrapper = document.createElement("span");
+    this._wrapper.style.gap = "0.5em";
+    this._wrapper.style.alignItems = "center";
     this._wrapper.style.display = "none"; // Hidden by default
 
     /**
@@ -50,6 +52,7 @@ class EditHeaderForm {
      * @private
      */
     this._titleInput = document.createElement("input");
+    this._titleInput.className = "cdx-text-input__input";
     this._titleInput.type = "text";
     this._titleInput.placeholder = "Titre";
     this._titleInput.name = "title"
@@ -63,6 +66,7 @@ class EditHeaderForm {
      * @private
      */
     this._numberInput = document.createElement("input");
+    this._numberInput.className = "cdx-text-input__input";
     this._numberInput.type = "text";
     this._numberInput.placeholder = "Numéro";
     this._numberInput.name = "number";
@@ -76,6 +80,7 @@ class EditHeaderForm {
      * @private
      */
     this._submitButton = document.createElement("input");
+    this._submitButton.className = "cdx-button cdx-button--action-progressive cdx-button--weight-primary cdx-button--size-medium cdx-button--framed";
     this._submitButton.type = "submit";
     this._submitButton.value = "Valider";
     this._submitButton.onclick = (e) => e.stopPropagation();
@@ -101,13 +106,16 @@ class EditHeaderForm {
       this._setVisible(this._wrapper.style.display === "none");
     }
 
+    const titleInputWrapper = document.createElement("div");
+    titleInputWrapper.className = "cdx-text-input";
+    titleInputWrapper.append(this._titleInput);
+    const numberInputWrapper = document.createElement("div");
+    numberInputWrapper.className = "cdx-text-input";
+    numberInputWrapper.append(this._numberInput);
     this._wrapper.append(
-        this._titleInput,
-        " ",
-        this._numberInput,
-        " ",
+        titleInputWrapper,
+        numberInputWrapper,
         this._submitButton,
-        " ",
         this._spinner
     );
     form.append(toggleButton, " ", this._wrapper);
@@ -252,7 +260,7 @@ class EditHeaderForm {
    */
   _setVisible(visible) {
     if (visible) {
-      this._wrapper.style.display = "inline";
+      this._wrapper.style.display = "flex";
       this._headerTitle.style.display = "none";
       this._headerNumber.style.display = "none";
     } else {
