@@ -2,6 +2,47 @@
 
 /* Translations form */
 
+.trans-box-title-editor .inline,
+.translation-editor .inline {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+}
+
+.trans-box-title-editor:not(.visible) {
+  float: left;
+  margin-right: 0.5em;
+}
+
+.trans-box-title-editor.visible {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .trans-box-title-editor .inline,
+  .translation-editor .inline.break-wide {
+    flex-direction: column;
+  }
+
+  .trans-box-title-editor .inline .colon,
+  .translation-editor .inline.break-wide .colon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .translation-editor .inline.break-thin {
+    flex-direction: column;
+  }
+
+  .translation-editor .inline.break-thin .colon {
+    display: none;
+  }
+}
+
 .trans-form-error {
   color: #fd6463;
 }
@@ -27,14 +68,6 @@
 .help-text {
   font-size: 0.8em;
   color: #404040;
-}
-
-/* Title form */
-
-.trans-box-title-editor {
-  display: flex;
-  gap: 0.5em;
-  align-items: center;
 }
 
 /* Dialog box */

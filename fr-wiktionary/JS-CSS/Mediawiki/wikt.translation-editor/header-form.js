@@ -31,8 +31,8 @@ class EditHeaderForm {
      */
     this._headerNumber = headerDiv.querySelector(".nav-head-number");
 
-    const form = document.createElement("form");
-    form.classList.add("trans-box-title-editor");
+    this._form = document.createElement("form");
+    this._form.classList.add("trans-box-title-editor");
 
     const toggleButton = document.createElement("a");
     toggleButton.textContent = "±";
@@ -43,8 +43,7 @@ class EditHeaderForm {
      * @private
      */
     this._wrapper = document.createElement("span");
-    this._wrapper.style.gap = "0.5em";
-    this._wrapper.style.alignItems = "center";
+    this._wrapper.className = "inline";
     this._wrapper.style.display = "none"; // Hidden by default
 
     /**
@@ -95,7 +94,7 @@ class EditHeaderForm {
     this._spinner.classList.add("trans-spinner");
     this._spinner.style.display = "none";
 
-    form.onsubmit = (e) => {
+    this._form.onsubmit = (e) => {
       e.preventDefault();
       this._submit();
     };
@@ -118,11 +117,9 @@ class EditHeaderForm {
         this._submitButton,
         this._spinner
     );
-    form.append(toggleButton, " ", this._wrapper);
+    this._form.append(toggleButton, " ", this._wrapper);
 
     this._updateSubmitButton();
-
-    this._html = form;
   }
 
   /**
@@ -130,7 +127,7 @@ class EditHeaderForm {
    * @returns {HTMLFormElement}
    */
   get html() {
-    return this._html;
+    return this._form;
   }
 
   /**
@@ -260,10 +257,13 @@ class EditHeaderForm {
    */
   _setVisible(visible) {
     if (visible) {
+      this._form.classList.add("visible");
       this._wrapper.style.display = "flex";
       this._headerTitle.style.display = "none";
       this._headerNumber.style.display = "none";
+
     } else {
+      this._form.classList.remove("visible");
       this._wrapper.style.display = "none";
       this._headerTitle.style.display = "inline";
       this._headerNumber.style.display = "inline";

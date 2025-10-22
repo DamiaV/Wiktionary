@@ -123,16 +123,6 @@ class EditForm {
     /** @type {JQuery<HTMLFormElement>} */
     const $form = $(`<form class="translation-editor" data-trans-form-index="${index}">`);
 
-    document.head.append($(`
-<style>
-  .translation-editor .inline {
-    display: flex;
-    gap: 0.5em;
-    align-items: center;
-    justify-content: center;
-  }
-</style>`).get(0));
-
     /**
      * @type {JQuery<HTMLInputElement>}
      * @private
@@ -191,7 +181,7 @@ class EditForm {
       $showMoreButton.text(this._fullView ? "Moins" : "Plus");
     });
 
-    const $translationLine = $('<p class="inline">');
+    const $translationLine = $('<p class="inline break-wide">');
     const $langInputWrapper = $('<div class="cdx-text-input">');
     $langInputWrapper.append(this._$langInput);
     const $translationInputWrapper = $('<div class="cdx-text-input">');
@@ -199,7 +189,7 @@ class EditForm {
     $translationLine.append(
         `<label for="lang-input-${index}">Ajouter une traduction en</label> `,
         $langInputWrapper,
-        ":",
+        "<span class='colon'>:</span>",
         $translationInputWrapper,
         this._$submitButton,
         $showMoreButton,
@@ -237,7 +227,7 @@ class EditForm {
      * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
-    this._$transliterationLine = $('<p class="inline">');
+    this._$transliterationLine = $('<p class="inline break-thin">');
     const $transliterationInputWrapper = $('<div class="cdx-text-input">');
     $transliterationInputWrapper.append($transliterationInput);
     this._$transliterationLine.append(
@@ -249,7 +239,7 @@ class EditForm {
      * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
-    this._$traditionalLine = $('<p class="inline">');
+    this._$traditionalLine = $('<p class="inline break-thin">');
     const $traditionalInputWrapper = $('<div class="cdx-text-input">');
     $traditionalInputWrapper.append($traditionalInput);
     this._$traditionalLine.append(
@@ -261,14 +251,14 @@ class EditForm {
      * @type {JQuery<HTMLParagraphElement>}
      * @private
      */
-    this._$pageNameLine = $('<p class="inline">');
+    this._$pageNameLine = $('<p class="inline break-thin">');
     const helpText = "Si la traduction ne correspond pas à un nom de page valide sur le Wiktionnaire, " +
         "il est possible de préciser le nom de page à utiliser ici (le lien sur la traduction visera alors cette page).";
     const $pageNameInputWrapper = $('<div class="cdx-text-input">');
     $pageNameInputWrapper.append($pageNameInput);
     this._$pageNameLine.append(
-        `<label for="page-name-${index}">Nom de la page&nbsp;:</label> `,
-        `<sup class="trans-form-help" title="${helpText}">(?)</sup> `,
+        `<span><label for="page-name-${index}">Nom de la page</label>`
+        + `<sup class="trans-form-help" title="${helpText}">(?)</sup>&nbsp;:</span> `,
         $pageNameInputWrapper
     );
 
