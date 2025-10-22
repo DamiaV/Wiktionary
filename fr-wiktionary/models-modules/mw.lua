@@ -32,6 +32,7 @@ function frame:new()
   --- and `<ref>`, are included as arguments to #invoke, then these tags will be converted to "strip markers"
   --- — special strings which begin with a delete character (ASCII 127), to be replaced with HTML after
   --- they are returned from `#invoke`.
+  --- @type table<string, string>
   self.args = {}
   return o
 end
@@ -133,7 +134,7 @@ end
 --- Gets an object for the specified argument, or nil if the argument is not provided.
 ---
 --- The returned object has one method, `object:expand()`, that returns the expanded wikitext for the argument.
---- @param arg
+--- @param arg any
 --- @return object
 function frame:getArgument(arg)
   return object:new()
@@ -156,7 +157,6 @@ function frame:newTemplateParserValue(title, args)
 end
 
 --- Same as `pairs(frame.args)`. Included for backwards compatibility.
---- @return fun(table: table): (string, any)
 function frame:argumentPairs()
   return pairs(self.args)
 end
@@ -974,17 +974,17 @@ mw = {
       return message:new()
     end,
     --- Wraps the value so that it will not be parsed as wikitext by `msg:parse()`.
+    --- @generic T
     --- @param value T
     --- @return T
-    --- @generic T
     rawParam = function(value)
       return value
     end,
     --- Wraps the value so that it will automatically be formatted as by `lang:formatNum()`.
     --- Note this does not depend on the Language library actually being available.
+    --- @generic T
     --- @param value T
     --- @return T
-    --- @generic T
     numParam = function(value)
       return value
     end,
@@ -1211,7 +1211,7 @@ mw = {
     --- If `pattern` matches the empty string, `i` will be split into individual characters.
     --- @param s string
     --- @param pattern string
-    --- @param plain boolean
+    --- @param plain? boolean
     split = function(s, pattern, plain)
       return {}
     end,
@@ -1220,7 +1220,7 @@ mw = {
     --- @param s string
     --- @param pattern string
     --- @param plain boolean
-    --- @return fun(s: string): void
+    --- @return fun(s: string): nil
     gsplit = function(s, pattern, plain)
       --- @param str string
       return function(str)
@@ -1327,8 +1327,8 @@ mw = {
     new = function(textOrId, namespace)
       return title:new()
     end,
-    --- Creates a title object with title `title` in namespace namespace, optionally with the specified
-    --- `fragment` and `interwiki` prefix. namespace may be any key found in `mw.site.namespaces`.
+    --- Creates a title object with title `pageTitle` in namespace `namespace`, optionally with the specified
+    --- `fragment` and `interwiki` prefix. `namespace` may be any key found in `mw.site.namespaces`.
     --- If the resulting title is not valid, returns nil.
     ---
     --- Note that, unlike `mw.title.new()`, this method will always apply the specified namespace.
@@ -1336,11 +1336,11 @@ mw = {
     --- Template:Module:Foo, while `mw.title.new('Module:Foo', 'Template')` will create an object for
     --- the page Module:Foo.
     --- @param namespace string
-    --- @param title string
+    --- @param pageTitle string
     --- @param fragment string
     --- @param interwiki string
     --- @return title
-    makeTitle = function(namespace, title, fragment, interwiki)
+    makeTitle = function(namespace, pageTitle, fragment, interwiki)
       return title:new()
     end
   },
@@ -1559,8 +1559,8 @@ mw = {
     --- @param s string
     --- @param pattern string
     --- @param repl string|table|fun(s: string): string
-    --- @param n number optional
-    --- @return (string, number)
+    --- @param n? number optional
+    --- @return string, number
     gsub = function(s, pattern, repl, n)
       return "", 0
     end,
@@ -1611,7 +1611,7 @@ mw = {
     --- and `mw.ustring.sub(s, -i)` returns a suffix of `s` with length `i`.
     --- @param s string
     --- @param i number
-    --- @param j number optional
+    --- @param j? number optional
     --- @return string
     sub = function(s, i, j)
       return ""
