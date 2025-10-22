@@ -820,7 +820,7 @@ mw = {
   --- it will be added to the log buffer followed by an equals sign before the serialized string is appended
   --- (i.e. the logged text will be "prefix = object-string").
   --- @param object any
-  --- @param prefix string optional
+  --- @param prefix? string optional
   logObject = function(object, prefix)
   end,
 
@@ -1250,7 +1250,7 @@ mw = {
     --- If `charset` is supplied, it should be a string as appropriate to go inside brackets in a Ustring pattern,
     --- i.e. the "set" in `[set]`. The default charset is ASCII whitespace, `"\t\r\n\f "`.
     --- @param s string
-    --- @param charset string optional
+    --- @param charset? string optional
     --- @return string
     trim = function(s, charset)
       return ""
