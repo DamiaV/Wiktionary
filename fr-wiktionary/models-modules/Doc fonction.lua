@@ -16,8 +16,9 @@ local p = {}
 
 --- Parse the @param tags present in the given string.
 --- @param paramsString string The string to parse.
+--- @param allowAliases? boolean If true, the `@alias` tag is allowed.
 --- @return table<string, Param | Alias> # A table mapping parameter names to their respective data.
-function p.parseParams(paramsString)
+function p.parseParams(paramsString, allowAliases)
     --- @type table<string, Param | Alias>
     local parsedParams = {}
 
@@ -56,7 +57,7 @@ function p.parseParams(paramsString)
             end
             currentParamType = parts[3]
             currentParamDoc = table.concat({ unpack(parts, 4) }, " ")
-        elseif #parts == 3 and parts[1] == "@alias" then
+        elseif allowAliases and #parts == 3 and parts[1] == "@alias" then
             newParam()
             table.insert(parsedParams, {
                 tagType = "alias",
@@ -126,14 +127,19 @@ function p.functionDoc(frame)
 
     local forTemplates = args["params-frame"] or args["params-frame-parente"]
     local paramsData = args.params and p.parseParams(args.params) or {}
-    local frameParamsData = args["params-frame"] and p.parseParams(args["params-frame"]) or {}
-    local parentFrameParamsData = args["params-frame-parente"] and p.parseParams(args["params-frame-parente"]) or {}
+    local frameParamsData = args["params-frame"] and p.parseParams(args["params-frame"], true) or {}
+    local parentFrameParamsData = args["params-frame-parente"] and p.parseParams(args["params-frame-parente"], true) or {}
     local formattedParams = {}
     local formattedFrameParams = {}
     local formattedParentFrameParams = {}
     local paramsList = {}
     for _, paramData in pairs(paramsData) do
-        table.insert(paramsList, paramData.name)
+        local paramName = paramData.name
+        if paramData.optional then
+            paramName = paramName .. "?"
+        end
+        paramName = mw.ustring.format("%s: %s", paramName, paramData.type)
+        table.insert(paramsList, paramName)
         table.insert(formattedParams, formatParam(frame, paramData))
     end
     for _, paramData in pairs(frameParamsData) do
@@ -148,7 +154,7 @@ function p.functionDoc(frame)
     if forTemplates then
         doc = doc .. mw.ustring.format("<code>%s</code>", args.nom)
     else
-        doc = doc .. syntaxHighlight(frame, mw.ustring.format("%s(%s)", args.nom, table.concat(paramsList, ", ")))
+        doc = doc .. syntaxHighlight(frame, mw.ustring.format("%s(%s) -> %s", args.nom, table.concat(paramsList, ", "), args["type-retour"] or "void"))
     end
     doc = doc .. " ==="
 
@@ -167,7 +173,7 @@ function p.functionDoc(frame)
             doc = doc .. table.concat(formattedParentFrameParams, "\n")
         end
         if not hasFrameParams and not hasParentFrameParams then
-            doc = doc .. "; Paramètres\n: ''Cette fonction ne comporte aucun paramètre.''"
+            doc = doc .. "\n; Paramètres\n: ''Cette fonction ne comporte aucun paramètre.''"
         end
     else
         doc = doc .. "\n; Paramètres\n"
