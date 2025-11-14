@@ -1483,8 +1483,8 @@ mw = {
     --- Note that if `plain` is given, then `init` must be given as well.
     --- @param s string
     --- @param pattern string
-    --- @param init number optional
-    --- @param plain boolean optional
+    --- @param init? number optional
+    --- @param plain? boolean optional
     --- @return string
     find = function(s, pattern, init, plain)
       return ""
@@ -1517,10 +1517,10 @@ mw = {
     --- Returns three values for iterating over the codepoints in the string. `i` defaults to `1`, and j to -1.
     --- This is intended for use in the iterator form of `for`.
     --- @param s string
-    --- @param i number optional
-    --- @param j number optional
+    --- @param i? number optional
+    --- @param j? number optional
     --- @return fun(): number
-    gcodepoint = function(s, i, j)
+     gcodepoint = function(s, i, j)
       return function()
         return 0
       end
