@@ -86,6 +86,55 @@ $(() => {
         [",,", "}}, "], // Close "{{sc|" before pronunciation
       ]
     },
+    // For [[Livre:Vaudelin - Nouvelle manière d’écrire comme on parle en France, 1713.pdf]]
+    {
+      titlePrefix: "Vaudelin - Nouvelle manière d’écrire comme on parle en France, 1713.pdf",
+      substitutions: [
+        // 2 chars
+        ["AA", "Ā"],
+        ["Aa", "Ā"],
+        ["aa", "ā"],
+        ["EE", "Ē"],
+        ["Ee", "Ē"],
+        ["ee", "ē"],
+        ["II", "Ī"],
+        ["Ii", "Ī"],
+        ["ii", "ī"],
+        ["OO", "Ō"],
+        ["Oo", "Ō"],
+        ["oo", "ō"],
+        ["UU", "Ū"],
+        ["Uu", "Ū"],
+        ["uu", "ū"],
+        ["A_", "{{X|Vaudelin AN}}"],
+        ["a_", "ą"],
+        ["È", "{{X|Vaudelin AI}}"],
+        ["ꜷè", "ꜷ̄"],
+        ["èè", "ꜷ̄"],
+        ["è", "ꜷ"],
+        ["I_", "Ɩ"],
+        ["i_", "ɩ̇"],
+        ["E_", "{{X|Vaudelin Ə}}"],
+        ["e_", "{{X|Vaudelin ə}}"],
+        ["Ə", "{{X|Vaudelin Ə}}"],
+        ["ə", "{{X|Vaudelin ə}}"],
+        ["O_", "{{X|Vaudelin ON}}"],
+        ["o_", "o̩"],
+        ["EU", "{{X|Vaudelin EU}}"],
+        ["Eu", "{{X|Vaudelin EU}}"],
+        ["eu", "ę"],
+        ["U_", "{{X|Vaudelin UN}}"],
+        ["u_", "ų"],
+        ["OU", "{{X|Vaudelin OU}}"],
+        ["Ou", "{{X|Vaudelin OU}}"],
+        ["ou", "o̍"],
+        ["ie", "{{X|Vaudelin i-ə}}"],
+        ["iə", "{{X|Vaudelin i-ə}}"],
+        // 1 char
+        ["`", "\u0314"], // Esprit rude (aspiration)
+        ["%", "\u1dc5"], // Grave-macron (aspiration & allongement)
+      ]
+    },
   ];
   // Upper-case letters precedeed by "{{sc|"
   for (let i = 0; i < 26; i++) {
