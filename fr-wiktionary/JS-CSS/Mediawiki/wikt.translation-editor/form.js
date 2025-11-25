@@ -291,6 +291,10 @@ class EditForm {
         this._showError("Veuillez renseigner une traduction.");
         return;
       }
+      if (/[()]/.test(translation)) {
+        this._showError("La traduction ne doit pas contenir de parenthèses.");
+        return;
+      }
       if (/[\[\]{}#|=]/.test(translation)) {
         this._showError("La traduction n’est pas dans un format correct, elle contient du wikicode ([]{}#|=).");
         return;
