@@ -90,49 +90,55 @@ $(() => {
     {
       titlePrefix: "Vaudelin - Nouvelle manière d’écrire comme on parle en France, 1713.pdf",
       substitutions: [
+        // 3 chars
+        ["In_", "Ɩ"],
+        ["in_", "ɩ̇"],
+        ["ie_", "{{X|Vaudelin i-ə}}"],
+        ["EU_", "{{X|Vaudelin EU}}"],
+        ["Eu_", "{{X|Vaudelin EU}}"],
+        ["eu_", "ę"],
+        ["OU_", "{{X|Vaudelin OU}}"],
+        ["Ou_", "{{X|Vaudelin OU}}"],
+        ["ou_", "o̍"],
+        ["AA_", "Ā"],
+        ["Aa_", "Ā"],
+        ["aa_", "ā"],
+        ["EE_", "Ē"],
+        ["Ee_", "Ē"],
+        ["ee_", "ē"],
+        ["II_", "Ī"],
+        ["Ii_", "Ī"],
+        ["ii_", "ī"],
+        ["OO_", "Ō"],
+        ["Oo_", "Ō"],
+        ["oo_", "ō"],
+        ["UU_", "Ū"],
+        ["Uu_", "Ū"],
+        ["uu_", "ū"],
+        ["la_", "{{Lang|la|"],
         // 2 chars
-        ["AA", "Ā"],
-        ["Aa", "Ā"],
-        ["aa", "ā"],
-        ["EE", "Ē"],
-        ["Ee", "Ē"],
-        ["ee", "ē"],
-        ["II", "Ī"],
-        ["Ii", "Ī"],
-        ["ii", "ī"],
-        ["OO", "Ō"],
-        ["Oo", "Ō"],
-        ["oo", "ō"],
-        ["UU", "Ū"],
-        ["Uu", "Ū"],
-        ["uu", "ū"],
+        ["  ", "{{Espaces|4}}"],
         ["A_", "{{X|Vaudelin AN}}"],
         ["a_", "ą"],
         ["È", "{{X|Vaudelin AI}}"],
         ["ꜷè", "ꜷ̄"],
         ["èè", "ꜷ̄"],
-        ["è", "ꜷ"],
-        ["I_", "Ɩ"],
-        ["i_", "ɩ̇"],
         ["E_", "{{X|Vaudelin Ə}}"],
         ["e_", "{{X|Vaudelin ə}}"],
-        ["Ə", "{{X|Vaudelin Ə}}"],
-        ["ə", "{{X|Vaudelin ə}}"],
         ["O_", "{{X|Vaudelin ON}}"],
         ["o_", "o̩"],
-        ["EU", "{{X|Vaudelin EU}}"],
-        ["Eu", "{{X|Vaudelin EU}}"],
-        ["eu", "ę"],
         ["U_", "{{X|Vaudelin UN}}"],
         ["u_", "ų"],
-        ["OU", "{{X|Vaudelin OU}}"],
-        ["Ou", "{{X|Vaudelin OU}}"],
-        ["ou", "o̍"],
-        ["ie", "{{X|Vaudelin i-ə}}"],
-        ["iə", "{{X|Vaudelin i-ə}}"],
+        ["V_", "℣. "],
+        ["v_", "℣. "],
+        ["R_", "℟. "],
+        ["r_", "℟. "],
         // 1 char
+        ["è", "ꜷ"],
         ["`", "\u0314"], // Esprit rude (aspiration)
         ["%", "\u1dc5"], // Grave-macron (aspiration & allongement)
+        ["©", "ſ"],
+        ["¨", "i"],
       ]
     },
   ];
@@ -182,10 +188,10 @@ $(() => {
   });
 
   /**
-   * @param text {string}
-   * @param cursorPos {number}
-   * @param substs {[string, string][]}
-   * @returns {[string|null, number]}
+   * @param {string} text
+   * @param {number} cursorPos
+   * @param {[string, string][]} substs
+   * @returns {[string | null, number]}
    */
   function getSubst(text, cursorPos, substs) {
     for (const [needle, subst] of substs) {
