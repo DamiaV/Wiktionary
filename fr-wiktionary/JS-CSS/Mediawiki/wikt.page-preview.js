@@ -263,9 +263,9 @@ function processLink(link) {
     return;
   // If the anchor is a language name, replace it by its code
   let wasLangName = false;
-  linkAnchor = linkAnchor.replace(/_/g, " ").toLowerCase();
+  linkAnchor = linkAnchor.replace(/_/g, " ");
   for (const [code, langName] of LANGUAGES) {
-    if (linkAnchor === langName.toLowerCase()) {
+    if (linkAnchor.toLowerCase() === langName.toLowerCase()) {
       linkAnchor = code;
       wasLangName = true;
       break;
@@ -417,7 +417,9 @@ function processLink(link) {
           if (responseDocument.title)
             titleLink.innerHTML = responseDocument.title; // sometimes gives HTML text
           const wikipediaName = LANGUAGES.get(apiDomain.substring(8).split(".")[0]);
-          popupHeader.append(`Article Wikipédia en ${wikipediaName} pour `, titleLink);
+          const langNode = document.createElement("em");
+          langNode.textContent = wikipediaName;
+          popupHeader.append("Article Wikipédia en ", langNode, " pour ", titleLink);
 
           const articleContent = document.createElement("div");
           articleContent.style.margin = "5px 0 0 10px";
@@ -436,13 +438,12 @@ function processLink(link) {
           // Try to guess the anchor target in the following order: French, Translingual, [first h2 on page]
           // Always prioritize an L2 section which contains definitions.
           if (!linkAnchor) {
-            let pageH2s = Array.from(responseDocument.querySelectorAll("h2 > span"));
-            if (pageH2s.some(h2 => hasDefinitions(h2.parentElement.parentElement)))
-              pageH2s = pageH2s.filter(h2 => hasDefinitions(h2.parentElement.parentElement));
+            let pageH2Spans = Array.from(responseDocument.querySelectorAll("h2 > span.sectionlangue"))
+                .filter(h2Span => hasDefinitions(h2Span.closest("section[data-mw-section-id]")));
 
-            anchoredElement = pageH2s.find(h2 => h2.id === "fr");
-            if (!anchoredElement) anchoredElement = pageH2s.find(h2 => h2.id === "conv");
-            if (!anchoredElement) anchoredElement = pageH2s[0];
+            anchoredElement = pageH2Spans.find(h2Span => h2Span.id === "fr");
+            if (!anchoredElement) anchoredElement = pageH2Spans.find(h2Span => h2Span.id === "conv");
+            if (!anchoredElement) anchoredElement = pageH2Spans[0];
             language = LANGUAGES.get(anchoredElement.id);
           }
 
@@ -477,9 +478,11 @@ function processLink(link) {
               }
             }
             titleLink.append(displayTitle);
-            if (language)
-              popupHeader.append("Aperçu des définitions en " + language + " de ", titleLink);
-            else
+            if (language) {
+              const langNode = document.createElement("em");
+              langNode.textContent = language;
+              popupHeader.append("Aperçu des définitions en ", langNode, " de ", titleLink);
+            } else
               popupHeader.append("Aperçu des définitions de ", titleLink);
           } else {
             titleLink.append(displayTitle);
