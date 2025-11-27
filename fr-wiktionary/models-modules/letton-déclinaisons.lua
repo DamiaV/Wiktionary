@@ -212,8 +212,13 @@ function p.generateNounTable(frame)
         -- If args[1] is specified, we are most likely on a flexion page, so no categorization
         -- But if the current page corresponds to the nominative plural and the mode is plural only, do categorize
         if not args[1] or (pageTitle == forms.n[2] and numberMode == PLURAL) then
-            local catName = mw.ustring.format("Noms communs de la %s déclinaison en letton",
-                mw.ustring.lower(DECl_TITLES[declension]))
+            local catName
+            if declension == 0 then
+                catName = "Noms adjectivaux en letton"
+            else
+                catName = mw.ustring.format("Noms communs de la %s déclinaison en letton",
+                    mw.ustring.lower(DECl_TITLES[declension]))
+            end
             text = text .. m_bases.fait_categorie_contenu(catName)
         end
         return text
