@@ -112,7 +112,7 @@ return {
     -- Adjectival nouns
     ["-ais"] = {
         endings = {
-            n = { "", "ie" },
+            n = { "ais", "ie" },
             a = { "o", "os" },
             g = { "ā", "o" },
             d = { "ajam", "ajiem" },
