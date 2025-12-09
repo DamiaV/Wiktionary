@@ -844,7 +844,7 @@ mw = {
     --- Creates a new mw.html object containing a tagName html element.
     --- You can also pass an empty string or nil as tagName in order to create an empty mw.html object.
     --- @param tagName string
-    --- @param args table
+    --- @param args? table
     --- @return html
     create = function(tagName, args)
       return html:new()
@@ -1520,7 +1520,7 @@ mw = {
     --- @param i? number optional
     --- @param j? number optional
     --- @return fun(): number
-     gcodepoint = function(s, i, j)
+    gcodepoint = function(s, i, j)
       return function()
         return 0
       end
