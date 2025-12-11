@@ -1592,7 +1592,7 @@ mw = {
     --- and can be negative.
     --- @param s string
     --- @param pattern string
-    --- @param init number optional
+    --- @param init? number optional
     --- @return string
     match = function(s, pattern, init)
       return ""
