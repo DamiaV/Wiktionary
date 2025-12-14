@@ -1465,8 +1465,8 @@ mw = {
     --- Much like mw.ustring.byte(), except that the return values are codepoints
     --- and the offsets are characters rather than bytes.
     --- @param s string
-    --- @param i number optional
-    --- @param j number optional
+    --- @param i? number optional
+    --- @param j? number optional
     --- @return number
     codepoint = function(s, i, j)
       return 0
