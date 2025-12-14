@@ -265,7 +265,6 @@ function p.setWritingDirection(text)
           inSpan = true
         end
       end
-
     else
       if inSpan then
         res = res .. "</span>"
@@ -443,7 +442,7 @@ function p.blockReference(frame)
 
   if block then
     return mw.ustring.format("Unicode, Inc., ''[%s %s]'', The Unicode Standard, version %s, %d",
-        block.url, block.name.en, block.version, block.year)
+      block.url, block.name.en, block.version, block.year)
   end
 
   error(mw.ustring.format("Bloc Unicode «&nbsp;%s&nbsp;» invalide", blockCode or ""))
@@ -530,14 +529,35 @@ end
 ---  frame.args["script"] (string): The target system.
 --- @return string The converted number as a string of digits.
 function p.number(frame)
+  local systems = p.getNumberSystems()
   local args = m_params.process(frame.args, {
-    [1] = { required = true, type = m_params.INT, checker = function(i)
-      return tonumber(i) >= 0
-    end },
-    ["script"] = { enum = m_table.keysToList(p.getNumberSystems()), default = "latin" }
+    [1] = {
+      required = true,
+      type = m_params.INT,
+      checker = function(i)
+        return tonumber(i) >= 0
+      end
+    },
+    ["script"] = { required = true, enum = m_table.keysToList(systems) }
   })
 
-  return p.convertNumber(args[1], args["script"])
+  local n = args[1]
+  local script = args["script"]
+  local convertedNumber = p.convertNumber(n, script)
+  local title = mw.ustring.format("%d en ", n)
+  if script == "sinogrammes" then
+    title = title .. "sinogrammes"
+  else
+    title = title .. "chiffres "
+    if systems[script].text then
+      title = title .. systems[script].text
+    elseif mw.ustring.sub(script, -1) ~= "s" then
+      title = title .. script .. "s"
+    else
+      title = title .. script
+    end
+  end
+  return mw.ustring.format("<span title='%s' style='cursor: help'>%s</span>", title, convertedNumber)
 end
 
 return p

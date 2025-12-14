@@ -2,8 +2,8 @@
 
 return {
   -- Positional systems
-  ["latin"] = { positional = true, base = 10, zero_offset = 48 },
-  ["arabe"] = { positional = true, base = 10, zero_offset = 1632 },
+  ["latin"] = { positional = true, base = 10, zero_offset = 48, text = "arabes" },
+  ["arabe"] = { positional = true, base = 10, zero_offset = 1632, text = "arabes orientaux" },
   ["persan"] = { positional = true, base = 10, zero_offset = 1776 },
   ["n’ko"] = { positional = true, base = 10, zero_offset = 1984 },
   ["dévanâgarî"] = { positional = true, base = 10, zero_offset = 2406 },
