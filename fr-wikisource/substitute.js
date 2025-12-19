@@ -147,6 +147,19 @@ $(() => {
         ["%", "\u1dc5"], // Grave-macron (aspiration & allongement)
       ]
     },
+    // For [[Livre:Starck - Aperçu de la langue commerciale universelle de Schleyer, 1885.djvu]]
+    {
+      titlePrefix: "Starck - Aperçu de la langue commerciale universelle de Schleyer, 1885.djvu",
+      substitutions: [
+        ["’’", "῾"],
+        ["Ä", "Ꞛ"],
+        ["ä", "ꞛ"],
+        ["Ö", "Ꞝ"],
+        ["ö", "ꞝ"],
+        ["Ü", "Ꞟ"],
+        ["ü", "ꞟ"],
+      ]
+    },
   ];
   // Upper-case letters precedeed by "{{sc|"
   for (let i = 0; i < 26; i++) {
