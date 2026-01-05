@@ -227,9 +227,9 @@ const substs = {
   "H_-": "Ḫ",
 
   // Versets
-  "v~/": "℣",
+  "v~/": "<small>℣</small>",
   "V~/": "℣",
-  "r~/": "℟",
+  "r~/": "<small>℟</small>",
   "R~/": "℟",
 
   // Longueur 2

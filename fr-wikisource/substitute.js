@@ -160,6 +160,13 @@ $(() => {
         ["ü", "ꞟ"],
       ]
     },
+    // For [[Livre:Blondel - L'art de jetter les bombes, 1683.djvu]]
+    {
+      titlePrefix: "Blondel - L'art de jetter les bombes, 1683.djvu",
+      substitutions: [
+        [/(\d+) (\d+)\/(\d+)\./, "{{math|$1 \\frac{$2}{$3}|inline}}"],
+      ]
+    },
   ];
   // Upper-case letters precedeed by "{{sc|"
   for (let i = 0; i < 26; i++) {
@@ -179,10 +186,10 @@ $(() => {
   let substMode = false;
   let pressedOnce = false;
 
-  /** @type {JQuery<HTMLTextAreaElement>} */
-  const $textBox = $("#wpTextbox1");
-  $textBox.on("keyup", (event) => {
-    if (event.originalEvent.code === "ControlLeft") {
+  /** @type {HTMLTextAreaElement} */
+  const textBox = document.getElementById("wpTextbox1");
+  textBox.addEventListener("keyup", (event) => {
+    if (event.code === "ControlLeft") {
       if (!pressedOnce) {
         pressedOnce = true;
         setTimeout(() => {
@@ -191,17 +198,17 @@ $(() => {
       } else {
         substMode = !substMode;
         pressedOnce = false;
-        $textBox.css("color", substMode ? "orange" : "inherit");
+        textBox.style.color = substMode ? "orange" : "inherit";
       }
     } else if (substMode) {
-      const text = $textBox.val();
-      const cursorPos = $textBox.prop("selectionStart");
+      const text = textBox.value;
+      const cursorPos = textBox.selectionStart;
       const [subst, len] = getSubst(text, cursorPos, substs);
       if (subst) {
-        $textBox.val(text.substring(0, cursorPos - len) + subst + text.substring(cursorPos));
+        textBox.value = text.substring(0, cursorPos - len) + subst + text.substring(cursorPos);
         const newPos = cursorPos - len + subst.length;
-        $textBox.prop("selectionStart", newPos);
-        $textBox.prop("selectionEnd", newPos);
+        textBox.selectionStart = newPos;
+        textBox.selectionEnd = newPos;
       }
     }
   });
@@ -209,14 +216,23 @@ $(() => {
   /**
    * @param {string} text
    * @param {number} cursorPos
-   * @param {[string, string][]} substs
+   * @param {[string | RegExp, string][]} substs
    * @returns {[string | null, number]}
    */
   function getSubst(text, cursorPos, substs) {
     for (const [needle, subst] of substs) {
-      const len = needle.length;
-      const s = text.substring(cursorPos - len, cursorPos);
-      if (s === needle) return [subst, len];
+      if (typeof needle === "string") {
+        const len = needle.length;
+        const s = text.substring(cursorPos - len, cursorPos);
+        if (s === needle) return [subst, len];
+      } else {
+        const s = text.substring(0, cursorPos);
+        const match = needle.exec(s);
+        if (match) {
+          const fullMatch = match[0];
+          return [fullMatch.replace(needle, subst), fullMatch.length];
+        }
+      }
     }
     return [null, 0];
   }
