@@ -167,7 +167,7 @@
       const caseButton = document.querySelector("#wikiEditor-section-advanced a.tool-button[rel='toggleCase']");
       document.addEventListener("keydown", (e) => {
         switch (e.key.toLowerCase()) {
-          case "m":
+          case "w":
             if (e.ctrlKey && e.altKey) {
               e.preventDefault();
               if (caseButton) caseButton.click();
