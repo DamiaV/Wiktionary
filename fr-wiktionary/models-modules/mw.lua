@@ -843,7 +843,7 @@ mw = {
   html = {
     --- Creates a new mw.html object containing a tagName html element.
     --- You can also pass an empty string or nil as tagName in order to create an empty mw.html object.
-    --- @param tagName string
+    --- @param tagName? string
     --- @param args? table
     --- @return html
     create = function(tagName, args)
@@ -1322,8 +1322,8 @@ mw = {
     --- If the text string does not specify a namespace, namespace (which may be any key found in `mw.site.namespaces`)
     --- will be used. If the text is not a valid title, nil is returned.
     --- @param textOrId string|number
-    --- @param namespace string optional
-    --- @return title
+    --- @param namespace? string optional
+    --- @return title?
     new = function(textOrId, namespace)
       return title:new()
     end,
