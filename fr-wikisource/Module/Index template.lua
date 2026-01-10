@@ -195,9 +195,6 @@ function p.indexTemplate(frame)
   elseif args.avancement == 'OCR' then
     addRow(metadataTable, 'Avancement',
       '[[Catégorie:Livres sans couche texte]][[:Catégorie:Livres sans couche texte|Ajouter une couche texte d’OCR]]')
-  elseif args.avancement == 'X' then -- TODO : À retirer
-    addRow(metadataTable, 'Avancement',
-      '[[Catégorie:Extraits et compilations|!]][[:Catégorie:Extraits et compilations|Source incomplète: extrait ou compilation]]')
   elseif args.avancement == 'D' then
     addRow(metadataTable, 'Avancement', '[[Catégorie:Doublons]][[:Catégorie:Doublons|Index en double]]')
   elseif args.avancement == 'L' then
