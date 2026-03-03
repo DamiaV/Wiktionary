@@ -21,6 +21,7 @@
  * v1.3.3 2025-02-25 Rejected edits now show an error message.
  * v1.4 2025-05-23 Use new [[MediaWiki:Gadget-wikt.core.languages.json]].
  * v1.5 2025-05-26 Conversion into a module.
+ * v1.6 2026-03-03 Convert then-chaining to async/await; add more error cacthing in submit().
  * ------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|add-examples.js]]
  * <nowiki>
@@ -297,7 +298,7 @@ function Form($lastExample, $button, language, definitionLevel) {
     flags: ["progressive", "primary"],
     disabled: true,
   });
-  this._applyButton.on("click", this.submit.bind(this));
+  this._applyButton.on("click", async () => await this.submit());
   this._cancelButton = new OO.ui.ButtonWidget({
     label: "Annuler",
     title: "Refermer le formulaire",
@@ -421,7 +422,7 @@ Form.prototype = {
   /**
    * Generates and submits the wikicode then inserts the resulting HTML element if no errors occured.
    */
-  submit: function () {
+  submit: async function () {
     this._textInput.setDisabled(true);
     this._sourceInput.setDisabled(true);
     this._sourceURLInput.setDisabled(true);
@@ -473,151 +474,165 @@ Form.prototype = {
     const sectionType = match[2];
     const sectionNum = parseInt(match[3]);
 
-    // Insert new example into page’s code
-    api.get({
-      action: "query",
-      titles: mw.config.get("wgPageName"),
-      prop: "revisions",
-      rvprop: "content",
-      rvslots: "main",
-    }).then((data) => {
-      let pageContent;
-      for (const pageID in data.query.pages) {
-        if (data.query.pages.hasOwnProperty(pageID)) {
-          // noinspection JSUnresolvedVariable
-          pageContent = data.query.pages[pageID].revisions[0].slots.main["*"];
-          break;
-        }
+    let wikicodeResponse;
+    try {
+      // Insert new example into page’s code
+      wikicodeResponse = await api.get({
+        action: "query",
+        titles: mw.config.get("wgPageName"),
+        prop: "revisions",
+        rvprop: "content",
+        rvslots: "main",
+      });
+    } catch (e) {
+      error(`une erreur de réseau est survenue ou vous n’avez pas le droit de modifier la page.\nMessage d’erreur\u00a0: ${e}`);
+      return;
+    }
+
+    let pageContent;
+    for (const pageID in wikicodeResponse.query.pages) {
+      if (wikicodeResponse.query.pages.hasOwnProperty(pageID)) {
+        // noinspection JSUnresolvedVariable
+        pageContent = wikicodeResponse.query.pages[pageID].revisions[0].slots.main["*"];
+        break;
       }
+    }
 
-      // Look for correct language section
-      const langSectionRegex = new RegExp(`==\\s*{{langue\\|${this._language}}}\\s*==`);
-      const langSectionIndex = pageContent.search(langSectionRegex);
+    // Look for correct language section
+    const langSectionRegex = new RegExp(`==\\s*{{langue\\|${this._language}}}\\s*==`);
+    const langSectionIndex = pageContent.search(langSectionRegex);
 
-      if (langSectionIndex === -1) {
-        error();
-        return;
-      }
+    if (langSectionIndex === -1) {
+      error();
+      return;
+    }
 
-      // Look for correct word type section
-      const lines = pageContent.slice(langSectionIndex).split("\n");
-      const sectionRegex = /^===\s*{{S\|([\wéèà -]+)\|/;
+    // Look for correct word type section
+    const lines = pageContent.slice(langSectionIndex).split("\n");
+    const sectionRegex = /^===\s*{{S\|([\wéèà -]+)\|/;
 
-      let targetLineIndex;
-      for (targetLineIndex = 0; targetLineIndex < lines.length; targetLineIndex++) {
-        const line = lines[targetLineIndex];
-        const match = sectionRegex.exec(line);
-        if (match && sectionNames[sectionType].includes(match[1])
-            // Parameter "num" is absent if there is only one section for this type
-            && (line.includes("|num=" + sectionNum) || sectionNum === 1)
-            // Check whether the section is an inflection if required
-            && (isInflection === line.includes("|flexion")))
-          break;
-      }
+    let targetLineIndex;
+    for (targetLineIndex = 0; targetLineIndex < lines.length; targetLineIndex++) {
+      const line = lines[targetLineIndex];
+      const match = sectionRegex.exec(line);
+      if (match && sectionNames[sectionType].includes(match[1])
+          // Parameter "num" is absent if there is only one section for this type
+          && (line.includes("|num=" + sectionNum) || sectionNum === 1)
+          // Check whether the section is an inflection if required
+          && (isInflection === line.includes("|flexion")))
+        break;
+    }
 
-      if (targetLineIndex === lines.length) {
-        error();
-        return;
-      }
+    if (targetLineIndex === lines.length) {
+      error();
+      return;
+    }
 
-      // Look for correct definition
-      let defIndex = -1;
-      let level = 1;
-      for (; targetLineIndex < lines.length; targetLineIndex++) {
-        const m = /^(#+)[^*#]/.exec(lines[targetLineIndex]);
-        if (m) {
-          if (level === m[1].length) {
-            defIndex++;
-            if (this._definitionLevel[level] === defIndex) {
-              if (level === this._definitionLevel.length - 1) {
-                break;
-              } else {
-                level++;
-                defIndex = -1;
-              }
+    // Look for correct definition
+    let defIndex = -1;
+    let level = 1;
+    for (; targetLineIndex < lines.length; targetLineIndex++) {
+      const m = /^(#+)[^*#]/.exec(lines[targetLineIndex]);
+      if (m) {
+        if (level === m[1].length) {
+          defIndex++;
+          if (this._definitionLevel[level] === defIndex) {
+            if (level === this._definitionLevel.length - 1) {
+              break;
+            } else {
+              level++;
+              defIndex = -1;
             }
           }
         }
       }
+    }
 
-      // Look for last example of current definition
-      let inExample = false;
-      let stack = 0;
-      for (targetLineIndex += 1; targetLineIndex < lines.length; targetLineIndex++) {
-        const line_ = lines[targetLineIndex];
-        if (line_.startsWith(listMarker) && line_.includes("{{exemple")) {
-          inExample = true;
-          stack = 0;
-        }
-        if (inExample) {
-          // "exemple" template’s arguments may span several lines
-          // use a stack to detect on which line the template ends
-          for (let ic = 0; ic < line_.length - 1; ic++) {
-            const c = line_.charAt(ic) + line_.charAt(ic + 1);
-            if (c === "{{") {
-              stack++;
-            } else if (c === "}}") {
-              stack--;
-            }
-          }
-          if (stack === 0) {
-            inExample = false;
+    // Look for last example of current definition
+    let inExample = false;
+    let stack = 0;
+    for (targetLineIndex += 1; targetLineIndex < lines.length; targetLineIndex++) {
+      const line_ = lines[targetLineIndex];
+      if (line_.startsWith(listMarker) && line_.includes("{{exemple")) {
+        inExample = true;
+        stack = 0;
+      }
+      if (inExample) {
+        // "exemple" template’s arguments may span several lines
+        // use a stack to detect on which line the template ends
+        for (let ic = 0; ic < line_.length - 1; ic++) {
+          const c = line_.charAt(ic) + line_.charAt(ic + 1);
+          if (c === "{{") {
+            stack++;
+          } else if (c === "}}") {
+            stack--;
           }
         }
-        // There should be no empty line between examples
-        if (!inExample && (!lines[targetLineIndex + 1] || !lines[targetLineIndex + 1].startsWith(listMarker))) {
-          targetLineIndex++;
-          break;
+        if (stack === 0) {
+          inExample = false;
         }
       }
-
-      // Insert new example into page content
-      const emptyTemplate = /#+\*\s*{{exemple\s*\|\s*\|?\s*lang\s*=[^|}]+}}/.test(lines[targetLineIndex - 1]);
-      if (emptyTemplate) {
-        // Replace empty template with new example
-        lines.splice(targetLineIndex - 1, 1, code);
-      } else {
-        // Insert new example
-        lines.splice(targetLineIndex, 0, code);
+      // There should be no empty line between examples
+      if (!inExample && (!lines[targetLineIndex + 1] || !lines[targetLineIndex + 1].startsWith(listMarker))) {
+        targetLineIndex++;
+        break;
       }
+    }
 
+    // Insert new example into page content
+    const emptyTemplate = /#+\*\s*{{exemple\s*\|\s*\|?\s*lang\s*=[^|}]+}}/.test(lines[targetLineIndex - 1]);
+    if (emptyTemplate) {
+      // Replace empty template with new example
+      lines.splice(targetLineIndex - 1, 1, code);
+    } else {
+      // Insert new example
+      lines.splice(targetLineIndex, 0, code);
+    }
+
+    try {
       // Submit new page content
-      api.edit(mw.config.get("wgPageName"), () => {
+      await api.edit(mw.config.get("wgPageName"), () => {
         return {
           text: pageContent.slice(0, langSectionIndex) + lines.join("\n"),
           summary: `Ajout d’un exemple avec le gadget «\u00a0${NAME}\u00a0» (v${VERSION}).`,
         };
-      }).then(() => {
-            api.parse(code).done((data) => {
-              const $renderedExample = $(data).find("ul > li").html();
-              /** @type {JQuery} */
-              let $item;
-              // Insert rendered example into page
-              if (emptyTemplate) {
-                this._$lastExample.html($renderedExample);
-                $item = this._$lastExample;
-              } else {
-                this._$lastExample.after($item = $("<li>").append($renderedExample));
-              }
-              $item.addClass("new-example");
-              setTimeout(() => {
-                $item.removeClass("new-example");
-              }, 1000);
-              this._$lastExample = $item;
-            });
-            this.setVisible(false);
-            this.clear();
-            deleteCookie(COOKIE_KEY_TEXT);
-            deleteCookie(COOKIE_KEY_SOURCE);
-            deleteCookie(COOKIE_KEY_SOURCE_URL);
-            deleteCookie(COOKIE_KEY_TRANSLATION);
-            deleteCookie(COOKIE_KEY_TRANSCRIPTION);
-            reenable();
-          },
-          // On fail
-          () => error("une erreur de réseau est survenue ou vous n’avez pas le droit de modifier la page.")
-      );
-    });
+      });
+    } catch (e) {
+      error(`une erreur de réseau est survenue ou vous n’avez pas le droit de modifier la page.\nMessage d’erreur\u00a0: ${e}`);
+      return;
+    }
+
+    let parsedHtmlResponse;
+    try {
+      parsedHtmlResponse = await api.parse(code);
+    } catch (e) {
+      error(`une erreur de réseau est survenue ou vous n’avez pas le droit de modifier la page.\nMessage d’erreur\u00a0: ${e}`);
+      return;
+    }
+    const $renderedExample = $(parsedHtmlResponse).find("ul > li").html();
+    /** @type {JQuery} */
+    let $item;
+    // Insert rendered example into page
+    if (emptyTemplate) {
+      this._$lastExample.html($renderedExample);
+      $item = this._$lastExample;
+    } else {
+      this._$lastExample.after($item = $("<li>").append($renderedExample));
+    }
+    $item.addClass("new-example");
+    setTimeout(() => {
+      $item.removeClass("new-example");
+    }, 1000);
+    this._$lastExample = $item;
+
+    this.setVisible(false);
+    this.clear();
+    deleteCookie(COOKIE_KEY_TEXT);
+    deleteCookie(COOKIE_KEY_SOURCE);
+    deleteCookie(COOKIE_KEY_SOURCE_URL);
+    deleteCookie(COOKIE_KEY_TRANSLATION);
+    deleteCookie(COOKIE_KEY_TRANSCRIPTION);
+    reenable();
 
     const self = this;
 
