@@ -9,19 +9,21 @@
  * form should appear at the end of each series of examples for each definition
  * (only if [[Modèle:exemple]] template is used).
  * ------------------------------------------------------------------------------------
- * v1.0 2021-09-12 Initial version
- * v1.1 2021-09-16 Added input field for "lien" parameter.
+ * v1.0   2021-09-12 Initial version
+ * v1.1   2021-09-16 Added input field for "lien" parameter.
  * v1.1.1 2021-09-17 Fixed bug when text or translation contained the "=" sign.
  * v1.1.2 2021-09-20 Restricted to main and “Reconstruction” namespaces.
- * v1.2 2022-11-29 Better handling of multiline examples. Added checkbox to disable
- *                 the translation. Link instead of button to show the form.
- * v1.3 2024-03-04 Add buttons to format text (bold and italic).
+ * v1.2   2022-11-29 Better handling of multiline examples. Added checkbox to disable
+ *                   the translation. Link instead of button to show the form.
+ * v1.3   2024-03-04 Add buttons to format text (bold and italic).
  * v1.3.1 2024-05-18 Add counter to avoid adding "Add Example" button when there are too many examples.
  * v1.3.2 2025-02-25 Fix "é" character causing crashes when present in section IDs.
  * v1.3.3 2025-02-25 Rejected edits now show an error message.
- * v1.4 2025-05-23 Use new [[MediaWiki:Gadget-wikt.core.languages.json]].
- * v1.5 2025-05-26 Conversion into a module.
- * v1.6 2026-03-03 Convert then-chaining to async/await; add more error cacthing in submit().
+ * v1.4   2025-05-23 Use new [[MediaWiki:Gadget-wikt.core.languages.json]].
+ * v1.5   2025-05-26 Conversion into a module.
+ * v1.6   2026-03-03 Convert then-chaining to async/await; add more error cacthing in submit().
+ * v1.6.1 2026-03-09 Show an error message instead of link for definitions with examples that don’t use {{exemple}}.
+ *                   Fix detection of {{exemple}} template start and end.
  * ------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|add-examples.js]]
  * <nowiki>
@@ -39,7 +41,7 @@ const {
 console.log("Chargement de Gadget-wikt.add-examples.js…");
 
 const NAME = "Ajouter des exemples";
-const VERSION = "1.5";
+const VERSION = "1.6.1";
 
 const COOKIE_KEY_TEXT = "add_examples_text";
 const COOKIE_KEY_SOURCE = "add_examples_source";
@@ -137,6 +139,16 @@ $("ul > li > .example").each(function () {
       exampleCounter = 0;
       return;
     }
+
+    // Abort if any of the examples in the list are not using the {{exemple}} template
+    if ($item.parent().find("> li:not(:has(> .example))")) {
+      $item.after(`<li><span style='color: grey; font-style: italic'>
+Gadget d’ajout d’exemple indisponible car un des exemples ci-dessus n’utilise pas le modèle
+<code>{{<a href='/wiki/Modèle:exemple' target='_blank'>exemple</a>}}</code>.</span></li>`)
+      exampleCounter = 0;
+      return;
+    }
+
     // Get example’s language
     const language = $item.find("bdi[lang]")[0].lang;
 
@@ -432,8 +444,35 @@ Form.prototype = {
     this._applyButton.setDisabled(true);
     this._loadingImage.toggle(true);
 
-    // noinspection JSUnresolvedFunction
-    const listMarker = "".padStart(this._definitionLevel.length - 1, "#") + "*";
+    /**
+     * Show an error message alert then reset the cookies and re-enable the form.
+     * @param reason {string?} A custom reason.
+     */
+    const error = (reason) => {
+      const msg = reason || "la page a probablement été modifiée entre temps. Veuillez recharger la page et réessayer."
+      alert(`L’exemple n’a pas pu être publié car ${msg}`);
+      const days = 2;
+      setCookie(COOKIE_KEY_TEXT, this._textInput.getValue(), days);
+      setCookie(COOKIE_KEY_SOURCE, this._sourceInput.getValue(), days);
+      setCookie(COOKIE_KEY_SOURCE_URL, this._sourceURLInput.getValue(), days);
+      setCookie(COOKIE_KEY_TRANSLATION, this._translationInput.getValue(), days);
+      setCookie(COOKIE_KEY_TRANSCRIPTION, this._transcriptionInput.getValue(), days);
+      reenable();
+    };
+
+    const reenable = () => {
+      this._textInput.setDisabled(false);
+      this._sourceInput.setDisabled(false);
+      this._sourceURLInput.setDisabled(false);
+      this._translationInput.setDisabled(false);
+      this._transcriptionInput.setDisabled(false);
+      this._disableTranslationChk.setDisabled(false);
+      this._applyButton.setDisabled(false);
+      this._cancelButton.setDisabled(false);
+      this._loadingImage.toggle(false);
+    };
+
+    const listMarker = "#".repeat(this._definitionLevel.length - 1) + "*";
 
     let text = this._textInput.getValue().trim();
     if (text.includes("=")) text = "1=" + text;
@@ -489,6 +528,9 @@ Form.prototype = {
       return;
     }
 
+    /**
+     * @type {string}
+     */
     let pageContent;
     for (const pageID in wikicodeResponse.query.pages) {
       if (wikicodeResponse.query.pages.hasOwnProperty(pageID)) {
@@ -517,14 +559,14 @@ Form.prototype = {
       const match = sectionRegex.exec(line);
       if (match && sectionNames[sectionType].includes(match[1])
           // Parameter "num" is absent if there is only one section for this type
-          && (line.includes("|num=" + sectionNum) || sectionNum === 1)
+          && (line.includes(`|num=${sectionNum}`) || sectionNum === 1)
           // Check whether the section is an inflection if required
           && (isInflection === line.includes("|flexion")))
         break;
     }
 
     if (targetLineIndex === lines.length) {
-      error();
+      error("la section n’a pas été trouvée. La page a très certainement été modifiée par quelqu’un d’autre.");
       return;
     }
 
@@ -553,9 +595,14 @@ Form.prototype = {
     let stack = 0;
     for (targetLineIndex += 1; targetLineIndex < lines.length; targetLineIndex++) {
       const line_ = lines[targetLineIndex];
-      if (line_.startsWith(listMarker) && line_.includes("{{exemple")) {
-        inExample = true;
-        stack = 0;
+      if (line_.startsWith(listMarker)) {
+        if (line_.includes("{{exemple")) {
+          inExample = true;
+          stack = 0;
+        } else {
+          error("un des exemples déjà présents n’utilise pas le modèle {{exemple}}. Veuillez le corriger puis réessayez.");
+          return;
+        }
       }
       if (inExample) {
         // "exemple" template’s arguments may span several lines
@@ -564,11 +611,13 @@ Form.prototype = {
           const c = line_.charAt(ic) + line_.charAt(ic + 1);
           if (c === "{{") {
             stack++;
+            ic++;
           } else if (c === "}}") {
             stack--;
+            ic++;
           }
         }
-        if (stack === 0) {
+        if (stack <= 0) {
           inExample = false;
         }
       }
@@ -577,6 +626,11 @@ Form.prototype = {
         targetLineIndex++;
         break;
       }
+    }
+
+    if (stack !== 0) {
+      error("un des exemples déjà présents contient une paire d’accolades en trop ('{{' ou '}}'). Veuillez le corriger puis réessayez.");
+      return;
     }
 
     // Insert new example into page content
@@ -633,36 +687,6 @@ Form.prototype = {
     deleteCookie(COOKIE_KEY_TRANSLATION);
     deleteCookie(COOKIE_KEY_TRANSCRIPTION);
     reenable();
-
-    const self = this;
-
-    /**
-     * Show an error message alert then reset the cookies and re-enable the form.
-     * @param reason {string?} A custom reason.
-     */
-    function error(reason) {
-      const msg = reason || "la page a probablement été modifiée entre temps. Veuillez recharger la page et réessayer."
-      alert(`L’exemple n’a pas pu être publié car ${msg}`);
-      const days = 2;
-      setCookie(COOKIE_KEY_TEXT, self._textInput.getValue(), days);
-      setCookie(COOKIE_KEY_SOURCE, self._sourceInput.getValue(), days);
-      setCookie(COOKIE_KEY_SOURCE_URL, self._sourceURLInput.getValue(), days);
-      setCookie(COOKIE_KEY_TRANSLATION, self._translationInput.getValue(), days);
-      setCookie(COOKIE_KEY_TRANSCRIPTION, self._transcriptionInput.getValue(), days);
-      reenable();
-    }
-
-    function reenable() {
-      self._textInput.setDisabled(false);
-      self._sourceInput.setDisabled(false);
-      self._sourceURLInput.setDisabled(false);
-      self._translationInput.setDisabled(false);
-      self._transcriptionInput.setDisabled(false);
-      self._disableTranslationChk.setDisabled(false);
-      self._applyButton.setDisabled(false);
-      self._cancelButton.setDisabled(false);
-      self._loadingImage.toggle(false);
-    }
   },
 };
 // </nowiki>
