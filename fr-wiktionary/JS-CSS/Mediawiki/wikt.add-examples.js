@@ -24,6 +24,7 @@
  * v1.6   2026-03-03 Convert then-chaining to async/await; add more error cacthing in submit().
  * v1.6.1 2026-03-09 Show an error message instead of link for definitions with examples that don’t use {{exemple}}.
  *                   Fix detection of {{exemple}} template start and end.
+ * v1.6.2 2026-03-09 Fix bug where gadget is inactive when no examples are present yet.
  * ------------------------------------------------------------------------------------
  * [[Catégorie:JavaScript du Wiktionnaire|add-examples.js]]
  * <nowiki>
@@ -41,7 +42,7 @@ const {
 console.log("Chargement de Gadget-wikt.add-examples.js…");
 
 const NAME = "Ajouter des exemples";
-const VERSION = "1.6.1";
+const VERSION = "1.6.2";
 
 const COOKIE_KEY_TEXT = "add_examples_text";
 const COOKIE_KEY_SOURCE = "add_examples_source";
@@ -141,7 +142,8 @@ $("ul > li > .example").each(function () {
     }
 
     // Abort if any of the examples in the list are not using the {{exemple}} template
-    if ($item.parent().find("> li:not(:has(> .example))")) {
+    const $examplesList = $item.parent();
+    if ($examplesList.children().length && $examplesList.find("> li:not(:has(> .example))")) {
       $item.after(`<li><span style='color: grey; font-style: italic'>
 Gadget d’ajout d’exemple indisponible car un des exemples ci-dessus n’utilise pas le modèle
 <code>{{<a href='/wiki/Modèle:exemple' target='_blank'>exemple</a>}}</code>.</span></li>`)
@@ -154,7 +156,7 @@ Gadget d’ajout d’exemple indisponible car un des exemples ci-dessus n’util
 
     // Get section and indices of associated definition
     const definitionLevel = [];
-    let $definitionItem = $item.parent().parent();
+    let $definitionItem = $examplesList.parent();
     let $topItem;
     do {
       definitionLevel.splice(0, 0, $definitionItem.index());
