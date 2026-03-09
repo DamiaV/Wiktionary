@@ -143,7 +143,7 @@ $("ul > li > .example").each(function () {
 
     // Abort if any of the examples in the list are not using the {{exemple}} template
     const $examplesList = $item.parent();
-    if ($examplesList.children().length && $examplesList.find("> li:not(:has(> .example))")) {
+    if ($examplesList.find("> li:not(:has(> .example))").length) {
       $item.after(`<li><span style='color: grey; font-style: italic'>
 Gadget d’ajout d’exemple indisponible car un des exemples ci-dessus n’utilise pas le modèle
 <code>{{<a href='/wiki/Modèle:exemple' target='_blank'>exemple</a>}}</code>.</span></li>`)
